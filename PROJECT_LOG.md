@@ -163,3 +163,26 @@
 - 当前日报图片约 1 MB、周报图片约 2 MB；按现有节奏估算 Git 历史每年约增长 495 MB，后续需要保留、压缩或外部归档策略。
 - 不同系统可能选择不同 CJK 字体；相同输入只保证在同字体环境内稳定，跨系统 PNG 字节级一致性不作承诺。
 - 小红书仍由用户人工选题、审稿、选图和发布；项目不会登录或自动操作账号。
+
+## 2026-07-11 — 修复 Actions 质量门禁的 CI 环境污染
+
+### 目的
+
+修复日报工作流 `29163603991` 在 `Run quality gates` 阶段暴露的跨环境测试问题：GitHub Actions 自动设置的 `CI` / `GITHUB_ACTIONS` 被 Codex 适配器单元测试继承，导致 10 个本应验证受控调用与回退类别的测试提前进入 `disabled_in_ci` 分支。
+
+### 变更
+
+- 更新 `tests/test_editorial.py` 的自动夹具，在普通单元测试开始前清除外部 `CI` 与 `GITHUB_ACTIONS`，使测试结果不依赖启动 pytest 的宿主环境。
+- 将“CI 默认禁用本地 Codex”测试参数化，分别覆盖 `CI` 和 `GITHUB_ACTIONS`；测试内部显式恢复目标变量，继续证明云端默认只使用确定性后端。
+- 生产代码和工作流权限未改变；本次修复只消除测试环境污染，不允许 GitHub Actions 读取或调用用户电脑上的 Codex 配置。
+
+### 验证
+
+- 修复前本地复现：设置 `CI=true` 后，`tests/test_editorial.py` 为 10 failed / 3 passed，与 Actions 日志一致。
+- 修复后定向验证：相同 `CI=true` 条件下 14 项 editorial 测试全部通过。
+- 修复后完整门禁：相同 `CI=true` 条件下 98 项测试全部通过，总覆盖率 80%；Ruff lint、Ruff format check、`node --check site/app.js` 与 `git diff --check` 全部通过。
+- 失败工作流在生成报告之前终止，没有创建报告文件、海报、site-data 或 bot 提交。
+
+### 待线上闭环
+
+- 修复提交推送后重新运行日报和周报工作流；记录成功运行、bot 提交和对应 Pages 刷新结果。

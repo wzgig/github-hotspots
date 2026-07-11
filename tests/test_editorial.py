@@ -17,7 +17,9 @@ from github_hotspots.summarizer import RepositorySummary, summary_candidates
 
 
 @pytest.fixture(autouse=True)
-def _skip_mcp_discovery_for_editorial_unit_tests(monkeypatch) -> None:
+def _isolate_editorial_unit_tests(monkeypatch) -> None:
+    monkeypatch.delenv("CI", raising=False)
+    monkeypatch.delenv("GITHUB_ACTIONS", raising=False)
     monkeypatch.setattr(
         "github_hotspots.editorial._verified_mcp_disable_overrides",
         lambda *_args, **_kwargs: (),
@@ -450,8 +452,11 @@ def test_codex_cli_timeout_falls_back_without_raw_error(tmp_path: Path, monkeypa
     assert result.error_category == "timeout"
 
 
-def test_codex_cli_is_disabled_in_ci_by_default(tmp_path: Path, monkeypatch) -> None:
-    monkeypatch.setenv("CI", "true")
+@pytest.mark.parametrize("ci_variable", ["CI", "GITHUB_ACTIONS"])
+def test_codex_cli_is_disabled_in_ci_by_default(
+    tmp_path: Path, monkeypatch, ci_variable: str
+) -> None:
+    monkeypatch.setenv(ci_variable, "true")
 
     result = edit_summary_batch(
         [_ranking()],
