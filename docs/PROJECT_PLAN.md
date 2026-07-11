@@ -20,7 +20,7 @@
 - 已有日榜 Top 3、周榜 Top 7（可配置 Top 10）的 CLI 与报告模板。
 - 已有 GitHub Trending、GitHub REST Search、GitHub API 元数据补全、日快照、六因子排序和降级逻辑。
 - 已有 Markdown、JSON、小红书文案三类产物，以及每日/每周 GitHub Actions。
-- 当前 Git 分支为 `main`；公开远程仓库已创建，静态 GitHub Pages 与正式发布工作流已实现，等待首次推送后完成线上部署验证。
+- 当前 Git 分支为 `main`；公开远程仓库已创建，静态 GitHub Pages 与正式发布工作流已实现并通过首次线上部署验证。
 - 当前摘要器为确定性规则实现；本地 Codex 适配器尚未验证可行性。
 
 ### Success Criteria
@@ -38,7 +38,7 @@
 | 热点范围 | `TBD` | 同时提供“综合主榜 + AI 专题榜”；两套候选与排名独立，避免 AI 项目挤占综合榜 | 配置结构、报告目录、Pages 导航、测试样本 |
 | 小红书发布方式 | `TBD` | 仅生成审核包，由用户人工审核和发布；不自动登录、不绕过验证码或反爬机制 | 是否建设审核队列、发布适配器和平台监控 |
 | 本地 Codex 能力接入 | `原则已确认，代码待排期` | 仅通过受支持的 `codex exec` 建立可选适配器；禁止读取、复制或提交 Codex 凭据文件 | 摘要 Provider 接口、本地任务调度、错误回退策略 |
-| GitHub Pages 技术方案 | `已实现` | 使用仓库内 JSON 生成纯静态站点，由 Actions 部署；首版不引入数据库 | 首次推送后验证线上部署与更新链路 |
+| GitHub Pages 技术方案 | `已上线` | 使用仓库内 JSON 生成纯静态站点，由 Actions 部署；首版不引入数据库 | 持续验证报告更新触发的数据重建链路 |
 | 公开仓库名称与 Pages 域名 | `已确认` | 仓库为 `wzgig/github-hotspots`，Pages 使用 `wzgig.github.io/github-hotspots/` | README 徽章、链接、发布说明、SEO 元数据 |
 
 ## 2. User Experience & Functionality

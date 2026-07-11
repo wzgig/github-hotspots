@@ -47,4 +47,6 @@
 - Pages 本地构建：日报 3 项、周榜 7 项；本地 HTTP 返回 200。
 - Playwright 视觉 QA：桌面 1440px 与移动 390px 均完整渲染；补充 favicon 后控制台为 0 error / 0 warning。
 - 暂存区敏感信息扫描：未发现本地 Codex endpoint/model、GitHub Token、小红书访问 Token 或常见密钥格式。
-- Actions 与线上 Pages：待首次推送后验证并在交付说明中记录。
+- 首个公开提交：`62c3c69`（`feat: launch automated GitHub hotspots platform`），已推送至 `origin/main`。
+- GitHub Pages：运行 `29148156765` 首次因 Pages 尚未启用而失败；启用 `build_type=workflow` 后重跑成功。
+- 线上验证：`https://wzgig.github.io/github-hotspots/` 返回 HTTP 200，页面标题为“GitHub Hotspots / 开源热点编辑部”，首页特征内容存在。
