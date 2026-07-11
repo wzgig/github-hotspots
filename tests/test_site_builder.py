@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+import pytest
+from PIL import Image
 from scripts.build_site import build_site
 
 
@@ -58,6 +60,11 @@ def _write_report(root: Path, period: str, name: str, payload: dict) -> None:
     (directory / name).write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
 
 
+def _write_png(path: Path, size: tuple[int, int] = (1200, 1600)) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    Image.new("RGB", size, "#10243d").save(path, format="PNG")
+
+
 def test_build_site_selects_latest_reports_and_enforces_limits(tmp_path: Path) -> None:
     _write_report(
         tmp_path,
@@ -81,7 +88,7 @@ def test_build_site_selects_latest_reports_and_enforces_limits(tmp_path: Path) -
     payload = build_site(tmp_path, "https://github.com/example/github-hotspots")
 
     assert payload["daily"]["run_date"] == "2026-07-11"
-    assert payload["schema_version"] == 2
+    assert payload["schema_version"] == 3
     assert [item["rank"] for item in payload["daily"]["repositories"]] == [1, 2, 3]
     assert len(payload["weekly"]["repositories"]) == 7
     assert payload["site"]["repository_url"] == "https://github.com/example/github-hotspots"
@@ -93,6 +100,7 @@ def test_build_site_selects_latest_reports_and_enforces_limits(tmp_path: Path) -
     )
     assert payload["daily"]["boards"]["ai"] == {
         "label": "AI 专题榜",
+        "cover_path": "",
         "repositories": [],
     }
 
@@ -170,3 +178,67 @@ def test_build_site_outputs_deterministic_json_and_javascript(tmp_path: Path) ->
     assert json.loads(first_json)["methodology"]["metrics"][0]["weight"] == "50%"
     assert first_js.startswith(b'"use strict";\nwindow.GITHUB_HOTSPOTS_DATA = {')
     assert "追踪开源世界" in first_json.decode("utf-8")
+
+
+def test_build_site_publishes_safe_report_posters(tmp_path: Path) -> None:
+    daily = _report("daily", "2026-07-11", 1, "2026-07-11T08:00:00+08:00")
+    weekly = _report("weekly", "2026-07-11", 1, "2026-07-11T08:05:00+08:00")
+    poster = tmp_path / "reports" / "daily" / "assets" / "2026-07-11" / "poster.png"
+    _write_png(poster)
+    daily["repositories"][0]["assets"] = {"poster": "reports/daily/assets/2026-07-11/poster.png"}
+    _write_report(tmp_path, "daily", "2026-07-11.json", daily)
+    _write_report(tmp_path, "weekly", "2026-W28.json", weekly)
+
+    payload = build_site(tmp_path)
+
+    public_path = payload["daily"]["repositories"][0]["poster_path"]
+    assert public_path == "generated/reports/daily/assets/2026-07-11/poster.png"
+    with Image.open(tmp_path / "site" / public_path) as published:
+        assert published.format == "PNG"
+        assert published.size == (1200, 1600)
+
+
+def test_build_site_rejects_unsupported_report_schema(tmp_path: Path) -> None:
+    daily = _report("daily", "2026-07-11", 1, "2026-07-11T08:00:00+08:00")
+    daily["schema_version"] = 99
+    _write_report(tmp_path, "daily", "2026-07-11.json", daily)
+    _write_report(
+        tmp_path,
+        "weekly",
+        "2026-W28.json",
+        _report("weekly", "2026-07-11", 1, "2026-07-11T08:05:00+08:00"),
+    )
+
+    with pytest.raises(ValueError, match="Unsupported report schema_version"):
+        build_site(tmp_path)
+
+
+@pytest.mark.parametrize(
+    ("asset_path", "writer"),
+    [
+        ("reports/daily/assets/2026-07-11/broken.png", lambda path: path.write_bytes(b"no")),
+        (
+            "reports/daily/assets/2026-07-11/wrong-size.png",
+            lambda path: _write_png(path, (600, 800)),
+        ),
+        (
+            "reports/weekly/assets/2026-W28/wrong-period.png",
+            lambda path: _write_png(path),
+        ),
+    ],
+)
+def test_build_site_does_not_publish_invalid_or_cross_period_posters(
+    tmp_path: Path, asset_path: str, writer
+) -> None:
+    daily = _report("daily", "2026-07-11", 1, "2026-07-11T08:00:00+08:00")
+    weekly = _report("weekly", "2026-07-11", 1, "2026-07-11T08:05:00+08:00")
+    source = tmp_path / asset_path
+    source.parent.mkdir(parents=True, exist_ok=True)
+    writer(source)
+    daily["repositories"][0]["assets"] = {"poster": asset_path}
+    _write_report(tmp_path, "daily", "2026-07-11.json", daily)
+    _write_report(tmp_path, "weekly", "2026-W28.json", weekly)
+
+    payload = build_site(tmp_path)
+
+    assert payload["daily"]["repositories"][0]["poster_path"] == ""

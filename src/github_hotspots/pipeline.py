@@ -30,7 +30,13 @@ class PipelineResult:
     warnings: tuple[str, ...]
 
 
-def run_pipeline(settings: Settings, period: str, run_date: date) -> PipelineResult:
+def run_pipeline(
+    settings: Settings,
+    period: str,
+    run_date: date,
+    *,
+    editorial_backend: str | None = None,
+) -> PipelineResult:
     """Run one daily or weekly workflow with graceful source degradation."""
 
     run = settings.run(period)
@@ -76,6 +82,7 @@ def run_pipeline(settings: Settings, period: str, run_date: date) -> PipelineRes
         rankings=comprehensive_rankings,
         ai_rankings=ai_rankings,
         extra_warnings=warnings,
+        editorial_backend=editorial_backend,
     )
     return PipelineResult(
         period=period,
@@ -85,7 +92,7 @@ def run_pipeline(settings: Settings, period: str, run_date: date) -> PipelineRes
         ai_ranked_count=len(ai_rankings),
         snapshot=snapshot_path,
         artifacts=artifacts,
-        warnings=tuple(warnings),
+        warnings=artifacts.warnings,
     )
 
 

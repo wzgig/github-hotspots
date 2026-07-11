@@ -3,11 +3,14 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
 import yaml
+
+MAX_POSTER_WIDTH = 2400
+MAX_POSTER_HEIGHT = 3200
 
 
 class ConfigurationError(ValueError):
@@ -46,6 +49,29 @@ class BoardSettings:
 
 
 @dataclass(frozen=True, slots=True)
+class EditorialSettings:
+    """Configuration for the optional evidence-bound editorial pass."""
+
+    backend: str
+    fallback: str
+    timeout_seconds: int
+    allow_in_ci: bool
+    executable: str
+    prompt_path: Path
+    schema_path: Path
+    reasoning_effort_override: str | None = None
+
+
+@dataclass(frozen=True, slots=True)
+class PosterSettings:
+    """Configuration for deterministic social-card rendering."""
+
+    enabled: bool
+    width: int
+    height: int
+
+
+@dataclass(frozen=True, slots=True)
 class Settings:
     """Small typed facade over the YAML document.
 
@@ -62,6 +88,8 @@ class Settings:
     filters: Mapping[str, Any]
     ranking: Mapping[str, Any]
     boards: Mapping[str, Mapping[str, Any]]
+    editorial: Mapping[str, Any] = field(default_factory=dict)
+    posters: Mapping[str, Any] = field(default_factory=dict)
 
     def run(self, period: str) -> RunSettings:
         try:
@@ -83,17 +111,77 @@ class Settings:
         """Return typed settings for a configured board."""
 
         try:
-            raw = self.boards[key]
+            raw = _mapping(self.boards[key], f"boards.{key}")
         except KeyError as exc:
             raise ConfigurationError(f"Unsupported board: {key}") from exc
         return BoardSettings(
             key=key,
             label=str(raw.get("label", key)).strip(),
-            enabled=bool(raw.get("enabled", True)),
+            enabled=_boolean(raw.get("enabled", True), f"boards.{key}.enabled"),
             daily_top_n=int(raw["daily_top_n"]),
             weekly_top_n=int(raw["weekly_top_n"]),
             topics=_string_tuple(raw.get("topics", ())),
             keywords=_string_tuple(raw.get("keywords", ())),
+        )
+
+    def editorial_settings(self, backend_override: str | None = None) -> EditorialSettings:
+        """Return safe settings for deterministic or local Codex editing."""
+
+        raw = _mapping(self.editorial, "editorial")
+        codex = _mapping(raw.get("codex_cli", {}), "editorial.codex_cli")
+        backend = str(backend_override or raw.get("backend", "deterministic")).strip()
+        fallback = str(raw.get("fallback", "deterministic")).strip()
+        timeout_seconds = int(raw.get("timeout_seconds", 120))
+        executable = str(codex.get("executable", "codex")).strip()
+        reasoning = codex.get("reasoning_effort_override")
+        reasoning_effort = str(reasoning).strip() if reasoning is not None else None
+
+        if backend not in {"deterministic", "codex-cli"}:
+            raise ConfigurationError(f"Unsupported editorial backend: {backend}")
+        if fallback != "deterministic":
+            raise ConfigurationError("editorial.fallback must be deterministic")
+        if timeout_seconds < 1:
+            raise ConfigurationError("editorial.timeout_seconds must be positive")
+        if not executable:
+            raise ConfigurationError("editorial.codex_cli.executable must not be empty")
+        if reasoning_effort not in {None, "none", "minimal", "low", "medium", "high", "xhigh"}:
+            raise ConfigurationError(
+                "editorial.codex_cli.reasoning_effort_override is not supported"
+            )
+
+        return EditorialSettings(
+            backend=backend,
+            fallback=fallback,
+            timeout_seconds=timeout_seconds,
+            allow_in_ci=_boolean(raw.get("allow_in_ci", False), "editorial.allow_in_ci"),
+            executable=executable,
+            prompt_path=self.resolve_path(
+                str(raw.get("prompt_path", "prompts/repository_summary_zh.md"))
+            ),
+            schema_path=self.resolve_path(
+                str(raw.get("schema_path", "schemas/repository_summary.schema.json"))
+            ),
+            reasoning_effort_override=reasoning_effort,
+        )
+
+    def poster_settings(self) -> PosterSettings:
+        """Return validated poster dimensions and enablement."""
+
+        raw = _mapping(self.posters, "posters")
+        width = int(raw.get("width", 1200))
+        height = int(raw.get("height", 1600))
+        if width < 600 or height < 800 or width * 4 != height * 3:
+            raise ConfigurationError(
+                "posters dimensions must use a 3:4 ratio and be at least 600x800"
+            )
+        if width > MAX_POSTER_WIDTH or height > MAX_POSTER_HEIGHT:
+            raise ConfigurationError(
+                f"posters dimensions must not exceed {MAX_POSTER_WIDTH}x{MAX_POSTER_HEIGHT}"
+            )
+        return PosterSettings(
+            enabled=_boolean(raw.get("enabled", False), "posters.enabled"),
+            width=width,
+            height=height,
         )
 
     def resolve_path(self, value: str | Path) -> Path:
@@ -120,6 +208,8 @@ def load_settings(path: str | Path = "config/hotspots.yaml") -> Settings:
         raise ConfigurationError(f"Configuration file not found: {config_path}")
 
     raw = yaml.safe_load(config_path.read_text(encoding="utf-8")) or {}
+    if not isinstance(raw, Mapping):
+        raise ConfigurationError("Configuration root must be a mapping")
     required = (
         "timezone",
         "github",
@@ -134,6 +224,8 @@ def load_settings(path: str | Path = "config/hotspots.yaml") -> Settings:
     if missing:
         raise ConfigurationError(f"Missing configuration keys: {', '.join(missing)}")
 
+    editorial = _mapping(raw.get("editorial", {}), "editorial")
+    posters = _mapping(raw.get("posters", {}), "posters")
     settings = Settings(
         path=config_path,
         timezone=str(raw["timezone"]),
@@ -144,6 +236,8 @@ def load_settings(path: str | Path = "config/hotspots.yaml") -> Settings:
         filters=raw["filters"],
         ranking=raw["ranking"],
         boards=raw["boards"],
+        editorial=editorial,
+        posters=posters,
     )
 
     for period in ("daily", "weekly"):
@@ -161,6 +255,10 @@ def load_settings(path: str | Path = "config/hotspots.yaml") -> Settings:
     if ai_board.enabled and not (ai_board.topics or ai_board.keywords):
         raise ConfigurationError("boards.ai must define topics or keywords when enabled")
 
+    settings.editorial_settings()
+    settings.poster_settings()
+    _validate_runtime_booleans(settings)
+
     weights = settings.ranking_weights
     if weights and abs(sum(weights.values()) - 1.0) > 1e-6:
         raise ConfigurationError("ranking.weights must add up to 1.0")
@@ -171,3 +269,31 @@ def _string_tuple(value: object) -> tuple[str, ...]:
     if not isinstance(value, (list, tuple, set)):
         return ()
     return tuple(text for item in value if (text := str(item).strip()))
+
+
+def _mapping(value: object, path: str) -> Mapping[str, Any]:
+    if not isinstance(value, Mapping):
+        raise ConfigurationError(f"{path} must be a mapping")
+    return value
+
+
+def _boolean(value: object, path: str) -> bool:
+    if not isinstance(value, bool):
+        raise ConfigurationError(f"{path} must be a boolean")
+    return value
+
+
+def _validate_runtime_booleans(settings: Settings) -> None:
+    """Reject truthy strings for options consumed directly by the pipeline."""
+
+    for source_key in ("trending", "search"):
+        source = _mapping(settings.sources.get(source_key, {}), f"sources.{source_key}")
+        _boolean(source.get("enabled", True), f"sources.{source_key}.enabled")
+
+    for filter_key, default in (
+        ("require_description", False),
+        ("exclude_archived", True),
+        ("exclude_forks", True),
+        ("exclude_mirrors", True),
+    ):
+        _boolean(settings.filters.get(filter_key, default), f"filters.{filter_key}")

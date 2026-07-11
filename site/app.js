@@ -109,6 +109,39 @@
     }
   }
 
+  function safePosterPath(value) {
+    if (typeof value !== "string") return "";
+    const path = value.trim();
+    if (!path.startsWith("generated/") || path.includes("..") || path.includes("\\")) {
+      return "";
+    }
+    return path.endsWith(".png") ? path : "";
+  }
+
+  function posterAction(repository, { preview = false } = {}) {
+    const path = safePosterPath(repository.poster_path);
+    if (!path) return null;
+    const link = element("a", preview ? "poster-preview" : "poster-download");
+    link.href = path;
+    link.download = "";
+    link.setAttribute("aria-label", `下载 ${repository.full_name} 的小红书配图`);
+    if (preview) {
+      const thumbnail = element("img", "poster-thumbnail");
+      thumbnail.src = path;
+      thumbnail.alt = `${repository.full_name} 的 3:4 项目配图预览`;
+      thumbnail.loading = "lazy";
+      const copy = element("span", "poster-preview-copy");
+      copy.append(
+        element("strong", "", "XHS POSTER / 3:4"),
+        element("small", "", "查看或下载 1200×1600 PNG ↗")
+      );
+      link.append(thumbnail, copy);
+    } else {
+      link.textContent = "配图 PNG ↓";
+    }
+    return link;
+  }
+
   function inferRepositoryUrl() {
     if (!window.location.hostname.endsWith(".github.io")) return "";
     const owner = window.location.hostname.split(".")[0];
@@ -222,6 +255,8 @@
       footer.append(arrow);
 
       card.append(top, title, description, tags, stats, meter, footer);
+      const poster = posterAction(repository, { preview: true });
+      if (poster) card.append(poster);
       list.append(card);
     });
   }
@@ -242,6 +277,8 @@
       const title = element("h3");
       title.append(repositoryLink(repository, "weekly-name"));
       main.append(title, element("p", "weekly-description", repository.one_line));
+      const poster = posterAction(repository);
+      if (poster) main.append(poster);
 
       const meta = element("div", "weekly-signal");
       meta.append(
@@ -287,6 +324,8 @@
       const title = element("h4");
       title.append(repositoryLink(repository, "ai-entry-name"));
       main.append(title, element("p", "ai-entry-description", repository.one_line));
+      const poster = posterAction(repository);
+      if (poster) main.append(poster);
 
       const signal = element("div", "ai-entry-signal");
       signal.setAttribute("aria-label", `综合评分 ${repository.score.toFixed(1)}`);

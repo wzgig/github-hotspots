@@ -15,6 +15,10 @@ def test_run_command_reports_both_boards_and_review_files(monkeypatch) -> None:
         json=Path("reports/daily/2026-07-11.json"),
         xiaohongshu=Path("reports/daily/2026-07-11.xiaohongshu.md"),
         ai_xiaohongshu=Path("reports/daily/2026-07-11.ai.xiaohongshu.md"),
+        posters_dir=Path("reports/daily/assets/2026-07-11"),
+        poster_manifest=Path("reports/daily/assets/2026-07-11/manifest.json"),
+        poster_files=(Path("reports/daily/assets/2026-07-11/cover.png"),),
+        warnings=(),
     )
     result = SimpleNamespace(
         period="daily",
@@ -26,7 +30,7 @@ def test_run_command_reports_both_boards_and_review_files(monkeypatch) -> None:
         warnings=(),
     )
     monkeypatch.setattr(cli, "load_settings", lambda _: settings)
-    monkeypatch.setattr(cli, "run_pipeline", lambda *_: result)
+    monkeypatch.setattr(cli, "run_pipeline", lambda *_, **__: result)
 
     response = CliRunner().invoke(cli.app, ["run", "--date", "2026-07-11"])
 
@@ -35,3 +39,4 @@ def test_run_command_reports_both_boards_and_review_files(monkeypatch) -> None:
     assert "AI 专题榜: Top 3" in response.output
     assert "2026-07-11.xiaohongshu.md" in response.output
     assert "2026-07-11.ai.xiaohongshu.md" in response.output
+    assert "Poster PNG files: 1" in response.output

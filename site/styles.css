@@ -654,6 +654,73 @@ a {
   color: var(--orange);
 }
 
+.poster-preview {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  margin-top: 18px;
+  padding: 10px;
+  color: var(--paper-light);
+  background: var(--ink);
+  text-decoration: none;
+}
+
+.poster-thumbnail {
+  width: 74px;
+  aspect-ratio: 3 / 4;
+  border: 1px solid #69665e;
+  object-fit: cover;
+}
+
+.poster-preview-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.poster-preview-copy strong {
+  color: var(--acid);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+}
+
+.poster-preview-copy small {
+  color: #c8c3b7;
+  font-size: 0.58rem;
+  line-height: 1.45;
+}
+
+.poster-preview:hover,
+.poster-preview:focus-visible {
+  color: var(--ink);
+  background: var(--acid);
+}
+
+.poster-preview:hover .poster-preview-copy strong,
+.poster-preview:hover .poster-preview-copy small,
+.poster-preview:focus-visible .poster-preview-copy strong,
+.poster-preview:focus-visible .poster-preview-copy small {
+  color: var(--ink);
+}
+
+.poster-download {
+  display: inline-block;
+  margin-top: 9px;
+  color: var(--acid);
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.weekly-row:hover .poster-download,
+.ai-entry:hover .poster-download {
+  color: var(--ink);
+}
+
 .source-line {
   display: flex;
   justify-content: space-between;

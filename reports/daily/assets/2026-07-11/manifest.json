@@ -1,0 +1,67 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-07-11",
+  "window": {
+    "start": "2026-07-10",
+    "end": "2026-07-11"
+  },
+  "source_report": "reports/daily/2026-07-11.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "1.0"
+  },
+  "style_version": "open-source-intel-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-07-11",
+  "manifest": "reports/daily/assets/2026-07-11/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "oven-sh/bun",
+          "path": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.01.oven-sh--bun.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "obra/superpowers",
+          "path": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.02.obra--superpowers.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "wonderwhy-er/DesktopCommanderMCP",
+          "path": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.03.wonderwhy-er--desktopcommandermcp.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-07-11/2026-07-11.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "wonderwhy-er/DesktopCommanderMCP",
+          "path": "reports/daily/assets/2026-07-11/2026-07-11.ai.01.wonderwhy-er--desktopcommandermcp.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "malisper/pgrust",
+          "path": "reports/daily/assets/2026-07-11/2026-07-11.ai.02.malisper--pgrust.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "obra/superpowers",
+          "path": "reports/daily/assets/2026-07-11/2026-07-11.ai.03.obra--superpowers.png"
+        }
+      ]
+    }
+  }
+}

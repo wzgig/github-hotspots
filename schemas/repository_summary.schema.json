@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/wzgig/github-hotspots/schemas/repository_summary.schema.json",
+  "title": "GitHub Hotspots batch editorial response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "period", "items", "batch_quality"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "3.0"
+    },
+    "period": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "start", "end"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["daily", "weekly"]
+        },
+        "start": {
+          "type": "string"
+        },
+        "end": {
+          "type": "string"
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["status", "rank", "repository", "card", "evidence", "data_quality"],
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["ok", "insufficient_data"]
+          },
+          "rank": {
+            "type": "integer"
+          },
+          "repository": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["repository_id", "full_name", "html_url"],
+            "properties": {
+              "repository_id": {
+                "type": ["integer", "null"]
+              },
+              "full_name": {
+                "type": "string"
+              },
+              "html_url": {
+                "type": "string"
+              }
+            }
+          },
+          "card": {
+            "type": ["object", "null"],
+            "additionalProperties": false,
+            "required": [
+              "project_name",
+              "angle",
+              "language",
+              "stars_total",
+              "period_stars_added",
+              "period_stars_added_display",
+              "forks_total",
+              "one_line",
+              "highlights",
+              "audience",
+              "repository_url"
+            ],
+            "properties": {
+              "project_name": {
+                "type": "string"
+              },
+              "angle": {
+                "type": "string",
+                "enum": [
+                  "positioning",
+                  "growth_signal",
+                  "tech_stack",
+                  "scale",
+                  "topics",
+                  "activity",
+                  "source"
+                ]
+              },
+              "language": {
+                "type": ["string", "null"]
+              },
+              "stars_total": {
+                "type": "integer"
+              },
+              "period_stars_added": {
+                "type": ["integer", "null"]
+              },
+              "period_stars_added_display": {
+                "type": "string"
+              },
+              "forks_total": {
+                "type": "integer"
+              },
+              "one_line": {
+                "type": "string"
+              },
+              "highlights": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "audience": {
+                "type": "string"
+              },
+              "repository_url": {
+                "type": "string"
+              }
+            }
+          },
+          "evidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["one_line", "highlights", "audience"],
+            "properties": {
+              "one_line": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "highlights": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "audience": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "data_quality": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["delta_source", "delta_is_exact", "warnings"],
+            "properties": {
+              "delta_source": {
+                "type": "string"
+              },
+              "delta_is_exact": {
+                "type": "boolean"
+              },
+              "warnings": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "batch_quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["forbidden_phrase_hits", "adjacent_angle_repeats", "warnings"],
+      "properties": {
+        "forbidden_phrase_hits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "adjacent_angle_repeats": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

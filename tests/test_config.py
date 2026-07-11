@@ -1,8 +1,35 @@
 from pathlib import Path
+from typing import Any
 
 import pytest
+import yaml
 
 from github_hotspots.config import ConfigurationError, load_settings
+
+
+def _write_config(tmp_path: Path, document: dict[str, Any]) -> Path:
+    config_path = tmp_path / "config" / "hotspots.yaml"
+    config_path.parent.mkdir(parents=True)
+    config_path.write_text(
+        yaml.safe_dump(document, allow_unicode=True, sort_keys=False),
+        encoding="utf-8",
+    )
+    return config_path
+
+
+def _config_document() -> dict[str, Any]:
+    document = yaml.safe_load(Path("config/hotspots.yaml").read_text(encoding="utf-8"))
+    assert isinstance(document, dict)
+    return document
+
+
+def _set_nested(document: dict[str, Any], path: tuple[str, ...], value: Any) -> None:
+    current = document
+    for key in path[:-1]:
+        nested = current[key]
+        assert isinstance(nested, dict)
+        current = nested
+    current[path[-1]] = value
 
 
 def test_project_configuration_loads_with_expected_cadence() -> None:
@@ -18,6 +45,14 @@ def test_project_configuration_loads_with_expected_cadence() -> None:
     assert "machine-learning" in settings.board("ai").topics
     assert "machine learning" in settings.board("ai").keywords
     assert sum(settings.ranking_weights.values()) == pytest.approx(1.0)
+    editorial = settings.editorial_settings()
+    assert editorial.backend == "deterministic"
+    assert editorial.fallback == "deterministic"
+    assert editorial.reasoning_effort_override == "xhigh"
+    assert editorial.prompt_path.name == "repository_summary_zh.md"
+    posters = settings.poster_settings()
+    assert posters.enabled is True
+    assert (posters.width, posters.height) == (1200, 1600)
 
 
 def test_configuration_rejects_unknown_period() -> None:
@@ -32,3 +67,50 @@ def test_configuration_rejects_unknown_board() -> None:
 
     with pytest.raises(ConfigurationError, match="Unsupported board"):
         settings.board("security")
+
+
+@pytest.mark.parametrize("section", ["editorial", "posters"])
+def test_configuration_requires_mapping_sections(tmp_path: Path, section: str) -> None:
+    document = _config_document()
+    document[section] = []
+
+    with pytest.raises(ConfigurationError, match=rf"{section} must be a mapping"):
+        load_settings(_write_config(tmp_path, document))
+
+
+def test_configuration_requires_mapping_codex_cli_options(tmp_path: Path) -> None:
+    document = _config_document()
+    editorial = document["editorial"]
+    assert isinstance(editorial, dict)
+    editorial["codex_cli"] = "codex"
+
+    with pytest.raises(ConfigurationError, match=r"editorial\.codex_cli must be a mapping"):
+        load_settings(_write_config(tmp_path, document))
+
+
+@pytest.mark.parametrize(
+    "path",
+    [
+        ("boards", "ai", "enabled"),
+        ("editorial", "allow_in_ci"),
+        ("posters", "enabled"),
+        ("sources", "search", "enabled"),
+        ("filters", "require_description"),
+    ],
+)
+def test_configuration_rejects_string_boolean_values(tmp_path: Path, path: tuple[str, ...]) -> None:
+    document = _config_document()
+    _set_nested(document, path, "false")
+
+    with pytest.raises(ConfigurationError, match="must be a boolean"):
+        load_settings(_write_config(tmp_path, document))
+
+
+def test_configuration_caps_poster_dimensions(tmp_path: Path) -> None:
+    document = _config_document()
+    posters = document["posters"]
+    assert isinstance(posters, dict)
+    posters.update({"width": 3000, "height": 4000})
+
+    with pytest.raises(ConfigurationError, match="must not exceed 2400x3200"):
+        load_settings(_write_config(tmp_path, document))

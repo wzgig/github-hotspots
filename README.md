@@ -7,9 +7,13 @@
 
 [在线项目页面](https://wzgig.github.io/github-hotspots/) · [公开仓库](https://github.com/wzgig/github-hotspots)
 
-一个可本地运行、也可由 GitHub Actions 定时执行的 GitHub 热点发现与内容生成流水线。它同时生成“综合主榜”和“AI 专题榜”：日榜各 Top 3、周榜各 Top 7，并输出可审计的 JSON、Markdown 榜单和两份小红书文案素材。
+一个可本地运行、也可由 GitHub Actions 定时执行的 GitHub 热点发现与内容生产流水线。它同时生成“综合主榜”和“AI 专题榜”：日榜各 Top 3、周榜各 Top 7，并把可审计的 GitHub 事实组织成榜单、中文审核稿和原创项目海报。
 
 项目参考了用户提供的小红书“GitHub 爆火项目榜”的信息结构，但不复制原作者的图片、版式或文案。GitHub API、GitHub Trending 和本地历史快照才是数据来源。
+
+## 项目定位
+
+GitHub Hotspots 定位为“可核验的开源情报内容引擎”，而不是让模型凭印象推荐仓库。它面向需要稳定日更/周更的中文技术内容运营者，也服务希望追溯榜单依据的开发者：同一份冻结事实驱动双榜排名、解释文案、原创海报和 Pages 展示，最终发布权始终由人工掌握。
 
 ## 主要能力
 
@@ -18,9 +22,12 @@
 - 历史快照：按日期保存 JSON，逐步建立 1 日和 7 日增量基线。
 - 双榜排名：综合主榜覆盖全部合格候选，AI 专题榜筛选 AI 候选后独立排名；同一仓库可以同时入榜。
 - 可解释排名：两榜分别按 Star 增长、相对增长、Fork 增长、活跃度、累计 Star、Trending 信号六项评分。
-- 三种产物：包含双榜的完整 Markdown、兼容旧消费者的结构化 JSON，以及综合榜/AI 榜两份小红书文案。
+- 受控候选库：程序为每个仓库生成定位、增长、技术栈、规模、Topics、活跃度和来源 7 种确定性叙事候选；表达自然度主要通过扩充和校准这套候选库提升。
+- 可选 Codex 选稿：Schema 3.0 把本地 Codex 限定为整榜叙事规划器和受控选稿器，只能选择一个候选并逐字符复制，不能自由改写。
+- 内容产物：包含双榜的完整 Markdown、兼容旧消费者的结构化 JSON，以及综合榜/AI 榜两份独立的小红书审核稿。
+- 原创海报：每个榜单生成 1 张封面，并为每个入榜仓库生成 1 张 `1200×1600` 的 3:4 PNG 海报；图形、配色和纹理由代码确定性生成，不下载或复制参考帖素材。
 - 可靠降级：Trending 或 Search 单独失败时仍可继续；全部候选失效时返回非零退出码。
-- 自动运行：每日北京时间 08:17、每周一 08:27 运行并提交新产物。
+- 三种更新方式：每日北京时间 08:17、每周一 08:27 自动运行，也可从 Actions 页面手动触发或通过本地 CLI 按需运行。
 
 ```text
 Trending + Search
@@ -31,8 +38,25 @@ GitHub API 补全与过滤
         ↓
 综合主榜排名 + AI token/phrase-aware 分类与独立排名
         ↓
-Markdown + JSON + 两份小红书文案
+每个项目生成 7 个确定性叙事候选
+        ↓
+默认确定性选稿 / 可选 Codex 3.0 整榜受控选稿
+        ↓
+Markdown + JSON + 两份小红书审核稿
+        ↓
+确定性封面与逐项目海报
 ```
+
+## 更新频率
+
+| 方式 | 当前能力 | 适合场景 |
+| --- | --- | --- |
+| 每日定时 | 每天北京时间 08:17 运行日榜工作流 | 稳定日更、积累 1 日快照 |
+| 每周定时 | 每周一北京时间 08:27 运行周榜工作流 | 周度复盘、计算 7 日窗口 |
+| Actions 手动触发 | 两个工作流均提供 `workflow_dispatch` | 外部故障恢复、按需刷新、发布前复核 |
+| 本地 CLI | 可随时运行日榜、周榜或指定日期 | 调试、预览、人工运营 |
+
+当前不默认启用小时级或“实时”提交。GitHub API 提供的是查询时刻的累计计数，本项目的增量又依赖按日期保存的快照；高频运行还需要重新设计同日多快照标识、并发写入、API 速率预算、历史保留和 Pages 发布节奏。在这些约束完成前，所谓“近实时”只能作为按需刷新，不应被描述为秒级 Star 事件流。
 
 ## 快速开始
 
@@ -58,6 +82,13 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m github_hotspots.cli run-all --date 2026-07-11
 ```
 
+只用已经冻结的报告事实重新选稿并生成海报，不重新访问 GitHub：
+
+```powershell
+.\.venv\Scripts\python.exe -m github_hotspots.cli rerender reports/daily/2026-07-11.json
+.\.venv\Scripts\python.exe -m github_hotspots.cli rerender reports/daily/2026-07-11.json --editorial-backend codex-cli
+```
+
 > [!TIP]
 > 公共仓库查询可以无 Token 运行，但更容易遇到 GitHub API 限流。本地可在环境变量 `GITHUB_TOKEN` 中放置只读 Token；GitHub Actions 会自动使用仓库自带的 Token。
 
@@ -74,6 +105,30 @@ reports/weekly/YYYY-Www.json
 reports/weekly/YYYY-Www.xiaohongshu.md
 reports/weekly/YYYY-Www.ai.xiaohongshu.md
 ```
+
+本次图像升级的输出契约是：综合榜与 AI 榜分别生成 1 张封面和每个入榜项目 1 张 `1200×1600` PNG，集中放在当期报告的资产目录中，并用 Schema 2 `manifest.json` 记录生成器、样式、源报告、窗口、Top N 和每项资产。例如：
+
+```text
+reports/daily/assets/YYYY-MM-DD/
+  YYYY-MM-DD.comprehensive.cover.png
+  YYYY-MM-DD.comprehensive.01.owner--repo.png
+  YYYY-MM-DD.ai.cover.png
+  YYYY-MM-DD.ai.01.owner--repo.png
+  manifest.json
+
+reports/weekly/assets/YYYY-Www/
+  YYYY-Www.comprehensive.cover.png
+  YYYY-Www.comprehensive.01.owner--repo.png
+  YYYY-Www.ai.cover.png
+  YYYY-Www.ai.01.owner--repo.png
+  manifest.json
+```
+
+上述接口已经接入报告 JSON、日/周工作流和 Pages 构建；Schema 2 `manifest.json` 记录 renderer 名称/版本、`style_version`、`source_report`、统计窗口和 Top N。网站会为上榜项目提供海报预览与 PNG 下载，文案和海报仍全部属于人工审核稿。
+
+海报确定性以“相同报告输入、渲染器与样式版本、同一字体文件和同一渲染环境”为边界。Windows 与 GitHub Actions 可以使用不同的合格中文字体，因此跨系统的字体栅格和 PNG 字节不保证完全相同；缺少中文字体或所需字形时，渲染应直接失败并提示安装字体。
+
+当前样例的日榜图片约 `1 MB`、周榜图片约 `2 MB`，日周合计约 `3 MB`。按每年 365 份日榜、52 份周榜并预留清单与体积波动，容量规划采用约 `495 MB/年`；Git 历史占用还可能更高。v1.2 将确定“主分支保留近期资产、旧资产归档到 Release 或外部静态存储、清单保留可追溯链接”的策略；策略落地前不静默删除历史图片，并持续监控仓库大小。
 
 报告 JSON 的顶层 `repositories` 继续表示综合主榜，以兼容现有消费者；`boards.comprehensive.repositories` 和 `boards.ai.repositories` 分别保存两榜的独立排名。
 
@@ -101,13 +156,15 @@ reports/weekly/YYYY-Www.ai.xiaohongshu.md
 - `filters`：最低 Star、描述要求及语言/Owner/仓库黑名单。
 - `ranking.weights`：六项排名权重，合计必须为 1.0。
 - `outputs`：快照和报告目录。
+- `editorial`：确定性选稿或本地 `codex-cli` 受控选稿后端、超时、提示词和 Schema；默认 `deterministic`，CI 不启用本地 Codex。
+- `posters`：确定性海报开关与 3:4 尺寸；本次升级约定为 `1200×1600`。
 
 ## GitHub Actions
 
 - [.github/workflows/daily.yml](.github/workflows/daily.yml)：每日北京时间 08:17。
 - [.github/workflows/weekly.yml](.github/workflows/weekly.yml)：每周一北京时间 08:27。
 
-工作流会安装项目、运行测试、生成产物，然后只提交 `data/snapshots` 和对应报告目录。需要在仓库设置中允许 Actions 对内容进行写入。
+两个工作流都支持在 GitHub 仓库的 **Actions** 页面通过 **Run workflow** 手动触发。工作流会安装项目、运行测试、生成产物，然后只提交 `data/snapshots` 和对应报告目录。需要在仓库设置中允许 Actions 对内容进行写入。
 
 ## 提示词与产品说明
 
@@ -120,13 +177,17 @@ reports/weekly/YYYY-Www.ai.xiaohongshu.md
 - [中国地区 Chrome Extension 安装与替代方案](docs/CHROME_EXTENSION_SETUP_CN.md)
 - [本地 Codex API 安全接入方案](docs/LOCAL_CODEX_API.md)
 
-运行时默认使用不依赖 LLM 的事实型摘要器。后续接入模型时，应使用结构化摘要提示词，并在程序侧校验 JSON、数字和 URL，模型不得自行搜索或补造事实。
+运行时先由确定性候选库为每个项目生成 7 个完整版本。默认后端直接从这些候选中确定一个版本；可选的本地 Codex CLI 只在候选、事实、增量和两榜排名全部冻结后，从整榜视角分配叙事角度，并把所选候选的 `one_line`、`highlights` 和 `audience` 逐字符复制到 Schema 3.0 输出。它不能自由改写、拼接候选或创造新句子，也不参与搜索、分类、评分、数字计算或海报绘制。
+
+CLI 不可用、超时、输出不匹配候选或其他校验失败时，整榜自动回退确定性文案，GitHub Actions 默认不依赖本机 Codex。Schema 3.0 已使用冻结日榜与周榜的综合/AI 四个榜单完成真实本地结构化受控选稿验证，均使用 `codex-cli` 且未回退；旧版自由改写契约的历史冒烟不计入本次验收。
+
+项目只允许调用已安装的 `codex` 命令，由 Codex CLI 自行使用其用户级配置和认证。项目不会扫描、解析、复制或提交本地 Codex 配置、API 凭据、浏览器登录态或实际 provider 信息。
 
 ## 当前边界与下一阶段
 
-当前阶段只生成小红书文案，由用户人工核验事实、修改表达并发布；不会自动登录或发布到小红书，也不生成 PNG 海报。未来如建设自动发布，必须作为新的独立阶段再次获得明确授权，并满足平台规则、审核门禁和可撤回要求。
+当前发布链路止于“生成内容包”：两榜文案以及原创海报都由用户人工核验、选图和发布，系统不会自动登录或发布到小红书。未来如建设自动发布，必须作为新的独立阶段再次获得明确授权，并满足平台规则、审核门禁和可撤回要求。
 
-规则型摘要会保留 GitHub 原始英文描述以避免错误翻译；需要更自然的全中文卡片时，可接入受事实约束的 LLM 摘要器。
+文案自然度由确定性候选库负责。若某类项目仍显得同质化，应先改进候选模板、受众规则和叙事角度，再用固定样本验证；Codex 3.0 只能在现有候选之间做整榜选稿，不能用自由生成掩盖候选库问题。
 
 ## 持续交付约定
 

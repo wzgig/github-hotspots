@@ -51,7 +51,7 @@ git fetch origin
 - 可验证的验收条件。
 - 是否改变公开数据口径、排名、提示词、页面或发布行为。
 - 是否包含 `TBD` 决策；未确认的外部发布和凭据方案不得自行启用。
-- 是否保持已确认的产品范围：综合主榜 + AI 专题榜，两榜日榜各 Top 3、周榜各 Top 7；小红书仅生成草稿并人工审核发布。
+- 是否保持已确认的产品范围：综合主榜 + AI 专题榜，两榜日榜各 Top 3、周榜各 Top 7；小红书仅生成文案/海报草稿并人工审核发布。
 
 建议一次提交只解决一个逻辑问题；大变更拆成依赖清晰的原子提交。
 
@@ -65,7 +65,7 @@ git fetch origin
 
 ### Step 3 — Update `PROJECT_LOG.md`
 
-每次变更都必须在提交前更新项目日志。建议格式：
+每次人工编写的代码、配置、工作流、提示词、站点或文档变更都必须在提交前更新项目日志。纯定时报告-only 提交使用本节末尾的轻量审计例外。建议格式：
 
 ```markdown
 ## YYYY-MM-DD — <简短标题>
@@ -83,7 +83,7 @@ git fetch origin
 
 - 不写“全部通过”而省略命令；记录实际验证范围。
 - 纠正历史数据时说明原因、受影响日期和证据，不静默覆盖。
-- 自动榜单提交也必须产生简洁日志记录，至少包含周期、报告路径、候选数、测试结论和工作流运行标识。该自动化日志能力若尚未实现，必须作为当前运营缺口记录并优先补齐。
+- 自动榜单提交必须在生成报告元数据、bot commit 和 workflow summary 中留下周期、报告路径、候选数、测试结论和工作流运行标识，但不为每次计划运行追加 `PROJECT_LOG.md`。
 
 ### Step 4 — Run Quality Gates
 
@@ -163,14 +163,14 @@ git diff
 feat(pages): publish historical hotspot dashboard
 fix(ranking): exclude estimated growth from delta score
 docs(plan): add delivery roadmap and operations policy
-chore(hotspots): update daily report for 2026-07-12
+chore(hotspots): update daily report for <date>
 ```
 
 要求：
 
 - 提交摘要说明结果，避免“update files”“misc changes”等含糊描述。
 - 破坏性变更使用 `!` 并在正文写 `BREAKING CHANGE:`，同时提供迁移说明。
-- 提交前再次确认 `PROJECT_LOG.md` 已包含本次记录。
+- 人工变更提交前再次确认 `PROJECT_LOG.md` 已包含本次记录；纯定时报告-only 提交确认报告元数据和 bot commit 信息完整。
 
 ### Step 7 — Synchronize and Push `main`
 
@@ -252,14 +252,36 @@ gh run view <run-id> --log-failed
 - `v1.1.0`：图片、审核和 Pages 增强。
 - `v2.0.0`：多专题、趋势分析或受控分发等重大扩展。
 
-自动生成的日/周榜使用 Conventional Commit 和项目日志记录，不为每份榜单创建 GitHub Release。
+自动生成的日/周榜使用生成报告元数据、bot Conventional Commit 和 workflow summary 留痕，不为每份榜单创建 GitHub Release，也不在每次计划运行时追加 `PROJECT_LOG.md`。
 
 ## 3. Scheduled Run Operations
+
+### Update Modes and Near-real-time Boundary
+
+当前支持三种更新方式：
+
+| 方式 | 入口 | 运行语义 |
+| --- | --- | --- |
+| 日榜定时 | `daily.yml` schedule | 每天北京时间 08:17 采集并生成日榜 |
+| 周榜定时 | `weekly.yml` schedule | 每周一北京时间 08:27 采集并生成周榜 |
+| 按需刷新 | Actions `workflow_dispatch` 或本地 CLI | 人工触发完整采集、排名和内容生成 |
+
+在 GitHub 网页手动触发时，进入仓库 **Actions**，选择 **Daily GitHub Hotspots** 或 **Weekly GitHub Hotspots**，再选择 **Run workflow**。手动运行仍须执行工作流中的测试、采集和提交门禁，不能跳过事实校验。
+
+当前不默认启用小时级 schedule 或“实时”提交，原因如下：
+
+- GitHub API 返回查询时刻的累计计数，不提供本项目可直接消费的秒级 Star 事件流。
+- 当前快照以日期为主键；同一天多次运行需要新的时间戳、去重、保留和基线选择策略。
+- 高频采集会放大 API 限流、并发写入、bot 提交冲突、仓库历史膨胀和 Pages 部署抖动。
+- 发布端仍要求人工审核，高频生成并不等于可以高频对外发布。
+
+在近实时模式单独完成数据模型、API 预算、并发锁、历史保留、告警和 Pages 展示设计前，只把手动触发称为“按需刷新”，不声称实时或秒级更新。
 
 ### Daily Run
 
 - 计划：北京时间每天 08:17（UTC `17 0 * * *`）。
 - 输出：当日快照、包含综合主榜与 AI 专题榜的日榜 Markdown/JSON、综合榜 `*.xiaohongshu.md` 和 AI 榜 `*.ai.xiaohongshu.md` 两份草稿。
+- 图像产物：在 `reports/daily/assets/<date>/` 为每榜生成 1 张封面和每个项目 1 张 `1200×1600` PNG，并写入 Schema 2 `manifest.json`；全部标记为人工审核稿。
 - 目标：触发后 30 分钟内完成提交，随后 15 分钟内 Pages 可见。
 - 验证：两榜日榜各 Top 3（候选不足时有说明）、独立排名正确、数据质量说明存在、精确增量口径合法。
 
@@ -273,6 +295,7 @@ python -m github_hotspots.cli run --period daily
 
 - 计划：北京时间每周一 08:27（UTC `27 0 * * 1`）。
 - 输出：包含综合主榜与 AI 专题榜的周榜 Markdown/JSON、两份小红书草稿；共享当日快照时不得损坏日榜数据。
+- 图像产物：在 `reports/weekly/assets/<ISO-week>/` 为每榜生成 1 张封面和每个项目 1 张 `1200×1600` PNG，并写入 Schema 2 `manifest.json`；全部标记为人工审核稿。
 - 验证：实际 7 日基线日期、两榜各 Top 7、重叠仓库的独立排名、增长口径和历史链接。
 
 手动运行：
@@ -280,6 +303,16 @@ python -m github_hotspots.cli run --period daily
 ```powershell
 python -m github_hotspots.cli run --period weekly
 ```
+
+### Poster Fonts and Asset Retention
+
+海报只在相同报告输入、renderer/style 版本、字体文件和渲染环境内承诺稳定输出。GitHub Actions 安装 Noto CJK；本地 Windows 可以使用不同的合格中文字体，因此跨系统字体栅格和 PNG 字节不保证完全一致。缺少中文字体或当前文字所需字形时，任务应失败，不得静默回退到缺字字体。
+
+Schema 2 `manifest.json` 必须记录 renderer 名称/版本、`style_version`、`source_report`、统计窗口和 Top N。站点构建与人工抽检都以清单和源报告为核验入口。
+
+当前样例的日榜图片约 `1 MB`、周榜图片约 `2 MB`，日周合计约 `3 MB`。按每年 365 份日榜、52 份周榜并预留清单与体积波动，容量规划采用约 `495 MB/年`；Git 历史占用还可能更高。每月检查 `reports/daily/assets/`、`reports/weekly/assets/` 和仓库总体积，并在交付记录中报告异常增长。
+
+v1.2 需要确定主分支保留时长、GitHub Releases 或外部静态存储的归档位置、历史链接迁移和恢复流程，具体时长为 `TBD`。策略落地前不得静默删除已发布图片；未来归档时也必须先验证历史 Pages 链接和 `manifest.json` 指向。
 
 ### Manual Re-run
 
@@ -338,9 +371,10 @@ python -m github_hotspots.cli run --period weekly
 - 保留上一版可用部署；不要删除历史页面作为快速修复。
 - 修复后重新部署并核对页面 SHA、最新报告和移动端页面。
 
-#### Local Codex Provider failure
+#### Local Codex controlled selector failure
 
-- 立即回退 `RuleBasedProvider`；榜单不得因本地 Codex 不可用而失败。
+- 立即整榜回退确定性选稿；榜单不得因本地 Codex 不可用而失败。
+- Codex 只允许在事实、排名和 7 个候选冻结后规划角度并选择候选。即使返回内容可读，只要自然语言字段没有与同一个候选逐字符相等，或出现仓库增删、顺序变化、数字/URL 改写，就必须丢弃整榜结果。
 - 记录错误类别和耗时，不记录提示中可能包含的敏感内容。
 - 不尝试解析 Codex 认证文件、复制登录 Token 或将本地会话上传到 Actions。
 
@@ -367,7 +401,7 @@ python -m github_hotspots.cli run --period weekly
 - **报告回滚**：不要用空文件或伪数据覆盖；恢复最后一份已验证报告，同时保留更正说明。
 - **快照回滚**：快照属于事实证据。只有确认采集错误时才更正，并保留原值、证据和影响范围；不得为了得到理想排名修改快照。
 - **Pages 回滚**：重新部署最后一个已知良好 SHA，并验证页面 SHA；源代码 main 仍通过 revert 保持可追踪。
-- **AI/提示词回滚**：切回最后一个通过固定评估集的 Provider/提示词版本；规则摘要始终作为安全底线。
+- **Codex/提示词回滚**：切回最后一个通过固定评估集的选稿器/提示词版本；7 类确定性候选与确定性选稿始终作为安全底线。
 - **凭据泄露例外**：历史重写可能必要，但必须先轮换凭据、获得用户明确授权并记录专项方案。
 
 ## 6. Branch, Automation, and Release Policy
@@ -384,12 +418,12 @@ python -m github_hotspots.cli run --period weekly
 - bot 提交使用 `chore(hotspots): ...`，无变化时退出且不创建空提交。
 - daily/weekly 共享写入锁；不得并行覆盖同日快照。
 - bot 必须在生成前运行测试，在提交后提供 workflow summary，并触发/请求 Pages 更新。
-- 自动提交更新 `PROJECT_LOG.md` 的机制属于 MVP 运营要求；实现前，自动产物尚不满足完整 Definition of Done，应在日志中显式标记该缺口。
+- 计划运行的报告-only bot 提交不追加 `PROJECT_LOG.md`；其运行日期、数据质量和来源记录在生成报告元数据、提交信息与 workflow summary 中。
 
 ### Release Notes
 
 - 每次人工变更：`PROJECT_LOG.md` + 交付回复。
-- 每次自动榜单：项目日志简项 + commit + workflow summary。
+- 每次自动榜单：生成报告元数据 + bot commit + workflow summary，不追加 `PROJECT_LOG.md`。
 - 每个里程碑：SemVer tag + GitHub Release，列出功能、修复、数据/Schema 变化、升级步骤和已知限制。
 
 ## 7. Credentials and Local Tool Policy
@@ -397,8 +431,9 @@ python -m github_hotspots.cli run --period weekly
 - GitHub API 只从 `GITHUB_TOKEN` 环境变量或 Actions 官方 Token 读取。
 - 本地 `.env` 不提交；`.env.example` 只能包含空值和说明。
 - 不读取或复制本地 Codex 的认证数据库、配置 Token、浏览器 Cookie 或 Chrome profile。
-- 如需本地 Codex 摘要，只通过已验证的受支持 CLI/本地端点调用，并把它视为可随时失败的可选 Provider。
+- 如需本地 Codex 受控选稿，只在 GitHub 事实、两榜排名和每个项目的 7 个候选冻结后，通过已验证的受支持 CLI 调用，并把它视为可随时失败的可选 Provider。
 - GitHub Actions 不依赖用户电脑在线，也不依赖用户个人 Codex 会话。
+- GitHub Actions 默认使用确定性候选、确定性选稿与确定性海报渲染；不得因为本地 Codex 不可用而跳过报告或图片生成。
 - 所有日志在写入前脱敏 Authorization、Cookie、Token、查询签名和本机私有路径。
 - 当前小红书流程只生成内容草稿，发布前人工审核率必须为 `100%`；自动化不得登录、点击发布或复用账号会话。
 - 任何需要扩大权限、自动发布到外部平台或使用新 Secret 的变更，都属于新的范围，必须未来再次得到用户明确确认。
@@ -415,7 +450,7 @@ python -m github_hotspots.cli run --period weekly
 
 - [ ] 变更范围与验收条件明确。
 - [ ] 未覆盖未知用户修改。
-- [ ] `PROJECT_LOG.md` 已更新。
+- [ ] 人工变更已更新 `PROJECT_LOG.md`；纯定时报告-only 提交已由报告元数据和 bot commit 留痕。
 - [ ] pytest 通过。
 - [ ] Ruff lint/format check 通过。
 - [ ] 专项测试与产物验证通过。

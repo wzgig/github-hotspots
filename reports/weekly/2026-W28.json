@@ -1,16 +1,133 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "period": "weekly",
   "run_date": "2026-07-11",
-  "generated_at": "2026-07-11T23:24:41+08:00",
+  "window_start": "2026-07-04",
+  "window_end": "2026-07-11",
+  "generated_at": "2026-07-12T01:31:31+08:00",
   "timezone": "Asia/Shanghai",
-  "window_label": "2026-07-05 至 2026-07-11",
+  "window_label": "2026-07-04 至 2026-07-11",
   "data_quality": "中高：GitHub Trending 周期信号",
   "warnings": [
     "综合主榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending",
     "AI 专题榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending"
   ],
-  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。",
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后从受控候选中整榜选稿，并经过仓库身份、URL、数字、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "3.0",
+        "schema_version": "3.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "3.0",
+        "schema_version": "3.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/weekly/assets/2026-W28",
+    "manifest": "reports/weekly/assets/2026-W28/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "asgeirtj/system_prompts_leaks",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.01.asgeirtj--system-prompts-leaks.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "iOfficeAI/OfficeCLI",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.02.iofficeai--officecli.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "usestrix/strix",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.03.usestrix--strix.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "ogulcancelik/herdr",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.04.ogulcancelik--herdr.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.05.stablyai--orca.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "openai/codex-plugin-cc",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.06.openai--codex-plugin-cc.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.07.diegosouzapw--omniroute.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W28/2026-W28.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "asgeirtj/system_prompts_leaks",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.01.asgeirtj--system-prompts-leaks.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "iOfficeAI/OfficeCLI",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.02.iofficeai--officecli.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "usestrix/strix",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.03.usestrix--strix.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "Zackriya-Solutions/meetily",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.04.zackriya-solutions--meetily.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "ogulcancelik/herdr",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.05.ogulcancelik--herdr.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.06.stablyai--orca.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.07.diegosouzapw--omniroute.png"
+          }
+        ]
+      }
+    }
+  },
   "repositories": [
     {
       "repository_id": 976921297,
@@ -71,13 +188,19 @@
         "trending_signal": 43.07
       },
       "summary": {
-        "one_line": "system_prompts_leaks 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Extracted system prompts from Anthropic - Claud…",
+        "one_line": "当前累计 56,094 Star、9,261 Fork；system_prompts_leaks 的公开定位：整理公开系统提示词的资料库",
         "highlights": [
-          "仓库定位：Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code,…",
-          "主要语言：JavaScript；累计 56,094 Star、9,261 Fork",
-          "GitHub Trending 页面显示本期获得 7,765 Star"
+          "GitHub 标注的主要语言：JavaScript",
+          "GitHub Trending 页面显示本期获得 7,765 Star",
+          "公开 Topics：ai、ai-agents、anthropic、awesome"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者"
+        "audience": "提示词工程师、AI 产品研究者、模型应用开发者"
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.01.asgeirtj--system-prompts-leaks.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
       }
     },
     {
@@ -133,13 +256,19 @@
         "trending_signal": 25.0
       },
       "summary": {
-        "one_line": "OfficeCLI 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：OfficeCLI is the first and best Office suite purpose-built…",
+        "one_line": "OfficeCLI 的公开简介与 Topics 显示其定位：面向 AI 智能体的 Office 命令行工具",
         "highlights": [
-          "仓库定位：OfficeCLI is the first and best Office suite purpose-built for AI agents to read,…",
-          "主要语言：C#；累计 14,951 Star、1,021 Fork",
-          "GitHub Trending 页面显示本期获得 5,789 Star"
+          "GitHub 标注的主要语言：C#；当前累计 14,951 Star、1,021 Fork",
+          "GitHub Trending 页面显示本期获得 5,789 Star",
+          "公开 Topics：agent、ai、claude-code、cli"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者"
+        "audience": "Office 自动化开发者、数据与文档工作者"
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.02.iofficeai--officecli.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
       }
     },
     {
@@ -201,13 +330,19 @@
         "trending_signal": 31.55
       },
       "summary": {
-        "one_line": "strix 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Open-source AI penetration testing tool to find and fix your a…",
+        "one_line": "公开 Topics 包括 agents、ai-hacking、ai-penetration-testing；strix 的公开定位：用于渗透测试与漏洞检查的开源工具",
         "highlights": [
-          "仓库定位：Open-source AI penetration testing tool to find and fix your app’s vulnerabilitie…",
-          "主要语言：Python；累计 40,426 Star、4,251 Fork",
-          "GitHub Trending 页面显示本期获得 6,443 Star"
+          "GitHub Trending 页面显示本期获得 6,443 Star",
+          "GitHub 标注的主要语言：Python",
+          "当前累计 40,426 Star、4,251 Fork"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者"
+        "audience": "安全工程师、渗透测试人员、应用开发团队"
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.03.usestrix--strix.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
       }
     },
     {
@@ -267,13 +402,19 @@
         "trending_signal": 38.69
       },
       "summary": {
-        "one_line": "herdr 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：agent multiplexer that lives in your terminal.",
+        "one_line": "以 Rust 为主要语言，herdr 的公开定位：在终端协调多个智能体会话的工具",
         "highlights": [
-          "仓库定位：agent multiplexer that lives in your terminal.",
-          "主要语言：Rust；累计 15,422 Star、1,030 Fork",
-          "GitHub Trending 页面显示本期获得 4,714 Star"
+          "当前累计 15,422 Star、1,030 Fork",
+          "GitHub Trending 页面显示本期获得 4,714 Star",
+          "公开 Topics：agent、agent-orchestration、ai、ai-agents"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者"
+        "audience": "多智能体开发者、技术负责人、终端工具用户"
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.04.ogulcancelik--herdr.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
       }
     },
     {
@@ -333,13 +474,19 @@
         "trending_signal": 27.89
       },
       "summary": {
-        "one_line": "orca 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Orca is the ADE for working with a fleet of parallel agents. Ru…",
+        "one_line": "GitHub 记录的最近推送日期为 2026-07-11；orca 的公开定位：面向并行智能体协作的开发环境",
         "highlights": [
-          "仓库定位：Orca is the ADE for working with a fleet of parallel agents. Run any coding agent…",
-          "主要语言：TypeScript；累计 16,242 Star、1,272 Fork",
+          "公开 Topics：ade、agent-ide、ai-agents、claude-code",
+          "当前累计 16,242 Star、1,272 Fork",
           "GitHub Trending 页面显示本期获得 4,328 Star"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者"
+        "audience": "AI 编程工具开发者、Agent 工作流设计者、研发团队"
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.05.stablyai--orca.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
       }
     },
     {
@@ -380,13 +527,19 @@
         "trending_signal": 63.09
       },
       "summary": {
-        "one_line": "codex-plugin-cc 是一个近期升温、聚焦“开源软件与工程实践”的开源项目：Use Codex from Claude Code to review code or delegat…",
+        "one_line": "Trending 页面记录 codex-plugin-cc 本期获得 4,484 Star；公开定位：连接 AI 编程工具进行代码审查的插件",
         "highlights": [
-          "仓库定位：Use Codex from Claude Code to review code or delegate tasks.",
-          "主要语言：JavaScript；累计 27,583 Star、1,795 Fork",
-          "GitHub Trending 页面显示本期获得 4,484 Star"
+          "GitHub 标注的主要语言：JavaScript",
+          "当前累计 27,583 Star、1,795 Fork",
+          "公开 Topics：仓库未标注"
         ],
-        "audience": "软件开发者、开源爱好者、技术团队"
+        "audience": "使用 AI 代码审查与协作开发的工程师"
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.06.openai--codex-plugin-cc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
       }
     },
     {
@@ -448,19 +601,68 @@
         "trending_signal": 28.91
       },
       "summary": {
-        "one_line": "OmniRoute 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Never stop coding. Free AI gateway: one endpoint, 231+ pro…",
+        "one_line": "本榜候选信号来自 GitHub Trending 周榜、GitHub API；OmniRoute 的公开定位：统一接入与路由多种 AI 模型的网关",
         "highlights": [
-          "仓库定位：Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), conn…",
-          "主要语言：TypeScript；累计 15,519 Star、2,365 Fork",
+          "GitHub 标注的主要语言：TypeScript",
+          "公开 Topics：a2a、ai-agents、ai-gateway、anthropic",
           "GitHub Trending 页面显示本期获得 4,268 Star"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者"
+        "audience": "AI 应用开发者、平台工程师、工具集成者"
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.07.diegosouzapw--omniroute.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
       }
     }
   ],
   "boards": {
     "comprehensive": {
       "label": "综合主榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "asgeirtj/system_prompts_leaks",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.01.asgeirtj--system-prompts-leaks.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "iOfficeAI/OfficeCLI",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.02.iofficeai--officecli.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "usestrix/strix",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.03.usestrix--strix.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "ogulcancelik/herdr",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.04.ogulcancelik--herdr.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.05.stablyai--orca.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "openai/codex-plugin-cc",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.06.openai--codex-plugin-cc.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.07.diegosouzapw--omniroute.png"
+          }
+        ]
+      },
       "repositories": [
         {
           "repository_id": 976921297,
@@ -521,13 +723,19 @@
             "trending_signal": 43.07
           },
           "summary": {
-            "one_line": "system_prompts_leaks 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Extracted system prompts from Anthropic - Claud…",
+            "one_line": "当前累计 56,094 Star、9,261 Fork；system_prompts_leaks 的公开定位：整理公开系统提示词的资料库",
             "highlights": [
-              "仓库定位：Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code,…",
-              "主要语言：JavaScript；累计 56,094 Star、9,261 Fork",
-              "GitHub Trending 页面显示本期获得 7,765 Star"
+              "GitHub 标注的主要语言：JavaScript",
+              "GitHub Trending 页面显示本期获得 7,765 Star",
+              "公开 Topics：ai、ai-agents、anthropic、awesome"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "提示词工程师、AI 产品研究者、模型应用开发者"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.01.asgeirtj--system-prompts-leaks.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -583,13 +791,19 @@
             "trending_signal": 25.0
           },
           "summary": {
-            "one_line": "OfficeCLI 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：OfficeCLI is the first and best Office suite purpose-built…",
+            "one_line": "OfficeCLI 的公开简介与 Topics 显示其定位：面向 AI 智能体的 Office 命令行工具",
             "highlights": [
-              "仓库定位：OfficeCLI is the first and best Office suite purpose-built for AI agents to read,…",
-              "主要语言：C#；累计 14,951 Star、1,021 Fork",
-              "GitHub Trending 页面显示本期获得 5,789 Star"
+              "GitHub 标注的主要语言：C#；当前累计 14,951 Star、1,021 Fork",
+              "GitHub Trending 页面显示本期获得 5,789 Star",
+              "公开 Topics：agent、ai、claude-code、cli"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "Office 自动化开发者、数据与文档工作者"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.02.iofficeai--officecli.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -651,13 +865,19 @@
             "trending_signal": 31.55
           },
           "summary": {
-            "one_line": "strix 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Open-source AI penetration testing tool to find and fix your a…",
+            "one_line": "公开 Topics 包括 agents、ai-hacking、ai-penetration-testing；strix 的公开定位：用于渗透测试与漏洞检查的开源工具",
             "highlights": [
-              "仓库定位：Open-source AI penetration testing tool to find and fix your app’s vulnerabilitie…",
-              "主要语言：Python；累计 40,426 Star、4,251 Fork",
-              "GitHub Trending 页面显示本期获得 6,443 Star"
+              "GitHub Trending 页面显示本期获得 6,443 Star",
+              "GitHub 标注的主要语言：Python",
+              "当前累计 40,426 Star、4,251 Fork"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "安全工程师、渗透测试人员、应用开发团队"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.03.usestrix--strix.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -717,13 +937,19 @@
             "trending_signal": 38.69
           },
           "summary": {
-            "one_line": "herdr 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：agent multiplexer that lives in your terminal.",
+            "one_line": "以 Rust 为主要语言，herdr 的公开定位：在终端协调多个智能体会话的工具",
             "highlights": [
-              "仓库定位：agent multiplexer that lives in your terminal.",
-              "主要语言：Rust；累计 15,422 Star、1,030 Fork",
-              "GitHub Trending 页面显示本期获得 4,714 Star"
+              "当前累计 15,422 Star、1,030 Fork",
+              "GitHub Trending 页面显示本期获得 4,714 Star",
+              "公开 Topics：agent、agent-orchestration、ai、ai-agents"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "多智能体开发者、技术负责人、终端工具用户"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.04.ogulcancelik--herdr.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -783,13 +1009,19 @@
             "trending_signal": 27.89
           },
           "summary": {
-            "one_line": "orca 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Orca is the ADE for working with a fleet of parallel agents. Ru…",
+            "one_line": "GitHub 记录的最近推送日期为 2026-07-11；orca 的公开定位：面向并行智能体协作的开发环境",
             "highlights": [
-              "仓库定位：Orca is the ADE for working with a fleet of parallel agents. Run any coding agent…",
-              "主要语言：TypeScript；累计 16,242 Star、1,272 Fork",
+              "公开 Topics：ade、agent-ide、ai-agents、claude-code",
+              "当前累计 16,242 Star、1,272 Fork",
               "GitHub Trending 页面显示本期获得 4,328 Star"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "AI 编程工具开发者、Agent 工作流设计者、研发团队"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.05.stablyai--orca.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -830,13 +1062,19 @@
             "trending_signal": 63.09
           },
           "summary": {
-            "one_line": "codex-plugin-cc 是一个近期升温、聚焦“开源软件与工程实践”的开源项目：Use Codex from Claude Code to review code or delegat…",
+            "one_line": "Trending 页面记录 codex-plugin-cc 本期获得 4,484 Star；公开定位：连接 AI 编程工具进行代码审查的插件",
             "highlights": [
-              "仓库定位：Use Codex from Claude Code to review code or delegate tasks.",
-              "主要语言：JavaScript；累计 27,583 Star、1,795 Fork",
-              "GitHub Trending 页面显示本期获得 4,484 Star"
+              "GitHub 标注的主要语言：JavaScript",
+              "当前累计 27,583 Star、1,795 Fork",
+              "公开 Topics：仓库未标注"
             ],
-            "audience": "软件开发者、开源爱好者、技术团队"
+            "audience": "使用 AI 代码审查与协作开发的工程师"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.06.openai--codex-plugin-cc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -898,19 +1136,68 @@
             "trending_signal": 28.91
           },
           "summary": {
-            "one_line": "OmniRoute 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Never stop coding. Free AI gateway: one endpoint, 231+ pro…",
+            "one_line": "本榜候选信号来自 GitHub Trending 周榜、GitHub API；OmniRoute 的公开定位：统一接入与路由多种 AI 模型的网关",
             "highlights": [
-              "仓库定位：Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), conn…",
-              "主要语言：TypeScript；累计 15,519 Star、2,365 Fork",
+              "GitHub 标注的主要语言：TypeScript",
+              "公开 Topics：a2a、ai-agents、ai-gateway、anthropic",
               "GitHub Trending 页面显示本期获得 4,268 Star"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "AI 应用开发者、平台工程师、工具集成者"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.comprehensive.07.diegosouzapw--omniroute.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         }
       ]
     },
     "ai": {
       "label": "AI 专题榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W28/2026-W28.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "asgeirtj/system_prompts_leaks",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.01.asgeirtj--system-prompts-leaks.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "iOfficeAI/OfficeCLI",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.02.iofficeai--officecli.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "usestrix/strix",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.03.usestrix--strix.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "Zackriya-Solutions/meetily",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.04.zackriya-solutions--meetily.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "ogulcancelik/herdr",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.05.ogulcancelik--herdr.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.06.stablyai--orca.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/weekly/assets/2026-W28/2026-W28.ai.07.diegosouzapw--omniroute.png"
+          }
+        ]
+      },
       "repositories": [
         {
           "repository_id": 976921297,
@@ -971,13 +1258,19 @@
             "trending_signal": 43.07
           },
           "summary": {
-            "one_line": "system_prompts_leaks 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Extracted system prompts from Anthropic - Claud…",
+            "one_line": "当前累计 56,094 Star、9,261 Fork；system_prompts_leaks 的公开定位：整理公开系统提示词的资料库",
             "highlights": [
-              "仓库定位：Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code,…",
-              "主要语言：JavaScript；累计 56,094 Star、9,261 Fork",
-              "GitHub Trending 页面显示本期获得 7,765 Star"
+              "GitHub 标注的主要语言：JavaScript",
+              "GitHub Trending 页面显示本期获得 7,765 Star",
+              "公开 Topics：ai、ai-agents、anthropic、awesome"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "提示词工程师、AI 产品研究者、模型应用开发者"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.ai.01.asgeirtj--system-prompts-leaks.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -1033,13 +1326,19 @@
             "trending_signal": 25.0
           },
           "summary": {
-            "one_line": "OfficeCLI 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：OfficeCLI is the first and best Office suite purpose-built…",
+            "one_line": "OfficeCLI 的公开简介与 Topics 显示其定位：面向 AI 智能体的 Office 命令行工具",
             "highlights": [
-              "仓库定位：OfficeCLI is the first and best Office suite purpose-built for AI agents to read,…",
-              "主要语言：C#；累计 14,951 Star、1,021 Fork",
-              "GitHub Trending 页面显示本期获得 5,789 Star"
+              "GitHub 标注的主要语言：C#；当前累计 14,951 Star、1,021 Fork",
+              "GitHub Trending 页面显示本期获得 5,789 Star",
+              "公开 Topics：agent、ai、claude-code、cli"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "Office 自动化开发者、数据与文档工作者"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.ai.02.iofficeai--officecli.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -1101,13 +1400,19 @@
             "trending_signal": 31.55
           },
           "summary": {
-            "one_line": "strix 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Open-source AI penetration testing tool to find and fix your a…",
+            "one_line": "公开 Topics 包括 agents、ai-hacking、ai-penetration-testing；strix 的公开定位：用于渗透测试与漏洞检查的开源工具",
             "highlights": [
-              "仓库定位：Open-source AI penetration testing tool to find and fix your app’s vulnerabilitie…",
-              "主要语言：Python；累计 40,426 Star、4,251 Fork",
-              "GitHub Trending 页面显示本期获得 6,443 Star"
+              "GitHub Trending 页面显示本期获得 6,443 Star",
+              "GitHub 标注的主要语言：Python",
+              "当前累计 40,426 Star、4,251 Fork"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "安全工程师、渗透测试人员、应用开发团队"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.ai.03.usestrix--strix.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -1169,13 +1474,19 @@
             "trending_signal": 100.0
           },
           "summary": {
-            "one_line": "meetily 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Privacy first, AI meeting assistant with 4x faster Parakeet/…",
+            "one_line": "Trending 页面记录 meetily 本期获得 8,795 Star；公开定位：注重隐私的 AI 会议记录助手",
             "highlights": [
-              "仓库定位：Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcri…",
-              "主要语言：Rust；累计 23,032 Star、2,423 Fork",
-              "GitHub Trending 页面显示本期获得 8,795 Star"
+              "GitHub 标注的主要语言：Rust",
+              "当前累计 23,032 Star、2,423 Fork",
+              "公开 Topics：ai、ai-meeting-assistant、llm、local-ai"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.ai.04.zackriya-solutions--meetily.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -1235,13 +1546,19 @@
             "trending_signal": 38.69
           },
           "summary": {
-            "one_line": "herdr 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：agent multiplexer that lives in your terminal.",
+            "one_line": "以 Rust 为主要语言，herdr 的公开定位：在终端协调多个智能体会话的工具",
             "highlights": [
-              "仓库定位：agent multiplexer that lives in your terminal.",
-              "主要语言：Rust；累计 15,422 Star、1,030 Fork",
-              "GitHub Trending 页面显示本期获得 4,714 Star"
+              "当前累计 15,422 Star、1,030 Fork",
+              "GitHub Trending 页面显示本期获得 4,714 Star",
+              "公开 Topics：agent、agent-orchestration、ai、ai-agents"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "多智能体开发者、技术负责人、终端工具用户"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.ai.05.ogulcancelik--herdr.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -1301,13 +1618,19 @@
             "trending_signal": 27.89
           },
           "summary": {
-            "one_line": "orca 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Orca is the ADE for working with a fleet of parallel agents. Ru…",
+            "one_line": "GitHub 记录的最近推送日期为 2026-07-11；orca 的公开定位：面向并行智能体协作的开发环境",
             "highlights": [
-              "仓库定位：Orca is the ADE for working with a fleet of parallel agents. Run any coding agent…",
-              "主要语言：TypeScript；累计 16,242 Star、1,272 Fork",
+              "公开 Topics：ade、agent-ide、ai-agents、claude-code",
+              "当前累计 16,242 Star、1,272 Fork",
               "GitHub Trending 页面显示本期获得 4,328 Star"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "AI 编程工具开发者、Agent 工作流设计者、研发团队"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.ai.06.stablyai--orca.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -1369,13 +1692,19 @@
             "trending_signal": 28.91
           },
           "summary": {
-            "one_line": "OmniRoute 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Never stop coding. Free AI gateway: one endpoint, 231+ pro…",
+            "one_line": "本榜候选信号来自 GitHub Trending 周榜、GitHub API；OmniRoute 的公开定位：统一接入与路由多种 AI 模型的网关",
             "highlights": [
-              "仓库定位：Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), conn…",
-              "主要语言：TypeScript；累计 15,519 Star、2,365 Fork",
+              "GitHub 标注的主要语言：TypeScript",
+              "公开 Topics：a2a、ai-agents、ai-gateway、anthropic",
               "GitHub Trending 页面显示本期获得 4,268 Star"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "AI 应用开发者、平台工程师、工具集成者"
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W28/2026-W28.ai.07.diegosouzapw--omniroute.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         }
       ]

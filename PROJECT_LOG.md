@@ -113,3 +113,53 @@
 ### 已知限制
 
 - GitHub Actions 提示 `actions/checkout@v4` 与 `actions/setup-python@v5` 的 Node.js 20 运行时已弃用并被强制切换到 Node.js 24；当前不阻断任务，后续应在官方新主版本稳定后升级。
+
+## 2026-07-11 — 中文候选库、原创海报与本地 Codex 受控选稿
+
+### 目的
+
+解决榜单文案反复使用“近期升温、聚焦”等固定句式和长英文简介混排的问题，为综合主榜与 AI 专题榜补齐可直接人工审核的小红书配图，并在不读取本地配置或凭据的前提下接入可选的 Codex CLI Schema 3.0 受控选稿能力。
+
+### 变更
+
+- 将 `summarizer.py` 扩展为 7 种事实型叙事角度，分别从公开定位、增长信号、主要语言、规模、Topics、最近推送和候选来源切入；新增基于仓库简介与 Topics 明确关键词的中文定位规则，避免直接把长英文简介塞进小红书正文，并增加榜内多样性、禁用套话和定位正例测试。
+- 将 `prompts/repository_summary_zh.md` 重构为 Schema 3.0 受控选稿提示词，并新增 `schemas/repository_summary.schema.json`：每仓由程序生成 7 个完整候选，Codex 只能为整榜分配角度并逐字符复制所选候选，不能自由改写、翻译或补事实。
+- 新增 `editorial.py` 本地 Codex 适配器：使用临时目录、stdin、`--ephemeral`、只读沙箱、`--ignore-rules`、清空 MCP server，并禁用 shell、浏览器、插件、工具搜索和多代理；CI 默认禁用，CLI 缺失、超时、输出非法、候选不匹配或事实漂移时整榜回退。
+- 新增 `poster.py` 与 Pillow：每榜生成 1 张封面、每项目生成 1 张 `1200×1600` PNG；封面显示榜单 Top N、实际统计窗口和“已核验净增 Star / 净增基线积累中”等可信口径。找不到 CJK 字体或中文 glyph 时立即失败，不再静默生成方框字。
+- 报告 JSON 升级到 Schema 3，加入 `editorial`、`assets`、逐项目 `assets.poster`、`window_start/end` 和 `manifest.json`；Manifest 升级到 Schema 2，记录 renderer/style 版本、源报告、窗口和 Top N。双榜图片与 manifest 先在同级临时目录完整生成，再整体替换旧目录。
+- 新增 `rerender` CLI，可从冻结 JSON 重建文案和海报而不访问 GitHub；严格验证 Schema 1/2/3、双榜结构、必填事实、GitHub URL、排名、`delta_source`、有限 score/percentiles，并拒绝静默补零、跳过非法条目或输出 NaN/Infinity。
+- 强化 `config.py`：`editorial`、`posters` 和 `codex_cli` 必须是 Mapping，布尔值严格解析，海报最大尺寸限制为 `2400×3200`。
+- 日榜/周榜工作流安装 Noto CJK 字体，并在生成前运行 pytest、Ruff check 和 Ruff format check；提交步骤写入 `$GITHUB_STEP_SUMMARY`。默认后端仍为 `deterministic`，不会把本地 Codex 登录态带入 Actions。
+- Pages 构建安装项目依赖，严格校验报告 Schema、必填结构、海报必须位于对应 `reports/<period>/assets/`、真实 PNG 格式、`1200×1600` 尺寸和 5 MB 上限；网站显示日报缩略图，并为全部项目提供同源 PNG 下载入口。
+- 更新 README、项目总控提示词、产品规格、完整规划、运维规范、本地 Codex 安全方案和小红书参考拆解；明确每日 08:17、周一 08:27、`workflow_dispatch` 按需刷新、非事件实时边界、人工审核发布、MIT 许可证与长期图片归档风险。
+- 使用冻结事实和当前 Schema 3.0 重建 `2026-07-11` 日榜与 `2026-W28` 周榜：分别生成 8 张和 16 张 PNG；综合主榜和 AI 专题榜共四次真实本地 Codex 受控选稿全部成功，均 `fallback_used=false`。
+
+### 数据与接口影响
+
+- 排名、候选发现和 GitHub 数字口径未改变；LLM 不参与搜索、AI 分类、候选写作、评分、日期、Star/Fork、URL 或海报决策，只在已冻结候选之间选择。
+- 报告 JSON 从 Schema 2 增量升级到 Schema 3；顶层 `repositories` 和既有双榜路径继续保留。站点构建器可读取 Schema 1/2/3，但会拒绝未知或残缺报告。
+- 新增公开配置 `editorial` 与 `posters`。当前项目级 `reasoning_effort_override: xhigh` 仅用于兼容已安装 Codex CLI，不修改用户全局配置，也不记录 provider、endpoint、model 或凭据。
+- 小红书自动发布仍未启用；文案、封面和项目图全部标记为人工审核稿。
+
+### 验证
+
+- `pytest`：88 项全部通过，总覆盖率 81%。
+- `ruff check .` 与 `ruff format --check .`：通过。
+- `node --check site/app.js`、daily/weekly/pages 工作流 YAML 解析和 `git diff --check`：通过。
+- Pages 本地构建：日榜综合 3 / AI 3，周榜综合 7 / AI 7；20 张项目图与 4 张封面通过 PNG、尺寸和路径校验后复制到站点构建目录。
+- 本地 Codex：先用 3 个公开冻结项目完成独立 Schema 3.0 冒烟，随后重建日榜/周榜四个榜单；全部使用 `codex-cli`、无回退，并通过 Schema、身份、URL、数字、候选逐字符匹配、角度覆盖和禁用套话回查。
+- 图片视觉与结构检查：封面包含窗口、Top N 和可信增长口径；24 张图片均为 `1200×1600`，Manifest Schema 2 与报告映射一致。
+- Chrome 本地页面检查：数据状态正常，3 个日报海报缩略图、17 个其余项目下载入口全部存在；桌面已加载图片均为 `1200×1600` 且无破图，390px 手机视口无横向溢出，首屏导航与状态卡正常显示。
+
+### Actions / Pages
+
+- 本地实现与产物已完成；对应 GitHub Actions 和 GitHub Pages 需在本次提交推送后验证最新 SHA、图片提交范围、工作流摘要和线上下载链接。
+
+### 已知限制
+
+- 真实 7 日快照仍需继续积累，当前部分榜单继续使用明确标注的 GitHub Trending 周期 Star。
+- 本地 Codex 是可选受控选稿层，严格候选与事实门禁可能让整榜回退；自然度仍主要取决于确定性中文候选库，尚未建立不少于 30 个仓库的固定质量评估集和长期延迟/回退率基线。
+- 当前不默认启用小时级或实时提交；同日多快照、API 预算、历史保留与并发写入需要独立设计。
+- 当前日报图片约 1 MB、周报图片约 2 MB；按现有节奏估算 Git 历史每年约增长 495 MB，后续需要保留、压缩或外部归档策略。
+- 不同系统可能选择不同 CJK 字体；相同输入只保证在同字体环境内稳定，跨系统 PNG 字节级一致性不作承诺。
+- 小红书仍由用户人工选题、审稿、选图和发布；项目不会登录或自动操作账号。

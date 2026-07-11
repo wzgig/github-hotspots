@@ -1,7 +1,7 @@
 "use strict";
 window.GITHUB_HOTSPOTS_DATA = {
-  "schema_version": 2,
-  "generated_at": "2026-07-11T23:30:35+08:00",
+  "schema_version": 3,
+  "generated_at": "2026-07-12T01:31:31+08:00",
   "site": {
     "title": "GitHub Hotspots",
     "tagline": "追踪开源世界真正发生的增量",
@@ -10,14 +10,14 @@ window.GITHUB_HOTSPOTS_DATA = {
   "daily": {
     "period": "daily",
     "run_date": "2026-07-11",
-    "generated_at": "2026-07-11T23:30:35+08:00",
-    "window_label": "2026-07-11",
+    "generated_at": "2026-07-12T01:30:36+08:00",
+    "window_label": "2026-07-10 至 2026-07-11",
     "data_quality": "中高：GitHub Trending 周期信号",
     "warnings": [
       "综合主榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending",
       "AI 专题榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending"
     ],
-    "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。",
+    "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后从受控候选中整榜选稿，并经过仓库身份、URL、数字、增量口径和禁用套话回查。",
     "source_path": "reports/daily/2026-07-11.json",
     "repositories": [
       {
@@ -41,13 +41,14 @@ window.GITHUB_HOTSPOTS_DATA = {
           "javascriptcore",
           "jsx"
         ],
-        "one_line": "bun 是一个近期升温、聚焦“Web 与前端工程”的开源项目：Incredibly fast JavaScript runtime, bundler, test runner, and pa…",
+        "one_line": "以 Rust 为主要语言，bun 的公开定位：整合 JavaScript 运行、打包、测试与包管理的工具链",
         "highlights": [
-          "仓库定位：Incredibly fast JavaScript runtime, bundler, test runner, and package manager – a…",
-          "主要语言：Rust；累计 94,504 Star、4,957 Fork",
-          "GitHub Trending 页面显示本期获得 654 Star"
+          "当前累计 94,504 Star、4,957 Fork",
+          "GitHub Trending 页面显示本期获得 654 Star",
+          "公开 Topics：bun、bundler、javascript、javascriptcore"
         ],
         "audience": "前端开发者、设计工程师、独立开发者",
+        "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.01.oven-sh--bun.png",
         "component_percentiles": {
           "star_growth": 96.47,
           "relative_growth": 95.29,
@@ -78,13 +79,14 @@ window.GITHUB_HOTSPOTS_DATA = {
           "obra",
           "sdlc"
         ],
-        "one_line": "superpowers 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：An agentic skills framework & software development metho…",
+        "one_line": "当前累计 252,254 Star、22,517 Fork；superpowers 的公开定位：组织智能体开发流程与技能的开源框架",
         "highlights": [
-          "仓库定位：An agentic skills framework & software development methodology that works.",
-          "主要语言：Shell；累计 252,254 Star、22,517 Fork",
-          "GitHub Trending 页面显示本期获得 737 Star"
+          "GitHub 标注的主要语言：Shell",
+          "GitHub Trending 页面显示本期获得 737 Star",
+          "公开 Topics：ai、brainstorming、coding、obra"
         ],
         "audience": "AI 应用开发者、算法工程师、技术研究者",
+        "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.02.obra--superpowers.png",
         "component_percentiles": {
           "star_growth": 97.65,
           "relative_growth": 92.94,
@@ -115,13 +117,14 @@ window.GITHUB_HOTSPOTS_DATA = {
           "code-generation",
           "gemini-cli-extension"
         ],
-        "one_line": "DesktopCommanderMCP 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：This is MCP server for Claude that gives it term…",
+        "one_line": "Trending 页面记录 DesktopCommanderMCP 本期获得 900 Star；公开定位：通过 MCP 接入本地终端与开发工具的服务",
         "highlights": [
-          "仓库定位：This is MCP server for Claude that gives it terminal control, file system search…",
-          "主要语言：TypeScript；累计 7,696 Star、962 Fork",
-          "GitHub Trending 页面显示本期获得 900 Star"
+          "GitHub 标注的主要语言：TypeScript",
+          "当前累计 7,696 Star、962 Fork",
+          "公开 Topics：agent、ai、code-analysis、code-generation"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者",
+        "audience": "MCP 集成开发者、终端自动化用户、AI 工具作者",
+        "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.03.wonderwhy-er--desktopcommandermcp.png",
         "component_percentiles": {
           "star_growth": 100.0,
           "relative_growth": 98.82,
@@ -135,6 +138,7 @@ window.GITHUB_HOTSPOTS_DATA = {
     "boards": {
       "comprehensive": {
         "label": "综合主榜",
+        "cover_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.cover.png",
         "repositories": [
           {
             "rank": 1,
@@ -157,13 +161,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "javascriptcore",
               "jsx"
             ],
-            "one_line": "bun 是一个近期升温、聚焦“Web 与前端工程”的开源项目：Incredibly fast JavaScript runtime, bundler, test runner, and pa…",
+            "one_line": "以 Rust 为主要语言，bun 的公开定位：整合 JavaScript 运行、打包、测试与包管理的工具链",
             "highlights": [
-              "仓库定位：Incredibly fast JavaScript runtime, bundler, test runner, and package manager – a…",
-              "主要语言：Rust；累计 94,504 Star、4,957 Fork",
-              "GitHub Trending 页面显示本期获得 654 Star"
+              "当前累计 94,504 Star、4,957 Fork",
+              "GitHub Trending 页面显示本期获得 654 Star",
+              "公开 Topics：bun、bundler、javascript、javascriptcore"
             ],
             "audience": "前端开发者、设计工程师、独立开发者",
+            "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.01.oven-sh--bun.png",
             "component_percentiles": {
               "star_growth": 96.47,
               "relative_growth": 95.29,
@@ -194,13 +199,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "obra",
               "sdlc"
             ],
-            "one_line": "superpowers 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：An agentic skills framework & software development metho…",
+            "one_line": "当前累计 252,254 Star、22,517 Fork；superpowers 的公开定位：组织智能体开发流程与技能的开源框架",
             "highlights": [
-              "仓库定位：An agentic skills framework & software development methodology that works.",
-              "主要语言：Shell；累计 252,254 Star、22,517 Fork",
-              "GitHub Trending 页面显示本期获得 737 Star"
+              "GitHub 标注的主要语言：Shell",
+              "GitHub Trending 页面显示本期获得 737 Star",
+              "公开 Topics：ai、brainstorming、coding、obra"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.02.obra--superpowers.png",
             "component_percentiles": {
               "star_growth": 97.65,
               "relative_growth": 92.94,
@@ -231,13 +237,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "code-generation",
               "gemini-cli-extension"
             ],
-            "one_line": "DesktopCommanderMCP 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：This is MCP server for Claude that gives it term…",
+            "one_line": "Trending 页面记录 DesktopCommanderMCP 本期获得 900 Star；公开定位：通过 MCP 接入本地终端与开发工具的服务",
             "highlights": [
-              "仓库定位：This is MCP server for Claude that gives it terminal control, file system search…",
-              "主要语言：TypeScript；累计 7,696 Star、962 Fork",
-              "GitHub Trending 页面显示本期获得 900 Star"
+              "GitHub 标注的主要语言：TypeScript",
+              "当前累计 7,696 Star、962 Fork",
+              "公开 Topics：agent、ai、code-analysis、code-generation"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "MCP 集成开发者、终端自动化用户、AI 工具作者",
+            "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.03.wonderwhy-er--desktopcommandermcp.png",
             "component_percentiles": {
               "star_growth": 100.0,
               "relative_growth": 98.82,
@@ -251,6 +258,7 @@ window.GITHUB_HOTSPOTS_DATA = {
       },
       "ai": {
         "label": "AI 专题榜",
+        "cover_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.ai.cover.png",
         "repositories": [
           {
             "rank": 1,
@@ -273,13 +281,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "code-generation",
               "gemini-cli-extension"
             ],
-            "one_line": "DesktopCommanderMCP 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：This is MCP server for Claude that gives it term…",
+            "one_line": "公开 Topics 包括 agent、ai、code-analysis；DesktopCommanderMCP 的公开定位：通过 MCP 接入本地终端与开发工具的服务",
             "highlights": [
-              "仓库定位：This is MCP server for Claude that gives it terminal control, file system search…",
-              "主要语言：TypeScript；累计 7,696 Star、962 Fork",
-              "GitHub Trending 页面显示本期获得 900 Star"
+              "GitHub Trending 页面显示本期获得 900 Star",
+              "GitHub 标注的主要语言：TypeScript",
+              "当前累计 7,696 Star、962 Fork"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "MCP 集成开发者、终端自动化用户、AI 工具作者",
+            "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.ai.01.wonderwhy-er--desktopcommandermcp.png",
             "component_percentiles": {
               "star_growth": 100.0,
               "relative_growth": 96.67,
@@ -310,13 +319,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "postgresql",
               "rust"
             ],
-            "one_line": "pgrust 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Postgres rewritten in Rust, now passing 100% of the Postgres…",
+            "one_line": "以 Rust 为主要语言，pgrust 的公开定位：围绕 PostgreSQL 兼容实现的数据库项目",
             "highlights": [
-              "仓库定位：Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
-              "主要语言：Rust；累计 1,848 Star、47 Fork",
-              "GitHub Trending 页面显示本期获得 789 Star"
+              "当前累计 1,848 Star、47 Fork",
+              "GitHub Trending 页面显示本期获得 789 Star",
+              "公开 Topics：ai-assisted-development、database、postgres、postgresql"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.ai.02.malisper--pgrust.png",
             "component_percentiles": {
               "star_growth": 96.67,
               "relative_growth": 100.0,
@@ -347,13 +357,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "obra",
               "sdlc"
             ],
-            "one_line": "superpowers 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：An agentic skills framework & software development metho…",
+            "one_line": "当前累计 252,254 Star、22,517 Fork；superpowers 的公开定位：组织智能体开发流程与技能的开源框架",
             "highlights": [
-              "仓库定位：An agentic skills framework & software development methodology that works.",
-              "主要语言：Shell；累计 252,254 Star、22,517 Fork",
-              "GitHub Trending 页面显示本期获得 737 Star"
+              "GitHub 标注的主要语言：Shell",
+              "GitHub Trending 页面显示本期获得 737 Star",
+              "公开 Topics：ai、brainstorming、coding、obra"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.ai.03.obra--superpowers.png",
             "component_percentiles": {
               "star_growth": 93.33,
               "relative_growth": 90.0,
@@ -370,14 +381,14 @@ window.GITHUB_HOTSPOTS_DATA = {
   "weekly": {
     "period": "weekly",
     "run_date": "2026-07-11",
-    "generated_at": "2026-07-11T23:24:41+08:00",
-    "window_label": "2026-07-05 至 2026-07-11",
+    "generated_at": "2026-07-12T01:31:31+08:00",
+    "window_label": "2026-07-04 至 2026-07-11",
     "data_quality": "中高：GitHub Trending 周期信号",
     "warnings": [
       "综合主榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending",
       "AI 专题榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending"
     ],
-    "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。",
+    "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后从受控候选中整榜选稿，并经过仓库身份、URL、数字、增量口径和禁用套话回查。",
     "source_path": "reports/weekly/2026-W28.json",
     "repositories": [
       {
@@ -401,13 +412,14 @@ window.GITHUB_HOTSPOTS_DATA = {
           "awesome",
           "chatbot"
         ],
-        "one_line": "system_prompts_leaks 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Extracted system prompts from Anthropic - Claud…",
+        "one_line": "当前累计 56,094 Star、9,261 Fork；system_prompts_leaks 的公开定位：整理公开系统提示词的资料库",
         "highlights": [
-          "仓库定位：Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code,…",
-          "主要语言：JavaScript；累计 56,094 Star、9,261 Fork",
-          "GitHub Trending 页面显示本期获得 7,765 Star"
+          "GitHub 标注的主要语言：JavaScript",
+          "GitHub Trending 页面显示本期获得 7,765 Star",
+          "公开 Topics：ai、ai-agents、anthropic、awesome"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者",
+        "audience": "提示词工程师、AI 产品研究者、模型应用开发者",
+        "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.01.asgeirtj--system-prompts-leaks.png",
         "component_percentiles": {
           "star_growth": 99.07,
           "relative_growth": 93.52,
@@ -438,13 +450,14 @@ window.GITHUB_HOTSPOTS_DATA = {
           "cli",
           "codex"
         ],
-        "one_line": "OfficeCLI 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：OfficeCLI is the first and best Office suite purpose-built…",
+        "one_line": "OfficeCLI 的公开简介与 Topics 显示其定位：面向 AI 智能体的 Office 命令行工具",
         "highlights": [
-          "仓库定位：OfficeCLI is the first and best Office suite purpose-built for AI agents to read,…",
-          "主要语言：C#；累计 14,951 Star、1,021 Fork",
-          "GitHub Trending 页面显示本期获得 5,789 Star"
+          "GitHub 标注的主要语言：C#；当前累计 14,951 Star、1,021 Fork",
+          "GitHub Trending 页面显示本期获得 5,789 Star",
+          "公开 Topics：agent、ai、claude-code、cli"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者",
+        "audience": "Office 自动化开发者、数据与文档工作者",
+        "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.02.iofficeai--officecli.png",
         "component_percentiles": {
           "star_growth": 97.22,
           "relative_growth": 98.15,
@@ -475,13 +488,14 @@ window.GITHUB_HOTSPOTS_DATA = {
           "ai-pentesting",
           "ai-security"
         ],
-        "one_line": "strix 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Open-source AI penetration testing tool to find and fix your a…",
+        "one_line": "公开 Topics 包括 agents、ai-hacking、ai-penetration-testing；strix 的公开定位：用于渗透测试与漏洞检查的开源工具",
         "highlights": [
-          "仓库定位：Open-source AI penetration testing tool to find and fix your app’s vulnerabilitie…",
-          "主要语言：Python；累计 40,426 Star、4,251 Fork",
-          "GitHub Trending 页面显示本期获得 6,443 Star"
+          "GitHub Trending 页面显示本期获得 6,443 Star",
+          "GitHub 标注的主要语言：Python",
+          "当前累计 40,426 Star、4,251 Fork"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者",
+        "audience": "安全工程师、渗透测试人员、应用开发团队",
+        "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.03.usestrix--strix.png",
         "component_percentiles": {
           "star_growth": 98.15,
           "relative_growth": 92.59,
@@ -512,13 +526,14 @@ window.GITHUB_HOTSPOTS_DATA = {
           "ai-agents",
           "claude-code"
         ],
-        "one_line": "herdr 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：agent multiplexer that lives in your terminal.",
+        "one_line": "以 Rust 为主要语言，herdr 的公开定位：在终端协调多个智能体会话的工具",
         "highlights": [
-          "仓库定位：agent multiplexer that lives in your terminal.",
-          "主要语言：Rust；累计 15,422 Star、1,030 Fork",
-          "GitHub Trending 页面显示本期获得 4,714 Star"
+          "当前累计 15,422 Star、1,030 Fork",
+          "GitHub Trending 页面显示本期获得 4,714 Star",
+          "公开 Topics：agent、agent-orchestration、ai、ai-agents"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者",
+        "audience": "多智能体开发者、技术负责人、终端工具用户",
+        "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.04.ogulcancelik--herdr.png",
         "component_percentiles": {
           "star_growth": 95.37,
           "relative_growth": 96.3,
@@ -549,13 +564,14 @@ window.GITHUB_HOTSPOTS_DATA = {
           "claude-code",
           "cli"
         ],
-        "one_line": "orca 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Orca is the ADE for working with a fleet of parallel agents. Ru…",
+        "one_line": "GitHub 记录的最近推送日期为 2026-07-11；orca 的公开定位：面向并行智能体协作的开发环境",
         "highlights": [
-          "仓库定位：Orca is the ADE for working with a fleet of parallel agents. Run any coding agent…",
-          "主要语言：TypeScript；累计 16,242 Star、1,272 Fork",
+          "公开 Topics：ade、agent-ide、ai-agents、claude-code",
+          "当前累计 16,242 Star、1,272 Fork",
           "GitHub Trending 页面显示本期获得 4,328 Star"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者",
+        "audience": "AI 编程工具开发者、Agent 工作流设计者、研发团队",
+        "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.05.stablyai--orca.png",
         "component_percentiles": {
           "star_growth": 93.52,
           "relative_growth": 94.44,
@@ -580,13 +596,14 @@ window.GITHUB_HOTSPOTS_DATA = {
         "delta_label": "Trending 周期增星",
         "pushed_at": "2026-07-08T00:17:31Z",
         "topics": [],
-        "one_line": "codex-plugin-cc 是一个近期升温、聚焦“开源软件与工程实践”的开源项目：Use Codex from Claude Code to review code or delegat…",
+        "one_line": "Trending 页面记录 codex-plugin-cc 本期获得 4,484 Star；公开定位：连接 AI 编程工具进行代码审查的插件",
         "highlights": [
-          "仓库定位：Use Codex from Claude Code to review code or delegate tasks.",
-          "主要语言：JavaScript；累计 27,583 Star、1,795 Fork",
-          "GitHub Trending 页面显示本期获得 4,484 Star"
+          "GitHub 标注的主要语言：JavaScript",
+          "当前累计 27,583 Star、1,795 Fork",
+          "公开 Topics：仓库未标注"
         ],
-        "audience": "软件开发者、开源爱好者、技术团队",
+        "audience": "使用 AI 代码审查与协作开发的工程师",
+        "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.06.openai--codex-plugin-cc.png",
         "component_percentiles": {
           "star_growth": 94.44,
           "relative_growth": 90.74,
@@ -617,13 +634,14 @@ window.GITHUB_HOTSPOTS_DATA = {
           "anthropic",
           "claude"
         ],
-        "one_line": "OmniRoute 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Never stop coding. Free AI gateway: one endpoint, 231+ pro…",
+        "one_line": "本榜候选信号来自 GitHub Trending 周榜、GitHub API；OmniRoute 的公开定位：统一接入与路由多种 AI 模型的网关",
         "highlights": [
-          "仓库定位：Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), conn…",
-          "主要语言：TypeScript；累计 15,519 Star、2,365 Fork",
+          "GitHub 标注的主要语言：TypeScript",
+          "公开 Topics：a2a、ai-agents、ai-gateway、anthropic",
           "GitHub Trending 页面显示本期获得 4,268 Star"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者",
+        "audience": "AI 应用开发者、平台工程师、工具集成者",
+        "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.07.diegosouzapw--omniroute.png",
         "component_percentiles": {
           "star_growth": 92.59,
           "relative_growth": 95.37,
@@ -637,6 +655,7 @@ window.GITHUB_HOTSPOTS_DATA = {
     "boards": {
       "comprehensive": {
         "label": "综合主榜",
+        "cover_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.cover.png",
         "repositories": [
           {
             "rank": 1,
@@ -659,13 +678,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "awesome",
               "chatbot"
             ],
-            "one_line": "system_prompts_leaks 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Extracted system prompts from Anthropic - Claud…",
+            "one_line": "当前累计 56,094 Star、9,261 Fork；system_prompts_leaks 的公开定位：整理公开系统提示词的资料库",
             "highlights": [
-              "仓库定位：Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code,…",
-              "主要语言：JavaScript；累计 56,094 Star、9,261 Fork",
-              "GitHub Trending 页面显示本期获得 7,765 Star"
+              "GitHub 标注的主要语言：JavaScript",
+              "GitHub Trending 页面显示本期获得 7,765 Star",
+              "公开 Topics：ai、ai-agents、anthropic、awesome"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "提示词工程师、AI 产品研究者、模型应用开发者",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.01.asgeirtj--system-prompts-leaks.png",
             "component_percentiles": {
               "star_growth": 99.07,
               "relative_growth": 93.52,
@@ -696,13 +716,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "cli",
               "codex"
             ],
-            "one_line": "OfficeCLI 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：OfficeCLI is the first and best Office suite purpose-built…",
+            "one_line": "OfficeCLI 的公开简介与 Topics 显示其定位：面向 AI 智能体的 Office 命令行工具",
             "highlights": [
-              "仓库定位：OfficeCLI is the first and best Office suite purpose-built for AI agents to read,…",
-              "主要语言：C#；累计 14,951 Star、1,021 Fork",
-              "GitHub Trending 页面显示本期获得 5,789 Star"
+              "GitHub 标注的主要语言：C#；当前累计 14,951 Star、1,021 Fork",
+              "GitHub Trending 页面显示本期获得 5,789 Star",
+              "公开 Topics：agent、ai、claude-code、cli"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "Office 自动化开发者、数据与文档工作者",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.02.iofficeai--officecli.png",
             "component_percentiles": {
               "star_growth": 97.22,
               "relative_growth": 98.15,
@@ -733,13 +754,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-pentesting",
               "ai-security"
             ],
-            "one_line": "strix 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Open-source AI penetration testing tool to find and fix your a…",
+            "one_line": "公开 Topics 包括 agents、ai-hacking、ai-penetration-testing；strix 的公开定位：用于渗透测试与漏洞检查的开源工具",
             "highlights": [
-              "仓库定位：Open-source AI penetration testing tool to find and fix your app’s vulnerabilitie…",
-              "主要语言：Python；累计 40,426 Star、4,251 Fork",
-              "GitHub Trending 页面显示本期获得 6,443 Star"
+              "GitHub Trending 页面显示本期获得 6,443 Star",
+              "GitHub 标注的主要语言：Python",
+              "当前累计 40,426 Star、4,251 Fork"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "安全工程师、渗透测试人员、应用开发团队",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.03.usestrix--strix.png",
             "component_percentiles": {
               "star_growth": 98.15,
               "relative_growth": 92.59,
@@ -770,13 +792,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-agents",
               "claude-code"
             ],
-            "one_line": "herdr 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：agent multiplexer that lives in your terminal.",
+            "one_line": "以 Rust 为主要语言，herdr 的公开定位：在终端协调多个智能体会话的工具",
             "highlights": [
-              "仓库定位：agent multiplexer that lives in your terminal.",
-              "主要语言：Rust；累计 15,422 Star、1,030 Fork",
-              "GitHub Trending 页面显示本期获得 4,714 Star"
+              "当前累计 15,422 Star、1,030 Fork",
+              "GitHub Trending 页面显示本期获得 4,714 Star",
+              "公开 Topics：agent、agent-orchestration、ai、ai-agents"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "多智能体开发者、技术负责人、终端工具用户",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.04.ogulcancelik--herdr.png",
             "component_percentiles": {
               "star_growth": 95.37,
               "relative_growth": 96.3,
@@ -807,13 +830,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "claude-code",
               "cli"
             ],
-            "one_line": "orca 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Orca is the ADE for working with a fleet of parallel agents. Ru…",
+            "one_line": "GitHub 记录的最近推送日期为 2026-07-11；orca 的公开定位：面向并行智能体协作的开发环境",
             "highlights": [
-              "仓库定位：Orca is the ADE for working with a fleet of parallel agents. Run any coding agent…",
-              "主要语言：TypeScript；累计 16,242 Star、1,272 Fork",
+              "公开 Topics：ade、agent-ide、ai-agents、claude-code",
+              "当前累计 16,242 Star、1,272 Fork",
               "GitHub Trending 页面显示本期获得 4,328 Star"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "AI 编程工具开发者、Agent 工作流设计者、研发团队",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.05.stablyai--orca.png",
             "component_percentiles": {
               "star_growth": 93.52,
               "relative_growth": 94.44,
@@ -838,13 +862,14 @@ window.GITHUB_HOTSPOTS_DATA = {
             "delta_label": "Trending 周期增星",
             "pushed_at": "2026-07-08T00:17:31Z",
             "topics": [],
-            "one_line": "codex-plugin-cc 是一个近期升温、聚焦“开源软件与工程实践”的开源项目：Use Codex from Claude Code to review code or delegat…",
+            "one_line": "Trending 页面记录 codex-plugin-cc 本期获得 4,484 Star；公开定位：连接 AI 编程工具进行代码审查的插件",
             "highlights": [
-              "仓库定位：Use Codex from Claude Code to review code or delegate tasks.",
-              "主要语言：JavaScript；累计 27,583 Star、1,795 Fork",
-              "GitHub Trending 页面显示本期获得 4,484 Star"
+              "GitHub 标注的主要语言：JavaScript",
+              "当前累计 27,583 Star、1,795 Fork",
+              "公开 Topics：仓库未标注"
             ],
-            "audience": "软件开发者、开源爱好者、技术团队",
+            "audience": "使用 AI 代码审查与协作开发的工程师",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.06.openai--codex-plugin-cc.png",
             "component_percentiles": {
               "star_growth": 94.44,
               "relative_growth": 90.74,
@@ -875,13 +900,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "anthropic",
               "claude"
             ],
-            "one_line": "OmniRoute 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Never stop coding. Free AI gateway: one endpoint, 231+ pro…",
+            "one_line": "本榜候选信号来自 GitHub Trending 周榜、GitHub API；OmniRoute 的公开定位：统一接入与路由多种 AI 模型的网关",
             "highlights": [
-              "仓库定位：Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), conn…",
-              "主要语言：TypeScript；累计 15,519 Star、2,365 Fork",
+              "GitHub 标注的主要语言：TypeScript",
+              "公开 Topics：a2a、ai-agents、ai-gateway、anthropic",
               "GitHub Trending 页面显示本期获得 4,268 Star"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "AI 应用开发者、平台工程师、工具集成者",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.07.diegosouzapw--omniroute.png",
             "component_percentiles": {
               "star_growth": 92.59,
               "relative_growth": 95.37,
@@ -895,6 +921,7 @@ window.GITHUB_HOTSPOTS_DATA = {
       },
       "ai": {
         "label": "AI 专题榜",
+        "cover_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.cover.png",
         "repositories": [
           {
             "rank": 1,
@@ -917,13 +944,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "awesome",
               "chatbot"
             ],
-            "one_line": "system_prompts_leaks 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Extracted system prompts from Anthropic - Claud…",
+            "one_line": "当前累计 56,094 Star、9,261 Fork；system_prompts_leaks 的公开定位：整理公开系统提示词的资料库",
             "highlights": [
-              "仓库定位：Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code,…",
-              "主要语言：JavaScript；累计 56,094 Star、9,261 Fork",
-              "GitHub Trending 页面显示本期获得 7,765 Star"
+              "GitHub 标注的主要语言：JavaScript",
+              "GitHub Trending 页面显示本期获得 7,765 Star",
+              "公开 Topics：ai、ai-agents、anthropic、awesome"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "提示词工程师、AI 产品研究者、模型应用开发者",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.01.asgeirtj--system-prompts-leaks.png",
             "component_percentiles": {
               "star_growth": 97.83,
               "relative_growth": 89.13,
@@ -954,13 +982,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "cli",
               "codex"
             ],
-            "one_line": "OfficeCLI 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：OfficeCLI is the first and best Office suite purpose-built…",
+            "one_line": "OfficeCLI 的公开简介与 Topics 显示其定位：面向 AI 智能体的 Office 命令行工具",
             "highlights": [
-              "仓库定位：OfficeCLI is the first and best Office suite purpose-built for AI agents to read,…",
-              "主要语言：C#；累计 14,951 Star、1,021 Fork",
-              "GitHub Trending 页面显示本期获得 5,789 Star"
+              "GitHub 标注的主要语言：C#；当前累计 14,951 Star、1,021 Fork",
+              "GitHub Trending 页面显示本期获得 5,789 Star",
+              "公开 Topics：agent、ai、claude-code、cli"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "Office 自动化开发者、数据与文档工作者",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.02.iofficeai--officecli.png",
             "component_percentiles": {
               "star_growth": 93.48,
               "relative_growth": 97.83,
@@ -991,13 +1020,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-pentesting",
               "ai-security"
             ],
-            "one_line": "strix 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Open-source AI penetration testing tool to find and fix your a…",
+            "one_line": "公开 Topics 包括 agents、ai-hacking、ai-penetration-testing；strix 的公开定位：用于渗透测试与漏洞检查的开源工具",
             "highlights": [
-              "仓库定位：Open-source AI penetration testing tool to find and fix your app’s vulnerabilitie…",
-              "主要语言：Python；累计 40,426 Star、4,251 Fork",
-              "GitHub Trending 页面显示本期获得 6,443 Star"
+              "GitHub Trending 页面显示本期获得 6,443 Star",
+              "GitHub 标注的主要语言：Python",
+              "当前累计 40,426 Star、4,251 Fork"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "安全工程师、渗透测试人员、应用开发团队",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.03.usestrix--strix.png",
             "component_percentiles": {
               "star_growth": 95.65,
               "relative_growth": 86.96,
@@ -1028,13 +1058,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "local-ai",
               "mac"
             ],
-            "one_line": "meetily 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Privacy first, AI meeting assistant with 4x faster Parakeet/…",
+            "one_line": "Trending 页面记录 meetily 本期获得 8,795 Star；公开定位：注重隐私的 AI 会议记录助手",
             "highlights": [
-              "仓库定位：Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcri…",
-              "主要语言：Rust；累计 23,032 Star、2,423 Fork",
-              "GitHub Trending 页面显示本期获得 8,795 Star"
+              "GitHub 标注的主要语言：Rust",
+              "当前累计 23,032 Star、2,423 Fork",
+              "公开 Topics：ai、ai-meeting-assistant、llm、local-ai"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.04.zackriya-solutions--meetily.png",
             "component_percentiles": {
               "star_growth": 100.0,
               "relative_growth": 100.0,
@@ -1065,13 +1096,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-agents",
               "claude-code"
             ],
-            "one_line": "herdr 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：agent multiplexer that lives in your terminal.",
+            "one_line": "以 Rust 为主要语言，herdr 的公开定位：在终端协调多个智能体会话的工具",
             "highlights": [
-              "仓库定位：agent multiplexer that lives in your terminal.",
-              "主要语言：Rust；累计 15,422 Star、1,030 Fork",
-              "GitHub Trending 页面显示本期获得 4,714 Star"
+              "当前累计 15,422 Star、1,030 Fork",
+              "GitHub Trending 页面显示本期获得 4,714 Star",
+              "公开 Topics：agent、agent-orchestration、ai、ai-agents"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "多智能体开发者、技术负责人、终端工具用户",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.05.ogulcancelik--herdr.png",
             "component_percentiles": {
               "star_growth": 89.13,
               "relative_growth": 95.65,
@@ -1102,13 +1134,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "claude-code",
               "cli"
             ],
-            "one_line": "orca 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Orca is the ADE for working with a fleet of parallel agents. Ru…",
+            "one_line": "GitHub 记录的最近推送日期为 2026-07-11；orca 的公开定位：面向并行智能体协作的开发环境",
             "highlights": [
-              "仓库定位：Orca is the ADE for working with a fleet of parallel agents. Run any coding agent…",
-              "主要语言：TypeScript；累计 16,242 Star、1,272 Fork",
+              "公开 Topics：ade、agent-ide、ai-agents、claude-code",
+              "当前累计 16,242 Star、1,272 Fork",
               "GitHub Trending 页面显示本期获得 4,328 Star"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "AI 编程工具开发者、Agent 工作流设计者、研发团队",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.06.stablyai--orca.png",
             "component_percentiles": {
               "star_growth": 86.96,
               "relative_growth": 91.3,
@@ -1139,13 +1172,14 @@ window.GITHUB_HOTSPOTS_DATA = {
               "anthropic",
               "claude"
             ],
-            "one_line": "OmniRoute 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Never stop coding. Free AI gateway: one endpoint, 231+ pro…",
+            "one_line": "本榜候选信号来自 GitHub Trending 周榜、GitHub API；OmniRoute 的公开定位：统一接入与路由多种 AI 模型的网关",
             "highlights": [
-              "仓库定位：Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), conn…",
-              "主要语言：TypeScript；累计 15,519 Star、2,365 Fork",
+              "GitHub 标注的主要语言：TypeScript",
+              "公开 Topics：a2a、ai-agents、ai-gateway、anthropic",
               "GitHub Trending 页面显示本期获得 4,268 Star"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "AI 应用开发者、平台工程师、工具集成者",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.07.diegosouzapw--omniroute.png",
             "component_percentiles": {
               "star_growth": 84.78,
               "relative_growth": 93.48,
@@ -1160,7 +1194,7 @@ window.GITHUB_HOTSPOTS_DATA = {
     }
   },
   "methodology": {
-    "summary": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。",
+    "summary": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后从受控候选中整榜选稿，并经过仓库身份、URL、数字、增量口径和禁用套话回查。",
     "quality": "中高：GitHub Trending 周期信号",
     "warnings": [
       "综合主榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending",
@@ -1229,7 +1263,7 @@ window.GITHUB_HOTSPOTS_DATA = {
     {
       "step": "05",
       "name": "出版",
-      "detail": "生成 Markdown、JSON、小红书文案与本项目数据页。"
+      "detail": "生成 Markdown、JSON、小红书文案、原创海报与项目数据页。"
     }
   ]
 };

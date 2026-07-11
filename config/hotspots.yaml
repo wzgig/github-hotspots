@@ -12,6 +12,24 @@ outputs:
   daily_reports_dir: reports/daily
   weekly_reports_dir: reports/weekly
 
+editorial:
+  backend: deterministic
+  fallback: deterministic
+  timeout_seconds: 120
+  allow_in_ci: false
+  prompt_path: prompts/repository_summary_zh.md
+  schema_path: schemas/repository_summary.schema.json
+  codex_cli:
+    executable: codex
+    # Keeps codex-cli 0.124 compatible without editing the user's global config.
+    # This changes reasoning effort only; provider and credentials still come from Codex itself.
+    reasoning_effort_override: xhigh
+
+posters:
+  enabled: true
+  width: 1200
+  height: 1600
+
 runs:
   daily:
     period: daily

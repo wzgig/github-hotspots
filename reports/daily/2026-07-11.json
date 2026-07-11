@@ -1,16 +1,93 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "period": "daily",
   "run_date": "2026-07-11",
-  "generated_at": "2026-07-11T23:30:35+08:00",
+  "window_start": "2026-07-10",
+  "window_end": "2026-07-11",
+  "generated_at": "2026-07-12T01:30:36+08:00",
   "timezone": "Asia/Shanghai",
-  "window_label": "2026-07-11",
+  "window_label": "2026-07-10 至 2026-07-11",
   "data_quality": "中高：GitHub Trending 周期信号",
   "warnings": [
     "综合主榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending",
     "AI 专题榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending"
   ],
-  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。",
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后从受控候选中整榜选稿，并经过仓库身份、URL、数字、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "3.0",
+        "schema_version": "3.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "3.0",
+        "schema_version": "3.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-11",
+    "manifest": "reports/daily/assets/2026-07-11/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "oven-sh/bun",
+            "path": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.01.oven-sh--bun.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.02.obra--superpowers.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "wonderwhy-er/DesktopCommanderMCP",
+            "path": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.03.wonderwhy-er--desktopcommandermcp.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-11/2026-07-11.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "wonderwhy-er/DesktopCommanderMCP",
+            "path": "reports/daily/assets/2026-07-11/2026-07-11.ai.01.wonderwhy-er--desktopcommandermcp.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "malisper/pgrust",
+            "path": "reports/daily/assets/2026-07-11/2026-07-11.ai.02.malisper--pgrust.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-07-11/2026-07-11.ai.03.obra--superpowers.png"
+          }
+        ]
+      }
+    }
+  },
   "repositories": [
     {
       "repository_id": 357728969,
@@ -63,13 +140,19 @@
         "trending_signal": 28.91
       },
       "summary": {
-        "one_line": "bun 是一个近期升温、聚焦“Web 与前端工程”的开源项目：Incredibly fast JavaScript runtime, bundler, test runner, and pa…",
+        "one_line": "以 Rust 为主要语言，bun 的公开定位：整合 JavaScript 运行、打包、测试与包管理的工具链",
         "highlights": [
-          "仓库定位：Incredibly fast JavaScript runtime, bundler, test runner, and package manager – a…",
-          "主要语言：Rust；累计 94,504 Star、4,957 Fork",
-          "GitHub Trending 页面显示本期获得 654 Star"
+          "当前累计 94,504 Star、4,957 Fork",
+          "GitHub Trending 页面显示本期获得 654 Star",
+          "公开 Topics：bun、bundler、javascript、javascriptcore"
         ],
         "audience": "前端开发者、设计工程师、独立开发者"
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.01.oven-sh--bun.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
       }
     },
     {
@@ -119,13 +202,19 @@
         "trending_signal": 22.42
       },
       "summary": {
-        "one_line": "superpowers 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：An agentic skills framework & software development metho…",
+        "one_line": "当前累计 252,254 Star、22,517 Fork；superpowers 的公开定位：组织智能体开发流程与技能的开源框架",
         "highlights": [
-          "仓库定位：An agentic skills framework & software development methodology that works.",
-          "主要语言：Shell；累计 252,254 Star、22,517 Fork",
-          "GitHub Trending 页面显示本期获得 737 Star"
+          "GitHub 标注的主要语言：Shell",
+          "GitHub Trending 页面显示本期获得 737 Star",
+          "公开 Topics：ai、brainstorming、coding、obra"
         ],
         "audience": "AI 应用开发者、算法工程师、技术研究者"
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.02.obra--superpowers.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
       }
     },
     {
@@ -176,19 +265,48 @@
         "trending_signal": 31.55
       },
       "summary": {
-        "one_line": "DesktopCommanderMCP 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：This is MCP server for Claude that gives it term…",
+        "one_line": "Trending 页面记录 DesktopCommanderMCP 本期获得 900 Star；公开定位：通过 MCP 接入本地终端与开发工具的服务",
         "highlights": [
-          "仓库定位：This is MCP server for Claude that gives it terminal control, file system search…",
-          "主要语言：TypeScript；累计 7,696 Star、962 Fork",
-          "GitHub Trending 页面显示本期获得 900 Star"
+          "GitHub 标注的主要语言：TypeScript",
+          "当前累计 7,696 Star、962 Fork",
+          "公开 Topics：agent、ai、code-analysis、code-generation"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者"
+        "audience": "MCP 集成开发者、终端自动化用户、AI 工具作者"
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.03.wonderwhy-er--desktopcommandermcp.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
       }
     }
   ],
   "boards": {
     "comprehensive": {
       "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "oven-sh/bun",
+            "path": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.01.oven-sh--bun.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.02.obra--superpowers.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "wonderwhy-er/DesktopCommanderMCP",
+            "path": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.03.wonderwhy-er--desktopcommandermcp.png"
+          }
+        ]
+      },
       "repositories": [
         {
           "repository_id": 357728969,
@@ -241,13 +359,19 @@
             "trending_signal": 28.91
           },
           "summary": {
-            "one_line": "bun 是一个近期升温、聚焦“Web 与前端工程”的开源项目：Incredibly fast JavaScript runtime, bundler, test runner, and pa…",
+            "one_line": "以 Rust 为主要语言，bun 的公开定位：整合 JavaScript 运行、打包、测试与包管理的工具链",
             "highlights": [
-              "仓库定位：Incredibly fast JavaScript runtime, bundler, test runner, and package manager – a…",
-              "主要语言：Rust；累计 94,504 Star、4,957 Fork",
-              "GitHub Trending 页面显示本期获得 654 Star"
+              "当前累计 94,504 Star、4,957 Fork",
+              "GitHub Trending 页面显示本期获得 654 Star",
+              "公开 Topics：bun、bundler、javascript、javascriptcore"
             ],
             "audience": "前端开发者、设计工程师、独立开发者"
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.01.oven-sh--bun.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -297,13 +421,19 @@
             "trending_signal": 22.42
           },
           "summary": {
-            "one_line": "superpowers 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：An agentic skills framework & software development metho…",
+            "one_line": "当前累计 252,254 Star、22,517 Fork；superpowers 的公开定位：组织智能体开发流程与技能的开源框架",
             "highlights": [
-              "仓库定位：An agentic skills framework & software development methodology that works.",
-              "主要语言：Shell；累计 252,254 Star、22,517 Fork",
-              "GitHub Trending 页面显示本期获得 737 Star"
+              "GitHub 标注的主要语言：Shell",
+              "GitHub Trending 页面显示本期获得 737 Star",
+              "公开 Topics：ai、brainstorming、coding、obra"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者"
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.02.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -354,19 +484,48 @@
             "trending_signal": 31.55
           },
           "summary": {
-            "one_line": "DesktopCommanderMCP 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：This is MCP server for Claude that gives it term…",
+            "one_line": "Trending 页面记录 DesktopCommanderMCP 本期获得 900 Star；公开定位：通过 MCP 接入本地终端与开发工具的服务",
             "highlights": [
-              "仓库定位：This is MCP server for Claude that gives it terminal control, file system search…",
-              "主要语言：TypeScript；累计 7,696 Star、962 Fork",
-              "GitHub Trending 页面显示本期获得 900 Star"
+              "GitHub 标注的主要语言：TypeScript",
+              "当前累计 7,696 Star、962 Fork",
+              "公开 Topics：agent、ai、code-analysis、code-generation"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "MCP 集成开发者、终端自动化用户、AI 工具作者"
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-11/2026-07-11.comprehensive.03.wonderwhy-er--desktopcommandermcp.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         }
       ]
     },
     "ai": {
       "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-11/2026-07-11.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "wonderwhy-er/DesktopCommanderMCP",
+            "path": "reports/daily/assets/2026-07-11/2026-07-11.ai.01.wonderwhy-er--desktopcommandermcp.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "malisper/pgrust",
+            "path": "reports/daily/assets/2026-07-11/2026-07-11.ai.02.malisper--pgrust.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-07-11/2026-07-11.ai.03.obra--superpowers.png"
+          }
+        ]
+      },
       "repositories": [
         {
           "repository_id": 898345892,
@@ -416,13 +575,19 @@
             "trending_signal": 31.55
           },
           "summary": {
-            "one_line": "DesktopCommanderMCP 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：This is MCP server for Claude that gives it term…",
+            "one_line": "公开 Topics 包括 agent、ai、code-analysis；DesktopCommanderMCP 的公开定位：通过 MCP 接入本地终端与开发工具的服务",
             "highlights": [
-              "仓库定位：This is MCP server for Claude that gives it terminal control, file system search…",
-              "主要语言：TypeScript；累计 7,696 Star、962 Fork",
-              "GitHub Trending 页面显示本期获得 900 Star"
+              "GitHub Trending 页面显示本期获得 900 Star",
+              "GitHub 标注的主要语言：TypeScript",
+              "当前累计 7,696 Star、962 Fork"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者"
+            "audience": "MCP 集成开发者、终端自动化用户、AI 工具作者"
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-11/2026-07-11.ai.01.wonderwhy-er--desktopcommandermcp.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -469,13 +634,19 @@
             "trending_signal": 23.98
           },
           "summary": {
-            "one_line": "pgrust 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Postgres rewritten in Rust, now passing 100% of the Postgres…",
+            "one_line": "以 Rust 为主要语言，pgrust 的公开定位：围绕 PostgreSQL 兼容实现的数据库项目",
             "highlights": [
-              "仓库定位：Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
-              "主要语言：Rust；累计 1,848 Star、47 Fork",
-              "GitHub Trending 页面显示本期获得 789 Star"
+              "当前累计 1,848 Star、47 Fork",
+              "GitHub Trending 页面显示本期获得 789 Star",
+              "公开 Topics：ai-assisted-development、database、postgres、postgresql"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者"
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-11/2026-07-11.ai.02.malisper--pgrust.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         },
         {
@@ -525,13 +696,19 @@
             "trending_signal": 22.42
           },
           "summary": {
-            "one_line": "superpowers 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：An agentic skills framework & software development metho…",
+            "one_line": "当前累计 252,254 Star、22,517 Fork；superpowers 的公开定位：组织智能体开发流程与技能的开源框架",
             "highlights": [
-              "仓库定位：An agentic skills framework & software development methodology that works.",
-              "主要语言：Shell；累计 252,254 Star、22,517 Fork",
-              "GitHub Trending 页面显示本期获得 737 Star"
+              "GitHub 标注的主要语言：Shell",
+              "GitHub Trending 页面显示本期获得 737 Star",
+              "公开 Topics：ai、brainstorming、coding、obra"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者"
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-11/2026-07-11.ai.03.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
           }
         }
       ]
