@@ -1,7 +1,7 @@
 "use strict";
 window.GITHUB_HOTSPOTS_DATA = {
   "schema_version": 3,
-  "generated_at": "2026-07-12T02:20:46+08:00",
+  "generated_at": "2026-07-12T02:37:49+08:00",
   "site": {
     "title": "GitHub Hotspots",
     "tagline": "追踪开源世界真正发生的增量",
@@ -9,68 +9,103 @@ window.GITHUB_HOTSPOTS_DATA = {
   },
   "daily": {
     "period": "daily",
-    "run_date": "2026-07-11",
-    "generated_at": "2026-07-12T02:19:46+08:00",
-    "window_label": "2026-07-10 至 2026-07-11",
-    "data_quality": "中高：GitHub Trending 周期信号",
-    "warnings": [
-      "综合主榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending",
-      "AI 专题榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending"
-    ],
+    "run_date": "2026-07-12",
+    "generated_at": "2026-07-12T02:36:23+08:00",
+    "window_label": "2026-07-11 至 2026-07-12",
+    "data_quality": "高：历史快照增量",
+    "warnings": [],
     "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后从受控候选中整榜选稿，并经过仓库身份、URL、数字、增量口径和禁用套话回查。",
-    "source_path": "reports/daily/2026-07-11.json",
+    "source_path": "reports/daily/2026-07-12.json",
     "repositories": [
       {
         "rank": 1,
-        "full_name": "oven-sh/bun",
-        "html_url": "https://github.com/oven-sh/bun",
-        "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
-        "language": "Rust",
-        "stars": 94504,
-        "forks": 4957,
-        "score": 85.8,
-        "star_delta": 654,
-        "fork_delta": 0,
-        "delta_source": "trending",
-        "delta_label": "Trending 周期增星",
-        "pushed_at": "2026-07-11T15:01:38Z",
+        "full_name": "catchorg/Catch2",
+        "html_url": "https://github.com/catchorg/Catch2",
+        "description": "A modern, C++-native, test framework for unit-tests, TDD and BDD - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)",
+        "language": "C++",
+        "stars": 20914,
+        "forks": 3428,
+        "score": 90.2,
+        "star_delta": 104,
+        "fork_delta": 8,
+        "delta_source": "snapshot",
+        "delta_label": "快照净增",
+        "pushed_at": "2026-07-10T15:47:36Z",
         "topics": [
-          "bun",
-          "bundler",
-          "javascript",
-          "javascriptcore",
-          "jsx"
+          "bdd",
+          "cpp",
+          "cpp14",
+          "framework",
+          "no-dependencies"
         ],
-        "one_line": "以 Rust 为主要语言，bun 的公开定位：JavaScript 打包工具项目",
+        "one_line": "Catch2 的公开简介与 Topics 显示其定位：面向开源软件与工程实践方向的开源项目",
         "highlights": [
-          "当前累计 94,504 Star、4,957 Fork",
-          "GitHub Trending 页面显示本期获得 654 Star",
-          "公开 Topics：bun、bundler、javascript、javascriptcore"
+          "GitHub 标注的主要语言：C++；当前累计 20,914 Star、3,428 Fork",
+          "本地历史快照显示本期净增 104 Star",
+          "公开 Topics：bdd、cpp、cpp14、framework"
         ],
-        "audience": "前端开发者、设计工程师、独立开发者",
-        "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.01.oven-sh--bun.png",
+        "audience": "软件开发者、开源爱好者、技术团队",
+        "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.01.catchorg--catch2.png",
         "component_percentiles": {
-          "star_growth": 96.47,
-          "relative_growth": 95.29,
-          "fork_growth": 50.0,
-          "total_stars": 41.18,
-          "activity": 100.0,
-          "trending_signal": 28.91
+          "star_growth": 100.0,
+          "relative_growth": 98.65,
+          "fork_growth": 95.27,
+          "total_stars": 16.22,
+          "activity": 51.34,
+          "trending_signal": 100.0
         }
       },
       {
         "rank": 2,
+        "full_name": "NousResearch/hermes-agent",
+        "html_url": "https://github.com/NousResearch/hermes-agent",
+        "description": "The agent that grows with you",
+        "language": "Python",
+        "stars": 213201,
+        "forks": 39405,
+        "score": 86.49,
+        "star_delta": 84,
+        "fork_delta": 19,
+        "delta_source": "snapshot",
+        "delta_label": "快照净增",
+        "pushed_at": "2026-07-11T18:16:13Z",
+        "topics": [
+          "ai",
+          "ai-agent",
+          "ai-agents",
+          "anthropic",
+          "chatgpt"
+        ],
+        "one_line": "本地快照记录 hermes-agent 本期净增 84 Star；公开定位：面向AI 与智能体开发方向的开源项目",
+        "highlights": [
+          "GitHub 标注的主要语言：Python",
+          "当前累计 213,201 Star、39,405 Fork",
+          "公开 Topics：ai、ai-agent、ai-agents、anthropic"
+        ],
+        "audience": "AI 应用开发者、算法工程师、技术研究者",
+        "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.02.nousresearch--hermes-agent.png",
+        "component_percentiles": {
+          "star_growth": 95.95,
+          "relative_growth": 83.78,
+          "fork_growth": 100.0,
+          "total_stars": 91.89,
+          "activity": 71.65,
+          "trending_signal": 0.0
+        }
+      },
+      {
+        "rank": 3,
         "full_name": "obra/superpowers",
         "html_url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 252254,
-        "forks": 22517,
-        "score": 85.46,
-        "star_delta": 737,
-        "fork_delta": 0,
-        "delta_source": "trending",
-        "delta_label": "Trending 周期增星",
+        "stars": 252339,
+        "forks": 22522,
+        "score": 84.43,
+        "star_delta": 85,
+        "fork_delta": 5,
+        "delta_source": "snapshot",
+        "delta_label": "快照净增",
         "pushed_at": "2026-07-10T15:58:09Z",
         "topics": [
           "ai",
@@ -79,118 +114,118 @@ window.GITHUB_HOTSPOTS_DATA = {
           "obra",
           "sdlc"
         ],
-        "one_line": "当前累计 252,254 Star、22,517 Fork；superpowers 的公开定位：软件开发技能与流程项目",
+        "one_line": "以 Shell 为主要语言，superpowers 的公开定位：软件开发技能与流程项目",
         "highlights": [
-          "GitHub 标注的主要语言：Shell",
-          "GitHub Trending 页面显示本期获得 737 Star",
+          "当前累计 252,339 Star、22,522 Fork",
+          "本地历史快照显示本期净增 85 Star",
           "公开 Topics：ai、brainstorming、coding、obra"
         ],
         "audience": "AI 应用开发者、算法工程师、技术研究者",
-        "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.02.obra--superpowers.png",
+        "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.03.obra--superpowers.png",
         "component_percentiles": {
-          "star_growth": 97.65,
-          "relative_growth": 92.94,
-          "fork_growth": 50.0,
-          "total_stars": 95.29,
-          "activity": 71.65,
+          "star_growth": 97.3,
+          "relative_growth": 81.08,
+          "fork_growth": 85.14,
+          "total_stars": 95.95,
+          "activity": 51.34,
           "trending_signal": 22.42
-        }
-      },
-      {
-        "rank": 3,
-        "full_name": "wonderwhy-er/DesktopCommanderMCP",
-        "html_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-        "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
-        "language": "TypeScript",
-        "stars": 7696,
-        "forks": 962,
-        "score": 84.62,
-        "star_delta": 900,
-        "fork_delta": 0,
-        "delta_source": "trending",
-        "delta_label": "Trending 周期增星",
-        "pushed_at": "2026-07-10T20:11:58Z",
-        "topics": [
-          "agent",
-          "ai",
-          "code-analysis",
-          "code-generation",
-          "gemini-cli-extension"
-        ],
-        "one_line": "Trending 页面记录 DesktopCommanderMCP 本期获得 900 Star；公开定位：MCP 终端自动化项目",
-        "highlights": [
-          "GitHub 标注的主要语言：TypeScript",
-          "当前累计 7,696 Star、962 Fork",
-          "公开 Topics：agent、ai、code-analysis、code-generation"
-        ],
-        "audience": "MCP 集成开发者、工具集成者、协议实现者",
-        "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.03.wonderwhy-er--desktopcommandermcp.png",
-        "component_percentiles": {
-          "star_growth": 100.0,
-          "relative_growth": 98.82,
-          "fork_growth": 50.0,
-          "total_stars": 22.35,
-          "activity": 71.65,
-          "trending_signal": 31.55
         }
       }
     ],
     "boards": {
       "comprehensive": {
         "label": "综合主榜",
-        "cover_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.cover.png",
+        "cover_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.cover.png",
         "repositories": [
           {
             "rank": 1,
-            "full_name": "oven-sh/bun",
-            "html_url": "https://github.com/oven-sh/bun",
-            "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
-            "language": "Rust",
-            "stars": 94504,
-            "forks": 4957,
-            "score": 85.8,
-            "star_delta": 654,
-            "fork_delta": 0,
-            "delta_source": "trending",
-            "delta_label": "Trending 周期增星",
-            "pushed_at": "2026-07-11T15:01:38Z",
+            "full_name": "catchorg/Catch2",
+            "html_url": "https://github.com/catchorg/Catch2",
+            "description": "A modern, C++-native, test framework for unit-tests, TDD and BDD - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)",
+            "language": "C++",
+            "stars": 20914,
+            "forks": 3428,
+            "score": 90.2,
+            "star_delta": 104,
+            "fork_delta": 8,
+            "delta_source": "snapshot",
+            "delta_label": "快照净增",
+            "pushed_at": "2026-07-10T15:47:36Z",
             "topics": [
-              "bun",
-              "bundler",
-              "javascript",
-              "javascriptcore",
-              "jsx"
+              "bdd",
+              "cpp",
+              "cpp14",
+              "framework",
+              "no-dependencies"
             ],
-            "one_line": "以 Rust 为主要语言，bun 的公开定位：JavaScript 打包工具项目",
+            "one_line": "Catch2 的公开简介与 Topics 显示其定位：面向开源软件与工程实践方向的开源项目",
             "highlights": [
-              "当前累计 94,504 Star、4,957 Fork",
-              "GitHub Trending 页面显示本期获得 654 Star",
-              "公开 Topics：bun、bundler、javascript、javascriptcore"
+              "GitHub 标注的主要语言：C++；当前累计 20,914 Star、3,428 Fork",
+              "本地历史快照显示本期净增 104 Star",
+              "公开 Topics：bdd、cpp、cpp14、framework"
             ],
-            "audience": "前端开发者、设计工程师、独立开发者",
-            "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.01.oven-sh--bun.png",
+            "audience": "软件开发者、开源爱好者、技术团队",
+            "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.01.catchorg--catch2.png",
             "component_percentiles": {
-              "star_growth": 96.47,
-              "relative_growth": 95.29,
-              "fork_growth": 50.0,
-              "total_stars": 41.18,
-              "activity": 100.0,
-              "trending_signal": 28.91
+              "star_growth": 100.0,
+              "relative_growth": 98.65,
+              "fork_growth": 95.27,
+              "total_stars": 16.22,
+              "activity": 51.34,
+              "trending_signal": 100.0
             }
           },
           {
             "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "html_url": "https://github.com/NousResearch/hermes-agent",
+            "description": "The agent that grows with you",
+            "language": "Python",
+            "stars": 213201,
+            "forks": 39405,
+            "score": 86.49,
+            "star_delta": 84,
+            "fork_delta": 19,
+            "delta_source": "snapshot",
+            "delta_label": "快照净增",
+            "pushed_at": "2026-07-11T18:16:13Z",
+            "topics": [
+              "ai",
+              "ai-agent",
+              "ai-agents",
+              "anthropic",
+              "chatgpt"
+            ],
+            "one_line": "本地快照记录 hermes-agent 本期净增 84 Star；公开定位：面向AI 与智能体开发方向的开源项目",
+            "highlights": [
+              "GitHub 标注的主要语言：Python",
+              "当前累计 213,201 Star、39,405 Fork",
+              "公开 Topics：ai、ai-agent、ai-agents、anthropic"
+            ],
+            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.02.nousresearch--hermes-agent.png",
+            "component_percentiles": {
+              "star_growth": 95.95,
+              "relative_growth": 83.78,
+              "fork_growth": 100.0,
+              "total_stars": 91.89,
+              "activity": 71.65,
+              "trending_signal": 0.0
+            }
+          },
+          {
+            "rank": 3,
             "full_name": "obra/superpowers",
             "html_url": "https://github.com/obra/superpowers",
             "description": "An agentic skills framework & software development methodology that works.",
             "language": "Shell",
-            "stars": 252254,
-            "forks": 22517,
-            "score": 85.46,
-            "star_delta": 737,
-            "fork_delta": 0,
-            "delta_source": "trending",
-            "delta_label": "Trending 周期增星",
+            "stars": 252339,
+            "forks": 22522,
+            "score": 84.43,
+            "star_delta": 85,
+            "fork_delta": 5,
+            "delta_source": "snapshot",
+            "delta_label": "快照净增",
             "pushed_at": "2026-07-10T15:58:09Z",
             "topics": [
               "ai",
@@ -199,156 +234,80 @@ window.GITHUB_HOTSPOTS_DATA = {
               "obra",
               "sdlc"
             ],
-            "one_line": "当前累计 252,254 Star、22,517 Fork；superpowers 的公开定位：软件开发技能与流程项目",
+            "one_line": "以 Shell 为主要语言，superpowers 的公开定位：软件开发技能与流程项目",
             "highlights": [
-              "GitHub 标注的主要语言：Shell",
-              "GitHub Trending 页面显示本期获得 737 Star",
+              "当前累计 252,339 Star、22,522 Fork",
+              "本地历史快照显示本期净增 85 Star",
               "公开 Topics：ai、brainstorming、coding、obra"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者",
-            "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.02.obra--superpowers.png",
+            "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.03.obra--superpowers.png",
             "component_percentiles": {
-              "star_growth": 97.65,
-              "relative_growth": 92.94,
-              "fork_growth": 50.0,
-              "total_stars": 95.29,
-              "activity": 71.65,
+              "star_growth": 97.3,
+              "relative_growth": 81.08,
+              "fork_growth": 85.14,
+              "total_stars": 95.95,
+              "activity": 51.34,
               "trending_signal": 22.42
-            }
-          },
-          {
-            "rank": 3,
-            "full_name": "wonderwhy-er/DesktopCommanderMCP",
-            "html_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-            "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
-            "language": "TypeScript",
-            "stars": 7696,
-            "forks": 962,
-            "score": 84.62,
-            "star_delta": 900,
-            "fork_delta": 0,
-            "delta_source": "trending",
-            "delta_label": "Trending 周期增星",
-            "pushed_at": "2026-07-10T20:11:58Z",
-            "topics": [
-              "agent",
-              "ai",
-              "code-analysis",
-              "code-generation",
-              "gemini-cli-extension"
-            ],
-            "one_line": "Trending 页面记录 DesktopCommanderMCP 本期获得 900 Star；公开定位：MCP 终端自动化项目",
-            "highlights": [
-              "GitHub 标注的主要语言：TypeScript",
-              "当前累计 7,696 Star、962 Fork",
-              "公开 Topics：agent、ai、code-analysis、code-generation"
-            ],
-            "audience": "MCP 集成开发者、工具集成者、协议实现者",
-            "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.comprehensive.03.wonderwhy-er--desktopcommandermcp.png",
-            "component_percentiles": {
-              "star_growth": 100.0,
-              "relative_growth": 98.82,
-              "fork_growth": 50.0,
-              "total_stars": 22.35,
-              "activity": 71.65,
-              "trending_signal": 31.55
             }
           }
         ]
       },
       "ai": {
         "label": "AI 专题榜",
-        "cover_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.ai.cover.png",
+        "cover_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.ai.cover.png",
         "repositories": [
           {
             "rank": 1,
-            "full_name": "wonderwhy-er/DesktopCommanderMCP",
-            "html_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-            "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
-            "language": "TypeScript",
-            "stars": 7696,
-            "forks": 962,
-            "score": 84.74,
-            "star_delta": 900,
-            "fork_delta": 0,
-            "delta_source": "trending",
-            "delta_label": "Trending 周期增星",
-            "pushed_at": "2026-07-10T20:11:58Z",
+            "full_name": "NousResearch/hermes-agent",
+            "html_url": "https://github.com/NousResearch/hermes-agent",
+            "description": "The agent that grows with you",
+            "language": "Python",
+            "stars": 213201,
+            "forks": 39405,
+            "score": 84.86,
+            "star_delta": 84,
+            "fork_delta": 19,
+            "delta_source": "snapshot",
+            "delta_label": "快照净增",
+            "pushed_at": "2026-07-11T18:16:13Z",
             "topics": [
-              "agent",
               "ai",
-              "code-analysis",
-              "code-generation",
-              "gemini-cli-extension"
+              "ai-agent",
+              "ai-agents",
+              "anthropic",
+              "chatgpt"
             ],
-            "one_line": "公开 Topics 包括 agent、ai、code-analysis；DesktopCommanderMCP 的公开定位：MCP 终端自动化项目",
+            "one_line": "hermes-agent 的公开简介与 Topics 显示其定位：面向AI 与智能体开发方向的开源项目",
             "highlights": [
-              "GitHub Trending 页面显示本期获得 900 Star",
-              "GitHub 标注的主要语言：TypeScript",
-              "当前累计 7,696 Star、962 Fork"
+              "GitHub 标注的主要语言：Python；当前累计 213,201 Star、39,405 Fork",
+              "本地历史快照显示本期净增 84 Star",
+              "公开 Topics：ai、ai-agent、ai-agents、anthropic"
             ],
-            "audience": "MCP 集成开发者、工具集成者、协议实现者",
-            "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.ai.01.wonderwhy-er--desktopcommandermcp.png",
+            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.ai.01.nousresearch--hermes-agent.png",
             "component_percentiles": {
-              "star_growth": 100.0,
-              "relative_growth": 96.67,
-              "fork_growth": 50.0,
-              "total_stars": 33.33,
+              "star_growth": 92.31,
+              "relative_growth": 84.62,
+              "fork_growth": 100.0,
+              "total_stars": 92.31,
               "activity": 71.65,
-              "trending_signal": 31.55
+              "trending_signal": 0.0
             }
           },
           {
             "rank": 2,
-            "full_name": "malisper/pgrust",
-            "html_url": "https://github.com/malisper/pgrust",
-            "description": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
-            "language": "Rust",
-            "stars": 1848,
-            "forks": 47,
-            "score": 83.03,
-            "star_delta": 789,
-            "fork_delta": 0,
-            "delta_source": "trending",
-            "delta_label": "Trending 周期增星",
-            "pushed_at": "2026-07-10T07:04:48Z",
-            "topics": [
-              "ai-assisted-development",
-              "database",
-              "postgres",
-              "postgresql",
-              "rust"
-            ],
-            "one_line": "以 Rust 为主要语言，pgrust 的公开定位：PostgreSQL 相关项目",
-            "highlights": [
-              "当前累计 1,848 Star、47 Fork",
-              "GitHub Trending 页面显示本期获得 789 Star",
-              "公开 Topics：ai-assisted-development、database、postgres、postgresql"
-            ],
-            "audience": "数据工程师、分析师、后端开发者",
-            "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.ai.02.malisper--pgrust.png",
-            "component_percentiles": {
-              "star_growth": 96.67,
-              "relative_growth": 100.0,
-              "fork_growth": 50.0,
-              "total_stars": 26.67,
-              "activity": 71.65,
-              "trending_signal": 23.98
-            }
-          },
-          {
-            "rank": 3,
             "full_name": "obra/superpowers",
             "html_url": "https://github.com/obra/superpowers",
             "description": "An agentic skills framework & software development methodology that works.",
             "language": "Shell",
-            "stars": 252254,
-            "forks": 22517,
-            "score": 82.78,
-            "star_delta": 737,
-            "fork_delta": 0,
-            "delta_source": "trending",
-            "delta_label": "Trending 周期增星",
+            "stars": 252339,
+            "forks": 22522,
+            "score": 82.02,
+            "star_delta": 85,
+            "fork_delta": 5,
+            "delta_source": "snapshot",
+            "delta_label": "快照净增",
             "pushed_at": "2026-07-10T15:58:09Z",
             "topics": [
               "ai",
@@ -357,21 +316,59 @@ window.GITHUB_HOTSPOTS_DATA = {
               "obra",
               "sdlc"
             ],
-            "one_line": "当前累计 252,254 Star、22,517 Fork；superpowers 的公开定位：软件开发技能与流程项目",
+            "one_line": "本地快照记录 superpowers 本期净增 85 Star；公开定位：软件开发技能与流程项目",
             "highlights": [
               "GitHub 标注的主要语言：Shell",
-              "GitHub Trending 页面显示本期获得 737 Star",
+              "当前累计 252,339 Star、22,522 Fork",
               "公开 Topics：ai、brainstorming、coding、obra"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者",
-            "poster_path": "generated/reports/daily/assets/2026-07-11/2026-07-11.ai.03.obra--superpowers.png",
+            "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.ai.02.obra--superpowers.png",
             "component_percentiles": {
-              "star_growth": 93.33,
-              "relative_growth": 90.0,
-              "fork_growth": 50.0,
-              "total_stars": 96.67,
-              "activity": 71.65,
+              "star_growth": 96.15,
+              "relative_growth": 76.92,
+              "fork_growth": 75.0,
+              "total_stars": 96.15,
+              "activity": 51.34,
               "trending_signal": 22.42
+            }
+          },
+          {
+            "rank": 3,
+            "full_name": "firecrawl/firecrawl",
+            "html_url": "https://github.com/firecrawl/firecrawl",
+            "description": "The API to search, scrape, and interact with the web at scale. 🔥",
+            "language": "TypeScript",
+            "stars": 149285,
+            "forks": 8540,
+            "score": 81.59,
+            "star_delta": 73,
+            "fork_delta": 8,
+            "delta_source": "snapshot",
+            "delta_label": "快照净增",
+            "pushed_at": "2026-07-11T18:12:53Z",
+            "topics": [
+              "ai",
+              "ai-agents",
+              "ai-crawler",
+              "ai-scraping",
+              "ai-search"
+            ],
+            "one_line": "以 TypeScript 为主要语言，firecrawl 的公开定位：面向AI 与智能体开发方向的开源项目",
+            "highlights": [
+              "当前累计 149,285 Star、8,540 Fork",
+              "本地历史快照显示本期净增 73 Star",
+              "公开 Topics：ai、ai-agents、ai-crawler、ai-scraping"
+            ],
+            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.ai.03.firecrawl--firecrawl.png",
+            "component_percentiles": {
+              "star_growth": 88.46,
+              "relative_growth": 88.46,
+              "fork_growth": 92.31,
+              "total_stars": 65.38,
+              "activity": 71.65,
+              "trending_signal": 0.0
             }
           }
         ]
@@ -380,9 +377,9 @@ window.GITHUB_HOTSPOTS_DATA = {
   },
   "weekly": {
     "period": "weekly",
-    "run_date": "2026-07-11",
-    "generated_at": "2026-07-12T02:20:46+08:00",
-    "window_label": "2026-07-04 至 2026-07-11",
+    "run_date": "2026-07-12",
+    "generated_at": "2026-07-12T02:37:49+08:00",
+    "window_label": "2026-07-05 至 2026-07-12",
     "data_quality": "中高：GitHub Trending 周期信号",
     "warnings": [
       "综合主榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending",
@@ -397,9 +394,9 @@ window.GITHUB_HOTSPOTS_DATA = {
         "html_url": "https://github.com/asgeirtj/system_prompts_leaks",
         "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT GPT-5.6, Codex GPT-5.6, GPT-5.5. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
         "language": "JavaScript",
-        "stars": 56094,
-        "forks": 9261,
-        "score": 87.34,
+        "stars": 56147,
+        "forks": 9269,
+        "score": 86.81,
         "star_delta": 7765,
         "fork_delta": 0,
         "delta_source": "trending",
@@ -412,20 +409,20 @@ window.GITHUB_HOTSPOTS_DATA = {
           "awesome",
           "chatbot"
         ],
-        "one_line": "当前累计 56,094 Star、9,261 Fork；system_prompts_leaks 的公开定位：提示词工程相关项目",
+        "one_line": "system_prompts_leaks 的公开简介与 Topics 显示其定位：提示词工程相关项目",
         "highlights": [
-          "GitHub 标注的主要语言：JavaScript",
+          "GitHub 标注的主要语言：JavaScript；当前累计 56,147 Star、9,269 Fork",
           "GitHub Trending 页面显示本期获得 7,765 Star",
           "公开 Topics：ai、ai-agents、anthropic、awesome"
         ],
         "audience": "提示词工程师、AI 产品研究者、模型应用开发者",
         "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.01.asgeirtj--system-prompts-leaks.png",
         "component_percentiles": {
-          "star_growth": 99.07,
-          "relative_growth": 93.52,
+          "star_growth": 99.09,
+          "relative_growth": 93.64,
           "fork_growth": 50.0,
-          "total_stars": 51.85,
-          "activity": 93.55,
+          "total_stars": 52.73,
+          "activity": 87.52,
           "trending_signal": 43.07
         }
       },
@@ -435,9 +432,9 @@ window.GITHUB_HOTSPOTS_DATA = {
         "html_url": "https://github.com/iOfficeAI/OfficeCLI",
         "description": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
         "language": "C#",
-        "stars": 14951,
-        "forks": 1021,
-        "score": 86.53,
+        "stars": 15014,
+        "forks": 1022,
+        "score": 85.97,
         "star_delta": 5789,
         "fork_delta": 0,
         "delta_source": "trending",
@@ -453,17 +450,17 @@ window.GITHUB_HOTSPOTS_DATA = {
         "one_line": "Trending 页面记录 OfficeCLI 本期获得 5,789 Star；公开定位：Office 命令行项目",
         "highlights": [
           "GitHub 标注的主要语言：C#",
-          "当前累计 14,951 Star、1,021 Fork",
+          "当前累计 15,014 Star、1,022 Fork",
           "公开 Topics：agent、ai、claude-code、cli"
         ],
         "audience": "Office 工具开发者、数据与文档工作者",
         "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.02.iofficeai--officecli.png",
         "component_percentiles": {
-          "star_growth": 97.22,
-          "relative_growth": 98.15,
+          "star_growth": 97.27,
+          "relative_growth": 98.18,
           "fork_growth": 50.0,
-          "total_stars": 40.74,
-          "activity": 100.0,
+          "total_stars": 41.82,
+          "activity": 93.55,
           "trending_signal": 25.0
         }
       },
@@ -473,9 +470,9 @@ window.GITHUB_HOTSPOTS_DATA = {
         "html_url": "https://github.com/usestrix/strix",
         "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
         "language": "Python",
-        "stars": 40426,
-        "forks": 4251,
-        "score": 86.03,
+        "stars": 40480,
+        "forks": 4256,
+        "score": 85.51,
         "star_delta": 6443,
         "fork_delta": 0,
         "delta_source": "trending",
@@ -488,20 +485,20 @@ window.GITHUB_HOTSPOTS_DATA = {
           "ai-pentesting",
           "ai-security"
         ],
-        "one_line": "公开 Topics 包括 agents、ai-hacking、ai-penetration-testing；strix 的公开定位：AI 渗透测试项目",
+        "one_line": "以 Python 为主要语言，strix 的公开定位：AI 渗透测试项目",
         "highlights": [
+          "当前累计 40,480 Star、4,256 Fork",
           "GitHub Trending 页面显示本期获得 6,443 Star",
-          "GitHub 标注的主要语言：Python",
-          "当前累计 40,426 Star、4,251 Fork"
+          "公开 Topics：agents、ai-hacking、ai-penetration-testing、ai-pentesting"
         ],
         "audience": "安全工程师、渗透测试人员、应用开发团队",
         "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.03.usestrix--strix.png",
         "component_percentiles": {
-          "star_growth": 98.15,
-          "relative_growth": 92.59,
+          "star_growth": 98.18,
+          "relative_growth": 92.73,
           "fork_growth": 50.0,
-          "total_stars": 50.0,
-          "activity": 93.55,
+          "total_stars": 50.91,
+          "activity": 87.52,
           "trending_signal": 31.55
         }
       },
@@ -511,9 +508,9 @@ window.GITHUB_HOTSPOTS_DATA = {
         "html_url": "https://github.com/ogulcancelik/herdr",
         "description": "agent multiplexer that lives in your terminal.",
         "language": "Rust",
-        "stars": 15422,
-        "forks": 1030,
-        "score": 85.32,
+        "stars": 15460,
+        "forks": 1035,
+        "score": 84.82,
         "star_delta": 4714,
         "fork_delta": 0,
         "delta_source": "trending",
@@ -526,37 +523,69 @@ window.GITHUB_HOTSPOTS_DATA = {
           "ai-agents",
           "claude-code"
         ],
-        "one_line": "以 Rust 为主要语言，herdr 的公开定位：智能体编排与多路复用项目",
+        "one_line": "当前累计 15,460 Star、1,035 Fork；herdr 的公开定位：智能体编排与多路复用项目",
         "highlights": [
-          "当前累计 15,422 Star、1,030 Fork",
+          "GitHub 标注的主要语言：Rust",
           "GitHub Trending 页面显示本期获得 4,714 Star",
           "公开 Topics：agent、agent-orchestration、ai、ai-agents"
         ],
         "audience": "多智能体开发者、技术负责人、终端工具用户",
         "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.04.ogulcancelik--herdr.png",
         "component_percentiles": {
-          "star_growth": 95.37,
-          "relative_growth": 96.3,
+          "star_growth": 95.45,
+          "relative_growth": 96.36,
           "fork_growth": 50.0,
-          "total_stars": 41.67,
-          "activity": 93.55,
+          "total_stars": 42.73,
+          "activity": 87.52,
           "trending_signal": 38.69
         }
       },
       {
         "rank": 5,
+        "full_name": "openai/codex-plugin-cc",
+        "html_url": "https://github.com/openai/codex-plugin-cc",
+        "description": "Use Codex from Claude Code to review code or delegate tasks.",
+        "language": "JavaScript",
+        "stars": 27615,
+        "forks": 1798,
+        "score": 83.77,
+        "star_delta": 4484,
+        "fork_delta": 0,
+        "delta_source": "trending",
+        "delta_label": "Trending 周期增星",
+        "pushed_at": "2026-07-08T00:17:31Z",
+        "topics": [],
+        "one_line": "codex-plugin-cc 未标注 Topics；公开定位：面向开源软件与工程实践方向的开源项目",
+        "highlights": [
+          "GitHub Trending 页面显示本期获得 4,484 Star",
+          "GitHub 标注的主要语言：JavaScript",
+          "当前累计 27,615 Star、1,798 Fork"
+        ],
+        "audience": "软件开发者、开源爱好者、技术团队",
+        "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.05.openai--codex-plugin-cc.png",
+        "component_percentiles": {
+          "star_growth": 94.55,
+          "relative_growth": 90.91,
+          "fork_growth": 50.0,
+          "total_stars": 50.0,
+          "activity": 76.59,
+          "trending_signal": 63.09
+        }
+      },
+      {
+        "rank": 6,
         "full_name": "stablyai/orca",
         "html_url": "https://github.com/stablyai/orca",
         "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
         "language": "TypeScript",
-        "stars": 16242,
-        "forks": 1272,
-        "score": 84.22,
+        "stars": 16306,
+        "forks": 1274,
+        "score": 83.71,
         "star_delta": 4328,
         "fork_delta": 0,
         "delta_source": "trending",
         "delta_label": "Trending 周期增星",
-        "pushed_at": "2026-07-11T12:36:48Z",
+        "pushed_at": "2026-07-11T18:05:42Z",
         "topics": [
           "ade",
           "agent-ide",
@@ -567,50 +596,18 @@ window.GITHUB_HOTSPOTS_DATA = {
         "one_line": "GitHub 记录的最近推送日期为 2026-07-11；orca 的公开定位：智能体 IDE 项目",
         "highlights": [
           "公开 Topics：ade、agent-ide、ai-agents、claude-code",
-          "当前累计 16,242 Star、1,272 Fork",
+          "当前累计 16,306 Star、1,274 Fork",
           "GitHub Trending 页面显示本期获得 4,328 Star"
         ],
         "audience": "AI 编程工具开发者、Agent 工作流设计者、研发团队",
-        "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.05.stablyai--orca.png",
+        "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.06.stablyai--orca.png",
         "component_percentiles": {
-          "star_growth": 93.52,
-          "relative_growth": 94.44,
+          "star_growth": 93.64,
+          "relative_growth": 94.55,
           "fork_growth": 50.0,
-          "total_stars": 43.52,
-          "activity": 100.0,
+          "total_stars": 44.55,
+          "activity": 93.55,
           "trending_signal": 27.89
-        }
-      },
-      {
-        "rank": 6,
-        "full_name": "openai/codex-plugin-cc",
-        "html_url": "https://github.com/openai/codex-plugin-cc",
-        "description": "Use Codex from Claude Code to review code or delegate tasks.",
-        "language": "JavaScript",
-        "stars": 27583,
-        "forks": 1795,
-        "score": 84.16,
-        "star_delta": 4484,
-        "fork_delta": 0,
-        "delta_source": "trending",
-        "delta_label": "Trending 周期增星",
-        "pushed_at": "2026-07-08T00:17:31Z",
-        "topics": [],
-        "one_line": "codex-plugin-cc 的公开简介与 Topics 显示其定位：面向开源软件与工程实践方向的开源项目",
-        "highlights": [
-          "GitHub 标注的主要语言：JavaScript；当前累计 27,583 Star、1,795 Fork",
-          "GitHub Trending 页面显示本期获得 4,484 Star",
-          "公开 Topics：仓库未标注"
-        ],
-        "audience": "软件开发者、开源爱好者、技术团队",
-        "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.06.openai--codex-plugin-cc.png",
-        "component_percentiles": {
-          "star_growth": 94.44,
-          "relative_growth": 90.74,
-          "fork_growth": 50.0,
-          "total_stars": 49.07,
-          "activity": 81.87,
-          "trending_signal": 63.09
         }
       },
       {
@@ -619,9 +616,9 @@ window.GITHUB_HOTSPOTS_DATA = {
         "html_url": "https://github.com/diegosouzapw/OmniRoute",
         "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
         "language": "TypeScript",
-        "stars": 15519,
-        "forks": 2365,
-        "score": 83.94,
+        "stars": 15598,
+        "forks": 2366,
+        "score": 83.44,
         "star_delta": 4268,
         "fork_delta": 0,
         "delta_source": "trending",
@@ -643,11 +640,11 @@ window.GITHUB_HOTSPOTS_DATA = {
         "audience": "AI 应用开发者、平台工程师、工具集成者",
         "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.07.diegosouzapw--omniroute.png",
         "component_percentiles": {
-          "star_growth": 92.59,
-          "relative_growth": 95.37,
+          "star_growth": 92.73,
+          "relative_growth": 95.45,
           "fork_growth": 50.0,
-          "total_stars": 42.59,
-          "activity": 100.0,
+          "total_stars": 43.64,
+          "activity": 93.55,
           "trending_signal": 28.91
         }
       }
@@ -663,9 +660,9 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/asgeirtj/system_prompts_leaks",
             "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT GPT-5.6, Codex GPT-5.6, GPT-5.5. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
             "language": "JavaScript",
-            "stars": 56094,
-            "forks": 9261,
-            "score": 87.34,
+            "stars": 56147,
+            "forks": 9269,
+            "score": 86.81,
             "star_delta": 7765,
             "fork_delta": 0,
             "delta_source": "trending",
@@ -678,20 +675,20 @@ window.GITHUB_HOTSPOTS_DATA = {
               "awesome",
               "chatbot"
             ],
-            "one_line": "当前累计 56,094 Star、9,261 Fork；system_prompts_leaks 的公开定位：提示词工程相关项目",
+            "one_line": "system_prompts_leaks 的公开简介与 Topics 显示其定位：提示词工程相关项目",
             "highlights": [
-              "GitHub 标注的主要语言：JavaScript",
+              "GitHub 标注的主要语言：JavaScript；当前累计 56,147 Star、9,269 Fork",
               "GitHub Trending 页面显示本期获得 7,765 Star",
               "公开 Topics：ai、ai-agents、anthropic、awesome"
             ],
             "audience": "提示词工程师、AI 产品研究者、模型应用开发者",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.01.asgeirtj--system-prompts-leaks.png",
             "component_percentiles": {
-              "star_growth": 99.07,
-              "relative_growth": 93.52,
+              "star_growth": 99.09,
+              "relative_growth": 93.64,
               "fork_growth": 50.0,
-              "total_stars": 51.85,
-              "activity": 93.55,
+              "total_stars": 52.73,
+              "activity": 87.52,
               "trending_signal": 43.07
             }
           },
@@ -701,9 +698,9 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/iOfficeAI/OfficeCLI",
             "description": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
             "language": "C#",
-            "stars": 14951,
-            "forks": 1021,
-            "score": 86.53,
+            "stars": 15014,
+            "forks": 1022,
+            "score": 85.97,
             "star_delta": 5789,
             "fork_delta": 0,
             "delta_source": "trending",
@@ -719,17 +716,17 @@ window.GITHUB_HOTSPOTS_DATA = {
             "one_line": "Trending 页面记录 OfficeCLI 本期获得 5,789 Star；公开定位：Office 命令行项目",
             "highlights": [
               "GitHub 标注的主要语言：C#",
-              "当前累计 14,951 Star、1,021 Fork",
+              "当前累计 15,014 Star、1,022 Fork",
               "公开 Topics：agent、ai、claude-code、cli"
             ],
             "audience": "Office 工具开发者、数据与文档工作者",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.02.iofficeai--officecli.png",
             "component_percentiles": {
-              "star_growth": 97.22,
-              "relative_growth": 98.15,
+              "star_growth": 97.27,
+              "relative_growth": 98.18,
               "fork_growth": 50.0,
-              "total_stars": 40.74,
-              "activity": 100.0,
+              "total_stars": 41.82,
+              "activity": 93.55,
               "trending_signal": 25.0
             }
           },
@@ -739,9 +736,9 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/usestrix/strix",
             "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
             "language": "Python",
-            "stars": 40426,
-            "forks": 4251,
-            "score": 86.03,
+            "stars": 40480,
+            "forks": 4256,
+            "score": 85.51,
             "star_delta": 6443,
             "fork_delta": 0,
             "delta_source": "trending",
@@ -754,20 +751,20 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-pentesting",
               "ai-security"
             ],
-            "one_line": "公开 Topics 包括 agents、ai-hacking、ai-penetration-testing；strix 的公开定位：AI 渗透测试项目",
+            "one_line": "以 Python 为主要语言，strix 的公开定位：AI 渗透测试项目",
             "highlights": [
+              "当前累计 40,480 Star、4,256 Fork",
               "GitHub Trending 页面显示本期获得 6,443 Star",
-              "GitHub 标注的主要语言：Python",
-              "当前累计 40,426 Star、4,251 Fork"
+              "公开 Topics：agents、ai-hacking、ai-penetration-testing、ai-pentesting"
             ],
             "audience": "安全工程师、渗透测试人员、应用开发团队",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.03.usestrix--strix.png",
             "component_percentiles": {
-              "star_growth": 98.15,
-              "relative_growth": 92.59,
+              "star_growth": 98.18,
+              "relative_growth": 92.73,
               "fork_growth": 50.0,
-              "total_stars": 50.0,
-              "activity": 93.55,
+              "total_stars": 50.91,
+              "activity": 87.52,
               "trending_signal": 31.55
             }
           },
@@ -777,9 +774,9 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/ogulcancelik/herdr",
             "description": "agent multiplexer that lives in your terminal.",
             "language": "Rust",
-            "stars": 15422,
-            "forks": 1030,
-            "score": 85.32,
+            "stars": 15460,
+            "forks": 1035,
+            "score": 84.82,
             "star_delta": 4714,
             "fork_delta": 0,
             "delta_source": "trending",
@@ -792,37 +789,69 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-agents",
               "claude-code"
             ],
-            "one_line": "以 Rust 为主要语言，herdr 的公开定位：智能体编排与多路复用项目",
+            "one_line": "当前累计 15,460 Star、1,035 Fork；herdr 的公开定位：智能体编排与多路复用项目",
             "highlights": [
-              "当前累计 15,422 Star、1,030 Fork",
+              "GitHub 标注的主要语言：Rust",
               "GitHub Trending 页面显示本期获得 4,714 Star",
               "公开 Topics：agent、agent-orchestration、ai、ai-agents"
             ],
             "audience": "多智能体开发者、技术负责人、终端工具用户",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.04.ogulcancelik--herdr.png",
             "component_percentiles": {
-              "star_growth": 95.37,
-              "relative_growth": 96.3,
+              "star_growth": 95.45,
+              "relative_growth": 96.36,
               "fork_growth": 50.0,
-              "total_stars": 41.67,
-              "activity": 93.55,
+              "total_stars": 42.73,
+              "activity": 87.52,
               "trending_signal": 38.69
             }
           },
           {
             "rank": 5,
+            "full_name": "openai/codex-plugin-cc",
+            "html_url": "https://github.com/openai/codex-plugin-cc",
+            "description": "Use Codex from Claude Code to review code or delegate tasks.",
+            "language": "JavaScript",
+            "stars": 27615,
+            "forks": 1798,
+            "score": 83.77,
+            "star_delta": 4484,
+            "fork_delta": 0,
+            "delta_source": "trending",
+            "delta_label": "Trending 周期增星",
+            "pushed_at": "2026-07-08T00:17:31Z",
+            "topics": [],
+            "one_line": "codex-plugin-cc 未标注 Topics；公开定位：面向开源软件与工程实践方向的开源项目",
+            "highlights": [
+              "GitHub Trending 页面显示本期获得 4,484 Star",
+              "GitHub 标注的主要语言：JavaScript",
+              "当前累计 27,615 Star、1,798 Fork"
+            ],
+            "audience": "软件开发者、开源爱好者、技术团队",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.05.openai--codex-plugin-cc.png",
+            "component_percentiles": {
+              "star_growth": 94.55,
+              "relative_growth": 90.91,
+              "fork_growth": 50.0,
+              "total_stars": 50.0,
+              "activity": 76.59,
+              "trending_signal": 63.09
+            }
+          },
+          {
+            "rank": 6,
             "full_name": "stablyai/orca",
             "html_url": "https://github.com/stablyai/orca",
             "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
             "language": "TypeScript",
-            "stars": 16242,
-            "forks": 1272,
-            "score": 84.22,
+            "stars": 16306,
+            "forks": 1274,
+            "score": 83.71,
             "star_delta": 4328,
             "fork_delta": 0,
             "delta_source": "trending",
             "delta_label": "Trending 周期增星",
-            "pushed_at": "2026-07-11T12:36:48Z",
+            "pushed_at": "2026-07-11T18:05:42Z",
             "topics": [
               "ade",
               "agent-ide",
@@ -833,50 +862,18 @@ window.GITHUB_HOTSPOTS_DATA = {
             "one_line": "GitHub 记录的最近推送日期为 2026-07-11；orca 的公开定位：智能体 IDE 项目",
             "highlights": [
               "公开 Topics：ade、agent-ide、ai-agents、claude-code",
-              "当前累计 16,242 Star、1,272 Fork",
+              "当前累计 16,306 Star、1,274 Fork",
               "GitHub Trending 页面显示本期获得 4,328 Star"
             ],
             "audience": "AI 编程工具开发者、Agent 工作流设计者、研发团队",
-            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.05.stablyai--orca.png",
+            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.06.stablyai--orca.png",
             "component_percentiles": {
-              "star_growth": 93.52,
-              "relative_growth": 94.44,
+              "star_growth": 93.64,
+              "relative_growth": 94.55,
               "fork_growth": 50.0,
-              "total_stars": 43.52,
-              "activity": 100.0,
+              "total_stars": 44.55,
+              "activity": 93.55,
               "trending_signal": 27.89
-            }
-          },
-          {
-            "rank": 6,
-            "full_name": "openai/codex-plugin-cc",
-            "html_url": "https://github.com/openai/codex-plugin-cc",
-            "description": "Use Codex from Claude Code to review code or delegate tasks.",
-            "language": "JavaScript",
-            "stars": 27583,
-            "forks": 1795,
-            "score": 84.16,
-            "star_delta": 4484,
-            "fork_delta": 0,
-            "delta_source": "trending",
-            "delta_label": "Trending 周期增星",
-            "pushed_at": "2026-07-08T00:17:31Z",
-            "topics": [],
-            "one_line": "codex-plugin-cc 的公开简介与 Topics 显示其定位：面向开源软件与工程实践方向的开源项目",
-            "highlights": [
-              "GitHub 标注的主要语言：JavaScript；当前累计 27,583 Star、1,795 Fork",
-              "GitHub Trending 页面显示本期获得 4,484 Star",
-              "公开 Topics：仓库未标注"
-            ],
-            "audience": "软件开发者、开源爱好者、技术团队",
-            "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.06.openai--codex-plugin-cc.png",
-            "component_percentiles": {
-              "star_growth": 94.44,
-              "relative_growth": 90.74,
-              "fork_growth": 50.0,
-              "total_stars": 49.07,
-              "activity": 81.87,
-              "trending_signal": 63.09
             }
           },
           {
@@ -885,9 +882,9 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/diegosouzapw/OmniRoute",
             "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
             "language": "TypeScript",
-            "stars": 15519,
-            "forks": 2365,
-            "score": 83.94,
+            "stars": 15598,
+            "forks": 2366,
+            "score": 83.44,
             "star_delta": 4268,
             "fork_delta": 0,
             "delta_source": "trending",
@@ -909,11 +906,11 @@ window.GITHUB_HOTSPOTS_DATA = {
             "audience": "AI 应用开发者、平台工程师、工具集成者",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.07.diegosouzapw--omniroute.png",
             "component_percentiles": {
-              "star_growth": 92.59,
-              "relative_growth": 95.37,
+              "star_growth": 92.73,
+              "relative_growth": 95.45,
               "fork_growth": 50.0,
-              "total_stars": 42.59,
-              "activity": 100.0,
+              "total_stars": 43.64,
+              "activity": 93.55,
               "trending_signal": 28.91
             }
           }
@@ -929,9 +926,9 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/asgeirtj/system_prompts_leaks",
             "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT GPT-5.6, Codex GPT-5.6, GPT-5.5. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
             "language": "JavaScript",
-            "stars": 56094,
-            "forks": 9261,
-            "score": 86.08,
+            "stars": 56147,
+            "forks": 9269,
+            "score": 85.6,
             "star_delta": 7765,
             "fork_delta": 0,
             "delta_source": "trending",
@@ -944,20 +941,20 @@ window.GITHUB_HOTSPOTS_DATA = {
               "awesome",
               "chatbot"
             ],
-            "one_line": "当前累计 56,094 Star、9,261 Fork；system_prompts_leaks 的公开定位：提示词工程相关项目",
+            "one_line": "system_prompts_leaks 的公开简介与 Topics 显示其定位：提示词工程相关项目",
             "highlights": [
-              "GitHub 标注的主要语言：JavaScript",
+              "GitHub 标注的主要语言：JavaScript；当前累计 56,147 Star、9,269 Fork",
               "GitHub Trending 页面显示本期获得 7,765 Star",
               "公开 Topics：ai、ai-agents、anthropic、awesome"
             ],
             "audience": "提示词工程师、AI 产品研究者、模型应用开发者",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.01.asgeirtj--system-prompts-leaks.png",
             "component_percentiles": {
-              "star_growth": 97.83,
-              "relative_growth": 89.13,
+              "star_growth": 97.96,
+              "relative_growth": 89.8,
               "fork_growth": 50.0,
-              "total_stars": 56.52,
-              "activity": 93.55,
+              "total_stars": 55.1,
+              "activity": 87.52,
               "trending_signal": 43.07
             }
           },
@@ -967,9 +964,9 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/iOfficeAI/OfficeCLI",
             "description": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
             "language": "C#",
-            "stars": 14951,
-            "forks": 1021,
-            "score": 84.4,
+            "stars": 15014,
+            "forks": 1022,
+            "score": 83.97,
             "star_delta": 5789,
             "fork_delta": 0,
             "delta_source": "trending",
@@ -982,20 +979,20 @@ window.GITHUB_HOTSPOTS_DATA = {
               "cli",
               "codex"
             ],
-            "one_line": "OfficeCLI 的公开简介与 Topics 显示其定位：Office 命令行项目",
+            "one_line": "Trending 页面记录 OfficeCLI 本期获得 5,789 Star；公开定位：Office 命令行项目",
             "highlights": [
-              "GitHub 标注的主要语言：C#；当前累计 14,951 Star、1,021 Fork",
-              "GitHub Trending 页面显示本期获得 5,789 Star",
+              "GitHub 标注的主要语言：C#",
+              "当前累计 15,014 Star、1,022 Fork",
               "公开 Topics：agent、ai、claude-code、cli"
             ],
             "audience": "Office 工具开发者、数据与文档工作者",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.02.iofficeai--officecli.png",
             "component_percentiles": {
-              "star_growth": 93.48,
-              "relative_growth": 97.83,
+              "star_growth": 93.88,
+              "relative_growth": 97.96,
               "fork_growth": 50.0,
-              "total_stars": 36.96,
-              "activity": 100.0,
+              "total_stars": 36.73,
+              "activity": 93.55,
               "trending_signal": 25.0
             }
           },
@@ -1005,9 +1002,9 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/usestrix/strix",
             "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
             "language": "Python",
-            "stars": 40426,
-            "forks": 4251,
-            "score": 83.87,
+            "stars": 40480,
+            "forks": 4256,
+            "score": 83.49,
             "star_delta": 6443,
             "fork_delta": 0,
             "delta_source": "trending",
@@ -1020,20 +1017,20 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-pentesting",
               "ai-security"
             ],
-            "one_line": "公开 Topics 包括 agents、ai-hacking、ai-penetration-testing；strix 的公开定位：AI 渗透测试项目",
+            "one_line": "以 Python 为主要语言，strix 的公开定位：AI 渗透测试项目",
             "highlights": [
+              "当前累计 40,480 Star、4,256 Fork",
               "GitHub Trending 页面显示本期获得 6,443 Star",
-              "GitHub 标注的主要语言：Python",
-              "当前累计 40,426 Star、4,251 Fork"
+              "公开 Topics：agents、ai-hacking、ai-penetration-testing、ai-pentesting"
             ],
             "audience": "安全工程师、渗透测试人员、应用开发团队",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.03.usestrix--strix.png",
             "component_percentiles": {
-              "star_growth": 95.65,
-              "relative_growth": 86.96,
+              "star_growth": 95.92,
+              "relative_growth": 87.76,
               "fork_growth": 50.0,
-              "total_stars": 54.35,
-              "activity": 93.55,
+              "total_stars": 53.06,
+              "activity": 87.52,
               "trending_signal": 31.55
             }
           },
@@ -1043,9 +1040,9 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/Zackriya-Solutions/meetily",
             "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows. Understand How to write meeting minutes",
             "language": "Rust",
-            "stars": 23032,
-            "forks": 2423,
-            "score": 83.41,
+            "stars": 23105,
+            "forks": 2431,
+            "score": 83.3,
             "star_delta": 8795,
             "fork_delta": 0,
             "delta_source": "trending",
@@ -1058,10 +1055,10 @@ window.GITHUB_HOTSPOTS_DATA = {
               "local-ai",
               "mac"
             ],
-            "one_line": "Trending 页面记录 meetily 本期获得 8,795 Star；公开定位：AI 会议助手项目",
+            "one_line": "当前累计 23,105 Star、2,431 Fork；meetily 的公开定位：AI 会议助手项目",
             "highlights": [
               "GitHub 标注的主要语言：Rust",
-              "当前累计 23,032 Star、2,423 Fork",
+              "GitHub Trending 页面显示本期获得 8,795 Star",
               "公开 Topics：ai、ai-meeting-assistant、llm、local-ai"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者",
@@ -1070,8 +1067,8 @@ window.GITHUB_HOTSPOTS_DATA = {
               "star_growth": 100.0,
               "relative_growth": 100.0,
               "fork_growth": 50.0,
-              "total_stars": 50.0,
-              "activity": 9.07,
+              "total_stars": 48.98,
+              "activity": 8.49,
               "trending_signal": 100.0
             }
           },
@@ -1081,9 +1078,9 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/ogulcancelik/herdr",
             "description": "agent multiplexer that lives in your terminal.",
             "language": "Rust",
-            "stars": 15422,
-            "forks": 1030,
-            "score": 81.94,
+            "stars": 15460,
+            "forks": 1035,
+            "score": 81.71,
             "star_delta": 4714,
             "fork_delta": 0,
             "delta_source": "trending",
@@ -1096,20 +1093,20 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-agents",
               "claude-code"
             ],
-            "one_line": "以 Rust 为主要语言，herdr 的公开定位：智能体编排与多路复用项目",
+            "one_line": "公开 Topics 包括 agent、agent-orchestration、ai；herdr 的公开定位：智能体编排与多路复用项目",
             "highlights": [
-              "当前累计 15,422 Star、1,030 Fork",
               "GitHub Trending 页面显示本期获得 4,714 Star",
-              "公开 Topics：agent、agent-orchestration、ai、ai-agents"
+              "GitHub 标注的主要语言：Rust",
+              "当前累计 15,460 Star、1,035 Fork"
             ],
             "audience": "多智能体开发者、技术负责人、终端工具用户",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.05.ogulcancelik--herdr.png",
             "component_percentiles": {
-              "star_growth": 89.13,
-              "relative_growth": 95.65,
+              "star_growth": 89.8,
+              "relative_growth": 95.92,
               "fork_growth": 50.0,
-              "total_stars": 39.13,
-              "activity": 93.55,
+              "total_stars": 38.78,
+              "activity": 87.52,
               "trending_signal": 38.69
             }
           },
@@ -1119,14 +1116,14 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/stablyai/orca",
             "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
             "language": "TypeScript",
-            "stars": 16242,
-            "forks": 1272,
-            "score": 80.31,
+            "stars": 16306,
+            "forks": 1274,
+            "score": 80.14,
             "star_delta": 4328,
             "fork_delta": 0,
             "delta_source": "trending",
             "delta_label": "Trending 周期增星",
-            "pushed_at": "2026-07-11T12:36:48Z",
+            "pushed_at": "2026-07-11T18:05:42Z",
             "topics": [
               "ade",
               "agent-ide",
@@ -1137,17 +1134,17 @@ window.GITHUB_HOTSPOTS_DATA = {
             "one_line": "GitHub 记录的最近推送日期为 2026-07-11；orca 的公开定位：智能体 IDE 项目",
             "highlights": [
               "公开 Topics：ade、agent-ide、ai-agents、claude-code",
-              "当前累计 16,242 Star、1,272 Fork",
+              "当前累计 16,306 Star、1,274 Fork",
               "GitHub Trending 页面显示本期获得 4,328 Star"
             ],
             "audience": "AI 编程工具开发者、Agent 工作流设计者、研发团队",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.06.stablyai--orca.png",
             "component_percentiles": {
-              "star_growth": 86.96,
-              "relative_growth": 91.3,
+              "star_growth": 87.76,
+              "relative_growth": 91.84,
               "fork_growth": 50.0,
-              "total_stars": 43.48,
-              "activity": 100.0,
+              "total_stars": 42.86,
+              "activity": 93.55,
               "trending_signal": 27.89
             }
           },
@@ -1157,9 +1154,9 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/diegosouzapw/OmniRoute",
             "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
             "language": "TypeScript",
-            "stars": 15519,
-            "forks": 2365,
-            "score": 79.6,
+            "stars": 15598,
+            "forks": 2366,
+            "score": 79.47,
             "star_delta": 4268,
             "fork_delta": 0,
             "delta_source": "trending",
@@ -1181,11 +1178,11 @@ window.GITHUB_HOTSPOTS_DATA = {
             "audience": "AI 应用开发者、平台工程师、工具集成者",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.07.diegosouzapw--omniroute.png",
             "component_percentiles": {
-              "star_growth": 84.78,
-              "relative_growth": 93.48,
+              "star_growth": 85.71,
+              "relative_growth": 93.88,
               "fork_growth": 50.0,
-              "total_stars": 41.3,
-              "activity": 100.0,
+              "total_stars": 40.82,
+              "activity": 93.55,
               "trending_signal": 28.91
             }
           }

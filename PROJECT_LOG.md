@@ -153,7 +153,7 @@
 
 ### Actions / Pages
 
-- 本地实现与产物已完成；对应 GitHub Actions 和 GitHub Pages 需在本次提交推送后验证最新 SHA、图片提交范围、工作流摘要和线上下载链接。
+- 本地实现与产物已完成；最新 SHA、图片提交范围、工作流摘要和线上下载链接已在后续“修复 Actions 质量门禁的 CI 环境污染”记录中完成闭环。
 
 ### 已知限制
 
@@ -183,6 +183,10 @@
 - 修复后完整门禁：相同 `CI=true` 条件下 98 项测试全部通过，总覆盖率 80%；Ruff lint、Ruff format check、`node --check site/app.js` 与 `git diff --check` 全部通过。
 - 失败工作流在生成报告之前终止，没有创建报告文件、海报、site-data 或 bot 提交。
 
-### 待线上闭环
+### 线上闭环
 
-- 修复提交推送后重新运行日报和周报工作流；记录成功运行、bot 提交和对应 Pages 刷新结果。
+- CI 测试修复提交 `b418df2` 已推送；其 push Pages 运行 `29163740462` 成功。
+- 日报工作流 `29163744881` 完整通过字体安装、98 项测试、Ruff、报告与 8 张海报生成及提交，生成 bot 提交 `cefa80b`；对应 `workflow_run` Pages `29163770005` 成功。
+- 周报工作流 `29163782401` 在日报提交之后完整通过相同门禁、报告与 16 张海报生成及提交，生成 bot 提交 `b185c67`；对应 `workflow_run` Pages `29163813347` 成功。
+- 线上页面已更新到 `2026-07-12` 日榜和 `2026-W28` 周榜，显示日榜综合 3 / AI 3、周榜综合 7 / AI 7；`site-data.json` 中 24 个 PNG 路径全部返回 HTTP 200 与 `image/png`，页面 20 个项目下载入口唯一且已加载缩略图无破图。
+- Actions 仍提示 `actions/checkout@v4` 与 `actions/setup-python@v5` 的 Node.js 20 运行时弃用警告；GitHub 当前强制使用 Node.js 24 且任务成功，该警告不阻断本次交付。
