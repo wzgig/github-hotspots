@@ -122,9 +122,9 @@
 
 ### 变更
 
-- 将 `summarizer.py` 扩展为 7 种事实型叙事角度，分别从公开定位、增长信号、主要语言、规模、Topics、最近推送和候选来源切入；新增基于仓库简介与 Topics 明确关键词的中文定位规则，避免直接把长英文简介塞进小红书正文，并增加榜内多样性、禁用套话和定位正例测试。
+- 将 `summarizer.py` 扩展为 7 种事实型叙事角度，分别从公开定位、增长信号、主要语言、规模、Topics、最近推送和候选来源切入；中文强定位只根据精确 Topics 生成，证据不足时使用中性回退，不从自由描述的关键词推断能力，并增加否定语义、榜内多样性和禁用套话测试。
 - 将 `prompts/repository_summary_zh.md` 重构为 Schema 3.0 受控选稿提示词，并新增 `schemas/repository_summary.schema.json`：每仓由程序生成 7 个完整候选，Codex 只能为整榜分配角度并逐字符复制所选候选，不能自由改写、翻译或补事实。
-- 新增 `editorial.py` 本地 Codex 适配器：使用临时目录、stdin、`--ephemeral`、只读沙箱、`--ignore-rules`、清空 MCP server，并禁用 shell、浏览器、插件、工具搜索和多代理；CI 默认禁用，CLI 缺失、超时、输出非法、候选不匹配或事实漂移时整榜回退。
+- 新增 `editorial.py` 本地 Codex 适配器：使用临时目录、stdin、`--ephemeral`、只读沙箱和 `--ignore-rules`；调用前通过 CLI 枚举已配置 MCP，为每个 server 追加 `enabled=false` 并二次验证全部关闭，同时禁用 shell、浏览器、插件、工具搜索和多代理。任何隔离、CLI、输出、候选或事实门禁失败都会整榜回退。
 - 新增 `poster.py` 与 Pillow：每榜生成 1 张封面、每项目生成 1 张 `1200×1600` PNG；封面显示榜单 Top N、实际统计窗口和“已核验净增 Star / 净增基线积累中”等可信口径。找不到 CJK 字体或中文 glyph 时立即失败，不再静默生成方框字。
 - 报告 JSON 升级到 Schema 3，加入 `editorial`、`assets`、逐项目 `assets.poster`、`window_start/end` 和 `manifest.json`；Manifest 升级到 Schema 2，记录 renderer/style 版本、源报告、窗口和 Top N。双榜图片与 manifest 先在同级临时目录完整生成，再整体替换旧目录。
 - 新增 `rerender` CLI，可从冻结 JSON 重建文案和海报而不访问 GitHub；严格验证 Schema 1/2/3、双榜结构、必填事实、GitHub URL、排名、`delta_source`、有限 score/percentiles，并拒绝静默补零、跳过非法条目或输出 NaN/Infinity。
@@ -143,11 +143,11 @@
 
 ### 验证
 
-- `pytest`：88 项全部通过，总覆盖率 81%。
+- `pytest`：97 项全部通过，总覆盖率 80%。
 - `ruff check .` 与 `ruff format --check .`：通过。
 - `node --check site/app.js`、daily/weekly/pages 工作流 YAML 解析和 `git diff --check`：通过。
 - Pages 本地构建：日榜综合 3 / AI 3，周榜综合 7 / AI 7；20 张项目图与 4 张封面通过 PNG、尺寸和路径校验后复制到站点构建目录。
-- 本地 Codex：先用 3 个公开冻结项目完成独立 Schema 3.0 冒烟，随后重建日榜/周榜四个榜单；全部使用 `codex-cli`、无回退，并通过 Schema、身份、URL、数字、候选逐字符匹配、角度覆盖和禁用套话回查。
+- 本地 Codex：先验证当前 2 个已配置 MCP 的启用数量全部降为 0，再用 3 个公开冻结项目完成独立 Schema 3.0 冒烟，随后重建日榜/周榜四个榜单；全部使用 `codex-cli`、无回退，并通过 Schema、身份、URL、数字、质量警告、候选逐字符匹配、角度覆盖和禁用套话回查。
 - 图片视觉与结构检查：封面包含窗口、Top N 和可信增长口径；24 张图片均为 `1200×1600`，Manifest Schema 2 与报告映射一致。
 - Chrome 本地页面检查：数据状态正常，3 个日报海报缩略图、17 个其余项目下载入口全部存在；桌面已加载图片均为 `1200×1600` 且无破图，390px 手机视口无横向溢出，首屏导航与状态卡正常显示。
 

@@ -74,7 +74,7 @@
 1. `schema_version` 固定为 `3.0`。
 2. `period` 必须逐字段匹配输入。
 3. item 数量、顺序和 rank 必须与输入一致。
-4. `card` 的结构化字段与 `data_quality` 逐字段复制 `editorial_facts`；`card.angle` 是所选候选的 angle；`one_line`、`highlights`、`audience` 逐字符复制同一候选。
+4. `card` 的结构化字段与 `data_quality.delta_source`、`data_quality.delta_is_exact`、`data_quality.warnings` 逐字段复制 `editorial_facts`；`card.angle` 是所选候选的 angle；`one_line`、`highlights`、`audience` 逐字符复制同一候选。
 5. `evidence.one_line=["candidate_summaries"]`，三组 `evidence.highlights` 均为 `["candidate_summaries"]`，`evidence.audience=["candidate_summaries"]`。
 6. 合格批次的 `batch_quality.forbidden_phrase_hits` 与 `batch_quality.adjacent_angle_repeats` 都为空数组；`warnings` 仅记录真实存在且无法修正的问题。
 7. 输出 Schema 由调用方通过 `--output-schema` 提供，以该文件为唯一结构规范；本提示词不重复维护 Schema，避免版本漂移。

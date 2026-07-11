@@ -42,6 +42,7 @@ FORBIDDEN_PHRASES = (
     "零门槛",
 )
 _URL_PATTERN = re.compile(r"https?://", re.IGNORECASE)
+_MCP_SERVER_NAME_PATTERN = re.compile(r"[A-Za-z0-9_-]+")
 _TEXT_ONLY_DISABLED_FEATURES = (
     "shell_tool",
     "shell_snapshot",
@@ -211,6 +212,7 @@ def _batch_evidence(
                     "delta_is_exact": (
                         ranked.delta_source == "snapshot" and ranked.star_delta >= 0
                     ),
+                    "warnings": _delta_warnings(ranked),
                 },
                 "deterministic_draft": draft.to_dict(),
                 "candidate_summaries": candidates,
@@ -243,6 +245,82 @@ def _build_prompt(
     )
 
 
+def _verified_mcp_disable_overrides(
+    executable: str,
+    *,
+    reasoning_effort: str | None,
+    timeout_seconds: int,
+) -> tuple[str, ...]:
+    configured = _mcp_server_states(
+        executable,
+        overrides=(),
+        reasoning_effort=reasoning_effort,
+        timeout_seconds=timeout_seconds,
+    )
+    if not configured:
+        return ()
+    overrides = tuple(f"mcp_servers.{name}.enabled=false" for name in sorted(configured))
+    verified = _mcp_server_states(
+        executable,
+        overrides=overrides,
+        reasoning_effort=reasoning_effort,
+        timeout_seconds=timeout_seconds,
+    )
+    if set(verified) != set(configured) or any(verified.values()):
+        raise CodexEditorialError("mcp_isolation_failed")
+    return overrides
+
+
+def _mcp_server_states(
+    executable: str,
+    *,
+    overrides: Sequence[str],
+    reasoning_effort: str | None,
+    timeout_seconds: int,
+) -> dict[str, bool]:
+    command = [executable]
+    if reasoning_effort:
+        command.extend(["-c", f'model_reasoning_effort="{reasoning_effort}"'])
+    for override in overrides:
+        command.extend(["-c", override])
+    command.extend(["mcp", "list", "--json"])
+    completed = subprocess.run(  # noqa: S603 - fixed executable and argument array
+        command,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        timeout=min(timeout_seconds, 20),
+        check=False,
+        shell=False,
+    )
+    if completed.returncode != 0:
+        raise CodexEditorialError("mcp_isolation_failed")
+    try:
+        payload = json.loads(completed.stdout)
+    except json.JSONDecodeError as exc:
+        raise CodexEditorialError("mcp_isolation_failed") from exc
+    if not isinstance(payload, list):
+        raise CodexEditorialError("mcp_isolation_failed")
+    states: dict[str, bool] = {}
+    for item in payload:
+        if not isinstance(item, dict):
+            raise CodexEditorialError("mcp_isolation_failed")
+        name = item.get("name")
+        enabled = item.get("enabled")
+        if (
+            not isinstance(name, str)
+            or not name.strip()
+            or name != name.strip()
+            or _MCP_SERVER_NAME_PATTERN.fullmatch(name) is None
+            or not isinstance(enabled, bool)
+            or name in states
+        ):
+            raise CodexEditorialError("mcp_isolation_failed")
+        states[name] = enabled
+    return states
+
+
 def _run_codex(
     executable: str,
     prompt: str,
@@ -251,6 +329,11 @@ def _run_codex(
     timeout_seconds: int,
     reasoning_effort: str | None,
 ) -> dict[str, Any]:
+    mcp_overrides = _verified_mcp_disable_overrides(
+        executable,
+        reasoning_effort=reasoning_effort,
+        timeout_seconds=timeout_seconds,
+    )
     with tempfile.TemporaryDirectory(prefix="github-hotspots-codex-") as temporary:
         staging = Path(temporary)
         staged_schema = staging / "response.schema.json"
@@ -270,9 +353,9 @@ def _run_codex(
             str(staging),
             "-c",
             'shell_environment_policy.inherit="none"',
-            "-c",
-            "mcp_servers={}",
         ]
+        for override in mcp_overrides:
+            command.extend(["-c", override])
         for feature in _TEXT_ONLY_DISABLED_FEATURES:
             command.extend(["--disable", feature])
         if reasoning_effort:
@@ -409,6 +492,11 @@ def _validate_item(
         raise CodexEditorialError("fact_mismatch")
     if quality.get("delta_is_exact") is not expected_exact:
         raise CodexEditorialError("fact_mismatch")
+    editorial_facts = evidence.get("editorial_facts")
+    if not isinstance(editorial_facts, dict) or quality.get("warnings") != editorial_facts.get(
+        "warnings"
+    ):
+        raise CodexEditorialError("fact_mismatch")
 
     angle = card.get("angle")
     if angle not in set(NARRATIVE_ANGLES):
@@ -463,6 +551,16 @@ def _period_delta_display(ranked: RankedRepository, period: str) -> str:
     if ranked.delta_source == "estimate" and delta >= 0:
         return f"估算 +{delta} Star"
     return "增量待核验"
+
+
+def _delta_warnings(ranked: RankedRepository) -> list[str]:
+    if ranked.delta_source == "trending" and ranked.star_delta >= 0:
+        return ["trending_period_not_snapshot_delta"]
+    if ranked.delta_source == "estimate" and ranked.star_delta >= 0:
+        return ["estimated_delta"]
+    if ranked.star_delta < 0:
+        return ["negative_delta_requires_review"]
+    return []
 
 
 def _valid_evidence_map(value: dict[str, Any]) -> bool:

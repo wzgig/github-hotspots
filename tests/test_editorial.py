@@ -4,10 +4,24 @@ from datetime import date
 from pathlib import Path
 from types import SimpleNamespace
 
+import pytest
+
 from github_hotspots.config import EditorialSettings
-from github_hotspots.editorial import edit_summary_batch
+from github_hotspots.editorial import (
+    CodexEditorialError,
+    _verified_mcp_disable_overrides,
+    edit_summary_batch,
+)
 from github_hotspots.models import RankedRepository, Repository
 from github_hotspots.summarizer import RepositorySummary, summary_candidates
+
+
+@pytest.fixture(autouse=True)
+def _skip_mcp_discovery_for_editorial_unit_tests(monkeypatch) -> None:
+    monkeypatch.setattr(
+        "github_hotspots.editorial._verified_mcp_disable_overrides",
+        lambda *_args, **_kwargs: (),
+    )
 
 
 def _settings(tmp_path: Path, *, backend: str = "codex-cli") -> EditorialSettings:
@@ -141,6 +155,64 @@ def test_deterministic_backend_never_invokes_codex(tmp_path: Path, monkeypatch) 
     assert result.fallback_used is False
 
 
+def test_mcp_overrides_disable_every_cli_server(monkeypatch) -> None:
+    calls: list[list[str]] = []
+
+    def fake_run(command, **kwargs):
+        calls.append(command)
+        disabled = any("mcp_servers." in value for value in command)
+        payload = [
+            {
+                "name": "local_tools",
+                "enabled": not disabled,
+                "disabled_reason": None,
+                "transport": {},
+                "startup_timeout_sec": None,
+                "tool_timeout_sec": None,
+                "auth_status": "unsupported",
+            }
+        ]
+        assert kwargs["shell"] is False
+        return SimpleNamespace(returncode=0, stdout=json.dumps(payload), stderr="")
+
+    monkeypatch.setattr("github_hotspots.editorial.subprocess.run", fake_run)
+
+    overrides = _verified_mcp_disable_overrides(
+        "codex",
+        reasoning_effort="xhigh",
+        timeout_seconds=10,
+    )
+
+    assert overrides == ("mcp_servers.local_tools.enabled=false",)
+    assert len(calls) == 2
+    assert all(command[-3:] == ["mcp", "list", "--json"] for command in calls)
+    assert overrides[0] in calls[1]
+
+
+def test_mcp_isolation_failure_falls_back_for_the_batch(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr("github_hotspots.editorial.shutil.which", lambda _name: "codex")
+
+    def fail_isolation(*_args, **_kwargs):
+        raise CodexEditorialError("mcp_isolation_failed")
+
+    monkeypatch.setattr(
+        "github_hotspots.editorial._verified_mcp_disable_overrides",
+        fail_isolation,
+    )
+
+    result = edit_summary_batch(
+        [_ranking()],
+        [_draft()],
+        period="daily",
+        period_start=date(2026, 7, 10),
+        period_end=date(2026, 7, 11),
+        settings=_settings(tmp_path),
+    )
+
+    assert result.fallback_used is True
+    assert result.error_category == "mcp_isolation_failed"
+
+
 def test_codex_cli_batch_accepts_fact_checked_output(tmp_path: Path, monkeypatch) -> None:
     monkeypatch.setattr("github_hotspots.editorial.shutil.which", lambda _name: "codex")
 
@@ -153,7 +225,7 @@ def test_codex_cli_batch_accepts_fact_checked_output(tmp_path: Path, monkeypatch
             command.index("--sandbox") : command.index("--sandbox") + 2
         ]
         assert 'model_reasoning_effort="xhigh"' in command
-        assert "mcp_servers={}" in command
+        assert "mcp_servers={}" not in command
         assert "--ignore-rules" in command
         assert command[command.index("--disable") + 1] == "shell_tool"
         assert "browser_use" in command
@@ -200,6 +272,31 @@ def test_codex_cli_fact_drift_falls_back_for_the_whole_batch(tmp_path: Path, mon
     )
 
     assert result.summaries == (_draft(),)
+    assert result.fallback_used is True
+    assert result.error_category == "fact_mismatch"
+
+
+def test_codex_cli_rejects_data_quality_warning_drift(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr("github_hotspots.editorial.shutil.which", lambda _name: "codex")
+
+    def fake_run(command, **_kwargs):
+        payload = _response()
+        payload["items"][0]["data_quality"]["warnings"] = ["invented_warning"]
+        output = Path(command[command.index("--output-last-message") + 1])
+        output.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        return SimpleNamespace(returncode=0, stdout="", stderr="")
+
+    monkeypatch.setattr("github_hotspots.editorial.subprocess.run", fake_run)
+
+    result = edit_summary_batch(
+        [_ranking()],
+        [_draft()],
+        period="daily",
+        period_start=date(2026, 7, 10),
+        period_end=date(2026, 7, 11),
+        settings=_settings(tmp_path),
+    )
+
     assert result.fallback_used is True
     assert result.error_category == "fact_mismatch"
 

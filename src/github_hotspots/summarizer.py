@@ -47,92 +47,63 @@ _CATEGORY_RULES: tuple[tuple[tuple[str, ...], str, str], ...] = (
 
 _AUDIENCE_RULES: tuple[tuple[tuple[str, ...], str], ...] = (
     (
-        ("penetration", "pentest", "security", "vulnerability"),
+        ("security",),
         "安全工程师、渗透测试人员、应用开发团队",
     ),
     (
-        ("office", "spreadsheet", "powerpoint", "document automation"),
-        "Office 自动化开发者、数据与文档工作者",
+        ("office",),
+        "Office 工具开发者、数据与文档工作者",
     ),
     (
-        ("system prompt", "system-prompts", "prompt-engineering", "prompt collection"),
+        ("prompt-engineering",),
         "提示词工程师、AI 产品研究者、模型应用开发者",
     ),
     (
-        ("gateway", "provider routing", "ai-gateway", "model routing"),
+        ("ai-gateway",),
         "AI 应用开发者、平台工程师、工具集成者",
     ),
     (
-        ("agent-ide", "fleet of parallel agents", "agent development environment"),
+        ("agent-ide",),
         "AI 编程工具开发者、Agent 工作流设计者、研发团队",
     ),
     (
-        ("agent orchestration", "agent-orchestration", "multiplexer", "parallel agents"),
+        ("agent-orchestration",),
         "多智能体开发者、技术负责人、终端工具用户",
     ),
     (
-        ("code review", "claude code", "codex"),
-        "使用 AI 代码审查与协作开发的工程师",
+        ("code-review",),
+        "代码审查参与者、软件工程师、研发团队",
     ),
     (
-        ("mcp", "terminal automation", "terminal-automation"),
-        "MCP 集成开发者、终端自动化用户、AI 工具作者",
+        ("mcp",),
+        "MCP 集成开发者、工具集成者、协议实现者",
     ),
 )
 
 _POSITIONING_RULES: tuple[tuple[tuple[str, ...], str], ...] = (
-    (
-        ("javascript runtime", "bundler", "package manager"),
-        "整合 JavaScript 运行、打包、测试与包管理的工具链",
-    ),
-    (
-        ("system prompts", "system-prompts", "prompt collection"),
-        "整理公开系统提示词的资料库",
-    ),
-    (
-        ("office suite", "officecli", "spreadsheet", "powerpoint"),
-        "面向 AI 智能体的 Office 命令行工具",
-    ),
-    (
-        ("penetration testing", "pentest", "ai-hacking", "vulnerability"),
-        "用于渗透测试与漏洞检查的开源工具",
-    ),
-    (
-        ("meeting assistant", "meeting transcription", "meeting notes"),
-        "注重隐私的 AI 会议记录助手",
-    ),
-    (
-        ("postgres rewritten", "postgresql", "postgres"),
-        "围绕 PostgreSQL 兼容实现的数据库项目",
-    ),
-    (
-        ("mcp server", "model context protocol", "terminal automation"),
-        "通过 MCP 接入本地终端与开发工具的服务",
-    ),
-    (
-        ("skills framework", "agentic skills", "software development methodology"),
-        "组织智能体开发流程与技能的开源框架",
-    ),
-    (
-        ("agent development environment", "fleet of parallel agents", "agent-ide"),
-        "面向并行智能体协作的开发环境",
-    ),
-    (
-        ("multiplexer", "agent orchestration", "agent-orchestration"),
-        "在终端协调多个智能体会话的工具",
-    ),
-    (
-        ("code review", "codex from claude code"),
-        "连接 AI 编程工具进行代码审查的插件",
-    ),
-    (
-        ("ai gateway", "one endpoint", "model routing", "provider routing"),
-        "统一接入与路由多种 AI 模型的网关",
-    ),
-    (
-        ("developer automation", "developer-tools", "automation toolkit"),
-        "面向开发流程自动化的工具",
-    ),
+    (("mcp", "terminal-automation"), "MCP 终端自动化项目"),
+    (("terminal-automation",), "终端自动化项目"),
+    (("ai-gateway",), "AI 网关项目"),
+    (("llm-gateway",), "LLM 网关项目"),
+    (("model-routing",), "模型路由项目"),
+    (("ai-meeting-assistant",), "AI 会议助手项目"),
+    (("meeting-minutes",), "会议纪要项目"),
+    (("meeting-notes",), "会议记录项目"),
+    (("transcription",), "语音转写项目"),
+    (("ai-penetration-testing",), "AI 渗透测试项目"),
+    (("penetration-testing",), "渗透测试项目"),
+    (("agent-ide",), "智能体 IDE 项目"),
+    (("agent-orchestration", "multiplexer"), "智能体编排与多路复用项目"),
+    (("agent-orchestration",), "智能体编排项目"),
+    (("code-review",), "代码审查项目"),
+    (("office", "cli"), "Office 命令行项目"),
+    (("office",), "Office 相关项目"),
+    (("postgresql",), "PostgreSQL 相关项目"),
+    (("postgres",), "PostgreSQL 相关项目"),
+    (("skills", "sdlc"), "软件开发技能与流程项目"),
+    (("prompt-engineering",), "提示词工程相关项目"),
+    (("bundler", "javascript"), "JavaScript 打包工具项目"),
+    (("developer-tools", "automation"), "开发工具与自动化项目"),
 )
 
 NARRATIVE_ANGLES = (
@@ -153,45 +124,36 @@ def _clip(text: str, limit: int) -> str:
 
 
 def _category(repository: Any) -> tuple[str, str]:
-    haystack = " ".join(
-        [
-            str(getattr(repository, "description", "") or ""),
-            " ".join(getattr(repository, "topics", ()) or ()),
-        ]
-    ).lower()
+    topics = _topic_set(repository)
     for keywords, label, audience in _CATEGORY_RULES:
-        if any(keyword in haystack for keyword in keywords):
+        if topics.intersection(keywords):
             return label, audience
     return "开源软件与工程实践", "软件开发者、开源爱好者、技术团队"
 
 
 def _audience(repository: Any) -> str:
-    haystack = " ".join(
-        [
-            str(getattr(repository, "name", "") or ""),
-            str(getattr(repository, "description", "") or ""),
-            " ".join(getattr(repository, "topics", ()) or ()),
-        ]
-    ).lower()
+    topics = _topic_set(repository)
     for keywords, audience in _AUDIENCE_RULES:
-        if any(keyword in haystack for keyword in keywords):
+        if set(keywords).issubset(topics):
             return audience
     return _category(repository)[1]
 
 
 def _positioning(repository: Any) -> str:
-    haystack = " ".join(
-        [
-            str(getattr(repository, "name", "") or ""),
-            str(getattr(repository, "description", "") or ""),
-            " ".join(getattr(repository, "topics", ()) or ()),
-        ]
-    ).lower()
+    topics = _topic_set(repository)
     for keywords, positioning in _POSITIONING_RULES:
-        if any(keyword in haystack for keyword in keywords):
+        if set(keywords).issubset(topics):
             return positioning
     category, _ = _category(repository)
     return f"面向{category}方向的开源项目"
+
+
+def _topic_set(repository: Any) -> frozenset[str]:
+    return frozenset(
+        str(topic).strip().casefold()
+        for topic in (getattr(repository, "topics", ()) or ())
+        if str(topic).strip()
+    )
 
 
 def _narrative_variant(repository: Any, narrative_index: int | None) -> int:
