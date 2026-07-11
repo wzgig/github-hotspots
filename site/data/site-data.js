@@ -1,7 +1,7 @@
 "use strict";
 window.GITHUB_HOTSPOTS_DATA = {
   "schema_version": 2,
-  "generated_at": "2026-07-11T23:24:41+08:00",
+  "generated_at": "2026-07-11T23:30:35+08:00",
   "site": {
     "title": "GitHub Hotspots",
     "tagline": "追踪开源世界真正发生的增量",
@@ -10,7 +10,7 @@ window.GITHUB_HOTSPOTS_DATA = {
   "daily": {
     "period": "daily",
     "run_date": "2026-07-11",
-    "generated_at": "2026-07-11T23:23:49+08:00",
+    "generated_at": "2026-07-11T23:30:35+08:00",
     "window_label": "2026-07-11",
     "data_quality": "中高：GitHub Trending 周期信号",
     "warnings": [
@@ -26,7 +26,7 @@ window.GITHUB_HOTSPOTS_DATA = {
         "html_url": "https://github.com/oven-sh/bun",
         "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
         "language": "Rust",
-        "stars": 94502,
+        "stars": 94504,
         "forks": 4957,
         "score": 85.8,
         "star_delta": 654,
@@ -44,7 +44,7 @@ window.GITHUB_HOTSPOTS_DATA = {
         "one_line": "bun 是一个近期升温、聚焦“Web 与前端工程”的开源项目：Incredibly fast JavaScript runtime, bundler, test runner, and pa…",
         "highlights": [
           "仓库定位：Incredibly fast JavaScript runtime, bundler, test runner, and package manager – a…",
-          "主要语言：Rust；累计 94,502 Star、4,957 Fork",
+          "主要语言：Rust；累计 94,504 Star、4,957 Fork",
           "GitHub Trending 页面显示本期获得 654 Star"
         ],
         "audience": "前端开发者、设计工程师、独立开发者",
@@ -63,7 +63,7 @@ window.GITHUB_HOTSPOTS_DATA = {
         "html_url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 252250,
+        "stars": 252254,
         "forks": 22517,
         "score": 85.46,
         "star_delta": 737,
@@ -81,7 +81,7 @@ window.GITHUB_HOTSPOTS_DATA = {
         "one_line": "superpowers 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：An agentic skills framework & software development metho…",
         "highlights": [
           "仓库定位：An agentic skills framework & software development methodology that works.",
-          "主要语言：Shell；累计 252,250 Star、22,517 Fork",
+          "主要语言：Shell；累计 252,254 Star、22,517 Fork",
           "GitHub Trending 页面显示本期获得 737 Star"
         ],
         "audience": "AI 应用开发者、算法工程师、技术研究者",
@@ -142,7 +142,7 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/oven-sh/bun",
             "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
             "language": "Rust",
-            "stars": 94502,
+            "stars": 94504,
             "forks": 4957,
             "score": 85.8,
             "star_delta": 654,
@@ -160,7 +160,7 @@ window.GITHUB_HOTSPOTS_DATA = {
             "one_line": "bun 是一个近期升温、聚焦“Web 与前端工程”的开源项目：Incredibly fast JavaScript runtime, bundler, test runner, and pa…",
             "highlights": [
               "仓库定位：Incredibly fast JavaScript runtime, bundler, test runner, and package manager – a…",
-              "主要语言：Rust；累计 94,502 Star、4,957 Fork",
+              "主要语言：Rust；累计 94,504 Star、4,957 Fork",
               "GitHub Trending 页面显示本期获得 654 Star"
             ],
             "audience": "前端开发者、设计工程师、独立开发者",
@@ -179,7 +179,7 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/obra/superpowers",
             "description": "An agentic skills framework & software development methodology that works.",
             "language": "Shell",
-            "stars": 252250,
+            "stars": 252254,
             "forks": 22517,
             "score": 85.46,
             "star_delta": 737,
@@ -197,7 +197,7 @@ window.GITHUB_HOTSPOTS_DATA = {
             "one_line": "superpowers 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：An agentic skills framework & software development metho…",
             "highlights": [
               "仓库定位：An agentic skills framework & software development methodology that works.",
-              "主要语言：Shell；累计 252,250 Star、22,517 Fork",
+              "主要语言：Shell；累计 252,254 Star、22,517 Fork",
               "GitHub Trending 页面显示本期获得 737 Star"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者",
@@ -295,7 +295,7 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/malisper/pgrust",
             "description": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
             "language": "Rust",
-            "stars": 1846,
+            "stars": 1848,
             "forks": 47,
             "score": 83.03,
             "star_delta": 789,
@@ -313,7 +313,7 @@ window.GITHUB_HOTSPOTS_DATA = {
             "one_line": "pgrust 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Postgres rewritten in Rust, now passing 100% of the Postgres…",
             "highlights": [
               "仓库定位：Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
-              "主要语言：Rust；累计 1,846 Star、47 Fork",
+              "主要语言：Rust；累计 1,848 Star、47 Fork",
               "GitHub Trending 页面显示本期获得 789 Star"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者",
@@ -332,7 +332,7 @@ window.GITHUB_HOTSPOTS_DATA = {
             "html_url": "https://github.com/obra/superpowers",
             "description": "An agentic skills framework & software development methodology that works.",
             "language": "Shell",
-            "stars": 252250,
+            "stars": 252254,
             "forks": 22517,
             "score": 82.78,
             "star_delta": 737,
@@ -350,7 +350,7 @@ window.GITHUB_HOTSPOTS_DATA = {
             "one_line": "superpowers 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：An agentic skills framework & software development metho…",
             "highlights": [
               "仓库定位：An agentic skills framework & software development methodology that works.",
-              "主要语言：Shell；累计 252,250 Star、22,517 Fork",
+              "主要语言：Shell；累计 252,254 Star、22,517 Fork",
               "GitHub Trending 页面显示本期获得 737 Star"
             ],
             "audience": "AI 应用开发者、算法工程师、技术研究者",
