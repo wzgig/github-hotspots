@@ -365,7 +365,7 @@ config loader + scope definitions
 | --- | --- | --- | --- | --- |
 | M0 | 公开仓库初始化与首次推送 | GitHub 登录、仓库名确认 | `origin` 可访问，`main` 与本地一致 | 已完成 |
 | M1 | 仓库级文档与运营规范 | M0 可并行起草 | README、PROJECT_LOG、PROJECT_PLAN、OPERATIONS 齐全 | 已完成 |
-| M2 | Actions 首次线上验证 | M0、仓库 Actions 写权限 | daily/weekly 手动运行成功并产生可追踪产物 | 待执行 |
+| M2 | Actions 首次线上验证 | M0、仓库 Actions 写权限 | daily/weekly 手动运行成功并产生可追踪产物 | 已完成 |
 | M3 | 最小 Pages 上线 | M0、站点方案确认 | 公网 URL 可访问最新日/周榜及方法说明 | 已完成 |
 | M4 | 7 日快照基线验收 | M2、连续运行 | 至少 7 个有效日期快照，周增量可复算 | 待积累 |
 | M5 | 双榜范围实现 | 热点范围已确认、M3 | 综合榜/AI 榜独立配置、测试、页面与报告 | 已完成 |
