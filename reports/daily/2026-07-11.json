@@ -1,123 +1,75 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "period": "daily",
   "run_date": "2026-07-11",
-  "generated_at": "2026-07-11T16:53:31+08:00",
+  "generated_at": "2026-07-11T23:11:08+08:00",
   "timezone": "Asia/Shanghai",
   "window_label": "2026-07-11",
   "data_quality": "中高：GitHub Trending 周期信号",
   "warnings": [
-    "历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending"
+    "综合主榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending",
+    "AI 专题榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending"
   ],
-  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。",
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。",
   "repositories": [
     {
-      "repository_id": 1148788086,
-      "full_name": "mattpocock/skills",
-      "owner": "mattpocock",
-      "name": "skills",
-      "html_url": "https://github.com/mattpocock/skills",
-      "description": "Skills for Real Engineers. Straight from my .claude directory.",
-      "language": "Shell",
-      "stars": 165064,
-      "forks": 14201,
-      "open_issues": 138,
-      "watchers": 165064,
-      "topics": [],
-      "created_at": "2026-02-03T11:15:53Z",
-      "updated_at": "2026-07-11T08:47:17Z",
-      "pushed_at": "2026-07-10T13:15:20Z",
-      "daily_stars": 1712,
+      "repository_id": 357728969,
+      "full_name": "oven-sh/bun",
+      "owner": "oven-sh",
+      "name": "bun",
+      "html_url": "https://github.com/oven-sh/bun",
+      "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
+      "language": "Rust",
+      "stars": 94502,
+      "forks": 4958,
+      "open_issues": 7283,
+      "watchers": 691,
+      "topics": [
+        "bun",
+        "bundler",
+        "javascript",
+        "javascriptcore",
+        "jsx",
+        "nodejs",
+        "npm",
+        "react",
+        "rust",
+        "rust-lang",
+        "transpiler",
+        "typescript"
+      ],
+      "created_at": "2021-04-14T00:48:17Z",
+      "updated_at": "2026-07-11T15:06:42Z",
+      "pushed_at": "2026-07-11T15:01:38Z",
+      "daily_stars": 654,
       "weekly_stars": null,
-      "trending_rank_daily": 6,
+      "trending_rank_daily": 10,
       "trending_rank_weekly": null,
       "sources": [
         "trending_daily",
         "github_api"
       ],
       "rank": 1,
-      "score": 87.43,
-      "star_delta": 1712,
+      "score": 85.8,
+      "star_delta": 654,
       "fork_delta": 0,
       "delta_source": "trending",
       "component_percentiles": {
-        "star_growth": 100.0,
-        "relative_growth": 98.68,
+        "star_growth": 96.47,
+        "relative_growth": 95.29,
         "fork_growth": 50.0,
-        "total_stars": 75.0,
-        "activity": 71.65,
-        "trending_signal": 35.62
-      },
-      "summary": {
-        "one_line": "skills 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Skills for Real Engineers. Straight from my .claude directory.",
-        "highlights": [
-          "仓库定位：Skills for Real Engineers. Straight from my .claude directory.",
-          "主要语言：Shell；累计 165,064 Star、14,201 Fork",
-          "GitHub Trending 页面显示本期获得 1,712 Star"
-        ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者"
-      }
-    },
-    {
-      "repository_id": 1182212878,
-      "full_name": "iOfficeAI/OfficeCLI",
-      "owner": "iOfficeAI",
-      "name": "OfficeCLI",
-      "html_url": "https://github.com/iOfficeAI/OfficeCLI",
-      "description": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
-      "language": "C#",
-      "stars": 14721,
-      "forks": 1004,
-      "open_issues": 22,
-      "watchers": 34,
-      "topics": [
-        "agent",
-        "ai",
-        "claude-code",
-        "cli",
-        "codex",
-        "docx",
-        "excel",
-        "office",
-        "openclaw",
-        "pptx",
-        "presentation",
-        "skills",
-        "word",
-        "xlsx"
-      ],
-      "created_at": "2026-03-15T07:39:12Z",
-      "updated_at": "2026-07-11T08:47:01Z",
-      "pushed_at": "2026-07-11T06:01:11Z",
-      "daily_stars": 1224,
-      "weekly_stars": null,
-      "trending_rank_daily": 16,
-      "trending_rank_weekly": null,
-      "sources": [
-        "trending_daily",
-        "github_api"
-      ],
-      "rank": 2,
-      "score": 86.68,
-      "star_delta": 1224,
-      "fork_delta": 0,
-      "delta_source": "trending",
-      "component_percentiles": {
-        "star_growth": 98.68,
-        "relative_growth": 100.0,
-        "fork_growth": 50.0,
-        "total_stars": 22.37,
+        "total_stars": 41.18,
         "activity": 100.0,
-        "trending_signal": 24.47
+        "trending_signal": 28.91
       },
       "summary": {
-        "one_line": "OfficeCLI 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：OfficeCLI is the first and best Office suite purpose-built…",
+        "one_line": "bun 是一个近期升温、聚焦“Web 与前端工程”的开源项目：Incredibly fast JavaScript runtime, bundler, test runner, and pa…",
         "highlights": [
-          "仓库定位：OfficeCLI is the first and best Office suite purpose-built for AI agents to read,…",
-          "主要语言：C#；累计 14,721 Star、1,004 Fork",
-          "GitHub Trending 页面显示本期获得 1,224 Star"
+          "仓库定位：Incredibly fast JavaScript runtime, bundler, test runner, and package manager – a…",
+          "主要语言：Rust；累计 94,502 Star、4,958 Fork",
+          "GitHub Trending 页面显示本期获得 654 Star"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者"
+        "audience": "前端开发者、设计工程师、独立开发者"
       }
     },
     {
@@ -128,10 +80,10 @@
       "html_url": "https://github.com/obra/superpowers",
       "description": "An agentic skills framework & software development methodology that works.",
       "language": "Shell",
-      "stars": 252034,
-      "forks": 22499,
-      "open_issues": 311,
-      "watchers": 252033,
+      "stars": 252245,
+      "forks": 22515,
+      "open_issues": 313,
+      "watchers": 252245,
       "topics": [
         "ai",
         "brainstorming",
@@ -143,38 +95,446 @@
         "superpowers"
       ],
       "created_at": "2025-10-09T19:45:18Z",
-      "updated_at": "2026-07-11T08:47:49Z",
+      "updated_at": "2026-07-11T15:10:47Z",
       "pushed_at": "2026-07-10T15:58:09Z",
-      "daily_stars": 1013,
+      "daily_stars": 737,
       "weekly_stars": null,
-      "trending_rank_daily": 7,
+      "trending_rank_daily": 21,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 85.46,
+      "star_delta": 737,
+      "fork_delta": 0,
+      "delta_source": "trending",
+      "component_percentiles": {
+        "star_growth": 97.65,
+        "relative_growth": 92.94,
+        "fork_growth": 50.0,
+        "total_stars": 95.29,
+        "activity": 71.65,
+        "trending_signal": 22.42
+      },
+      "summary": {
+        "one_line": "superpowers 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：An agentic skills framework & software development metho…",
+        "highlights": [
+          "仓库定位：An agentic skills framework & software development methodology that works.",
+          "主要语言：Shell；累计 252,245 Star、22,515 Fork",
+          "GitHub Trending 页面显示本期获得 737 Star"
+        ],
+        "audience": "AI 应用开发者、算法工程师、技术研究者"
+      }
+    },
+    {
+      "repository_id": 898345892,
+      "full_name": "wonderwhy-er/DesktopCommanderMCP",
+      "owner": "wonderwhy-er",
+      "name": "DesktopCommanderMCP",
+      "html_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+      "language": "TypeScript",
+      "stars": 7694,
+      "forks": 963,
+      "open_issues": 173,
+      "watchers": 118,
+      "topics": [
+        "agent",
+        "ai",
+        "code-analysis",
+        "code-generation",
+        "gemini-cli-extension",
+        "mcp",
+        "terminal-ai",
+        "terminal-automation",
+        "vibe-coding"
+      ],
+      "created_at": "2024-12-04T08:26:08Z",
+      "updated_at": "2026-07-11T15:09:33Z",
+      "pushed_at": "2026-07-10T20:11:58Z",
+      "daily_stars": 900,
+      "weekly_stars": null,
+      "trending_rank_daily": 8,
       "trending_rank_weekly": null,
       "sources": [
         "trending_daily",
         "github_api"
       ],
       "rank": 3,
-      "score": 85.54,
-      "star_delta": 1013,
+      "score": 84.62,
+      "star_delta": 900,
       "fork_delta": 0,
       "delta_source": "trending",
       "component_percentiles": {
-        "star_growth": 96.05,
-        "relative_growth": 94.74,
+        "star_growth": 100.0,
+        "relative_growth": 98.82,
         "fork_growth": 50.0,
-        "total_stars": 94.74,
+        "total_stars": 22.35,
         "activity": 71.65,
-        "trending_signal": 33.33
+        "trending_signal": 31.55
       },
       "summary": {
-        "one_line": "superpowers 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：An agentic skills framework & software development metho…",
+        "one_line": "DesktopCommanderMCP 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：This is MCP server for Claude that gives it term…",
         "highlights": [
-          "仓库定位：An agentic skills framework & software development methodology that works.",
-          "主要语言：Shell；累计 252,034 Star、22,499 Fork",
-          "GitHub Trending 页面显示本期获得 1,013 Star"
+          "仓库定位：This is MCP server for Claude that gives it terminal control, file system search…",
+          "主要语言：TypeScript；累计 7,694 Star、963 Fork",
+          "GitHub Trending 页面显示本期获得 900 Star"
         ],
         "audience": "AI 应用开发者、算法工程师、技术研究者"
       }
     }
-  ]
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "repositories": [
+        {
+          "repository_id": 357728969,
+          "full_name": "oven-sh/bun",
+          "owner": "oven-sh",
+          "name": "bun",
+          "html_url": "https://github.com/oven-sh/bun",
+          "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
+          "language": "Rust",
+          "stars": 94502,
+          "forks": 4958,
+          "open_issues": 7283,
+          "watchers": 691,
+          "topics": [
+            "bun",
+            "bundler",
+            "javascript",
+            "javascriptcore",
+            "jsx",
+            "nodejs",
+            "npm",
+            "react",
+            "rust",
+            "rust-lang",
+            "transpiler",
+            "typescript"
+          ],
+          "created_at": "2021-04-14T00:48:17Z",
+          "updated_at": "2026-07-11T15:06:42Z",
+          "pushed_at": "2026-07-11T15:01:38Z",
+          "daily_stars": 654,
+          "weekly_stars": null,
+          "trending_rank_daily": 10,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 85.8,
+          "star_delta": 654,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 96.47,
+            "relative_growth": 95.29,
+            "fork_growth": 50.0,
+            "total_stars": 41.18,
+            "activity": 100.0,
+            "trending_signal": 28.91
+          },
+          "summary": {
+            "one_line": "bun 是一个近期升温、聚焦“Web 与前端工程”的开源项目：Incredibly fast JavaScript runtime, bundler, test runner, and pa…",
+            "highlights": [
+              "仓库定位：Incredibly fast JavaScript runtime, bundler, test runner, and package manager – a…",
+              "主要语言：Rust；累计 94,502 Star、4,958 Fork",
+              "GitHub Trending 页面显示本期获得 654 Star"
+            ],
+            "audience": "前端开发者、设计工程师、独立开发者"
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 252245,
+          "forks": 22515,
+          "open_issues": 313,
+          "watchers": 252245,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-07-11T15:10:47Z",
+          "pushed_at": "2026-07-10T15:58:09Z",
+          "daily_stars": 737,
+          "weekly_stars": null,
+          "trending_rank_daily": 21,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 85.46,
+          "star_delta": 737,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 97.65,
+            "relative_growth": 92.94,
+            "fork_growth": 50.0,
+            "total_stars": 95.29,
+            "activity": 71.65,
+            "trending_signal": 22.42
+          },
+          "summary": {
+            "one_line": "superpowers 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：An agentic skills framework & software development metho…",
+            "highlights": [
+              "仓库定位：An agentic skills framework & software development methodology that works.",
+              "主要语言：Shell；累计 252,245 Star、22,515 Fork",
+              "GitHub Trending 页面显示本期获得 737 Star"
+            ],
+            "audience": "AI 应用开发者、算法工程师、技术研究者"
+          }
+        },
+        {
+          "repository_id": 898345892,
+          "full_name": "wonderwhy-er/DesktopCommanderMCP",
+          "owner": "wonderwhy-er",
+          "name": "DesktopCommanderMCP",
+          "html_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+          "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+          "language": "TypeScript",
+          "stars": 7694,
+          "forks": 963,
+          "open_issues": 173,
+          "watchers": 118,
+          "topics": [
+            "agent",
+            "ai",
+            "code-analysis",
+            "code-generation",
+            "gemini-cli-extension",
+            "mcp",
+            "terminal-ai",
+            "terminal-automation",
+            "vibe-coding"
+          ],
+          "created_at": "2024-12-04T08:26:08Z",
+          "updated_at": "2026-07-11T15:09:33Z",
+          "pushed_at": "2026-07-10T20:11:58Z",
+          "daily_stars": 900,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 84.62,
+          "star_delta": 900,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 98.82,
+            "fork_growth": 50.0,
+            "total_stars": 22.35,
+            "activity": 71.65,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "DesktopCommanderMCP 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：This is MCP server for Claude that gives it term…",
+            "highlights": [
+              "仓库定位：This is MCP server for Claude that gives it terminal control, file system search…",
+              "主要语言：TypeScript；累计 7,694 Star、963 Fork",
+              "GitHub Trending 页面显示本期获得 900 Star"
+            ],
+            "audience": "AI 应用开发者、算法工程师、技术研究者"
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "repositories": [
+        {
+          "repository_id": 898345892,
+          "full_name": "wonderwhy-er/DesktopCommanderMCP",
+          "owner": "wonderwhy-er",
+          "name": "DesktopCommanderMCP",
+          "html_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+          "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+          "language": "TypeScript",
+          "stars": 7694,
+          "forks": 963,
+          "open_issues": 173,
+          "watchers": 118,
+          "topics": [
+            "agent",
+            "ai",
+            "code-analysis",
+            "code-generation",
+            "gemini-cli-extension",
+            "mcp",
+            "terminal-ai",
+            "terminal-automation",
+            "vibe-coding"
+          ],
+          "created_at": "2024-12-04T08:26:08Z",
+          "updated_at": "2026-07-11T15:09:33Z",
+          "pushed_at": "2026-07-10T20:11:58Z",
+          "daily_stars": 900,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 84.74,
+          "star_delta": 900,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 96.67,
+            "fork_growth": 50.0,
+            "total_stars": 33.33,
+            "activity": 71.65,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "DesktopCommanderMCP 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：This is MCP server for Claude that gives it term…",
+            "highlights": [
+              "仓库定位：This is MCP server for Claude that gives it terminal control, file system search…",
+              "主要语言：TypeScript；累计 7,694 Star、963 Fork",
+              "GitHub Trending 页面显示本期获得 900 Star"
+            ],
+            "audience": "AI 应用开发者、算法工程师、技术研究者"
+          }
+        },
+        {
+          "repository_id": 1215569807,
+          "full_name": "malisper/pgrust",
+          "owner": "malisper",
+          "name": "pgrust",
+          "html_url": "https://github.com/malisper/pgrust",
+          "description": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
+          "language": "Rust",
+          "stars": 1841,
+          "forks": 47,
+          "open_issues": 18,
+          "watchers": 16,
+          "topics": [
+            "ai-assisted-development",
+            "database",
+            "postgres",
+            "postgresql",
+            "rust"
+          ],
+          "created_at": "2026-04-20T03:35:59Z",
+          "updated_at": "2026-07-11T15:07:07Z",
+          "pushed_at": "2026-07-10T07:04:48Z",
+          "daily_stars": 789,
+          "weekly_stars": null,
+          "trending_rank_daily": 17,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 83.03,
+          "star_delta": 789,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 96.67,
+            "relative_growth": 100.0,
+            "fork_growth": 50.0,
+            "total_stars": 26.67,
+            "activity": 71.65,
+            "trending_signal": 23.98
+          },
+          "summary": {
+            "one_line": "pgrust 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：Postgres rewritten in Rust, now passing 100% of the Postgres…",
+            "highlights": [
+              "仓库定位：Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
+              "主要语言：Rust；累计 1,841 Star、47 Fork",
+              "GitHub Trending 页面显示本期获得 789 Star"
+            ],
+            "audience": "AI 应用开发者、算法工程师、技术研究者"
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 252245,
+          "forks": 22515,
+          "open_issues": 313,
+          "watchers": 252245,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-07-11T15:10:47Z",
+          "pushed_at": "2026-07-10T15:58:09Z",
+          "daily_stars": 737,
+          "weekly_stars": null,
+          "trending_rank_daily": 21,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 82.78,
+          "star_delta": 737,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 93.33,
+            "relative_growth": 90.0,
+            "fork_growth": 50.0,
+            "total_stars": 96.67,
+            "activity": 71.65,
+            "trending_signal": 22.42
+          },
+          "summary": {
+            "one_line": "superpowers 是一个近期升温、聚焦“AI 与智能体开发”的开源项目：An agentic skills framework & software development metho…",
+            "highlights": [
+              "仓库定位：An agentic skills framework & software development methodology that works.",
+              "主要语言：Shell；累计 252,245 Star、22,515 Fork",
+              "GitHub Trending 页面显示本期获得 737 Star"
+            ],
+            "audience": "AI 应用开发者、算法工程师、技术研究者"
+          }
+        }
+      ]
+    }
+  }
 }

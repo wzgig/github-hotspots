@@ -2,18 +2,19 @@
 
 > 用法：把本文件作为新一轮 Codex/开发代理的主任务提示词。它用于从当前项目状态继续执行，不要求重复初始化已经存在且正确的文件。
 
-你是一名负责数据工程、Python 自动化、GitHub API、内容结构化和质量保障的高级工程师。请在当前工作区构建并持续完善一个“GitHub Hotspots”项目：自动发现近期 GitHub 热点，保存可审计快照，生成每日榜单和每周榜单，并输出适合小红书卡片排版的中文素材。
+你是一名负责数据工程、Python 自动化、GitHub API、内容结构化和质量保障的高级工程师。请在当前工作区构建并持续完善一个“GitHub Hotspots”项目：自动发现近期 GitHub 热点，保存可审计快照，生成“综合主榜 + AI 专题榜”的每日/每周榜单，并输出两份适合小红书卡片排版、供人工审核发布的中文素材。
 
 ## 一、最终目标
 
 建立完整而可复现的流水线：
 
 ```text
-候选发现 → GitHub 事实补全 → 过滤 → 快照 → 增量 → 排名
-→ 事实受约束摘要 → 日报/周报 → 小红书文本素材 → 测试与自动运行
+候选发现 → GitHub 事实补全 → 过滤 → 快照 → 增量
+→ 综合候选/AI 分类 → 两榜独立排名 → 事实受约束摘要 → 日报/周报
+→ 两份小红书文本素材 → 测试、提交、推送与线上验证
 ```
 
-日榜默认 Top 3；周榜默认 Top 7，并可通过配置切换为 Top 10。封面突出本期新增 Star；每个项目卡片包含项目名、定位、语言、总 Star、本期新增 Star、Fork、一句话价值、3 个亮点、适用人群和仓库链接。
+综合主榜和 AI 专题榜的日榜默认各 Top 3、周榜默认各 Top 7。两榜独立排名并允许同一仓库同时入榜。封面突出本期新增 Star；每个项目卡片包含项目名、定位、语言、总 Star、本期新增 Star、Fork、一句话价值、3 个亮点、适用人群和仓库链接。
 
 ## 二、执行默认值
 
@@ -25,12 +26,16 @@
 - 快照目录：`data/snapshots/`。
 - 日报目录：`reports/daily/`。
 - 周报目录：`reports/weekly/`。
+- 综合主榜：`boards.comprehensive`，默认 `daily_top_n: 3`、`weekly_top_n: 7`。
+- AI 专题榜：`boards.ai`，默认 `daily_top_n: 3`、`weekly_top_n: 7`，使用精确 Topics 与 token/phrase-aware 关键词。
 - 日榜命令：`python -m github_hotspots.cli run --period daily`。
 - 周榜命令：`python -m github_hotspots.cli run --period weekly`。
 - 日榜计划：北京时间每天 08:17。
 - 周榜计划：北京时间每周一 08:27。
 - GitHub Token：从环境变量 `GITHUB_TOKEN` 读取。
 - 输出语言：简体中文；仓库名、语言、框架和标准术语保留原文。
+- 小红书发布：只生成综合榜和 AI 榜两份草稿，由用户人工审核与发布；当前阶段不自动登录或发布。
+- 开源许可证：MIT License，版权声明为 `Copyright (c) 2026 Zicheng Wang`。
 
 遇到会实质改变产品范围、数据口径或外部发布行为的未知项时才提问；否则采用保守默认值继续，并在交付说明中列出假设。
 
@@ -41,6 +46,7 @@
 3. 对用户提供的小红书链接只做只读访问。若遇到登录、动态渲染或平台限制，准确说明能读到什么、不能读到什么，不绕过验证码或反爬机制。
 4. 小红书链接只用于理解内容结构；GitHub 数字事实必须来自 GitHub API、本地快照或明确标注的 Trending 信号。
 5. 如确需技能或插件，先说明名称、用途和会产生的改动，再按其说明使用；不要为了展示工具而安装无关依赖。
+6. 检查根目录 `LICENSE` 是否为标准 MIT 文本（`Copyright (c) 2026 Zicheng Wang`）；不得无意删除或改换许可证。
 
 ## 四、不可违反的事实规则
 
@@ -66,6 +72,8 @@
 - 从 GitHub Trending 和 GitHub Search 获取候选，并去重。
 - 使用 GitHub API 补全事实；处理分页、限流、超时、重试和明确的 User-Agent。
 - 支持排除归档、Fork、镜像、描述缺失、指定语言、Owner 和仓库。
+- 综合主榜使用全部合格候选；AI 专题榜从同一事实候选池筛选 AI 仓库，两榜允许重叠。
+- AI 匹配先对配置 Topics 做精确匹配，再对仓库 name、description 和 topics 做 token/phrase-aware 匹配。独立 token `ai`、`openai`、`llm` 和配置短语可以命中；禁止用朴素 `"ai" in text` 让 `rails`、`maintainer` 等无关词误命中。
 - 单一候选来源失败时允许降级；全部来源失败时返回非零退出码。
 
 ### 2. 快照
@@ -93,6 +101,8 @@
 ### 3. 排名
 
 - 排名参数全部来自 `config/hotspots.yaml`。
+- `boards.comprehensive` 和 `boards.ai` 分别配置日/周 Top N；两榜在各自候选范围内独立归一化、评分和生成 `rank`。
+- 同一仓库同时入榜时保留两个独立排名，不得从综合主榜复制 AI 榜序号。
 - 默认让 Star 增长成为主要权重，同时允许相对增长、Fork 增长、活跃度、总 Star 和 Trending 信号参与。
 - 保存 `rank`、`score`、`star_delta`、`fork_delta`、`delta_source` 和各分量百分位，保证结果可解释。
 - 对相同分数采用稳定、确定性的次级排序，避免同一输入在多次运行中乱序。
@@ -107,13 +117,15 @@
 
 ### 5. 报告
 
-- 生成完整 Markdown 榜单和小红书文本版素材。
-- 日榜 Top 3；周榜默认 Top 7，配置应支持 Top 10。
+- 主 Markdown 同时包含“综合主榜”和“AI 专题榜”两个章节。
+- 报告 JSON 保留顶层 `repositories` 作为综合主榜以兼容旧消费者，并新增 `boards.comprehensive`、`boards.ai`，每项包含 `label` 和独立 `repositories`。
+- 旧 `*.xiaohongshu.md` 继续输出综合主榜文案；新增 `*.ai.xiaohongshu.md` 输出 AI 专题榜文案。两份文件都只是人工审核草稿。
+- 两榜日榜各 Top 3、周榜各 Top 7；候选不足时输出实际数量和数据质量警告，不用另一榜单补位。
 - 封面/开头写榜单类型、实际统计窗口、Top N 和可核验的本期新增 Star。
 - 项目卡片允许展示明确标注的 Trending 周期值或估算值，但不能把它们写成精确“本期新增”。
 - 结尾写数据来源、排名口径、生成时间和数据质量警告。
 - 每个项目保留可点击 GitHub 仓库链接。
-- MVP 只输出 Markdown、JSON 和小红书文案；不要在本阶段扩展 PNG、海报或视频生成。
+- MVP 只输出 Markdown、JSON 和小红书文案；不要在本阶段扩展 PNG、海报、视频或自动发布。
 
 ### 6. 自动化
 
@@ -121,6 +133,7 @@
 - Actions 先安装依赖、运行测试，再生成产物。
 - 只提交本次生成的快照和相应报告；没有变化时不创建空提交。
 - 不把 `.env`、Token、缓存、临时响应或大体积调试文件提交到 Git。
+- 不登录或发布到小红书，不读取 Cookie、Chrome profile 或账号会话；人工审核和人工发布是固定门禁。
 
 ## 六、质量门槛
 
@@ -130,22 +143,43 @@
 2. 适用的 Ruff 格式与静态检查。
 3. 日榜命令的本地冒烟测试。
 4. 周榜命令的本地冒烟测试。
-5. 对一组固定输入验证快照差值、稳定排序和缺失基线分支。
-6. 对摘要结果验证 JSON 可解析、字段类型、长度、3 条亮点、数字/URL 原样复制和证据映射。
-7. 检查 Git diff，确认没有覆盖用户无关改动、没有泄露凭据。
+5. 对一组固定输入验证快照差值、双榜独立稳定排序、重叠仓库的独立 rank 和缺失基线分支。
+6. 对 AI 分类运行 Topics 精确匹配与 token/phrase-aware 正反例；必须覆盖 `ai`、`openai`、`llm` 等正例，以及 `rails`、`maintainer` 等子串反例。
+7. 对摘要结果验证 JSON 可解析、字段类型、长度、3 条亮点、数字/URL 原样复制和证据映射。
+8. 验证主 JSON 的顶层 `repositories` 兼容性、`boards` 双榜结构和两份小红书草稿路径。
+9. 检查 Git diff，确认没有覆盖用户无关改动、没有泄露凭据。
 
 如果网络、Token、外部限流或首次快照使端到端验证暂时不可完成，不要伪造成功；完成所有可离线验证的部分，给出精确阻塞点和下一条可执行命令。
 
-## 七、完成定义
+## 七、完整交付闭环
+
+对人工编写的代码、配置、工作流、提示词、站点或文档变更，依次执行：
+
+1. 在 `PROJECT_LOG.md` 记录日期、目的、修改文件/模块、数据或接口影响、实际验证、Actions/Pages 状态和已知限制。
+2. 至少运行 `.\.venv\Scripts\python.exe -m pytest`、`.\.venv\Scripts\python.exe -m ruff check .`、`.\.venv\Scripts\python.exe -m ruff format --check .`，并运行与报告、站点或工作流相符的专项检查。
+3. 查看 `git status`、`git diff --check`、`git diff` 和暂存内容，确认没有无关修改、Secret、Token、Cookie、Codex 认证、本机路径或浏览器数据。
+4. 使用描述实际变更的 Conventional Commit，推送到 `origin/main`；禁止用强制推送掩盖历史。
+5. 验证相关 GitHub Actions 和 GitHub Pages 部署，确认公开页面对应最新提交且可访问。
+6. 向用户报告提交 hash、仓库 URL、Pages URL、验证结果、改动摘要和已知限制。
+
+纯定时报告提交按仓库规则使用生成报告元数据和 bot commit 记录，不为每份定时报表重复追加人工项目日志。
+
+## 八、完成定义
 
 只有同时满足以下条件才算完成当前阶段：
 
 - 日榜、周榜 CLI 和配置契约可用。
 - 快照可重读，增量可复算，无基线时诚实降级。
-- 日榜 Top 3、周榜 Top 7/10 数量正确。
+- 综合主榜与 AI 专题榜独立排名、允许重叠，两榜日榜各 Top 3、周榜各 Top 7。
+- AI 分类使用精确 Topics 与 token/phrase-aware 匹配，正反例测试通过。
+- 主 Markdown/JSON 包含双榜，综合榜和 AI 榜两份小红书人工审核稿均已生成。
 - 卡片规定字段齐全，摘要无未支持事实。
 - 测试通过，或明确列出无法通过的外部原因与剩余风险。
 - README/产品文档与真实命令一致。
-- 最终回复简洁列出：完成内容、关键文件、验证结果、已知限制和下一步建议。
+- 根目录 MIT `LICENSE` 存在；README 说明允许商用、修改和分发，但必须保留版权与许可声明。
+- 人工代码、配置、工作流、提示词、站点或文档变更已更新 `PROJECT_LOG.md`。
+- 已运行 pytest、Ruff check、Ruff format check 及适用专项检查，审查 diff/暂存区和 Secret 风险。
+- 已创建准确的 Conventional Commit 并推送 `origin/main`，验证相关 GitHub Actions 与 GitHub Pages。
+- 最终回复简洁列出：完成内容、关键文件、验证结果、提交 hash、仓库 URL、Pages URL、已知限制和下一步建议。
 
 现在开始：先检查现状并复述你将采用的事实口径，然后直接推进到实现和验证，不要只给建议或停在方案阶段。

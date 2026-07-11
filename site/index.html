@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="GitHub Hotspots：自动发现、解释并出版每日与每周 GitHub 热点项目。"
+      content="GitHub Hotspots：自动发现、解释并出版每日与每周 GitHub 综合主榜和 AI 专题榜。"
     >
     <meta name="theme-color" content="#f2ecd9">
     <meta name="color-scheme" content="light">
@@ -27,8 +27,8 @@
         </span>
       </a>
       <nav class="primary-nav" aria-label="主要导航">
-        <a href="#daily">日报</a>
-        <a href="#weekly">周榜</a>
+        <a href="#daily">综合主榜</a>
+        <a href="#ai">AI 专题榜</a>
         <a href="#methodology">口径</a>
         <a href="#pipeline">流程</a>
       </nav>
@@ -55,12 +55,12 @@
             </h1>
             <p class="hero-deck reveal" style="--delay: 220ms">
               不只复述累计 Star。我们追踪增量、活跃度与趋势位次，
-              把 GitHub 的噪声压缩成一份可解释、可复查的中文榜单。
+              用综合主榜观察全局，用 AI 专题榜捕捉智能技术前沿。
             </p>
             <div class="hero-actions reveal" style="--delay: 300ms">
-              <a class="button button-primary" href="#daily">阅读今日 Top 3 <span>↓</span></a>
-              <a class="button button-secondary" data-project-link href="#project">
-                查看源代码 <span>↗</span>
+              <a class="button button-primary" href="#daily">阅读综合主榜 <span>↓</span></a>
+              <a class="button button-secondary" href="#ai">
+                进入 AI 雷达 <span>↓</span>
               </a>
             </div>
           </div>
@@ -74,11 +74,11 @@
               <p><span class="prompt">$</span> status --latest</p>
               <dl class="console-stats">
                 <div>
-                  <dt>日报样本</dt>
+                  <dt>日榜 / 综合·AI</dt>
                   <dd id="daily-count">--</dd>
                 </div>
                 <div>
-                  <dt>周榜样本</dt>
+                  <dt>周榜 / 综合·AI</dt>
                   <dd id="weekly-count">--</dd>
                 </div>
                 <div>
@@ -101,7 +101,7 @@
         <div class="signal-strip" aria-label="项目特点">
           <span>01 / 双源发现</span>
           <span>02 / 快照增量</span>
-          <span>03 / 六因子排名</span>
+          <span>03 / 双榜独立排名</span>
           <span>04 / 自动出版</span>
         </div>
       </section>
@@ -109,8 +109,8 @@
       <section class="ranking-section section-shell" id="daily" aria-labelledby="daily-title">
         <div class="section-heading">
           <div>
-            <p class="section-index">A / DAILY BRIEF</p>
-            <h2 id="daily-title">今日升温最快</h2>
+            <p class="section-index">A / COMPREHENSIVE DAILY</p>
+            <h2 id="daily-title"><span id="daily-board-label">综合主榜</span> · 今日</h2>
           </div>
           <div class="section-note">
             <span>TOP 03</span>
@@ -128,8 +128,8 @@
         <div class="section-shell">
           <div class="section-heading inverse">
             <div>
-              <p class="section-index">B / WEEKLY BOARD</p>
-              <h2 id="weekly-title">本周热度总盘</h2>
+              <p class="section-index">B / COMPREHENSIVE WEEKLY</p>
+              <h2 id="weekly-title"><span id="weekly-board-label">综合主榜</span> · 本周</h2>
             </div>
             <div class="section-note">
               <span>TOP 07</span>
@@ -143,13 +143,71 @@
             <span>SCORE</span>
           </div>
           <div class="weekly-list" id="weekly-list" aria-live="polite"></div>
+          <div class="source-line source-line-inverse">
+            <span>综合榜对所有合格候选独立评分，关注跨领域的真实热度增量。</span>
+            <a id="weekly-source-link" data-source-link href="#project">查看周榜原始数据 ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="ai-section" id="ai" aria-labelledby="ai-title">
+        <div class="section-shell ai-shell">
+          <div class="section-heading ai-heading">
+            <div>
+              <p class="section-index">C / AI SIGNAL RADAR</p>
+              <h2 id="ai-title"><span id="ai-board-label">AI 专题榜</span></h2>
+            </div>
+            <div class="ai-heading-note">
+              <span class="radar-glyph" aria-hidden="true"><i></i></span>
+              <p>
+                从同一候选池筛出 AI、LLM、智能体与机器学习项目，
+                再独立计算名次；与综合主榜重叠属于正常信号。
+              </p>
+            </div>
+          </div>
+
+          <div class="ai-board-layout">
+            <article class="ai-panel ai-panel-daily" aria-labelledby="ai-daily-title">
+              <header class="ai-panel-header">
+                <div>
+                  <p>24H / DAILY AI</p>
+                  <h3 id="ai-daily-title">今日 AI 升温</h3>
+                </div>
+                <div class="ai-panel-meta">
+                  <strong id="ai-daily-count">TOP 03</strong>
+                  <span id="ai-daily-window">正在载入……</span>
+                </div>
+              </header>
+              <div class="ai-list ai-daily-list" id="ai-daily-list" aria-live="polite"></div>
+              <a class="ai-source-link" id="ai-daily-source-link" href="#project">
+                DAILY DATA ↗
+              </a>
+            </article>
+
+            <article class="ai-panel ai-panel-weekly" aria-labelledby="ai-weekly-title">
+              <header class="ai-panel-header">
+                <div>
+                  <p>7D / WEEKLY AI</p>
+                  <h3 id="ai-weekly-title">本周 AI 雷达</h3>
+                </div>
+                <div class="ai-panel-meta">
+                  <strong id="ai-weekly-count">TOP 07</strong>
+                  <span id="ai-weekly-window">正在载入……</span>
+                </div>
+              </header>
+              <div class="ai-list ai-weekly-list" id="ai-weekly-list" aria-live="polite"></div>
+              <a class="ai-source-link" id="ai-weekly-source-link" href="#project">
+                WEEKLY DATA ↗
+              </a>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="method-section section-shell" id="methodology" aria-labelledby="method-title">
         <div class="section-heading">
           <div>
-            <p class="section-index">C / SIGNAL MANUAL</p>
+            <p class="section-index">D / SIGNAL MANUAL</p>
             <h2 id="method-title">热度，如何被计算</h2>
           </div>
           <p class="heading-deck">
@@ -176,7 +234,7 @@
       <section class="pipeline-section section-shell" id="pipeline" aria-labelledby="pipeline-title">
         <div class="section-heading">
           <div>
-            <p class="section-index">D / AUTOMATION LINE</p>
+            <p class="section-index">E / AUTOMATION LINE</p>
             <h2 id="pipeline-title">从扫描到出版</h2>
           </div>
           <p class="heading-deck">每天自动执行；每周重新汇总。每一步都有文件证据。</p>
@@ -190,7 +248,7 @@
             OPEN<br>PIPELINE
           </div>
           <div class="project-copy">
-            <p class="section-index">E / BUILD IN PUBLIC</p>
+            <p class="section-index">F / BUILD IN PUBLIC</p>
             <h2 id="project-title">一套可复查、可扩展的热点生产线。</h2>
             <p>
               源码、排名口径、历史报告与自动化配置全部保存在 GitHub。

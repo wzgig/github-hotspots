@@ -53,14 +53,16 @@ def run_command(
         typer.echo(f"Error: {exc}", err=True)
         raise typer.Exit(code=1) from exc
 
-    typer.echo(
-        f"Generated {result.period} Top {result.ranked_count} from "
-        f"{result.candidate_count} candidates."
-    )
+    comprehensive = settings.board("comprehensive")
+    ai = settings.board("ai")
+    typer.echo(f"Generated {result.period} dual boards from {result.candidate_count} candidates.")
+    typer.echo(f"{comprehensive.label}: Top {result.ranked_count}")
+    typer.echo(f"{ai.label}: Top {result.ai_ranked_count}")
     typer.echo(f"Snapshot: {result.snapshot}")
     typer.echo(f"Markdown: {result.artifacts.markdown}")
     typer.echo(f"JSON: {result.artifacts.json}")
-    typer.echo(f"Xiaohongshu copy: {result.artifacts.xiaohongshu}")
+    typer.echo(f"Xiaohongshu copy ({comprehensive.label}): {result.artifacts.xiaohongshu}")
+    typer.echo(f"Xiaohongshu copy ({ai.label}): {result.artifacts.ai_xiaohongshu}")
     for warning in result.warnings:
         typer.echo(f"Warning: {warning}", err=True)
 
@@ -81,9 +83,14 @@ def run_all_command(
     try:
         settings = load_settings(config)
         selected_date = _parse_date(run_date, settings.timezone)
+        comprehensive = settings.board("comprehensive")
+        ai = settings.board("ai")
         for period in ("daily", "weekly"):
             result = run_pipeline(settings, period, selected_date)
-            typer.echo(f"Generated {period} Top {result.ranked_count}: {result.artifacts.markdown}")
+            typer.echo(
+                f"Generated {period}: {comprehensive.label} Top {result.ranked_count}, "
+                f"{ai.label} Top {result.ai_ranked_count}: {result.artifacts.markdown}"
+            )
     except (ConfigurationError, RuntimeError, ValueError) as exc:
         typer.echo(f"Error: {exc}", err=True)
         raise typer.Exit(code=1) from exc

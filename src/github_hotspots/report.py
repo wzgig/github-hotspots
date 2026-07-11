@@ -25,6 +25,7 @@ class ReportArtifacts:
     markdown: Path
     json: Path
     xiaohongshu: Path
+    ai_xiaohongshu: Path
 
 
 def _atomic_write(path: Path, content: str) -> None:
@@ -113,16 +114,30 @@ def _prepared_items(rankings: Sequence[RankedRepository]) -> list[dict[str, Any]
     return prepared
 
 
+def _repository_payload(
+    rankings: Sequence[RankedRepository], items: Sequence[dict[str, Any]]
+) -> list[dict[str, Any]]:
+    return [
+        {**ranked.to_dict(), "summary": summary["summary"].to_dict()}
+        for ranked, summary in zip(rankings, items, strict=True)
+    ]
+
+
+def _prefixed_warnings(label: str, warnings: Sequence[str]) -> list[str]:
+    return [f"{label}：{warning}" for warning in warnings]
+
+
 def render_reports(
     *,
     settings: Settings,
     period: str,
     run_date: date,
     rankings: Sequence[RankedRepository],
+    ai_rankings: Sequence[RankedRepository] = (),
     extra_warnings: Sequence[str] = (),
     template_dir: Path | None = None,
 ) -> ReportArtifacts:
-    """Render the three stable artifacts for one run."""
+    """Render the dual-board Markdown, JSON, and two review-ready copies."""
 
     if period not in {"daily", "weekly"}:
         raise ValueError("period must be 'daily' or 'weekly'")
@@ -130,50 +145,118 @@ def render_reports(
     templates = template_dir or Path(__file__).resolve().parents[2] / "templates"
     environment = _environment(templates)
     now = datetime.now(ZoneInfo(settings.timezone))
-    quality, quality_warnings = _quality(rankings)
-    warnings = [*quality_warnings, *extra_warnings]
+    comprehensive_board = settings.board("comprehensive")
+    ai_board = settings.board("ai")
+    quality, quality_warnings = (
+        _quality(rankings) if comprehensive_board.enabled else ("已停用", [])
+    )
+    ai_quality, ai_quality_warnings = _quality(ai_rankings) if ai_board.enabled else ("已停用", [])
+    warnings = [
+        *_prefixed_warnings(comprehensive_board.label, quality_warnings),
+        *_prefixed_warnings(ai_board.label, ai_quality_warnings),
+        *extra_warnings,
+    ]
     items = _prepared_items(rankings)
-    top_n = settings.run(period).top_n
+    ai_items = _prepared_items(ai_rankings)
+    comprehensive_top_n = comprehensive_board.top_n(period)
+    ai_top_n = ai_board.top_n(period)
     label = _window_label(period, run_date)
     title = (
-        f"GitHub 每日热点 Top {top_n}（{run_date.isoformat()}）"
+        f"GitHub 每日热点双榜（{run_date.isoformat()}）"
         if period == "daily"
-        else f"GitHub 每周热点 Top {top_n}（{_report_stem(period, run_date)}）"
+        else f"GitHub 每周热点双榜（{_report_stem(period, run_date)}）"
     )
     methodology = (
         "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的"
         "本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，"
-        "再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。"
+        "再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对"
+        "全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/"
+        "短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。"
     )
 
     common = {
         "title": title,
         "generated_at": now.isoformat(timespec="seconds"),
         "window_label": label,
-        "data_quality": quality,
+        "data_quality": f"{comprehensive_board.label}：{quality}；{ai_board.label}：{ai_quality}",
         "warnings": warnings,
-        "items": items,
         "methodology": methodology,
     }
-    markdown = _compact_rendered_text(environment.get_template("digest.md.j2").render(**common))
-
-    xhs_title = (
-        f"今日 GitHub 爆款 Top {top_n} | {run_date.isoformat()}"
-        if period == "daily"
-        else f"本周 GitHub 爆款 Top {top_n} | {_report_stem(period, run_date)}"
-    )
-    xhs = _compact_rendered_text(
-        environment.get_template("xiaohongshu.md.j2").render(
+    markdown = _compact_rendered_text(
+        environment.get_template("dual_digest.md.j2").render(
             **common,
-            xhs_title=xhs_title,
-            intro="按周期热度、相对增长和代码活跃度筛出的开源项目，数据与链接均可核验。",
-            data_note=f"{quality}；窗口为 {label}",
-            hashtags=["#GitHub", "#开源项目", "#程序员", "#开发者工具", "#AI工具"],
+            boards=[
+                {
+                    "label": comprehensive_board.label,
+                    "top_n": comprehensive_top_n,
+                    "data_quality": quality,
+                    "items": items,
+                    "empty_message": (
+                        "本期没有通过综合筛选条件的候选项目。"
+                        if comprehensive_board.enabled
+                        else "当前配置已停用综合主榜。"
+                    ),
+                },
+                {
+                    "label": ai_board.label,
+                    "top_n": ai_top_n,
+                    "data_quality": ai_quality,
+                    "items": ai_items,
+                    "empty_message": (
+                        "本期没有符合 AI 专题口径的候选项目。"
+                        if ai_board.enabled
+                        else "当前配置已停用 AI 专题榜。"
+                    ),
+                },
+            ],
         )
     )
 
+    comprehensive_common = {**common, "items": items}
+    ai_common = {
+        **common,
+        "data_quality": ai_quality,
+        "warnings": _prefixed_warnings(ai_board.label, ai_quality_warnings),
+        "items": ai_items,
+    }
+
+    xhs_title = (
+        f"今日 GitHub {comprehensive_board.label} Top {comprehensive_top_n} | {run_date.isoformat()}"
+        if period == "daily"
+        else (
+            f"本周 GitHub {comprehensive_board.label} Top {comprehensive_top_n} | "
+            f"{_report_stem(period, run_date)}"
+        )
+    )
+    xhs = _compact_rendered_text(
+        environment.get_template("xiaohongshu.md.j2").render(
+            **comprehensive_common,
+            xhs_title=xhs_title,
+            intro="从全部合格候选中按周期热度、相对增长和代码活跃度独立筛选，数据与链接均可核验。",
+            data_note=f"{quality}；窗口为 {label}",
+            hashtags=["#GitHub", "#开源项目", "#程序员", "#开发者工具"],
+        )
+    )
+    ai_xhs_title = (
+        f"今日 GitHub {ai_board.label} Top {ai_top_n} | {run_date.isoformat()}"
+        if period == "daily"
+        else f"本周 GitHub {ai_board.label} Top {ai_top_n} | {_report_stem(period, run_date)}"
+    )
+    ai_xhs = _compact_rendered_text(
+        environment.get_template("xiaohongshu.md.j2").render(
+            **ai_common,
+            xhs_title=ai_xhs_title,
+            intro="从 AI 相关候选中独立计算热度排名，项目可能同时出现在综合主榜，发布前请人工审核。",
+            data_note=f"{ai_quality}；窗口为 {label}",
+            hashtags=["#GitHub", "#开源项目", "#AI", "#AI工具", "#机器学习"],
+        )
+    )
+
+    comprehensive_payload = _repository_payload(rankings, items)
+    ai_payload = _repository_payload(ai_rankings, ai_items)
+
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "period": period,
         "run_date": run_date.isoformat(),
         "generated_at": now.isoformat(timespec="seconds"),
@@ -182,10 +265,14 @@ def render_reports(
         "data_quality": quality,
         "warnings": warnings,
         "methodology": methodology,
-        "repositories": [
-            {**ranked.to_dict(), "summary": summary["summary"].to_dict()}
-            for ranked, summary in zip(rankings, items, strict=True)
-        ],
+        "repositories": comprehensive_payload,
+        "boards": {
+            "comprehensive": {
+                "label": comprehensive_board.label,
+                "repositories": comprehensive_payload,
+            },
+            "ai": {"label": ai_board.label, "repositories": ai_payload},
+        },
     }
 
     output_dir = settings.report_dir(period)
@@ -194,6 +281,7 @@ def render_reports(
         markdown=output_dir / f"{stem}.md",
         json=output_dir / f"{stem}.json",
         xiaohongshu=output_dir / f"{stem}.xiaohongshu.md",
+        ai_xiaohongshu=output_dir / f"{stem}.ai.xiaohongshu.md",
     )
     _atomic_write(artifacts.markdown, markdown)
     _atomic_write(
@@ -201,4 +289,5 @@ def render_reports(
         json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=False) + "\n",
     )
     _atomic_write(artifacts.xiaohongshu, xhs)
+    _atomic_write(artifacts.ai_xiaohongshu, ai_xhs)
     return artifacts

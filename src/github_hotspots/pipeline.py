@@ -8,9 +8,10 @@ from dataclasses import dataclass
 from datetime import date, timedelta
 from pathlib import Path
 
+from .boards import select_ai_repositories
 from .config import Settings
 from .github_client import GitHubClient, deduplicate_repositories
-from .models import Repository
+from .models import RankedRepository, Repository, RepositorySnapshot
 from .ranking import rank_repositories
 from .report import ReportArtifacts, render_reports
 from .snapshot import SnapshotStore
@@ -23,6 +24,7 @@ class PipelineResult:
     run_date: date
     candidate_count: int
     ranked_count: int
+    ai_ranked_count: int
     snapshot: Path
     artifacts: ReportArtifacts
     warnings: tuple[str, ...]
@@ -58,32 +60,78 @@ def run_pipeline(settings: Settings, period: str, run_date: date) -> PipelineRes
 
     store = SnapshotStore(settings.snapshots_dir)
     baseline_1d, baseline_7d = store.baselines(run_date)
-    rankings = rank_repositories(
+    comprehensive_rankings, ai_rankings = _rank_boards(
         candidates,
+        settings=settings,
         baseline_1d=baseline_1d,
         baseline_7d=baseline_7d,
         period=period,
-        weights=settings.ranking_weights,
         as_of=run_date,
     )
-    selected = rankings[: run.top_n]
     snapshot_path = store.save(run_date, candidates)
     artifacts = render_reports(
         settings=settings,
         period=period,
         run_date=run_date,
-        rankings=selected,
+        rankings=comprehensive_rankings,
+        ai_rankings=ai_rankings,
         extra_warnings=warnings,
     )
     return PipelineResult(
         period=period,
         run_date=run_date,
         candidate_count=len(candidates),
-        ranked_count=len(selected),
+        ranked_count=len(comprehensive_rankings),
+        ai_ranked_count=len(ai_rankings),
         snapshot=snapshot_path,
         artifacts=artifacts,
         warnings=tuple(warnings),
     )
+
+
+def _rank_boards(
+    repositories: Iterable[Repository],
+    *,
+    settings: Settings,
+    baseline_1d: Iterable[RepositorySnapshot] = (),
+    baseline_7d: Iterable[RepositorySnapshot] = (),
+    period: str,
+    as_of: date,
+) -> tuple[list[RankedRepository], list[RankedRepository]]:
+    """Independently rank the comprehensive and AI candidate pools."""
+
+    candidates = deduplicate_repositories(repositories)
+    one_day_baseline = tuple(baseline_1d)
+    seven_day_baseline = tuple(baseline_7d)
+    comprehensive = settings.board("comprehensive")
+    ai = settings.board("ai")
+
+    comprehensive_rankings = (
+        rank_repositories(
+            candidates,
+            baseline_1d=one_day_baseline,
+            baseline_7d=seven_day_baseline,
+            period=period,
+            weights=settings.ranking_weights,
+            as_of=as_of,
+        )[: comprehensive.top_n(period)]
+        if comprehensive.enabled
+        else []
+    )
+    ai_candidates = select_ai_repositories(candidates, ai)
+    ai_rankings = (
+        rank_repositories(
+            ai_candidates,
+            baseline_1d=one_day_baseline,
+            baseline_7d=seven_day_baseline,
+            period=period,
+            weights=settings.ranking_weights,
+            as_of=as_of,
+        )[: ai.top_n(period)]
+        if ai.enabled
+        else []
+    )
+    return comprehensive_rankings, ai_rankings
 
 
 def _collect_trending(settings: Settings, period: str) -> list[Repository]:

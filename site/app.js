@@ -68,6 +68,37 @@
     }).format(date);
   }
 
+  function repositoriesOf(value) {
+    return Array.isArray(value) ? value : [];
+  }
+
+  function reportBoard(report, boardName) {
+    const configured =
+      report && report.boards && typeof report.boards[boardName] === "object"
+        ? report.boards[boardName]
+        : null;
+    if (configured) {
+      return {
+        label:
+          typeof configured.label === "string" && configured.label
+            ? configured.label
+            : boardName === "ai"
+              ? "AI 专题榜"
+              : "综合主榜",
+        repositories: repositoriesOf(configured.repositories),
+      };
+    }
+    return {
+      label: boardName === "ai" ? "AI 专题榜" : "综合主榜",
+      repositories:
+        boardName === "comprehensive" ? repositoriesOf(report && report.repositories) : [],
+    };
+  }
+
+  function formatBoardCount(comprehensiveCount, aiCount) {
+    return `${String(comprehensiveCount).padStart(2, "0")} / ${String(aiCount).padStart(2, "0")}`;
+  }
+
   function safeRepositoryUrl(value) {
     if (typeof value !== "string") return "";
     try {
@@ -104,6 +135,9 @@
     });
     [
       ["#daily-source-link", data.daily && data.daily.source_path],
+      ["#weekly-source-link", data.weekly && data.weekly.source_path],
+      ["#ai-daily-source-link", data.daily && data.daily.source_path],
+      ["#ai-weekly-source-link", data.weekly && data.weekly.source_path],
     ].forEach(([selector, path]) => {
       const link = select(selector);
       if (link && path) {
@@ -132,9 +166,22 @@
     return item;
   }
 
+  function emptyBoard(message) {
+    const empty = element("div", "board-empty");
+    empty.append(
+      element("strong", "", "NO SIGNAL / 暂无数据"),
+      element("p", "", message)
+    );
+    return empty;
+  }
+
   function renderDaily(repositories) {
     const list = select("#daily-list");
     list.replaceChildren();
+    if (!repositories.length) {
+      list.append(emptyBoard("当前报告没有可展示的综合主榜项目。"));
+      return;
+    }
     repositories.forEach((repository, index) => {
       const card = element("article", `daily-card rank-${repository.rank} reveal`);
       card.style.setProperty("--delay", `${index * 80}ms`);
@@ -182,6 +229,10 @@
   function renderWeekly(repositories) {
     const list = select("#weekly-list");
     list.replaceChildren();
+    if (!repositories.length) {
+      list.append(emptyBoard("当前报告没有可展示的综合周榜项目。"));
+      return;
+    }
     repositories.forEach((repository, index) => {
       const row = element("article", "weekly-row reveal");
       row.style.setProperty("--delay", `${index * 55}ms`);
@@ -206,6 +257,46 @@
       );
       row.append(rank, main, meta, score);
       list.append(row);
+    });
+  }
+
+  function renderAiBoard(repositories, selector, period) {
+    const list = select(selector);
+    list.replaceChildren();
+    if (!repositories.length) {
+      list.append(
+        emptyBoard("本期暂无可展示的 AI 专题项目；综合主榜仍可正常浏览。")
+      );
+      return;
+    }
+    repositories.forEach((repository, index) => {
+      const entry = element("article", `ai-entry ai-entry-${period} reveal`);
+      entry.style.setProperty("--delay", `${index * 55}ms`);
+
+      const rank = element(
+        "span",
+        "ai-entry-rank",
+        String(repository.rank).padStart(2, "0")
+      );
+      rank.setAttribute("aria-label", `第 ${repository.rank} 名`);
+
+      const main = element("div", "ai-entry-main");
+      main.append(
+        element("p", "ai-entry-kicker", `${repository.language} / ${repository.delta_label}`)
+      );
+      const title = element("h4");
+      title.append(repositoryLink(repository, "ai-entry-name"));
+      main.append(title, element("p", "ai-entry-description", repository.one_line));
+
+      const signal = element("div", "ai-entry-signal");
+      signal.setAttribute("aria-label", `综合评分 ${repository.score.toFixed(1)}`);
+      signal.append(
+        element("strong", "", repository.score.toFixed(1)),
+        element("span", "ai-entry-delta", `${formatDelta(repository.star_delta)} STAR`),
+        element("span", "", `${formatNumber(repository.stars)} TOTAL`)
+      );
+      entry.append(rank, main, signal);
+      list.append(entry);
     });
   }
 
@@ -264,18 +355,38 @@
       return;
     }
 
+    const dailyComprehensive = reportBoard(data.daily, "comprehensive");
+    const weeklyComprehensive = reportBoard(data.weekly, "comprehensive");
+    const dailyAi = reportBoard(data.daily, "ai");
+    const weeklyAi = reportBoard(data.weekly, "ai");
+
     document.title = `${data.site.title} / ${data.daily.run_date}`;
     setText("#issue-date", `ISSUE / ${data.daily.run_date}`);
-    setText("#daily-count", String(data.daily.repositories.length).padStart(2, "0"));
-    setText("#weekly-count", String(data.weekly.repositories.length).padStart(2, "0"));
+    setText(
+      "#daily-count",
+      formatBoardCount(dailyComprehensive.repositories.length, dailyAi.repositories.length)
+    );
+    setText(
+      "#weekly-count",
+      formatBoardCount(weeklyComprehensive.repositories.length, weeklyAi.repositories.length)
+    );
     setText("#generated-at", formatTimestamp(data.generated_at));
     setText("#quality-label", data.methodology.quality);
     setText("#data-status", "■ DATA FEED READY");
+    setText("#daily-board-label", dailyComprehensive.label);
+    setText("#weekly-board-label", weeklyComprehensive.label);
+    setText("#ai-board-label", dailyAi.label || weeklyAi.label);
     setText("#daily-window", `${formatDate(data.daily.run_date)} · 日榜`);
     setText("#weekly-window", `${data.weekly.window_label} · 周榜`);
+    setText("#ai-daily-count", `TOP ${String(dailyAi.repositories.length).padStart(2, "0")}`);
+    setText("#ai-weekly-count", `TOP ${String(weeklyAi.repositories.length).padStart(2, "0")}`);
+    setText("#ai-daily-window", formatDate(data.daily.run_date));
+    setText("#ai-weekly-window", data.weekly.window_label);
 
-    renderDaily(data.daily.repositories);
-    renderWeekly(data.weekly.repositories);
+    renderDaily(dailyComprehensive.repositories);
+    renderWeekly(weeklyComprehensive.repositories);
+    renderAiBoard(dailyAi.repositories, "#ai-daily-list", "daily");
+    renderAiBoard(weeklyAi.repositories, "#ai-weekly-list", "weekly");
     renderMethodology(data.methodology);
     renderPipeline(data.pipeline);
     configureProjectLinks();

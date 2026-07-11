@@ -24,6 +24,28 @@ class RunSettings:
 
 
 @dataclass(frozen=True, slots=True)
+class BoardSettings:
+    """Settings for one independently ranked hotspot board."""
+
+    key: str
+    label: str
+    enabled: bool
+    daily_top_n: int
+    weekly_top_n: int
+    topics: tuple[str, ...] = ()
+    keywords: tuple[str, ...] = ()
+
+    def top_n(self, period: str) -> int:
+        """Return the result limit for a reporting cadence."""
+
+        if period == "daily":
+            return self.daily_top_n
+        if period == "weekly":
+            return self.weekly_top_n
+        raise ConfigurationError(f"Unsupported period: {period}")
+
+
+@dataclass(frozen=True, slots=True)
 class Settings:
     """Small typed facade over the YAML document.
 
@@ -39,6 +61,7 @@ class Settings:
     sources: Mapping[str, Mapping[str, Any]]
     filters: Mapping[str, Any]
     ranking: Mapping[str, Any]
+    boards: Mapping[str, Mapping[str, Any]]
 
     def run(self, period: str) -> RunSettings:
         try:
@@ -55,6 +78,23 @@ class Settings:
     def ranking_weights(self) -> dict[str, float]:
         raw = self.ranking.get("weights", {})
         return {str(key): float(value) for key, value in raw.items()}
+
+    def board(self, key: str) -> BoardSettings:
+        """Return typed settings for a configured board."""
+
+        try:
+            raw = self.boards[key]
+        except KeyError as exc:
+            raise ConfigurationError(f"Unsupported board: {key}") from exc
+        return BoardSettings(
+            key=key,
+            label=str(raw.get("label", key)).strip(),
+            enabled=bool(raw.get("enabled", True)),
+            daily_top_n=int(raw["daily_top_n"]),
+            weekly_top_n=int(raw["weekly_top_n"]),
+            topics=_string_tuple(raw.get("topics", ())),
+            keywords=_string_tuple(raw.get("keywords", ())),
+        )
 
     def resolve_path(self, value: str | Path) -> Path:
         """Resolve a configured path relative to the repository root."""
@@ -80,7 +120,16 @@ def load_settings(path: str | Path = "config/hotspots.yaml") -> Settings:
         raise ConfigurationError(f"Configuration file not found: {config_path}")
 
     raw = yaml.safe_load(config_path.read_text(encoding="utf-8")) or {}
-    required = ("timezone", "github", "outputs", "runs", "sources", "filters", "ranking")
+    required = (
+        "timezone",
+        "github",
+        "outputs",
+        "runs",
+        "boards",
+        "sources",
+        "filters",
+        "ranking",
+    )
     missing = [key for key in required if key not in raw]
     if missing:
         raise ConfigurationError(f"Missing configuration keys: {', '.join(missing)}")
@@ -94,6 +143,7 @@ def load_settings(path: str | Path = "config/hotspots.yaml") -> Settings:
         sources=raw["sources"],
         filters=raw["filters"],
         ranking=raw["ranking"],
+        boards=raw["boards"],
     )
 
     for period in ("daily", "weekly"):
@@ -101,7 +151,23 @@ def load_settings(path: str | Path = "config/hotspots.yaml") -> Settings:
         if run.top_n < 1 or run.lookback_days < 1:
             raise ConfigurationError(f"runs.{period} values must be positive")
 
+    for key in ("comprehensive", "ai"):
+        board = settings.board(key)
+        if not board.label:
+            raise ConfigurationError(f"boards.{key}.label must not be empty")
+        if board.daily_top_n < 1 or board.weekly_top_n < 1:
+            raise ConfigurationError(f"boards.{key} result limits must be positive")
+    ai_board = settings.board("ai")
+    if ai_board.enabled and not (ai_board.topics or ai_board.keywords):
+        raise ConfigurationError("boards.ai must define topics or keywords when enabled")
+
     weights = settings.ranking_weights
     if weights and abs(sum(weights.values()) - 1.0) > 1e-6:
         raise ConfigurationError("ranking.weights must add up to 1.0")
     return settings
+
+
+def _string_tuple(value: object) -> tuple[str, ...]:
+    if not isinstance(value, (list, tuple, set)):
+        return ()
+    return tuple(text for item in value if (text := str(item).strip()))

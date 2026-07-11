@@ -1,0 +1,48 @@
+# {{ title }}
+
+> 生成时间：{{ generated_at }}
+> 数据窗口：{{ window_label }}
+> 数据质量：{{ data_quality }}
+
+{% if warnings %}
+> [!WARNING]
+> {{ warnings | join('；') }}
+{% endif %}
+
+{% for board in boards %}
+## {{ board.label }} Top {{ board.top_n }}
+
+> 本榜数据质量：{{ board.data_quality }}
+
+{% if board["items"] %}
+{% for item in board["items"] %}
+### {{ "%02d" | format(item.rank) }}. [{{ item.repository.name }}]({{ item.repository.html_url }})
+
+- 仓库：`{{ item.repository.full_name }}`
+- 一句话看懂：{{ item.summary.one_line }}
+- 主要语言：{{ item.repository.language or "未标注" }}
+- Star：{{ "{:,}".format(item.repository.stars) }}
+- {% if item.star_delta < 0 %}Star 差值异常：{{ "{:,}".format(item.star_delta) }}（不计作新增）{% else %}{% if item.delta_source == "snapshot" %}快照净增 Star{% elif item.delta_source == "trending" %}Trending 周期 Star{% else %}估算周期 Star{% endif %}：{% if item.delta_source == "estimate" %}约 {% endif %}+{{ "{:,}".format(item.star_delta) }}{% endif %}
+- Fork：{{ "{:,}".format(item.repository.forks) }}{% if item.fork_delta %}（本期 +{{ "{:,}".format(item.fork_delta) }}）{% endif %}
+- 热度分：{{ "%.2f" | format(item.score) }}
+- 增量来源：`{{ item.delta_source }}`
+
+亮点：
+
+{% for highlight in item.summary.highlights %}- {{ highlight }}
+{% endfor %}
+
+适合：{{ item.summary.audience }}
+
+{% endfor %}
+{% else %}
+> {{ board.empty_message }}
+{% endif %}
+
+{% endfor %}
+## 方法说明
+
+{{ methodology }}
+
+> [!NOTE]
+> 排名只使用可核验的 GitHub 页面/API 数据和本地历史快照。中文摘要不会改变、补造或推测 Star、Fork、语言等事实字段。

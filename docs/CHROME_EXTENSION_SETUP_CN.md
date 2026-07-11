@@ -2,17 +2,17 @@
 
 本文是一份面向 Windows 用户的操作指南，目标是在中国地区无法正常访问 Chrome 网上应用店时，安全地恢复 Codex 对现有 Chrome 标签页和登录态的访问能力。
 
-## 当前诊断结论
+## 当前状态
 
 诊断时间：2026-07-11。
 
 | 检查项 | 当前状态 | 含义 |
 | --- | --- | --- |
-| Google Chrome | 正在运行 | 浏览器本身可用 |
-| Codex Chrome Extension | 未安装 | Codex 不能控制现有 Chrome 标签页 |
-| Windows Native Messaging 注册项 | 缺失 | Chrome 扩展与 Codex 桌面端之间的本机通信尚未建立 |
+| Codex Chrome Extension | 已安装 | 用户已完成扩展安装 |
+| Codex 与 Chrome 连接 | 已核验 | 2026-07-11 只读连接核验成功 |
+| 隐私记录 | 未写入仓库 | 不记录标签页标题、URL、登录态、Cookie 或浏览器资料 |
 
-因此，当前不能依赖用户现有 Chrome 配置文件、登录态或已打开标签页读取网页。仅安装一个来源不明的 CRX 文件也不能解决问题，因为完整连接还需要 Codex 插件、Chrome 扩展和 native host 三部分正确配对。
+安装与连接障碍已经解除。连接成功不等于允许任意读取或写入：每次任务仍应遵循最小必要范围，优先执行公开页面的只读操作；涉及登录页面时需要用户明确授权，不得读取 Cookie、浏览器存储或无关标签页内容。
 
 > [!IMPORTANT]
 > 项目自动化和维护代理不得自行创建或修改 Native Messaging 注册表项，不得伪造 native host manifest，也不得从第三方镜像下载 CRX、ZIP 或安装器。native host 应由官方 Codex/Chrome 插件安装流程注册。
@@ -104,7 +104,7 @@ Get-ChildItem 'HKLM:\Software\Google\Chrome\NativeMessagingHosts' -ErrorAction S
 | 重装后仍然无法连接 | 使用 `/feedback` 并保留任务 ID、扩展状态截图和非敏感诊断信息联系官方支持 |
 | Chrome 显示“由贵单位管理” | 查看 `chrome://management` 和 `chrome://policy`，由单位管理员批准扩展与 native messaging；不要绕过管理策略 |
 
-## 无法安装扩展时的替代方案
+## 无法安装或连接时的替代方案
 
 ### 公开网页
 
@@ -118,7 +118,7 @@ Get-ChildItem 'HKLM:\Software\Google\Chrome\NativeMessagingHosts' -ErrorAction S
 
 ### 登录后网页
 
-在 Chrome 扩展恢复前，采用人工在环方式：
+在 Chrome 扩展无法连接时，采用人工在环方式：
 
 1. 用户在自己的 Chrome 中打开目标页面。
 2. 将允许处理的正文复制为文本，或导出为 PDF、保存网页截图后交给 Codex。

@@ -51,6 +51,7 @@ git fetch origin
 - 可验证的验收条件。
 - 是否改变公开数据口径、排名、提示词、页面或发布行为。
 - 是否包含 `TBD` 决策；未确认的外部发布和凭据方案不得自行启用。
+- 是否保持已确认的产品范围：综合主榜 + AI 专题榜，两榜日榜各 Top 3、周榜各 Top 7；小红书仅生成草稿并人工审核发布。
 
 建议一次提交只解决一个逻辑问题；大变更拆成依赖清晰的原子提交。
 
@@ -97,9 +98,9 @@ python -m ruff format --check .
 若项目使用虚拟环境，使用同一个解释器执行全部命令：
 
 ```powershell
-..venv\Scripts\python.exe -m pytest
-..venv\Scripts\python.exe -m ruff check .
-..venv\Scripts\python.exe -m ruff format --check .
+.\.venv\Scripts\python.exe -m pytest
+.\.venv\Scripts\python.exe -m ruff check .
+.\.venv\Scripts\python.exe -m ruff format --check .
 ```
 
 按变更类型追加检查：
@@ -108,7 +109,8 @@ python -m ruff format --check .
 | --- | --- |
 | 采集/过滤 | fixture 集成测试；单源失败与全部来源失败分支 |
 | 快照/增量 | 1 日与 7 日复算；无基线、负增量、仓库改名/ID 对齐 |
-| 排名/配置 | 权重总和、稳定排序、Top 3/7/10、旧配置兼容 |
+| 排名/配置 | 权重总和、双榜独立稳定排序、两榜 Top 3/7、重叠仓库独立 rank、旧报告 JSON 兼容 |
+| AI 分类 | Topics 精确匹配、token/phrase-aware 正反例、`ai` 子串误收防护、空榜质量说明 |
 | 提示词/AI Provider | 固定评估集、JSON Schema、数字/URL 一致、0 无依据事实 |
 | 模板/报告 | Markdown/JSON 可生成；必填字段、链接和数据质量说明 |
 | GitHub Actions | YAML 语法、权限、cron 时区、并发、无变化分支、写入范围 |
@@ -257,9 +259,9 @@ gh run view <run-id> --log-failed
 ### Daily Run
 
 - 计划：北京时间每天 08:17（UTC `17 0 * * *`）。
-- 输出：当日快照、日榜 Markdown/JSON、小红书草稿。
+- 输出：当日快照、包含综合主榜与 AI 专题榜的日榜 Markdown/JSON、综合榜 `*.xiaohongshu.md` 和 AI 榜 `*.ai.xiaohongshu.md` 两份草稿。
 - 目标：触发后 30 分钟内完成提交，随后 15 分钟内 Pages 可见。
-- 验证：候选数非零、Top N 正确、数据质量说明存在、精确增量口径合法。
+- 验证：两榜日榜各 Top 3（候选不足时有说明）、独立排名正确、数据质量说明存在、精确增量口径合法。
 
 手动运行：
 
@@ -270,8 +272,8 @@ python -m github_hotspots.cli run --period daily
 ### Weekly Run
 
 - 计划：北京时间每周一 08:27（UTC `27 0 * * 1`）。
-- 输出：当周周榜 Markdown/JSON、小红书草稿；共享当日快照时不得损坏日榜数据。
-- 验证：实际 7 日基线日期、Top 7/10、重复仓库、增长口径和历史链接。
+- 输出：包含综合主榜与 AI 专题榜的周榜 Markdown/JSON、两份小红书草稿；共享当日快照时不得损坏日榜数据。
+- 验证：实际 7 日基线日期、两榜各 Top 7、重叠仓库的独立排名、增长口径和历史链接。
 
 手动运行：
 
@@ -398,9 +400,16 @@ python -m github_hotspots.cli run --period weekly
 - 如需本地 Codex 摘要，只通过已验证的受支持 CLI/本地端点调用，并把它视为可随时失败的可选 Provider。
 - GitHub Actions 不依赖用户电脑在线，也不依赖用户个人 Codex 会话。
 - 所有日志在写入前脱敏 Authorization、Cookie、Token、查询签名和本机私有路径。
-- 任何需要扩大权限、自动发布到外部平台或使用新 Secret 的变更，都必须先得到用户明确确认。
+- 当前小红书流程只生成内容草稿，发布前人工审核率必须为 `100%`；自动化不得登录、点击发布或复用账号会话。
+- 任何需要扩大权限、自动发布到外部平台或使用新 Secret 的变更，都属于新的范围，必须未来再次得到用户明确确认。
 
-## 8. Operational Checklist
+## 8. License Maintenance
+
+- 仓库采用 MIT License，根目录 `LICENSE` 的版权声明为 `Copyright (c) 2026 Zicheng Wang`。
+- 允许个人或商业使用、修改、合并、发布和分发；复制或分发软件及其主要部分时，必须保留原始版权声明和 MIT 许可声明。
+- 未经用户明确决定，不删除、替换或缩减 `LICENSE`，也不把第三方依赖的许可义务误写成本项目的 MIT 授权。
+
+## 9. Operational Checklist
 
 ### Before commit
 

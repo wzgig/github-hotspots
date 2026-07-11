@@ -33,6 +33,25 @@ def _report(period: str, run_date: str, count: int, generated_at: str) -> dict:
     }
 
 
+def _board_repositories(prefix: str, count: int) -> list[dict]:
+    return [
+        {
+            "rank": rank,
+            "full_name": f"example/{prefix}-{rank}",
+            "html_url": f"https://github.com/example/{prefix}-{rank}",
+            "description": f"{prefix} 第 {rank} 个测试项目",
+            "language": "Python",
+            "stars": 2_000 - rank,
+            "forks": rank,
+            "score": 95 - rank,
+            "star_delta": 200 - rank,
+            "delta_source": "snapshot",
+            "summary": {"one_line": f"{prefix} 测试摘要 {rank}"},
+        }
+        for rank in range(count, 0, -1)
+    ]
+
+
 def _write_report(root: Path, period: str, name: str, payload: dict) -> None:
     directory = root / "reports" / period
     directory.mkdir(parents=True, exist_ok=True)
@@ -62,10 +81,66 @@ def test_build_site_selects_latest_reports_and_enforces_limits(tmp_path: Path) -
     payload = build_site(tmp_path, "https://github.com/example/github-hotspots")
 
     assert payload["daily"]["run_date"] == "2026-07-11"
+    assert payload["schema_version"] == 2
     assert [item["rank"] for item in payload["daily"]["repositories"]] == [1, 2, 3]
     assert len(payload["weekly"]["repositories"]) == 7
     assert payload["site"]["repository_url"] == "https://github.com/example/github-hotspots"
     assert payload["daily"]["repositories"][0]["one_line"] == "测试摘要 1"
+    assert payload["daily"]["boards"]["comprehensive"]["label"] == "综合主榜"
+    assert (
+        payload["daily"]["boards"]["comprehensive"]["repositories"]
+        == payload["daily"]["repositories"]
+    )
+    assert payload["daily"]["boards"]["ai"] == {
+        "label": "AI 专题榜",
+        "repositories": [],
+    }
+
+
+def test_build_site_normalises_dual_boards_independently(tmp_path: Path) -> None:
+    daily = _report("daily", "2026-07-11", 5, "2026-07-11T08:00:00+08:00")
+    daily["boards"] = {
+        "comprehensive": {
+            "label": "综合主榜",
+            "repositories": _board_repositories("main-daily", 5),
+        },
+        "ai": {
+            "label": "AI 专题榜",
+            "repositories": _board_repositories("ai-daily", 5),
+        },
+    }
+    weekly = _report("weekly", "2026-07-11", 9, "2026-07-11T08:05:00+08:00")
+    weekly["boards"] = {
+        "comprehensive": {
+            "label": "综合主榜",
+            "repositories": _board_repositories("main-weekly", 9),
+        },
+        "ai": {
+            "label": "人工智能雷达",
+            "repositories": _board_repositories("ai-weekly", 9),
+        },
+    }
+    _write_report(tmp_path, "daily", "2026-07-11.json", daily)
+    _write_report(tmp_path, "weekly", "2026-W28.json", weekly)
+
+    payload = build_site(tmp_path, "https://github.com/example/github-hotspots")
+
+    assert [
+        item["full_name"] for item in payload["daily"]["boards"]["comprehensive"]["repositories"]
+    ] == ["example/main-daily-1", "example/main-daily-2", "example/main-daily-3"]
+    assert [item["full_name"] for item in payload["daily"]["repositories"]] == [
+        "example/main-daily-1",
+        "example/main-daily-2",
+        "example/main-daily-3",
+    ]
+    assert [item["full_name"] for item in payload["daily"]["boards"]["ai"]["repositories"]] == [
+        "example/ai-daily-1",
+        "example/ai-daily-2",
+        "example/ai-daily-3",
+    ]
+    assert len(payload["weekly"]["boards"]["comprehensive"]["repositories"]) == 7
+    assert len(payload["weekly"]["boards"]["ai"]["repositories"]) == 7
+    assert payload["weekly"]["boards"]["ai"]["label"] == "人工智能雷达"
 
 
 def test_build_site_outputs_deterministic_json_and_javascript(tmp_path: Path) -> None:

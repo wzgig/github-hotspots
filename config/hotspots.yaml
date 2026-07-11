@@ -22,6 +22,66 @@ runs:
     top_n: 7
     lookback_days: 7
 
+boards:
+  comprehensive:
+    enabled: true
+    label: 综合主榜
+    daily_top_n: 3
+    weekly_top_n: 7
+  ai:
+    enabled: true
+    label: AI 专题榜
+    daily_top_n: 3
+    weekly_top_n: 7
+    topics:
+      - ai
+      - ai-agent
+      - ai-agents
+      - agentic-ai
+      - artificial-intelligence
+      - computer-vision
+      - deep-learning
+      - diffusion-models
+      - generative-ai
+      - gpt
+      - large-language-model
+      - large-language-models
+      - llm
+      - machine-learning
+      - multimodal
+      - natural-language-processing
+      - nlp
+      - rag
+      - transformers
+    keywords:
+      - ai
+      - ai agent
+      - ai agents
+      - agentic ai
+      - artificial intelligence
+      - chatgpt
+      - computer vision
+      - deep learning
+      - diffusion model
+      - diffusion models
+      - generative ai
+      - gpt
+      - gpts
+      - large language model
+      - large language models
+      - llm
+      - llms
+      - machine learning
+      - multimodal
+      - natural language processing
+      - neural network
+      - neural networks
+      - openai
+      - rag
+      - retrieval augmented generation
+      - transformer
+      - transformers
+
 sources:
   trending:
     enabled: true

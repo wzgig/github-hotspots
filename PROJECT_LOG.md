@@ -51,3 +51,38 @@
 - 首个公开提交：`62c3c69`（`feat: launch automated GitHub hotspots platform`），已推送至 `origin/main`。
 - GitHub Pages：运行 `29148156765` 首次因 Pages 尚未启用而失败；启用 `build_type=workflow` 后重跑成功。
 - 线上验证：`https://wzgig.github.io/github-hotspots/` 返回 HTTP 200，页面标题为“GitHub Hotspots / 开源热点编辑部”，首页特征内容存在。
+
+## 2026-07-11 — 综合主榜、AI 专题榜与 MIT 许可证
+
+### 目标
+
+将已确认的产品决策落实为完整交付：同时生成“综合主榜 + AI 专题榜”，继续保持小红书人工审核发布，并为公开仓库选择清晰、宽松的开源许可证。
+
+### 变更
+
+- 在 `config/hotspots.yaml`、`src/github_hotspots/config.py` 和新增的 `src/github_hotspots/boards.py` 中定义两榜开关、标签、日/周 Top N、AI Topics 与 token/phrase-aware 关键词；AI 匹配使用精确 Topic 与完整 token/短语，避免把 `rails`、`maintainer` 等普通词误判为 AI。
+- 在 `src/github_hotspots/pipeline.py` 中对全部合格候选和 AI 子集分别归一化、评分与排名；同一仓库允许进入两榜，但保留各自的独立 `rank`。
+- 在 `src/github_hotspots/report.py`、`src/github_hotspots/cli.py` 和 `templates/dual_digest.md.j2` 中实现双榜 Markdown、Schema v2 JSON、综合榜 `*.xiaohongshu.md` 与 AI 榜 `*.ai.xiaohongshu.md`；顶层 `repositories` 继续指向综合主榜以兼容旧消费者。
+- 在 `scripts/build_site.py` 与 `site/` 中增加独立的 AI 数据雷达，兼容旧报告 JSON，并保留桌面/移动端、键盘焦点和 reduced-motion 支持；修复桌面 1440px 下贴纸元素造成的 2px 横向溢出。
+- 使用当天 GitHub 公开数据重新生成 `2026-07-11` 日榜和 `2026-W28` 周榜：日榜为综合 3 项 + AI 3 项，周榜为综合 7 项 + AI 7 项，并重建 `site/data/`。
+- 新增标准 MIT `LICENSE`（`Copyright (c) 2026 Zicheng Wang`），并在 README、产品规范、项目规划、运维文档和 `AGENTS.md` 中说明允许个人/商业使用、修改和分发，但复制或分发时必须保留版权与许可声明。
+- 更新 `prompts/project_master_prompt_zh.md`，把双榜契约、AI 正反例、两份人工审核稿、MIT 和 GitHub 完整交付闭环固化为后续维护提示词。
+- 更新 Chrome Extension 指南；2026-07-11 已完成只读连接核验，未读取或记录 Cookie、浏览器存储、登录凭据、标签页标题或 URL。
+
+### 验证
+
+- Chrome Extension：连接成功，能够在不读取浏览器隐私数据的前提下访问用户授权的现有 Chrome 会话。
+- `pytest`：30 项全部通过，总覆盖率 80%。
+- `ruff check .` 与 `ruff format --check .`：通过。
+- `node --check site/app.js`：通过。
+- 真实端到端运行：日榜综合 Top 3 / AI Top 3、周榜综合 Top 7 / AI Top 7；四份小红书人工审核稿均已生成。
+- Pages 本地构建：`daily=3 comprehensive / 3 AI`，`weekly=7 comprehensive / 7 AI`。
+- Chrome 视觉 QA：桌面与 390px 手机均正确显示双榜；手机 AI 面板宽 358px、单列显示；桌面和手机均无横向溢出。
+- 工作树与敏感信息预检：未发现 `.env`、Codex 凭据、GitHub Token、小红书 Token、Cookie 或常见密钥格式进入改动。
+
+### 已知限制
+
+- 当前 AI 专题归类依赖公开 Topics、名称和描述中的可配置规则，仍需通过人工审核处理边界项目，并根据实际内容质量迭代词表。
+- 历史快照尚未积累满 7 天；当前样例的上榜项目主要使用明确标注的 GitHub Trending 周期 Star，不能表述为精确快照净增量。
+- 当前只生成小红书文案草稿，不自动登录或发布；未来自动发布必须重新获得明确授权并满足平台规则、审核门禁和可撤回要求。
+- 本地 Codex 摘要适配器尚未实现；未来只允许通过受支持的 `codex exec` 复用本地配置，不读取或复制认证文件。

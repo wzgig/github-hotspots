@@ -13,6 +13,10 @@ from typing import Any
 
 DATA_VARIABLE = "GITHUB_HOTSPOTS_DATA"
 REPORT_LIMITS = {"daily": 3, "weekly": 7}
+BOARD_LABELS = {
+    "comprehensive": "综合主榜",
+    "ai": "AI 专题榜",
+}
 
 METRICS = [
     {
@@ -169,15 +173,49 @@ def _normalise_repository(repository: dict[str, Any], fallback_rank: int) -> dic
     }
 
 
-def _normalise_report(
-    path: Path, payload: dict[str, Any], period: str, root: Path
-) -> dict[str, Any]:
-    repositories = payload.get("repositories")
-    repositories = repositories if isinstance(repositories, list) else []
+def _normalise_repositories(repositories: Any, period: str) -> list[dict[str, Any]]:
+    if not isinstance(repositories, list):
+        return []
     ordered = sorted(
         (item for item in repositories if isinstance(item, dict)),
         key=lambda item: _safe_int(item.get("rank"), 10_000),
     )[: REPORT_LIMITS[period]]
+    return [
+        _normalise_repository(repository, index)
+        for index, repository in enumerate(ordered, start=1)
+    ]
+
+
+def _normalise_board(
+    payload: dict[str, Any],
+    board_name: str,
+    period: str,
+    fallback_repositories: Any = None,
+) -> dict[str, Any]:
+    boards = payload.get("boards")
+    board = boards.get(board_name) if isinstance(boards, dict) else None
+    board = board if isinstance(board, dict) else {}
+    repositories = board.get("repositories")
+    if not isinstance(repositories, list):
+        repositories = fallback_repositories
+    label = str(board.get("label") or BOARD_LABELS[board_name])
+    return {
+        "label": label,
+        "repositories": _normalise_repositories(repositories, period),
+    }
+
+
+def _normalise_report(
+    path: Path, payload: dict[str, Any], period: str, root: Path
+) -> dict[str, Any]:
+    legacy_repositories = payload.get("repositories")
+    comprehensive = _normalise_board(
+        payload,
+        "comprehensive",
+        period,
+        fallback_repositories=legacy_repositories,
+    )
+    ai = _normalise_board(payload, "ai", period)
     warnings = payload.get("warnings")
     return {
         "period": period,
@@ -188,10 +226,12 @@ def _normalise_report(
         "warnings": [str(item) for item in warnings] if isinstance(warnings, list) else [],
         "methodology": str(payload.get("methodology") or ""),
         "source_path": path.relative_to(root).as_posix(),
-        "repositories": [
-            _normalise_repository(repository, index)
-            for index, repository in enumerate(ordered, start=1)
-        ],
+        # Keep the historical field as a stable alias for the comprehensive board.
+        "repositories": comprehensive["repositories"],
+        "boards": {
+            "comprehensive": comprehensive,
+            "ai": ai,
+        },
     }
 
 
@@ -246,7 +286,7 @@ def build_site(root: Path, repository_url: str | None = None) -> dict[str, Any]:
     warnings = list(dict.fromkeys([*daily["warnings"], *weekly["warnings"]]))
     resolved_repository_url = _discover_repository_url(root, repository_url)
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at": max((value for value in generated_values if value), default=""),
         "site": {
             "title": "GitHub Hotspots",
@@ -287,8 +327,10 @@ def main() -> None:
     payload = build_site(args.root, args.repository_url)
     print(
         "Built site data: "
-        f"daily={len(payload['daily']['repositories'])}, "
-        f"weekly={len(payload['weekly']['repositories'])}"
+        f"daily={len(payload['daily']['repositories'])} comprehensive / "
+        f"{len(payload['daily']['boards']['ai']['repositories'])} AI, "
+        f"weekly={len(payload['weekly']['repositories'])} comprehensive / "
+        f"{len(payload['weekly']['boards']['ai']['repositories'])} AI"
     )
 
 
