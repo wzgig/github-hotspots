@@ -1,0 +1,19 @@
+# 标题
+
+{{ xhs_title }}
+
+# 正文
+
+{{ intro }}
+
+{% for item in items %}
+👉{{ "%02d" | format(item.rank) }} {{ item.repository.name }}{% if item.star_delta >= 0 %} ⭐ {% if item.delta_source == "estimate" %}约 {% endif %}+{{ "{:,}".format(item.star_delta) }}{% else %} ⭐ 增量待核验{% endif %}
+{{ item.summary.one_line }}
+{% for highlight in item.summary.highlights[:3] %}• {{ highlight }}
+{% endfor %}适合：{{ item.summary.audience }}
+🔗 {{ item.repository.html_url }}
+
+{% endfor %}
+数据口径：{{ data_note }}
+
+{{ hashtags | join(' ') }}

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="GitHub Hotspots：自动发现、解释并出版每日与每周 GitHub 热点项目。"
+    >
+    <meta name="theme-color" content="#f2ecd9">
+    <meta name="color-scheme" content="light">
+    <title>GitHub Hotspots / 开源热点编辑部</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="data/site-data.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+    <header class="masthead">
+      <a class="brand" href="#top" aria-label="GitHub Hotspots 首页">
+        <span class="brand-mark" aria-hidden="true">GH</span>
+        <span class="brand-copy">
+          <strong>HOTSPOTS</strong>
+          <small>开源热点编辑部</small>
+        </span>
+      </a>
+      <nav class="primary-nav" aria-label="主要导航">
+        <a href="#daily">日报</a>
+        <a href="#weekly">周榜</a>
+        <a href="#methodology">口径</a>
+        <a href="#pipeline">流程</a>
+      </nav>
+      <a class="masthead-link" data-project-link href="#project">VIEW SOURCE ↗</a>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section-shell" id="top" aria-labelledby="hero-title">
+        <div class="issue-line reveal" style="--delay: 0ms">
+          <span>AUTOMATED OPEN-SOURCE INTELLIGENCE</span>
+          <span id="issue-date">ISSUE / --</span>
+          <span>ASIA · SHANGHAI</span>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="kicker reveal" style="--delay: 80ms">
+              <span class="live-dot" aria-hidden="true"></span>
+              DAILY SIGNAL / WEEKLY CONTEXT
+            </p>
+            <h1 class="reveal" id="hero-title" style="--delay: 140ms">
+              每天，重新校准
+              <span>开源热度。</span>
+            </h1>
+            <p class="hero-deck reveal" style="--delay: 220ms">
+              不只复述累计 Star。我们追踪增量、活跃度与趋势位次，
+              把 GitHub 的噪声压缩成一份可解释、可复查的中文榜单。
+            </p>
+            <div class="hero-actions reveal" style="--delay: 300ms">
+              <a class="button button-primary" href="#daily">阅读今日 Top 3 <span>↓</span></a>
+              <a class="button button-secondary" data-project-link href="#project">
+                查看源代码 <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <aside class="signal-console reveal" style="--delay: 260ms" aria-label="数据状态">
+            <div class="console-bar">
+              <span>GH_HOTSPOTS.EXE</span>
+              <span aria-hidden="true">● ● ●</span>
+            </div>
+            <div class="console-body">
+              <p><span class="prompt">$</span> status --latest</p>
+              <dl class="console-stats">
+                <div>
+                  <dt>日报样本</dt>
+                  <dd id="daily-count">--</dd>
+                </div>
+                <div>
+                  <dt>周榜样本</dt>
+                  <dd id="weekly-count">--</dd>
+                </div>
+                <div>
+                  <dt>最近构建</dt>
+                  <dd id="generated-at">读取中</dd>
+                </div>
+                <div>
+                  <dt>信号质量</dt>
+                  <dd id="quality-label">等待数据</dd>
+                </div>
+              </dl>
+              <p class="console-ready" id="data-status" aria-live="polite">
+                <span aria-hidden="true">■</span> LOADING DATA FEED
+              </p>
+            </div>
+            <span class="tape-label" aria-hidden="true">NO HYPE / JUST DELTA</span>
+          </aside>
+        </div>
+
+        <div class="signal-strip" aria-label="项目特点">
+          <span>01 / 双源发现</span>
+          <span>02 / 快照增量</span>
+          <span>03 / 六因子排名</span>
+          <span>04 / 自动出版</span>
+        </div>
+      </section>
+
+      <section class="ranking-section section-shell" id="daily" aria-labelledby="daily-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">A / DAILY BRIEF</p>
+            <h2 id="daily-title">今日升温最快</h2>
+          </div>
+          <div class="section-note">
+            <span>TOP 03</span>
+            <p id="daily-window">正在载入最新日报……</p>
+          </div>
+        </div>
+        <div class="daily-grid" id="daily-list" aria-live="polite"></div>
+        <div class="source-line">
+          <span>数据不是推荐背书，请在采用项目前复核许可证与安全状态。</span>
+          <a id="daily-source-link" data-source-link href="#project">查看日报原始数据 ↗</a>
+        </div>
+      </section>
+
+      <section class="weekly-section" id="weekly" aria-labelledby="weekly-title">
+        <div class="section-shell">
+          <div class="section-heading inverse">
+            <div>
+              <p class="section-index">B / WEEKLY BOARD</p>
+              <h2 id="weekly-title">本周热度总盘</h2>
+            </div>
+            <div class="section-note">
+              <span>TOP 07</span>
+              <p id="weekly-window">正在载入最新周榜……</p>
+            </div>
+          </div>
+          <div class="weekly-header" aria-hidden="true">
+            <span>RANK</span>
+            <span>REPOSITORY / EDITOR'S NOTE</span>
+            <span>SIGNAL</span>
+            <span>SCORE</span>
+          </div>
+          <div class="weekly-list" id="weekly-list" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="method-section section-shell" id="methodology" aria-labelledby="method-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">C / SIGNAL MANUAL</p>
+            <h2 id="method-title">热度，如何被计算</h2>
+          </div>
+          <p class="heading-deck">
+            排名不是黑箱判断，而是六项可追溯信号的加权结果。
+          </p>
+        </div>
+        <div class="method-intro">
+          <div class="formula-card">
+            <p class="formula-label">RANKING FORMULA / V1</p>
+            <p class="formula">
+              SCORE = <mark>50%</mark> Δ★ + 20% Δ% + 10% Δ⑂ + 10% PUSH + 5% Σ★ + 5% TREND
+            </p>
+            <p id="method-summary">正在读取本期方法说明……</p>
+          </div>
+          <aside class="quality-card">
+            <p>DATA QUALITY NOTE</p>
+            <strong id="method-quality">等待数据</strong>
+            <ul id="method-warnings"></ul>
+          </aside>
+        </div>
+        <div class="metrics-grid" id="metrics-list"></div>
+      </section>
+
+      <section class="pipeline-section section-shell" id="pipeline" aria-labelledby="pipeline-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">D / AUTOMATION LINE</p>
+            <h2 id="pipeline-title">从扫描到出版</h2>
+          </div>
+          <p class="heading-deck">每天自动执行；每周重新汇总。每一步都有文件证据。</p>
+        </div>
+        <ol class="pipeline-list" id="pipeline-list"></ol>
+      </section>
+
+      <section class="project-section section-shell" id="project" aria-labelledby="project-title">
+        <div class="project-panel">
+          <div class="project-stamp" aria-hidden="true">
+            OPEN<br>PIPELINE
+          </div>
+          <div class="project-copy">
+            <p class="section-index">E / BUILD IN PUBLIC</p>
+            <h2 id="project-title">一套可复查、可扩展的热点生产线。</h2>
+            <p>
+              源码、排名口径、历史报告与自动化配置全部保存在 GitHub。
+              Fork 后可替换筛选条件、权重和出版模板，建立自己的开源情报站。
+            </p>
+          </div>
+          <div class="project-links">
+            <a class="project-link" data-project-link href="#top">
+              <span>01</span>
+              <strong>浏览仓库</strong>
+              <i aria-hidden="true">↗</i>
+            </a>
+            <a class="project-link" id="readme-link" href="#top">
+              <span>02</span>
+              <strong>阅读文档</strong>
+              <i aria-hidden="true">↗</i>
+            </a>
+            <a class="project-link" id="actions-link" href="#top">
+              <span>03</span>
+              <strong>查看自动化</strong>
+              <i aria-hidden="true">↗</i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <p>GITHUB HOTSPOTS <span>/</span> OPEN-SOURCE SIGNAL DESK</p>
+      <p>数据来自 GitHub 公开页面与 API · 排名仅供发现项目使用</p>
+      <a href="#top">BACK TO TOP ↑</a>
+    </footer>
+
+    <noscript>
+      <div class="noscript-note">此页面需要 JavaScript 才能渲染最新榜单数据。</div>
+    </noscript>
+  </body>
+</html>

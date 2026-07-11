@@ -1,0 +1,57 @@
+timezone: Asia/Shanghai
+
+github:
+  api_base_url: https://api.github.com
+  trending_url: https://github.com/trending
+  token_env: GITHUB_TOKEN
+  request_timeout_seconds: 30
+  user_agent: github-hotspots/0.1
+
+outputs:
+  snapshots_dir: data/snapshots
+  daily_reports_dir: reports/daily
+  weekly_reports_dir: reports/weekly
+
+runs:
+  daily:
+    period: daily
+    top_n: 3
+    lookback_days: 1
+  weekly:
+    period: weekly
+    top_n: 7
+    lookback_days: 7
+
+sources:
+  trending:
+    enabled: true
+    max_repositories: 25
+    languages: []
+    spoken_language: null
+  search:
+    enabled: true
+    sort: stars
+    order: desc
+    per_page: 50
+    queries:
+      - "created:>={since}"
+      - "pushed:>={since} stars:>=50"
+
+filters:
+  min_stars: 50
+  require_description: true
+  exclude_archived: true
+  exclude_forks: true
+  exclude_mirrors: true
+  excluded_languages: []
+  excluded_owners: []
+  excluded_repositories: []
+
+ranking:
+  weights:
+    star_growth: 0.50
+    relative_growth: 0.20
+    fork_growth: 0.10
+    activity: 0.10
+    total_stars: 0.05
+    trending_signal: 0.05

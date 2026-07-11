@@ -1,0 +1,30 @@
+# Local secrets and virtual environments
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Python caches and build output
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Test, coverage, and lint caches
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.ruff_cache/
+output/
+.playwright-cli/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# data/snapshots and reports are intentionally versioned for GitHub Pages/history.
