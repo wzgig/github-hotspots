@@ -6,7 +6,7 @@ These instructions apply to every future change in this repository.
 
 1. Inspect the working tree and preserve unrelated user changes.
 2. Implement the requested change with tests proportional to its risk.
-3. Update `PROJECT_LOG.md` with the date, purpose, files or modules changed, verification, and known limitations.
+3. For human-authored code, configuration, workflow, prompt, site, or documentation changes, update `PROJECT_LOG.md` with the date, purpose, files or modules changed, verification, and known limitations. A scheduled report-only commit is logged by its generated report metadata and bot commit message and does not append `PROJECT_LOG.md`.
 4. Run at minimum:
 
    ```powershell

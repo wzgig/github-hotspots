@@ -26,6 +26,7 @@
 
 - 创建公开仓库 `https://github.com/wzgig/github-hotspots`，本地绑定为 `origin`。
 - 新增项目级 `AGENTS.md`，固化“更新日志 → 测试 → 敏感信息检查 → Conventional Commit → push main → 验证 Actions/Pages”的交付闭环。
+- 明确日志策略：人工代码/配置/文档变更必须更新 `PROJECT_LOG.md`；纯定时报告提交使用报告元数据与 bot commit 记录，避免每日日志膨胀和并发冲突。
 - 新增自动构建的静态项目主页，读取最新日报和周报 JSON，展示日报 Top 3、周榜 Top 7、六因子排名口径及自动化流程。
 - 新增 GitHub Pages 工作流；日报和周报的自动提交不再使用 `[skip ci]`，确保报告更新能够触发页面重建。
 - 新增完整项目规划与运维规范，覆盖量化 KPI、阶段路线、依赖、风险、故障响应和回滚。
