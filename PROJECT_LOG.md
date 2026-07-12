@@ -320,6 +320,7 @@
 - 新增 `publish` 发布工作台：`publish/current/TODAY.md` 汇总当前日报/周报；每榜提供 `TITLE.txt`、`CAPTION.txt`、`REVIEW.md`、有序 PNG、周期级 `CHECKLIST.md` 与 `MANIFEST.json`。发布 Manifest 包含生成器版本、内容指纹、文案/审核稿/图片哈希和实际 materialization；历史包轮转到本地 `archive/`，不进入 Git 历史。
 - 新增本地 Codex 主链路：Windows 日报 07:30、周日周报 08:45；任务只调用当前用户已安装的 `codex exec`，不读取 endpoint、provider、model、My Codex 密钥或认证文件。
 - 强化无人值守安全边界：本地 `HEAD` 为代码信任锚；只接受远端日期化报告产物变化；所有 worktree 使用本地受信 verifier；严格校验当前 Prompt/Schema/期号/renderer/style、非空双榜和完整 PNG chunk/CRC；推送前完成 publish preflight、路径白名单和 Secret 扫描；禁止强推，远端代码变化时中止并等待人工更新。
+- 修复 Windows PowerShell 5.1 原生命令日志兼容性：`git fetch`、`gh` 等工具即使成功也会把进度写到 stderr，runner 现在合并记录两条流并以真实退出码判定成功，避免把正常进度误报为计划任务失败。
 - 新增 publish 同步指纹、跨卷复制语义、ISO week-year 归档、共享锁、陈旧 state worktree 清理、30 日运行日志和 `China Standard Time` 注册门禁；IDE 工作树不会被 reset、clean 或 rebase。
 - GitHub Actions 调整为本地优先的 deterministic 兜底：日报 09:17、周日周报 10:27；发现同日期完整 Codex 产物时跳过。Actions 运行中远端前进时不再自动 rebase 旧报告；兜底成功后显式 dispatch Pages，普通用户 push 继续使用 Pages `push` 触发。
 - 升级 Pages actions 主版本并重建 `site/data/`；网站顶部显示 `D001/W001`，项目能力区由三项更新为五项。
@@ -345,6 +346,7 @@
 - 发布工作台复核：`D001-C`、`D001-A`、`W001-C`、`W001-A` 的标题、正文、检查清单、内容指纹、图片顺序、尺寸和 SHA-256 全部通过；正文保留“AI 辅助整理｜人工发布”，不含内部报告路径或数据来源口号。
 - 视觉抽检：日报综合/AI 封面、Catch2、周报 `system_prompts_leaks` 与 OfficeCLI 项目卡无溢出、无旧版深绿/圆章/四格仪表盘残留；中文逗号行首、开引号行末问题已消除，Owner 头像和正文均可读。
 - `register_tasks.ps1 -WhatIf` 已验证；实际任务注册、提交推送、Actions 与 Pages 线上状态在本次交付的推送后继续核验。
+- 实际计划任务已注册为 Ready；`run_scheduled.ps1 -Period daily/weekly -RunDate 2026-07-12 -SkipPagesWait` 两条冒烟链路均通过可信远端校验、隔离 worktree、严格 bundle 验证、发布包同步和安全清理，且没有再次调用 Codex。
 
 ### 安全与发布决策
 

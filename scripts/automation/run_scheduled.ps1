@@ -61,7 +61,13 @@ function Invoke-Logged {
 
     Write-RunLog "start $Label"
     Push-Location $WorkingDirectory
+    $nativeErrorActionPreference = $ErrorActionPreference
+    $exitCode = 1
     try {
+        # Windows PowerShell 5.1 promotes native stderr to ErrorRecord objects when streams are
+        # merged. Git and gh legitimately write progress to stderr on exit 0, so trust the native
+        # exit code while still recording both streams instead of treating progress as a failure.
+        $ErrorActionPreference = "Continue"
         & $FilePath @ArgumentList 2>&1 | ForEach-Object {
             $outputLine = "$_"
             Add-Content -LiteralPath $LogPath -Value $outputLine -Encoding utf8
@@ -70,6 +76,7 @@ function Invoke-Logged {
         $exitCode = $LASTEXITCODE
     }
     finally {
+        $ErrorActionPreference = $nativeErrorActionPreference
         Pop-Location
     }
     Write-RunLog "finish $Label exit=$exitCode"
@@ -90,11 +97,16 @@ function Invoke-Captured {
 
     Write-RunLog "start $Label"
     Push-Location $WorkingDirectory
+    $nativeErrorActionPreference = $ErrorActionPreference
+    $exitCode = 1
+    $output = @()
     try {
+        $ErrorActionPreference = "Continue"
         $output = @(& $FilePath @ArgumentList 2>&1)
         $exitCode = $LASTEXITCODE
     }
     finally {
+        $ErrorActionPreference = $nativeErrorActionPreference
         Pop-Location
     }
     foreach ($item in $output) {
