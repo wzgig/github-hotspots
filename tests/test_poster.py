@@ -23,20 +23,20 @@ def _repository(rank: int, name: str, source: str) -> dict[str, object]:
         "rank": rank,
         "full_name": f"example/{name}",
         "html_url": f"https://github.com/example/{name}",
-        "description": f"A deterministic toolkit named {name}.",
+        "description": f"A deterministic workflow toolkit named {name}.",
         "language": "Python",
         "stars": 12_345 + rank,
         "forks": 678 + rank,
         "star_delta": 90 + rank,
         "delta_source": source,
         "summary": {
-            "one_line": f"{name} helps developers ship repeatable workflows.",
+            "one_line": f"{name} 把重复开发步骤整理成可复用流程",
             "highlights": [
-                "Clear command-line workflow",
-                "Deterministic local output",
-                "Repository facts remain traceable",
+                "组合并重复执行常用开发任务",
+                "保留本地可核对的执行结果",
+                "让团队复用一致的工作流程",
             ],
-            "audience": "Python developers and automation teams",
+            "audience": "需要减少重复操作的 Python 开发者与自动化团队",
         },
     }
 
@@ -192,3 +192,121 @@ def test_weekly_filenames_use_iso_week_and_custom_portrait_size(tmp_path: Path) 
     assert artifacts.projects[0].name == "2026-W28.ai.01.example--agent-kit.png"
     with Image.open(artifacts.projects[0]) as image:
         assert image.size == (1200, 1600)
+
+
+def test_v2_repository_prefers_explainer_fields_for_knowledge_card() -> None:
+    value = _repository(1, "explainable-tool", "snapshot")
+    value.update(
+        {
+            "plain_summary": "用普通中文说清项目解决的问题",
+            "capabilities": [
+                "把输入整理成结构化结果",
+                "重复执行固定的处理步骤",
+                "保留便于人工核对的输出",
+            ],
+            "core_value": "把复杂流程变成可重复任务",
+            "why_hot": "过去 24 小时净增 +91 Star，来自快照核验",
+        }
+    )
+
+    repository = PosterRepository.from_mapping(value)
+
+    assert repository.short_description == "用普通中文说清项目解决的问题"
+    assert repository.capabilities == (
+        "把输入整理成结构化结果",
+        "重复执行固定的处理步骤",
+        "保留便于人工核对的输出",
+    )
+    assert repository.core_value == "把复杂流程变成可重复任务"
+    assert repository.why_hot == "过去 24 小时净增 +91 Star，来自快照核验"
+
+
+def test_v2_identity_block_is_deterministic_and_not_board_specific() -> None:
+    assert poster_module._identity_token("catchorg/Catch2") == "C2"
+    assert poster_module._identity_token("example/hermes-agent") == "HA"
+    assert poster_module._identity_colours("example/hermes-agent") == (
+        poster_module._identity_colours("example/hermes-agent")
+    )
+
+
+def test_v2_fixed_layout_keeps_regions_separate_and_long_name_fits() -> None:
+    scale = 1200 / 1080
+    layout = poster_module._project_layout(scale, size=(1200, 1600))
+
+    assert layout.stats[1] > layout.hero[3]
+    assert layout.capabilities[2] < layout.core[0]
+    assert layout.core[3] < layout.audience[1]
+    assert layout.why_hot[1] > layout.capabilities[3]
+
+    image = Image.new("RGB", (1200, 1600), "white")
+    draw = poster_module.ImageDraw.Draw(image)
+    fonts = poster_module._FontBook(scale)
+    long_name = "enterprise-agent-workflow-orchestration-toolkit"
+    lines, truncated = poster_module._wrap_text_with_status(
+        draw,
+        long_name,
+        fonts.get(40, bold=True),
+        round(704 * scale),
+        2,
+    )
+
+    assert len(lines) == 2
+    assert truncated is False
+
+    summary_lines, summary_truncated = poster_module._wrap_text_with_status(
+        draw,
+        (
+            "这类任务可以交给 codex-plugin-cc：在 Claude Code 中调用 Codex "
+            "审查代码或委派任务，并让两个编程助手在同一开发流程中分工"
+        ),
+        fonts.get(23, bold=True),
+        round(704 * scale),
+        3,
+    )
+    assert len(summary_lines) <= 3
+    assert summary_truncated is False
+
+
+def test_v2_card_uses_warm_paper_and_source_honest_growth(tmp_path: Path) -> None:
+    report_path = tmp_path / "2026-07-11.json"
+    report_path.write_text(
+        json.dumps(
+            {
+                "period": "daily",
+                "run_date": "2026-07-11",
+                "boards": {
+                    "comprehensive": {
+                        "label": "综合主榜",
+                        "repositories": [_repository(1, "knowledge-card", "snapshot")],
+                    }
+                },
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    artifact = render_report_posters(report_path, output_dir=tmp_path / "posters")["comprehensive"]
+    with Image.open(artifact.projects[0]) as image:
+        assert image.getpixel((10, 10)) == poster_module._hex_to_rgb(
+            poster_module._BOARD_THEMES["comprehensive"].header
+        )
+        assert image.getpixel((10, 800)) == poster_module._hex_to_rgb(
+            poster_module._WARM_BACKGROUND
+        )
+
+    repository = PosterRepository.from_mapping(_repository(1, "verified", "snapshot"))
+    assert poster_module._cover_growth_summary((repository,), "daily") == (
+        "1 个项目均有快照基线，过去 24 小时合计净增 +91 Star。"
+    )
+    trending = PosterRepository.from_mapping(_repository(2, "trending", "trending"))
+    assert poster_module._cover_growth_summary((repository, trending), "daily").startswith(
+        "1/2 个项目具备可核验快照基线"
+    )
+    assert poster_module._why_hot_text(repository, "daily") == (
+        "过去 24 小时净增 +91 Star（相邻快照核验）｜累计 12,346 Star"
+    )
+    assert poster_module._why_hot_text(trending, "weekly") == (
+        "本期 GitHub Trending 显示 +92 Star｜不是快照净增"
+    )
+    assert poster_module._short_repository_link(repository) == "example/verified"

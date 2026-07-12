@@ -190,3 +190,46 @@
 - 周报工作流 `29163782401` 在日报提交之后完整通过相同门禁、报告与 16 张海报生成及提交，生成 bot 提交 `b185c67`；对应 `workflow_run` Pages `29163813347` 成功。
 - 线上页面已更新到 `2026-07-12` 日榜和 `2026-W28` 周榜，显示日榜综合 3 / AI 3、周榜综合 7 / AI 7；`site-data.json` 中 24 个 PNG 路径全部返回 HTTP 200 与 `image/png`，页面 20 个项目下载入口唯一且已加载缩略图无破图。
 - Actions 仍提示 `actions/checkout@v4` 与 `actions/setup-python@v5` 的 Node.js 20 运行时弃用警告；GitHub 当前强制使用 Node.js 24 且任务成功，该警告不阻断本次交付。
+
+## 2026-07-12 — 小红书用途解释、知识卡海报与 Pages 内容 V2
+
+### 目的
+
+解决现有内容虽然展示了 Star、语言、Topics 和增长数据，却没有回答“这个项目到底能做什么”的核心问题；同时把小红书文案、原创海报和 Pages 从工程数据看板升级为用途优先、证据受控的项目解释产品。
+
+### 调研与决策
+
+- 新增 `docs/XIAOHONGSHU_CONTENT_V2_PLAN.md`，记录小红书官方规范、搜索/推荐的可验证边界、四类目标受众、3/10/30 秒阅读任务、标题/正文/轮播/互动规范和三期人工 A/B 复盘方案。
+- 明确不采用“固定冷启动池、CES 权重、黄金两小时”等缺少可靠公开证据的流量传言；内容优化只围绕可理解性、搜索词、收藏价值、真实互动和合规边界。
+- 将本轮定义为兼容 Schema 3.0 的 V2 第一阶段；README 证据片段、逐主张引用、使用条件、限制和 `content_status` 进入后续 Schema 4.0 路线。
+
+### 代码、提示词与出版变更
+
+- 重构 `src/github_hotspots/summarizer.py`：七个 angle 不再轮换元数据开场，而是选择同一受控用途的七种自然表达；`one_line` 讲用途，三条 `highlights` 讲具体能力，`audience` 讲任务场景。加入严格 Topics/短语规则与局部否定保护，覆盖 C++ 测试、网页抓取、Office 自动化、代码审查插件、AI 渗透测试、本地会议转写、系统提示词库、Agent 编排/IDE/网关/skills、MCP、Bun 和 PostgreSQL Rust 实现等类别；证据不足时明确要求人工核对。
+- 将 `prompts/repository_summary_zh.md` 升级为 Prompt 4.0 编辑标准的 Schema 3.0 兼容桥接版；本地 Codex 仍只能逐字符选择程序候选，但选稿优先回答“谁、动作、结果”，禁止元数据冒充功能、假实测、夸张词、法律/性能推断和覆盖人工审核兜底。同步更新 `prompts/project_master_prompt_zh.md`。
+- 重构 `src/github_hotspots/report.py` 与 `templates/xiaohongshu.md.j2`：标题改为“几个项目到底能做什么”；正文增加先看结论、三条能力、适合谁、来源准确的上榜信号和可回答互动问题；小红书发布区只保留 `owner/repo` 搜索词，不放裸 URL，并标明 AI 辅助整理、人工审核和 Star 不代表功能质量。
+- 将 `src/github_hotspots/poster.py` renderer 升级为 `2.0`、style 升级为 `open-source-knowledge-card-v2`：采用固定暖白知识卡、深色榜单页眉、确定性原创项目身份块、固定四格统计、“它能做什么 / 核心亮点 / 适合谁 / 为什么本期上榜”分区；长项目名和长摘要动态缩小/换行，增长文案严格区分快照、Trending、估算和异常值，图片只显示 `owner/repo` 搜索词。
+- 更新 `site/index.html`、`site/app.js` 和 `site/styles.css`：首页承诺从“重新校准热度”转为“每天看懂 GitHub 热门项目”；日榜、周榜和 AI 榜直接显示功能清单；修复 390px 手机视口中 hero grid 的固有尺寸导致的横向溢出。
+- 使用冻结的 2026-07-12 日榜和 2026-W28 周榜事实重新生成四份小红书审核稿、4 张封面、20 张项目卡、两个 manifest 及 `site/data/`；排名、仓库身份和 GitHub 数字未重新采集或改写。
+
+### 数据与接口影响
+
+- 报告 Schema 继续为 3，Manifest Schema 继续为 2；现有 rerender、Pages 构建和历史消费者保持兼容。
+- `summary.one_line/highlights/audience` 的语义从“定位/元数据说明”收紧为“用途/具体能力/任务受众”，Pages 与海报会直接消费新的语义。
+- 排名、Star/Fork、URL、日期、AI 分类和快照口径未改变；本轮不调用本地 Codex 自由生成事实，真实产物使用确定性后端重建。
+
+### 本地验证
+
+- `pytest`：117 项全部通过，总覆盖率 79%。
+- `ruff check .`、`ruff format --check .`、`node --check site/app.js` 与 `git diff --check`：通过。
+- 冻结事实重渲染：日榜 8 张 PNG、周榜 16 张 PNG，四份文案与两个 Manifest 成功生成；Pages 构建输出日榜综合 3 / AI 3、周榜综合 7 / AI 7。
+- 图片目视 QA：抽查综合/AI 日周封面、Catch2、Firecrawl、Meetily 和 codex-plugin-cc；用途、三条能力、受众和增长口径均可读，长摘要无省略号截断，图片不含第三方 Logo 或裸域名。
+- Chrome 本地 QA：桌面 2560px 下 `scrollWidth=2545`、无横向溢出；390px 手机下文档 `scrollWidth=375`、卡片宽 358px、功能正文 14.4px、20 个功能区全部存在、0 张破图；页面数据状态为 `DATA FEED READY`。
+
+### 已知限制
+
+- 当前 V2 仍依赖结构化仓库事实、精确 Topics 和少量否定保护的严格短语规则，不能替代完整 README 证据抽取；未知项目会进入人工核对，不生成听起来合理但无证据的能力。
+- W28 周榜仍使用明确标注的 GitHub Trending 周期 Star，不是精确 7 日快照净增；封面不会汇总成精确新增。
+- 海报暂不自动使用项目 Logo、README 图片或头像；许可证、安装条件和已知限制将在 Schema 4.0 证据模型中进入正式卡片字段。
+- 小红书继续只生成审核稿和配图，不自动登录、发布或操作互动；最终 AI 辅助标识和平台规则由人工发布前确认。
+- Actions 与 Pages 线上状态将在本提交推送后验证并追加闭环记录。

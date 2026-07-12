@@ -127,8 +127,15 @@ def test_render_reports_writes_markdown_json_and_xhs_copy(tmp_path: Path) -> Non
     assert "## 综合主榜 Top 3" in markdown
     assert "## AI 专题榜 Top 3" in markdown
     assert "快照净增 Star" in markdown
-    assert "https://github.com/example/hot-repo" in xhs
-    assert "https://github.com/example/ai-lab" in ai_xhs
+    assert "GitHub 今日热榜｜3 个项目到底能做什么" in xhs
+    assert "GitHub AI 今日榜｜3 个项目到底能做什么" in ai_xhs
+    assert "它能做什么：" in xhs
+    assert "为什么本期上榜：过去 24 小时净增 +125 Star" in xhs
+    assert "GitHub 搜索：example/hot-repo" in xhs
+    assert "GitHub 搜索：example/ai-lab" in ai_xhs
+    assert "https://github.com/" not in xhs
+    assert "https://github.com/" not in ai_xhs
+    assert "AI 辅助整理，发布前需人工审核" in xhs
     assert artifacts.ai_xiaohongshu.name == "2026-07-11.ai.xiaohongshu.md"
 
 
@@ -159,7 +166,7 @@ def test_estimated_delta_is_explicitly_labeled(tmp_path: Path) -> None:
     xhs = artifacts.xiaohongshu.read_text(encoding="utf-8")
     assert "估算周期 Star" in markdown
     assert "本期没有符合 AI 专题口径的候选项目" in markdown
-    assert "约 +3" in xhs
+    assert "过去 24 小时估算约 +3 Star（待后续快照核验）" in xhs
 
 
 def test_disabled_ai_board_has_no_missing_candidate_warning(tmp_path: Path) -> None:

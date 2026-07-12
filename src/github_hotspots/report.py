@@ -167,6 +167,37 @@ def _prepared_items(
     return prepared
 
 
+def _xiaohongshu_growth_note(item: dict[str, Any], period: str) -> str:
+    """Turn a frozen ranking signal into reader-facing, source-aware copy."""
+
+    window = "过去 24 小时" if period == "daily" else "过去 7 天"
+    star_delta = int(item["star_delta"])
+    if star_delta < 0:
+        return f"{window}增长数据待核验"
+    formatted_delta = f"+{star_delta:,} Star"
+    source = item["delta_source"]
+    if source == "snapshot":
+        return f"{window}净增 {formatted_delta}（历史快照核验）"
+    if source == "trending":
+        return f"GitHub Trending 显示{window} {formatted_delta}"
+    return f"{window}估算约 {formatted_delta}（待后续快照核验）"
+
+
+def _prepare_xiaohongshu_items(
+    items: Sequence[dict[str, Any]], period: str
+) -> list[dict[str, Any]]:
+    """Add publication-only labels without changing frozen report facts."""
+
+    return [
+        {
+            **item,
+            "why_ranked": _xiaohongshu_growth_note(item, period),
+            "search_term": item["repository"].full_name,
+        }
+        for item in items
+    ]
+
+
 def _prepare_editorial_items(
     rankings: Sequence[RankedRepository],
     *,
@@ -438,42 +469,52 @@ def render_reports(
         )
     )
 
-    comprehensive_common = {**common, "items": items}
+    comprehensive_common = {
+        **common,
+        "items": _prepare_xiaohongshu_items(items, period),
+    }
     ai_common = {
         **common,
         "data_quality": ai_quality,
         "warnings": _prefixed_warnings(ai_board.label, ai_quality_warnings),
-        "items": ai_items,
+        "items": _prepare_xiaohongshu_items(ai_items, period),
     }
 
     xhs_title = (
-        f"今日 GitHub {comprehensive_board.label} Top {comprehensive_top_n} | {run_date.isoformat()}"
+        f"GitHub 今日热榜｜{comprehensive_top_n} 个项目到底能做什么"
         if period == "daily"
-        else (
-            f"本周 GitHub {comprehensive_board.label} Top {comprehensive_top_n} | "
-            f"{_report_stem(period, run_date)}"
-        )
+        else f"GitHub 本周热榜｜{comprehensive_top_n} 个项目到底能做什么"
     )
     xhs = _compact_rendered_text(
         environment.get_template("xiaohongshu.md.j2").render(
             **comprehensive_common,
             xhs_title=xhs_title,
-            intro="从全部合格候选中按周期热度、相对增长和代码活跃度独立筛选，数据与链接均可核验。",
+            edition=f"{run_date.isoformat()} · {comprehensive_board.label}",
+            intro=(
+                "别只看 Star。这期把上榜项目翻成三件能直接判断的事："
+                "它做什么、能帮你完成什么、适不适合你。"
+            ),
             data_note=f"{quality}；窗口为 {label}",
+            interaction_question="下一期更想看哪一类：效率工具、开发者工具，还是 AI 应用？",
             hashtags=["#GitHub", "#开源项目", "#程序员", "#开发者工具"],
         )
     )
     ai_xhs_title = (
-        f"今日 GitHub {ai_board.label} Top {ai_top_n} | {run_date.isoformat()}"
+        f"GitHub AI 今日榜｜{ai_top_n} 个项目到底能做什么"
         if period == "daily"
-        else f"本周 GitHub {ai_board.label} Top {ai_top_n} | {_report_stem(period, run_date)}"
+        else f"GitHub AI 周榜｜{ai_top_n} 个项目到底能做什么"
     )
     ai_xhs = _compact_rendered_text(
         environment.get_template("xiaohongshu.md.j2").render(
             **ai_common,
             xhs_title=ai_xhs_title,
-            intro="从 AI 相关候选中独立计算热度排名，项目可能同时出现在综合主榜，发布前请人工审核。",
+            edition=f"{run_date.isoformat()} · {ai_board.label}",
+            intro=(
+                "AI 项目的名字往往很抽象。这一期不堆术语，只讲清它替谁做什么、"
+                "能完成哪些任务，以及是否值得加入你的工具箱。"
+            ),
             data_note=f"{ai_quality}；窗口为 {label}",
+            interaction_question="哪一个项目需要我下一期补一张上手卡？",
             hashtags=["#GitHub", "#开源项目", "#AI", "#AI工具", "#机器学习"],
         )
     )

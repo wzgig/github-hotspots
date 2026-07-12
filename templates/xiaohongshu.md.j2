@@ -4,16 +4,30 @@
 
 # 正文
 
+{{ edition }}
+
 {{ intro }}
 
+先看结论：
+{% for item in items %}- {{ item.repository.name }}：{{ item.summary.one_line }}
+{% endfor %}
+
 {% for item in items %}
-👉{{ "%02d" | format(item.rank) }} {{ item.repository.name }}{% if item.star_delta >= 0 %} ⭐ {% if item.delta_source == "estimate" %}约 {% endif %}+{{ "{:,}".format(item.star_delta) }}{% else %} ⭐ 增量待核验{% endif %}
+{{ "%02d" | format(item.rank) }}｜{{ item.repository.name }}
 {{ item.summary.one_line }}
-{% for highlight in item.summary.highlights[:3] %}• {{ highlight }}
-{% endfor %}适合：{{ item.summary.audience }}
-🔗 {{ item.repository.html_url }}
+
+它能做什么：
+{% for highlight in item.summary.highlights[:3] %}- {{ highlight }}
+{% endfor %}
+适合谁：{{ item.summary.audience }}
+为什么本期上榜：{{ item.why_ranked }}
+GitHub 搜索：{{ item.search_term }}
 
 {% endfor %}
-数据口径：{{ data_note }}
+{{ interaction_question }}
+
+说明：AI 辅助整理，发布前需人工审核；数据来自 GitHub 公开信息与本地快照。Star 变化只解释上榜信号，不代表功能质量。
+
+数据口径：{{ data_note }}。小红书正文不放外链，可按仓库全名在 GitHub 搜索。
 
 {{ hashtags | join(' ') }}

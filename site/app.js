@@ -142,6 +142,26 @@
     return link;
   }
 
+  function capabilityBlock(repository, { limit = 3, inverse = false } = {}) {
+    const capabilities = Array.isArray(repository.highlights)
+      ? repository.highlights.filter((item) => typeof item === "string" && item.trim()).slice(0, limit)
+      : [];
+    if (!capabilities.length) return null;
+
+    const className = inverse
+      ? "capability-block capability-block-inverse"
+      : "capability-block";
+    const block = element("section", className);
+    block.setAttribute("aria-label", `${repository.full_name} 能做什么`);
+    block.append(element("strong", "capability-label", "能做什么"));
+    const list = element("ul", "capability-list");
+    capabilities.forEach((capability) => {
+      list.append(element("li", "", capability));
+    });
+    block.append(list);
+    return block;
+  }
+
   function inferRepositoryUrl() {
     if (!window.location.hostname.endsWith(".github.io")) return "";
     const owner = window.location.hostname.split(".")[0];
@@ -227,6 +247,7 @@
       const title = element("h3");
       title.append(repositoryLink(repository, "repository-name"));
       const description = element("p", "repository-description", repository.one_line);
+      const capabilities = capabilityBlock(repository);
 
       const tags = element("div", "repo-tags");
       tags.append(element("span", "language-tag", repository.language));
@@ -254,7 +275,9 @@
       arrow.setAttribute("aria-label", `打开 ${repository.full_name}`);
       footer.append(arrow);
 
-      card.append(top, title, description, tags, stats, meter, footer);
+      card.append(top, title, description);
+      if (capabilities) card.append(capabilities);
+      card.append(tags, stats, meter, footer);
       const poster = posterAction(repository, { preview: true });
       if (poster) card.append(poster);
       list.append(card);
@@ -277,6 +300,8 @@
       const title = element("h3");
       title.append(repositoryLink(repository, "weekly-name"));
       main.append(title, element("p", "weekly-description", repository.one_line));
+      const capabilities = capabilityBlock(repository, { limit: 2, inverse: true });
+      if (capabilities) main.append(capabilities);
       const poster = posterAction(repository);
       if (poster) main.append(poster);
 
@@ -324,6 +349,8 @@
       const title = element("h4");
       title.append(repositoryLink(repository, "ai-entry-name"));
       main.append(title, element("p", "ai-entry-description", repository.one_line));
+      const capabilities = capabilityBlock(repository, { limit: 2, inverse: true });
+      if (capabilities) main.append(capabilities);
       const poster = posterAction(repository);
       if (poster) main.append(poster);
 

@@ -1,7 +1,7 @@
 "use strict";
 window.GITHUB_HOTSPOTS_DATA = {
   "schema_version": 3,
-  "generated_at": "2026-07-12T02:37:49+08:00",
+  "generated_at": "2026-07-12T10:31:04+08:00",
   "site": {
     "title": "GitHub Hotspots",
     "tagline": "追踪开源世界真正发生的增量",
@@ -10,7 +10,7 @@ window.GITHUB_HOTSPOTS_DATA = {
   "daily": {
     "period": "daily",
     "run_date": "2026-07-12",
-    "generated_at": "2026-07-12T02:36:23+08:00",
+    "generated_at": "2026-07-12T10:31:02+08:00",
     "window_label": "2026-07-11 至 2026-07-12",
     "data_quality": "高：历史快照增量",
     "warnings": [],
@@ -38,13 +38,13 @@ window.GITHUB_HOTSPOTS_DATA = {
           "framework",
           "no-dependencies"
         ],
-        "one_line": "Catch2 的公开简介与 Topics 显示其定位：面向开源软件与工程实践方向的开源项目",
+        "one_line": "Catch2 可以为 C++ 项目编写和运行单元测试，同时支持用 TDD 或 BDD 方式组织测试",
         "highlights": [
-          "GitHub 标注的主要语言：C++；当前累计 20,914 Star、3,428 Fork",
-          "本地历史快照显示本期净增 104 Star",
-          "公开 Topics：bdd、cpp、cpp14、framework"
+          "为 C++ 代码编写并运行单元测试",
+          "用断言检查代码行为和预期是否一致",
+          "支持按 TDD 或 BDD 方式组织测试"
         ],
-        "audience": "软件开发者、开源爱好者、技术团队",
+        "audience": "需要给 C++ 库或应用补充自动化测试的开发者",
         "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.01.catchorg--catch2.png",
         "component_percentiles": {
           "star_growth": 100.0,
@@ -76,13 +76,13 @@ window.GITHUB_HOTSPOTS_DATA = {
           "anthropic",
           "chatgpt"
         ],
-        "one_line": "本地快照记录 hermes-agent 本期净增 84 Star；公开定位：面向AI 与智能体开发方向的开源项目",
+        "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 hermes-agent；它能把模型能力接入可重复的任务流程",
         "highlights": [
-          "GitHub 标注的主要语言：Python",
-          "当前累计 213,201 Star、39,405 Fork",
-          "公开 Topics：ai、ai-agent、ai-agents、anthropic"
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者",
+        "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
         "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.02.nousresearch--hermes-agent.png",
         "component_percentiles": {
           "star_growth": 95.95,
@@ -114,13 +114,13 @@ window.GITHUB_HOTSPOTS_DATA = {
           "obra",
           "sdlc"
         ],
-        "one_line": "以 Shell 为主要语言，superpowers 的公开定位：软件开发技能与流程项目",
+        "one_line": "主要任务是给编程 Agent 提供可复用的软件开发技能；superpowers 还能让需求、编码和验证按固定流程推进",
         "highlights": [
-          "当前累计 252,339 Star、22,522 Fork",
-          "本地历史快照显示本期净增 85 Star",
-          "公开 Topics：ai、brainstorming、coding、obra"
+          "把常用开发方法封装成可复用技能",
+          "按规划、实现和验证步骤组织任务",
+          "在不同项目中复用同一套开发流程"
         ],
-        "audience": "AI 应用开发者、算法工程师、技术研究者",
+        "audience": "希望让编程 Agent 按固定方法完成研发任务的开发者",
         "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.03.obra--superpowers.png",
         "component_percentiles": {
           "star_growth": 97.3,
@@ -158,13 +158,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "framework",
               "no-dependencies"
             ],
-            "one_line": "Catch2 的公开简介与 Topics 显示其定位：面向开源软件与工程实践方向的开源项目",
+            "one_line": "Catch2 可以为 C++ 项目编写和运行单元测试，同时支持用 TDD 或 BDD 方式组织测试",
             "highlights": [
-              "GitHub 标注的主要语言：C++；当前累计 20,914 Star、3,428 Fork",
-              "本地历史快照显示本期净增 104 Star",
-              "公开 Topics：bdd、cpp、cpp14、framework"
+              "为 C++ 代码编写并运行单元测试",
+              "用断言检查代码行为和预期是否一致",
+              "支持按 TDD 或 BDD 方式组织测试"
             ],
-            "audience": "软件开发者、开源爱好者、技术团队",
+            "audience": "需要给 C++ 库或应用补充自动化测试的开发者",
             "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.01.catchorg--catch2.png",
             "component_percentiles": {
               "star_growth": 100.0,
@@ -196,13 +196,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "anthropic",
               "chatgpt"
             ],
-            "one_line": "本地快照记录 hermes-agent 本期净增 84 Star；公开定位：面向AI 与智能体开发方向的开源项目",
+            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 hermes-agent；它能把模型能力接入可重复的任务流程",
             "highlights": [
-              "GitHub 标注的主要语言：Python",
-              "当前累计 213,201 Star、39,405 Fork",
-              "公开 Topics：ai、ai-agent、ai-agents、anthropic"
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
             "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.02.nousresearch--hermes-agent.png",
             "component_percentiles": {
               "star_growth": 95.95,
@@ -234,13 +234,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "obra",
               "sdlc"
             ],
-            "one_line": "以 Shell 为主要语言，superpowers 的公开定位：软件开发技能与流程项目",
+            "one_line": "主要任务是给编程 Agent 提供可复用的软件开发技能；superpowers 还能让需求、编码和验证按固定流程推进",
             "highlights": [
-              "当前累计 252,339 Star、22,522 Fork",
-              "本地历史快照显示本期净增 85 Star",
-              "公开 Topics：ai、brainstorming、coding、obra"
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "希望让编程 Agent 按固定方法完成研发任务的开发者",
             "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.03.obra--superpowers.png",
             "component_percentiles": {
               "star_growth": 97.3,
@@ -278,13 +278,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "anthropic",
               "chatgpt"
             ],
-            "one_line": "hermes-agent 的公开简介与 Topics 显示其定位：面向AI 与智能体开发方向的开源项目",
+            "one_line": "hermes-agent 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
             "highlights": [
-              "GitHub 标注的主要语言：Python；当前累计 213,201 Star、39,405 Fork",
-              "本地历史快照显示本期净增 84 Star",
-              "公开 Topics：ai、ai-agent、ai-agents、anthropic"
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
             "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.ai.01.nousresearch--hermes-agent.png",
             "component_percentiles": {
               "star_growth": 92.31,
@@ -316,13 +316,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "obra",
               "sdlc"
             ],
-            "one_line": "本地快照记录 superpowers 本期净增 85 Star；公开定位：软件开发技能与流程项目",
+            "one_line": "想要给编程 Agent 提供可复用的软件开发技能，可以用 superpowers；它能让需求、编码和验证按固定流程推进",
             "highlights": [
-              "GitHub 标注的主要语言：Shell",
-              "当前累计 252,339 Star、22,522 Fork",
-              "公开 Topics：ai、brainstorming、coding、obra"
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "希望让编程 Agent 按固定方法完成研发任务的开发者",
             "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.ai.02.obra--superpowers.png",
             "component_percentiles": {
               "star_growth": 96.15,
@@ -354,13 +354,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-scraping",
               "ai-search"
             ],
-            "one_line": "以 TypeScript 为主要语言，firecrawl 的公开定位：面向AI 与智能体开发方向的开源项目",
+            "one_line": "主要任务是搜索、抓取并整理网页内容；firecrawl 还能把网页数据交给程序或 AI 工作流继续处理",
             "highlights": [
-              "当前累计 149,285 Star、8,540 Fork",
-              "本地历史快照显示本期净增 73 Star",
-              "公开 Topics：ai、ai-agents、ai-crawler、ai-scraping"
+              "通过接口搜索并抓取公开网页",
+              "从页面中提取正文和结构化内容",
+              "把网页整理成更易处理的文本数据"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "需要为 AI 应用、搜索或数据流程接入网页内容的开发者",
             "poster_path": "generated/reports/daily/assets/2026-07-12/2026-07-12.ai.03.firecrawl--firecrawl.png",
             "component_percentiles": {
               "star_growth": 88.46,
@@ -378,7 +378,7 @@ window.GITHUB_HOTSPOTS_DATA = {
   "weekly": {
     "period": "weekly",
     "run_date": "2026-07-12",
-    "generated_at": "2026-07-12T02:37:49+08:00",
+    "generated_at": "2026-07-12T10:31:04+08:00",
     "window_label": "2026-07-05 至 2026-07-12",
     "data_quality": "中高：GitHub Trending 周期信号",
     "warnings": [
@@ -409,13 +409,13 @@ window.GITHUB_HOTSPOTS_DATA = {
           "awesome",
           "chatbot"
         ],
-        "one_line": "system_prompts_leaks 的公开简介与 Topics 显示其定位：提示词工程相关项目",
+        "one_line": "system_prompts_leaks 可以集中检索和对照不同 AI 产品的系统提示词，同时帮助研究模型指令和产品交互设计",
         "highlights": [
-          "GitHub 标注的主要语言：JavaScript；当前累计 56,147 Star、9,269 Fork",
-          "GitHub Trending 页面显示本期获得 7,765 Star",
-          "公开 Topics：ai、ai-agents、anthropic、awesome"
+          "按模型和工具整理系统提示词样本",
+          "对照不同产品的指令结构与约束",
+          "持续汇总可用于研究的提示词资料"
         ],
-        "audience": "提示词工程师、AI 产品研究者、模型应用开发者",
+        "audience": "研究模型行为、提示词设计或 AI 产品交互的读者",
         "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.01.asgeirtj--system-prompts-leaks.png",
         "component_percentiles": {
           "star_growth": 99.09,
@@ -447,13 +447,13 @@ window.GITHUB_HOTSPOTS_DATA = {
           "cli",
           "codex"
         ],
-        "one_line": "Trending 页面记录 OfficeCLI 本期获得 5,789 Star；公开定位：Office 命令行项目",
+        "one_line": "想要用命令行读取、修改和批量处理 Office 文件，可以用 OfficeCLI；它能让脚本或 AI Agent 接手文档工作",
         "highlights": [
-          "GitHub 标注的主要语言：C#",
-          "当前累计 15,014 Star、1,022 Fork",
-          "公开 Topics：agent、ai、claude-code、cli"
+          "读取和修改 Word、Excel 与 PowerPoint 文件",
+          "通过命令行批量执行常见文档操作",
+          "把 Office 文件处理接入 Agent 工作流"
         ],
-        "audience": "Office 工具开发者、数据与文档工作者",
+        "audience": "需要用脚本或 AI Agent 批量处理办公文件的开发者与知识工作者",
         "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.02.iofficeai--officecli.png",
         "component_percentiles": {
           "star_growth": 97.27,
@@ -485,13 +485,13 @@ window.GITHUB_HOTSPOTS_DATA = {
           "ai-pentesting",
           "ai-security"
         ],
-        "one_line": "以 Python 为主要语言，strix 的公开定位：AI 渗透测试项目",
+        "one_line": "主要任务是自动检查应用中的安全漏洞；strix 还能把发现的问题整理成可修复的线索",
         "highlights": [
-          "当前累计 40,480 Star、4,256 Fork",
-          "GitHub Trending 页面显示本期获得 6,443 Star",
-          "公开 Topics：agents、ai-hacking、ai-penetration-testing、ai-pentesting"
+          "对应用执行自动化渗透测试",
+          "定位可能被攻击者利用的漏洞",
+          "给出需要优先检查和修复的问题"
         ],
-        "audience": "安全工程师、渗透测试人员、应用开发团队",
+        "audience": "需要在发布前检查应用攻击面和漏洞的安全与开发团队",
         "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.03.usestrix--strix.png",
         "component_percentiles": {
           "star_growth": 98.18,
@@ -523,13 +523,13 @@ window.GITHUB_HOTSPOTS_DATA = {
           "ai-agents",
           "claude-code"
         ],
-        "one_line": "当前累计 15,460 Star、1,035 Fork；herdr 的公开定位：智能体编排与多路复用项目",
+        "one_line": "用 herdr 可以组织和切换多个编程 Agent，还会让不同 Agent 分工处理开发任务",
         "highlights": [
-          "GitHub 标注的主要语言：Rust",
-          "GitHub Trending 页面显示本期获得 4,714 Star",
-          "公开 Topics：agent、agent-orchestration、ai、ai-agents"
+          "同时管理多个编程 Agent 会话",
+          "把不同开发任务分配给合适的 Agent",
+          "切换并复用已经建立的 Agent 工作流"
         ],
-        "audience": "多智能体开发者、技术负责人、终端工具用户",
+        "audience": "需要让多个编程 Agent 并行协作的开发者与技术负责人",
         "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.04.ogulcancelik--herdr.png",
         "component_percentiles": {
           "star_growth": 95.45,
@@ -555,13 +555,13 @@ window.GITHUB_HOTSPOTS_DATA = {
         "delta_label": "Trending 周期增星",
         "pushed_at": "2026-07-08T00:17:31Z",
         "topics": [],
-        "one_line": "codex-plugin-cc 未标注 Topics；公开定位：面向开源软件与工程实践方向的开源项目",
+        "one_line": "这类任务可以交给 codex-plugin-cc：在 Claude Code 中调用 Codex 审查代码或委派任务，并让两个编程助手在同一开发流程中分工",
         "highlights": [
-          "GitHub Trending 页面显示本期获得 4,484 Star",
-          "GitHub 标注的主要语言：JavaScript",
-          "当前累计 27,615 Star、1,798 Fork"
+          "从 Claude Code 会话直接调用 Codex",
+          "让 Codex 对代码变更提供审查意见",
+          "把适合的开发任务委派给 Codex 执行"
         ],
-        "audience": "软件开发者、开源爱好者、技术团队",
+        "audience": "同时使用 Claude Code 与 Codex 协作开发的工程师",
         "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.05.openai--codex-plugin-cc.png",
         "component_percentiles": {
           "star_growth": 94.55,
@@ -593,13 +593,13 @@ window.GITHUB_HOTSPOTS_DATA = {
           "claude-code",
           "cli"
         ],
-        "one_line": "GitHub 记录的最近推送日期为 2026-07-11；orca 的公开定位：智能体 IDE 项目",
+        "one_line": "当你需要集中运行和管理多个编程 Agent，orca 可以接手，同时让开发任务可以并行推进",
         "highlights": [
-          "公开 Topics：ade、agent-ide、ai-agents、claude-code",
-          "当前累计 16,306 Star、1,274 Fork",
-          "GitHub Trending 页面显示本期获得 4,328 Star"
+          "在同一界面启动多个编程 Agent",
+          "把任务拆给不同 Agent 并行执行",
+          "集中查看各个 Agent 的执行状态"
         ],
-        "audience": "AI 编程工具开发者、Agent 工作流设计者、研发团队",
+        "audience": "需要统一管理多个编程 Agent 和并行任务的研发团队",
         "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.06.stablyai--orca.png",
         "component_percentiles": {
           "star_growth": 93.64,
@@ -631,13 +631,13 @@ window.GITHUB_HOTSPOTS_DATA = {
           "anthropic",
           "claude"
         ],
-        "one_line": "本榜候选信号来自 GitHub Trending 周榜、GitHub API；OmniRoute 的公开定位：AI 网关项目",
+        "one_line": "如果工作流里要统一接入并路由多个 AI 模型服务，可以交给 OmniRoute，同时把模型选择和供应商配置集中管理",
         "highlights": [
-          "GitHub 标注的主要语言：TypeScript",
-          "公开 Topics：a2a、ai-agents、ai-gateway、anthropic",
-          "GitHub Trending 页面显示本期获得 4,268 Star"
+          "用统一入口连接不同模型服务",
+          "按配置把请求路由到目标模型",
+          "集中管理模型供应商和调用方式"
         ],
-        "audience": "AI 应用开发者、平台工程师、工具集成者",
+        "audience": "需要接入多个模型供应商或维护统一调用层的 AI 开发者",
         "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.07.diegosouzapw--omniroute.png",
         "component_percentiles": {
           "star_growth": 92.73,
@@ -675,13 +675,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "awesome",
               "chatbot"
             ],
-            "one_line": "system_prompts_leaks 的公开简介与 Topics 显示其定位：提示词工程相关项目",
+            "one_line": "system_prompts_leaks 可以集中检索和对照不同 AI 产品的系统提示词，同时帮助研究模型指令和产品交互设计",
             "highlights": [
-              "GitHub 标注的主要语言：JavaScript；当前累计 56,147 Star、9,269 Fork",
-              "GitHub Trending 页面显示本期获得 7,765 Star",
-              "公开 Topics：ai、ai-agents、anthropic、awesome"
+              "按模型和工具整理系统提示词样本",
+              "对照不同产品的指令结构与约束",
+              "持续汇总可用于研究的提示词资料"
             ],
-            "audience": "提示词工程师、AI 产品研究者、模型应用开发者",
+            "audience": "研究模型行为、提示词设计或 AI 产品交互的读者",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.01.asgeirtj--system-prompts-leaks.png",
             "component_percentiles": {
               "star_growth": 99.09,
@@ -713,13 +713,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "cli",
               "codex"
             ],
-            "one_line": "Trending 页面记录 OfficeCLI 本期获得 5,789 Star；公开定位：Office 命令行项目",
+            "one_line": "想要用命令行读取、修改和批量处理 Office 文件，可以用 OfficeCLI；它能让脚本或 AI Agent 接手文档工作",
             "highlights": [
-              "GitHub 标注的主要语言：C#",
-              "当前累计 15,014 Star、1,022 Fork",
-              "公开 Topics：agent、ai、claude-code、cli"
+              "读取和修改 Word、Excel 与 PowerPoint 文件",
+              "通过命令行批量执行常见文档操作",
+              "把 Office 文件处理接入 Agent 工作流"
             ],
-            "audience": "Office 工具开发者、数据与文档工作者",
+            "audience": "需要用脚本或 AI Agent 批量处理办公文件的开发者与知识工作者",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.02.iofficeai--officecli.png",
             "component_percentiles": {
               "star_growth": 97.27,
@@ -751,13 +751,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-pentesting",
               "ai-security"
             ],
-            "one_line": "以 Python 为主要语言，strix 的公开定位：AI 渗透测试项目",
+            "one_line": "主要任务是自动检查应用中的安全漏洞；strix 还能把发现的问题整理成可修复的线索",
             "highlights": [
-              "当前累计 40,480 Star、4,256 Fork",
-              "GitHub Trending 页面显示本期获得 6,443 Star",
-              "公开 Topics：agents、ai-hacking、ai-penetration-testing、ai-pentesting"
+              "对应用执行自动化渗透测试",
+              "定位可能被攻击者利用的漏洞",
+              "给出需要优先检查和修复的问题"
             ],
-            "audience": "安全工程师、渗透测试人员、应用开发团队",
+            "audience": "需要在发布前检查应用攻击面和漏洞的安全与开发团队",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.03.usestrix--strix.png",
             "component_percentiles": {
               "star_growth": 98.18,
@@ -789,13 +789,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-agents",
               "claude-code"
             ],
-            "one_line": "当前累计 15,460 Star、1,035 Fork；herdr 的公开定位：智能体编排与多路复用项目",
+            "one_line": "用 herdr 可以组织和切换多个编程 Agent，还会让不同 Agent 分工处理开发任务",
             "highlights": [
-              "GitHub 标注的主要语言：Rust",
-              "GitHub Trending 页面显示本期获得 4,714 Star",
-              "公开 Topics：agent、agent-orchestration、ai、ai-agents"
+              "同时管理多个编程 Agent 会话",
+              "把不同开发任务分配给合适的 Agent",
+              "切换并复用已经建立的 Agent 工作流"
             ],
-            "audience": "多智能体开发者、技术负责人、终端工具用户",
+            "audience": "需要让多个编程 Agent 并行协作的开发者与技术负责人",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.04.ogulcancelik--herdr.png",
             "component_percentiles": {
               "star_growth": 95.45,
@@ -821,13 +821,13 @@ window.GITHUB_HOTSPOTS_DATA = {
             "delta_label": "Trending 周期增星",
             "pushed_at": "2026-07-08T00:17:31Z",
             "topics": [],
-            "one_line": "codex-plugin-cc 未标注 Topics；公开定位：面向开源软件与工程实践方向的开源项目",
+            "one_line": "这类任务可以交给 codex-plugin-cc：在 Claude Code 中调用 Codex 审查代码或委派任务，并让两个编程助手在同一开发流程中分工",
             "highlights": [
-              "GitHub Trending 页面显示本期获得 4,484 Star",
-              "GitHub 标注的主要语言：JavaScript",
-              "当前累计 27,615 Star、1,798 Fork"
+              "从 Claude Code 会话直接调用 Codex",
+              "让 Codex 对代码变更提供审查意见",
+              "把适合的开发任务委派给 Codex 执行"
             ],
-            "audience": "软件开发者、开源爱好者、技术团队",
+            "audience": "同时使用 Claude Code 与 Codex 协作开发的工程师",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.05.openai--codex-plugin-cc.png",
             "component_percentiles": {
               "star_growth": 94.55,
@@ -859,13 +859,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "claude-code",
               "cli"
             ],
-            "one_line": "GitHub 记录的最近推送日期为 2026-07-11；orca 的公开定位：智能体 IDE 项目",
+            "one_line": "当你需要集中运行和管理多个编程 Agent，orca 可以接手，同时让开发任务可以并行推进",
             "highlights": [
-              "公开 Topics：ade、agent-ide、ai-agents、claude-code",
-              "当前累计 16,306 Star、1,274 Fork",
-              "GitHub Trending 页面显示本期获得 4,328 Star"
+              "在同一界面启动多个编程 Agent",
+              "把任务拆给不同 Agent 并行执行",
+              "集中查看各个 Agent 的执行状态"
             ],
-            "audience": "AI 编程工具开发者、Agent 工作流设计者、研发团队",
+            "audience": "需要统一管理多个编程 Agent 和并行任务的研发团队",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.06.stablyai--orca.png",
             "component_percentiles": {
               "star_growth": 93.64,
@@ -897,13 +897,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "anthropic",
               "claude"
             ],
-            "one_line": "本榜候选信号来自 GitHub Trending 周榜、GitHub API；OmniRoute 的公开定位：AI 网关项目",
+            "one_line": "如果工作流里要统一接入并路由多个 AI 模型服务，可以交给 OmniRoute，同时把模型选择和供应商配置集中管理",
             "highlights": [
-              "GitHub 标注的主要语言：TypeScript",
-              "公开 Topics：a2a、ai-agents、ai-gateway、anthropic",
-              "GitHub Trending 页面显示本期获得 4,268 Star"
+              "用统一入口连接不同模型服务",
+              "按配置把请求路由到目标模型",
+              "集中管理模型供应商和调用方式"
             ],
-            "audience": "AI 应用开发者、平台工程师、工具集成者",
+            "audience": "需要接入多个模型供应商或维护统一调用层的 AI 开发者",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.comprehensive.07.diegosouzapw--omniroute.png",
             "component_percentiles": {
               "star_growth": 92.73,
@@ -941,13 +941,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "awesome",
               "chatbot"
             ],
-            "one_line": "system_prompts_leaks 的公开简介与 Topics 显示其定位：提示词工程相关项目",
+            "one_line": "system_prompts_leaks 可以集中检索和对照不同 AI 产品的系统提示词，同时帮助研究模型指令和产品交互设计",
             "highlights": [
-              "GitHub 标注的主要语言：JavaScript；当前累计 56,147 Star、9,269 Fork",
-              "GitHub Trending 页面显示本期获得 7,765 Star",
-              "公开 Topics：ai、ai-agents、anthropic、awesome"
+              "按模型和工具整理系统提示词样本",
+              "对照不同产品的指令结构与约束",
+              "持续汇总可用于研究的提示词资料"
             ],
-            "audience": "提示词工程师、AI 产品研究者、模型应用开发者",
+            "audience": "研究模型行为、提示词设计或 AI 产品交互的读者",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.01.asgeirtj--system-prompts-leaks.png",
             "component_percentiles": {
               "star_growth": 97.96,
@@ -979,13 +979,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "cli",
               "codex"
             ],
-            "one_line": "Trending 页面记录 OfficeCLI 本期获得 5,789 Star；公开定位：Office 命令行项目",
+            "one_line": "想要用命令行读取、修改和批量处理 Office 文件，可以用 OfficeCLI；它能让脚本或 AI Agent 接手文档工作",
             "highlights": [
-              "GitHub 标注的主要语言：C#",
-              "当前累计 15,014 Star、1,022 Fork",
-              "公开 Topics：agent、ai、claude-code、cli"
+              "读取和修改 Word、Excel 与 PowerPoint 文件",
+              "通过命令行批量执行常见文档操作",
+              "把 Office 文件处理接入 Agent 工作流"
             ],
-            "audience": "Office 工具开发者、数据与文档工作者",
+            "audience": "需要用脚本或 AI Agent 批量处理办公文件的开发者与知识工作者",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.02.iofficeai--officecli.png",
             "component_percentiles": {
               "star_growth": 93.88,
@@ -1017,13 +1017,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-pentesting",
               "ai-security"
             ],
-            "one_line": "以 Python 为主要语言，strix 的公开定位：AI 渗透测试项目",
+            "one_line": "主要任务是自动检查应用中的安全漏洞；strix 还能把发现的问题整理成可修复的线索",
             "highlights": [
-              "当前累计 40,480 Star、4,256 Fork",
-              "GitHub Trending 页面显示本期获得 6,443 Star",
-              "公开 Topics：agents、ai-hacking、ai-penetration-testing、ai-pentesting"
+              "对应用执行自动化渗透测试",
+              "定位可能被攻击者利用的漏洞",
+              "给出需要优先检查和修复的问题"
             ],
-            "audience": "安全工程师、渗透测试人员、应用开发团队",
+            "audience": "需要在发布前检查应用攻击面和漏洞的安全与开发团队",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.03.usestrix--strix.png",
             "component_percentiles": {
               "star_growth": 95.92,
@@ -1055,13 +1055,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "local-ai",
               "mac"
             ],
-            "one_line": "当前累计 23,105 Star、2,431 Fork；meetily 的公开定位：AI 会议助手项目",
+            "one_line": "用 meetily 可以在本地转写会议并整理会议记录，还会保留说话内容并生成便于回看的摘要",
             "highlights": [
-              "GitHub 标注的主要语言：Rust",
-              "GitHub Trending 页面显示本期获得 8,795 Star",
-              "公开 Topics：ai、ai-meeting-assistant、llm、local-ai"
+              "把会议语音转换成文字记录",
+              "按发言内容整理会议讨论脉络",
+              "在本地整理会议摘要和纪要"
             ],
-            "audience": "AI 应用开发者、算法工程师、技术研究者",
+            "audience": "需要会后快速获得文字记录和会议纪要的团队与个人",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.04.zackriya-solutions--meetily.png",
             "component_percentiles": {
               "star_growth": 100.0,
@@ -1093,13 +1093,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-agents",
               "claude-code"
             ],
-            "one_line": "公开 Topics 包括 agent、agent-orchestration、ai；herdr 的公开定位：智能体编排与多路复用项目",
+            "one_line": "这类任务可以交给 herdr：组织和切换多个编程 Agent，并让不同 Agent 分工处理开发任务",
             "highlights": [
-              "GitHub Trending 页面显示本期获得 4,714 Star",
-              "GitHub 标注的主要语言：Rust",
-              "当前累计 15,460 Star、1,035 Fork"
+              "同时管理多个编程 Agent 会话",
+              "把不同开发任务分配给合适的 Agent",
+              "切换并复用已经建立的 Agent 工作流"
             ],
-            "audience": "多智能体开发者、技术负责人、终端工具用户",
+            "audience": "需要让多个编程 Agent 并行协作的开发者与技术负责人",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.05.ogulcancelik--herdr.png",
             "component_percentiles": {
               "star_growth": 89.8,
@@ -1131,13 +1131,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "claude-code",
               "cli"
             ],
-            "one_line": "GitHub 记录的最近推送日期为 2026-07-11；orca 的公开定位：智能体 IDE 项目",
+            "one_line": "当你需要集中运行和管理多个编程 Agent，orca 可以接手，同时让开发任务可以并行推进",
             "highlights": [
-              "公开 Topics：ade、agent-ide、ai-agents、claude-code",
-              "当前累计 16,306 Star、1,274 Fork",
-              "GitHub Trending 页面显示本期获得 4,328 Star"
+              "在同一界面启动多个编程 Agent",
+              "把任务拆给不同 Agent 并行执行",
+              "集中查看各个 Agent 的执行状态"
             ],
-            "audience": "AI 编程工具开发者、Agent 工作流设计者、研发团队",
+            "audience": "需要统一管理多个编程 Agent 和并行任务的研发团队",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.06.stablyai--orca.png",
             "component_percentiles": {
               "star_growth": 87.76,
@@ -1169,13 +1169,13 @@ window.GITHUB_HOTSPOTS_DATA = {
               "anthropic",
               "claude"
             ],
-            "one_line": "本榜候选信号来自 GitHub Trending 周榜、GitHub API；OmniRoute 的公开定位：AI 网关项目",
+            "one_line": "如果工作流里要统一接入并路由多个 AI 模型服务，可以交给 OmniRoute，同时把模型选择和供应商配置集中管理",
             "highlights": [
-              "GitHub 标注的主要语言：TypeScript",
-              "公开 Topics：a2a、ai-agents、ai-gateway、anthropic",
-              "GitHub Trending 页面显示本期获得 4,268 Star"
+              "用统一入口连接不同模型服务",
+              "按配置把请求路由到目标模型",
+              "集中管理模型供应商和调用方式"
             ],
-            "audience": "AI 应用开发者、平台工程师、工具集成者",
+            "audience": "需要接入多个模型供应商或维护统一调用层的 AI 开发者",
             "poster_path": "generated/reports/weekly/assets/2026-W28/2026-W28.ai.07.diegosouzapw--omniroute.png",
             "component_percentiles": {
               "star_growth": 85.71,

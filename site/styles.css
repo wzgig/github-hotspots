@@ -195,6 +195,11 @@ a {
   padding: clamp(64px, 8vw, 130px) 0 clamp(70px, 9vw, 130px);
 }
 
+.hero-copy,
+.signal-console {
+  min-width: 0;
+}
+
 .kicker,
 .section-index {
   margin: 0 0 20px;
@@ -563,6 +568,68 @@ a {
   line-height: 1.7;
 }
 
+.capability-block {
+  margin: 0 0 22px;
+  padding: 14px 16px 15px;
+  border-left: 5px solid var(--orange);
+  background: #e8e3d6;
+}
+
+.capability-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.61rem;
+  font-weight: 950;
+  letter-spacing: 0.13em;
+}
+
+.capability-list {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  list-style: none;
+}
+
+.capability-list li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.capability-list li::before {
+  position: absolute;
+  top: 0.58em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background: var(--orange);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.capability-block-inverse {
+  margin: 14px 0 0;
+  padding: 11px 13px 12px;
+  border-left-color: var(--acid);
+  color: #ded9cc;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.capability-block-inverse .capability-label {
+  color: var(--acid);
+}
+
+.capability-block-inverse .capability-list {
+  gap: 5px;
+  font-size: 0.8rem;
+}
+
+.capability-block-inverse .capability-list li::before {
+  background: var(--acid);
+}
+
 .repo-tags {
   display: flex;
   flex-wrap: wrap;
@@ -823,8 +890,25 @@ a {
 
 .weekly-row:hover .weekly-rank,
 .weekly-row:hover .weekly-description,
+.weekly-row:hover .capability-block-inverse,
 .weekly-row:hover .weekly-signal span {
   color: var(--ink);
+}
+
+.weekly-row:hover .capability-block-inverse,
+.ai-entry:hover .capability-block-inverse {
+  border-left-color: var(--orange);
+  background: rgba(24, 24, 21, 0.08);
+}
+
+.weekly-row:hover .capability-block-inverse .capability-label,
+.ai-entry:hover .capability-block-inverse .capability-label {
+  color: var(--ink);
+}
+
+.weekly-row:hover .capability-block-inverse .capability-list li::before,
+.ai-entry:hover .capability-block-inverse .capability-list li::before {
+  background: var(--orange);
 }
 
 .weekly-main h3 {
@@ -1101,6 +1185,7 @@ a {
 .ai-entry:hover .ai-entry-rank,
 .ai-entry:hover .ai-entry-kicker,
 .ai-entry:hover .ai-entry-description,
+.ai-entry:hover .capability-block-inverse,
 .ai-entry:hover .ai-entry-delta,
 .ai-entry:hover .ai-entry-signal span {
   color: var(--ink);
@@ -1725,7 +1810,7 @@ a {
   }
 
   .tape-label {
-    right: -14px;
+    right: 0;
   }
 
   .signal-strip {
@@ -1768,7 +1853,12 @@ a {
   .daily-card,
   .daily-card:first-child {
     grid-column: auto;
-    min-height: 520px;
+    min-height: 0;
+  }
+
+  .capability-list,
+  .capability-block-inverse .capability-list {
+    font-size: 0.9rem;
   }
 
   .source-line {
