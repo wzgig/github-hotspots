@@ -288,7 +288,7 @@
 - 出版包检查：日榜 8 张、周榜 16 张图片全部为 `1200×1600` PNG；20 个榜单项目均有 5 条互不重复能力、`readme_enriched`、匹配的 README SHA 和可读取的本地头像 PNG。
 - Pages 构建：`daily=3 comprehensive / 3 AI`，`weekly=7 comprehensive / 7 AI`。
 - Playwright 本地 QA：桌面 `1440×1000` 与移动 `390×844` 均正确渲染；日报 5 条能力和核心亮点可见，海报缩略图全部加载，控制台无错误，移动端无横向溢出。
-- 敏感信息扫描：45 个变更文本文件未发现 `.env`、API key、GitHub Token、小红书 `xsec_token`、Bearer 凭据、本机 Codex provider/model 或用户级配置路径。
+- 敏感信息扫描：47 个变更文本文件未发现 `.env`、API key、GitHub Token、小红书 `xsec_token`、Bearer 凭据、本机 Codex provider/model 或用户级配置路径。
 
 ### 已知限制
 
@@ -297,3 +297,11 @@
 - 许可证限制只在 README 中存在可逐字核验的原文时展示；涉及法律条件的英文原句可能保留，以免翻译改变含义。
 - Owner 头像按报告周期缓存；远端不可用、格式不合法或超限时会使用身份占位图，不阻断榜单生成。
 - 小红书继续由人工审核和发布；当前不自动登录、发布、评论或操作账号。
+
+### 线上闭环
+
+- 功能提交 `81abb42` 已推送到 `origin/main`；公开仓库为 <https://github.com/wzgig/github-hotspots>。
+- GitHub Pages `push` 运行 `29179515822` 成功完成站点构建与部署：<https://github.com/wzgig/github-hotspots/actions/runs/29179515822>。
+- 项目页 <https://wzgig.github.io/github-hotspots/> 与 `data/site-data.json` 均返回 HTTP 200；线上数据为 `2026-07-12` 日榜和 `2026-W28` 周榜，数量分别为日榜综合 3 / AI 3、周榜综合 7 / AI 7。
+- 线上首项 `catchorg/Catch2` 已显示 `readme_enriched` 文案与核心亮点“贴近 C++ 表达式的测试写法”；V3 海报返回 HTTP 200、`image/png`，字节数为 200,780：<https://wzgig.github.io/github-hotspots/generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.01.catchorg--catch2.png>。
+- Actions 仍提示 `actions/checkout@v4`、`actions/setup-python@v5`、Pages 相关 actions 的 Node.js 20 运行时弃用，并由 GitHub 强制切换到 Node.js 24；本次构建与部署成功，该提示不影响当前交付，但后续应升级对应 action 主版本。
