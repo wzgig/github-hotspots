@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 from dataclasses import dataclass, field
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -72,6 +73,27 @@ class PosterSettings:
 
 
 @dataclass(frozen=True, slots=True)
+class PublicationSettings:
+    """Settings for local, human-reviewed social publication bundles."""
+
+    root_dir: Path
+    daily_first_issue_date: date
+    weekly_first_issue_date: date
+    title_max_chars: int
+    caption_max_chars: int
+    prefer_hardlinks: bool
+
+    def first_issue_date(self, period: str) -> date:
+        """Return the first public issue date for one cadence."""
+
+        if period == "daily":
+            return self.daily_first_issue_date
+        if period == "weekly":
+            return self.weekly_first_issue_date
+        raise ConfigurationError(f"Unsupported period: {period}")
+
+
+@dataclass(frozen=True, slots=True)
 class Settings:
     """Small typed facade over the YAML document.
 
@@ -90,6 +112,7 @@ class Settings:
     boards: Mapping[str, Mapping[str, Any]]
     editorial: Mapping[str, Any] = field(default_factory=dict)
     posters: Mapping[str, Any] = field(default_factory=dict)
+    publication: Mapping[str, Any] = field(default_factory=dict)
 
     def run(self, period: str) -> RunSettings:
         try:
@@ -184,6 +207,39 @@ class Settings:
             height=height,
         )
 
+    def publication_settings(self) -> PublicationSettings:
+        """Return validated settings for local publication packaging."""
+
+        raw = _mapping(self.publication, "publication")
+        title_max_chars = int(raw.get("title_max_chars", 30))
+        caption_max_chars = int(raw.get("caption_max_chars", 1000))
+        if title_max_chars < 10 or title_max_chars > 80:
+            raise ConfigurationError("publication.title_max_chars must be between 10 and 80")
+        if caption_max_chars < 200 or caption_max_chars > 5000:
+            raise ConfigurationError("publication.caption_max_chars must be between 200 and 5000")
+
+        daily_first_issue_date = _date_value(
+            raw.get("daily_first_issue_date", "2026-07-12"),
+            "publication.daily_first_issue_date",
+        )
+        weekly_first_issue_date = _date_value(
+            raw.get("weekly_first_issue_date", "2026-07-12"),
+            "publication.weekly_first_issue_date",
+        )
+        if weekly_first_issue_date.weekday() != 6:
+            raise ConfigurationError("publication.weekly_first_issue_date must be a Sunday")
+
+        return PublicationSettings(
+            root_dir=self.resolve_path(str(raw.get("root_dir", "publish"))),
+            daily_first_issue_date=daily_first_issue_date,
+            weekly_first_issue_date=weekly_first_issue_date,
+            title_max_chars=title_max_chars,
+            caption_max_chars=caption_max_chars,
+            prefer_hardlinks=_boolean(
+                raw.get("prefer_hardlinks", True), "publication.prefer_hardlinks"
+            ),
+        )
+
     def resolve_path(self, value: str | Path) -> Path:
         """Resolve a configured path relative to the repository root."""
 
@@ -226,6 +282,7 @@ def load_settings(path: str | Path = "config/hotspots.yaml") -> Settings:
 
     editorial = _mapping(raw.get("editorial", {}), "editorial")
     posters = _mapping(raw.get("posters", {}), "posters")
+    publication = _mapping(raw.get("publication", {}), "publication")
     settings = Settings(
         path=config_path,
         timezone=str(raw["timezone"]),
@@ -238,6 +295,7 @@ def load_settings(path: str | Path = "config/hotspots.yaml") -> Settings:
         boards=raw["boards"],
         editorial=editorial,
         posters=posters,
+        publication=publication,
     )
 
     for period in ("daily", "weekly"):
@@ -257,6 +315,7 @@ def load_settings(path: str | Path = "config/hotspots.yaml") -> Settings:
 
     settings.editorial_settings()
     settings.poster_settings()
+    settings.publication_settings()
     _validate_runtime_booleans(settings)
 
     weights = settings.ranking_weights
@@ -281,6 +340,20 @@ def _boolean(value: object, path: str) -> bool:
     if not isinstance(value, bool):
         raise ConfigurationError(f"{path} must be a boolean")
     return value
+
+
+def _date_value(value: object, path: str) -> date:
+    if isinstance(value, date):
+        return value
+    if not isinstance(value, str):
+        raise ConfigurationError(f"{path} must use YYYY-MM-DD")
+    try:
+        parsed = date.fromisoformat(value)
+    except ValueError as exc:
+        raise ConfigurationError(f"{path} must use YYYY-MM-DD") from exc
+    if parsed.isoformat() != value:
+        raise ConfigurationError(f"{path} must use YYYY-MM-DD")
+    return parsed
 
 
 def _validate_runtime_booleans(settings: Settings) -> None:

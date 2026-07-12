@@ -4,7 +4,7 @@ from datetime import date
 from pathlib import Path
 
 import pytest
-from PIL import Image
+from PIL import Image, ImageChops
 
 from github_hotspots import poster as poster_module
 from github_hotspots.poster import (
@@ -194,7 +194,7 @@ def test_weekly_filenames_use_iso_week_and_custom_portrait_size(tmp_path: Path) 
         assert image.size == (1200, 1600)
 
 
-def test_v3_repository_accepts_reference_card_fields_and_five_capabilities(
+def test_v4_repository_accepts_editorial_fields_and_five_capabilities(
     tmp_path: Path,
 ) -> None:
     avatar_dir = tmp_path / "avatars"
@@ -240,7 +240,7 @@ def test_v3_repository_accepts_reference_card_fields_and_five_capabilities(
     assert repository.audience == "需要稳定复用复杂工作流的开发者与内容团队"
 
 
-def test_v3_identity_block_is_deterministic_and_not_board_specific() -> None:
+def test_v4_identity_block_is_deterministic_and_not_board_specific() -> None:
     assert poster_module._identity_token("catchorg/Catch2") == "C2"
     assert poster_module._identity_token("example/hermes-agent") == "HA"
     assert poster_module._identity_colours("example/hermes-agent") == (
@@ -248,16 +248,31 @@ def test_v3_identity_block_is_deterministic_and_not_board_specific() -> None:
     )
 
 
-def test_v3_fixed_layout_matches_reference_information_hierarchy() -> None:
+def test_v4_layout_stays_in_safe_single_column_flow() -> None:
     scale = 1200 / 1080
     layout = poster_module._project_layout(scale, size=(1200, 1600))
 
-    assert layout.hero[1] < layout.header[3]
-    assert layout.stats[1] > layout.hero[3]
-    assert layout.capabilities[2] < layout.core[0]
+    regions = (
+        layout.masthead,
+        layout.identity,
+        layout.signal_bar,
+        layout.capabilities,
+        layout.core,
+        layout.audience,
+    )
+    for left, top, right, bottom in regions:
+        assert 0 <= left < right <= 1200
+        assert 0 <= top < bottom <= 1600
+
+    assert layout.masthead[3] < layout.identity[1]
+    assert layout.identity[3] < layout.signal_bar[1]
+    assert layout.signal_bar[3] < layout.capabilities[1]
+    assert layout.capabilities[3] < layout.core[1]
     assert layout.core[3] < layout.audience[1]
-    assert layout.footer_y > layout.capabilities[3]
+    assert layout.capabilities[0] == layout.core[0] == layout.audience[0]
+    assert layout.capabilities[2] == layout.core[2] == layout.audience[2]
     assert layout.footer_y > layout.audience[3]
+    assert layout.footer_y < 1600
 
     image = Image.new("RGB", (1200, 1600), "white")
     draw = poster_module.ImageDraw.Draw(image)
@@ -288,6 +303,52 @@ def test_v3_fixed_layout_matches_reference_information_hierarchy() -> None:
     assert summary_truncated is False
 
 
+def test_wrap_text_avoids_leading_closing_punctuation() -> None:
+    image = Image.new("RGB", (600, 300), "white")
+    draw = poster_module.ImageDraw.Draw(image)
+    font = poster_module._FontBook(1.0).get(36, bold=True)
+    max_width = round(draw.textlength("甲乙丙", font=font))
+
+    lines, truncated = poster_module._wrap_text_with_status(
+        draw,
+        "甲乙丙，丁",
+        font,
+        max_width,
+        2,
+    )
+
+    assert lines == ["甲乙", "丙，丁"]
+    assert truncated is False
+    assert all(line[0] not in poster_module._FORBIDDEN_LINE_START for line in lines)
+    assert all(draw.textlength(line, font=font) <= max_width for line in lines)
+
+
+def test_wrap_text_avoids_trailing_opening_punctuation() -> None:
+    image = Image.new("RGB", (600, 300), "white")
+    draw = poster_module.ImageDraw.Draw(image)
+    font = poster_module._FontBook(1.0).get(36, bold=True)
+    max_width = round(draw.textlength("甲乙“", font=font))
+
+    lines, truncated = poster_module._wrap_text_with_status(
+        draw,
+        "甲乙“丙",
+        font,
+        max_width,
+        2,
+    )
+
+    assert lines == ["甲乙", "“丙"]
+    assert truncated is False
+    assert all(line[-1] not in poster_module._FORBIDDEN_LINE_END for line in lines)
+    assert all(draw.textlength(line, font=font) <= max_width for line in lines)
+
+
+def test_wrap_quality_rejects_orphaned_han_character_before_punctuation() -> None:
+    assert poster_module._has_orphaned_punctuation_lead(["词，方便查阅"]) is True
+    assert poster_module._has_orphaned_punctuation_lead(["提示词，方便查阅"]) is False
+    assert poster_module._has_orphaned_punctuation_lead(["方便集中查阅"]) is False
+
+
 @pytest.mark.parametrize(
     "unsafe_path",
     (
@@ -296,7 +357,7 @@ def test_v3_fixed_layout_matches_reference_information_hierarchy() -> None:
         "avatars/../../outside.png",
     ),
 )
-def test_v3_avatar_path_rejects_urls_and_directory_escape(
+def test_v4_avatar_path_rejects_urls_and_directory_escape(
     tmp_path: Path,
     unsafe_path: str,
 ) -> None:
@@ -307,7 +368,7 @@ def test_v3_avatar_path_rejects_urls_and_directory_escape(
         PosterRepository.from_mapping(value, avatar_root=tmp_path)
 
 
-def test_v3_avatar_path_rejects_absolute_missing_and_unsupported_files(tmp_path: Path) -> None:
+def test_v4_avatar_path_rejects_absolute_missing_and_unsupported_files(tmp_path: Path) -> None:
     value = _repository(1, "unsafe-avatar", "snapshot")
     absolute = tmp_path / "absolute.png"
     Image.new("RGB", (20, 20), "red").save(absolute)
@@ -326,7 +387,7 @@ def test_v3_avatar_path_rejects_absolute_missing_and_unsupported_files(tmp_path:
         PosterRepository.from_mapping(value, avatar_root=tmp_path)
 
 
-def test_v3_avatar_thumbnail_centre_crops_and_rounds_local_image(tmp_path: Path) -> None:
+def test_v4_avatar_thumbnail_centre_crops_and_rounds_local_image(tmp_path: Path) -> None:
     source = Image.new("RGB", (200, 100), "red")
     for x in range(100, 200):
         for y in range(100):
@@ -343,7 +404,7 @@ def test_v3_avatar_thumbnail_centre_crops_and_rounds_local_image(tmp_path: Path)
     thumbnail.close()
 
 
-def test_v3_card_uses_reference_palette_and_source_honest_growth(tmp_path: Path) -> None:
+def test_v4_card_uses_site_brand_palette_and_source_honest_growth(tmp_path: Path) -> None:
     report_path = tmp_path / "2026-07-11.json"
     report_path.write_text(
         json.dumps(
@@ -364,15 +425,10 @@ def test_v3_card_uses_reference_palette_and_source_honest_growth(tmp_path: Path)
 
     artifact = render_report_posters(report_path, output_dir=tmp_path / "posters")["comprehensive"]
     with Image.open(artifact.projects[0]) as image:
-        assert image.getpixel((10, 10)) == poster_module._hex_to_rgb(
-            poster_module._BOARD_THEMES["comprehensive"].header
-        )
-        assert image.getpixel((10, 800)) == poster_module._hex_to_rgb(
-            poster_module._WARM_BACKGROUND
-        )
-        assert image.getpixel((700, 850)) == poster_module._hex_to_rgb(
-            poster_module._BOARD_THEMES["comprehensive"].header
-        )
+        theme = poster_module._BOARD_THEMES["comprehensive"]
+        assert image.getpixel((10, 10)) == poster_module._hex_to_rgb(theme.page)
+        assert image.getpixel((970, 48)) == poster_module._hex_to_rgb(theme.accent)
+        assert image.getpixel((1100, 1350)) == poster_module._hex_to_rgb(theme.inverse)
 
     repository = PosterRepository.from_mapping(_repository(1, "verified", "snapshot"))
     assert poster_module._cover_growth_summary((repository,), "daily") == (
@@ -394,7 +450,80 @@ def test_v3_card_uses_reference_palette_and_source_honest_growth(tmp_path: Path)
     )
 
 
-def test_v3_renders_long_explainer_copy_five_capabilities_and_cached_avatar(
+def test_v4_boards_and_cadences_are_visually_distinct_and_legacy_style_is_removed(
+    tmp_path: Path,
+) -> None:
+    repository = _repository(1, "signal-tool", "snapshot")
+    comprehensive_daily = poster_module.render_board_posters(
+        board_key="comprehensive",
+        board_label="综合主榜",
+        period="daily",
+        run_date="2026-07-12",
+        repositories=[repository],
+        output_dir=tmp_path / "comprehensive-daily",
+    )
+    comprehensive_weekly = poster_module.render_board_posters(
+        board_key="comprehensive",
+        board_label="综合主榜",
+        period="weekly",
+        run_date="2026-07-12",
+        repositories=[repository],
+        output_dir=tmp_path / "comprehensive-weekly",
+    )
+    ai_daily = poster_module.render_board_posters(
+        board_key="ai",
+        board_label="AI 专题榜",
+        period="daily",
+        run_date="2026-07-12",
+        repositories=[repository],
+        output_dir=tmp_path / "ai-daily",
+    )
+
+    with (
+        Image.open(comprehensive_daily.cover) as daily,
+        Image.open(comprehensive_weekly.cover) as weekly,
+        Image.open(ai_daily.cover) as ai,
+    ):
+        board_difference = ImageChops.difference(daily, ai).convert("L").histogram()
+        cadence_difference = ImageChops.difference(daily, weekly).convert("L").histogram()
+        pixel_count = daily.width * daily.height
+        assert 1 - board_difference[0] / pixel_count > 0.75
+        assert 1 - cadence_difference[0] / pixel_count > 0.01
+        assert daily.getpixel((10, 10)) == poster_module._hex_to_rgb(poster_module._PAPER)
+        assert ai.getpixel((10, 10)) == poster_module._hex_to_rgb(poster_module._INK)
+
+    source = Path(poster_module.__file__).read_text(encoding="utf-8")
+    assert poster_module.POSTER_RENDERER_VERSION == "4.0"
+    assert poster_module.POSTER_STYLE_VERSION == "signal-broadsheet-v1"
+    for legacy in (
+        "xiaohongshu-reference-card-v3",
+        "#173F38",
+        "#24574D",
+        "#169B72",
+        "#23A77B",
+        "#D9F4E8",
+        "#DDF4EA",
+    ):
+        assert legacy not in source
+
+
+def test_public_issue_codes_start_from_first_release_date() -> None:
+    assert poster_module._issue_code("daily", date(2026, 7, 11)) == "PREVIEW"
+    assert poster_module._issue_code("daily", date(2026, 7, 12)) == "D001"
+    assert poster_module._issue_code("daily", date(2026, 7, 13)) == "D002"
+    assert poster_module._issue_code("weekly", date(2026, 7, 12)) == "W001"
+    assert poster_module._issue_code("weekly", date(2026, 7, 19)) == "W002"
+
+
+def test_explicit_issue_code_keeps_configured_weekly_series_identity() -> None:
+    run_date = date(2026, 7, 13)
+
+    assert poster_module._resolved_issue_code("weekly", run_date, "W001") == "W001"
+    with pytest.raises(ValueError, match="weekly publication series"):
+        poster_module._resolved_issue_code("weekly", run_date, "D002")
+
+
+def test_v4_renders_long_explainer_copy_five_capabilities_and_cached_avatar(
     tmp_path: Path,
 ) -> None:
     avatar_dir = tmp_path / "cache"

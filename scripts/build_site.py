@@ -405,11 +405,19 @@ def _normalise_report(
         public_root=public_root,
     )
     warnings = payload.get("warnings")
+    publication = payload.get("publication")
+    publication_data = publication if isinstance(publication, dict) else {}
     return {
         "period": period,
         "run_date": str(payload.get("run_date") or ""),
         "generated_at": str(payload.get("generated_at") or ""),
         "window_label": str(payload.get("window_label") or payload.get("run_date") or ""),
+        "publication": {
+            "issue_number": publication_data.get("issue_number"),
+            "issue_code": str(publication_data.get("issue_code") or ""),
+            "issue_label": str(publication_data.get("issue_label") or ""),
+            "status": str(publication_data.get("status") or ""),
+        },
         "data_quality": str(payload.get("data_quality") or "数据质量未标注"),
         "warnings": [str(item) for item in warnings] if isinstance(warnings, list) else [],
         "methodology": str(payload.get("methodology") or ""),

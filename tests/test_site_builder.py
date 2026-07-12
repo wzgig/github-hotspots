@@ -13,6 +13,12 @@ def _report(period: str, run_date: str, count: int, generated_at: str) -> dict:
         "run_date": run_date,
         "generated_at": generated_at,
         "window_label": run_date,
+        "publication": {
+            "issue_number": 1,
+            "issue_code": "D001" if period == "daily" else "W001",
+            "issue_label": "第1期",
+            "status": "official",
+        },
         "data_quality": "高：测试快照",
         "warnings": ["仅用于离线测试"],
         "methodology": "使用离线样本验证网站构建。",
@@ -88,6 +94,8 @@ def test_build_site_selects_latest_reports_and_enforces_limits(tmp_path: Path) -
     payload = build_site(tmp_path, "https://github.com/example/github-hotspots")
 
     assert payload["daily"]["run_date"] == "2026-07-11"
+    assert payload["daily"]["publication"]["issue_code"] == "D001"
+    assert payload["weekly"]["publication"]["issue_code"] == "W001"
     assert payload["schema_version"] == 3
     assert [item["rank"] for item in payload["daily"]["repositories"]] == [1, 2, 3]
     assert len(payload["weekly"]["repositories"]) == 7

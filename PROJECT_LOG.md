@@ -305,3 +305,61 @@
 - 项目页 <https://wzgig.github.io/github-hotspots/> 与 `data/site-data.json` 均返回 HTTP 200；线上数据为 `2026-07-12` 日榜和 `2026-W28` 周榜，数量分别为日榜综合 3 / AI 3、周榜综合 7 / AI 7。
 - 线上首项 `catchorg/Catch2` 已显示 `readme_enriched` 文案与核心亮点“贴近 C++ 表达式的测试写法”；V3 海报返回 HTTP 200、`image/png`，字节数为 200,780：<https://wzgig.github.io/github-hotspots/generated/reports/daily/assets/2026-07-12/2026-07-12.comprehensive.01.catchorg--catch2.png>。
 - Actions 仍提示 `actions/checkout@v4`、`actions/setup-python@v5`、Pages 相关 actions 的 Node.js 20 运行时弃用，并由 GitHub 强制切换到 Node.js 24；本次构建与部署成功，该提示不影响当前交付，但后续应升级对应 action 主版本。
+
+## 2026-07-12 — Signal Broadsheet 首发、发布工作台与本地 Codex 自动化
+
+### 目的
+
+将接近发布的参考风格版本升级为 GitHub Hotspots 自有产品：用原创视觉和证据化白话文案完成 `D001/W001` 首发，同时把日报每天、周报每周日的内容生产、质量门禁、GitHub 推送、Pages 刷新和本地小红书发布包串成可持续运行的流程。
+
+### 变更
+
+- 将编辑协议升级为 Prompt 4.1 / Schema 4.0，加入 3/10/30 秒阅读任务、逐字段证据、README SHA、许可证、冻结事实和整榜回退门禁；日报、周报使用不同开场、互动问题和可搜索的 `owner/repo` 标识，删除“近期升温”等重复套话。
+- 将海报 renderer 升级为 `4.0`、style 升级为 `signal-broadsheet-v1`，形成“开源热点编辑部·信号报”原创品牌：综合榜使用米纸热力格，AI 榜使用黑底雷达，日报/周报分别显示 `24H/Dxxx` 与 `7D/Wxxx`，项目卡包含 Owner 头像、五项 Signal Rail、核心亮点和适用人群。
+- 统一配置化公开期号：2026-07-12 为日报 `D001`、周报 `W001`；首发日前为 Preview。报告、Manifest、海报、Pages 和发布包共用同一期号，周报首发锚点必须是周日。
+- 新增 `publish` 发布工作台：`publish/current/TODAY.md` 汇总当前日报/周报；每榜提供 `TITLE.txt`、`CAPTION.txt`、`REVIEW.md`、有序 PNG、周期级 `CHECKLIST.md` 与 `MANIFEST.json`。发布 Manifest 包含生成器版本、内容指纹、文案/审核稿/图片哈希和实际 materialization；历史包轮转到本地 `archive/`，不进入 Git 历史。
+- 新增本地 Codex 主链路：Windows 日报 07:30、周日周报 08:45；任务只调用当前用户已安装的 `codex exec`，不读取 endpoint、provider、model、My Codex 密钥或认证文件。
+- 强化无人值守安全边界：本地 `HEAD` 为代码信任锚；只接受远端日期化报告产物变化；所有 worktree 使用本地受信 verifier；严格校验当前 Prompt/Schema/期号/renderer/style、非空双榜和完整 PNG chunk/CRC；推送前完成 publish preflight、路径白名单和 Secret 扫描；禁止强推，远端代码变化时中止并等待人工更新。
+- 新增 publish 同步指纹、跨卷复制语义、ISO week-year 归档、共享锁、陈旧 state worktree 清理、30 日运行日志和 `China Standard Time` 注册门禁；IDE 工作树不会被 reset、clean 或 rebase。
+- GitHub Actions 调整为本地优先的 deterministic 兜底：日报 09:17、周日周报 10:27；发现同日期完整 Codex 产物时跳过。Actions 运行中远端前进时不再自动 rebase 旧报告；兜底成功后显式 dispatch Pages，普通用户 push 继续使用 Pages `push` 触发。
+- 升级 Pages actions 主版本并重建 `site/data/`；网站顶部显示 `D001/W001`，项目能力区由三项更新为五项。
+- 使用冻结的 2026-07-12 / 2026-W28 排名事实重新生成四份 Codex 文案、4 张封面和 20 张项目卡；仓库身份、排名、URL、Star、Fork、增量和 `delta_source` 与变更前逐字段一致。
+- 补全海报中文禁则换行：闭标点不会落在新行开头，开引号/开括号不会停在行末；当大字号会形成“单个汉字 + 闭标点”的孤行开头时自动缩小一级字号，并以回归测试覆盖。
+
+### 文件与模块
+
+- 核心：`src/github_hotspots/{automation,publish_bundle,poster,report,editorial,config,cli}.py`
+- 自动化：`scripts/automation/{run_scheduled,register_tasks}.ps1`、`.github/workflows/{daily,weekly,pages}.yml`
+- Prompt/配置：`prompts/{repository_summary_zh,project_master_prompt_zh}.md`、`config/hotspots.yaml`
+- 发布与文档：`publish/README.md`、`docs/{AUTOMATION,PUBLISHING_PLAYBOOK,LOCAL_CODEX_API,PRODUCT_SPEC,PROJECT_PLAN,XIAOHONGSHU_CONTENT_V2_PLAN,OPERATIONS}.md`、`README.md`
+- 首发产物：`reports/daily/2026-07-12*`、`reports/weekly/2026-W28*`、两期 `assets/`、`site/data/*`
+- 测试：新增 automation/publish bundle 测试并扩展 config、poster、report、CLI、editorial 和 site builder 测试。
+
+### 验证
+
+- `pytest`：230 项全部通过，总覆盖率 81%。
+- `ruff check .`、`ruff format --check .`、`node --check site/app.js`、`git diff --check`：通过。
+- 两个 PowerShell 自动化脚本完成语法解析；daily/weekly/pages 三个 workflow 完成 YAML 解析。
+- 标准库严格门禁：日报 8 张、周报 16 张 `1200×1600` PNG；综合榜与 AI 榜均为 `used_backend=codex-cli`、`fallback_used=false`，Prompt 4.1 / Schema 4.0 / renderer 4.0 / Signal Broadsheet V4 全部匹配。
+- 冻结事实复核：日报综合 3 / AI 3、周报综合 7 / AI 7 的 `full_name/rank/stars/forks/star_delta/delta_source/html_url` 与变更前完全一致。
+- 发布工作台复核：`D001-C`、`D001-A`、`W001-C`、`W001-A` 的标题、正文、检查清单、内容指纹、图片顺序、尺寸和 SHA-256 全部通过；正文保留“AI 辅助整理｜人工发布”，不含内部报告路径或数据来源口号。
+- 视觉抽检：日报综合/AI 封面、Catch2、周报 `system_prompts_leaks` 与 OfficeCLI 项目卡无溢出、无旧版深绿/圆章/四格仪表盘残留；中文逗号行首、开引号行末问题已消除，Owner 头像和正文均可读。
+- `register_tasks.ps1 -WhatIf` 已验证；实际任务注册、提交推送、Actions 与 Pages 线上状态在本次交付的推送后继续核验。
+
+### 安全与发布决策
+
+- 未读取、复制、输出或提交本地 provider endpoint、My Codex 密钥、Codex auth/config、GitHub Token、Cookie 或浏览器资料；本地能力只通过已安装 Codex CLI 复用。
+- 小红书仍固定为人工审核、人工发布；自动登录、发帖、评论和账号操作不在当前范围。
+- `publish/current`、`publish/archive` 和本地运行日志继续由 `.gitignore` 排除；公开仓库只保存可复现的报告、海报、代码和文档。
+
+### 已知限制
+
+- 本地 Codex 任务要求 Windows 用户保持登录、系统时区为 `China Standard Time`、网络可用且项目 `.venv`/Codex CLI 有效；关机或注销时由稍后的 Actions deterministic 流程兜底。
+- Actions 无法访问个人电脑的 Codex 会话，也不能把 `publish/current` 写回离线电脑；必要时需拉取报告后在本机重新运行 `publish`。
+- 2026-W28 的部分周期 Star 仍来自明确标注的 GitHub Trending 信号，不是完整 7 日快照净增量。
+- `publish/archive` 为防止延后帖子丢失而不自动删除，长期会增长；正式清理或导出策略仍需单独设计。
+- 小红书表现数据仍需人工记录；自动读取平台数据、自动发布和小时级/近实时数据模型均属于后续独立范围。
+
+### 线上状态
+
+- 当前条目记录提交前的本地完成状态；提交 hash、Actions run、Pages 部署和 Windows 计划任务实装结果将在推送后核验，并在本次用户交付说明中给出。

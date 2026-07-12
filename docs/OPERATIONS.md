@@ -258,12 +258,13 @@ gh run view <run-id> --log-failed
 
 ### Update Modes and Near-real-time Boundary
 
-当前支持三种更新方式：
+当前支持四层更新方式：
 
 | 方式 | 入口 | 运行语义 |
 | --- | --- | --- |
-| 日榜定时 | `daily.yml` schedule | 每天北京时间 08:17 采集并生成日榜 |
-| 周榜定时 | `weekly.yml` schedule | 每周一北京时间 08:27 采集并生成周榜 |
+| 本地日榜主链路 | Windows Task Scheduler | 每天 07:30 在独立 worktree 中调用当前用户的 Codex CLI |
+| 本地周榜主链路 | Windows Task Scheduler | 每周日 08:45 生成周报 |
+| Actions 兜底 | `daily.yml` / `weekly.yml` | 09:17 / 周日 10:27，仅在没有同日期完整 Codex 报告时生成 deterministic 版本 |
 | 按需刷新 | Actions `workflow_dispatch` 或本地 CLI | 人工触发完整采集、排名和内容生成 |
 
 在 GitHub 网页手动触发时，进入仓库 **Actions**，选择 **Daily GitHub Hotspots** 或 **Weekly GitHub Hotspots**，再选择 **Run workflow**。手动运行仍须执行工作流中的测试、采集和提交门禁，不能跳过事实校验。
@@ -279,7 +280,7 @@ gh run view <run-id> --log-failed
 
 ### Daily Run
 
-- 计划：北京时间每天 08:17（UTC `17 0 * * *`）。
+- 主计划：本地北京时间每天 07:30；Actions 兜底为 09:17（UTC `17 1 * * *`）。
 - 输出：当日快照、包含综合主榜与 AI 专题榜的日榜 Markdown/JSON、综合榜 `*.xiaohongshu.md` 和 AI 榜 `*.ai.xiaohongshu.md` 两份草稿。
 - 图像产物：在 `reports/daily/assets/<date>/` 为每榜生成 1 张封面和每个项目 1 张 `1200×1600` PNG，并写入 Schema 2 `manifest.json`；全部标记为人工审核稿。
 - 目标：触发后 30 分钟内完成提交，随后 15 分钟内 Pages 可见。
@@ -293,7 +294,7 @@ python -m github_hotspots.cli run --period daily
 
 ### Weekly Run
 
-- 计划：北京时间每周一 08:27（UTC `27 0 * * 1`）。
+- 主计划：本地北京时间每周日 08:45；Actions 兜底为周日 10:27（UTC `27 2 * * 0`）。
 - 输出：包含综合主榜与 AI 专题榜的周榜 Markdown/JSON、两份小红书草稿；共享当日快照时不得损坏日榜数据。
 - 图像产物：在 `reports/weekly/assets/<ISO-week>/` 为每榜生成 1 张封面和每个项目 1 张 `1200×1600` PNG，并写入 Schema 2 `manifest.json`；全部标记为人工审核稿。
 - 验证：实际 7 日基线日期、两榜各 Top 7、重叠仓库的独立排名、增长口径和历史链接。
@@ -310,7 +311,7 @@ python -m github_hotspots.cli run --period weekly
 
 Schema 2 `manifest.json` 必须记录 renderer 名称/版本、`style_version`、`source_report`、统计窗口和 Top N。站点构建与人工抽检都以清单和源报告为核验入口。
 
-当前样例的日榜图片约 `1 MB`、周榜图片约 `2 MB`，日周合计约 `3 MB`。按每年 365 份日榜、52 份周榜并预留清单与体积波动，容量规划采用约 `495 MB/年`；Git 历史占用还可能更高。每月检查 `reports/daily/assets/`、`reports/weekly/assets/` 和仓库总体积，并在交付记录中报告异常增长。
+当前真实样例的日榜图片约 `1.49 MiB`、周榜约 `3.25 MiB`，年增长可能接近 `700 MiB`；Git 历史占用还会更高。每月检查 `reports/daily/assets/`、`reports/weekly/assets/` 和仓库总体积，并在交付记录中报告异常增长。
 
 v1.2 需要确定主分支保留时长、GitHub Releases 或外部静态存储的归档位置、历史链接迁移和恢复流程，具体时长为 `TBD`。策略落地前不得静默删除已发布图片；未来归档时也必须先验证历史 Pages 链接和 `manifest.json` 指向。
 

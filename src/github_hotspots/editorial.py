@@ -19,7 +19,7 @@ from .evidence import clean_readme_markdown
 from .models import RankedRepository
 from .summarizer import NARRATIVE_ANGLES, RepositorySummary, summary_candidates
 
-PROMPT_VERSION = "4.0"
+PROMPT_VERSION = "4.1"
 SCHEMA_VERSION = "4.0"
 FORBIDDEN_PHRASES = (
     "近期升温",
@@ -536,6 +536,8 @@ def _run_codex(
             str(staging),
             "-c",
             'shell_environment_policy.inherit="none"',
+            "-c",
+            'approval_policy="never"',
         ]
         for override in mcp_overrides:
             command.extend(["-c", override])

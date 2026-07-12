@@ -1,6 +1,6 @@
 # GitHub Hotspots 完整项目规划
 
-> 文档状态：v0.6（Prompt/Schema 4.0 证据化编辑、Owner 头像与 V3 海报信息架构已实现）
+> 文档状态：v0.7（Prompt 4.1、Signal Broadsheet V4、D001/W001 发布包与本地 Codex 主链路已实现）
 > 基准日期：2026-07-12
 > 适用范围：公开 GitHub 仓库、自动化日榜/周榜、中文内容与原创海报、GitHub Pages 项目页面
 > 决策原则：已确认决策按本文执行；仍未得到用户确认的未来能力继续标记为 `TBD`，不得据此扩大外部发布或凭据权限。
@@ -9,28 +9,28 @@
 
 ### Problem Statement
 
-人工发现 GitHub 热点、核对 Star 增量、阅读 README、整理中文亮点并维护日榜/周榜，存在耗时、口径不一致、数据不可追溯和内容失真的问题。首版规则文案还容易重复“近期升温、聚焦”等句式，且项目卡对“具体做什么、适合谁、使用前需要什么”解释不足。本轮已经实现 Prompt/Schema 4.0 证据化编辑、README/metadata 证据门禁、安全 Owner 头像缓存、V3 项目卡和 Pages 图片接入；下一阶段重点转向固定评估集、运行质量监控、文件化人工审核状态和持续积累真实 7 日基线。
+人工发现 GitHub 热点、核对 Star 增量、阅读 README、整理中文亮点并维护日榜/周榜，存在耗时、口径不一致、数据不可追溯和内容失真的问题。首版规则文案还容易重复“近期升温、聚焦”等句式，且项目卡对“具体做什么、适合谁、使用前需要什么”解释不足。本轮已经实现 Prompt 4.1 / Schema 4.0 证据化编辑、README/metadata 证据门禁、安全 Owner 头像缓存、V4 项目卡和 Pages 图片接入；下一阶段重点转向固定评估集、运行质量监控、文件化人工审核状态和持续积累真实 7 日基线。
 
 ### Proposed Solution
 
-将现有 Python 3.12 流水线建设为一个公开、可复现、可审计的 GitHub 开源情报与内容生产产品：由 GitHub Actions 定时采集公开数据并生成日榜/周榜，以本地快照计算真实增量，按需采集并清洗 README、许可证和 Owner 头像证据，再用确定性代码生成原创封面和逐项目海报，通过 GitHub Pages 展示历史榜单、方法说明、图片资产和项目状态。内容进入外部平台前保留人工审核；本地 Codex 只在事实与排名冻结后，基于同仓库不可信证据做整榜白话编辑，任一输出校验失败时整榜回退到确定性文案，不得阻断核心榜单。
+将现有 Python 3.12 流水线建设为一个公开、可复现、可审计的 GitHub 开源情报与内容生产产品：本地计划任务按时运行 Codex 证据编辑，GitHub Actions 提供无本机凭据的确定性兜底；同一份冻结事实驱动报告、Signal Broadsheet 海报、Pages 和 `publish/current` 发布工作台。内容进入外部平台前保留人工审核；任一模型、证据或推送门禁失败时不提交本地结果，由稍后的云端任务保证连续性。
 
 ### Product Positioning
 
 - **核心品类**：不是“AI 随机推荐仓库”，而是可追溯的 GitHub 开源情报流水线。
 - **核心用户**：需要稳定日更/周更的中文技术内容运营者，以及希望核验趋势依据的开发者和技术观察者。
 - **核心价值**：同一套冻结事实同时驱动榜单、解释文案、海报和 Pages，减少手工查数、重复排版和模型编造。
-- **差异化**：综合主榜与 AI 专题榜独立排名；增量口径公开；README/metadata 证据可追溯；Prompt/Schema 4.0 允许证据内白话改写；V3 海报按“项目身份—统计—最多 5 条能力—核心亮点—适合谁”组织，并可安全展示 Owner 头像。
+- **差异化**：综合主榜与 AI 专题榜独立排名；增量口径公开；README/metadata 证据可追溯；Prompt 4.1 / Schema 4.0 允许证据内白话改写；原创 Signal Broadsheet 以数据条和五项能力轨道组织信息，并可安全展示 Owner 头像。
 - **发布承诺**：自动化止于生成审核包，用户保留选题、改稿、选图与最终发布权。
 
 ### Current Baseline
 
 - 产品范围已锁定为“综合主榜 + AI 专题榜”：两榜日榜各 Top 3、周榜各 Top 7，分别排名且允许同一仓库重叠入榜。
 - 已有 GitHub Trending、GitHub REST Search、GitHub API 元数据补全、日快照、六因子排序和降级逻辑。
-- 已有包含双榜的 Markdown/JSON、综合榜与 AI 榜两份小红书审核稿，以及每日/每周 GitHub Actions。
-- 已实现确定性海报模块、报告资产清单、日/周工作流字体环境和 Pages 预览/下载；V3 单项目卡使用安全缓存的 GitHub Owner 头像，并在头像失败时显示确定性占位图。
+- 已有包含双榜的 Markdown/JSON、综合榜与 AI 榜两份小红书审核稿、本地 `publish/current` 四个帖子包，以及本地 Codex / Actions 双层自动化。
+- 已实现确定性海报模块、报告资产清单、日/周工作流字体环境和 Pages 预览/下载；V4 单项目卡使用安全缓存的 GitHub Owner 头像，并在头像失败时显示确定性占位图。
 - 当前 Git 分支为 `main`；公开远程仓库已创建，静态 GitHub Pages 与正式发布工作流已实现并通过首次线上部署验证。
-- 默认文案路径仍为确定性摘要；本地 Codex 已升级到 Prompt/Schema 4.0，可在清洗后的 README/metadata 证据范围内写白话定位、最多 5 条能力、核心亮点、受众、前置条件、限制和许可证说明，并返回逐字段 `evidence_ids`。身份、URL、数字、排名和许可证事实由程序冻结回查；GitHub Actions 仍保持 `deterministic` 默认值。
+- 默认文案路径仍为确定性摘要；本地 Codex 已升级到 Prompt 4.1 / Schema 4.0，可在清洗后的 README/metadata 证据范围内写白话定位、最多 5 条能力、核心亮点、受众、前置条件、限制和许可证说明，并返回逐字段 `evidence_ids`。身份、URL、数字、排名和许可证事实由程序冻结回查；GitHub Actions 仍保持 `deterministic` 默认值。
 
 ### Success Criteria
 
@@ -50,11 +50,11 @@
 | 热点范围 | `已确认` | 同时提供“综合主榜 + AI 专题榜”；综合榜覆盖全部合格候选，AI 榜筛选后独立排名，允许重叠 | 配置结构、报告 Schema、Pages 展示、测试样本 |
 | 小红书发布方式 | `已确认` | 当前仅生成综合榜和 AI 榜两份审核稿，由用户人工审核和发布；不自动登录或发布 | 自动发布不在当前阶段，未来如需建设必须重新明确授权 |
 | 图片策略 | `已确认，本次升级` | 每榜 1 张封面 + 每项目 1 张 `1200×1600` 原创确定性 PNG；不使用生成式图片承载事实数字 | 报告资产清单、工作流、Pages 预览/下载、字体与视觉回归 |
-| 更新节奏 | `已确认` | 每天 08:17、每周一 08:27；两个 Actions 支持 `workflow_dispatch` 手动触发，本地 CLI 支持按需运行 | 维持稳定快照与发布节奏，不宣称事件实时 |
+| 更新节奏 | `已确认` | 本地日报每天 07:30、周报周日 08:45；Actions 在 09:17 / 周日 10:27 兜底；支持手动触发 | 本地 Codex 提供质量，Actions 提供连续性，不宣称事件实时 |
 | 近实时模式 | `暂不默认启用` | 在同日多快照、API 预算、并发提交、历史保留和 Pages 展示完成设计前，仅提供按需刷新 | 未来作为独立数据模型和运营能力评估 |
 | 开源许可证 | `已确认` | 使用 MIT License，版权声明为 `Copyright (c) 2026 Zicheng Wang` | 允许商用、修改与分发；复制或分发时保留版权和许可声明 |
 | Codex Chrome Extension | `已安装并核验` | 2026-07-11 已完成只读连接验证；不在仓库记录标签页、登录态或其他浏览器隐私数据 | 浏览器能力只作辅助，不成为核心流水线依赖 |
-| 本地 Codex 能力接入 | `已实现 Prompt/Schema 4.0` | 事实与排名冻结后，通过 `codex exec` 基于清洗后的 README/metadata 做整榜证据化白话编辑；每个自然语言字段绑定合法 `evidence_ids`，身份/URL/数字/许可证事实冻结 | README 缺失时受控候选回退、非法证据/事实漂移整榜回退；GitHub Actions 默认 deterministic |
+| 本地 Codex 能力接入 | `已实现 Prompt 4.1 / Schema 4.0` | 事实与排名冻结后，通过 `codex exec` 基于清洗后的 README/metadata 做整榜证据化白话编辑；每个自然语言字段绑定合法 `evidence_ids`，身份/URL/数字/许可证事实冻结 | README 缺失时受控候选回退、非法证据/事实漂移整榜回退；GitHub Actions 默认 deterministic |
 | GitHub Pages 技术方案 | `已上线` | 使用仓库内 JSON 生成纯静态站点，由 Actions 部署；首版不引入数据库 | 持续验证报告更新触发的数据重建链路 |
 | 公开仓库名称与 Pages 域名 | `已确认` | 仓库为 `wzgig/github-hotspots`，Pages 使用 `wzgig.github.io/github-hotspots/` | README 徽章、链接、发布说明、SEO 元数据 |
 
@@ -157,7 +157,7 @@ Acceptance Criteria:
 
 - 适配器通过 `codex exec` 调用已安装 CLI；项目用公开配置把不受 CLI 0.124.0 支持的用户级 reasoning 值覆盖为 `xhigh`，但不得修改用户全局配置。
 - 适配器只提交已冻结的整榜仓库事实、确定性兜底稿、七个候选，以及经过限长和清洗的同仓库 README/metadata 证据；所有外部文本均标记为不可信数据。
-- Prompt/Schema 4.0 允许 Codex 在证据语义范围内改写 `one_line`、最多 5 条 `capabilities`、`core_title`、`core_summary`、`audience`、`prerequisites` 和 `limitations`，并为每个字段返回合法 `evidence_ids`。
+- Prompt 4.1 / Schema 4.0 允许 Codex 在证据语义范围内改写 `one_line`、最多 5 条 `capabilities`、`core_title`、`core_summary`、`audience`、`prerequisites` 和 `limitations`，并为每个字段返回合法 `evidence_ids`。
 - `license_label` 和 `license_restrictions` 只能逐字来自明确证据；`NOASSERTION`、`OTHER`、`unknown` 或空值不得推断为 MIT 或允许商用。
 - README 缺失时，只允许逐字段匹配同一 angle 的单一受控候选；尝试自由改写、证据 ID 非法、README SHA/许可证/事实不一致或输出失败时整榜回退。
 - 不读取、打印、复制或提交 `~/.codex` 等目录中的认证信息；不把本地登录态转移到 GitHub Actions。
@@ -259,7 +259,7 @@ items[].card.evidence_ids, items[].data_quality
 - 兼容 `highlights` 恰好 3 条、`capabilities` 1–5 条、长度规则与禁用措辞通过率：`100%`。
 - 榜内模板句、开头句式和亮点首词重复检查通过率：`100%`。
 - 从固定样本随机抽查 `>= 20%`，人工评价“准确、清晰、可发布”；v1.1 目标合格率 `>= 90%`。
-- 对本地 Codex 后端记录整榜 P50/P95 延迟和回退率；Prompt/Schema 4.0 的固定评估阈值在样本积累后确定，当前为 `TBD`。
+- 对本地 Codex 后端记录整榜 P50/P95 延迟和回退率；Prompt 4.1 / Schema 4.0 的固定评估阈值在样本积累后确定，当前为 `TBD`。
 
 ### AI Failure Handling
 
@@ -326,9 +326,11 @@ config loader + scope definitions
 | Snapshot store | 已有 | 按日原子保存可复算事实 | 不用半成品覆盖有效快照 |
 | Ranking | 已有综合评分 | 分离综合榜与专题榜，保存分量与范围 | 相同输入保持确定性 |
 | Evidence collector | 已实现 | 获取并清洗 README/metadata，安全缓存 Owner 头像，生成稳定证据 ID 与公开相对路径 | README 缺失降级到候选；头像失败使用占位图 |
-| Editorial backend | 已实现 | 生成确定性兜底与 7 类候选；可选 Codex Prompt/Schema 4.0 在证据内白话编辑 | 任一 Schema、证据、README SHA、许可证或事实校验失败时整榜回退 |
+| Editorial backend | 已实现 | 生成确定性兜底与 7 类候选；可选 Codex Prompt 4.1 / Schema 4.0 在证据内白话编辑 | 任一 Schema、证据、README SHA、许可证或事实校验失败时整榜回退 |
 | Report renderer | 已有 | 输出榜单、社交审核包、质量说明 | 缺必填字段时失败 |
-| Poster renderer | 已实现 V3 | 每榜封面、逐项目 `1200×1600` PNG、Owner 头像、最多 5 条能力、核心亮点、受众与资产清单 | 头像失败降级占位图；缺字体、溢出、事实漂移或保存失败时明确失败 |
+| Poster renderer | 已实现 V4 | 每榜封面、逐项目 `1200×1600` PNG、Owner 头像、最多 5 条能力、核心亮点、受众与资产清单 | 头像失败降级占位图；缺字体、溢出、事实漂移或保存失败时明确失败 |
+| Publish bundle | 已实现 | D001/W001 期号、可粘贴标题/正文、审核稿、有序图片、Manifest、current/archive 轮转 | 路径、图片、哈希或编辑元数据不合法时拒绝生成 |
+| Local scheduler | 已实现 | 独立 worktree、Codex 严格门禁、锁、路径白名单、Secret 扫描、安全 push 与 Pages 验证 | 失败不提交；Actions 稍后 deterministic 兜底 |
 | Static site generator | 已上线 | 从已提交 JSON/Markdown 构建首页、历史页、方法页和 AI 数据雷达 | 构建失败保留上一版 Pages |
 | CI/CD | 日/周任务已有 | 测试、产物提交、Pages 部署、状态摘要 | 非零退出并保留日志 |
 | Observability | 基础日志 | 运行摘要、候选数、耗时、限流、质量门禁、部署状态 | 不记录 Secret |
@@ -342,7 +344,7 @@ config loader + scope definitions
 - Pages 只消费版本化、通过校验的报告 JSON；不直接在浏览器端调用 GitHub API。
 - 图片资产位于 `reports/<period>/assets/<stem>/`，以榜单、排名和仓库标识关联到源报告；Schema 2 `manifest.json` 记录 renderer 名称/版本、`style_version`、`source_report`、统计窗口、Top N 和相对路径，并由 Pages 校验消费。
 - README/metadata 证据与头像信息作为报告仓库项的版本化附加字段保存；头像只写入报告根目录内的相对路径，不保存本机绝对路径。`readme_sha` 和逐字段 `evidence_ids` 使文案可回查到本次证据快照。
-- 当前样例的日榜图片约 `1 MB`、周榜图片约 `2 MB`，日周合计约 `3 MB`。按每年 365 份日榜、52 份周榜并预留清单与体积波动，容量规划采用约 `495 MB/年`；Git 历史占用还可能更高。v1.2 需要确定主分支保留时长、Release 或外部静态存储归档、链接迁移和恢复策略，具体时长为 `TBD`。
+- 当前真实样例的日榜图片约 `1.49 MiB`、周榜约 `3.25 MiB`，年增长可能接近 `700 MiB`；Git 历史占用还可能更高。v1.2 需要确定主分支保留时长、Release 或外部静态存储归档、链接迁移和恢复策略，具体时长为 `TBD`。
 - 海报只在相同报告输入、renderer/style 版本、字体文件和渲染环境内承诺稳定输出；Windows 与 Ubuntu 的字体或渲染库不同，PNG 栅格和字节不保证完全一致。缺少中文字体或所需字形时应直接失败。
 - 对同日重跑定义明确覆盖策略，并保留 `generated_at`、数据窗口和源状态；不声称日期快照具有秒级精度。
 
@@ -360,7 +362,7 @@ config loader + scope definitions
 
 - 只调用已安装 CLI 的受支持非交互命令；项目不直接连接、扫描或复制本地 provider 配置。
 - 调用必须发生在事实、两榜归属和排名冻结后；输入按整榜组织，并只包含确定性兜底、七个候选、清洗后的 README/metadata 和允许引用的证据 ID。
-- Prompt/Schema 4.0 允许模型在证据语义范围内写白话内容；身份、URL、数字、排名和许可证事实保持冻结。README 缺失时只允许单一受控候选，任一项目校验失败时整榜回退。
+- Prompt 4.1 / Schema 4.0 允许模型在证据语义范围内写白话内容；身份、URL、数字、排名和许可证事实保持冻结。README 缺失时只允许单一受控候选，任一项目校验失败时整榜回退。
 - 项目通过公开配置把不兼容的用户级 reasoning 值覆盖为 `xhigh`，不修改用户全局配置，也不公开 provider、endpoint、model 或凭据。
 - 本地适配器只服务本机手动或本地计划任务；云端 Actions 使用确定性回退，除非未来另行批准云端凭据方案。
 - 对冻结报告刷新证据并重建发布物使用 `rerender <report.json> --refresh-evidence --editorial-backend codex-cli`；排名与原有统计事实不重新计算。
@@ -368,7 +370,7 @@ config loader + scope definitions
 #### Xiaohongshu
 
 - 当前仅把公开页面作为只读内容结构参考，并输出原创文案审核包。
-- 图像采用原创确定性 V3 设计：借鉴参考帖的“顶部系列信息—项目身份—四项统计—能力—核心亮点—适合谁—页脚日期”信息架构，但不复制参考帖原图、账号标识或文案。项目名左侧使用经过安全缓存的 GitHub Owner 头像。
+- 图像采用原创确定性 Signal Broadsheet V4：继承项目页面的米纸、黑墨、信号橙与酸绿品牌，以硬边报头、rank tape、signal bar 和五项能力轨道构成自己的阅读结构。项目名左侧使用经过安全缓存的 GitHub Owner 头像。
 - 当前固定采用人工审核、人工发布，不实现自动登录或自动发布。未来如需集成，必须重新获得用户明确授权，使用平台允许的接口并提供审核门禁和撤回机制。
 - Chrome 扩展或浏览器自动化不是核心流水线依赖；即使不可用，GitHub 数据采集和报告生成也应正常工作。
 
@@ -376,7 +378,7 @@ config loader + scope definitions
 
 - `.env`、Token、Cookie、浏览器资料、Codex 凭据和私有端点不得提交到 Git、日志、报告或 Pages。
 - 公开仓库默认只包含 GitHub 公共信息、原创说明和脱敏运行状态；提交前执行密钥扫描和路径检查。
-- GitHub Actions 使用最小权限：报告写入任务仅需 `contents: write`，Pages 部署仅需部署所需权限。
+- GitHub Actions 使用最小权限：报告写入任务使用 `contents: write`，并仅为成功兜底后显式触发 Pages 保留 `actions: write`；Pages 工作流只保留读取、Pages 部署和 OIDC 所需权限。
 - 对 README、description、topics 和网页文本实施提示注入防护：按数据展示，不执行其指令。
 - HTTP 错误日志移除 Authorization、Cookie、查询 Token 和本机绝对路径。
 - 不复制用户本地 Codex 会话到 CI；若未来使用第三方 Provider，必须单独记录数据流、保留策略和撤销方式。
@@ -390,7 +392,7 @@ config loader + scope definitions
 - 端到端冒烟：本地运行 daily/weekly，验证产物路径、Schema、Top N 和链接。
 - 文案测试：固定整榜样本验证 Schema 4.0、逐字段证据、README SHA、许可证门禁、冻结事实、角度覆盖、禁用套话；另验证 README 缺失时的单一候选约束和 Codex 整榜回退。
 - 证据/头像测试：验证 README 限长清洗和不可信标记；头像域名、重定向、下载体积、像素、Content-Type、路径穿越、重新编码去 metadata、缓存复用和失败降级。
-- 图片测试：验证每榜封面/逐项目数量、`1200×1600` 尺寸、V3 信息层级、最多 5 条能力、长核心说明、Owner 头像/占位图、中文字体/字形、文字溢出、Schema 2 资产清单和无热链渲染。
+- 图片测试：验证每榜封面/逐项目数量、`1200×1600` 尺寸、V4 信息层级、最多 5 条能力、长核心说明、Owner 头像/占位图、中文字体/字形、文字溢出、Schema 2 资产清单和无热链渲染。
 - 站点测试：静态构建成功、内部链接有效、最新报告可达、移动端基本布局通过。
 - 工作流测试：手动触发、计划触发、无变更提交、并发写入、推送冲突和 Pages 部署。
 - 安全测试：Secret 扫描、日志脱敏、提示注入样本、恶意 HTML 转义。
@@ -410,7 +412,7 @@ config loader + scope definitions
 - 建设最小 GitHub Pages：首页、最新日榜、最新周榜、历史入口、方法页和项目日志。
 - 验证 daily/weekly Actions 的写权限、计划时区、并发控制、手动触发和自动提交。
 - 连续积累至少 7 个日期快照，验证 1 日/7 日真实增量。
-- 保持确定性文案为默认能力；本地 Codex Prompt/Schema 4.0 证据化编辑仍不作为 MVP 或 GitHub Actions 的阻塞项。
+- 保持确定性文案为默认能力；本地 Codex Prompt 4.1 / Schema 4.0 证据化编辑仍不作为 MVP 或 GitHub Actions 的阻塞项。
 - 热点范围按已经确认的“综合主榜 + AI 专题榜”运行：两榜日榜各 Top 3、周榜各 Top 7，独立排名并允许重叠。
 - 小红书生成综合榜和 AI 榜两份文案审核包，固定由人工审核和发布。
 
@@ -420,7 +422,7 @@ config loader + scope definitions
 
 - 完善综合榜/AI 专题榜的分类评估、历史对比和 Pages 交互。
 - 已重构整榜写作策略：程序先冻结事实并采集清洗后的 README/metadata；Codex 可在证据内生成白话解释，并通过 Schema 4.0、逐字段证据、README SHA、许可证和事实门禁。
-- 已为每榜生成 1 张原创封面，为每个项目生成 1 张 `1200×1600` V3 卡片；卡片支持安全 Owner 头像、最多 5 条能力、核心亮点和适合人群。
+- 已为每榜生成 1 张原创封面，为每个项目生成 1 张 `1200×1600` V4 卡片；卡片支持安全 Owner 头像、最多 5 条能力、核心亮点和适合人群。
 - 已把 Schema 2 图片资产清单接入报告、daily/weekly 工作流和 Pages 预览/下载，并完成中文字体/字形门禁与视觉抽检；跨系统 PNG 字节不作为一致性承诺。
 - 引入文件化审核状态和发布清单，支持草稿、批准、拒绝与修改记录。
 - 已完成证据编辑边界；本地 Codex 只在事实和排名冻结后运行，默认 CI 保持确定性并在任一输出校验失败时整榜回退。
@@ -459,7 +461,7 @@ config loader + scope definitions
 | M3 | 最小 Pages 上线 | M0、站点方案确认 | 公网 URL 可访问最新日/周榜及方法说明 | 已完成 |
 | M4 | 7 日快照基线验收 | M2、连续运行 | 至少 7 个有效日期快照，周增量可复算 | 待积累 |
 | M5 | 双榜范围实现 | 热点范围已确认、M3 | 综合榜/AI 榜独立配置、测试、页面与报告 | 已完成 |
-| M6 | 原创图片与审核包 | 设计规范、M3 | 每榜封面、逐项目 `1200×1600` V3 图片可重复渲染，Owner 头像安全缓存，发布前人工审核 | 核心实现完成 |
+| M6 | 原创图片与审核包 | 设计规范、M3 | 每榜封面、逐项目 `1200×1600` V4 图片可重复渲染，Owner 头像安全缓存，发布前人工审核 | 核心实现完成 |
 | M7 | 本地 Codex 证据化编辑 | CLI 接口、证据采集、评估集 | 事实冻结后整榜调用，Schema 4.0 文案逐字段绑定证据，失败自动整榜回退 | 核心实现完成 |
 | M8 | 运行监控与通知 | M2、通知渠道确认 | 失败可在目标时限内被发现并定位 | v1.1 |
 | M9 | 多专题与趋势分析 | M4、M5、Schema 版本化 | 多榜可复算，历史页面和导出稳定 | v2.0 |
@@ -504,7 +506,7 @@ M6 与 M7 可并行；两者失败都不得阻塞确定性核心榜单
 | 快照只覆盖当日候选 | 部分项目缺少基线，产生幸存者偏差 | 中 | 扩大稳定观察池；在质量字段中披露基线覆盖率 |
 | 同日重跑覆盖历史 | 周期口径失真 | 中 | 原子写入、明确覆盖策略、保留生成时间和修正日志 |
 | Actions bot 与人工 push 冲突 | 自动提交失败 | 中 | 并发组、push 前同步、失败后重新运行；不强推 main |
-| `[skip ci]` 影响 Pages 触发 | 页面不更新 | 中 | Pages 使用独立 `workflow_run`/手动触发或显式部署，不依赖被跳过的 push 流程 |
+| `GITHUB_TOKEN` 推送不递归触发 Pages | 页面不更新 | 中 | 本地用户 push 使用 Pages `push` 触发；Actions 兜底成功后显式 `workflow_dispatch` Pages，不依赖 bot push 递归触发 |
 | Codex 越过证据边界或遭提示注入 | 对外内容失真 | 中 | README/metadata 不可信输入隔离、Schema 4.0、逐字段证据、README SHA/许可证/冻结事实回查、整榜确定性回退、人工审核 |
 | 本地 Codex CLI/用户配置不兼容 | 适配器不可用或不稳定 | 高 | 不改用户全局配置；用模拟测试覆盖接口，真实调用失败自动回退，核心云端流程保持无 AI 依赖 |
 | 凭据进入公开仓库 | 严重安全事故 | 低/高影响 | `.gitignore`、Secret 扫描、最小权限、提交前检查、立即轮换与清理流程 |
@@ -519,7 +521,7 @@ M6 与 M7 可并行；两者失败都不得阻塞确定性核心榜单
 
 ### Immediate Next Steps
 
-1. 推送本轮 Prompt/Schema 4.0、证据采集和 V3 海报升级，验证 daily/weekly Actions、Schema 2 图片清单提交和 Pages 预览/下载。
+1. 推送本轮 Prompt 4.1 / Schema 4.0、证据采集和 V4 海报升级，验证 daily/weekly Actions、Schema 2 图片清单提交和 Pages 预览/下载。
 2. 建立不少于 30 个仓库的固定文案评估集，衡量证据覆盖、用途可理解性、许可证准确性、Codex 延迟与整榜回退率。
 3. 持续积累完整 7 日快照并复算周增量，避免长期依赖 Trending 周期信号。
 4. v1.2 确定通知渠道、文件化审核状态、PNG 保留/归档策略和近实时数据模型；自动发布不在当前阶段。

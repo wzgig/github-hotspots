@@ -451,8 +451,11 @@
     const dailyAi = reportBoard(data.daily, "ai");
     const weeklyAi = reportBoard(data.weekly, "ai");
 
-    document.title = `${data.site.title} / ${data.daily.run_date}`;
-    setText("#issue-date", `ISSUE / ${data.daily.run_date}`);
+    const dailyIssue = data.daily.publication && data.daily.publication.issue_code;
+    const weeklyIssue = data.weekly.publication && data.weekly.publication.issue_code;
+    const issueIdentity = [dailyIssue, weeklyIssue].filter(Boolean).join(" · ");
+    document.title = `${data.site.title} / ${dailyIssue || data.daily.run_date}`;
+    setText("#issue-date", `ISSUE / ${issueIdentity || data.daily.run_date}`);
     setText(
       "#daily-count",
       formatBoardCount(dailyComprehensive.repositories.length, dailyAi.repositories.length)

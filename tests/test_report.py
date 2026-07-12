@@ -113,7 +113,7 @@ def test_render_reports_writes_markdown_json_and_xhs_copy(tmp_path: Path) -> Non
     artifacts = render_reports(
         settings=_settings(tmp_path),
         period="daily",
-        run_date=date(2026, 7, 11),
+        run_date=date(2026, 7, 12),
         rankings=[ranked],
         ai_rankings=[ai_ranked],
         template_dir=Path("templates"),
@@ -124,6 +124,12 @@ def test_render_reports_writes_markdown_json_and_xhs_copy(tmp_path: Path) -> Non
     xhs = artifacts.xiaohongshu.read_text(encoding="utf-8")
     ai_xhs = artifacts.ai_xiaohongshu.read_text(encoding="utf-8")
     assert payload["schema_version"] == 3
+    assert payload["publication"] == {
+        "issue_number": 1,
+        "issue_code": "D001",
+        "issue_label": "第1期",
+        "status": "official",
+    }
     assert payload["editorial"]["boards"]["comprehensive"]["used_backend"] == ("deterministic")
     assert payload["assets"]["enabled"] is False
     assert payload["repositories"][0]["full_name"] == "example/hot-repo"
@@ -134,8 +140,8 @@ def test_render_reports_writes_markdown_json_and_xhs_copy(tmp_path: Path) -> Non
     assert "## 综合主榜 Top 3" in markdown
     assert "## AI 专题榜 Top 3" in markdown
     assert "快照净增 Star" in markdown
-    assert "GitHub 今日热榜｜3 个项目到底能做什么" in xhs
-    assert "GitHub AI 今日榜｜3 个项目到底能做什么" in ai_xhs
+    assert "GitHub 日报 D001｜3 个项目到底能做什么" in xhs
+    assert "GitHub AI 日报 D001｜3 个项目到底能做什么" in ai_xhs
     assert "它能做什么：" in xhs
     assert "为什么本期上榜：过去 24 小时净增 +125 Star" in xhs
     assert "GitHub 搜索：example/hot-repo" in xhs
@@ -143,7 +149,7 @@ def test_render_reports_writes_markdown_json_and_xhs_copy(tmp_path: Path) -> Non
     assert "https://github.com/" not in xhs
     assert "https://github.com/" not in ai_xhs
     assert "AI 辅助整理，发布前需人工审核" in xhs
-    assert artifacts.ai_xiaohongshu.name == "2026-07-11.ai.xiaohongshu.md"
+    assert artifacts.ai_xiaohongshu.name == "2026-07-12.ai.xiaohongshu.md"
 
 
 def test_estimated_delta_is_explicitly_labeled(tmp_path: Path) -> None:
@@ -352,6 +358,7 @@ def test_render_reports_creates_manifest_and_per_repository_posters(tmp_path: Pa
         "version": POSTER_RENDERER_VERSION,
     }
     assert manifest["style_version"] == POSTER_STYLE_VERSION
+    assert manifest["publication"]["issue_code"] == "D-PREVIEW"
     assert manifest["window"] == {"start": "2026-07-10", "end": "2026-07-11"}
     assert manifest["boards"]["comprehensive"]["top_n"] == 3
     assert "# 配图清单（发布前人工审核）" in xhs
@@ -381,6 +388,7 @@ def test_failed_second_board_keeps_previous_poster_directory(
     )
 
     def fake_render_board_posters(**kwargs) -> PosterArtifacts:
+        assert kwargs["issue_code"] == "D-PREVIEW"
         if kwargs["board_key"] == "ai":
             raise RuntimeError("simulated second-board failure")
         output_dir = Path(kwargs["output_dir"])

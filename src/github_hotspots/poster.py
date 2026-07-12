@@ -28,8 +28,8 @@ from .summarizer import summarize_repository
 
 DEFAULT_POSTER_SIZE = (1200, 1600)
 POSTER_RENDERER_NAME = "github-hotspots-pillow"
-POSTER_RENDERER_VERSION = "3.0"
-POSTER_STYLE_VERSION = "xiaohongshu-reference-card-v3"
+POSTER_RENDERER_VERSION = "4.0"
+POSTER_STYLE_VERSION = "signal-broadsheet-v1"
 _BASE_WIDTH = 1080
 _BASE_HEIGHT = 1440
 _VALID_PERIODS = {"daily", "weekly"}
@@ -37,40 +37,63 @@ _VALID_DELTA_SOURCES = {"snapshot", "trending", "estimate"}
 _CJK_PROBE_TEXT = "中文开源情报"
 _MISSING_GLYPH_SENTINEL = "\U0010ffff"
 
-_WARM_BACKGROUND = "#F4F1E9"
-_PAPER = "#FFFEFB"
-_PAPER_ALT = "#ECEFEA"
-_INK = "#17202B"
-_MUTED_INK = "#65717A"
-_BORDER = "#D9DED8"
-_GROWTH = "#E5A321"
+_PAPER = "#F2ECD9"
+_PAPER_LIGHT = "#FFFAF0"
+_INK = "#11110F"
+_MUTED_INK = "#59554B"
+_ORANGE = "#FF5B1F"
+_ACID = "#CAFF3D"
+_RULE = "#CFC6B3"
+_DARK_SURFACE = "#1B1C18"
+_DARK_RULE = "#55534B"
+
+# Compatibility aliases for the small reusable drawing helpers retained below.
+_WARM_BACKGROUND = _PAPER
+_PAPER_ALT = "#E8E3D6"
+_BORDER = _RULE
+_GROWTH = _ORANGE
 _MAX_AVATAR_BYTES = 5 * 1024 * 1024
 _ALLOWED_AVATAR_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp"}
 
 
 @dataclass(frozen=True, slots=True)
-class _KnowledgeTheme:
-    header: str
-    header_alt: str
+class _SignalTheme:
+    page: str
+    surface: str
+    ink: str
+    muted: str
     accent: str
-    accent_soft: str
-    header_text: str = "#F7FBF8"
-    header_muted: str = "#B8CEC8"
+    accent_alt: str
+    rule: str
+    inverse: str
+    inverse_text: str
+    grid: str
 
 
 _BOARD_THEMES = {
-    "comprehensive": _KnowledgeTheme(
-        header="#173F38",
-        header_alt="#24574D",
-        accent="#169B72",
-        accent_soft="#D9F4E8",
+    "comprehensive": _SignalTheme(
+        page=_PAPER,
+        surface=_PAPER_LIGHT,
+        ink=_INK,
+        muted=_MUTED_INK,
+        accent=_ORANGE,
+        accent_alt=_ACID,
+        rule=_RULE,
+        inverse=_INK,
+        inverse_text=_PAPER_LIGHT,
+        grid="#DDD5C2",
     ),
-    "ai": _KnowledgeTheme(
-        header="#173F38",
-        header_alt="#24574D",
-        accent="#23A77B",
-        accent_soft="#DDF4EA",
-        header_muted="#B8CEC8",
+    "ai": _SignalTheme(
+        page=_INK,
+        surface=_DARK_SURFACE,
+        ink=_PAPER_LIGHT,
+        muted="#B8B3A7",
+        accent=_ACID,
+        accent_alt=_ORANGE,
+        rule=_DARK_RULE,
+        inverse=_PAPER_LIGHT,
+        inverse_text=_INK,
+        grid="#292A25",
     ),
 }
 
@@ -322,11 +345,11 @@ class PosterArtifacts:
 
 @dataclass(frozen=True, slots=True)
 class _ProjectLayout:
-    """Fixed base-grid regions for one V3 project poster."""
+    """Fixed base-grid regions for one Signal Broadsheet project poster."""
 
-    header: tuple[int, int, int, int]
-    hero: tuple[int, int, int, int]
-    stats: tuple[int, int, int, int]
+    masthead: tuple[int, int, int, int]
+    identity: tuple[int, int, int, int]
+    signal_bar: tuple[int, int, int, int]
     capabilities: tuple[int, int, int, int]
     core: tuple[int, int, int, int]
     audience: tuple[int, int, int, int]
@@ -457,6 +480,7 @@ def render_board_posters(
     top_n: int | None = None,
     window_start: date | str | None = None,
     avatar_root: str | Path | None = None,
+    issue_code: str | None = None,
 ) -> PosterArtifacts:
     """Render one cover plus one portrait PNG for every ranked repository."""
 
@@ -464,6 +488,7 @@ def render_board_posters(
         raise ValueError("period must be 'daily' or 'weekly'")
     _validate_size(size)
     parsed_date = _coerce_date(run_date)
+    rendered_issue_code = _resolved_issue_code(period, parsed_date, issue_code)
     normalised = tuple(
         _coerce_repository(
             item,
@@ -495,10 +520,10 @@ def render_board_posters(
         format_cover_selection_label(selected_top_n, len(normalised)),
         format_cover_window_label(parsed_window_start, parsed_date),
         format_cover_growth_status(normalised),
-        "GitHub 热门项目日榜 GitHub 热门项目周榜 综合主榜 AI 专题榜 第期 "
-        "本期项目 每张图讲清一个仓库 它能做什么 核心亮点 谁适合用 "
-        "总 Star 本日新增 本周新增 主要语言 开源协议 许可证未标注 "
-        "GitHub 搜索 本期暂无入选项目",
+        "开源热点编辑部 GitHub 热门项目 综合主榜 AI 专题榜 本期增长 "
+        "每张图讲清一个仓库 先看它替谁解决什么 再看为什么上榜 "
+        "这个项目替你完成 核心亮点 适合 总 Star 主要语言 许可证未标注 "
+        "本期暂无入选项目 继续向左滑",
         *(repository.short_description for repository in normalised),
         *(repository.language for repository in normalised),
         *(repository.audience for repository in normalised),
@@ -531,6 +556,7 @@ def render_board_posters(
         fonts=fonts,
         top_n=selected_top_n,
         window_start=parsed_window_start,
+        issue_code=rendered_issue_code,
     )
     _save_png(cover, cover_path)
 
@@ -548,6 +574,7 @@ def render_board_posters(
             repository=repository,
             size=size,
             fonts=fonts,
+            issue_code=rendered_issue_code,
         )
         _save_png(poster, project_path)
         project_paths.append(project_path)
@@ -578,6 +605,9 @@ def render_report_posters(
     run_date = _coerce_date(str(payload.get("run_date", "")))
     raw_window_start = payload.get("window_start")
     window_start = _coerce_date(str(raw_window_start)) if raw_window_start else None
+    raw_publication = payload.get("publication")
+    publication = raw_publication if isinstance(raw_publication, Mapping) else {}
+    issue_code = _clean_text(publication.get("issue_code")) or None
 
     raw_boards = payload.get("boards")
     boards = raw_boards if isinstance(raw_boards, Mapping) else {}
@@ -617,6 +647,7 @@ def render_report_posters(
             top_n=top_n,
             window_start=window_start,
             avatar_root=path.parent,
+            issue_code=issue_code,
         )
     return result
 
@@ -630,81 +661,75 @@ def _render_project_card(
     repository: PosterRepository,
     size: tuple[int, int],
     fonts: _FontBook,
+    issue_code: str,
 ) -> Image.Image:
     scale = size[0] / _BASE_WIDTH
-    theme = _knowledge_theme(board_key)
+    theme = _signal_theme(board_key)
     layout = _project_layout(scale, size=size)
-    image = Image.new("RGB", size, _WARM_BACKGROUND)
+    image = Image.new("RGB", size, theme.page)
     draw = ImageDraw.Draw(image)
 
     def s(value: int) -> int:
         return round(value * scale)
 
-    _draw_dotted_background(draw, size=size, scale=scale)
-    draw.rounded_rectangle(
-        (-s(60), -s(90), size[0] + s(60), layout.header[3]),
-        radius=s(76),
-        fill=theme.header,
-    )
-    draw.ellipse(
-        (size[0] - s(330), -s(160), size[0] + s(100), s(270)),
-        outline=theme.header_alt,
-        width=max(2, s(7)),
-    )
-    draw.text(
-        (s(50), s(42)),
-        run_date.strftime("%Y年%m月%d日"),
-        font=fonts.get(19, bold=True),
-        fill=theme.header_muted,
-    )
-    cadence = "日榜" if period == "daily" else "周榜"
-    title = f"GitHub 热门项目{cadence}"
-    title_font = fonts.get(43, bold=True)
-    draw.text(
-        (s(50), s(88)),
-        title,
-        font=title_font,
-        fill=theme.header_text,
-    )
-    issue_x = s(50) + round(draw.textlength(title, font=title_font)) + s(18)
-    draw.text(
-        (issue_x, s(102)),
-        f"/ 第{_issue_number(period, run_date)}期",
-        font=fonts.get(26, bold=True),
-        fill=theme.accent,
-    )
-    _pill(
+    _draw_editorial_grid(draw, size=size, scale=scale, theme=theme)
+    _draw_board_motif(
         draw,
-        (s(50), s(160), s(50 + min(250, 86 + len(board_label) * 32)), s(208)),
-        theme.header_alt,
-        radius=s(24),
-    )
-    draw.text(
-        (s(74), s(171)),
-        board_label,
-        font=fonts.get(21, bold=True),
-        fill=theme.header_text,
-    )
-    draw.ellipse(
-        (s(892), s(42), s(1028), s(178)),
-        fill=_GROWTH,
-        outline=theme.header_text,
-        width=max(2, s(4)),
-    )
-    draw.text(
-        (s(960), s(110)),
-        f"#{repository.rank:02d}",
-        font=fonts.get(34, bold=True),
-        fill="#FFFFFF",
-        anchor="mm",
+        size=size,
+        scale=scale,
+        theme=theme,
+        board_key=board_key,
+        seed=_stable_seed(repository.full_name),
     )
 
-    _shadow_panel(draw, layout.hero, radius=s(34))
-    _panel(draw, layout.hero, _PAPER, outline=_BORDER, radius=s(34))
+    mark_rect = (s(48), s(36), s(104), s(92))
+    draw.rectangle(mark_rect, fill=theme.inverse)
+    draw.text(
+        ((mark_rect[0] + mark_rect[2]) // 2, (mark_rect[1] + mark_rect[3]) // 2),
+        "GH",
+        font=fonts.get(19, bold=True),
+        fill=theme.inverse_text,
+        anchor="mm",
+    )
+    draw.text(
+        (s(122), s(39)),
+        "HOTSPOTS / 开源热点编辑部",
+        font=fonts.get(19, bold=True),
+        fill=theme.ink,
+    )
+    cadence_mark = _cadence_mark(period)
+    draw.text(
+        (s(122), s(76)),
+        (
+            f"{_board_code(board_key)} · {board_label} · {cadence_mark} · "
+            f"{run_date:%Y.%m.%d} · ISSUE {issue_code}"
+        ),
+        font=fonts.get(15, bold=True),
+        fill=theme.muted,
+    )
+    _draw_rank_tape(
+        draw,
+        (s(862), s(32), s(1032), s(112)),
+        text=f"#{repository.rank:02d}",
+        fill=theme.accent,
+        text_fill=_INK,
+        fonts=fonts,
+        scale=scale,
+    )
+    draw.line(
+        (layout.masthead[0], layout.masthead[3], layout.masthead[2], layout.masthead[3]),
+        fill=theme.ink,
+        width=max(2, s(3)),
+    )
+
     owner, separator, name = repository.full_name.partition("/")
     project_name = name if separator else owner
     owner_name = owner if separator else "OPEN SOURCE"
-    identity_rect = (s(78), s(274), s(218), s(414))
+    identity_rect = (s(48), s(188), s(180), s(320))
+    draw.rectangle(
+        (s(56), s(196), s(188), s(328)),
+        fill=theme.accent,
+    )
     _draw_avatar_or_identity(
         image,
         draw,
@@ -715,196 +740,183 @@ def _render_project_card(
         scale=scale,
     )
     draw.text(
-        (s(250), s(235)),
-        owner_name,
-        font=fonts.get(18, bold=True),
+        (s(210), s(183)),
+        f"OWNER / {owner_name}",
+        font=fonts.get(17, bold=True),
         fill=theme.accent,
     )
     name_bottom = _draw_fitted_text(
         draw,
-        (s(250), s(263)),
+        (s(210), s(214)),
         project_name,
         fonts=fonts,
-        fill=_INK,
-        max_width=s(738),
+        fill=theme.ink,
+        max_width=s(680),
         max_lines=2,
-        max_size=48,
+        max_size=50,
         min_size=34,
-        line_gap=s(2),
+        line_gap=s(3),
     )
-    summary_bottom = _draw_fitted_text(
+    license_text = repository.license_spdx if repository.license_spdx else "许可证未标注"
+    draw.text(
+        (s(210), min(name_bottom + s(10), s(312))),
+        f"{repository.language}  /  {license_text}",
+        font=fonts.get(17, bold=True),
+        fill=theme.muted,
+    )
+    draw.rectangle(
+        (s(48), s(346), s(58), s(422)),
+        fill=theme.accent,
+    )
+    _draw_fitted_text(
         draw,
-        (s(250), max(s(334), name_bottom + s(10))),
+        (s(76), s(338)),
         repository.short_description,
         fonts=fonts,
-        fill=_MUTED_INK,
-        max_width=s(738),
+        fill=theme.ink,
+        max_width=s(928),
         max_lines=3,
-        max_size=23,
-        min_size=19,
-        line_gap=s(5),
-        bold=False,
-    )
-    license_text = (
-        f"开源协议 {repository.license_spdx}" if repository.license_spdx else "许可证未标注"
-    )
-    license_font = fonts.get(17, bold=True)
-    license_width = min(s(260), round(draw.textlength(license_text, font=license_font)) + s(30))
-    license_y = min(max(summary_bottom + s(10), s(430)), s(452))
-    _pill(
-        draw,
-        (s(250), license_y, s(250) + license_width, license_y + s(34)),
-        _PAPER_ALT,
-        radius=s(12),
-    )
-    draw.text(
-        (s(265), license_y + s(7)),
-        license_text,
-        font=license_font,
-        fill=_MUTED_INK,
+        max_size=36,
+        min_size=28,
+        line_gap=s(6),
     )
 
-    _draw_stats(
+    _draw_signal_bar(
         draw,
-        fonts,
-        _PALETTES[0],
-        repository,
+        layout.signal_bar,
+        repository=repository,
         period=period,
-        variant=0,
-        scale=scale,
-        rect=layout.stats,
+        fonts=fonts,
         theme=theme,
+        scale=scale,
     )
 
-    _shadow_panel(draw, layout.capabilities, radius=s(28))
-    _panel(draw, layout.capabilities, _PAPER, outline=_BORDER, radius=s(28))
-    _pill(
-        draw,
-        (s(76), s(712), s(250), s(756)),
-        _PAPER_ALT,
-        radius=s(12),
-    )
     draw.text(
-        (s(94), s(721)),
-        "它能做什么？",
-        font=fonts.get(21, bold=True),
-        fill=_MUTED_INK,
+        (layout.capabilities[0], layout.capabilities[1]),
+        "这个项目替你完成",
+        font=fonts.get(26, bold=True),
+        fill=theme.ink,
+    )
+    _draw_right_text(
+        draw,
+        (layout.capabilities[2], layout.capabilities[1] + s(4)),
+        "SIGNAL RAIL / 01—05",
+        font=fonts.get(15, bold=True),
+        fill=theme.accent,
+    )
+    draw.line(
+        (
+            layout.capabilities[0],
+            layout.capabilities[1] + s(42),
+            layout.capabilities[2],
+            layout.capabilities[1] + s(42),
+        ),
+        fill=theme.rule,
+        width=max(1, s(2)),
     )
     capabilities = _capability_list(repository.capabilities or repository.highlights)
-    capability_count = min(len(capabilities), 5)
-    capability_top = 786
-    capability_bottom = 1254
-    capability_step = min(140, max(88, (capability_bottom - capability_top) // capability_count))
-    for index, capability in enumerate(capabilities, start=1):
-        y = s(capability_top + (index - 1) * capability_step)
-        draw.rounded_rectangle(
-            (s(78), y + s(4), s(112), y + s(38)),
-            radius=s(8),
-            fill=theme.accent_soft,
-        )
-        draw.polygon(
-            (
-                (s(95), y + s(11)),
-                (s(105), y + s(21)),
-                (s(95), y + s(31)),
-                (s(85), y + s(21)),
-            ),
-            fill=theme.accent,
-        )
-        _draw_fitted_text(
-            draw,
-            (s(128), y),
-            capability,
-            fonts=fonts,
-            fill=_INK,
-            max_width=s(414),
-            max_lines=2,
-            max_size=23,
-            min_size=19,
-            line_gap=s(5),
-        )
+    _draw_signal_rail(
+        draw,
+        (
+            layout.capabilities[0],
+            layout.capabilities[1] + s(62),
+            layout.capabilities[2],
+            layout.capabilities[3],
+        ),
+        capabilities=capabilities,
+        fonts=fonts,
+        theme=theme,
+        scale=scale,
+    )
 
-    _panel(draw, layout.core, theme.header, radius=s(28))
+    draw.rectangle(
+        (
+            layout.core[0] + s(8),
+            layout.core[1] + s(8),
+            layout.core[2] + s(8),
+            layout.core[3] + s(8),
+        ),
+        fill=theme.accent_alt,
+    )
+    draw.rectangle(layout.core, fill=theme.inverse)
     draw.text(
-        (s(646), s(720)),
-        "核心亮点",
-        font=fonts.get(20, bold=True),
-        fill=theme.header_muted,
+        (layout.core[0] + s(28), layout.core[1] + s(22)),
+        "CORE SIGNAL / 核心亮点",
+        font=fonts.get(17, bold=True),
+        fill=theme.accent_alt,
     )
     core_title = repository.core_title or repository.core_value or capabilities[0]
     core_title_bottom = _draw_fitted_text(
         draw,
-        (s(646), s(770)),
+        (layout.core[0] + s(28), layout.core[1] + s(52)),
         core_title,
         fonts=fonts,
-        fill=theme.header_text,
-        max_width=s(354),
+        fill=theme.inverse_text,
+        max_width=layout.core[2] - layout.core[0] - s(56),
         max_lines=2,
-        max_size=32,
-        min_size=24,
-        line_gap=s(7),
+        max_size=31,
+        min_size=25,
+        line_gap=s(5),
     )
     core_summary = repository.core_summary or repository.short_description
     _draw_fitted_text(
         draw,
-        (s(646), core_title_bottom + s(22)),
+        (layout.core[0] + s(28), core_title_bottom + s(10)),
         core_summary,
         fonts=fonts,
-        fill=theme.header_muted,
-        max_width=s(354),
-        max_lines=5,
+        fill=theme.inverse_text,
+        max_width=layout.core[2] - layout.core[0] - s(56),
+        max_lines=3,
         max_size=20,
         min_size=17,
-        line_gap=s(6),
+        line_gap=s(5),
         bold=False,
     )
 
-    _shadow_panel(draw, layout.audience, radius=s(28))
-    _panel(draw, layout.audience, _PAPER, outline=_BORDER, radius=s(28))
     draw.text(
-        (s(646), s(1082)),
-        "谁适合用？",
+        (layout.audience[0], layout.audience[1]),
+        "适合 /",
         font=fonts.get(20, bold=True),
         fill=theme.accent,
     )
     _draw_fitted_text(
         draw,
-        (s(646), s(1130)),
+        (layout.audience[0] + s(108), layout.audience[1] - s(2)),
         repository.audience,
         fonts=fonts,
-        fill=_INK,
-        max_width=s(354),
-        max_lines=4,
-        max_size=23,
+        fill=theme.ink,
+        max_width=layout.audience[2] - layout.audience[0] - s(108),
+        max_lines=2,
+        max_size=22,
         min_size=19,
-        line_gap=s(6),
+        line_gap=s(4),
     )
 
     short_link = _short_repository_link(repository)
     draw.line(
-        (s(42), s(1324), s(1038), s(1324)),
-        fill=_BORDER,
+        (s(48), layout.footer_y - s(15), s(1032), layout.footer_y - s(15)),
+        fill=theme.ink,
         width=max(1, s(2)),
     )
     draw.text(
         (s(48), layout.footer_y),
-        "GitHub Hotspots",
-        font=fonts.get(19, bold=True),
-        fill=_MUTED_INK,
+        "GITHUB HOTSPOTS",
+        font=fonts.get(15, bold=True),
+        fill=theme.muted,
     )
-    link_font = fonts.get(19, bold=True)
+    link_font = fonts.get(16, bold=True)
     draw.text(
         (s(292), layout.footer_y),
-        _ellipsize(draw, f"GitHub 搜索：{short_link}", link_font, s(500)),
+        _ellipsize(draw, f"SEARCH / {short_link}", link_font, s(490)),
         font=link_font,
         fill=theme.accent,
     )
     _draw_right_text(
         draw,
         (s(1032), layout.footer_y),
-        run_date.strftime("%Y年%m月%d日"),
-        font=fonts.get(18, bold=True),
-        fill=_MUTED_INK,
+        run_date.strftime("%Y.%m.%d"),
+        font=fonts.get(15, bold=True),
+        fill=theme.muted,
         max_width=s(220),
     )
     return image
@@ -921,205 +933,572 @@ def _render_cover(
     fonts: _FontBook,
     top_n: int,
     window_start: date,
+    issue_code: str,
 ) -> Image.Image:
     scale = size[0] / _BASE_WIDTH
-    theme = _knowledge_theme(board_key)
-    image = Image.new("RGB", size, _WARM_BACKGROUND)
+    theme = _signal_theme(board_key)
+    image = Image.new("RGB", size, theme.page)
     draw = ImageDraw.Draw(image)
 
     def s(value: int) -> int:
         return round(value * scale)
 
-    draw.rounded_rectangle(
-        (-s(60), -s(90), size[0] + s(60), s(440)),
-        radius=s(76),
-        fill=theme.header,
-    )
-    draw.ellipse(
-        (size[0] - s(430), -s(250), size[0] + s(150), s(330)),
-        outline=theme.header_alt,
-        width=max(2, s(10)),
-    )
-    draw.text(
-        (s(64), s(48)),
-        "GITHUB HOTSPOTS · 开源项目看懂版",
-        font=fonts.get(20, bold=True),
-        fill=theme.header_muted,
-    )
-    _draw_right_text(
+    _draw_editorial_grid(draw, size=size, scale=scale, theme=theme)
+    _draw_board_motif(
         draw,
-        (s(1016), s(48)),
-        run_date.strftime("%Y.%m.%d"),
-        font=fonts.get(20, bold=True),
-        fill=theme.header_muted,
+        size=size,
+        scale=scale,
+        theme=theme,
+        board_key=board_key,
+        seed=_stable_seed(f"{board_key}:{period}:{run_date.isoformat()}"),
     )
+
+    mark_rect = (s(48), s(36), s(104), s(92))
+    draw.rectangle(mark_rect, fill=theme.inverse)
     draw.text(
-        (s(64), s(105)),
-        f"{board_label} · {'日榜' if period == 'daily' else '周榜'}",
-        font=fonts.get(31, bold=True),
-        fill=theme.accent_soft,
-    )
-    draw.text(
-        (s(64), s(171)),
-        f"{len(repositories)} 个项目",
-        font=fonts.get(70, bold=True),
-        fill=theme.header_text,
-    )
-    draw.text(
-        (s(64), s(267)),
-        "看懂它们能做什么",
-        font=fonts.get(54, bold=True),
-        fill=theme.header_text,
-    )
-    draw.rounded_rectangle(
-        (s(64), s(352), s(418), s(362)),
-        radius=s(5),
-        fill=_GROWTH,
-    )
-    _pill(draw, (s(812), s(326), s(1016), s(394)), theme.accent_soft, radius=s(32))
-    draw.text(
-        (s(914), s(360)),
-        f"TOP {top_n}",
-        font=fonts.get(25, bold=True),
-        fill=theme.header,
+        ((mark_rect[0] + mark_rect[2]) // 2, (mark_rect[1] + mark_rect[3]) // 2),
+        "GH",
+        font=fonts.get(19, bold=True),
+        fill=theme.inverse_text,
         anchor="mm",
     )
     draw.text(
-        (s(64), s(390)),
-        format_cover_window_label(window_start, run_date),
+        (s(122), s(39)),
+        "HOTSPOTS / 开源热点编辑部",
         font=fonts.get(19, bold=True),
-        fill=theme.header_muted,
+        fill=theme.ink,
     )
+    _draw_right_text(
+        draw,
+        (s(1032), s(48)),
+        f"{run_date:%Y.%m.%d} / ISSUE {issue_code}",
+        font=fonts.get(16, bold=True),
+        fill=theme.muted,
+    )
+    draw.line((s(48), s(126), s(1032), s(126)), fill=theme.ink, width=max(2, s(3)))
 
-    projects_rect = (s(64), s(470), s(1016), s(1160))
-    _shadow_panel(draw, projects_rect, radius=s(34))
-    _panel(draw, projects_rect, _PAPER, outline=_BORDER, radius=s(34))
+    cadence_mark = _cadence_mark(period)
     draw.text(
-        (s(96), s(506)),
-        "本期项目 · 每张图讲清一个仓库",
+        (s(48), s(156)),
+        cadence_mark,
+        font=fonts.get(112, bold=True),
+        fill=_cadence_colour(period),
+    )
+    draw.text(
+        (s(356), s(174)),
+        f"{_board_code(board_key)} / {board_label}",
         font=fonts.get(24, bold=True),
         fill=theme.accent,
     )
+    draw.text(
+        (s(356), s(220)),
+        "DAILY SIGNAL" if period == "daily" else "WEEKLY SIGNAL",
+        font=fonts.get(17, bold=True),
+        fill=theme.muted,
+    )
+    _draw_rank_tape(
+        draw,
+        (s(838), s(164), s(1032), s(236)),
+        text=f"TOP {top_n}",
+        fill=theme.inverse,
+        text_fill=theme.inverse_text,
+        fonts=fonts,
+        scale=scale,
+    )
+
+    timing = "今天" if period == "daily" else "本周"
+    _draw_fitted_text(
+        draw,
+        (s(48), s(310)),
+        f"{timing} {len(repositories)} 个",
+        fonts=fonts,
+        fill=theme.ink,
+        max_width=s(984),
+        max_lines=1,
+        max_size=82,
+        min_size=68,
+        line_gap=0,
+    )
+    _draw_fitted_text(
+        draw,
+        (s(48), s(402)),
+        "GitHub 热门项目",
+        fonts=fonts,
+        fill=theme.ink,
+        max_width=s(984),
+        max_lines=1,
+        max_size=68,
+        min_size=58,
+        line_gap=0,
+    )
+    draw.rectangle((s(48), s(486), s(420), s(496)), fill=theme.accent)
+    draw.text(
+        (s(48), s(520)),
+        "先看它替谁解决什么，再看为什么上榜。",
+        font=fonts.get(25, bold=True),
+        fill=theme.muted,
+    )
+    _draw_right_text(
+        draw,
+        (s(1032), s(525)),
+        format_cover_window_label(window_start, run_date),
+        font=fonts.get(16, bold=True),
+        fill=theme.muted,
+        max_width=s(440),
+    )
+
     top_items = repositories[:3]
     if top_items:
         for index, repository in enumerate(top_items):
-            top = 560 + index * 190
-            identity_rect = (s(96), s(top), s(190), s(top + 94))
-            _draw_identity_block(
+            top = 594 + index * 154
+            draw.line(
+                (s(48), s(top), s(1032), s(top)),
+                fill=theme.rule,
+                width=max(1, s(2)),
+            )
+            node_x = s(72)
+            node_y = s(top + 70)
+            if index:
+                draw.line(
+                    (node_x, s(top - 84), node_x, node_y),
+                    fill=theme.accent,
+                    width=max(2, s(4)),
+                )
+            node_size = s(36)
+            draw.rectangle(
+                (
+                    node_x - node_size // 2,
+                    node_y - node_size // 2,
+                    node_x + node_size // 2,
+                    node_y + node_size // 2,
+                ),
+                fill=theme.accent,
+            )
+            draw.text(
+                (node_x, node_y),
+                f"{repository.rank:02d}",
+                font=fonts.get(14, bold=True),
+                fill=_INK,
+                anchor="mm",
+            )
+            identity_rect = (s(112), s(top + 24), s(202), s(top + 114))
+            draw.rectangle(
+                (s(118), s(top + 30), s(208), s(top + 120)),
+                fill=theme.accent_alt,
+            )
+            _draw_avatar_or_identity(
+                image,
                 draw,
                 identity_rect,
                 repository.full_name,
+                avatar_path=repository.avatar_path,
                 fonts=fonts,
                 scale=scale,
-                compact=True,
             )
             _, _, project_name = repository.full_name.partition("/")
             display_name = project_name or repository.full_name
             _draw_fitted_text(
                 draw,
-                (s(222), s(top - 2)),
+                (s(236), s(top + 17)),
                 display_name,
                 fonts=fonts,
-                fill=_INK,
-                max_width=s(730),
+                fill=theme.ink,
+                max_width=s(770),
                 max_lines=1,
-                max_size=35,
-                min_size=28,
+                max_size=38,
+                min_size=29,
                 line_gap=0,
                 allow_truncation=True,
             )
             _draw_wrapped_text(
                 draw,
-                (s(222), s(top + 48)),
+                (s(236), s(top + 68)),
                 repository.short_description,
-                font=fonts.get(24, bold=True),
-                fill=_MUTED_INK,
-                max_width=s(730),
+                font=fonts.get(22, bold=True),
+                fill=theme.muted,
+                max_width=s(770),
                 max_lines=2,
                 line_gap=s(5),
             )
-            if index < len(top_items) - 1:
-                draw.line(
-                    (s(96), s(top + 155), s(984), s(top + 155)),
-                    fill=_BORDER,
-                    width=max(1, s(2)),
-                )
+        draw.line(
+            (s(48), s(594 + len(top_items) * 154), s(1032), s(594 + len(top_items) * 154)),
+            fill=theme.rule,
+            width=max(1, s(2)),
+        )
     else:
         draw.text(
-            (s(96), s(650)),
+            (s(48), s(690)),
             "本期暂无入选项目",
             font=fonts.get(36, bold=True),
-            fill=_MUTED_INK,
+            fill=theme.muted,
         )
 
-    growth_rect = (s(64), s(1190), s(1016), s(1320))
-    _panel(draw, growth_rect, theme.accent_soft, outline=theme.accent, radius=s(26))
-    draw.text(
-        (s(96), s(1220)),
-        "增长口径",
-        font=fonts.get(20, bold=True),
-        fill=theme.accent,
+    remaining = max(0, len(repositories) - len(top_items))
+    if remaining:
+        draw.rectangle((s(760), s(1068), s(1032), s(1120)), fill=theme.inverse)
+        draw.text(
+            (s(896), s(1094)),
+            f"+{remaining} 项继续向左滑",
+            font=fonts.get(18, bold=True),
+            fill=theme.inverse_text,
+            anchor="mm",
+        )
+
+    growth_rect = (s(48), s(1160), s(1032), s(1304))
+    draw.rectangle(
+        (
+            growth_rect[0] + s(8),
+            growth_rect[1] + s(8),
+            growth_rect[2] + s(8),
+            growth_rect[3] + s(8),
+        ),
+        fill=theme.accent_alt,
     )
-    _draw_wrapped_text(
-        draw,
-        (s(96), s(1258)),
-        _cover_growth_summary(repositories, period),
-        font=fonts.get(25, bold=True),
+    draw.rectangle(growth_rect, fill=theme.accent)
+    draw.text(
+        (s(76), s(1182)),
+        "SIGNAL CHECK / 本期增长",
+        font=fonts.get(17, bold=True),
         fill=_INK,
-        max_width=s(848),
-        max_lines=2,
-        line_gap=s(5),
     )
+    _draw_fitted_text(
+        draw,
+        (s(76), s(1224)),
+        _cover_growth_summary(repositories, period),
+        fonts=fonts,
+        fill=_INK,
+        max_width=s(900),
+        max_lines=2,
+        max_size=25,
+        min_size=21,
+        line_gap=s(4),
+    )
+    draw.line((s(48), s(1368), s(1032), s(1368)), fill=theme.ink, width=max(1, s(2)))
     draw.text(
-        (s(64), s(1362)),
-        "GitHub Hotspots · 每张图讲清一个仓库",
-        font=fonts.get(19, bold=True),
-        fill=_MUTED_INK,
+        (s(48), s(1390)),
+        "GITHUB HOTSPOTS / 每张图讲清一个仓库",
+        font=fonts.get(16, bold=True),
+        fill=theme.muted,
+    )
+    _draw_right_text(
+        draw,
+        (s(1032), s(1390)),
+        f"{cadence_mark} / {_board_code(board_key)} / SWIPE →",
+        font=fonts.get(16, bold=True),
+        fill=theme.accent,
     )
     return image
 
 
-def _knowledge_theme(board_key: str) -> _KnowledgeTheme:
-    """Return the fixed board theme without changing the card grid."""
+def _signal_theme(board_key: str) -> _SignalTheme:
+    """Return the board-specific Signal Broadsheet palette."""
 
     return _BOARD_THEMES.get(board_key.casefold(), _BOARD_THEMES["comprehensive"])
 
 
 def _issue_number(period: str, run_date: date) -> int:
-    """Return a deterministic calendar-based issue number for the header."""
+    """Return the public issue number anchored to the 2026-07-12 launch."""
 
-    return run_date.timetuple().tm_yday if period == "daily" else run_date.isocalendar().week
+    first_issue = date(2026, 7, 12)
+    if period == "daily":
+        return max(0, (run_date - first_issue).days + 1)
+    first_week = first_issue - timedelta(days=first_issue.weekday())
+    run_week = run_date - timedelta(days=run_date.weekday())
+    return max(0, (run_week - first_week).days // 7 + 1)
 
 
-def _draw_dotted_background(
+def _issue_code(period: str, run_date: date) -> str:
+    """Return D001/W001 identity or PREVIEW for pre-launch material."""
+
+    number = _issue_number(period, run_date)
+    if number < 1:
+        return "PREVIEW"
+    prefix = "D" if period == "daily" else "W"
+    return f"{prefix}{number:03d}"
+
+
+def _resolved_issue_code(period: str, run_date: date, issue_code: str | None) -> str:
+    """Prefer the report/config issue identity and validate direct-render overrides."""
+
+    if issue_code is None:
+        return _issue_code(period, run_date)
+    candidate = _clean_text(issue_code)
+    prefix = "D" if period == "daily" else "W"
+    if not re.fullmatch(rf"(?:{prefix}\d{{3,}}|{prefix}-PREVIEW|PREVIEW)", candidate):
+        raise ValueError(f"issue_code must match the {period} publication series")
+    return candidate
+
+
+def _cadence_mark(period: str) -> str:
+    """Return the compact cadence label used as a visual navigation cue."""
+
+    return "24H" if period == "daily" else "7D"
+
+
+def _cadence_colour(period: str) -> str:
+    """Use a second non-board cue so daily and weekly covers differ at thumbnail size."""
+
+    return _ORANGE if period == "daily" else _ACID
+
+
+def _board_code(board_key: str) -> str:
+    """Return a short board code that remains readable without colour."""
+
+    return "AI" if board_key.casefold() == "ai" else "ALL"
+
+
+def _draw_editorial_grid(
     draw: ImageDraw.ImageDraw,
     *,
     size: tuple[int, int],
     scale: float,
+    theme: _SignalTheme,
 ) -> None:
-    """Add a quiet editorial dot field behind the paper cards."""
+    """Draw a restrained print grid and crop marks behind the content."""
 
-    step = max(18, round(30 * scale))
-    radius = max(1, round(scale))
-    for y in range(round(320 * scale), size[1] - round(90 * scale), step):
-        for x in range(round(18 * scale), size[0] - round(18 * scale), step):
-            draw.ellipse((x - radius, y - radius, x + radius, y + radius), fill="#DDE1DD")
+    step = max(28, round(48 * scale))
+    for x in range(0, size[0] + 1, step):
+        draw.line((x, 0, x, size[1]), fill=theme.grid, width=max(1, round(scale)))
+    for y in range(0, size[1] + 1, step):
+        draw.line((0, y, size[0], y), fill=theme.grid, width=max(1, round(scale)))
+
+    inset = round(24 * scale)
+    length = round(22 * scale)
+    width = max(1, round(2 * scale))
+    for x, x_direction in ((inset, 1), (size[0] - inset, -1)):
+        for y, y_direction in ((inset, 1), (size[1] - inset, -1)):
+            draw.line((x, y, x + length * x_direction, y), fill=theme.muted, width=width)
+            draw.line((x, y, x, y + length * y_direction), fill=theme.muted, width=width)
+
+
+def _draw_board_motif(
+    draw: ImageDraw.ImageDraw,
+    *,
+    size: tuple[int, int],
+    scale: float,
+    theme: _SignalTheme,
+    board_key: str,
+    seed: int,
+) -> None:
+    """Add a deterministic heat-grid or radar fragment as the board signature."""
+
+    def s(value: int) -> int:
+        return round(value * scale)
+
+    if board_key.casefold() == "ai":
+        center_x = size[0] - s(88)
+        center_y = s(182)
+        for radius in (48, 92, 136, 180):
+            draw.arc(
+                (
+                    center_x - s(radius),
+                    center_y - s(radius),
+                    center_x + s(radius),
+                    center_y + s(radius),
+                ),
+                start=28,
+                end=318,
+                fill=theme.grid,
+                width=max(1, s(2)),
+            )
+        angle_offset = seed % 70
+        draw.line(
+            (
+                center_x,
+                center_y,
+                center_x - s(138 - angle_offset // 3),
+                center_y + s(112 + angle_offset // 4),
+            ),
+            fill=theme.accent,
+            width=max(2, s(4)),
+        )
+        draw.rectangle(
+            (center_x - s(80), center_y + s(30), center_x - s(66), center_y + s(44)),
+            fill=theme.accent_alt,
+        )
+        return
+
+    cell = s(18)
+    gap = s(7)
+    origin_x = size[0] - s(272)
+    origin_y = s(148)
+    for row in range(5):
+        for column in range(8):
+            active = (seed >> ((row * 8 + column) % 32)) & 1
+            fill = theme.accent if active else theme.grid
+            x1 = origin_x + column * (cell + gap)
+            y1 = origin_y + row * (cell + gap)
+            draw.rectangle((x1, y1, x1 + cell, y1 + cell), fill=fill)
+
+
+def _draw_rank_tape(
+    draw: ImageDraw.ImageDraw,
+    rect: tuple[int, int, int, int],
+    *,
+    text: str,
+    fill: str,
+    text_fill: str,
+    fonts: _FontBook,
+    scale: float,
+) -> None:
+    """Draw a hard-edged label with a ticket notch instead of a circular badge."""
+
+    x1, y1, x2, y2 = rect
+    notch = max(8, round(12 * scale))
+    middle = (y1 + y2) // 2
+    draw.polygon(
+        ((x1, y1), (x2, y1), (x2, y2), (x1, y2), (x1 + notch, middle)),
+        fill=fill,
+    )
+    draw.text(
+        ((x1 + x2 + notch) // 2, middle),
+        text,
+        font=fonts.get(26, bold=True),
+        fill=text_fill,
+        anchor="mm",
+    )
+
+
+def _draw_signal_bar(
+    draw: ImageDraw.ImageDraw,
+    rect: tuple[int, int, int, int],
+    *,
+    repository: PosterRepository,
+    period: str,
+    fonts: _FontBook,
+    theme: _SignalTheme,
+    scale: float,
+) -> None:
+    """Render growth and repository facts as one compact editorial band."""
+
+    def s(value: int) -> int:
+        return round(value * scale)
+
+    x1, y1, x2, y2 = rect
+    draw.rectangle(rect, fill=theme.inverse)
+    growth_width = min(s(310), round((x2 - x1) * 0.34))
+    growth_right = x1 + growth_width
+    draw.rectangle((x1, y1, growth_right, y2), fill=theme.accent)
+    growth_label, growth_value = _growth_metric(repository, period)
+    draw.text(
+        (x1 + s(18), y1 + s(16)),
+        growth_label.upper(),
+        font=fonts.get(15, bold=True),
+        fill=_INK,
+    )
+    draw.text(
+        (x1 + s(18), y1 + s(48)),
+        growth_value,
+        font=fonts.get(32, bold=True),
+        fill=_INK,
+    )
+
+    metrics = (
+        ("TOTAL STAR", f"{repository.stars:,}"),
+        ("FORK", f"{repository.forks:,}"),
+        ("LANG", repository.language),
+    )
+    metric_width = (x2 - growth_right) / len(metrics)
+    for index, (label, value) in enumerate(metrics):
+        left = round(growth_right + index * metric_width)
+        right = (
+            x2 if index == len(metrics) - 1 else round(growth_right + (index + 1) * metric_width)
+        )
+        draw.line((left, y1, left, y2), fill=theme.page, width=max(1, s(2)))
+        draw.text(
+            (left + s(16), y1 + s(17)),
+            label,
+            font=fonts.get(14, bold=True),
+            fill=theme.page,
+        )
+        value_font = fonts.get(24, bold=True)
+        draw.text(
+            (left + s(16), y1 + s(54)),
+            _ellipsize(draw, value, value_font, right - left - s(30)),
+            font=value_font,
+            fill=theme.inverse_text,
+        )
+
+
+def _draw_signal_rail(
+    draw: ImageDraw.ImageDraw,
+    rect: tuple[int, int, int, int],
+    *,
+    capabilities: Sequence[str],
+    fonts: _FontBook,
+    theme: _SignalTheme,
+    scale: float,
+) -> None:
+    """Use a Git-like signal rail to order up to five plain-language capabilities."""
+
+    def s(value: int) -> int:
+        return round(value * scale)
+
+    visible = tuple(capabilities[:5])
+    if not visible:
+        return
+    x1, y1, x2, y2 = rect
+    rail_x = x1 + s(34)
+    text_x = x1 + s(92)
+    slot_height = max(s(70), (y2 - y1) // len(visible))
+    centers = [y1 + index * slot_height + s(25) for index in range(len(visible))]
+    if len(centers) > 1:
+        draw.line(
+            (rail_x, centers[0], rail_x, centers[-1]),
+            fill=theme.accent,
+            width=max(2, s(4)),
+        )
+    for index, (capability, center_y) in enumerate(zip(visible, centers, strict=True), start=1):
+        node = s(30)
+        half = node // 2
+        draw.polygon(
+            (
+                (rail_x, center_y - half),
+                (rail_x + half, center_y),
+                (rail_x, center_y + half),
+                (rail_x - half, center_y),
+            ),
+            fill=theme.accent,
+        )
+        draw.text(
+            (rail_x, center_y),
+            f"{index:02d}",
+            font=fonts.get(12, bold=True),
+            fill=_INK,
+            anchor="mm",
+        )
+        text_top = y1 + (index - 1) * slot_height
+        _draw_fitted_text(
+            draw,
+            (text_x, text_top),
+            capability,
+            fonts=fonts,
+            fill=theme.ink,
+            max_width=x2 - text_x,
+            max_lines=2,
+            max_size=27,
+            min_size=22,
+            line_gap=s(4),
+        )
+        if index < len(visible):
+            rule_y = y1 + index * slot_height - s(9)
+            draw.line((text_x, rule_y, x2, rule_y), fill=theme.rule, width=max(1, s(1)))
 
 
 def _project_layout(scale: float, *, size: tuple[int, int] = DEFAULT_POSTER_SIZE) -> _ProjectLayout:
-    """Scale the fixed V3 reference-card layout to a supported portrait size."""
+    """Scale the fixed Signal Broadsheet grid to a supported portrait size."""
 
     def rect(values: tuple[int, int, int, int]) -> tuple[int, int, int, int]:
         return tuple(round(value * scale) for value in values)  # type: ignore[return-value]
 
     return _ProjectLayout(
-        header=(0, 0, size[0], round(300 * scale)),
-        hero=rect((42, 205, 1038, 492)),
-        stats=rect((42, 516, 1038, 650)),
-        capabilities=rect((42, 680, 582, 1288)),
-        core=rect((610, 680, 1038, 1025)),
-        audience=rect((610, 1050, 1038, 1250)),
-        footer_y=round(1350 * scale),
+        masthead=rect((48, 36, 1032, 126)),
+        identity=rect((48, 164, 1032, 432)),
+        signal_bar=rect((48, 452, 1032, 568)),
+        capabilities=rect((48, 604, 1032, 1060)),
+        core=rect((48, 1084, 1032, 1288)),
+        audience=rect((48, 1310, 1032, 1368)),
+        footer_y=round(1394 * scale),
     )
 
 
@@ -1176,27 +1555,32 @@ def _draw_identity_block(
     scale: float,
     compact: bool = False,
 ) -> None:
-    """Draw an original monogram tile; never fetch or imply an official logo."""
+    """Draw an original hard-edged signal tile; never imply an official logo."""
 
     background, foreground = _identity_colours(full_name)
     x1, y1, x2, y2 = rect
     width = x2 - x1
-    radius = max(14, width // 5)
-    draw.rounded_rectangle(rect, radius=radius, fill=background)
+    draw.rectangle(rect, fill=background, outline=_INK, width=max(1, round(2 * scale)))
     seed = _stable_seed(full_name)
     inset = max(8, width // 9)
-    draw.arc(
-        (x1 + inset, y1 + inset, x2 - inset, y2 - inset),
-        start=20 + seed % 50,
-        end=250 + seed % 70,
+    rail_x = x1 + inset + seed % max(1, width // 4)
+    draw.line(
+        (rail_x, y1 + inset, rail_x, y2 - inset),
         fill=foreground,
         width=max(2, round((3 if compact else 4) * scale)),
     )
+    node = max(5, round((7 if compact else 9) * scale))
+    for offset in (0, width // 4, width // 2):
+        center_y = min(y2 - inset, y1 + inset + offset)
+        draw.rectangle(
+            (rail_x - node, center_y - node, rail_x + node, center_y + node),
+            fill=foreground,
+        )
     draw.line(
         (
-            x1 + width // 4,
-            y2 - width // 4,
-            x2 - width // 5,
+            rail_x,
+            y1 + width // 2,
+            x2 - inset,
             y1 + width // 3,
         ),
         fill=foreground,
@@ -1204,18 +1588,17 @@ def _draw_identity_block(
     )
     token = _identity_token(full_name)
     font = fonts.get(30 if compact else 39, bold=True)
-    draw.rounded_rectangle(
+    draw.rectangle(
         (
-            x1 + width // 5,
-            y1 + width // 3,
-            x2 - width // 5,
-            y2 - width // 5,
+            x1 + width // 3,
+            y1 + width // 2,
+            x2 - width // 10,
+            y2 - width // 10,
         ),
-        radius=max(8, width // 10),
         fill=background,
     )
     draw.text(
-        ((x1 + x2) // 2, y1 + width * 3 // 5),
+        (x1 + width * 2 // 3, y1 + width * 2 // 3),
         token,
         font=font,
         fill=foreground,
@@ -1274,13 +1657,13 @@ def _draw_avatar_or_identity(
     avatar = _load_avatar_thumbnail(
         avatar_path,
         (x2 - x1, y2 - y1),
-        radius=max(12, round(24 * scale)),
+        radius=max(2, round(5 * scale)),
     )
     image.paste(avatar, (x1, y1), avatar)
     draw.rounded_rectangle(
         rect,
-        radius=max(12, round(24 * scale)),
-        outline="#D6DDD8",
+        radius=max(2, round(5 * scale)),
+        outline=_INK,
         width=max(2, round(3 * scale)),
     )
     avatar.close()
@@ -1337,87 +1720,6 @@ def _cover_growth_summary(repositories: Sequence[PosterRepository], period: str)
     if verified:
         return f"{len(verified)}/{len(repositories)} 个项目具备可核验快照基线，未将 Trending 或估算值计入合计。"
     return "新增基线仍在积累，本期不把 Trending 或估算信号写成精确净增。"
-
-
-def _draw_stats(
-    draw: ImageDraw.ImageDraw,
-    fonts: _FontBook,
-    palette: PosterPalette,
-    repository: PosterRepository,
-    *,
-    period: str,
-    variant: int,
-    scale: float,
-    rect: tuple[int, int, int, int] | None = None,
-    theme: _KnowledgeTheme | None = None,
-) -> int:
-    def s(value: int) -> int:
-        return round(value * scale)
-
-    del palette, variant
-    selected_theme = theme or _BOARD_THEMES["comprehensive"]
-    target = rect or (s(64), s(486), s(1016), s(618))
-    x1, y1, x2, y2 = target
-    gap = s(14)
-    width = (x2 - x1 - gap * 3) // 4
-    growth_label, growth_value = _growth_metric(repository, period)
-    metrics = (
-        ("总 Star", f"{repository.stars:,}"),
-        (growth_label, growth_value),
-        ("主要语言", repository.language),
-        ("Fork", f"{repository.forks:,}"),
-    )
-    for index, (label, value) in enumerate(metrics):
-        left = x1 + index * (width + gap)
-        right = x2 if index == 3 else left + width
-        _knowledge_stat_card(
-            draw,
-            fonts,
-            selected_theme,
-            (left, y1, right, y2),
-            label,
-            value,
-            emphasised=index == 1,
-        )
-    return y2
-
-
-def _knowledge_stat_card(
-    draw: ImageDraw.ImageDraw,
-    fonts: _FontBook,
-    theme: _KnowledgeTheme,
-    rect: tuple[int, int, int, int],
-    label: str,
-    value: str,
-    *,
-    emphasised: bool,
-) -> None:
-    fill = theme.accent_soft if emphasised else _PAPER
-    outline = theme.accent if emphasised else _BORDER
-    radius = max(18, (rect[3] - rect[1]) // 6)
-    _shadow_panel(draw, rect, radius=radius, offset=3)
-    _panel(draw, rect, fill, outline=outline, radius=radius)
-    x1, y1, x2, y2 = rect
-    padding = max(16, (y2 - y1) // 7)
-    draw.text(
-        (x1 + padding, y1 + padding),
-        label,
-        font=fonts.get(20, bold=True),
-        fill=theme.accent if emphasised else _MUTED_INK,
-    )
-    _draw_fitted_text(
-        draw,
-        (x1 + padding, y1 + padding + max(31, (y2 - y1) // 3)),
-        value,
-        fonts=fonts,
-        fill=_INK,
-        max_width=x2 - x1 - padding * 2,
-        max_lines=1,
-        max_size=31,
-        min_size=22,
-        line_gap=0,
-        allow_truncation=True,
-    )
 
 
 def _stat_card(
@@ -1649,12 +1951,13 @@ def _draw_fitted_text(
         selected_font = candidate_font
         selected_lines = candidate_lines
         selected_truncated = truncated
-        if not truncated:
+        if not truncated and not _has_orphaned_punctuation_lead(candidate_lines):
             break
 
     if selected_truncated and not allow_truncation:
         raise ValueError(
-            f"poster text does not fit its V3 region: {_clip_plain(_clean_text(text), 48)}"
+            "poster text does not fit its Signal Broadsheet region: "
+            f"{_clip_plain(_clean_text(text), 48)}"
         )
 
     x, y = position
@@ -1717,8 +2020,27 @@ def _wrap_text_with_status(
             current = candidate
             continue
         if current.strip():
-            lines.append(current.rstrip())
-            current = token.lstrip()
+            kinsoku_break = _rebalance_line_end_punctuation(
+                draw,
+                current,
+                token,
+                font,
+                max_width,
+            )
+            if kinsoku_break is None:
+                kinsoku_break = _rebalance_line_start_punctuation(
+                    draw,
+                    current,
+                    token,
+                    font,
+                    max_width,
+                )
+            if kinsoku_break is None:
+                lines.append(current.rstrip())
+                current = token.lstrip()
+            else:
+                completed_line, current = kinsoku_break
+                lines.append(completed_line)
         else:
             split_token, remainder = _split_token(draw, token, font, max_width)
             lines.append(split_token)
@@ -1742,6 +2064,76 @@ def _wrap_text_with_status(
     if truncated and lines:
         lines[-1] = _ellipsize(draw, lines[-1] + "…", font, max_width)
     return lines, truncated
+
+
+_FORBIDDEN_LINE_START = frozenset("，。！？；：、）》】」』〉〕］｝”’…—,.!?;:%)]}")
+_FORBIDDEN_LINE_END = frozenset("（《【「『〈〔［｛“‘([{")
+_TRAILING_WRAP_UNIT = re.compile(r"(?:[A-Za-z0-9][A-Za-z0-9_./:+#@&-]*|\S)\s*$")
+_CJK_CHARACTER = re.compile(r"[\u3400-\u9fff]")
+
+
+def _has_orphaned_punctuation_lead(lines: Sequence[str]) -> bool:
+    """Detect a lone Han character carried before closing punctuation."""
+
+    return any(
+        len(line) >= 2
+        and _CJK_CHARACTER.fullmatch(line[0]) is not None
+        and line[1] in _FORBIDDEN_LINE_START
+        for line in lines
+    )
+
+
+def _rebalance_line_end_punctuation(
+    draw: ImageDraw.ImageDraw,
+    current: str,
+    token: str,
+    font: ImageFont.FreeTypeFont | ImageFont.ImageFont,
+    max_width: int,
+) -> tuple[str, str] | None:
+    """Carry opening punctuation forward instead of leaving it at line end."""
+
+    current_text = current.rstrip()
+    if not current_text or current_text[-1] not in _FORBIDDEN_LINE_END:
+        return None
+
+    completed_line = current_text[:-1].rstrip()
+    carried_text = current_text[-1] + token.lstrip()
+    if (
+        not completed_line
+        or draw.textlength(completed_line, font=font) > max_width
+        or draw.textlength(carried_text.rstrip(), font=font) > max_width
+    ):
+        return None
+    return completed_line, carried_text
+
+
+def _rebalance_line_start_punctuation(
+    draw: ImageDraw.ImageDraw,
+    current: str,
+    token: str,
+    font: ImageFont.FreeTypeFont | ImageFont.ImageFont,
+    max_width: int,
+) -> tuple[str, str] | None:
+    """Keep closing punctuation away from the start of a wrapped line."""
+
+    next_text = token.lstrip()
+    current_text = current.rstrip()
+    if not next_text or next_text[0] not in _FORBIDDEN_LINE_START:
+        return None
+
+    trailing_unit = _TRAILING_WRAP_UNIT.search(current_text)
+    if trailing_unit is None or trailing_unit.start() == 0:
+        return None
+
+    completed_line = current_text[: trailing_unit.start()].rstrip()
+    carried_text = current_text[trailing_unit.start() :] + next_text
+    if (
+        not completed_line
+        or draw.textlength(completed_line, font=font) > max_width
+        or draw.textlength(carried_text.rstrip(), font=font) > max_width
+    ):
+        return None
+    return completed_line, carried_text
 
 
 def _split_token(

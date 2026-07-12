@@ -53,6 +53,13 @@ def test_project_configuration_loads_with_expected_cadence() -> None:
     posters = settings.poster_settings()
     assert posters.enabled is True
     assert (posters.width, posters.height) == (1200, 1600)
+    publication = settings.publication_settings()
+    assert publication.root_dir.name == "publish"
+    assert publication.daily_first_issue_date.isoformat() == "2026-07-12"
+    assert publication.weekly_first_issue_date.isoformat() == "2026-07-12"
+    assert publication.title_max_chars == 30
+    assert publication.caption_max_chars == 1000
+    assert publication.prefer_hardlinks is True
 
 
 def test_configuration_rejects_unknown_period() -> None:
@@ -69,7 +76,7 @@ def test_configuration_rejects_unknown_board() -> None:
         settings.board("security")
 
 
-@pytest.mark.parametrize("section", ["editorial", "posters"])
+@pytest.mark.parametrize("section", ["editorial", "posters", "publication"])
 def test_configuration_requires_mapping_sections(tmp_path: Path, section: str) -> None:
     document = _config_document()
     document[section] = []
@@ -94,6 +101,7 @@ def test_configuration_requires_mapping_codex_cli_options(tmp_path: Path) -> Non
         ("boards", "ai", "enabled"),
         ("editorial", "allow_in_ci"),
         ("posters", "enabled"),
+        ("publication", "prefer_hardlinks"),
         ("sources", "search", "enabled"),
         ("filters", "require_description"),
     ],
@@ -113,4 +121,29 @@ def test_configuration_caps_poster_dimensions(tmp_path: Path) -> None:
     posters.update({"width": 3000, "height": 4000})
 
     with pytest.raises(ConfigurationError, match="must not exceed 2400x3200"):
+        load_settings(_write_config(tmp_path, document))
+
+
+@pytest.mark.parametrize(
+    ("key", "value", "message"),
+    [
+        ("daily_first_issue_date", "2026/07/12", "must use YYYY-MM-DD"),
+        ("weekly_first_issue_date", 20260712, "must use YYYY-MM-DD"),
+        ("weekly_first_issue_date", "2026-07-13", "must be a Sunday"),
+        ("title_max_chars", 5, "must be between 10 and 80"),
+        ("caption_max_chars", 100, "must be between 200 and 5000"),
+    ],
+)
+def test_configuration_validates_publication_settings(
+    tmp_path: Path,
+    key: str,
+    value: object,
+    message: str,
+) -> None:
+    document = _config_document()
+    publication = document["publication"]
+    assert isinstance(publication, dict)
+    publication[key] = value
+
+    with pytest.raises(ConfigurationError, match=message):
         load_settings(_write_config(tmp_path, document))

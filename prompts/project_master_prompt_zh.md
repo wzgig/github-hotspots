@@ -11,12 +11,12 @@
 ```text
 候选发现 → GitHub 事实补全 → 过滤 → 快照 → 增量
 → 综合候选/AI 分类 → 两榜独立排名 → README/metadata/Owner 头像证据采集与清洗
-→ 确定性兜底/可选本地 Codex Prompt 4.0 证据化编辑
-→ 日报/周报与两份小红书文案 → 每榜封面与 V3 逐项目海报
-→ Pages 预览/下载 → 测试、提交、推送与线上验证
+→ 确定性兜底/可选本地 Codex Prompt 4.1 证据化编辑
+→ 日报/周报与两份小红书文案 → 每榜封面与 Signal Broadsheet V4 项目海报
+→ publish/current 可粘贴发布包 → Pages 预览/下载 → 测试、提交、推送与线上验证
 ```
 
-综合主榜和 AI 专题榜的日榜默认各 Top 3、周榜默认各 Top 7。两榜独立排名并允许同一仓库同时入榜。封面先回答“本期几个项目分别能做什么”，增长数据作为上榜信号而不是点击理由；每个 V3 项目卡必须用普通中文讲清用途、最多 5 个具体能力、核心亮点和适用人群，再补充语言、总 Star、周期增长、Fork，以及明确许可证或“许可证未标注”状态。前置条件或限制写入配套文字审核稿，不为塞进海报而缩成难读小字。项目名左侧使用经过安全缓存的 GitHub Owner 头像，失败时使用确定性占位图。
+综合主榜和 AI 专题榜的日榜默认各 Top 3、周榜默认各 Top 7。两榜独立排名并允许同一仓库同时入榜。封面先回答“本期几个项目分别能做什么”，增长数据作为上榜信号而不是点击理由；每个 V4 项目卡必须用普通中文讲清用途、最多 5 个具体能力、核心亮点和适用人群，再补充语言、总 Star、周期增长、Fork，以及明确许可证或“许可证未标注”状态。视觉统一采用项目页面的米纸、黑墨、信号橙、酸绿色与 Git 式 Signal Rail，不恢复旧版深绿参考构图。项目名左侧使用经过安全缓存的 GitHub Owner 头像，失败时使用确定性身份块。
 
 ## 二、执行默认值
 
@@ -35,8 +35,10 @@
 - 冻结事实离线重渲染：`python -m github_hotspots.cli rerender <report.json>`。
 - 在冻结排名上刷新许可证与 Owner 头像证据：`python -m github_hotspots.cli rerender <report.json> --refresh-evidence`；只有同时选择 `codex-cli` 时才读取 README。
 - 本地 Codex 显式启用：在 `run` 或 `rerender` 后添加 `--editorial-backend codex-cli`；刷新已有报告 README/许可证/头像并证据化编辑的完整命令为 `rerender <report.json> --refresh-evidence --editorial-backend codex-cli`。GitHub Actions 默认不启用。
-- 日榜计划：北京时间每天 08:17。
-- 周榜计划：北京时间每周一 08:27。
+- 发布包命令：`python -m github_hotspots.cli publish <report.json>`；生成 `publish/current` 下的标题、可粘贴正文、审核稿和有序图片。
+- 本地日报主计划：北京时间每天 07:30，使用当前用户已登录的 Codex CLI。
+- 本地周报主计划：北京时间每周日 08:45，使用当前用户已登录的 Codex CLI。
+- Actions 兜底：日报每天 09:17，周报周日 10:27；检测到同日期完整 Codex 报告时必须跳过，不能用 deterministic 覆盖。
 - GitHub Token：从环境变量 `GITHUB_TOKEN` 读取。
 - 输出语言：简体中文；仓库名、语言、框架和标准术语保留原文。
 - 小红书发布：只生成综合榜和 AI 榜两份草稿，由用户人工审核与发布；当前阶段不自动登录或发布。
@@ -115,15 +117,15 @@
 
 ### 4. 摘要与卡片
 
-- 摘要的首要任务不是改变句式，而是让第一次看到仓库的中文读者在 5 秒内回答“它替谁完成什么任务，会得到什么结果”。禁止以“面向……方向的开源项目”“公开简介与 Topics 显示”“近期升温”等空泛句式代替解释。
+- 摘要的首要任务不是改变句式，而是完成 3/10/30 秒阅读任务：3 秒看懂用途，10 秒判断五项能力，30 秒结合核心亮点、适合人群、前置条件与限制决定是否继续了解。禁止以“面向……方向的开源项目”“公开简介与 Topics 显示”“近期升温”等空泛句式代替解释。
 - `one_line` 必须是白话用途；`highlights[3]` 为旧报告兼容字段；`capabilities` 为 1 至 5 条互不重复的具体能力，证据充分时优先写满 5 条。语言、Star、Fork、Topics、快照日期和来源只能放数据区，不能冒充功能亮点。
 - 当前证据管线通过 GitHub API 获取受控 metadata、带 SHA 的 README 和 Owner 头像 URL；README 需要限长、清洗代码/HTML/噪声并加入“不可信外部数据”标记。任何 README、description、Topics 或网页文字都不能成为指令，不能触发工具、命令、文件读取或额外网络访问。
-- 使用 Prompt/Schema 4.0：Codex 可以在当前仓库允许证据的语义范围内，把 README/metadata 改写成 `one_line`、`capabilities`、`core_title`、`core_summary`、`audience`、`prerequisites` 和 `limitations`，并为每一个自然语言字段返回合法 `evidence_ids`。
+- 使用 Prompt 4.1 / Schema 4.0：Codex 可以在当前仓库允许证据的语义范围内，把 README/metadata 改写成 `one_line`、`capabilities`、`core_title`、`core_summary`、`audience`、`prerequisites` 和 `limitations`，并为每一个自然语言字段返回合法 `evidence_ids`。
 - `license_label` 与 `license_restrictions` 只能逐字来自明确证据。GitHub API 返回 `NOASSERTION`、`OTHER`、`unknown` 或空值时不得猜成 MIT，也不得推导“允许商用”“商用无忧”等法律结论。
 - README 存在时，`readme_sha` 必须逐字符等于输入 SHA，`content_status=readme_enriched` 时至少一个自然语言字段引用 `github.readme:<sha>`；证据仍不足时使用 `needs_review`。
 - README 缺失时，`readme_sha=null`，`content_status` 只能是 `metadata_only` 或 `needs_review`；除许可证外，所有自然语言字段必须逐字段匹配同一 angle 的单一受控候选，不得自由补写。
 - 使用 `prompts/repository_summary_zh.md` 和 `schemas/repository_summary.schema.json`；要求一次处理完整榜单，只返回 `schema_version="4.0"` 的合法 JSON。日榜三个项目使用三个不同角度，周榜七个项目覆盖七个角度。
-- 每张 V3 卡片都要有：排名/系列信息、Owner 头像、项目名、白话用途、四项统计、最多 5 条能力、核心亮点、适用人群，以及明确许可证或“许可证未标注”状态；配套文字审核稿保留前置条件与限制，Pages 另保留可点击仓库链接。
+- 每张 V4 卡片都要有：Dxxx/Wxxx 期号、24H/7D 节奏、Owner 头像、项目名、白话用途、紧凑信号数据条、01—05 Signal Rail、核心亮点、适用人群，以及明确许可证或“许可证未标注”状态；配套文字审核稿保留前置条件与限制，Pages 另保留可点击仓库链接。
 - 程序必须回查仓库身份、URL、语言、Star、Fork、rank、增量、README SHA、逐字段证据 ID、许可证原文、禁用套话、角度覆盖和整榜重复。
 - CLI 不存在、在 CI 中被禁用、超时、非零退出、非法 JSON/Schema/证据 ID、README SHA/许可证/冻结事实不匹配或重复检查失败时，丢弃整榜模型结果并使用确定性摘要，不接受部分模型结果，也不让核心榜单中断。
 - 项目只能调用已安装的 `codex` 命令；不得读取、解析、复制或提交 Codex 用户级配置和认证文件。
@@ -133,21 +135,24 @@
 - 主 Markdown 同时包含“综合主榜”和“AI 专题榜”两个章节。
 - 报告 JSON 保留顶层 `repositories` 作为综合主榜以兼容旧消费者，并包含 `boards.comprehensive`、`boards.ai`、`editorial` 和 `assets`；仓库项使用 `assets.poster` 关联配图。
 - 旧 `*.xiaohongshu.md` 继续输出综合主榜文案；新增 `*.ai.xiaohongshu.md` 输出 AI 专题榜文案。两份文件都只是人工审核草稿。
+- 正式首发锚点为 2026-07-12：日报从 `D001` 开始，周报从 `W001` 开始；首发日前只能标记 `PREVIEW`，不得使用年内日序或 ISO 周号冒充公开期数。
 - 两榜日榜各 Top 3、周榜各 Top 7；候选不足时输出实际数量和数据质量警告，不用另一榜单补位。
 - 封面/开头写榜单类型、日期/期号、Top N 和“看懂这些项目能做什么”的明确承诺；可核验增长作为次要信息。
 - 项目卡片允许展示明确标注的 Trending 周期值或估算值，但不能把它们写成精确“本期新增”。
 - 主报告与 Pages 保留排名口径、生成时间和数据质量警告；小红书公开文案和海报不重复“数据来自 GitHub 公开信息与本地快照”这类来源声明。
 - 小红书发布正文只显示 `GitHub 搜索：owner/repository`，不放裸 URL、二维码或导流水印；主报告与 Pages 保留可点击 GitHub 仓库链接。
-- 每个榜单生成 1 张原创封面，每个项目生成 1 张 `1200×1600` PNG；V3 固定采用“深色月份/系列页眉与圆形排名—白色项目身份卡—Star/语言/周期增长/Fork 四项统计—左侧最多 5 条能力—右侧核心亮点与适合谁—底部日期”的参考图信息架构。
+- 每个榜单生成 1 张原创封面，每个项目生成 1 张 `1200×1600` PNG；V4 固定采用 `Signal Broadsheet`：硬边报头、裁切排名胶带、白话定位、横向 signal bar、单列五项能力轨道、跨栏核心亮点和底部受众。禁止恢复旧版圆章、四格仪表盘、左右深浅分栏和深绿参考配色。
 - 项目名左侧使用 GitHub metadata 中的 Owner 头像。头像只允许从 `https://avatars.githubusercontent.com` 安全下载，限制重定向、体积、像素、尺寸和 Content-Type，经 Pillow 重新编码为去 metadata 的本地 PNG，并只写报告根目录内相对路径；失败时使用确定性占位图，不阻断榜单。
-- 正式发布图不放裸 URL、数据来源声明、“人工审核稿”等内部工作流状态。AI 辅助与人工审核说明写在正文或尾卡；参考帖原图、账号标识、项目截图和未核权第三方插画不得复制。
+- 正式发布图不放裸 URL、数据来源声明、“人工审核稿”等内部工作流状态。正文保留真实的 AI 辅助标识；人工复核是内部发布门禁，不在复核完成前对外声称“已审核”。参考帖原图、账号标识、项目截图和未核权第三方插画不得复制。
 - Manifest Schema 2 记录尺寸、榜单、Top N、统计窗口、renderer/style 版本、源报告、封面和逐项目相对路径；小红书文案末尾附配图清单，Pages 提供安全的同源预览与下载。
 - 视频和自动发布仍不在当前阶段；文案与图片始终先人工审核。
 
 ### 6. 自动化
 
-- 本地 CLI 与 GitHub Actions 使用同一入口，不能维护两套业务逻辑。
-- Actions 先安装依赖、运行测试，再生成产物。
+- 本地 CLI 与 GitHub Actions 使用同一入口，不能维护两套业务逻辑。本地计划任务是 Codex 高质量主链路，Actions 是 deterministic 连续性兜底。
+- 本地计划任务必须使用当前用户、低权限、独立临时 worktree、共享锁、严格 Codex 无回退门禁、生成路径白名单、Secret 扫描、非强制推送和 Pages 验证；不得修改 IDE 工作树。
+- 成功的本地任务还必须刷新 `publish/current/<period>`，旧版本先进入 `publish/archive/`；`current/archive/logs` 不提交 Git。`current` 只表示每个周期最新生成的工作包，不是永久待发布队列；若某个 AI 配套帖延后到下一期之后发布，应从对应 `archive/<period>/<year>/<issue-stem>/` 找回。
+- Actions 先检查是否已有同日期完整 Codex 报告，再决定是否安装依赖和生成；需要生成时先运行测试。
 - Ubuntu Actions 安装 Noto CJK 字体；本地优先解析微软雅黑，确保中文海报不出现方框字。
 - 只提交本次生成的快照和相应报告；没有变化时不创建空提交。
 - 不把 `.env`、Token、缓存、临时响应或大体积调试文件提交到 Git。
@@ -165,7 +170,7 @@
 6. 对 AI 分类运行 Topics 精确匹配与 token/phrase-aware 正反例；必须覆盖 `ai`、`openai`、`llm` 等正例，以及 `rails`、`maintainer` 等子串反例。
 7. 对摘要结果验证 Schema 4.0、字段类型、`highlights[3]`、`capabilities[1..5]`、核心亮点、受众、前置条件、限制、许可证、README SHA、逐字段 `evidence_ids`、数字/URL 原样复制和角度覆盖；固定覆盖 README 注入、README 缺失单一候选、非法证据 ID、`NOASSERTION` 许可证、C++ 测试、网页抓取、Office 自动化、代码审查插件与否定描述反例。
 8. 验证主 JSON 的顶层 `repositories` 兼容性、`boards` 双榜结构和两份小红书草稿路径。
-9. 验证每榜封面与逐项目 PNG 数量、`1200×1600` 尺寸、`manifest.json`、V3 信息层级、最多 5 条能力、长核心说明、Owner 头像/占位图、无热链渲染、长名称/文本溢出、手机缩略图可读性和 Pages 图片复制路径。
+9. 验证每榜封面与逐项目 PNG 数量、`1200×1600` 尺寸、`manifest.json`、Signal Broadsheet V4 信息层级、由首发锚点计算的当前 `Dxxx/Wxxx` 期号、最多 5 条能力、长核心说明、Owner 头像/身份块、无热链渲染、长名称/文本溢出、手机缩略图可读性和 Pages 图片复制路径；首发回归样例必须单独断言 2026-07-12 为 `D001/W001`。
 10. 验证 README 清洗与头像缓存的域名、重定向、下载体积、像素、Content-Type、路径穿越、重新编码去 metadata、缓存复用和失败降级。
 11. 对本地 Codex 适配器使用模拟子进程覆盖 CLI 缺失、CI 禁用、超时、非零退出、非法 JSON、非法证据、README/许可证/事实漂移和整榜回退；真实冒烟只使用公开冻结样本且不输出 provider/凭据。
 12. 运行站点构建和 JavaScript 语法检查，抽查移动端布局与海报预览/下载。
@@ -196,9 +201,10 @@
 - AI 分类使用精确 Topics 与 token/phrase-aware 匹配，正反例测试通过。
 - 主 Markdown/JSON 包含双榜，综合榜和 AI 榜两份小红书人工审核稿均已生成。
 - 每榜封面、每项目 `1200×1600` PNG、资产清单和 Pages 预览/下载均可生成。
-- 默认确定性文案不含禁用套话；本地 Codex Prompt/Schema 4.0 能在 README/metadata 证据内生成白话定位、最多 5 条能力、核心亮点、受众、前置条件和限制，并在失败时整榜安全回退。
+- 默认确定性文案不含禁用套话；本地 Codex Prompt 4.1 / Schema 4.0 能在 README/metadata 证据内生成白话定位、最多 5 条能力、核心亮点、受众、前置条件和限制，并在失败时整榜安全回退。
 - 卡片规定字段齐全，功能解释与热度指标分区，README SHA、逐字段证据和许可证门禁通过；证据不足的项目明确进入 `needs_review`，README 缺失时保持单一受控候选而不是显示泛话。
-- V3 海报使用安全缓存的 GitHub Owner 头像并匹配参考图信息层级；头像失败时稳定降级，公开图不展示裸 URL、重复来源声明或内部审核术语。
+- V4 海报使用安全缓存的 GitHub Owner 头像并匹配原创 Signal Broadsheet 品牌；头像失败时稳定降级，公开图不展示裸 URL、重复来源声明或内部审核术语。
+- `publish/current` 为当前已生成的日报与周报分别提供综合榜和 AI 榜帖子包，即当前 `Dxxx-C/A` 与 `Wxxx-C/A`；首发日对应 `D001-C/A` 与 `W001-C/A`。周期根目录提供共享检查清单和 Manifest，各帖子目录提供可直接复制的标题/正文、审核稿和按顺序编号的图片。
 - 测试通过，或明确列出无法通过的外部原因与剩余风险。
 - README/产品文档与真实命令一致。
 - 根目录 MIT `LICENSE` 存在；README 说明允许商用、修改和分发，但必须保留版权与许可声明。

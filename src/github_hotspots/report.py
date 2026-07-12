@@ -27,6 +27,7 @@ from .poster import (
     render_board_posters,
 )
 from .publication_evidence import PublicationEvidenceBundle
+from .publish_bundle import publication_issue
 from .summarizer import RepositorySummary, summarize_repository
 
 
@@ -300,6 +301,7 @@ def _render_poster_assets(
     boards: Sequence[tuple[str, str, int, list[dict[str, Any]]]],
 ) -> tuple[dict[str, Any], tuple[Path, ...], Path | None]:
     poster_settings = settings.poster_settings()
+    issue = publication_issue(settings.publication_settings(), period, run_date)
     posters_dir = output_dir / "assets" / stem
     if not poster_settings.enabled:
         return (
@@ -330,6 +332,7 @@ def _render_poster_assets(
                 board_label=board_label,
                 period=period,
                 run_date=run_date,
+                issue_code=issue.code,
                 repositories=repositories,
                 output_dir=staging_dir,
                 size=(poster_settings.width, poster_settings.height),
@@ -373,6 +376,12 @@ def _render_poster_assets(
             "directory": _relative_path(posters_dir, root),
             "manifest": _relative_path(manifest_path, root),
             "boards": board_metadata,
+            "publication": {
+                "issue_number": issue.number,
+                "issue_code": issue.code,
+                "issue_label": issue.label,
+                "status": issue.status,
+            },
         }
         manifest = {
             "schema_version": 2,
@@ -464,12 +473,13 @@ def render_reports(
     ]
     comprehensive_top_n = comprehensive_board.top_n(period)
     ai_top_n = ai_board.top_n(period)
+    issue = publication_issue(settings.publication_settings(), period, run_date)
     poster_window_start = run_date - timedelta(days=settings.run(period).lookback_days)
     label = _window_label(period, run_date, settings.run(period).lookback_days)
     title = (
-        f"GitHub 每日热点双榜（{run_date.isoformat()}）"
+        f"GitHub 日报 {issue.code} 双榜（{run_date.isoformat()}）"
         if period == "daily"
-        else f"GitHub 每周热点双榜（{_report_stem(period, run_date)}）"
+        else f"GitHub 周报 {issue.code} 双榜（{_report_stem(period, run_date)}）"
     )
     methodology = (
         "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的"
@@ -478,7 +488,8 @@ def render_reports(
         "全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/"
         "短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。"
         "中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后"
-        "从受控候选中整榜选稿，并经过仓库身份、URL、数字、增量口径和禁用套话回查。"
+        "读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、"
+        "URL、数字、README SHA、许可证、增量口径和禁用套话回查。"
     )
 
     common = {
@@ -531,15 +542,15 @@ def render_reports(
     }
 
     xhs_title = (
-        f"GitHub 今日热榜｜{comprehensive_top_n} 个项目到底能做什么"
+        f"GitHub 日报 {issue.code}｜{comprehensive_top_n} 个项目到底能做什么"
         if period == "daily"
-        else f"GitHub 本周热榜｜{comprehensive_top_n} 个项目到底能做什么"
+        else f"GitHub 周报 {issue.code}｜{comprehensive_top_n} 个项目到底能做什么"
     )
     xhs = _compact_rendered_text(
         environment.get_template("xiaohongshu.md.j2").render(
             **comprehensive_common,
             xhs_title=xhs_title,
-            edition=f"{run_date.isoformat()} · {comprehensive_board.label}",
+            edition=f"{run_date.isoformat()} · {issue.code} · {comprehensive_board.label}",
             intro=(
                 "别只看 Star。这期把上榜项目翻成三件能直接判断的事："
                 "它做什么、能帮你完成什么、适不适合你。"
@@ -550,15 +561,15 @@ def render_reports(
         )
     )
     ai_xhs_title = (
-        f"GitHub AI 今日榜｜{ai_top_n} 个项目到底能做什么"
+        f"GitHub AI 日报 {issue.code}｜{ai_top_n} 个项目到底能做什么"
         if period == "daily"
-        else f"GitHub AI 周榜｜{ai_top_n} 个项目到底能做什么"
+        else f"GitHub AI 周报 {issue.code}｜{ai_top_n} 个项目到底能做什么"
     )
     ai_xhs = _compact_rendered_text(
         environment.get_template("xiaohongshu.md.j2").render(
             **ai_common,
             xhs_title=ai_xhs_title,
-            edition=f"{run_date.isoformat()} · {ai_board.label}",
+            edition=f"{run_date.isoformat()} · {issue.code} · {ai_board.label}",
             intro=(
                 "AI 项目的名字往往很抽象。这一期不堆术语，只讲清它替谁做什么、"
                 "能完成哪些任务，以及是否值得加入你的工具箱。"
@@ -605,6 +616,12 @@ def render_reports(
         "generated_at": now.isoformat(timespec="seconds"),
         "timezone": settings.timezone,
         "window_label": label,
+        "publication": {
+            "issue_number": issue.number,
+            "issue_code": issue.code,
+            "issue_label": issue.label,
+            "status": issue.status,
+        },
         "data_quality": quality,
         "warnings": warnings,
         "methodology": methodology,

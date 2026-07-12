@@ -11,6 +11,7 @@ import typer
 
 from .config import ConfigurationError, load_settings
 from .pipeline import run_pipeline
+from .publish_bundle import build_publish_bundle
 from .rerender import rerender_report
 
 app = typer.Typer(
@@ -174,6 +175,36 @@ def rerender_command(
         typer.echo(f"Poster PNG files: {len(artifacts.poster_files)}")
     for warning in artifacts.warnings:
         typer.echo(f"Warning: {warning}", err=True)
+
+
+@app.command("publish")
+def publish_command(
+    report: Annotated[
+        Path,
+        typer.Argument(help="Existing daily or weekly report JSON to package"),
+    ],
+    config: Annotated[
+        Path,
+        typer.Option("--config", help="Path to the YAML configuration"),
+    ] = Path("config/hotspots.yaml"),
+) -> None:
+    """Prepare a local, human-reviewed Xiaohongshu publication folder."""
+
+    try:
+        settings = load_settings(config)
+        artifacts = build_publish_bundle(settings, report)
+    except (ConfigurationError, RuntimeError, ValueError) as exc:
+        typer.echo(f"Error: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+
+    typer.echo(f"Prepared {artifacts.issue_code} {artifacts.period} publication bundle.")
+    typer.echo(f"Current folder: {artifacts.current_dir}")
+    typer.echo(f"Manifest: {artifacts.manifest}")
+    typer.echo(f"Checklist: {artifacts.checklist}")
+    typer.echo(f"Board packages: {len(artifacts.board_dirs)}")
+    typer.echo(f"Today index: {artifacts.today}")
+    if artifacts.archived_dir is not None:
+        typer.echo(f"Archived previous bundle: {artifacts.archived_dir}")
 
 
 if __name__ == "__main__":

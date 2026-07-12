@@ -346,6 +346,7 @@ def test_codex_cli_accepts_readme_grounded_rewrite(tmp_path: Path, monkeypatch) 
             command.index("--sandbox") : command.index("--sandbox") + 2
         ]
         assert 'model_reasoning_effort="xhigh"' in command
+        assert 'approval_policy="never"' in command
         assert "--ignore-rules" in command
         assert "browser_use" in command
         assert "plugins" in command

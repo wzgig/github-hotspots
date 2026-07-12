@@ -2,11 +2,12 @@ name: Daily GitHub Hotspots
 
 on:
   schedule:
-    # 08:17 Asia/Shanghai (GitHub Actions cron uses UTC).
-    - cron: "17 0 * * *"
+    # 09:17 Asia/Shanghai fallback; the local Codex task is the 07:30 primary.
+    - cron: "17 1 * * *"
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
@@ -18,59 +19,184 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       PYTHONUTF8: "1"
       TZ: Asia/Shanghai
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Set up Python 3.12
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: pyproject.toml
 
+      - name: Check for an exact local Codex report
+        id: current
+        run: |
+          RUN_DATE="$(date +%F)"
+          echo "run_date=${RUN_DATE}" >> "${GITHUB_OUTPUT}"
+          if python src/github_hotspots/automation.py verify \
+            --root . --period daily --date "${RUN_DATE}" --require-codex --quiet; then
+            echo "should_generate=false" >> "${GITHUB_OUTPUT}"
+            echo "skip_reason=Exact local Codex report already exists." >> "${GITHUB_OUTPUT}"
+            echo "A complete local Codex report already exists; fallback skipped."
+          else
+            echo "should_generate=true" >> "${GITHUB_OUTPUT}"
+            echo "No complete local Codex report exists; deterministic fallback will run."
+          fi
+
       - name: Install CJK fonts for poster rendering
+        if: steps.current.outputs.should_generate == 'true'
         run: |
           sudo apt-get update
           sudo apt-get install --yes fonts-noto-cjk
 
       - name: Install project and development dependencies
+        if: steps.current.outputs.should_generate == 'true'
         run: |
           python -m pip install --upgrade pip
           python -m pip install -e ".[dev]"
 
       - name: Run quality gates
+        if: steps.current.outputs.should_generate == 'true'
         run: |
           python -m pytest
           python -m ruff check .
           python -m ruff format --check .
 
       - name: Generate daily snapshot and report
-        run: python -m github_hotspots.cli run --period daily
+        if: steps.current.outputs.should_generate == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m github_hotspots.cli run --period daily --date "${{ steps.current.outputs.run_date }}"
 
-      - name: Commit generated daily artifacts
+      - name: Verify deterministic fallback bundle
+        if: steps.current.outputs.should_generate == 'true'
         run: |
+          python src/github_hotspots/automation.py verify \
+            --root . --period daily --date "${{ steps.current.outputs.run_date }}"
+
+      - name: Preflight local publication bundle
+        if: steps.current.outputs.should_generate == 'true'
+        run: |
+          python -m github_hotspots.cli publish \
+            "reports/daily/${{ steps.current.outputs.run_date }}.json"
+
+      - name: Commit generated daily artifacts safely
+        if: steps.current.outputs.should_generate == 'true'
+        id: publish
+        env:
+          PERIOD: daily
+          RUN_DATE: ${{ steps.current.outputs.run_date }}
+          PYTHONPATH: src
+        run: |
+          set -euo pipefail
+
+          remote_bundle_valid() {
+            local parent remote_dir status
+            parent="$(mktemp -d)"
+            remote_dir="${parent}/worktree"
+            git worktree add --detach "${remote_dir}" origin/main >/dev/null
+            if python -S src/github_hotspots/automation.py verify \
+              --root "${remote_dir}" --period "${PERIOD}" --date "${RUN_DATE}" \
+              --require-codex --quiet; then
+              status=0
+            else
+              status=1
+            fi
+            git worktree remove --force "${remote_dir}" >/dev/null
+            rmdir "${parent}"
+            return "${status}"
+          }
+
+          STEM="$(python src/github_hotspots/automation.py stem --period "${PERIOD}" --date "${RUN_DATE}")"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- data/snapshots reports/daily
+          paths=(
+            "data/snapshots/${RUN_DATE}.json"
+            "reports/${PERIOD}/${STEM}.md"
+            "reports/${PERIOD}/${STEM}.json"
+            "reports/${PERIOD}/${STEM}.xiaohongshu.md"
+            "reports/${PERIOD}/${STEM}.ai.xiaohongshu.md"
+            "reports/${PERIOD}/assets/${STEM}"
+            "reports/${PERIOD}/avatars/${STEM}"
+          )
+          for path in "${paths[@]}"; do
+            if [[ -e "${path}" ]]; then
+              git add -- "${path}"
+            fi
+          done
+
+          staged="$(mktemp)"
+          git -c core.quotepath=false diff --cached --name-only > "${staged}"
+          python src/github_hotspots/automation.py validate-paths \
+            --period "${PERIOD}" --date "${RUN_DATE}" --paths-file "${staged}"
+          python src/github_hotspots/automation.py scan-paths --root . --paths-file "${staged}"
+          git diff --cached --check
+
           if git diff --cached --quiet; then
-            RESULT="No daily artifact changes to commit."
-          else
-            git commit -m "chore(hotspots): update daily report"
-            git push
-            RESULT="Committed and pushed $(git rev-parse --short HEAD)."
+            echo "result=No daily artifact changes to commit." >> "${GITHUB_OUTPUT}"
+            echo "commit=$(git rev-parse HEAD)" >> "${GITHUB_OUTPUT}"
+            exit 0
           fi
-          REPORT_PATH="$(find reports/daily -maxdepth 1 -name '*.json' -type f -printf '%T@ %p\n' | sort -nr | head -n 1 | cut -d' ' -f2-)"
+
+          git commit -m "chore(hotspots): update daily report for ${RUN_DATE}"
+          git fetch origin main
+          if ! git merge-base --is-ancestor origin/main HEAD; then
+            if remote_bundle_valid; then
+              echo "result=Remote already contains a valid local Codex report." >> "${GITHUB_OUTPUT}"
+              echo "commit=$(git rev-parse origin/main)" >> "${GITHUB_OUTPUT}"
+              exit 0
+            fi
+            echo "Remote advanced during generation; retry from a fresh checkout." >&2
+            exit 1
+          fi
+
+          if git push origin HEAD:main; then
+            echo "result=Committed and pushed $(git rev-parse --short HEAD)." >> "${GITHUB_OUTPUT}"
+            echo "commit=$(git rev-parse HEAD)" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+
+          git fetch origin main
+          if remote_bundle_valid; then
+            echo "result=Remote won the push race with a valid local Codex report." >> "${GITHUB_OUTPUT}"
+            echo "commit=$(git rev-parse origin/main)" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+          echo "Push failed and no valid remote Codex report exists." >&2
+          exit 1
+
+      - name: Write workflow summary
+        if: always()
+        env:
+          SHOULD_GENERATE: ${{ steps.current.outputs.should_generate }}
+          SKIP_REASON: ${{ steps.current.outputs.skip_reason }}
+          RUN_DATE: ${{ steps.current.outputs.run_date }}
+          RESULT: ${{ steps.publish.outputs.result }}
+          COMMIT: ${{ steps.publish.outputs.commit }}
+        run: |
+          if [[ "${SHOULD_GENERATE}" == "false" ]]; then
+            RESULT="Skipped: ${SKIP_REASON:-fallback not needed}"
+            COMMIT="$(git rev-parse HEAD)"
+          fi
           {
             echo "## Daily GitHub Hotspots"
-            echo "- Result: ${RESULT}"
-            echo "- Latest report: \`${REPORT_PATH}\`"
+            echo "- Result: ${RESULT:-Generation did not complete.}"
+            echo "- Run date: \`${RUN_DATE}\`"
+            echo "- Report: \`reports/daily/${RUN_DATE}.json\`"
+            echo "- Commit: \`${COMMIT:-none}\`"
             echo "- Trigger: \`${GITHUB_EVENT_NAME}\`"
             echo "- Workflow run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
           } >> "${GITHUB_STEP_SUMMARY}"
+
+      - name: Request Pages deployment for fallback output
+        if: steps.current.outputs.should_generate == 'true' && steps.publish.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run pages.yml --ref main

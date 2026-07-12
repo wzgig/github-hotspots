@@ -4,30 +4,38 @@
   "run_date": "2026-07-12",
   "window_start": "2026-07-11",
   "window_end": "2026-07-12",
-  "generated_at": "2026-07-12T12:08:54+08:00",
+  "generated_at": "2026-07-12T14:31:53+08:00",
   "timezone": "Asia/Shanghai",
   "window_label": "2026-07-11 至 2026-07-12",
+  "publication": {
+    "issue_number": 1,
+    "issue_code": "D001",
+    "issue_label": "第1期",
+    "status": "official"
+  },
   "data_quality": "高：历史快照增量",
   "warnings": [],
-  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后从受控候选中整榜选稿，并经过仓库身份、URL、数字、增量口径和禁用套话回查。",
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
   "editorial": {
     "policy": "facts-locked-batch-editing",
     "boards": {
       "comprehensive": {
-        "prompt_version": "4.0",
+        "prompt_version": "4.1",
         "schema_version": "4.0",
         "requested_backend": "codex-cli",
         "used_backend": "codex-cli",
         "fallback_used": false,
-        "error_category": null
+        "error_category": null,
+        "reused_existing_summary": true
       },
       "ai": {
-        "prompt_version": "4.0",
+        "prompt_version": "4.1",
         "schema_version": "4.0",
         "requested_backend": "codex-cli",
         "used_backend": "codex-cli",
         "fallback_used": false,
-        "error_category": null
+        "error_category": null,
+        "reused_existing_summary": true
       }
     }
   },
@@ -83,6 +91,12 @@
           }
         ]
       }
+    },
+    "publication": {
+      "issue_number": 1,
+      "issue_code": "D001",
+      "issue_label": "第1期",
+      "status": "official"
     }
   },
   "repositories": [
@@ -133,7 +147,7 @@
         "trending_signal": 100.0
       },
       "summary": {
-        "one_line": "Catch2 是面向 C++ 的单元测试框架，也提供基础微基准测试和简易 BDD 宏",
+        "one_line": "为 C++ 项目编写单元测试，并用自然的断言与分区组织测试代码",
         "highlights": [
           "用普通 C++ 布尔表达式编写断言",
           "用分区复用测试的准备与清理代码",
@@ -289,7 +303,7 @@
         "trending_signal": 0.0
       },
       "summary": {
-        "one_line": "firecrawl 通过 API 搜索、抓取和操作网页，并输出 Markdown、截图或结构化数据",
+        "one_line": "把网页搜索、抓取和页面交互接入 API，输出 Markdown、截图或结构化数据",
         "highlights": [
           "搜索网页并返回结果页面全文",
           "批量抓取网站或多条指定链接",
@@ -437,7 +451,7 @@
         "trending_signal": 27.02
       },
       "summary": {
-        "one_line": "core 是 Home Assistant 的家庭自动化核心，强调在本地控制设备并保护隐私",
+        "one_line": "在树莓派或本地服务器上运行家庭自动化，并通过组件扩展设备与动作支持",
         "highlights": [
           "在本地服务器上运行家庭自动化",
           "通过模块化组件接入更多设备",
@@ -609,7 +623,7 @@
             "trending_signal": 100.0
           },
           "summary": {
-            "one_line": "Catch2 是面向 C++ 的单元测试框架，也提供基础微基准测试和简易 BDD 宏",
+            "one_line": "为 C++ 项目编写单元测试，并用自然的断言与分区组织测试代码",
             "highlights": [
               "用普通 C++ 布尔表达式编写断言",
               "用分区复用测试的准备与清理代码",
@@ -765,7 +779,7 @@
             "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "firecrawl 通过 API 搜索、抓取和操作网页，并输出 Markdown、截图或结构化数据",
+            "one_line": "把网页搜索、抓取和页面交互接入 API，输出 Markdown、截图或结构化数据",
             "highlights": [
               "搜索网页并返回结果页面全文",
               "批量抓取网站或多条指定链接",
@@ -913,7 +927,7 @@
             "trending_signal": 27.02
           },
           "summary": {
-            "one_line": "core 是 Home Assistant 的家庭自动化核心，强调在本地控制设备并保护隐私",
+            "one_line": "在树莓派或本地服务器上运行家庭自动化，并通过组件扩展设备与动作支持",
             "highlights": [
               "在本地服务器上运行家庭自动化",
               "通过模块化组件接入更多设备",
@@ -1085,7 +1099,7 @@
             "trending_signal": 22.42
           },
           "summary": {
-            "one_line": "为编程 Agent 配上一套从需求澄清、设计确认到测试和代码审查的软件开发方法",
+            "one_line": "为编程 Agent 配上从需求澄清、设计确认到测试和代码审查的开发流程",
             "highlights": [
               "先通过提问澄清需求并分段确认设计",
               "按计划把任务交给子 Agent 执行和复核",
@@ -1097,10 +1111,10 @@
               "创建隔离工作区并验证测试基线",
               "拆分带文件路径和验证步骤的任务",
               "调度子 Agent 分工实现并分阶段审查",
-              "完成测试后提供合并或保留分支选项"
+              "完成测试后提供分支处理选项"
             ],
             "core_title": "从需求确认到交付的技能链",
-            "core_summary": "技能会按场景自动触发：先澄清需求、确认设计和编写计划，再分派实现任务，通过测试、代码审查和完成检查逐步推进。",
+            "core_summary": "技能按场景自动触发：先澄清需求、确认设计和编写计划，再分派实现任务，通过测试、代码审查和完成检查逐步推进。",
             "prerequisites": "需要在所用的编程 Agent 环境中安装；使用多个环境时须分别安装。",
             "limitations": "设计和执行启动前需要用户确认；项目通常不接受新增技能，技能更新须兼容其支持的全部编程 Agent。",
             "license_label": "MIT",
@@ -1241,7 +1255,7 @@
             "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "通过 API 搜索、抓取和操作网页，把页面转换为 Markdown、截图或结构化数据",
+            "one_line": "把网页搜索、单页抓取和整站遍历接入接口，返回 Markdown、截图或结构化数据",
             "highlights": [
               "搜索网页并返回结果页面的完整内容",
               "抓取整站或批量异步处理多个网址",
@@ -1253,10 +1267,10 @@
               "转换网址为 Markdown、HTML 或 JSON",
               "发现网站内的全部页面链接",
               "批量抓取多个网址或遍历整站",
-              "按提示点击、滚动和输入后提取数据"
+              "按提示操作动态页面后提取数据"
             ],
             "core_title": "从网页发现到交互式提取",
-            "core_summary": "同一套接口覆盖搜索、单页抓取、整站遍历、网址发现和批量任务；需要操作动态页面时，还能先点击或输入，再返回整理后的内容。",
+            "core_summary": "同一套接口覆盖搜索、单页抓取、整站遍历、网址发现和批量任务；处理动态页面时，还能先点击、滚动或输入，再返回整理后的内容。",
             "prerequisites": "使用托管服务需注册并取得 API Key；也可按自托管指南在本地部署。",
             "limitations": "最终用户须遵守目标网站政策、隐私政策和使用条款；默认遵循 robots.txt 指令。",
             "license_label": "AGPL-3.0",
@@ -1396,7 +1410,7 @@
             "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "跨终端和消息平台运行的 AI Agent，会从任务经验中生成技能并积累跨会话记忆",
+            "one_line": "让 AI Agent 在终端和消息平台持续工作，并把任务经验沉淀成记忆与技能",
             "highlights": [
               "从复杂任务经验中创建并改进技能",
               "在多个消息平台延续同一段对话",
@@ -1411,9 +1425,9 @@
               "并行派出隔离的子 Agent 处理工作流"
             ],
             "core_title": "经验转技能的闭环学习",
-            "core_summary": "Agent 会保存和检索会话记忆，在复杂任务后创建技能，并在后续使用中改进技能；同时可通过终端或消息平台继续同一工作。",
+            "core_summary": "Agent 会保存和检索会话记忆，在复杂任务后创建技能，并在后续使用中持续改进；同一工作还能在终端和多个消息平台间延续。",
             "prerequisites": "安装器会准备 uv、Python 3.11、Node.js、ripgrep、ffmpeg 和 Git Bash；运行还需配置模型提供商。",
-            "limitations": "执行命令、私信配对和容器隔离需按安全设置配置；部分语音依赖与 Android 不兼容。",
+            "limitations": "命令审批、私信配对和容器隔离需按安全设置配置；完整语音依赖目前与 Android 不兼容。",
             "license_label": "MIT",
             "license_restrictions": "",
             "readme_sha": "ba1322a389207c79032386e4053ac0e69a3c199d",

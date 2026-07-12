@@ -79,3 +79,43 @@ def test_rerender_command_can_refresh_readme_and_avatar_evidence(monkeypatch) ->
     assert response.exit_code == 0
     assert captured["kwargs"]["editorial_backend"] == "codex-cli"
     assert captured["kwargs"]["refresh_evidence"] is True
+
+
+def test_publish_command_reports_local_board_packages(monkeypatch) -> None:
+    settings = load_settings(Path("config/hotspots.yaml"))
+    artifacts = SimpleNamespace(
+        period="daily",
+        issue_code="D001",
+        current_dir=Path("publish/current/daily"),
+        manifest=Path("publish/current/daily/MANIFEST.json"),
+        checklist=Path("publish/current/daily/CHECKLIST.md"),
+        today=Path("publish/current/TODAY.md"),
+        board_dirs=(
+            Path("publish/current/daily/01-comprehensive"),
+            Path("publish/current/daily/02-ai"),
+        ),
+        archived_dir=None,
+    )
+    captured = {}
+
+    monkeypatch.setattr(cli, "load_settings", lambda _: settings)
+
+    def fake_build(settings_arg, report_arg):
+        captured["settings"] = settings_arg
+        captured["report"] = report_arg
+        return artifacts
+
+    monkeypatch.setattr(cli, "build_publish_bundle", fake_build)
+
+    response = CliRunner().invoke(
+        cli.app,
+        ["publish", "reports/daily/2026-07-12.json"],
+    )
+
+    assert response.exit_code == 0
+    assert captured["settings"] is settings
+    assert captured["report"] == Path("reports/daily/2026-07-12.json")
+    assert "Prepared D001 daily publication bundle" in response.output
+    assert "Board packages: 2" in response.output
+    assert "Today index:" in response.output
+    assert "TODAY.md" in response.output

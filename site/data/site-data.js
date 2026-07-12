@@ -1,7 +1,7 @@
 "use strict";
 window.GITHUB_HOTSPOTS_DATA = {
   "schema_version": 3,
-  "generated_at": "2026-07-12T12:08:54+08:00",
+  "generated_at": "2026-07-12T14:31:55+08:00",
   "site": {
     "title": "GitHub Hotspots",
     "tagline": "追踪开源世界真正发生的增量",
@@ -10,11 +10,17 @@ window.GITHUB_HOTSPOTS_DATA = {
   "daily": {
     "period": "daily",
     "run_date": "2026-07-12",
-    "generated_at": "2026-07-12T12:08:54+08:00",
+    "generated_at": "2026-07-12T14:31:53+08:00",
     "window_label": "2026-07-11 至 2026-07-12",
+    "publication": {
+      "issue_number": 1,
+      "issue_code": "D001",
+      "issue_label": "第1期",
+      "status": "official"
+    },
     "data_quality": "高：历史快照增量",
     "warnings": [],
-    "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后从受控候选中整榜选稿，并经过仓库身份、URL、数字、增量口径和禁用套话回查。",
+    "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
     "source_path": "reports/daily/2026-07-12.json",
     "repositories": [
       {
@@ -38,7 +44,7 @@ window.GITHUB_HOTSPOTS_DATA = {
           "framework",
           "no-dependencies"
         ],
-        "one_line": "Catch2 是面向 C++ 的单元测试框架，也提供基础微基准测试和简易 BDD 宏",
+        "one_line": "为 C++ 项目编写单元测试，并用自然的断言与分区组织测试代码",
         "highlights": [
           "编写并运行 C++ 单元测试",
           "使用自然语言为测试用例命名",
@@ -85,7 +91,7 @@ window.GITHUB_HOTSPOTS_DATA = {
           "ai-scraping",
           "ai-search"
         ],
-        "one_line": "firecrawl 通过 API 搜索、抓取和操作网页，并输出 Markdown、截图或结构化数据",
+        "one_line": "把网页搜索、抓取和页面交互接入 API，输出 Markdown、截图或结构化数据",
         "highlights": [
           "搜索网页并提取结果全文",
           "把单个页面转成多种数据格式",
@@ -132,7 +138,7 @@ window.GITHUB_HOTSPOTS_DATA = {
           "internet-of-things",
           "iot"
         ],
-        "one_line": "core 是 Home Assistant 的家庭自动化核心，强调在本地控制设备并保护隐私",
+        "one_line": "在树莓派或本地服务器上运行家庭自动化，并通过组件扩展设备与动作支持",
         "highlights": [
           "在本地运行家庭自动化系统",
           "连接并控制受支持的家庭设备",
@@ -185,7 +191,7 @@ window.GITHUB_HOTSPOTS_DATA = {
               "framework",
               "no-dependencies"
             ],
-            "one_line": "Catch2 是面向 C++ 的单元测试框架，也提供基础微基准测试和简易 BDD 宏",
+            "one_line": "为 C++ 项目编写单元测试，并用自然的断言与分区组织测试代码",
             "highlights": [
               "编写并运行 C++ 单元测试",
               "使用自然语言为测试用例命名",
@@ -232,7 +238,7 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-scraping",
               "ai-search"
             ],
-            "one_line": "firecrawl 通过 API 搜索、抓取和操作网页，并输出 Markdown、截图或结构化数据",
+            "one_line": "把网页搜索、抓取和页面交互接入 API，输出 Markdown、截图或结构化数据",
             "highlights": [
               "搜索网页并提取结果全文",
               "把单个页面转成多种数据格式",
@@ -279,7 +285,7 @@ window.GITHUB_HOTSPOTS_DATA = {
               "internet-of-things",
               "iot"
             ],
-            "one_line": "core 是 Home Assistant 的家庭自动化核心，强调在本地控制设备并保护隐私",
+            "one_line": "在树莓派或本地服务器上运行家庭自动化，并通过组件扩展设备与动作支持",
             "highlights": [
               "在本地运行家庭自动化系统",
               "连接并控制受支持的家庭设备",
@@ -332,17 +338,17 @@ window.GITHUB_HOTSPOTS_DATA = {
               "obra",
               "sdlc"
             ],
-            "one_line": "为编程 Agent 配上一套从需求澄清、设计确认到测试和代码审查的软件开发方法",
+            "one_line": "为编程 Agent 配上从需求澄清、设计确认到测试和代码审查的开发流程",
             "highlights": [
               "澄清粗略想法并保存设计文档",
               "创建隔离工作区并验证测试基线",
               "拆分带文件路径和验证步骤的任务",
               "调度子 Agent 分工实现并分阶段审查",
-              "完成测试后提供合并或保留分支选项"
+              "完成测试后提供分支处理选项"
             ],
             "audience": "希望编程 Agent 遵循明确研发流程，而不是直接生成代码的开发者和团队",
             "core_title": "从需求确认到交付的技能链",
-            "core_summary": "技能会按场景自动触发：先澄清需求、确认设计和编写计划，再分派实现任务，通过测试、代码审查和完成检查逐步推进。",
+            "core_summary": "技能按场景自动触发：先澄清需求、确认设计和编写计划，再分派实现任务，通过测试、代码审查和完成检查逐步推进。",
             "prerequisites": "需要在所用的编程 Agent 环境中安装；使用多个环境时须分别安装。",
             "limitations": "设计和执行启动前需要用户确认；项目通常不接受新增技能，技能更新须兼容其支持的全部编程 Agent。",
             "license_label": "MIT",
@@ -379,17 +385,17 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-scraping",
               "ai-search"
             ],
-            "one_line": "通过 API 搜索、抓取和操作网页，把页面转换为 Markdown、截图或结构化数据",
+            "one_line": "把网页搜索、单页抓取和整站遍历接入接口，返回 Markdown、截图或结构化数据",
             "highlights": [
               "搜索网页并获取结果页面正文",
               "转换网址为 Markdown、HTML 或 JSON",
               "发现网站内的全部页面链接",
               "批量抓取多个网址或遍历整站",
-              "按提示点击、滚动和输入后提取数据"
+              "按提示操作动态页面后提取数据"
             ],
             "audience": "需要为 AI Agent、搜索应用或数据管道持续接入网页内容的开发者",
             "core_title": "从网页发现到交互式提取",
-            "core_summary": "同一套接口覆盖搜索、单页抓取、整站遍历、网址发现和批量任务；需要操作动态页面时，还能先点击或输入，再返回整理后的内容。",
+            "core_summary": "同一套接口覆盖搜索、单页抓取、整站遍历、网址发现和批量任务；处理动态页面时，还能先点击、滚动或输入，再返回整理后的内容。",
             "prerequisites": "使用托管服务需注册并取得 API Key；也可按自托管指南在本地部署。",
             "limitations": "最终用户须遵守目标网站政策、隐私政策和使用条款；默认遵循 robots.txt 指令。",
             "license_label": "AGPL-3.0",
@@ -426,7 +432,7 @@ window.GITHUB_HOTSPOTS_DATA = {
               "anthropic",
               "chatgpt"
             ],
-            "one_line": "跨终端和消息平台运行的 AI Agent，会从任务经验中生成技能并积累跨会话记忆",
+            "one_line": "让 AI Agent 在终端和消息平台持续工作，并把任务经验沉淀成记忆与技能",
             "highlights": [
               "切换不同模型提供商而无需修改代码",
               "搜索历史会话并整理跨会话记忆",
@@ -436,9 +442,9 @@ window.GITHUB_HOTSPOTS_DATA = {
             ],
             "audience": "需要让个人 AI 助手长期记忆、远程工作或定时处理任务的用户与开发者",
             "core_title": "经验转技能的闭环学习",
-            "core_summary": "Agent 会保存和检索会话记忆，在复杂任务后创建技能，并在后续使用中改进技能；同时可通过终端或消息平台继续同一工作。",
+            "core_summary": "Agent 会保存和检索会话记忆，在复杂任务后创建技能，并在后续使用中持续改进；同一工作还能在终端和多个消息平台间延续。",
             "prerequisites": "安装器会准备 uv、Python 3.11、Node.js、ripgrep、ffmpeg 和 Git Bash；运行还需配置模型提供商。",
-            "limitations": "执行命令、私信配对和容器隔离需按安全设置配置；部分语音依赖与 Android 不兼容。",
+            "limitations": "命令审批、私信配对和容器隔离需按安全设置配置；完整语音依赖目前与 Android 不兼容。",
             "license_label": "MIT",
             "license_restrictions": "",
             "content_status": "readme_enriched",
@@ -459,14 +465,20 @@ window.GITHUB_HOTSPOTS_DATA = {
   "weekly": {
     "period": "weekly",
     "run_date": "2026-07-12",
-    "generated_at": "2026-07-12T11:50:16+08:00",
+    "generated_at": "2026-07-12T14:31:55+08:00",
     "window_label": "2026-07-05 至 2026-07-12",
+    "publication": {
+      "issue_number": 1,
+      "issue_code": "W001",
+      "issue_label": "第1期",
+      "status": "official"
+    },
     "data_quality": "中高：GitHub Trending 周期信号",
     "warnings": [
       "综合主榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending",
       "AI 专题榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending"
     ],
-    "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后从受控候选中整榜选稿，并经过仓库身份、URL、数字、增量口径和禁用套话回查。",
+    "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
     "source_path": "reports/weekly/2026-W28.json",
     "repositories": [
       {
@@ -490,17 +502,17 @@ window.GITHUB_HOTSPOTS_DATA = {
           "awesome",
           "chatbot"
         ],
-        "one_line": "汇集多家 AI 聊天产品、编程工具及历史版本的系统提示词，便于集中查阅和横向对照",
+        "one_line": "汇集多家 AI 聊天产品、编程工具及历史版本的系统提示词，方便集中查阅和横向对照",
         "highlights": [
-          "查阅 Claude、ChatGPT、Gemini 等产品的提示词",
-          "对照同一模型的不同版本和使用形态",
-          "查看编程助手、办公集成与浏览器助手指令",
-          "定位工具定义、策略和个性配置等资料",
-          "从近期更新表找到新收录的提示词文件"
+          "查阅不同厂商与产品的提示词",
+          "对照同一模型的不同版本",
+          "查看编程与办公助手的指令",
+          "定位工具定义和个性配置",
+          "从更新表找到新增提示词"
         ],
         "audience": "需要研究模型指令、工具约束或不同 AI 产品交互设计的读者",
         "core_title": "跨产品提示词资料库",
-        "core_summary": "README 按厂商、模型和产品形态组织提示词文件，并补充旧版本、原始提示词、工具定义及近期更新入口，适合沿着同类产品或版本关系进行对照。",
+        "core_summary": "README 按厂商、模型和产品形态整理提示词，并补充旧版本、原始稿、工具定义及近期更新入口，便于沿产品或版本关系进行对照。",
         "prerequisites": "",
         "limitations": "",
         "license_label": "CC0-1.0",
@@ -539,16 +551,16 @@ window.GITHUB_HOTSPOTS_DATA = {
         ],
         "one_line": "通过单个命令行程序创建、读取和修改 Word、Excel、PowerPoint 文件，无需安装 Office",
         "highlights": [
-          "创建并编辑三类常用 Office 文件",
-          "读取文本、结构、样式、公式和图表",
-          "渲染文档并实时预览编辑结果",
-          "用 JSON 数据替换跨格式模板占位符",
-          "导出文档结构并通过批处理重新生成"
+          "创建并编辑常用 Office 文件",
+          "读取文本、样式、公式和图表",
+          "渲染文档并预览编辑结果",
+          "用 JSON 填充跨格式模板",
+          "导出结构并批量重建文档"
         ],
         "audience": "需要在脚本、容器、流水线或 AI Agent 中自动处理办公文档的开发者",
         "core_title": "可视化文档修改闭环",
-        "core_summary": "内置渲染引擎把文档转为 HTML 或逐页 PNG，配合实时预览，让 Agent 在添加、设置或删除元素后查看版面，再继续修正溢出与重叠问题。",
-        "prerequisites": "直接使用已发布程序无需 Office 和额外运行时；从源码编译需要 .NET 10 SDK。",
+        "core_summary": "内置渲染引擎把文档转为 HTML 或逐页 PNG，配合实时预览，让 Agent 修改元素后检查版面，再继续处理溢出与重叠问题。",
+        "prerequisites": "直接使用发布程序无需 Office 和额外运行时；从源码编译需要 .NET 10 SDK。",
         "limitations": "常驻模式会延迟写盘；其他程序读取文件前需先执行 save 或 close 刷新磁盘文件。",
         "license_label": "Apache-2.0",
         "license_restrictions": "",
@@ -584,17 +596,17 @@ window.GITHUB_HOTSPOTS_DATA = {
           "ai-pentesting",
           "ai-security"
         ],
-        "one_line": "让多个 AI 渗透测试 Agent 动态运行目标、验证漏洞，并输出复现证据、修复建议和报告",
+        "one_line": "让多个 AI 渗透测试 Agent 运行目标、验证漏洞，并交付复现证据、修复建议和报告",
         "highlights": [
-          "扫描本地代码库、远程仓库或 Web 应用",
-          "验证漏洞并生成可工作的复现步骤",
-          "分析访问控制、注入与业务逻辑问题",
-          "生成修复补丁和渗透测试报告",
-          "接入拉取请求流水线执行变更范围检查"
+          "扫描代码库、仓库或 Web 应用",
+          "验证漏洞并生成复现步骤",
+          "分析访问控制与注入问题",
+          "生成修复补丁和测试报告",
+          "在拉取请求中检查变更范围"
         ],
         "audience": "获得明确测试授权后，需要检查本地代码、代码仓库或 Web 应用的开发与安全团队",
         "core_title": "用实际利用验证漏洞",
-        "core_summary": "Agent 会动态运行目标并组合侦察、浏览器、终端与漏洞利用工具；发现问题后生成可工作的概念验证和复现步骤，减少只靠静态规则产生的误报。",
+        "core_summary": "Agent 会动态运行目标，并组合侦察、浏览器、终端和漏洞利用工具；发现问题后生成可工作的概念验证与复现步骤，减少仅靠静态规则产生的误报。",
         "prerequisites": "需要正在运行的 Docker，以及受支持供应商提供的 LLM API key。",
         "limitations": "只能测试自己拥有或已获许可的应用；使用者需自行承担合规与合法使用责任。",
         "license_label": "Apache-2.0",
@@ -631,17 +643,17 @@ window.GITHUB_HOTSPOTS_DATA = {
           "ai-agents",
           "claude-code"
         ],
-        "one_line": "在终端中集中查看、拆分和恢复多个 Agent 会话，让任务离开当前终端后继续运行",
+        "one_line": "在终端集中查看、拆分和恢复多个 Agent 会话，让任务离开当前终端后继续运行",
         "highlights": [
-          "查看多个 Agent 的真实终端输出",
-          "拆分窗格并用键盘或鼠标操作",
-          "分离会话后从终端或 SSH 重新连接",
-          "通过套接字接口创建窗格和读取输出",
-          "安装插件扩展窗格与工作流"
+          "查看多个 Agent 的终端输出",
+          "拆分窗格并用键鼠操作",
+          "分离会话后重新连接",
+          "通过套接字创建和读取窗格",
+          "安装插件扩展工作流"
         ],
         "audience": "同时运行多个终端编程 Agent，并需要远程接回或保留会话状态的开发者",
         "core_title": "会话分离后持续运行",
-        "core_summary": "herdr 把多个 Agent 放进可拆分的终端窗格，并保存会话状态；用户可以离开当前终端，之后从其他终端或 SSH 重新连接继续查看和操作。",
+        "core_summary": "herdr 把多个 Agent 放进可拆分的终端窗格，并保留会话状态；用户离开当前终端后，可从其他终端或 SSH 重新连接继续查看和操作。",
         "prerequisites": "",
         "limitations": "",
         "license_label": "AGPL-3.0-or-later",
@@ -674,15 +686,15 @@ window.GITHUB_HOTSPOTS_DATA = {
         "topics": [],
         "one_line": "把本机 Codex 接入 Claude Code，用斜杠命令完成代码审查、任务委派和会话移交",
         "highlights": [
-          "审查当前改动或相对基础分支的差异",
-          "针对设计假设和风险执行挑战式审查",
-          "委派排错、修复和后续任务给 Codex",
+          "审查当前改动或分支差异",
+          "挑战设计假设和风险",
+          "委派排错与修复任务",
           "查看、获取或取消后台任务",
-          "把当前对话移交到 Codex 继续处理"
+          "把当前对话移交给 Codex"
         ],
         "audience": "已在 Claude Code 中工作，希望调用 Codex 复核代码或接手开发任务的工程师",
         "core_title": "双助手任务交接",
-        "core_summary": "插件通过本机 Codex CLI 和 app server 工作：Claude Code 发起审查或后台任务，随后查询结果；需要切换工具时，还能把当前对话导入持久 Codex 线程。",
+        "core_summary": "插件通过本机 Codex CLI 和 app server 工作：Claude Code 发起审查或后台任务，再查询结果；切换工具时，还能把当前对话导入持久 Codex 线程。",
         "prerequisites": "需要 ChatGPT subscription 或 OpenAI API key，并安装 Node.js 18.18 or later。",
         "limitations": "普通审查和挑战式审查均为只读；审查门可能形成长时间循环并快速消耗使用额度。",
         "license_label": "Apache-2.0",
@@ -721,11 +733,11 @@ window.GITHUB_HOTSPOTS_DATA = {
         ],
         "one_line": "把多种命令行编程 Agent 放进统一桌面工作区，用隔离 worktree 并行尝试、比较和合并结果",
         "highlights": [
-          "并排运行多种命令行编程 Agent",
+          "并排运行多种编程 Agent",
           "把同一任务分发到隔离 worktree",
-          "比较候选结果并合并选中的实现",
-          "在差异行添加评论并反馈给 Agent",
-          "通过手机监控任务和发送后续指令"
+          "比较结果并合并选中实现",
+          "在差异行添加反馈",
+          "通过手机监控和引导任务"
         ],
         "audience": "需要并行尝试多种实现，并集中审查 Agent 代码差异的个人开发者或研发团队",
         "core_title": "隔离分支并行试做",
@@ -769,14 +781,14 @@ window.GITHUB_HOTSPOTS_DATA = {
         "one_line": "在本机建立统一 AI 接口，把编程工具请求转发到不同模型供应商，并在限额或故障时切换目标",
         "highlights": [
           "把不同模型供应商接到统一接口",
-          "按策略组合多个模型并自动路由",
-          "在配额耗尽或连接失败时切换目标",
-          "压缩部分输入和工具输出以减少令牌",
-          "通过面板查看用量、成本、健康和日志"
+          "按策略组合模型并自动路由",
+          "在配额或连接失败时切换目标",
+          "压缩部分输入和工具输出",
+          "查看用量、成本、健康和日志"
         ],
         "audience": "需要集中维护多个模型账号、供应商连接和编程工具配置的 AI 开发者或团队",
         "core_title": "组合模型自动回退",
-        "core_summary": "用户把多个供应商或账号编成路由链，系统依据配额、成本、延迟和连接健康度选择目标；遇到限流或故障时，跳过当前连接并继续尝试后备项。",
+        "core_summary": "用户把多个供应商或账号编成路由链，系统依据配额、成本、延迟和连接健康度选择目标；遇到限流或故障时，跳过当前连接并尝试后备项。",
         "prerequisites": "全局安装需 Node ≥22.0.0；从源码运行需复制环境配置并安装 npm 依赖。",
         "limitations": "免费额度、价格和供应商条款来自各上游；README 提醒应在面板查看条款标记和剩余额度。",
         "license_label": "MIT",
@@ -819,17 +831,17 @@ window.GITHUB_HOTSPOTS_DATA = {
               "awesome",
               "chatbot"
             ],
-            "one_line": "汇集多家 AI 聊天产品、编程工具及历史版本的系统提示词，便于集中查阅和横向对照",
+            "one_line": "汇集多家 AI 聊天产品、编程工具及历史版本的系统提示词，方便集中查阅和横向对照",
             "highlights": [
-              "查阅 Claude、ChatGPT、Gemini 等产品的提示词",
-              "对照同一模型的不同版本和使用形态",
-              "查看编程助手、办公集成与浏览器助手指令",
-              "定位工具定义、策略和个性配置等资料",
-              "从近期更新表找到新收录的提示词文件"
+              "查阅不同厂商与产品的提示词",
+              "对照同一模型的不同版本",
+              "查看编程与办公助手的指令",
+              "定位工具定义和个性配置",
+              "从更新表找到新增提示词"
             ],
             "audience": "需要研究模型指令、工具约束或不同 AI 产品交互设计的读者",
             "core_title": "跨产品提示词资料库",
-            "core_summary": "README 按厂商、模型和产品形态组织提示词文件，并补充旧版本、原始提示词、工具定义及近期更新入口，适合沿着同类产品或版本关系进行对照。",
+            "core_summary": "README 按厂商、模型和产品形态整理提示词，并补充旧版本、原始稿、工具定义及近期更新入口，便于沿产品或版本关系进行对照。",
             "prerequisites": "",
             "limitations": "",
             "license_label": "CC0-1.0",
@@ -868,16 +880,16 @@ window.GITHUB_HOTSPOTS_DATA = {
             ],
             "one_line": "通过单个命令行程序创建、读取和修改 Word、Excel、PowerPoint 文件，无需安装 Office",
             "highlights": [
-              "创建并编辑三类常用 Office 文件",
-              "读取文本、结构、样式、公式和图表",
-              "渲染文档并实时预览编辑结果",
-              "用 JSON 数据替换跨格式模板占位符",
-              "导出文档结构并通过批处理重新生成"
+              "创建并编辑常用 Office 文件",
+              "读取文本、样式、公式和图表",
+              "渲染文档并预览编辑结果",
+              "用 JSON 填充跨格式模板",
+              "导出结构并批量重建文档"
             ],
             "audience": "需要在脚本、容器、流水线或 AI Agent 中自动处理办公文档的开发者",
             "core_title": "可视化文档修改闭环",
-            "core_summary": "内置渲染引擎把文档转为 HTML 或逐页 PNG，配合实时预览，让 Agent 在添加、设置或删除元素后查看版面，再继续修正溢出与重叠问题。",
-            "prerequisites": "直接使用已发布程序无需 Office 和额外运行时；从源码编译需要 .NET 10 SDK。",
+            "core_summary": "内置渲染引擎把文档转为 HTML 或逐页 PNG，配合实时预览，让 Agent 修改元素后检查版面，再继续处理溢出与重叠问题。",
+            "prerequisites": "直接使用发布程序无需 Office 和额外运行时；从源码编译需要 .NET 10 SDK。",
             "limitations": "常驻模式会延迟写盘；其他程序读取文件前需先执行 save 或 close 刷新磁盘文件。",
             "license_label": "Apache-2.0",
             "license_restrictions": "",
@@ -913,17 +925,17 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-pentesting",
               "ai-security"
             ],
-            "one_line": "让多个 AI 渗透测试 Agent 动态运行目标、验证漏洞，并输出复现证据、修复建议和报告",
+            "one_line": "让多个 AI 渗透测试 Agent 运行目标、验证漏洞，并交付复现证据、修复建议和报告",
             "highlights": [
-              "扫描本地代码库、远程仓库或 Web 应用",
-              "验证漏洞并生成可工作的复现步骤",
-              "分析访问控制、注入与业务逻辑问题",
-              "生成修复补丁和渗透测试报告",
-              "接入拉取请求流水线执行变更范围检查"
+              "扫描代码库、仓库或 Web 应用",
+              "验证漏洞并生成复现步骤",
+              "分析访问控制与注入问题",
+              "生成修复补丁和测试报告",
+              "在拉取请求中检查变更范围"
             ],
             "audience": "获得明确测试授权后，需要检查本地代码、代码仓库或 Web 应用的开发与安全团队",
             "core_title": "用实际利用验证漏洞",
-            "core_summary": "Agent 会动态运行目标并组合侦察、浏览器、终端与漏洞利用工具；发现问题后生成可工作的概念验证和复现步骤，减少只靠静态规则产生的误报。",
+            "core_summary": "Agent 会动态运行目标，并组合侦察、浏览器、终端和漏洞利用工具；发现问题后生成可工作的概念验证与复现步骤，减少仅靠静态规则产生的误报。",
             "prerequisites": "需要正在运行的 Docker，以及受支持供应商提供的 LLM API key。",
             "limitations": "只能测试自己拥有或已获许可的应用；使用者需自行承担合规与合法使用责任。",
             "license_label": "Apache-2.0",
@@ -960,17 +972,17 @@ window.GITHUB_HOTSPOTS_DATA = {
               "ai-agents",
               "claude-code"
             ],
-            "one_line": "在终端中集中查看、拆分和恢复多个 Agent 会话，让任务离开当前终端后继续运行",
+            "one_line": "在终端集中查看、拆分和恢复多个 Agent 会话，让任务离开当前终端后继续运行",
             "highlights": [
-              "查看多个 Agent 的真实终端输出",
-              "拆分窗格并用键盘或鼠标操作",
-              "分离会话后从终端或 SSH 重新连接",
-              "通过套接字接口创建窗格和读取输出",
-              "安装插件扩展窗格与工作流"
+              "查看多个 Agent 的终端输出",
+              "拆分窗格并用键鼠操作",
+              "分离会话后重新连接",
+              "通过套接字创建和读取窗格",
+              "安装插件扩展工作流"
             ],
             "audience": "同时运行多个终端编程 Agent，并需要远程接回或保留会话状态的开发者",
             "core_title": "会话分离后持续运行",
-            "core_summary": "herdr 把多个 Agent 放进可拆分的终端窗格，并保存会话状态；用户可以离开当前终端，之后从其他终端或 SSH 重新连接继续查看和操作。",
+            "core_summary": "herdr 把多个 Agent 放进可拆分的终端窗格，并保留会话状态；用户离开当前终端后，可从其他终端或 SSH 重新连接继续查看和操作。",
             "prerequisites": "",
             "limitations": "",
             "license_label": "AGPL-3.0-or-later",
@@ -1003,15 +1015,15 @@ window.GITHUB_HOTSPOTS_DATA = {
             "topics": [],
             "one_line": "把本机 Codex 接入 Claude Code，用斜杠命令完成代码审查、任务委派和会话移交",
             "highlights": [
-              "审查当前改动或相对基础分支的差异",
-              "针对设计假设和风险执行挑战式审查",
-              "委派排错、修复和后续任务给 Codex",
+              "审查当前改动或分支差异",
+              "挑战设计假设和风险",
+              "委派排错与修复任务",
               "查看、获取或取消后台任务",
-              "把当前对话移交到 Codex 继续处理"
+              "把当前对话移交给 Codex"
             ],
             "audience": "已在 Claude Code 中工作，希望调用 Codex 复核代码或接手开发任务的工程师",
             "core_title": "双助手任务交接",
-            "core_summary": "插件通过本机 Codex CLI 和 app server 工作：Claude Code 发起审查或后台任务，随后查询结果；需要切换工具时，还能把当前对话导入持久 Codex 线程。",
+            "core_summary": "插件通过本机 Codex CLI 和 app server 工作：Claude Code 发起审查或后台任务，再查询结果；切换工具时，还能把当前对话导入持久 Codex 线程。",
             "prerequisites": "需要 ChatGPT subscription 或 OpenAI API key，并安装 Node.js 18.18 or later。",
             "limitations": "普通审查和挑战式审查均为只读；审查门可能形成长时间循环并快速消耗使用额度。",
             "license_label": "Apache-2.0",
@@ -1050,11 +1062,11 @@ window.GITHUB_HOTSPOTS_DATA = {
             ],
             "one_line": "把多种命令行编程 Agent 放进统一桌面工作区，用隔离 worktree 并行尝试、比较和合并结果",
             "highlights": [
-              "并排运行多种命令行编程 Agent",
+              "并排运行多种编程 Agent",
               "把同一任务分发到隔离 worktree",
-              "比较候选结果并合并选中的实现",
-              "在差异行添加评论并反馈给 Agent",
-              "通过手机监控任务和发送后续指令"
+              "比较结果并合并选中实现",
+              "在差异行添加反馈",
+              "通过手机监控和引导任务"
             ],
             "audience": "需要并行尝试多种实现，并集中审查 Agent 代码差异的个人开发者或研发团队",
             "core_title": "隔离分支并行试做",
@@ -1098,14 +1110,14 @@ window.GITHUB_HOTSPOTS_DATA = {
             "one_line": "在本机建立统一 AI 接口，把编程工具请求转发到不同模型供应商，并在限额或故障时切换目标",
             "highlights": [
               "把不同模型供应商接到统一接口",
-              "按策略组合多个模型并自动路由",
-              "在配额耗尽或连接失败时切换目标",
-              "压缩部分输入和工具输出以减少令牌",
-              "通过面板查看用量、成本、健康和日志"
+              "按策略组合模型并自动路由",
+              "在配额或连接失败时切换目标",
+              "压缩部分输入和工具输出",
+              "查看用量、成本、健康和日志"
             ],
             "audience": "需要集中维护多个模型账号、供应商连接和编程工具配置的 AI 开发者或团队",
             "core_title": "组合模型自动回退",
-            "core_summary": "用户把多个供应商或账号编成路由链，系统依据配额、成本、延迟和连接健康度选择目标；遇到限流或故障时，跳过当前连接并继续尝试后备项。",
+            "core_summary": "用户把多个供应商或账号编成路由链，系统依据配额、成本、延迟和连接健康度选择目标；遇到限流或故障时，跳过当前连接并尝试后备项。",
             "prerequisites": "全局安装需 Node ≥22.0.0；从源码运行需复制环境配置并安装 npm 依赖。",
             "limitations": "免费额度、价格和供应商条款来自各上游；README 提醒应在面板查看条款标记和剩余额度。",
             "license_label": "MIT",
@@ -1461,7 +1473,7 @@ window.GITHUB_HOTSPOTS_DATA = {
     }
   },
   "methodology": {
-    "summary": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后从受控候选中整榜选稿，并经过仓库身份、URL、数字、增量口径和禁用套话回查。",
+    "summary": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
     "quality": "中高：GitHub Trending 周期信号",
     "warnings": [
       "综合主榜：历史快照尚未覆盖上榜项目，周期 Star 来自 GitHub Trending",
