@@ -40,3 +40,42 @@ def test_run_command_reports_both_boards_and_review_files(monkeypatch) -> None:
     assert "2026-07-11.xiaohongshu.md" in response.output
     assert "2026-07-11.ai.xiaohongshu.md" in response.output
     assert "Poster PNG files: 1" in response.output
+
+
+def test_rerender_command_can_refresh_readme_and_avatar_evidence(monkeypatch) -> None:
+    settings = load_settings(Path("config/hotspots.yaml"))
+    artifacts = ReportArtifacts(
+        markdown=Path("reports/daily/2026-07-11.md"),
+        json=Path("reports/daily/2026-07-11.json"),
+        xiaohongshu=Path("reports/daily/2026-07-11.xiaohongshu.md"),
+        ai_xiaohongshu=Path("reports/daily/2026-07-11.ai.xiaohongshu.md"),
+        posters_dir=Path("reports/daily/assets/2026-07-11"),
+        poster_manifest=None,
+        poster_files=(),
+        warnings=(),
+    )
+    captured = {}
+
+    monkeypatch.setattr(cli, "load_settings", lambda _: settings)
+
+    def fake_rerender(*args, **kwargs):
+        captured["args"] = args
+        captured["kwargs"] = kwargs
+        return artifacts
+
+    monkeypatch.setattr(cli, "rerender_report", fake_rerender)
+
+    response = CliRunner().invoke(
+        cli.app,
+        [
+            "rerender",
+            "reports/daily/2026-07-11.json",
+            "--editorial-backend",
+            "codex-cli",
+            "--refresh-evidence",
+        ],
+    )
+
+    assert response.exit_code == 0
+    assert captured["kwargs"]["editorial_backend"] == "codex-cli"
+    assert captured["kwargs"]["refresh_evidence"] is True

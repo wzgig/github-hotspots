@@ -6,6 +6,11 @@ import pytest
 
 from github_hotspots import report as report_module
 from github_hotspots.config import Settings
+from github_hotspots.evidence import (
+    CachedAvatar,
+    RepositoryEvidence,
+    RepositoryMetadataEvidence,
+)
 from github_hotspots.models import RankedRepository, Repository
 from github_hotspots.poster import (
     POSTER_RENDERER_NAME,
@@ -13,7 +18,9 @@ from github_hotspots.poster import (
     POSTER_STYLE_VERSION,
     PosterArtifacts,
 )
+from github_hotspots.publication_evidence import PublicationEvidenceBundle
 from github_hotspots.report import render_reports
+from github_hotspots.summarizer import RepositorySummary
 
 
 def _settings(
@@ -167,6 +174,101 @@ def test_estimated_delta_is_explicitly_labeled(tmp_path: Path) -> None:
     assert "估算周期 Star" in markdown
     assert "本期没有符合 AI 专题口径的候选项目" in markdown
     assert "过去 24 小时估算约 +3 Star（待后续快照核验）" in xhs
+
+
+def test_rich_evidence_copy_and_avatar_metadata_flow_into_publication(tmp_path: Path) -> None:
+    repository = Repository(
+        repository_id=42,
+        full_name="example/research-kit",
+        html_url="https://github.com/example/research-kit",
+        description="Research workflows for Claude Code.",
+        language="Python",
+        stars=3_000,
+        forks=240,
+    )
+    ranked = RankedRepository(
+        repository=repository,
+        rank=1,
+        score=92.0,
+        star_delta=180,
+        delta_source="snapshot",
+    )
+    summary = RepositorySummary(
+        one_line="一套把调研、写作、评审和返修串起来的研究工作流。",
+        highlights=("检索并梳理文献", "规划和撰写论文", "从多个视角审查初稿"),
+        audience="需要完成综述、初稿审查或返修的研究人员与学生",
+        capabilities=(
+            "完成快速研究与事实核查",
+            "整理普通或系统性文献综述",
+            "规划论文结构并生成初稿",
+            "从多个角色审查论文质量",
+            "串联修订、复核与最终定稿",
+        ),
+        core_title="有人把关的研究流程",
+        core_summary="它把多个研究技能串成阶段化流程，并在关键节点保留人工确认。",
+        prerequisites="需要 Claude Code 和可用的模型 API Key",
+        limitations="不是一键代写工具，研究方法、数据和结论仍需使用者确认",
+        license_label="CC BY-NC 4.0",
+        license_restrictions="署名，禁止商业使用",
+        content_status="readme_enriched",
+    )
+    report_root = tmp_path / "reports" / "daily"
+    avatar_path = report_root / "avatars" / "2026-07-11" / "owner.png"
+    bundle = PublicationEvidenceBundle(
+        repository_evidence=RepositoryEvidence(
+            metadata=RepositoryMetadataEvidence(
+                repository_id=42,
+                full_name=repository.full_name,
+                html_url=repository.html_url,
+                owner_avatar_url="https://avatars.githubusercontent.com/u/42?v=4",
+                license_spdx_id="NOASSERTION",
+                default_branch="main",
+                source_url="https://api.github.com/repos/example/research-kit",
+            ),
+            readme=None,
+        ),
+        avatar=CachedAvatar(
+            path=avatar_path,
+            sha256="a" * 64,
+            width=96,
+            height=96,
+            source_url="https://avatars.githubusercontent.com/u/42?v=4",
+        ),
+        avatar_relative_path="avatars/2026-07-11/owner.png",
+    )
+
+    artifacts = render_reports(
+        settings=_settings(tmp_path),
+        period="daily",
+        run_date=date(2026, 7, 11),
+        rankings=[ranked],
+        template_dir=Path("templates"),
+        publication_evidence={repository.full_name: bundle},
+        summary_overrides={"comprehensive": (summary,)},
+        editorial_metadata_overrides={
+            "comprehensive": {
+                "prompt_version": "4.0",
+                "schema_version": "4.0",
+                "requested_backend": "codex-cli",
+                "used_backend": "codex-cli",
+                "fallback_used": False,
+                "error_category": None,
+            }
+        },
+    )
+
+    payload = json.loads(artifacts.json.read_text(encoding="utf-8"))
+    xhs = artifacts.xiaohongshu.read_text(encoding="utf-8")
+    published = payload["repositories"][0]
+    assert published["avatar_path"] == "avatars/2026-07-11/owner.png"
+    assert published["license_spdx"] == "CC BY-NC 4.0"
+    assert published["summary"]["capabilities"] == list(summary.capabilities)
+    assert payload["editorial"]["boards"]["comprehensive"]["used_backend"] == "codex-cli"
+    assert payload["editorial"]["boards"]["comprehensive"]["reused_existing_summary"] is True
+    assert "串联修订、复核与最终定稿" in xhs
+    assert "核心亮点：有人把关的研究流程" in xhs
+    assert "许可证：CC BY-NC 4.0（署名，禁止商业使用）" in xhs
+    assert "数据来自 GitHub 公开信息与本地快照" not in xhs
 
 
 def test_disabled_ai_board_has_no_missing_candidate_warning(tmp_path: Path) -> None:

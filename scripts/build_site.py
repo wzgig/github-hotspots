@@ -265,6 +265,8 @@ def _normalise_repository(
     summary = repository.get("summary")
     summary = summary if isinstance(summary, dict) else {}
     highlights = summary.get("highlights")
+    capabilities = summary.get("capabilities")
+    reader_capabilities = capabilities if isinstance(capabilities, list) else highlights
     topics = repository.get("topics")
     percentiles = repository.get("component_percentiles")
     assets = repository.get("assets")
@@ -293,9 +295,18 @@ def _normalise_repository(
         "topics": [str(item) for item in topics[:5]] if isinstance(topics, list) else [],
         "one_line": str(summary.get("one_line") or description),
         "highlights": (
-            [str(item) for item in highlights[:3]] if isinstance(highlights, list) else []
+            [str(item) for item in reader_capabilities[:5]]
+            if isinstance(reader_capabilities, list)
+            else []
         ),
         "audience": str(summary.get("audience") or "开源项目关注者"),
+        "core_title": str(summary.get("core_title") or ""),
+        "core_summary": str(summary.get("core_summary") or ""),
+        "prerequisites": str(summary.get("prerequisites") or ""),
+        "limitations": str(summary.get("limitations") or ""),
+        "license_label": str(summary.get("license_label") or ""),
+        "license_restrictions": str(summary.get("license_restrictions") or ""),
+        "content_status": str(summary.get("content_status") or "metadata_only"),
         "poster_path": _publish_asset(
             root,
             public_root,

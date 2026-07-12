@@ -143,8 +143,15 @@ def rerender_command(
             help="deterministic or codex-cli; facts and rankings are not recollected",
         ),
     ] = None,
+    refresh_evidence: Annotated[
+        bool,
+        typer.Option(
+            "--refresh-evidence",
+            help="Refresh README, license, and owner-avatar evidence from GitHub",
+        ),
+    ] = False,
 ) -> None:
-    """Rebuild copy and posters from frozen report facts without GitHub requests."""
+    """Rebuild copy and posters while keeping frozen ranking facts unchanged."""
 
     try:
         settings = load_settings(config)
@@ -152,6 +159,7 @@ def rerender_command(
             settings,
             report,
             editorial_backend=editorial_backend,
+            refresh_evidence=refresh_evidence,
         )
     except (ConfigurationError, RuntimeError, ValueError) as exc:
         typer.echo(f"Error: {exc}", err=True)

@@ -1,165 +1,154 @@
-# 本地 Codex 受控选稿与密钥隔离方案
+# 本地 Codex 证据化编辑与密钥隔离方案
 
-本文定义 GitHub Hotspots 可选调用本地 Codex CLI 时的使用时机、接口约定和安全边界。Codex Schema 3.0 的角色是“整榜叙事规划器和受控选稿器”：程序先为每个仓库生成 7 个完整、确定性的候选版本，Codex 只能选择其中一个并逐字符复制。候选、事实、排名和最终文字都不由模型自由生成，公开仓库、日志和 GitHub Actions 也不包含实际 endpoint、API key 或 model 标识。
+本文定义 GitHub Hotspots 可选调用本地 Codex CLI 时的使用时机、Prompt/Schema 4.0 契约、证据边界和凭据隔离要求。当前 Codex 的角色是“整榜证据编辑器”：它可以在同一仓库的受控 README/metadata 证据范围内，把原文改写成普通读者能理解的小红书文案；它不能改变仓库身份、URL、榜单数字、排名或许可证事实。
+
+> 历史说明：Schema 3.0 曾把 Codex 限定为从七个候选中逐字符选稿。该方案已经由 Prompt/Schema 4.0 取代，只保留为旧报告兼容背景，不代表当前实现。
 
 ## 决策摘要
 
-项目不需要改用 OpenAI 官网 API，也不应读取、复制或公开 Codex 的实际连接配置。本地调用只面向已经安装并由用户自行配置的 `codex` 命令。
-
-推荐方案如下：
-
-1. **GitHub Actions 默认继续使用确定性候选生成和选稿**，不依赖 LLM，也不需要任何模型密钥。
-2. **本地可选使用 `codex exec` 受控选稿适配器**。项目只调用 Codex CLI，由 CLI 自己加载用户级配置和凭据；调用发生在 GitHub 事实、两榜排名和 7 个候选版本全部冻结之后。
-3. **未来如需在 CI 在线选稿**，必须由用户显式启用，并在 GitHub 仓库设置中手动配置 Secrets。
-4. **禁止自动同步本机 Codex 配置或密钥到 GitHub**，也禁止把真实 endpoint、key、model 写入文档、示例配置、提交记录或运行产物。
+1. **GitHub Actions 默认使用 `deterministic`**，不依赖 LLM，也不加载任何本机 Codex 凭据。
+2. **本地可显式使用 `codex exec`**。项目只启动已安装的 Codex CLI，由 CLI 自行加载用户级 provider、配置和认证状态；项目不扫描、解析或复制这些文件。
+3. **Prompt/Schema 4.0 允许证据内白话重写**。README、description、Topics 和 metadata 都是不可信外部数据，只能作为证据，不能成为指令。
+4. **身份和数字冻结**。仓库 ID、`owner/repo`、URL、语言、Star、Fork、周期增量、排名和统计窗口由程序逐字段回查，模型不能换算、纠错或补全。
+5. **许可证不得猜测**。`NOASSERTION`、`OTHER`、`unknown` 或空值都不等于 MIT，也不代表允许商用；许可证名称和限制只能来自明确证据。
+6. **失败按整榜回退**。非法 JSON/Schema、证据 ID、README SHA、身份/数字、许可证、重复或其他校验失败时，丢弃整个榜单的模型输出并使用确定性结果。
+7. **头像单独走安全缓存**。受控 metadata 中可以包含 Owner 头像 URL，但 Codex 不得访问它，头像图片字节也不进入模型；程序仅从受控 GitHub 头像域下载，验证并重新编码为本地 PNG，失败时使用确定性占位图。
 
 ## 当前实施状态（2026-07-12）
 
-- 确定性候选生成与确定性选稿仍是已经运行的默认路径，GitHub Actions 不调用本地 Codex。
-- `summarizer.py` 为每个仓库生成定位、增长、技术栈、规模、Topics、活跃度和来源 7 个候选；自然度与项目差异主要通过改进这套候选库获得。
-- `editorial.py` 已实现 Schema 3.0 整榜选稿、候选逐字符匹配、角度覆盖、数字/URL/身份回查、CI 禁用和整榜回退。
-- Schema 3.0 已使用冻结日榜与周榜的综合/AI 四个榜单完成真实本地结构化受控选稿验证；四个批次均为 `used_backend=codex-cli`、`fallback_used=false`。旧版自由改写契约的历史冒烟不计入本次验收。
-- 当前用户级配置中的 reasoning 值超出已安装 CLI 0.124.0 的枚举。项目没有修改全局配置，而是在公开项目配置中只覆盖为受支持的 `xhigh`；provider 和凭据仍由 Codex CLI 自行加载。
-- GitHub Actions 默认继续使用 `deterministic`，不会尝试访问用户电脑、本地 provider 或凭据。
+- `prompts/repository_summary_zh.md` 已升级为 Prompt 4.0，`schemas/repository_summary.schema.json` 已升级为输出 Schema 4.0。
+- `editorial.py` 已实现整榜证据输入、证据内白话改写、逐字段 `evidence_ids`、README SHA/许可证/身份/数字回查、CI 禁用和整榜回退。
+- `evidence.py` 与 `publication_evidence.py` 已实现 README 清洗、metadata/README 证据包和安全 Owner 头像缓存。
+- 确定性摘要仍是本地与 GitHub Actions 的默认路径，也是 Codex 不可用或输出不合格时的回退路径。
+- 报告读取层继续兼容历史报告 Schema；这与 Codex 输出 Schema 4.0 是两套不同的版本契约，不应混淆。
 
-## 何时使用本地 Codex
-
-本地 Codex 只在以下顺序的第 7 步介入：
+## Codex 在流水线中的位置
 
 ```text
 1. GitHub 候选发现
 2. API 事实补全与过滤
 3. 快照和增量计算
 4. 综合主榜 / AI 专题榜独立排名
-5. 冻结仓库身份、URL、数字、榜单和证据
-6. 每个仓库生成 7 个确定性候选
-7. 可选 Codex 整榜规划角度并选择候选
-8. Schema、事实与候选逐字符回查
-9. 文案 / 海报文字 / 人工审核包
+5. 冻结仓库身份、URL、数字、榜单顺序和统计窗口
+6. 采集并清洗 README / metadata，生成可用 evidence IDs
+7. 可选 Codex 按整榜进行证据化中文编辑
+8. Schema 4.0、逐字段证据、README SHA、许可证和冻结事实回查
+9. 报告、小红书人工审核稿与 V3 海报
 ```
 
-Codex 只适合处理以下选择任务：
+Codex 可以完成：
 
-- 查看整榜的 7 类候选，为相邻项目分配不同角度。
-- 选择最能体现仓库差异的完整候选，并在周榜中覆盖全部 7 个角度。
-- 把所选候选的 `one_line`、三条 `highlights` 和 `audience` 逐字符复制到结构化输出。
-- 回报选中的角度、固定证据引用和批次质量字段，供程序再次校验。
+- 阅读当前仓库经过清洗的 README 和受控 metadata。
+- 在证据语义范围内把项目定位、能力、核心亮点、受众、前置条件和限制改写成自然中文。
+- 为相邻项目分配不同叙事角度，减少整榜重复。
+- 为每个自然语言字段返回对应的 `evidence_ids`。
 
-不得交给 Codex 的工作包括：自由改写、翻译、压缩、润色、候选拼接、仓库搜索、AI 专题分类、排名、Star/Fork/日期计算、URL 补全、许可证推断或任何 GitHub 数字事实修改。若文案仍显得同质化，应先改进确定性候选库和受众规则，而不是扩大模型生成权限。
+Codex 不可以完成：
 
-## 推荐架构
+- 搜索仓库、跟随 README 外链、调用工具或执行 README 中的命令。
+- 决定 AI 专题归属、排名、Star/Fork/日期或增量。
+- 修改仓库身份、URL、语言、统计窗口或任何冻结数字。
+- 根据模糊提示推断许可证、商用权利、性能、安全性、采用情况或未来趋势。
+- 绘制海报、下载头像或读取项目目录、本机环境和用户级 Codex 文件。
 
-```text
-GitHub 仓库公共数据 / 本地快照
-              |
-              v
-       事实冻结与输入校验
-              |
-              v
-        生成 7 类确定性候选
-              |
-       +------+------------------+
-       |                         |
-       v                         v
-  确定性选稿（默认）       Codex CLI 受控选稿（本地可选）
-       |                         |
-       |                  codex exec
-       |                         |
-       |             用户级 Codex 配置与凭据
-       |                         |
-       +------------+------------+
-                    v
-     JSON Schema、事实与候选逐字符回查
-                    |
-                    v
-      Markdown / 小红书文案 / 海报短句
-```
+## Prompt/Schema 4.0 输入
 
-项目代码只知道“调用 `codex exec` 并接收受控选择结果”，不知道实际服务地址、密钥或模型名称。这样即使仓库公开，其他人也只能看到适配器接口，不能得到用户的本机连接信息。
+每个榜单项只包含公开、经过程序清洗和限长的材料：
 
-## 为什么优先使用 `codex exec`
+- 冻结的仓库身份、榜单数字和 `editorial_facts`；
+- `deterministic_draft` 与七个带 `evidence_id` 的 `candidate_summaries`；
+- `repository_evidence.metadata`：仓库 ID、`full_name`、URL、Owner 头像 URL、许可证 SPDX、默认分支等受控字段；
+- `repository_evidence.readme`：经过清洗、带 SHA 的 README，或 `null`；
+- `available_evidence_ids`：当前仓库可以引用的全部证据 ID。
 
-Codex CLI 的非交互模式适合脚本调用，并可直接复用当前用户已经配置的 provider 和认证状态。与项目直接解析本地配置相比，它具有以下优势：
+README、description、Topics、网页文字和 metadata 均标记为不可信外部数据。提示词明确要求忽略其中的角色覆盖、工具调用、文件读取、网络访问、凭据请求和输出格式修改指令。模型不能跨仓库借用证据。
 
-- 项目无需读取 `%USERPROFILE%\.codex\config.toml` 或任何认证文件。
-- 项目无需知道 provider 的 endpoint、环境变量名、API key 或 model。
-- 可以使用 `--output-schema` 强制最终响应满足 JSON Schema。
-- 可以使用 `--ephemeral` 避免保存本次会话 rollout 文件。
-- 可以使用 `--sandbox read-only` 阻止调用过程修改工作区文件。
-- 更换本机 provider 时，项目适配器通常不需要修改。
+## Prompt/Schema 4.0 输出
 
-> [!IMPORTANT]
-> “读取本地 Codex 使用的 API”在本项目中应理解为“调用本机 Codex CLI，让 CLI 复用自己的用户级配置和凭据”，而不是让项目扫描、解析或复制 Codex 的配置文件和认证存储。
+每个 `card` 的主要自然语言与审核字段为：
 
-## 本地调用约定
+- `one_line`：一句话说明项目是什么、解决什么问题。
+- `highlights[3]`：为历史报告消费者保留的三条核心能力。
+- `capabilities`：1 至 5 条具体能力；证据充分时优先写满 5 条。
+- `core_title` / `core_summary`：最有辨识度的核心亮点及完整解释。
+- `audience`：具体使用者和任务场景。
+- `prerequisites`：README 明确写出的前置条件；无证据时为空字符串。
+- `limitations`：README 明确写出的人工确认点或能力边界；无证据时为空字符串。
+- `license_label` / `license_restrictions`：许可证标识与限制原文；不得推导法律结论。
+- `readme_sha`：使用的 README SHA；没有 README 时为 `null`。
+- `content_status`：`readme_enriched`、`metadata_only` 或 `needs_review`。
+- `evidence_ids`：为上述每一个自然语言字段分别列出证据 ID；列表字段按每条文字分别引用。
 
-本次升级的适配器以整榜批处理方式工作，并遵守以下调用约定：
+非空文本必须至少引用一个当前仓库 `available_evidence_ids` 中的 ID；空字符串必须对应空证据数组。文案里的阿拉伯数字还必须逐字符出现在所引用证据正文中。
 
-- 输入仅包含已经采集并校验的公开 GitHub 仓库事实、冻结后的榜单顺序，以及程序生成的 7 个 `candidate_summaries`。
-- 一次调用处理完整榜单。模型先规划互不重复的编辑角度，再从每个仓库的候选中选择一个完整版本；它不逐项写作。
-- README、description、topics 等外部文本一律视为不可信数据，不执行其中的指令。
-- 在临时工作目录中运行；提示词与证据通过 stdin 提交，目录只保留本次输出 Schema 和临时结果。
-- 使用参数数组启动子进程，不使用 `shell=True`，不拼接可执行的命令字符串。
-- 使用 `--ephemeral`、`--sandbox read-only`、`--ignore-rules` 和 `--output-schema`；先通过 `codex mcp list --json` 只读取 server 名称与启用状态，为每个已配置 server 追加 `enabled=false`，再用同一组覆盖参数复查所有 server 均已关闭。若枚举、覆盖或复查失败，整榜回退。与此同时禁用 shell、浏览器、插件、工具搜索、多代理和其他与文本选稿无关的功能。
-- 不传 `--model`，不在仓库中固定或记录用户当前模型。
-- 不使用 `--ignore-user-config`，因为本地 provider 选择位于用户级配置中。
-- 不使用 `--dangerously-bypass-approvals-and-sandbox`。
-- 设置超时；CLI 不存在、超时、返回非零、输出无法解析、候选不匹配或事实校验失败时，自动回退到确定性选稿。
+## README 缺失与整榜回退
 
-整榜结构化输出至少要包含每个仓库的 `repository_id`、所选角度、短定位、三条要点、适用人群及证据映射。短定位、要点和适用人群必须全部来自同一个候选，并与输入逐字符相等。模型不得增删仓库、改变榜单归属、改动顺序或拼接两个候选。
+README 存在时，Codex 可以在证据范围内自由使用白话重写，但必须回显完全一致的 `readme_sha`，并让 `readme_enriched` 文案至少引用一次 `github.readme:<sha>`。
 
-PowerShell 接口原型如下。`$StagingDir` 应是程序为单次选稿创建的临时目录，`$SchemaPath` 指向公开的 `schemas/repository_summary.schema.json`；其中不得包含任何凭据。日常使用应通过项目 CLI，而不是手工拼接这段命令。
+README 缺失时：
 
-```powershell
-$prompt = Get-Content $PromptPath -Raw
-$evidence = Get-Content $EvidencePath -Raw
-$servers = codex -c 'model_reasoning_effort="xhigh"' mcp list --json | ConvertFrom-Json
-$mcpDisableArgs = foreach ($server in $servers) {
-    '-c'
-    "mcp_servers.$($server.name).enabled=false"
-}
+- `readme_sha` 必须为 `null`；
+- `content_status` 只能是 `metadata_only` 或 `needs_review`；
+- 除许可证字段外，全部自然语言字段必须逐字段匹配同一个 angle 的单一 `candidate_summaries` 候选；
+- 许可证只能逐字复制有意义的 metadata SPDX，`license_restrictions` 必须为空；
+- 不允许借 metadata 自由扩写新能力、前置条件、限制或受众。
 
-# 适配器会先用同一组参数再次执行 mcp list，并要求 enabled 数量为 0。
-# 任一步失败都不会进入下面的 exec。
+README 缺失本身不会阻断整榜；它会把该仓库限制到确定性候选。若模型违反上述限制，或出现非法证据 ID、README SHA 不一致、输出失败、事实漂移、许可证不匹配等任一问题，则**整个榜单**回退到 `deterministic`，不接收部分合格结果，也不尝试自动修补模型输出。
 
-@"
-$prompt
+## 冻结事实与许可证门禁
 
-<repository_evidence>
-$evidence
-</repository_evidence>
-"@ | codex exec @mcpDisableArgs `
-    --ephemeral `
-    --sandbox read-only `
-    --skip-git-repo-check `
-    --ignore-rules `
-    --color never `
-    -C $StagingDir `
-    -c 'shell_environment_policy.inherit="none"' `
-    --output-schema $SchemaPath `
-    --output-last-message $OutputPath `
-    -
-```
+以下字段由程序逐字段复制和回查：
 
-适配器完成调用后仍必须在程序侧执行：
+- `rank`；
+- `repository.repository_id`、`full_name`、`html_url`；
+- `card.project_name`、`language`、`stars_total`、`period_stars_added`、`period_stars_added_display`、`forks_total`、`repository_url`；
+- `data_quality.delta_source`、`delta_is_exact`、`warnings`；
+- `period.type`、`period.start`、`period.end`。
 
-1. JSON 解析和 Schema 校验。
-2. `repository_id`、`full_name`、URL、语言、Star、Fork 和增量数字的逐字段回查。
-3. 验证 `one_line`、三条 `highlights` 和 `audience` 与同一个候选逐字符相等。
-4. 验证日榜角度不重复，周榜覆盖 7 个角度，相邻项目不复用角度。
-5. 检查输出中是否出现输入之外的仓库、链接、数字、文字或来源。
-6. 执行榜内重复与禁用套话检查。
-7. 校验失败时丢弃整榜结果并使用确定性选稿，不能“尽量修补”模型输出。
+许可证门禁额外要求：
 
-## 项目配置接口
+- metadata SPDX 只有在不是 `NOASSERTION`、`OTHER`、`unknown` 或空值时才可直接采用；
+- README 许可证名称必须逐字出现在所引用 README 中；
+- `license_restrictions` 必须是 README 中连续出现的原文短句，不能翻译、概括或推导；
+- 不得输出“商用无忧”“无任何限制”“可放心商用”等法律结论。
 
-公开配置只表达能力选择，不表达 provider 细节：
+## 安全 Owner 头像缓存
+
+V3 单项目海报在项目名称左侧使用 GitHub Owner 头像。头像管线独立于 LLM：
+
+1. 只接受 `https://avatars.githubusercontent.com/...`，拒绝 HTTP、用户信息、非默认端口、伪造子域和越界重定向。
+2. 限制下载体积、图片像素、单边尺寸和重定向次数，并校验允许的图片 Content-Type。
+3. 使用 Pillow 解码后重新编码为 PNG，去除原图 metadata；采用安全 cache key、URL 摘要文件名和原子写入。
+4. 只把位于报告头像根目录内的相对路径写入公开报告，不公开本机绝对路径。
+5. 下载、格式或路径校验失败时记录非敏感 warning，海报使用确定性身份占位图，不阻断榜单。
+
+## V3 参考图信息架构
+
+当前海报复用参考帖的“信息层级”，不复制其原图资产或账号标识：
+
+- 深色顶部：月份、系列标题、期号和圆形排名；
+- 白色项目身份卡：Owner 头像、项目名、一句话定位，以及明确许可证或“许可证未标注”状态；
+- 四个统计卡：总 Star、语言、周期增长和 Fork；
+- 左侧大卡：最多 5 条“它能做什么”；
+- 右侧深色卡：`core_title` 与 `core_summary`；
+- 右侧白色卡：`audience`；`prerequisites` 与 `limitations` 保留在小红书文字审核稿中，不强塞进固定海报版面；
+- 底部：系列标识和日期。
+
+公开海报和小红书正文不再重复“数据来自 GitHub 公开信息与本地快照”这类来源声明，也不展示裸 URL 或内部审核/管线术语；真实性仍由冻结报告、证据字段和人工审核保证。
+
+## 本地调用方式
+
+项目代码只知道如何启动 `codex exec` 并接收 Schema 4.0 JSON，不知道实际 endpoint、API key、provider 或 model。适配器使用临时目录、只读沙箱、临时会话和输出 Schema，并在调用前关闭 MCP server 及与文本编辑无关的能力。
+
+> “读取本地 Codex 使用的 API”在本项目中表示“调用本机 Codex CLI，让 CLI 复用自己的用户级配置和凭据”，不是扫描、解析或复制 `%USERPROFILE%\.codex`。
+
+公开配置只表达能力选择：
 
 ```yaml
 editorial:
   backend: deterministic  # deterministic | codex-cli
   fallback: deterministic
-  timeout_seconds: 120
+  timeout_seconds: 240
   allow_in_ci: false
   prompt_path: prompts/repository_summary_zh.md
   schema_path: schemas/repository_summary.schema.json
@@ -168,109 +157,46 @@ editorial:
     reasoning_effort_override: xhigh
 ```
 
-建议语义：
-
-| `backend` | 使用场景 | 凭据来源 |
-| --- | --- | --- |
-| `deterministic` | 本地与 GitHub Actions 默认的候选生成和选稿 | 无 |
-| `codex-cli` | 用户主动启用的本地整榜受控选稿 | Codex CLI 自行加载用户级配置 |
-| `remote`（未来） | 用户显式授权并实现远程受控选稿适配器后的受信任 CI | GitHub Secrets |
-
-本地显式启用可以运行完整采集，也可以只重渲染冻结报告。后者不会重新访问 GitHub，更适合文案与海报审核：
+本地完整采集可显式启用 Codex：
 
 ```powershell
 python -m github_hotspots.cli run --period daily --editorial-backend codex-cli
-python -m github_hotspots.cli rerender reports/daily/2026-07-11.json --editorial-backend codex-cli
 ```
 
-Schema 3.0 的真实 `rerender` 验证已经覆盖冻结日榜与周榜的综合/AI 四个榜单，均使用 `codex-cli` 且未回退。任何后续运行若遇到 CLI、用户配置、超时、候选不匹配或其他输出校验问题，都必须整榜回退到 `deterministic`。
+对已有冻结报告刷新 README、许可证和 Owner 头像证据，并重新生成文案与海报：
 
-任何提交到公开仓库的报告只能记录以下非敏感运行信息：
+```powershell
+python -m github_hotspots.cli rerender reports/daily/2026-07-12.json `
+  --refresh-evidence `
+  --editorial-backend codex-cli
+```
 
-- 选稿后端类型，例如 `deterministic` 或 `codex-cli`。
-- 提示词版本、Schema 版本和校验结果。
-- 耗时、是否回退、错误类别和脱敏后的错误摘要。
+不加 `--refresh-evidence` 的 `rerender` 不重新请求 GitHub；适合只用报告中已有字段做离线确定性重渲染。启用 `--refresh-evidence` 会保持原排名事实不变并刷新许可证与 Owner 头像；只有同时选择 `--editorial-backend codex-cli` 时才会读取 README 供证据化编辑。
 
-不得记录实际 provider 名称、endpoint、API key、认证头、model、完整请求头、原始错误响应或用户级 Codex 配置路径内容。
+## GitHub Actions 与凭据边界
 
-## GitHub Actions 策略
+公开仓库的日榜和周榜工作流默认使用 `deterministic`。GitHub-hosted runner 无法访问用户电脑上的 Codex 登录态，项目也不得通过脚本上传本机配置、认证文件、环境变量或当前会话信息。
 
-### 默认策略
+以下内容不得进入 Git、日志、报告、Pages、测试 fixture 或 artifact：
 
-公开仓库的每日和每周工作流默认使用确定性候选生成和选稿。海报也由代码确定性渲染，不依赖模型生成图片。这样能够：
+- API key、Bearer Token、Cookie、认证头；
+- 实际 endpoint、私有域名、代理地址、provider 或当前 model；
+- Codex 用户级 `config.toml`、profile、认证数据库、登录缓存或 rollout；
+- 包含上述信息的截图、终端录屏或原始异常响应。
 
-- 在没有模型服务时仍稳定生成榜单。
-- 避免 fork、依赖脚本或第三方 Action 接触模型密钥。
-- 保证同一输入得到可审计、可回放的输出。
-- 避免把本机的自定义 provider 配置错误地复制到云端 runner。
-
-本机 Codex 登录态、用户级配置和凭据不会自动出现在 GitHub-hosted runner 中，也不应通过脚本上传。
-
-### 未来显式启用在线选稿
-
-只有用户确认需要后，才增加 `remote` 后端和对应工作流。届时由用户在 GitHub 仓库 **Settings > Secrets and variables > Actions** 中手动创建 Secrets，例如：
-
-- `HOTSPOTS_LLM_API_KEY`
-- `HOTSPOTS_LLM_BASE_URL`
-- `HOTSPOTS_LLM_MODEL`
-
-这些名称只是公开接口，不包含任何真实值。工作流必须满足：
-
-- Secrets 仅注入执行模型调用的单个步骤，不设置为整个 job 的环境变量。
-- 不在 `pull_request`、来自 fork 的工作流或其他不受信任事件中使用 Secrets。
-- 不运行会输出环境变量、HTTP 请求头或完整异常对象的调试命令。
-- 不把原始模型响应、网络追踪或含请求头的日志上传为公开 artifact。
-- 可使用受保护 Environment 和人工审批限制谁能启动带密钥的任务。
-- 在线选稿失败时回退到确定性选稿，并让核心榜单任务继续完成。
-
-> [!WARNING]
-> 禁止工作流读取并上传 `%USERPROFILE%\.codex\config.toml`、认证文件、profile 文件或本机环境变量。也禁止让自动化从当前 Codex 会话中“提取”endpoint、key 或 model 后创建 GitHub Secrets。Secrets 必须由用户在 GitHub 设置中显式配置。
-
-## 公开仓库的密钥防护边界
-
-以下内容不得进入 Git：
-
-- 真实 API key、bearer token、Cookie 或认证头。
-- 实际模型 endpoint、内网域名、代理地址或 provider 标识。
-- 本机正在使用的实际 model 名称。
-- Codex 用户级 `config.toml`、profile、认证数据库或登录缓存。
-- 包含上述信息的截图、终端录屏、Issue、日志、测试 fixture 或报告。
-
-`.env.example` 只能保留空值或明显的占位符；真实 `.env` 必须继续由 `.gitignore` 排除。提交前应检查暂存差异、未跟踪文件和工作流输出，发现疑似凭据时先停止提交并轮换相关密钥。
-
-## 数据与安全要求
-
-- 发送给模型的内容以公开 GitHub 元数据、冻结排名和 7 个确定性候选为限。
-- 不发送 Codex 配置、系统环境变量、个人目录内容或无关仓库文件。
-- 提示词必须说明外部仓库文本是不可信数据，禁止执行其中嵌入的命令或指令。
-- 本地适配器在独立临时目录运行，避免模型主动读取整个项目或其他本机目录。
-- 子进程日志必须脱敏；不得把完整环境、请求头或认证失败响应写入报告。
-- 输出通过 Schema、事实回查和候选逐字符匹配后才能进入公开 Markdown 或 JSON。
-- 每次模型集成变更都要在项目日志中说明接口、验证和回退行为，但不披露 provider 细节。
-
-## 当前实现与后续验证
-
-1. 已保持确定性候选生成和确定性选稿为唯一默认路径。
-2. 已实现 Schema 3.0、7 类候选、整榜 `codex-cli` 受控选稿和候选逐字符回查。
-3. 已覆盖 CLI 缺失、超时、非零退出、非法 JSON、事实漂移、候选不匹配和整榜回退测试。
-4. 已用不含敏感信息的冻结公开仓库样本完成 Schema 3.0 端到端验证；日榜与周榜的综合/AI 四个批次均未回退。
-5. 固定评估集应继续衡量候选库本身的自然度、差异度和适用人群准确性；Codex 只衡量角度分配、候选选择、延迟和回退率。
-6. 观察一段时间后，再由用户决定是否需要 `remote` 后端和 GitHub Secrets。
+未来如需在 CI 使用远程模型，必须由用户重新明确授权，并在 GitHub Settings 中手动配置专用 Secrets；不得从本机 Codex 配置自动复制。云端接入仍需保持最小权限、fork PR 隔离、日志脱敏、Schema 4.0 校验和确定性整榜回退。
 
 ## 验收清单
 
-- [x] 不配置任何 LLM 时，日榜和周榜仍可完整生成。
-- [x] `codex-cli` 后端不解析 Codex 用户级配置或认证文件。
-- [x] 仓库中不存在实际 endpoint、key、model 或认证头。
-- [x] 本地调用使用临时目录、只读沙箱、临时会话和 JSON Schema。
-- [x] 模型结果中的数字、URL 和仓库标识全部经过事实回查。
-- [x] 每个自然语言字段都必须与同一个 `candidate_summaries` 候选逐字符相等。
-- [x] 模型按整榜处理并通过角度覆盖、相邻角度和禁用套话检查。
-- [x] CLI 缺失、超时、失败或输出不合规时自动使用确定性选稿。
-- [x] GitHub Actions 默认不加载任何 Codex 或 LLM 凭据。
-- [x] 使用冻结公开样本完成日榜与周榜综合/AI 四个批次的真实 Schema 3.0 本地结构化验证。
-- [ ] CI 在线选稿只有在用户手动配置 GitHub Secrets 后才能启用。
-- [ ] Secrets 不会暴露给 fork PR、不受信任脚本或公开 artifact。
+- [x] Prompt/Schema 4.0 允许在 README/metadata 证据边界内做白话改写。
+- [x] `one_line`、最多 5 条 `capabilities`、核心亮点、受众、前置条件、限制、许可证、README SHA、审核状态和逐字段 `evidence_ids` 均进入结构化契约。
+- [x] 仓库身份、URL、语言、Star、Fork、排名、周期和增量字段全部冻结并回查。
+- [x] README 被标记为不可信数据，不能触发工具、命令、文件读取或网络访问。
+- [x] README 缺失时只允许单一受控候选；越界改写、非法证据 ID 或其他校验失败时整榜回退。
+- [x] 许可证缺失或模糊时不猜测 MIT，也不推导商用结论。
+- [x] Owner 头像经过域名、下载、像素、格式、路径和重新编码门禁；失败时安全降级。
+- [x] `rerender --refresh-evidence --editorial-backend codex-cli` 可在冻结排名上刷新证据并重建发布物。
+- [x] GitHub Actions 默认不调用 Codex，不复制或加载本机凭据。
 
 ## 官方参考
 

@@ -4,7 +4,7 @@
   "run_date": "2026-07-12",
   "window_start": "2026-07-11",
   "window_end": "2026-07-12",
-  "generated_at": "2026-07-12T12:02:31+08:00",
+  "generated_at": "2026-07-12T12:08:54+08:00",
   "timezone": "Asia/Shanghai",
   "window_label": "2026-07-11 至 2026-07-12",
   "data_quality": "高：历史快照增量",
@@ -14,18 +14,18 @@
     "policy": "facts-locked-batch-editing",
     "boards": {
       "comprehensive": {
-        "prompt_version": "3.0",
-        "schema_version": "3.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "prompt_version": "4.0",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       },
       "ai": {
-        "prompt_version": "3.0",
-        "schema_version": "3.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "prompt_version": "4.0",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       }
@@ -133,14 +133,98 @@
         "trending_signal": 100.0
       },
       "summary": {
-        "one_line": "Catch2 可以为 C++ 项目编写和运行单元测试，同时支持用 TDD 或 BDD 方式组织测试",
+        "one_line": "Catch2 是面向 C++ 的单元测试框架，也提供基础微基准测试和简易 BDD 宏",
         "highlights": [
-          "为 C++ 代码编写并运行单元测试",
-          "用断言检查代码行为和预期是否一致",
-          "支持按 TDD 或 BDD 方式组织测试"
+          "用普通 C++ 布尔表达式编写断言",
+          "用分区复用测试的准备与清理代码",
+          "为指定代码片段执行微基准测试"
         ],
-        "audience": "需要给 C++ 库或应用补充自动化测试的开发者"
+        "audience": "需要为 C++ 库或应用编写单元测试、组织 BDD 用例或测量局部代码耗时的开发者",
+        "capabilities": [
+          "编写并运行 C++ 单元测试",
+          "使用自然语言为测试用例命名",
+          "通过断言核对表达式结果",
+          "复用局部准备与清理代码",
+          "显式运行带标签的微基准测试"
+        ],
+        "core_title": "贴近 C++ 表达式的测试写法",
+        "core_summary": "测试名不必是合法标识符，断言直接采用普通 C++ 布尔表达式；分区还能在局部共享准备和清理代码，让测试结构更自然。",
+        "prerequisites": "需要用于 C++ 项目；当前版本按普通库方式使用，包含多个头文件和单独编译的实现。",
+        "limitations": "微基准测试默认不会运行，需要使用 `[!benchmark]` 标签显式执行；版本文档仍在持续更新。",
+        "license_label": "BSL-1.0",
+        "license_restrictions": "",
+        "readme_sha": "03dc7d7cc1f685ce5ba879713387306ca3fc903f",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+          ],
+          "highlights": [
+            [
+              "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+            ],
+            [
+              "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+            ],
+            [
+              "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+            ]
+          ],
+          "audience": [
+            "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+          ],
+          "capabilities": [
+            [
+              "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+            ],
+            [
+              "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+            ],
+            [
+              "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+            ],
+            [
+              "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+            ],
+            [
+              "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+            ]
+          ],
+          "core_title": [
+            "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+          ],
+          "core_summary": [
+            "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+          ],
+          "prerequisites": [
+            "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+          ],
+          "limitations": [
+            "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
       },
+      "avatar_path": "avatars/2026-07-12/repo-e21fa6bb992e82c7fc6773c8-79d3a915478b71dfdaa77e7d.png",
+      "publication_evidence": {
+        "full_name": "catchorg/Catch2",
+        "license_spdx_id": "BSL-1.0",
+        "readme": {
+          "sha": "03dc7d7cc1f685ce5ba879713387306ca3fc903f",
+          "source_url": "https://api.github.com/repos/catchorg/Catch2/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-12/repo-e21fa6bb992e82c7fc6773c8-79d3a915478b71dfdaa77e7d.png",
+          "sha256": "6a4843045339d6729007a1145472f92d6e91ad071778547fa8ca20b11cc0a4ca",
+          "width": 128,
+          "height": 128
+        },
+        "warnings": []
+      },
+      "license_spdx": "BSL-1.0",
       "assets": {
         "poster": "reports/daily/assets/2026-07-12/2026-07-12.comprehensive.01.catchorg--catch2.png",
         "format": "png",
@@ -205,14 +289,100 @@
         "trending_signal": 0.0
       },
       "summary": {
-        "one_line": "想要搜索、抓取并整理网页内容，可以用 firecrawl；它能把网页数据交给程序或 AI 工作流继续处理",
+        "one_line": "firecrawl 通过 API 搜索、抓取和操作网页，并输出 Markdown、截图或结构化数据",
         "highlights": [
-          "通过接口搜索并抓取公开网页",
-          "从页面中提取正文和结构化内容",
-          "把网页整理成更易处理的文本数据"
+          "搜索网页并返回结果页面全文",
+          "批量抓取网站或多条指定链接",
+          "抓取前执行点击、滚动和输入操作"
         ],
-        "audience": "需要为 AI 应用、搜索或数据流程接入网页内容的开发者"
+        "audience": "需要为 AI 智能体、搜索应用或数据管道获取网页正文和结构化数据的开发者",
+        "capabilities": [
+          "搜索网页并提取结果全文",
+          "把单个页面转成多种数据格式",
+          "遍历网站并抓取各页面内容",
+          "发现网站内的全部链接",
+          "按提示操作页面后再提取内容"
+        ],
+        "core_title": "从网页发现到交互式提取",
+        "core_summary": "同一套接口覆盖搜索、单页抓取、整站遍历、链接发现和批量任务；还可先点击、滚动或输入，再提取页面内容。",
+        "prerequisites": "使用托管服务需注册并获取 API Key；可通过 Python、Node.js、cURL 或 CLI 调用。",
+        "limitations": "云端版本包含额外功能；抓取者需自行遵守网站政策、隐私政策和使用条款，默认遵循 robots.txt。",
+        "license_label": "AGPL-3.0",
+        "license_restrictions": "The SDKs and some UI components are licensed under the MIT License.",
+        "readme_sha": "4cc75c562e3e1b425dacca69cf63e36dfca8fed2",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+          ],
+          "highlights": [
+            [
+              "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+            ],
+            [
+              "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+            ],
+            [
+              "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+            ]
+          ],
+          "audience": [
+            "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+          ],
+          "capabilities": [
+            [
+              "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+            ],
+            [
+              "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+            ],
+            [
+              "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+            ],
+            [
+              "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+            ],
+            [
+              "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+            ]
+          ],
+          "core_title": [
+            "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+          ],
+          "core_summary": [
+            "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+          ],
+          "prerequisites": [
+            "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+          ],
+          "limitations": [
+            "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+          ]
+        }
       },
+      "avatar_path": "avatars/2026-07-12/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+      "publication_evidence": {
+        "full_name": "firecrawl/firecrawl",
+        "license_spdx_id": "AGPL-3.0",
+        "readme": {
+          "sha": "4cc75c562e3e1b425dacca69cf63e36dfca8fed2",
+          "source_url": "https://api.github.com/repos/firecrawl/firecrawl/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-12/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "AGPL-3.0",
       "assets": {
         "poster": "reports/daily/assets/2026-07-12/2026-07-12.comprehensive.02.firecrawl--firecrawl.png",
         "format": "png",
@@ -267,14 +437,96 @@
         "trending_signal": 27.02
       },
       "summary": {
-        "one_line": "目前无法从公开字段确认 core 能完成哪些任务",
+        "one_line": "core 是 Home Assistant 的家庭自动化核心，强调在本地控制设备并保护隐私",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "在本地服务器上运行家庭自动化",
+          "通过模块化组件接入更多设备",
+          "扩展组件以实现新的设备或动作支持"
         ],
-        "audience": "公开信息不足，需人工确认后再发布"
+        "audience": "希望在树莓派或本地服务器上管理家庭设备，以及开发自定义设备组件的用户与开发者",
+        "capabilities": [
+          "在本地运行家庭自动化系统",
+          "连接并控制受支持的家庭设备",
+          "通过模块扩展设备支持",
+          "添加新的自动化动作",
+          "开发自定义组件接入设备"
+        ],
+        "core_title": "模块化扩展家庭设备支持",
+        "core_summary": "系统采用模块化结构，设备与动作支持由组件接入；开发者可创建自己的组件，为新的设备类型或操作补充控制能力。",
+        "prerequisites": "适合运行在 Raspberry Pi 或本地服务器上；安装步骤需参照项目文档。",
+        "limitations": "",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "85c632f7eb1d1861911c735077699c29840ff728",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+          ],
+          "highlights": [
+            [
+              "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+            ],
+            [
+              "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+            ],
+            [
+              "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+            ]
+          ],
+          "audience": [
+            "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+          ],
+          "capabilities": [
+            [
+              "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+            ],
+            [
+              "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+            ],
+            [
+              "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+            ],
+            [
+              "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+            ],
+            [
+              "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+            ]
+          ],
+          "core_title": [
+            "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+          ],
+          "core_summary": [
+            "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+          ],
+          "prerequisites": [
+            "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+          ],
+          "limitations": [],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
       },
+      "avatar_path": "avatars/2026-07-12/repo-0bfb6d02f92119394403f635-da3d4fb93f54a136bcee5801.png",
+      "publication_evidence": {
+        "full_name": "home-assistant/core",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "85c632f7eb1d1861911c735077699c29840ff728",
+          "source_url": "https://api.github.com/repos/home-assistant/core/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-12/repo-0bfb6d02f92119394403f635-da3d4fb93f54a136bcee5801.png",
+          "sha256": "530867f82b0372417d3b4331b8f1e81a7d9873ca0fddd253f09e188d67bc6860",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
       "assets": {
         "poster": "reports/daily/assets/2026-07-12/2026-07-12.comprehensive.03.home-assistant--core.png",
         "format": "png",
@@ -357,14 +609,98 @@
             "trending_signal": 100.0
           },
           "summary": {
-            "one_line": "Catch2 可以为 C++ 项目编写和运行单元测试，同时支持用 TDD 或 BDD 方式组织测试",
+            "one_line": "Catch2 是面向 C++ 的单元测试框架，也提供基础微基准测试和简易 BDD 宏",
             "highlights": [
-              "为 C++ 代码编写并运行单元测试",
-              "用断言检查代码行为和预期是否一致",
-              "支持按 TDD 或 BDD 方式组织测试"
+              "用普通 C++ 布尔表达式编写断言",
+              "用分区复用测试的准备与清理代码",
+              "为指定代码片段执行微基准测试"
             ],
-            "audience": "需要给 C++ 库或应用补充自动化测试的开发者"
+            "audience": "需要为 C++ 库或应用编写单元测试、组织 BDD 用例或测量局部代码耗时的开发者",
+            "capabilities": [
+              "编写并运行 C++ 单元测试",
+              "使用自然语言为测试用例命名",
+              "通过断言核对表达式结果",
+              "复用局部准备与清理代码",
+              "显式运行带标签的微基准测试"
+            ],
+            "core_title": "贴近 C++ 表达式的测试写法",
+            "core_summary": "测试名不必是合法标识符，断言直接采用普通 C++ 布尔表达式；分区还能在局部共享准备和清理代码，让测试结构更自然。",
+            "prerequisites": "需要用于 C++ 项目；当前版本按普通库方式使用，包含多个头文件和单独编译的实现。",
+            "limitations": "微基准测试默认不会运行，需要使用 `[!benchmark]` 标签显式执行；版本文档仍在持续更新。",
+            "license_label": "BSL-1.0",
+            "license_restrictions": "",
+            "readme_sha": "03dc7d7cc1f685ce5ba879713387306ca3fc903f",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+              ],
+              "highlights": [
+                [
+                  "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+                ],
+                [
+                  "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+                ],
+                [
+                  "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+                ]
+              ],
+              "audience": [
+                "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+                ],
+                [
+                  "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+                ],
+                [
+                  "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+                ],
+                [
+                  "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+                ],
+                [
+                  "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+                ]
+              ],
+              "core_title": [
+                "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+              ],
+              "core_summary": [
+                "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+              ],
+              "prerequisites": [
+                "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+              ],
+              "limitations": [
+                "github.readme:03dc7d7cc1f685ce5ba879713387306ca3fc903f"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
           },
+          "avatar_path": "avatars/2026-07-12/repo-e21fa6bb992e82c7fc6773c8-79d3a915478b71dfdaa77e7d.png",
+          "publication_evidence": {
+            "full_name": "catchorg/Catch2",
+            "license_spdx_id": "BSL-1.0",
+            "readme": {
+              "sha": "03dc7d7cc1f685ce5ba879713387306ca3fc903f",
+              "source_url": "https://api.github.com/repos/catchorg/Catch2/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-12/repo-e21fa6bb992e82c7fc6773c8-79d3a915478b71dfdaa77e7d.png",
+              "sha256": "6a4843045339d6729007a1145472f92d6e91ad071778547fa8ca20b11cc0a4ca",
+              "width": 128,
+              "height": 128
+            },
+            "warnings": []
+          },
+          "license_spdx": "BSL-1.0",
           "assets": {
             "poster": "reports/daily/assets/2026-07-12/2026-07-12.comprehensive.01.catchorg--catch2.png",
             "format": "png",
@@ -429,14 +765,100 @@
             "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "想要搜索、抓取并整理网页内容，可以用 firecrawl；它能把网页数据交给程序或 AI 工作流继续处理",
+            "one_line": "firecrawl 通过 API 搜索、抓取和操作网页，并输出 Markdown、截图或结构化数据",
             "highlights": [
-              "通过接口搜索并抓取公开网页",
-              "从页面中提取正文和结构化内容",
-              "把网页整理成更易处理的文本数据"
+              "搜索网页并返回结果页面全文",
+              "批量抓取网站或多条指定链接",
+              "抓取前执行点击、滚动和输入操作"
             ],
-            "audience": "需要为 AI 应用、搜索或数据流程接入网页内容的开发者"
+            "audience": "需要为 AI 智能体、搜索应用或数据管道获取网页正文和结构化数据的开发者",
+            "capabilities": [
+              "搜索网页并提取结果全文",
+              "把单个页面转成多种数据格式",
+              "遍历网站并抓取各页面内容",
+              "发现网站内的全部链接",
+              "按提示操作页面后再提取内容"
+            ],
+            "core_title": "从网页发现到交互式提取",
+            "core_summary": "同一套接口覆盖搜索、单页抓取、整站遍历、链接发现和批量任务；还可先点击、滚动或输入，再提取页面内容。",
+            "prerequisites": "使用托管服务需注册并获取 API Key；可通过 Python、Node.js、cURL 或 CLI 调用。",
+            "limitations": "云端版本包含额外功能；抓取者需自行遵守网站政策、隐私政策和使用条款，默认遵循 robots.txt。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "The SDKs and some UI components are licensed under the MIT License.",
+            "readme_sha": "4cc75c562e3e1b425dacca69cf63e36dfca8fed2",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ],
+              "highlights": [
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ],
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ],
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ]
+              ],
+              "audience": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ],
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ],
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ],
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ],
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ]
+              ],
+              "core_title": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ],
+              "core_summary": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ],
+              "prerequisites": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ],
+              "limitations": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ]
+            }
           },
+          "avatar_path": "avatars/2026-07-12/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "publication_evidence": {
+            "full_name": "firecrawl/firecrawl",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "4cc75c562e3e1b425dacca69cf63e36dfca8fed2",
+              "source_url": "https://api.github.com/repos/firecrawl/firecrawl/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-12/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+              "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
           "assets": {
             "poster": "reports/daily/assets/2026-07-12/2026-07-12.comprehensive.02.firecrawl--firecrawl.png",
             "format": "png",
@@ -491,14 +913,96 @@
             "trending_signal": 27.02
           },
           "summary": {
-            "one_line": "目前无法从公开字段确认 core 能完成哪些任务",
+            "one_line": "core 是 Home Assistant 的家庭自动化核心，强调在本地控制设备并保护隐私",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "在本地服务器上运行家庭自动化",
+              "通过模块化组件接入更多设备",
+              "扩展组件以实现新的设备或动作支持"
             ],
-            "audience": "公开信息不足，需人工确认后再发布"
+            "audience": "希望在树莓派或本地服务器上管理家庭设备，以及开发自定义设备组件的用户与开发者",
+            "capabilities": [
+              "在本地运行家庭自动化系统",
+              "连接并控制受支持的家庭设备",
+              "通过模块扩展设备支持",
+              "添加新的自动化动作",
+              "开发自定义组件接入设备"
+            ],
+            "core_title": "模块化扩展家庭设备支持",
+            "core_summary": "系统采用模块化结构，设备与动作支持由组件接入；开发者可创建自己的组件，为新的设备类型或操作补充控制能力。",
+            "prerequisites": "适合运行在 Raspberry Pi 或本地服务器上；安装步骤需参照项目文档。",
+            "limitations": "",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "85c632f7eb1d1861911c735077699c29840ff728",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+              ],
+              "highlights": [
+                [
+                  "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+                ],
+                [
+                  "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+                ],
+                [
+                  "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+                ]
+              ],
+              "audience": [
+                "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+                ],
+                [
+                  "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+                ],
+                [
+                  "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+                ],
+                [
+                  "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+                ],
+                [
+                  "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+                ]
+              ],
+              "core_title": [
+                "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+              ],
+              "core_summary": [
+                "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+              ],
+              "prerequisites": [
+                "github.readme:85c632f7eb1d1861911c735077699c29840ff728"
+              ],
+              "limitations": [],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
           },
+          "avatar_path": "avatars/2026-07-12/repo-0bfb6d02f92119394403f635-da3d4fb93f54a136bcee5801.png",
+          "publication_evidence": {
+            "full_name": "home-assistant/core",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "85c632f7eb1d1861911c735077699c29840ff728",
+              "source_url": "https://api.github.com/repos/home-assistant/core/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-12/repo-0bfb6d02f92119394403f635-da3d4fb93f54a136bcee5801.png",
+              "sha256": "530867f82b0372417d3b4331b8f1e81a7d9873ca0fddd253f09e188d67bc6860",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
           "assets": {
             "poster": "reports/daily/assets/2026-07-12/2026-07-12.comprehensive.03.home-assistant--core.png",
             "format": "png",
@@ -581,14 +1085,98 @@
             "trending_signal": 22.42
           },
           "summary": {
-            "one_line": "superpowers 可以给编程 Agent 提供可复用的软件开发技能，同时让需求、编码和验证按固定流程推进",
+            "one_line": "为编程 Agent 配上一套从需求澄清、设计确认到测试和代码审查的软件开发方法",
             "highlights": [
-              "把常用开发方法封装成可复用技能",
-              "按规划、实现和验证步骤组织任务",
-              "在不同项目中复用同一套开发流程"
+              "先通过提问澄清需求并分段确认设计",
+              "按计划把任务交给子 Agent 执行和复核",
+              "用测试驱动开发与代码审查约束实现"
             ],
-            "audience": "希望让编程 Agent 按固定方法完成研发任务的开发者"
+            "audience": "希望编程 Agent 遵循明确研发流程，而不是直接生成代码的开发者和团队",
+            "capabilities": [
+              "澄清粗略想法并保存设计文档",
+              "创建隔离工作区并验证测试基线",
+              "拆分带文件路径和验证步骤的任务",
+              "调度子 Agent 分工实现并分阶段审查",
+              "完成测试后提供合并或保留分支选项"
+            ],
+            "core_title": "从需求确认到交付的技能链",
+            "core_summary": "技能会按场景自动触发：先澄清需求、确认设计和编写计划，再分派实现任务，通过测试、代码审查和完成检查逐步推进。",
+            "prerequisites": "需要在所用的编程 Agent 环境中安装；使用多个环境时须分别安装。",
+            "limitations": "设计和执行启动前需要用户确认；项目通常不接受新增技能，技能更新须兼容其支持的全部编程 Agent。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "48e3f1985dbcd5c1ea6a8237bff28ba63931f767",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "highlights": [
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ]
+              ],
+              "audience": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ]
+              ],
+              "core_title": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "core_summary": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "prerequisites": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "limitations": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
           },
+          "avatar_path": "avatars/2026-07-12/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "48e3f1985dbcd5c1ea6a8237bff28ba63931f767",
+              "source_url": "https://api.github.com/repos/obra/superpowers/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-12/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+              "sha256": "d38b9c9b368fcb5bf36b16f443d783cc9588fa66f5b399ed5e966b50ab857937",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
           "assets": {
             "poster": "reports/daily/assets/2026-07-12/2026-07-12.ai.01.obra--superpowers.png",
             "format": "png",
@@ -653,14 +1241,100 @@
             "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "想要搜索、抓取并整理网页内容，可以用 firecrawl；它能把网页数据交给程序或 AI 工作流继续处理",
+            "one_line": "通过 API 搜索、抓取和操作网页，把页面转换为 Markdown、截图或结构化数据",
             "highlights": [
-              "通过接口搜索并抓取公开网页",
-              "从页面中提取正文和结构化内容",
-              "把网页整理成更易处理的文本数据"
+              "搜索网页并返回结果页面的完整内容",
+              "抓取整站或批量异步处理多个网址",
+              "点击、滚动和输入后再提取页面内容"
             ],
-            "audience": "需要为 AI 应用、搜索或数据流程接入网页内容的开发者"
+            "audience": "需要为 AI Agent、搜索应用或数据管道持续接入网页内容的开发者",
+            "capabilities": [
+              "搜索网页并获取结果页面正文",
+              "转换网址为 Markdown、HTML 或 JSON",
+              "发现网站内的全部页面链接",
+              "批量抓取多个网址或遍历整站",
+              "按提示点击、滚动和输入后提取数据"
+            ],
+            "core_title": "从网页发现到交互式提取",
+            "core_summary": "同一套接口覆盖搜索、单页抓取、整站遍历、网址发现和批量任务；需要操作动态页面时，还能先点击或输入，再返回整理后的内容。",
+            "prerequisites": "使用托管服务需注册并取得 API Key；也可按自托管指南在本地部署。",
+            "limitations": "最终用户须遵守目标网站政策、隐私政策和使用条款；默认遵循 robots.txt 指令。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "The SDKs and some UI components are licensed under the MIT License.",
+            "readme_sha": "4cc75c562e3e1b425dacca69cf63e36dfca8fed2",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ],
+              "highlights": [
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ],
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ],
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ]
+              ],
+              "audience": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ],
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ],
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ],
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ],
+                [
+                  "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+                ]
+              ],
+              "core_title": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ],
+              "core_summary": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ],
+              "prerequisites": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ],
+              "limitations": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:4cc75c562e3e1b425dacca69cf63e36dfca8fed2"
+              ]
+            }
           },
+          "avatar_path": "avatars/2026-07-12/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "publication_evidence": {
+            "full_name": "firecrawl/firecrawl",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "4cc75c562e3e1b425dacca69cf63e36dfca8fed2",
+              "source_url": "https://api.github.com/repos/firecrawl/firecrawl/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-12/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+              "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
           "assets": {
             "poster": "reports/daily/assets/2026-07-12/2026-07-12.ai.02.firecrawl--firecrawl.png",
             "format": "png",
@@ -722,14 +1396,98 @@
             "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
+            "one_line": "跨终端和消息平台运行的 AI Agent，会从任务经验中生成技能并积累跨会话记忆",
             "highlights": [
-              "把复杂任务拆成连续的执行步骤",
-              "让 Agent 围绕目标推进任务流程",
-              "为工具调用和工作流扩展提供基础"
+              "从复杂任务经验中创建并改进技能",
+              "在多个消息平台延续同一段对话",
+              "定时执行任务并把结果发送到指定平台"
             ],
-            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者"
+            "audience": "需要让个人 AI 助手长期记忆、远程工作或定时处理任务的用户与开发者",
+            "capabilities": [
+              "切换不同模型提供商而无需修改代码",
+              "搜索历史会话并整理跨会话记忆",
+              "创建可在使用中持续改进的技能",
+              "调度定时任务并向消息平台发送结果",
+              "并行派出隔离的子 Agent 处理工作流"
+            ],
+            "core_title": "经验转技能的闭环学习",
+            "core_summary": "Agent 会保存和检索会话记忆，在复杂任务后创建技能，并在后续使用中改进技能；同时可通过终端或消息平台继续同一工作。",
+            "prerequisites": "安装器会准备 uv、Python 3.11、Node.js、ripgrep、ffmpeg 和 Git Bash；运行还需配置模型提供商。",
+            "limitations": "执行命令、私信配对和容器隔离需按安全设置配置；部分语音依赖与 Android 不兼容。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "ba1322a389207c79032386e4053ac0e69a3c199d",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ]
+              ],
+              "audience": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "core_summary": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "prerequisites": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "limitations": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
           },
+          "avatar_path": "avatars/2026-07-12/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "ba1322a389207c79032386e4053ac0e69a3c199d",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-12/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
           "assets": {
             "poster": "reports/daily/assets/2026-07-12/2026-07-12.ai.03.nousresearch--hermes-agent.png",
             "format": "png",

@@ -7,7 +7,7 @@ import os
 import re
 import shutil
 import tempfile
-from collections.abc import Sequence
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -26,6 +26,7 @@ from .poster import (
     PosterArtifacts,
     render_board_posters,
 )
+from .publication_evidence import PublicationEvidenceBundle
 from .summarizer import RepositorySummary, summarize_repository
 
 
@@ -205,26 +206,67 @@ def _prepare_editorial_items(
     period: str,
     run_date: date,
     backend_override: str | None,
+    drafts: Sequence[RepositorySummary] | None = None,
+    repository_evidence: Mapping[str, Any] | None = None,
 ) -> tuple[list[dict[str, Any]], EditorialBatchResult]:
-    drafts = _draft_summaries(rankings)
+    selected_drafts = tuple(drafts) if drafts is not None else _draft_summaries(rankings)
+    if len(selected_drafts) != len(rankings):
+        raise ValueError("draft summaries must match the ranked repository count")
     editorial = edit_summary_batch(
         rankings,
-        drafts,
+        selected_drafts,
         period=period,
         period_start=run_date - timedelta(days=settings.run(period).lookback_days),
         period_end=run_date,
         settings=settings.editorial_settings(backend_override),
+        repository_evidence=repository_evidence,
     )
     return _prepared_items(rankings, editorial.summaries), editorial
 
 
 def _repository_payload(
-    rankings: Sequence[RankedRepository], items: Sequence[dict[str, Any]]
+    rankings: Sequence[RankedRepository],
+    items: Sequence[dict[str, Any]],
+    publication_evidence: Mapping[str, PublicationEvidenceBundle] | None = None,
 ) -> list[dict[str, Any]]:
-    return [
-        {**ranked.to_dict(), "summary": summary["summary"].to_dict()}
-        for ranked, summary in zip(rankings, items, strict=True)
-    ]
+    bundles = publication_evidence or {}
+    casefolded = {str(key).casefold(): value for key, value in bundles.items()}
+    payload: list[dict[str, Any]] = []
+    for ranked, prepared in zip(rankings, items, strict=True):
+        summary = prepared["summary"]
+        item = {**ranked.to_dict(), "summary": summary.to_dict()}
+        bundle = bundles.get(ranked.repository.full_name) or casefolded.get(
+            ranked.repository.full_name.casefold()
+        )
+        if bundle is not None:
+            public_evidence = bundle.to_public_dict()
+            avatar = public_evidence.get("avatar")
+            if isinstance(avatar, Mapping) and avatar.get("path"):
+                item["avatar_path"] = str(avatar["path"])
+            item["publication_evidence"] = public_evidence
+
+        license_label = summary.license_label or _bundle_license(bundle)
+        if license_label:
+            item["license_spdx"] = license_label
+        payload.append(item)
+    return payload
+
+
+def _bundle_license(bundle: PublicationEvidenceBundle | None) -> str:
+    if bundle is None:
+        return ""
+    value = bundle.repository_evidence.metadata.license_spdx_id
+    label = str(value or "").strip()
+    return "" if label.casefold() in {"", "noassertion", "other", "unknown", "none"} else label
+
+
+def _editorial_evidence(
+    publication_evidence: Mapping[str, PublicationEvidenceBundle] | None,
+) -> dict[str, Any]:
+    return {
+        str(full_name): bundle.repository_evidence
+        for full_name, bundle in (publication_evidence or {}).items()
+    }
 
 
 def _prefixed_warnings(label: str, warnings: Sequence[str]) -> list[str]:
@@ -293,6 +335,7 @@ def _render_poster_assets(
                 size=(poster_settings.width, poster_settings.height),
                 top_n=top_n,
                 window_start=window_start,
+                avatar_root=output_dir,
             )
             final_cover = posters_dir / rendered.cover.name
             final_projects = tuple(posters_dir / path.name for path in rendered.projects)
@@ -367,6 +410,9 @@ def render_reports(
     extra_warnings: Sequence[str] = (),
     template_dir: Path | None = None,
     editorial_backend: str | None = None,
+    publication_evidence: Mapping[str, PublicationEvidenceBundle] | None = None,
+    summary_overrides: Mapping[str, Sequence[RepositorySummary]] | None = None,
+    editorial_metadata_overrides: Mapping[str, Mapping[str, Any]] | None = None,
 ) -> ReportArtifacts:
     """Render the dual-board Markdown, JSON, and two review-ready copies."""
 
@@ -388,6 +434,8 @@ def render_reports(
         period=period,
         run_date=run_date,
         backend_override=editorial_backend,
+        drafts=(summary_overrides or {}).get("comprehensive"),
+        repository_evidence=_editorial_evidence(publication_evidence),
     )
     ai_items, ai_editorial = _prepare_editorial_items(
         ai_rankings,
@@ -395,6 +443,8 @@ def render_reports(
         period=period,
         run_date=run_date,
         backend_override=editorial_backend,
+        drafts=(summary_overrides or {}).get("ai"),
+        repository_evidence=_editorial_evidence(publication_evidence),
     )
     editorial_warnings = []
     for board_label, result in (
@@ -519,8 +569,8 @@ def render_reports(
         )
     )
 
-    comprehensive_payload = _repository_payload(rankings, items)
-    ai_payload = _repository_payload(ai_rankings, ai_items)
+    comprehensive_payload = _repository_payload(rankings, items, publication_evidence)
+    ai_payload = _repository_payload(ai_rankings, ai_items, publication_evidence)
 
     output_dir = settings.report_dir(period)
     stem = _report_stem(period, run_date)
@@ -561,8 +611,14 @@ def render_reports(
         "editorial": {
             "policy": "facts-locked-batch-editing",
             "boards": {
-                "comprehensive": comprehensive_editorial.metadata(),
-                "ai": ai_editorial.metadata(),
+                "comprehensive": _editorial_metadata(
+                    comprehensive_editorial,
+                    (editorial_metadata_overrides or {}).get("comprehensive"),
+                ),
+                "ai": _editorial_metadata(
+                    ai_editorial,
+                    (editorial_metadata_overrides or {}).get("ai"),
+                ),
             },
         },
         "assets": poster_assets,
@@ -601,3 +657,28 @@ def render_reports(
     _atomic_write(artifacts.xiaohongshu, xhs)
     _atomic_write(artifacts.ai_xiaohongshu, ai_xhs)
     return artifacts
+
+
+def _editorial_metadata(
+    result: EditorialBatchResult,
+    override: Mapping[str, Any] | None,
+) -> dict[str, Any]:
+    metadata = result.metadata()
+    if override is None:
+        return metadata
+    for key in ("prompt_version", "schema_version"):
+        value = override.get(key)
+        if isinstance(value, str) and 0 < len(value) <= 32:
+            metadata[key] = value
+    for key in ("requested_backend", "used_backend"):
+        value = override.get(key)
+        if value in {"deterministic", "codex-cli"}:
+            metadata[key] = value
+    fallback_used = override.get("fallback_used")
+    if isinstance(fallback_used, bool):
+        metadata["fallback_used"] = fallback_used
+    error_category = override.get("error_category")
+    if error_category is None or (isinstance(error_category, str) and len(error_category) <= 80):
+        metadata["error_category"] = error_category
+    metadata["reused_existing_summary"] = True
+    return metadata

@@ -3,6 +3,7 @@ import pytest
 from github_hotspots.models import Repository
 from github_hotspots.summarizer import (
     NARRATIVE_ANGLES,
+    RepositorySummary,
     summarize_repository,
     summary_candidates,
 )
@@ -383,3 +384,64 @@ def test_unknown_repository_is_marked_for_human_review() -> None:
         "需要人工确认适用场景后再发布",
     )
     assert summary.audience == "公开信息不足，需人工确认后再发布"
+    assert summary.content_status == "needs_review"
+
+
+def test_summary_exposes_rich_fields_without_breaking_legacy_fields() -> None:
+    summary = summarize_repository(_repository(), narrative_index=0)
+    payload = summary.to_dict()
+
+    assert summary.capabilities == summary.highlights
+    assert summary.core_title
+    assert summary.core_summary == summary.one_line
+    assert len(summary.capabilities) <= 5
+    assert payload["one_line"] == summary.one_line
+    assert payload["highlights"] == list(summary.highlights)
+    assert payload["audience"] == summary.audience
+    assert set(payload["evidence_ids"]) == {
+        "one_line",
+        "highlights",
+        "audience",
+        "capabilities",
+        "core_title",
+        "core_summary",
+        "prerequisites",
+        "limitations",
+        "license_label",
+        "license_restrictions",
+    }
+
+
+def test_summary_from_mapping_accepts_legacy_shape_and_round_trips_rich_shape() -> None:
+    legacy = {
+        "one_line": "旧版一句话",
+        "highlights": ["能力一", "能力二", "能力三"],
+        "audience": "旧版受众",
+    }
+    legacy_summary = RepositorySummary.from_mapping(legacy)
+
+    assert legacy_summary.capabilities == legacy_summary.highlights
+    assert legacy_summary.core_summary == "旧版一句话"
+
+    rich = summarize_repository(_repository(), narrative_index=0)
+    restored = RepositorySummary.from_dict(rich.to_dict())
+
+    assert restored == rich
+
+
+@pytest.mark.parametrize(
+    "payload",
+    [
+        {"one_line": "缺字段", "highlights": ["一", "二", "三"]},
+        {"one_line": "错误列表", "highlights": "不是数组", "audience": "读者"},
+        {
+            "one_line": "能力过多",
+            "highlights": ["一", "二", "三"],
+            "audience": "读者",
+            "capabilities": ["一", "二", "三", "四", "五", "六"],
+        },
+    ],
+)
+def test_summary_from_mapping_rejects_invalid_persisted_shapes(payload: dict) -> None:
+    with pytest.raises((TypeError, ValueError)):
+        RepositorySummary.from_mapping(payload)

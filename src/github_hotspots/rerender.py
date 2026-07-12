@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 from collections.abc import Mapping
 from datetime import date
 from numbers import Integral, Real
@@ -12,8 +13,12 @@ from typing import Any
 from urllib.parse import urlsplit
 
 from .config import Settings
+from .evidence import CachedAvatar, ReadmeEvidence, RepositoryEvidence, RepositoryMetadataEvidence
+from .github_client import GitHubClient
 from .models import RankedRepository, Repository
+from .publication_evidence import PublicationEvidenceBundle, collect_publication_evidence
 from .report import ReportArtifacts, render_reports
+from .summarizer import RepositorySummary
 
 SUPPORTED_SCHEMA_VERSIONS = frozenset({1, 2, 3})
 ALLOWED_DELTA_SOURCES = frozenset({"snapshot", "trending", "estimate"})
@@ -54,6 +59,7 @@ def rerender_report(
     report_path: str | Path,
     *,
     editorial_backend: str | None = None,
+    refresh_evidence: bool = False,
 ) -> ReportArtifacts:
     """Rebuild copy and posters without collecting or ranking GitHub data again."""
 
@@ -92,6 +98,17 @@ def rerender_report(
         if _ranking_facts(root_rankings) != _ranking_facts(comprehensive_rankings):
             raise ValueError("boards.comprehensive.repositories must match report.repositories")
 
+    publication_evidence = (
+        _refresh_publication_evidence(
+            settings,
+            period=period,
+            run_date=run_date,
+            rankings=(*comprehensive_rankings, *ai_rankings),
+            editorial_backend=editorial_backend,
+        )
+        if refresh_evidence
+        else _publication_overrides(payload, path)
+    )
     return render_reports(
         settings=settings,
         period=period,
@@ -100,7 +117,204 @@ def rerender_report(
         ai_rankings=ai_rankings,
         extra_warnings=_external_warnings(payload),
         editorial_backend=editorial_backend,
+        publication_evidence=publication_evidence,
+        summary_overrides=_summary_overrides(payload, schema_version),
+        editorial_metadata_overrides=(
+            _editorial_metadata_overrides(payload)
+            if not refresh_evidence
+            and settings.editorial_settings(editorial_backend).backend == "deterministic"
+            else None
+        ),
     )
+
+
+def _refresh_publication_evidence(
+    settings: Settings,
+    *,
+    period: str,
+    run_date: date,
+    rankings: tuple[RankedRepository, ...],
+    editorial_backend: str | None,
+):
+    if not rankings:
+        return {}
+    token_name = str(settings.github.get("token_env", "GITHUB_TOKEN"))
+    token = os.getenv(token_name) or None
+    timeout = float(settings.github.get("request_timeout_seconds", 30))
+    base_url = str(settings.github.get("api_base_url", "https://api.github.com"))
+    iso = run_date.isocalendar()
+    stem = run_date.isoformat() if period == "daily" else f"{iso.year}-W{iso.week:02d}"
+    avatar_root = settings.report_dir(period)
+    include_readme = settings.editorial_settings(editorial_backend).backend == "codex-cli"
+    with GitHubClient(token=token, base_url=base_url, timeout=timeout) as client:
+        return collect_publication_evidence(
+            client,
+            rankings,
+            cache_dir=avatar_root / "avatars" / stem,
+            avatar_root=avatar_root,
+            include_readme=include_readme,
+        )
+
+
+def _publication_overrides(
+    payload: Mapping[str, Any], report_path: Path
+) -> dict[str, PublicationEvidenceBundle]:
+    """Rehydrate safe publication metadata without embedding README text in reports."""
+
+    candidates: list[Mapping[str, Any]] = []
+    root_repositories = payload.get("repositories")
+    if isinstance(root_repositories, list):
+        candidates.extend(item for item in root_repositories if isinstance(item, Mapping))
+    boards = payload.get("boards")
+    if isinstance(boards, Mapping):
+        for board in boards.values():
+            if not isinstance(board, Mapping) or not isinstance(board.get("repositories"), list):
+                continue
+            candidates.extend(item for item in board["repositories"] if isinstance(item, Mapping))
+
+    result: dict[str, PublicationEvidenceBundle] = {}
+    for item in candidates:
+        full_name = item.get("full_name")
+        html_url = item.get("html_url")
+        if not isinstance(full_name, str) or not isinstance(html_url, str):
+            continue
+        public = item.get("publication_evidence")
+        public = public if isinstance(public, Mapping) else {}
+        license_value = public.get("license_spdx_id")
+        metadata = RepositoryMetadataEvidence(
+            repository_id=(
+                int(item["repository_id"])
+                if isinstance(item.get("repository_id"), int)
+                and not isinstance(item.get("repository_id"), bool)
+                else None
+            ),
+            full_name=full_name,
+            html_url=html_url,
+            owner_avatar_url=None,
+            license_spdx_id=str(license_value) if license_value else None,
+            default_branch=None,
+            source_url=html_url,
+        )
+        readme = _public_readme_stub(public.get("readme"), full_name)
+        avatar, relative_avatar = _public_avatar_record(
+            item,
+            public.get("avatar"),
+            report_path.parent,
+        )
+        if not public and avatar is None:
+            continue
+        result[full_name] = PublicationEvidenceBundle(
+            repository_evidence=RepositoryEvidence(metadata=metadata, readme=readme),
+            avatar=avatar,
+            avatar_relative_path=relative_avatar,
+        )
+    return result
+
+
+def _public_readme_stub(value: Any, full_name: str) -> ReadmeEvidence | None:
+    if not isinstance(value, Mapping):
+        return None
+    sha = value.get("sha")
+    source_url = value.get("source_url")
+    if not isinstance(sha, str) or not sha.strip() or not isinstance(source_url, str):
+        return None
+    return ReadmeEvidence(
+        full_name=full_name,
+        sha=sha.strip(),
+        markdown="",
+        decoded_bytes=0,
+        source_url=source_url,
+    )
+
+
+def _public_avatar_record(
+    item: Mapping[str, Any], value: Any, report_root: Path
+) -> tuple[CachedAvatar | None, str | None]:
+    metadata = value if isinstance(value, Mapping) else {}
+    relative = item.get("avatar_path") or metadata.get("path")
+    digest = metadata.get("sha256")
+    width = metadata.get("width")
+    height = metadata.get("height")
+    if (
+        not isinstance(relative, str)
+        or not relative
+        or "\\" in relative
+        or Path(relative).is_absolute()
+        or ".." in Path(relative).parts
+        or not isinstance(digest, str)
+        or len(digest) != 64
+        or not isinstance(width, int)
+        or isinstance(width, bool)
+        or width < 1
+        or not isinstance(height, int)
+        or isinstance(height, bool)
+        or height < 1
+    ):
+        return None, None
+    absolute = (report_root / relative).resolve()
+    root = report_root.resolve()
+    if not absolute.is_relative_to(root) or not absolute.is_file():
+        return None, None
+    return (
+        CachedAvatar(
+            path=absolute,
+            sha256=digest,
+            width=width,
+            height=height,
+            source_url="",
+        ),
+        Path(relative).as_posix(),
+    )
+
+
+def _summary_overrides(
+    payload: Mapping[str, Any], schema_version: int
+) -> dict[str, tuple[RepositorySummary, ...]]:
+    result: dict[str, tuple[RepositorySummary, ...]] = {}
+    if schema_version == 1:
+        summaries = _summaries_from_items(payload.get("repositories"))
+        if summaries is not None:
+            result["comprehensive"] = summaries
+        return result
+
+    boards = payload.get("boards")
+    if not isinstance(boards, Mapping):
+        return result
+    for board_key in ("comprehensive", "ai"):
+        board = boards.get(board_key)
+        if not isinstance(board, Mapping):
+            continue
+        summaries = _summaries_from_items(board.get("repositories"))
+        if summaries is not None:
+            result[board_key] = summaries
+    return result
+
+
+def _editorial_metadata_overrides(
+    payload: Mapping[str, Any],
+) -> dict[str, Mapping[str, Any]]:
+    editorial = payload.get("editorial")
+    if not isinstance(editorial, Mapping):
+        return {}
+    boards = editorial.get("boards")
+    if not isinstance(boards, Mapping):
+        return {}
+    return {
+        key: value
+        for key in ("comprehensive", "ai")
+        if isinstance((value := boards.get(key)), Mapping)
+    }
+
+
+def _summaries_from_items(value: Any) -> tuple[RepositorySummary, ...] | None:
+    if not isinstance(value, list):
+        return None
+    summaries: list[RepositorySummary] = []
+    for item in value:
+        if not isinstance(item, Mapping) or not isinstance(item.get("summary"), Mapping):
+            return None
+        summaries.append(RepositorySummary.from_mapping(item["summary"]))
+    return tuple(summaries)
 
 
 def _board_rankings(boards: Mapping[str, Any], key: str) -> list[RankedRepository]:

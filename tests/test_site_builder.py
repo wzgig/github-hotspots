@@ -151,6 +151,34 @@ def test_build_site_normalises_dual_boards_independently(tmp_path: Path) -> None
     assert payload["weekly"]["boards"]["ai"]["label"] == "人工智能雷达"
 
 
+def test_build_site_exposes_rich_reader_facing_summary_fields(tmp_path: Path) -> None:
+    daily = _report("daily", "2026-07-11", 1, "2026-07-11T08:00:00+08:00")
+    weekly = _report("weekly", "2026-07-11", 1, "2026-07-11T08:05:00+08:00")
+    daily["repositories"][0]["summary"] = {
+        "one_line": "一眼能看懂的项目定位。",
+        "highlights": ["旧能力一", "旧能力二", "旧能力三"],
+        "capabilities": ["能力一", "能力二", "能力三", "能力四", "能力五"],
+        "audience": "具体任务人群",
+        "core_title": "核心亮点",
+        "core_summary": "完整解释它为什么值得关注。",
+        "prerequisites": "需要本地工具",
+        "limitations": "仍需人工确认",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "保留许可证和版权声明",
+        "content_status": "readme_enriched",
+    }
+    _write_report(tmp_path, "daily", "2026-07-11.json", daily)
+    _write_report(tmp_path, "weekly", "2026-W28.json", weekly)
+
+    payload = build_site(tmp_path)
+
+    repository = payload["daily"]["repositories"][0]
+    assert repository["highlights"] == ["能力一", "能力二", "能力三", "能力四", "能力五"]
+    assert repository["core_summary"] == "完整解释它为什么值得关注。"
+    assert repository["license_label"] == "Apache-2.0"
+    assert repository["content_status"] == "readme_enriched"
+
+
 def test_build_site_outputs_deterministic_json_and_javascript(tmp_path: Path) -> None:
     _write_report(
         tmp_path,

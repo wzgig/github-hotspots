@@ -162,6 +162,24 @@
     return block;
   }
 
+  function insightBlock(repository, { inverse = false } = {}) {
+    const summary = typeof repository.core_summary === "string"
+      ? repository.core_summary.trim()
+      : "";
+    if (!summary || summary === repository.one_line) return null;
+
+    const block = element(
+      "section",
+      inverse ? "insight-block insight-block-inverse" : "insight-block"
+    );
+    block.setAttribute("aria-label", `${repository.full_name} 核心亮点`);
+    block.append(
+      element("strong", "insight-title", repository.core_title || "核心亮点"),
+      element("p", "insight-copy", summary)
+    );
+    return block;
+  }
+
   function inferRepositoryUrl() {
     if (!window.location.hostname.endsWith(".github.io")) return "";
     const owner = window.location.hostname.split(".")[0];
@@ -247,10 +265,14 @@
       const title = element("h3");
       title.append(repositoryLink(repository, "repository-name"));
       const description = element("p", "repository-description", repository.one_line);
-      const capabilities = capabilityBlock(repository);
+      const capabilities = capabilityBlock(repository, { limit: 5 });
+      const insight = insightBlock(repository);
 
       const tags = element("div", "repo-tags");
       tags.append(element("span", "language-tag", repository.language));
+      if (repository.license_label) {
+        tags.append(element("span", "license-tag", repository.license_label));
+      }
       repository.topics.slice(0, 3).forEach((topic) => {
         tags.append(element("span", "topic-tag", `#${topic}`));
       });
@@ -277,6 +299,7 @@
 
       card.append(top, title, description);
       if (capabilities) card.append(capabilities);
+      if (insight) card.append(insight);
       card.append(tags, stats, meter, footer);
       const poster = posterAction(repository, { preview: true });
       if (poster) card.append(poster);
@@ -350,7 +373,9 @@
       title.append(repositoryLink(repository, "ai-entry-name"));
       main.append(title, element("p", "ai-entry-description", repository.one_line));
       const capabilities = capabilityBlock(repository, { limit: 2, inverse: true });
+      const insight = insightBlock(repository, { inverse: true });
       if (capabilities) main.append(capabilities);
+      if (insight) main.append(insight);
       const poster = posterAction(repository);
       if (poster) main.append(poster);
 

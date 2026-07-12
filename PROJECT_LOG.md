@@ -240,3 +240,60 @@
 - GitHub Pages `push` 运行 `29177133065` 成功完成构建与部署：<https://github.com/wzgig/github-hotspots/actions/runs/29177133065>。
 - `https://wzgig.github.io/github-hotspots/` 与 `data/site-data.json` 均返回 HTTP 200；线上首页已包含“每天，看懂 GitHub 热门项目”和 `GITHUB PROJECTS, EXPLAINED`。
 - 线上日报日期为 `2026-07-12`，首项 `catchorg/Catch2` 的用途摘要和三条能力已更新；对应 V2 PNG 返回 HTTP 200、`image/png`，字节数为 163,897。
+
+## 2026-07-12 — README 证据化文案、Owner 头像与参考图海报 V3
+
+### 目的
+
+解决 V2 仍然依赖三条受控短句、项目解释不够完整、海报缺少 GitHub Owner 头像，以及公开文案重复展示“数据来自 GitHub 公开信息与本地快照”的问题。新版以用户提供的同类帖子为信息架构参考，先核验参考仓库真实 README 与许可证，再把可复用模板、证据采集、本地 Codex 写作、人工审核稿和 Pages 串成同一条安全流程。
+
+### 参考核验与内容原则
+
+- 核验参考仓库 `Imbad0202/academic-research-skills` 的 README、目录与 LICENSE；确认优质之处来自“项目定位 → 五条能力 → 核心解释 → 适合人群”的阅读顺序，而不是“神器、全自动、高效”等夸张词。
+- 纠正参考图中的事实偏差：该仓库实际为 `CC BY-NC 4.0`，不是 MIT；README 明确强调人机协作与人工确认点，不能写成全自动论文生成器。
+- 公开小红书正文与海报不再重复“数据来自 GitHub 公开信息与本地快照”，但排名数字、窗口、证据与数据质量仍保留在报告 JSON、Markdown 和 Pages 方法区中供核验。
+
+### 代码、Prompt 与 Schema
+
+- 新增 `evidence.py`、`publication_evidence.py` 与 GitHubClient 证据接口：按 Top 仓库读取 metadata 和清洗后的 README，限制 README 大小，剥离危险 HTML、徽章和过长代码块，并把外部文本始终标记为不可信数据。
+- 新增安全头像缓存：仅接受 `avatars.githubusercontent.com` 的 HTTPS 图片，限制重定向、下载体积、像素和边长；Pillow 解码后重新编码为无元数据 PNG，按报告周期本地缓存，失败时使用确定性身份块。
+- 将 Prompt/Schema 升级到 4.0。README 充分时，本地 Codex 可在证据语义内生成白话 `one_line`、最多 5 条 `capabilities`、`core_title/core_summary`、具体受众、前置条件、限制、许可证与逐字段 `evidence_ids`；README 缺失时只能复制单一受控候选。
+- 冻结并回查仓库身份、URL、语言、Star/Fork、排名、增量、README SHA 和许可证原文；证据 ID 不存在、数字无证据、许可证猜测、禁用套话、输出结构或隔离失败时整榜回退。
+- 修复本机结构化输出接口不支持 JSON Schema `uniqueItems` 的兼容问题：从外部 Schema 删除该关键字，继续由程序侧严格检查能力、亮点、证据 ID 和榜内内容是否重复。
+- 将面向海报的文字上限收紧为完整短句边界，避免长段落被截断；海报渲染遇到放不下的文字仍直接失败，不发布残缺图片。
+- `rerender` 新增 `--refresh-evidence`；离线重绘会保留已有丰富摘要、Owner 头像、README SHA/来源和原始 Codex editorial 元数据，不需要重新调用模型或重新收集排名事实。
+
+### 海报、文案与 Pages
+
+- `poster.py` 升级为参考图信息架构 V3：深绿日期/期号页眉、金色排名圆、Owner 头像身份卡、完整项目定位、许可证、四格统计、五条能力、核心亮点长说明、适合人群和简洁底栏。
+- 小红书模板展示最多 5 条能力、核心亮点、前置条件、限制和许可证；许可证文件导航语句不会再被误写成许可证限制，英文普通限制会在证据范围内改写成中文。
+- Pages 日榜卡片改为展示 5 条能力和独立核心亮点区块，并加入许可证标签；站点 footer 改为产品范围和人工发布策略，不再重复数据来源口号。
+- 使用冻结的 `2026-07-12` 日榜与 `2026-W28` 周榜排名事实，通过本机 `codex exec` 重建综合/AI 四个榜单；四批均为 `used_backend=codex-cli`、`fallback_used=false`。生成 20 张项目卡和 4 张封面，共 24 张 `1200×1600` PNG，并缓存 13 个唯一 Owner 头像。
+- 重新生成四份小红书人工审核稿、两份 Markdown/JSON、两个 Manifest 和 Pages `site-data`；日报/周榜原有仓库、rank、Star、Fork、周期增量与 `delta_source` 与提交前冻结报告逐字段一致。
+
+### 文件与模块
+
+- 核心：`src/github_hotspots/{evidence,publication_evidence,github_client,editorial,summarizer,pipeline,report,rerender,poster,cli}.py`
+- 协议：`prompts/repository_summary_zh.md`、`schemas/repository_summary.schema.json`、`templates/xiaohongshu.md.j2`、`config/hotspots.yaml`
+- 页面：`scripts/build_site.py`、`site/{index.html,app.js,styles.css,data/*}`
+- 文档：`README.md`、`docs/{LOCAL_CODEX_API,PRODUCT_SPEC,PROJECT_PLAN,XIAOHONGSHU_CONTENT_V2_PLAN}.md`、`prompts/project_master_prompt_zh.md`
+- 产物：`reports/daily/2026-07-12*`、`reports/weekly/2026-W28*`、两期 `assets/` 与 `avatars/`
+- 测试：新增证据、GitHubClient 与证据编排测试，并扩展 editorial、summarizer、poster、report、rerender、CLI 和站点构建测试。
+
+### 验证
+
+- `pytest`：182 项全部通过，总覆盖率 80%。
+- `ruff check .`、`ruff format --check .`、`node --check site/app.js` 与 `git diff --check`：通过。
+- 冻结事实对比：当前日榜和周榜两榜的 `full_name/rank/stars/forks/star_delta/delta_source` 与变更前报告完全一致。
+- 出版包检查：日榜 8 张、周榜 16 张图片全部为 `1200×1600` PNG；20 个榜单项目均有 5 条互不重复能力、`readme_enriched`、匹配的 README SHA 和可读取的本地头像 PNG。
+- Pages 构建：`daily=3 comprehensive / 3 AI`，`weekly=7 comprehensive / 7 AI`。
+- Playwright 本地 QA：桌面 `1440×1000` 与移动 `390×844` 均正确渲染；日报 5 条能力和核心亮点可见，海报缩略图全部加载，控制台无错误，移动端无横向溢出。
+- 敏感信息扫描：45 个变更文本文件未发现 `.env`、API key、GitHub Token、小红书 `xsec_token`、Bearer 凭据、本机 Codex provider/model 或用户级配置路径。
+
+### 已知限制
+
+- GitHub Actions 默认仍使用 `deterministic`，不会获得用户电脑的本地 Codex 登录态；如未来需要云端 README 证据化自由写作，必须另行明确授权并使用 GitHub Secrets，不能复制本机凭据。
+- W28 周榜增长仍来自明确标注的 GitHub Trending 周期 Star，不是本地 7 日快照净增。
+- 许可证限制只在 README 中存在可逐字核验的原文时展示；涉及法律条件的英文原句可能保留，以免翻译改变含义。
+- Owner 头像按报告周期缓存；远端不可用、格式不合法或超限时会使用身份占位图，不阻断榜单生成。
+- 小红书继续由人工审核和发布；当前不自动登录、发布、评论或操作账号。

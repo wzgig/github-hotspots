@@ -17,16 +17,25 @@
 {{ item.summary.one_line }}
 
 它能做什么：
-{% for highlight in item.summary.highlights[:3] %}- {{ highlight }}
+{% set capabilities = item.summary.capabilities if item.summary.capabilities else item.summary.highlights %}
+{% for capability in capabilities[:5] %}- {{ capability }}
 {% endfor %}
+{% if item.summary.core_summary and item.summary.core_summary != item.summary.one_line %}核心亮点：{{ item.summary.core_title }}。{{ item.summary.core_summary }}
+{% endif %}
 适合谁：{{ item.summary.audience }}
+{% if item.summary.prerequisites %}使用前准备：{{ item.summary.prerequisites }}
+{% endif %}
+{% if item.summary.limitations %}使用提醒：{{ item.summary.limitations }}
+{% endif %}
+{% if item.summary.license_label %}许可证：{{ item.summary.license_label }}{% if item.summary.license_restrictions %}（{{ item.summary.license_restrictions }}）{% endif %}
+{% endif %}
 为什么本期上榜：{{ item.why_ranked }}
 GitHub 搜索：{{ item.search_term }}
 
 {% endfor %}
 {{ interaction_question }}
 
-说明：AI 辅助整理，发布前需人工审核；数据来自 GitHub 公开信息与本地快照。Star 变化只解释上榜信号，不代表功能质量。
+说明：AI 辅助整理，发布前需人工审核。Star 变化只解释上榜信号，不代表功能质量。
 
 数据口径：{{ data_note }}。小红书正文不放外链，可按仓库全名在 GitHub 搜索。
 

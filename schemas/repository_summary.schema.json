@@ -1,14 +1,25 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/wzgig/github-hotspots/schemas/repository_summary.schema.json",
-  "title": "GitHub Hotspots batch editorial response",
+  "title": "GitHub Hotspots evidence-grounded editorial response",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "period", "items", "batch_quality"],
+  "$defs": {
+    "evidenceReferences": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 180
+      }
+    }
+  },
   "properties": {
     "schema_version": {
       "type": "string",
-      "const": "3.0"
+      "const": "4.0"
     },
     "period": {
       "type": "object",
@@ -32,7 +43,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["status", "rank", "repository", "card", "evidence", "data_quality"],
+        "required": ["status", "rank", "repository", "card", "data_quality"],
         "properties": {
           "status": {
             "type": "string",
@@ -58,7 +69,7 @@
             }
           },
           "card": {
-            "type": ["object", "null"],
+            "type": "object",
             "additionalProperties": false,
             "required": [
               "project_name",
@@ -71,6 +82,16 @@
               "one_line",
               "highlights",
               "audience",
+              "capabilities",
+              "core_title",
+              "core_summary",
+              "prerequisites",
+              "limitations",
+              "license_label",
+              "license_restrictions",
+              "readme_sha",
+              "content_status",
+              "evidence_ids",
               "repository_url"
             ],
             "properties": {
@@ -105,51 +126,130 @@
                 "type": "integer"
               },
               "one_line": {
-                "type": "string"
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
               },
               "highlights": {
                 "type": "array",
                 "minItems": 3,
                 "maxItems": 3,
                 "items": {
-                  "type": "string"
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 42
                 }
               },
               "audience": {
-                "type": "string"
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 72
               },
-              "repository_url": {
-                "type": "string"
-              }
-            }
-          },
-          "evidence": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": ["one_line", "highlights", "audience"],
-            "properties": {
-              "one_line": {
+              "capabilities": {
                 "type": "array",
+                "minItems": 1,
+                "maxItems": 5,
                 "items": {
-                  "type": "string"
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 42
                 }
               },
-              "highlights": {
-                "type": "array",
-                "minItems": 3,
-                "maxItems": 3,
-                "items": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
+              "core_title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 24
+              },
+              "core_summary": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "prerequisites": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "limitations": {
+                "type": "string",
+                "maxLength": 96
+              },
+              "license_label": {
+                "type": "string",
+                "maxLength": 40
+              },
+              "license_restrictions": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "readme_sha": {
+                "type": ["string", "null"],
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "content_status": {
+                "type": "string",
+                "enum": ["readme_enriched", "metadata_only", "needs_review"]
+              },
+              "evidence_ids": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "one_line",
+                  "highlights",
+                  "audience",
+                  "capabilities",
+                  "core_title",
+                  "core_summary",
+                  "prerequisites",
+                  "limitations",
+                  "license_label",
+                  "license_restrictions"
+                ],
+                "properties": {
+                  "one_line": {
+                    "$ref": "#/$defs/evidenceReferences"
+                  },
+                  "highlights": {
+                    "type": "array",
+                    "minItems": 3,
+                    "maxItems": 3,
+                    "items": {
+                      "$ref": "#/$defs/evidenceReferences"
+                    }
+                  },
+                  "audience": {
+                    "$ref": "#/$defs/evidenceReferences"
+                  },
+                  "capabilities": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 5,
+                    "items": {
+                      "$ref": "#/$defs/evidenceReferences"
+                    }
+                  },
+                  "core_title": {
+                    "$ref": "#/$defs/evidenceReferences"
+                  },
+                  "core_summary": {
+                    "$ref": "#/$defs/evidenceReferences"
+                  },
+                  "prerequisites": {
+                    "$ref": "#/$defs/evidenceReferences"
+                  },
+                  "limitations": {
+                    "$ref": "#/$defs/evidenceReferences"
+                  },
+                  "license_label": {
+                    "$ref": "#/$defs/evidenceReferences"
+                  },
+                  "license_restrictions": {
+                    "$ref": "#/$defs/evidenceReferences"
                   }
                 }
               },
-              "audience": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "repository_url": {
+                "type": "string"
               }
             }
           },

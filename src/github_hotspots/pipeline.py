@@ -12,6 +12,7 @@ from .boards import select_ai_repositories
 from .config import Settings
 from .github_client import GitHubClient, deduplicate_repositories
 from .models import RankedRepository, Repository, RepositorySnapshot
+from .publication_evidence import PublicationEvidenceBundle, collect_publication_evidence
 from .ranking import rank_repositories
 from .report import ReportArtifacts, render_reports
 from .snapshot import SnapshotStore
@@ -75,6 +76,17 @@ def run_pipeline(
         as_of=run_date,
     )
     snapshot_path = store.save(run_date, candidates)
+    publication_evidence = _collect_publication_evidence(
+        settings,
+        period=period,
+        run_date=run_date,
+        rankings=(*comprehensive_rankings, *ai_rankings),
+        token=token,
+        base_url=base_url,
+        timeout=timeout,
+        editorial_backend=editorial_backend,
+    )
+    warnings.extend(_publication_warnings(publication_evidence, editorial_backend, settings))
     artifacts = render_reports(
         settings=settings,
         period=period,
@@ -83,6 +95,7 @@ def run_pipeline(
         ai_rankings=ai_rankings,
         extra_warnings=warnings,
         editorial_backend=editorial_backend,
+        publication_evidence=publication_evidence,
     )
     return PipelineResult(
         period=period,
@@ -94,6 +107,56 @@ def run_pipeline(
         artifacts=artifacts,
         warnings=artifacts.warnings,
     )
+
+
+def _collect_publication_evidence(
+    settings: Settings,
+    *,
+    period: str,
+    run_date: date,
+    rankings: Iterable[RankedRepository],
+    token: str | None,
+    base_url: str,
+    timeout: float,
+    editorial_backend: str | None,
+) -> dict[str, PublicationEvidenceBundle]:
+    selected = tuple(rankings)
+    if not selected:
+        return {}
+    stem = (
+        run_date.isoformat()
+        if period == "daily"
+        else f"{run_date.isocalendar().year}-W{run_date.isocalendar().week:02d}"
+    )
+    avatar_root = settings.report_dir(period)
+    include_readme = settings.editorial_settings(editorial_backend).backend == "codex-cli"
+    with GitHubClient(token=token, base_url=base_url, timeout=timeout) as client:
+        return collect_publication_evidence(
+            client,
+            selected,
+            cache_dir=avatar_root / "avatars" / stem,
+            avatar_root=avatar_root,
+            include_readme=include_readme,
+        )
+
+
+def _publication_warnings(
+    evidence: dict[str, PublicationEvidenceBundle],
+    editorial_backend: str | None,
+    settings: Settings,
+) -> list[str]:
+    unique = {bundle.full_name.casefold(): bundle for bundle in evidence.values()}
+    missing_avatars = sum(bundle.avatar is None for bundle in unique.values())
+    warnings: list[str] = []
+    if missing_avatars:
+        warnings.append(f"{missing_avatars} 个上榜项目未获取到 Owner 头像，海报已使用身份占位图")
+    if settings.editorial_settings(editorial_backend).backend == "codex-cli":
+        missing_readmes = sum(
+            bundle.repository_evidence.readme is None for bundle in unique.values()
+        )
+        if missing_readmes:
+            warnings.append(f"{missing_readmes} 个上榜项目未获取到 README，相关文案将使用受控回退")
+    return warnings
 
 
 def _rank_boards(

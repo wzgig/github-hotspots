@@ -194,7 +194,12 @@ def test_weekly_filenames_use_iso_week_and_custom_portrait_size(tmp_path: Path) 
         assert image.size == (1200, 1600)
 
 
-def test_v2_repository_prefers_explainer_fields_for_knowledge_card() -> None:
+def test_v3_repository_accepts_reference_card_fields_and_five_capabilities(
+    tmp_path: Path,
+) -> None:
+    avatar_dir = tmp_path / "avatars"
+    avatar_dir.mkdir()
+    Image.new("RGB", (160, 100), "#176B54").save(avatar_dir / "owner.png")
     value = _repository(1, "explainable-tool", "snapshot")
     value.update(
         {
@@ -203,25 +208,39 @@ def test_v2_repository_prefers_explainer_fields_for_knowledge_card() -> None:
                 "把输入整理成结构化结果",
                 "重复执行固定的处理步骤",
                 "保留便于人工核对的输出",
+                "让团队复用同一套任务模板",
+                "把结果导出给后续流程继续处理",
+                "第六条应被安全裁掉",
             ],
-            "core_value": "把复杂流程变成可重复任务",
+            "core_title": "把复杂流程变成可重复任务",
+            "core_summary": "把分散的操作步骤集中成一套可重复、可核对的处理流程。",
             "why_hot": "过去 24 小时净增 +91 Star，来自快照核验",
+            "license": {"spdx_id": "Apache-2.0"},
+            "avatar_path": "avatars/owner.png",
+            "audience": "需要稳定复用复杂工作流的开发者与内容团队",
         }
     )
 
-    repository = PosterRepository.from_mapping(value)
+    repository = PosterRepository.from_mapping(value, avatar_root=tmp_path)
 
     assert repository.short_description == "用普通中文说清项目解决的问题"
     assert repository.capabilities == (
         "把输入整理成结构化结果",
         "重复执行固定的处理步骤",
         "保留便于人工核对的输出",
+        "让团队复用同一套任务模板",
+        "把结果导出给后续流程继续处理",
     )
-    assert repository.core_value == "把复杂流程变成可重复任务"
+    assert repository.core_title == "把复杂流程变成可重复任务"
+    assert repository.core_summary == "把分散的操作步骤集中成一套可重复、可核对的处理流程。"
+    assert repository.core_value == repository.core_title
     assert repository.why_hot == "过去 24 小时净增 +91 Star，来自快照核验"
+    assert repository.license_spdx == "Apache-2.0"
+    assert repository.avatar_path == (avatar_dir / "owner.png").resolve()
+    assert repository.audience == "需要稳定复用复杂工作流的开发者与内容团队"
 
 
-def test_v2_identity_block_is_deterministic_and_not_board_specific() -> None:
+def test_v3_identity_block_is_deterministic_and_not_board_specific() -> None:
     assert poster_module._identity_token("catchorg/Catch2") == "C2"
     assert poster_module._identity_token("example/hermes-agent") == "HA"
     assert poster_module._identity_colours("example/hermes-agent") == (
@@ -229,14 +248,16 @@ def test_v2_identity_block_is_deterministic_and_not_board_specific() -> None:
     )
 
 
-def test_v2_fixed_layout_keeps_regions_separate_and_long_name_fits() -> None:
+def test_v3_fixed_layout_matches_reference_information_hierarchy() -> None:
     scale = 1200 / 1080
     layout = poster_module._project_layout(scale, size=(1200, 1600))
 
+    assert layout.hero[1] < layout.header[3]
     assert layout.stats[1] > layout.hero[3]
     assert layout.capabilities[2] < layout.core[0]
     assert layout.core[3] < layout.audience[1]
-    assert layout.why_hot[1] > layout.capabilities[3]
+    assert layout.footer_y > layout.capabilities[3]
+    assert layout.footer_y > layout.audience[3]
 
     image = Image.new("RGB", (1200, 1600), "white")
     draw = poster_module.ImageDraw.Draw(image)
@@ -267,7 +288,62 @@ def test_v2_fixed_layout_keeps_regions_separate_and_long_name_fits() -> None:
     assert summary_truncated is False
 
 
-def test_v2_card_uses_warm_paper_and_source_honest_growth(tmp_path: Path) -> None:
+@pytest.mark.parametrize(
+    "unsafe_path",
+    (
+        "https://example.com/avatar.png",
+        "../outside.png",
+        "avatars/../../outside.png",
+    ),
+)
+def test_v3_avatar_path_rejects_urls_and_directory_escape(
+    tmp_path: Path,
+    unsafe_path: str,
+) -> None:
+    value = _repository(1, "unsafe-avatar", "snapshot")
+    value["avatar_path"] = unsafe_path
+
+    with pytest.raises(ValueError, match="avatar_path"):
+        PosterRepository.from_mapping(value, avatar_root=tmp_path)
+
+
+def test_v3_avatar_path_rejects_absolute_missing_and_unsupported_files(tmp_path: Path) -> None:
+    value = _repository(1, "unsafe-avatar", "snapshot")
+    absolute = tmp_path / "absolute.png"
+    Image.new("RGB", (20, 20), "red").save(absolute)
+    value["avatar_path"] = str(absolute)
+    with pytest.raises(ValueError, match="avatar_path"):
+        PosterRepository.from_mapping(value, avatar_root=tmp_path)
+
+    value["avatar_path"] = "missing.png"
+    with pytest.raises(ValueError, match="cached local file"):
+        PosterRepository.from_mapping(value, avatar_root=tmp_path)
+
+    unsupported = tmp_path / "avatar.txt"
+    unsupported.write_text("not an image", encoding="utf-8")
+    value["avatar_path"] = "avatar.txt"
+    with pytest.raises(ValueError, match="PNG, JPG, JPEG, or WebP"):
+        PosterRepository.from_mapping(value, avatar_root=tmp_path)
+
+
+def test_v3_avatar_thumbnail_centre_crops_and_rounds_local_image(tmp_path: Path) -> None:
+    source = Image.new("RGB", (200, 100), "red")
+    for x in range(100, 200):
+        for y in range(100):
+            source.putpixel((x, y), (0, 0, 255))
+    path = tmp_path / "wide.png"
+    source.save(path)
+
+    thumbnail = poster_module._load_avatar_thumbnail(path, (80, 80), radius=16)
+
+    assert thumbnail.size == (80, 80)
+    assert thumbnail.getpixel((0, 0))[3] == 0
+    assert thumbnail.getpixel((20, 40))[:3] == (255, 0, 0)
+    assert thumbnail.getpixel((60, 40))[:3] == (0, 0, 255)
+    thumbnail.close()
+
+
+def test_v3_card_uses_reference_palette_and_source_honest_growth(tmp_path: Path) -> None:
     report_path = tmp_path / "2026-07-11.json"
     report_path.write_text(
         json.dumps(
@@ -294,6 +370,9 @@ def test_v2_card_uses_warm_paper_and_source_honest_growth(tmp_path: Path) -> Non
         assert image.getpixel((10, 800)) == poster_module._hex_to_rgb(
             poster_module._WARM_BACKGROUND
         )
+        assert image.getpixel((700, 850)) == poster_module._hex_to_rgb(
+            poster_module._BOARD_THEMES["comprehensive"].header
+        )
 
     repository = PosterRepository.from_mapping(_repository(1, "verified", "snapshot"))
     assert poster_module._cover_growth_summary((repository,), "daily") == (
@@ -310,3 +389,63 @@ def test_v2_card_uses_warm_paper_and_source_honest_growth(tmp_path: Path) -> Non
         "本期 GitHub Trending 显示 +92 Star｜不是快照净增"
     )
     assert poster_module._short_repository_link(repository) == "example/verified"
+    assert "数据来自 GitHub 公开信息与本地快照" not in Path(poster_module.__file__).read_text(
+        encoding="utf-8"
+    )
+
+
+def test_v3_renders_long_explainer_copy_five_capabilities_and_cached_avatar(
+    tmp_path: Path,
+) -> None:
+    avatar_dir = tmp_path / "cache"
+    avatar_dir.mkdir()
+    Image.new("RGB", (260, 180), "#2A6F5B").save(avatar_dir / "owner.webp")
+    value = _repository(
+        1,
+        "enterprise-agent-workflow-orchestration-toolkit",
+        "snapshot",
+    )
+    value.update(
+        {
+            "plain_summary": (
+                "把多个编程助手放进同一套工作流中，让它们分别处理规划、实现、检查和结果整理。"
+            ),
+            "capabilities": [
+                "同时管理多个编程助手的任务和会话",
+                "把规划、编码与检查步骤分配给不同助手",
+                "集中查看每个任务的执行状态和结果",
+                "复用已经验证过的开发流程和任务模板",
+                "把最终结果整理后交给人工继续审核",
+            ],
+            "core_title": "多助手并行协作",
+            "core_summary": (
+                "它把原本分散在多个终端和会话里的开发任务集中起来，便于分工、跟踪进度并保留可审核的结果。"
+            ),
+            "audience": "适合需要协调多个编程助手完成复杂研发任务的开发者与技术团队",
+            "license_spdx": "Apache-2.0",
+            "avatar_path": "cache/owner.webp",
+        }
+    )
+    report_path = tmp_path / "long-copy.json"
+    report_path.write_text(
+        json.dumps(
+            {
+                "period": "weekly",
+                "run_date": "2026-07-11",
+                "boards": {
+                    "comprehensive": {
+                        "label": "综合主榜",
+                        "repositories": [value],
+                    }
+                },
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    artifacts = render_report_posters(report_path, output_dir=tmp_path / "posters")
+
+    with Image.open(artifacts["comprehensive"].projects[0]) as image:
+        assert image.size == DEFAULT_POSTER_SIZE
+        assert image.format == "PNG"

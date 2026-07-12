@@ -3,23 +3,254 @@
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass
+from collections.abc import Mapping
+from dataclasses import dataclass, field
 from hashlib import sha256
 from typing import Any
+
+_SUMMARY_TEXT_FIELDS = (
+    "one_line",
+    "highlights",
+    "audience",
+    "capabilities",
+    "core_title",
+    "core_summary",
+    "prerequisites",
+    "limitations",
+    "license_label",
+    "license_restrictions",
+)
+_LICENSE_POINTER_PATTERN = re.compile(
+    r"(?:\bsee\b.{0,80}\blicen[cs]e\b|\blicen[cs]e file for details\b|"
+    r"(?:详见|查看).{0,20}(?:LICENSE|许可))",
+    re.IGNORECASE,
+)
+
+
+def _normalise_license_restriction(label: str, restriction: str) -> str:
+    """Remove README navigation prose that is not an actual license condition."""
+
+    if not restriction:
+        return ""
+    plain = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", restriction).strip()
+    comparable = re.sub(r"[^a-z0-9]+", " ", plain.casefold()).strip()
+    label_comparable = re.sub(r"[^a-z0-9]+", " ", label.casefold()).strip()
+    if label_comparable and comparable in {label_comparable, f"{label_comparable} license"}:
+        return ""
+    return "" if _LICENSE_POINTER_PATTERN.search(plain) else restriction
+
+
+def _default_evidence_ids(
+    *,
+    highlights: tuple[str, ...],
+    capabilities: tuple[str, ...],
+    prerequisites: str,
+    limitations: str,
+    license_label: str,
+    license_restrictions: str,
+) -> dict[str, Any]:
+    reference = ("deterministic_draft",)
+    return {
+        "one_line": reference,
+        "highlights": tuple(reference for _ in highlights),
+        "audience": reference,
+        "capabilities": tuple(reference for _ in capabilities),
+        "core_title": reference,
+        "core_summary": reference,
+        "prerequisites": reference if prerequisites else (),
+        "limitations": reference if limitations else (),
+        "license_label": reference if license_label else (),
+        "license_restrictions": reference if license_restrictions else (),
+    }
+
+
+def _normalise_evidence_ids(value: Mapping[str, Any], defaults: dict[str, Any]) -> dict[str, Any]:
+    normalised = dict(defaults)
+    for field_name in _SUMMARY_TEXT_FIELDS:
+        if field_name not in value:
+            continue
+        references = value[field_name]
+        if field_name in {"highlights", "capabilities"}:
+            if isinstance(references, (str, bytes)) or not isinstance(references, (list, tuple)):
+                normalised[field_name] = ()
+                continue
+            normalised[field_name] = tuple(
+                tuple(str(reference) for reference in group)
+                if isinstance(group, (list, tuple)) and not isinstance(group, (str, bytes))
+                else ()
+                for group in references
+            )
+            continue
+        if isinstance(references, (list, tuple)) and not isinstance(references, (str, bytes)):
+            normalised[field_name] = tuple(str(reference) for reference in references)
+        else:
+            normalised[field_name] = ()
+    return normalised
+
+
+def _serialise_evidence_ids(value: Mapping[str, Any]) -> dict[str, Any]:
+    serialised: dict[str, Any] = {}
+    for field_name, references in value.items():
+        if field_name in {"highlights", "capabilities"}:
+            serialised[field_name] = [list(group) for group in references]
+        else:
+            serialised[field_name] = list(references)
+    return serialised
 
 
 @dataclass(frozen=True, slots=True)
 class RepositorySummary:
+    """Reader-facing repository copy with traceable evidence references.
+
+    ``one_line``, ``highlights`` and ``audience`` remain the compatibility
+    surface used by existing reports.  The richer fields are optional for
+    callers constructing legacy summaries and receive deterministic defaults.
+    """
+
     one_line: str
     highlights: tuple[str, ...]
     audience: str
+    capabilities: tuple[str, ...] = ()
+    core_title: str = ""
+    core_summary: str = ""
+    prerequisites: str = ""
+    limitations: str = ""
+    license_label: str = ""
+    license_restrictions: str = ""
+    readme_sha: str | None = None
+    content_status: str = "metadata_only"
+    evidence_ids: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        highlights = tuple(str(value).strip() for value in self.highlights if str(value).strip())
+        capabilities = tuple(
+            str(value).strip() for value in self.capabilities if str(value).strip()
+        )
+        if not capabilities:
+            capabilities = highlights[:5]
+        if len(capabilities) > 5:
+            raise ValueError("capabilities cannot contain more than five items")
+
+        one_line = str(self.one_line).strip()
+        audience = str(self.audience).strip()
+        core_title = str(self.core_title).strip() or (capabilities[0] if capabilities else one_line)
+        core_summary = str(self.core_summary).strip() or one_line
+        prerequisites = str(self.prerequisites).strip()
+        limitations = str(self.limitations).strip()
+        license_label = str(self.license_label).strip()
+        license_restrictions = _normalise_license_restriction(
+            license_label,
+            str(self.license_restrictions).strip(),
+        )
+        content_status = str(self.content_status).strip() or "metadata_only"
+        readme_sha = str(self.readme_sha).strip() if self.readme_sha else None
+
+        defaults = _default_evidence_ids(
+            highlights=highlights,
+            capabilities=capabilities,
+            prerequisites=prerequisites,
+            limitations=limitations,
+            license_label=license_label,
+            license_restrictions=license_restrictions,
+        )
+        evidence_ids = _normalise_evidence_ids(self.evidence_ids, defaults)
+        if not license_restrictions:
+            evidence_ids["license_restrictions"] = ()
+
+        object.__setattr__(self, "one_line", one_line)
+        object.__setattr__(self, "highlights", highlights)
+        object.__setattr__(self, "audience", audience)
+        object.__setattr__(self, "capabilities", capabilities)
+        object.__setattr__(self, "core_title", core_title)
+        object.__setattr__(self, "core_summary", core_summary)
+        object.__setattr__(self, "prerequisites", prerequisites)
+        object.__setattr__(self, "limitations", limitations)
+        object.__setattr__(self, "license_label", license_label)
+        object.__setattr__(self, "license_restrictions", license_restrictions)
+        object.__setattr__(self, "readme_sha", readme_sha)
+        object.__setattr__(self, "content_status", content_status)
+        object.__setattr__(self, "evidence_ids", evidence_ids)
 
     def to_dict(self) -> dict[str, Any]:
         return {
             "one_line": self.one_line,
             "highlights": list(self.highlights),
             "audience": self.audience,
+            "capabilities": list(self.capabilities),
+            "core_title": self.core_title,
+            "core_summary": self.core_summary,
+            "prerequisites": self.prerequisites,
+            "limitations": self.limitations,
+            "license_label": self.license_label,
+            "license_restrictions": self.license_restrictions,
+            "readme_sha": self.readme_sha,
+            "content_status": self.content_status,
+            "evidence_ids": _serialise_evidence_ids(self.evidence_ids),
         }
+
+    @classmethod
+    def from_mapping(cls, value: Mapping[str, Any]) -> RepositorySummary:
+        """Parse a persisted summary while accepting the legacy three-field shape."""
+
+        if not isinstance(value, Mapping):
+            raise TypeError("repository summary must be a mapping")
+
+        def required_text(field_name: str) -> str:
+            field_value = value.get(field_name)
+            if not isinstance(field_value, str) or not field_value.strip():
+                raise ValueError(f"repository summary {field_name} must be non-empty text")
+            return field_value
+
+        def optional_text(field_name: str) -> str:
+            field_value = value.get(field_name, "")
+            if not isinstance(field_value, str):
+                raise ValueError(f"repository summary {field_name} must be text")
+            return field_value
+
+        def text_items(field_name: str, *, required: bool) -> tuple[str, ...]:
+            field_value = value.get(field_name)
+            if field_value is None and not required:
+                return ()
+            if (
+                isinstance(field_value, (str, bytes))
+                or not isinstance(field_value, (list, tuple))
+                or (required and not field_value)
+                or any(not isinstance(item, str) or not item.strip() for item in field_value)
+            ):
+                raise ValueError(f"repository summary {field_name} must be a text array")
+            return tuple(field_value)
+
+        readme_sha = value.get("readme_sha")
+        if readme_sha is not None and not isinstance(readme_sha, str):
+            raise ValueError("repository summary readme_sha must be text or null")
+        content_status = value.get("content_status", "metadata_only")
+        if not isinstance(content_status, str) or not content_status.strip():
+            raise ValueError("repository summary content_status must be non-empty text")
+        evidence_ids = value.get("evidence_ids", {})
+        if not isinstance(evidence_ids, Mapping):
+            raise ValueError("repository summary evidence_ids must be a mapping")
+
+        return cls(
+            one_line=required_text("one_line"),
+            highlights=text_items("highlights", required=True),
+            audience=required_text("audience"),
+            capabilities=text_items("capabilities", required=False),
+            core_title=optional_text("core_title"),
+            core_summary=optional_text("core_summary"),
+            prerequisites=optional_text("prerequisites"),
+            limitations=optional_text("limitations"),
+            license_label=optional_text("license_label"),
+            license_restrictions=optional_text("license_restrictions"),
+            readme_sha=readme_sha,
+            content_status=content_status,
+            evidence_ids=evidence_ids,
+        )
+
+    @classmethod
+    def from_dict(cls, value: Mapping[str, Any]) -> RepositorySummary:
+        """Compatibility alias for callers loading JSON dictionaries."""
+
+        return cls.from_mapping(value)
 
 
 @dataclass(frozen=True, slots=True)
@@ -491,10 +722,15 @@ def summarize_repository(
     name = getattr(repository, "name", None) or str(repository.full_name).rsplit("/", 1)[-1]
     profile = _capability_profile(repository)
     variant = _narrative_variant(repository, narrative_index)
+    one_line = _one_line(name, profile, variant)
     return RepositorySummary(
-        one_line=_one_line(name, profile, variant),
+        one_line=one_line,
         highlights=profile.highlights,
         audience=profile.audience,
+        capabilities=profile.highlights,
+        core_title=_clip(profile.task, 60),
+        core_summary=one_line,
+        content_status="needs_review" if profile.review_required else "metadata_only",
     )
 
 

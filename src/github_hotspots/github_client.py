@@ -4,11 +4,21 @@ from __future__ import annotations
 
 from collections.abc import Iterable, Mapping
 from dataclasses import replace
+from pathlib import Path
 from typing import Any
 from urllib.parse import quote
 
 import httpx
 
+from .evidence import (
+    CachedAvatar,
+    ReadmeEvidence,
+    RepositoryEvidence,
+    RepositoryMetadataEvidence,
+    cache_github_avatar,
+    readme_evidence_from_api,
+    repository_metadata_from_api,
+)
 from .models import Repository
 
 GITHUB_API_URL = "https://api.github.com"
@@ -30,6 +40,7 @@ class GitHubClient:
         base_url: str = GITHUB_API_URL,
         timeout: float = 20.0,
     ) -> None:
+        self._base_url = base_url.rstrip("/")
         self._owns_client = client is None
         self._client = client or httpx.Client(
             base_url=base_url,
@@ -83,11 +94,78 @@ class GitHubClient:
     def get_repository(self, full_name: str) -> Repository | None:
         """Fetch one repository by ``owner/name``."""
 
-        if full_name.count("/") != 1:
+        path = _repository_api_path(full_name)
+        if path is None:
             return None
-        path = f"/repos/{quote(full_name.strip(), safe='/')}"
         payload = self._get_json(path)
         return repository_from_api(payload) if payload else None
+
+    def get_repository_metadata(self, full_name: str) -> RepositoryMetadataEvidence | None:
+        """Fetch owner avatar, license, and default-branch evidence."""
+
+        path = _repository_api_path(full_name)
+        if path is None:
+            return None
+        payload = self._get_json(path)
+        if payload is None:
+            return None
+        return repository_metadata_from_api(payload, source_url=self._source_url(path))
+
+    def get_readme(
+        self,
+        full_name: str,
+        *,
+        max_decoded_bytes: int | None = None,
+    ) -> ReadmeEvidence | None:
+        """Fetch, bound, and clean one repository README.
+
+        README content remains explicitly marked as untrusted external data.
+        HTTP, JSON, base64, and size failures degrade to ``None``.
+        """
+
+        path = _repository_api_path(full_name, suffix="/readme")
+        if path is None:
+            return None
+        payload = self._get_json(path)
+        if payload is None:
+            return None
+        kwargs = {"max_decoded_bytes": max_decoded_bytes} if max_decoded_bytes is not None else {}
+        return readme_evidence_from_api(
+            payload,
+            full_name=full_name.strip(),
+            source_url=self._source_url(path),
+            **kwargs,
+        )
+
+    def get_repository_evidence(self, full_name: str) -> RepositoryEvidence | None:
+        """Fetch repository metadata and an optional README in one evidence bundle."""
+
+        path = _repository_api_path(full_name)
+        if path is None:
+            return None
+        payload = self._get_json(path)
+        if payload is None:
+            return None
+        metadata = repository_metadata_from_api(payload, source_url=self._source_url(path))
+        if metadata is None:
+            return None
+        return RepositoryEvidence(metadata=metadata, readme=self.get_readme(full_name))
+
+    def cache_owner_avatar(
+        self,
+        avatar_url: str,
+        cache_dir: str | Path,
+        *,
+        cache_key: str | None = None,
+    ) -> CachedAvatar | None:
+        """Safely cache one GitHub owner avatar as a metadata-free PNG."""
+
+        return cache_github_avatar(
+            self._client,
+            avatar_url,
+            cache_dir,
+            cache_key=cache_key,
+        )
 
     def enrich_repositories(self, repositories: Iterable[Repository]) -> list[Repository]:
         """Add REST metadata while preserving all Trending signals."""
@@ -110,6 +188,9 @@ class GitHubClient:
         except (httpx.HTTPError, OSError, ValueError, TypeError):
             return None
         return dict(payload) if isinstance(payload, Mapping) else None
+
+    def _source_url(self, path: str) -> str:
+        return f"{self._base_url}{path}"
 
 
 def repository_from_api(payload: Mapping[str, Any]) -> Repository | None:
@@ -247,6 +328,18 @@ def _int_or_zero(value: Any) -> int:
 
 def _optional_string(value: Any) -> str | None:
     return str(value) if value is not None and str(value).strip() else None
+
+
+def _repository_api_path(full_name: str, *, suffix: str = "") -> str | None:
+    normalized = full_name.strip()
+    if normalized.count("/") != 1:
+        return None
+    owner, name = normalized.split("/", 1)
+    if not owner or not name or owner in {".", ".."} or name in {".", ".."}:
+        return None
+    if any(separator in normalized for separator in ("\\", "\x00")):
+        return None
+    return f"/repos/{quote(owner, safe='')}/{quote(name, safe='')}{suffix}"
 
 
 def _ordered_union(left: tuple[str, ...], right: tuple[str, ...]) -> tuple[str, ...]:

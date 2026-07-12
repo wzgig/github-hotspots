@@ -106,6 +106,137 @@ def test_rerender_uses_frozen_report_facts_without_collection(tmp_path: Path) ->
     assert artifacts.poster_manifest.is_file()
 
 
+def test_rerender_preserves_rich_summary_and_refreshes_evidence_on_request(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    settings = _settings(tmp_path)
+    repository = _repository()
+    repository["summary"] = {
+        "one_line": "一句话说明真实用途。",
+        "highlights": ["能力一", "能力二", "能力三"],
+        "audience": "具体任务人群",
+        "capabilities": ["能力一", "能力二", "能力三", "能力四", "能力五"],
+        "core_title": "核心亮点",
+        "core_summary": "完整解释项目如何工作。",
+        "prerequisites": "需要本地工具",
+        "limitations": "仍需人工确认",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "abc123",
+        "content_status": "readme_enriched",
+        "evidence_ids": {},
+    }
+    payload = _payload(repository)
+    payload["editorial"] = {
+        "boards": {
+            "comprehensive": {
+                "prompt_version": "4.0",
+                "schema_version": "4.0",
+                "requested_backend": "codex-cli",
+                "used_backend": "codex-cli",
+                "fallback_used": False,
+                "error_category": None,
+            }
+        }
+    }
+    captured: dict[str, Any] = {}
+    sentinel = object()
+    evidence = {"example/frozen-tool": object()}
+
+    monkeypatch.setattr(
+        rerender_module,
+        "_refresh_publication_evidence",
+        lambda *_, **__: evidence,
+    )
+
+    def fake_render_reports(**kwargs: Any) -> object:
+        captured.update(kwargs)
+        return sentinel
+
+    monkeypatch.setattr(rerender_module, "render_reports", fake_render_reports)
+
+    result = rerender_report(
+        settings,
+        _write_report(tmp_path, payload),
+        refresh_evidence=True,
+    )
+
+    assert result is sentinel
+    summary = captured["summary_overrides"]["comprehensive"][0]
+    assert summary.capabilities[-1] == "能力五"
+    assert summary.core_summary == "完整解释项目如何工作。"
+    assert captured["publication_evidence"] is evidence
+    assert captured["editorial_metadata_overrides"] is None
+
+
+def test_offline_rerender_rehydrates_public_avatar_and_readme_metadata(tmp_path: Path) -> None:
+    repository = _repository()
+    repository["avatar_path"] = "avatars/2026-07-11/owner.png"
+    repository["publication_evidence"] = {
+        "full_name": repository["full_name"],
+        "license_spdx_id": "MIT",
+        "readme": {
+            "sha": "abc123",
+            "source_url": "https://api.github.com/repos/example/frozen-tool/readme",
+        },
+        "avatar": {
+            "path": repository["avatar_path"],
+            "sha256": "a" * 64,
+            "width": 96,
+            "height": 96,
+        },
+        "warnings": [],
+    }
+    payload = _payload(repository)
+    report = _write_report(tmp_path, payload)
+    avatar = report.parent / repository["avatar_path"]
+    avatar.parent.mkdir(parents=True)
+    avatar.write_bytes(b"cached-avatar")
+
+    bundles = rerender_module._publication_overrides(payload, report)
+
+    bundle = bundles[repository["full_name"]]
+    assert bundle.avatar_relative_path == repository["avatar_path"]
+    assert bundle.repository_evidence.readme.sha == "abc123"
+    assert bundle.to_public_dict()["readme"]["source_url"].endswith("/readme")
+
+
+def test_offline_rerender_preserves_existing_editorial_provenance(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    settings = _settings(tmp_path)
+    payload = _payload()
+    payload["editorial"] = {
+        "boards": {
+            "comprehensive": {
+                "prompt_version": "4.0",
+                "schema_version": "4.0",
+                "requested_backend": "codex-cli",
+                "used_backend": "codex-cli",
+                "fallback_used": False,
+                "error_category": None,
+            }
+        }
+    }
+    captured: dict[str, Any] = {}
+    sentinel = object()
+
+    def fake_render_reports(**kwargs: Any) -> object:
+        captured.update(kwargs)
+        return sentinel
+
+    monkeypatch.setattr(rerender_module, "render_reports", fake_render_reports)
+
+    result = rerender_report(settings, _write_report(tmp_path, payload))
+
+    assert result is sentinel
+    assert captured["editorial_metadata_overrides"]["comprehensive"]["used_backend"] == (
+        "codex-cli"
+    )
+
+
 @pytest.mark.parametrize("schema_version", [1, 2, 3])
 def test_rerender_accepts_repository_generated_schema_versions(
     tmp_path: Path,
