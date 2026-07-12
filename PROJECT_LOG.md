@@ -233,3 +233,10 @@
 - 海报暂不自动使用项目 Logo、README 图片或头像；许可证、安装条件和已知限制将在 Schema 4.0 证据模型中进入正式卡片字段。
 - 小红书继续只生成审核稿和配图，不自动登录、发布或操作互动；最终 AI 辅助标识和平台规则由人工发布前确认。
 - Actions 与 Pages 线上状态将在本提交推送后验证并追加闭环记录。
+
+### 线上闭环
+
+- 功能提交 `973b77e` 已推送到 `origin/main`。
+- GitHub Pages `push` 运行 `29177133065` 成功完成构建与部署：<https://github.com/wzgig/github-hotspots/actions/runs/29177133065>。
+- `https://wzgig.github.io/github-hotspots/` 与 `data/site-data.json` 均返回 HTTP 200；线上首页已包含“每天，看懂 GitHub 热门项目”和 `GITHUB PROJECTS, EXPLAINED`。
+- 线上日报日期为 `2026-07-12`，首项 `catchorg/Catch2` 的用途摘要和三条能力已更新；对应 V2 PNG 返回 HTTP 200、`image/png`，字节数为 163,897。
