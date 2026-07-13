@@ -95,14 +95,20 @@ def test_publish_command_reports_local_board_packages(monkeypatch) -> None:
             Path("publish/current/daily/02-ai"),
         ),
         archived_dir=None,
+        history_dir=Path("publish/history/daily/2026/2026-07-12/abcdef123456"),
+        history_manifest=Path("publish/history/daily/2026/2026-07-12/abcdef123456/MANIFEST.json"),
+        history_index_json=Path("publish/history/INDEX.json"),
+        history_index_markdown=Path("publish/history/INDEX.md"),
+        activated_current=True,
     )
     captured = {}
 
     monkeypatch.setattr(cli, "load_settings", lambda _: settings)
 
-    def fake_build(settings_arg, report_arg):
+    def fake_build(settings_arg, report_arg, **kwargs):
         captured["settings"] = settings_arg
         captured["report"] = report_arg
+        captured["kwargs"] = kwargs
         return artifacts
 
     monkeypatch.setattr(cli, "build_publish_bundle", fake_build)
@@ -115,7 +121,91 @@ def test_publish_command_reports_local_board_packages(monkeypatch) -> None:
     assert response.exit_code == 0
     assert captured["settings"] is settings
     assert captured["report"] == Path("reports/daily/2026-07-12.json")
+    assert captured["kwargs"] == {
+        "activate_current": True,
+        "allow_older_current": False,
+    }
     assert "Prepared D001 daily publication bundle" in response.output
+    assert "History revision:" in response.output
+    normalized_output = response.output.replace("\\", "/")
+    assert "publish/history/INDEX.json" in normalized_output
     assert "Board packages: 2" in response.output
     assert "Today index:" in response.output
     assert "TODAY.md" in response.output
+
+
+def test_publish_command_history_only_does_not_activate_current(monkeypatch) -> None:
+    settings = load_settings(Path("config/hotspots.yaml"))
+    artifacts = SimpleNamespace(
+        period="daily",
+        issue_code="D001",
+        current_dir=None,
+        manifest=None,
+        checklist=None,
+        today=Path("publish/current/TODAY.md"),
+        board_dirs=(),
+        archived_dir=None,
+        history_dir=Path("publish/history/daily/2026/2026-07-12/abcdef123456"),
+        history_manifest=Path("publish/history/daily/2026/2026-07-12/abcdef123456/MANIFEST.json"),
+        history_index_json=Path("publish/history/INDEX.json"),
+        history_index_markdown=Path("publish/history/INDEX.md"),
+        activated_current=False,
+    )
+    captured = {}
+    monkeypatch.setattr(cli, "load_settings", lambda _: settings)
+
+    def fake_build(settings_arg, report_arg, **kwargs):
+        captured["kwargs"] = kwargs
+        return artifacts
+
+    monkeypatch.setattr(cli, "build_publish_bundle", fake_build)
+
+    response = CliRunner().invoke(
+        cli.app,
+        ["publish", "reports/daily/2026-07-12.json", "--history-only"],
+    )
+
+    assert response.exit_code == 0
+    assert captured["kwargs"] == {
+        "activate_current": False,
+        "allow_older_current": False,
+    }
+    assert "History-only mode: publish/current was not changed." in response.output
+    assert "Current folder:" not in response.output
+
+
+def test_publish_command_rejects_conflicting_history_options(monkeypatch) -> None:
+    monkeypatch.setattr(cli, "load_settings", lambda _: None)
+
+    response = CliRunner().invoke(
+        cli.app,
+        [
+            "publish",
+            "reports/daily/2026-07-12.json",
+            "--history-only",
+            "--activate-older",
+        ],
+    )
+
+    assert response.exit_code == 1
+    assert "cannot be combined" in response.output
+
+
+def test_publish_history_index_command_rebuilds_indexes(monkeypatch) -> None:
+    settings = load_settings(Path("config/hotspots.yaml"))
+    captured = {}
+    monkeypatch.setattr(cli, "load_settings", lambda _: settings)
+
+    def fake_refresh(root):
+        captured["root"] = root
+        return Path("publish/history/INDEX.json"), Path("publish/history/INDEX.md")
+
+    monkeypatch.setattr(cli, "refresh_history_index", fake_refresh)
+
+    response = CliRunner().invoke(cli.app, ["publish-history-index"])
+
+    assert response.exit_code == 0
+    assert captured["root"] == settings.publication_settings().root_dir
+    normalized_output = response.output.replace("\\", "/")
+    assert "publish/history/INDEX.json" in normalized_output
+    assert "publish/history/INDEX.md" in normalized_output

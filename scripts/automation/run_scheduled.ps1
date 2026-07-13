@@ -9,7 +9,9 @@ param(
 
     [string]$StateRoot = (Join-Path $env:LOCALAPPDATA "GitHubHotspots"),
 
-    [switch]$SkipPagesWait
+    [switch]$SkipPagesWait,
+
+    [switch]$LoadFunctionsOnly
 )
 
 Set-StrictMode -Version Latest
@@ -143,17 +145,75 @@ function Test-Bundle {
     return $exitCode -eq 0
 }
 
+function Test-PublicationHistory {
+    param(
+        [Parameter(Mandatory = $true)][string]$Root,
+        [Parameter(Mandatory = $true)][string]$Python,
+        [Parameter(Mandatory = $true)][string]$TargetPeriod,
+        [Parameter(Mandatory = $true)][string]$TargetDate
+    )
+
+    $exitCode = Invoke-Logged `
+        -Label "verify publication history with trusted validator" `
+        -FilePath $Python `
+        -ArgumentList @(
+            "-S", $AutomationScript, "verify-history",
+            "--root", $Root,
+            "--period", $TargetPeriod,
+            "--date", $TargetDate,
+            "--quiet"
+        ) `
+        -WorkingDirectory $RepoRoot `
+        -AllowFailure
+    return $exitCode -eq 0
+}
+
+function Test-CompleteBundle {
+    param(
+        [Parameter(Mandatory = $true)][string]$Root,
+        [Parameter(Mandatory = $true)][string]$Python,
+        [Parameter(Mandatory = $true)][string]$TargetPeriod,
+        [Parameter(Mandatory = $true)][string]$TargetDate
+    )
+
+    if (-not (Test-Bundle `
+        -Root $Root `
+        -Python $Python `
+        -TargetPeriod $TargetPeriod `
+        -TargetDate $TargetDate)) {
+        return $false
+    }
+    return Test-PublicationHistory `
+        -Root $Root `
+        -Python $Python `
+        -TargetPeriod $TargetPeriod `
+        -TargetDate $TargetDate
+}
+
 function Assert-PublishChild {
     param([Parameter(Mandatory = $true)][string]$Path)
 
-    $publishRoot = [System.IO.Path]::GetFullPath((Join-Path $RepoRoot "publish"))
+    Assert-ChildPath `
+        -Path $Path `
+        -Root (Join-Path $RepoRoot "publish") `
+        -Label "repository publish directory"
+}
+
+function Assert-ChildPath {
+    param(
+        [Parameter(Mandatory = $true)][string]$Path,
+        [Parameter(Mandatory = $true)][string]$Root,
+        [Parameter(Mandatory = $true)][string]$Label
+    )
+
+    $publishRoot = [System.IO.Path]::GetFullPath($Root)
     $fullPath = [System.IO.Path]::GetFullPath($Path)
     $rootWithSeparator = $publishRoot.TrimEnd('\') + '\'
     if (
         $fullPath -ne $publishRoot -and
         -not $fullPath.StartsWith($rootWithSeparator, [System.StringComparison]::OrdinalIgnoreCase)
     ) {
-        throw "Refusing to operate outside the repository publish directory."
+        throw "Refusing to operate outside the $Label."
     }
 }
 
@@ -201,28 +261,134 @@ function Update-PublishTodayIndex {
 function Test-PublishManifestUsesCopies {
     param([Parameter(Mandatory = $true)]$Manifest)
 
-    $boards = @($Manifest.boards)
-    if ($boards.Count -lt 1) {
-        return $false
-    }
-    foreach ($board in $boards) {
-        $images = @($board.images)
-        if ($images.Count -lt 1) {
+    try {
+        $boards = @($Manifest.boards)
+        if ($boards.Count -lt 1) {
             return $false
         }
-        foreach ($image in $images) {
-            if ($image.materialization -ne "copy") {
+        foreach ($board in $boards) {
+            $images = @($board.images)
+            if ($images.Count -lt 1) {
                 return $false
             }
+            foreach ($image in $images) {
+                if ($image.materialization -ne "copy") {
+                    return $false
+                }
+            }
         }
+        return $true
     }
-    return $true
+    catch {
+        return $false
+    }
+}
+
+function Get-SafeManifestChildPath {
+    param(
+        [Parameter(Mandatory = $true)][string]$Root,
+        [Parameter(Mandatory = $true)][string]$RelativePath
+    )
+
+    if (-not $RelativePath.Trim()) {
+        throw "Publication manifest contains an empty relative path."
+    }
+    $rootPath = [System.IO.Path]::GetFullPath($Root)
+    $candidate = [System.IO.Path]::GetFullPath((Join-Path $rootPath $RelativePath))
+    Assert-ChildPath -Path $candidate -Root $rootPath -Label "publication bundle"
+    if ($candidate -eq $rootPath) {
+        throw "Publication manifest path must identify a file below the bundle root."
+    }
+    return $candidate
+}
+
+function Test-PublishFileHash {
+    param(
+        [Parameter(Mandatory = $true)][string]$Path,
+        [Parameter(Mandatory = $true)][string]$ExpectedSha256
+    )
+
+    if (
+        $ExpectedSha256 -notmatch "^[0-9a-fA-F]{64}$" -or
+        -not (Test-Path -LiteralPath $Path -PathType Leaf)
+    ) {
+        return $false
+    }
+    $actual = (Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToLowerInvariant()
+    return $actual -eq $ExpectedSha256.ToLowerInvariant()
+}
+
+function Test-PublishManifestFiles {
+    param(
+        [Parameter(Mandatory = $true)][string]$Root,
+        [Parameter(Mandatory = $true)]$Manifest,
+        [switch]$RequireCopies
+    )
+
+    try {
+        if (-not (Test-Path -LiteralPath $Root -PathType Container)) {
+            return $false
+        }
+        $checklist = Join-Path $Root "CHECKLIST.md"
+        if (
+            -not (Test-PublishFileHash `
+                -Path $checklist `
+                -ExpectedSha256 "$($Manifest.checklist_sha256)")
+        ) {
+            return $false
+        }
+        $boards = @($Manifest.boards)
+        if ($boards.Count -lt 1) {
+            return $false
+        }
+        foreach ($board in $boards) {
+            $boardDirectory = Get-SafeManifestChildPath `
+                -Root $Root `
+                -RelativePath "$($board.directory)"
+            if (-not (Test-Path -LiteralPath $boardDirectory -PathType Container)) {
+                return $false
+            }
+            $textFiles = @(
+                [pscustomobject]@{ Path = "$($board.title)"; Sha256 = "$($board.title_sha256)" }
+                [pscustomobject]@{ Path = "$($board.caption)"; Sha256 = "$($board.caption_sha256)" }
+                [pscustomobject]@{ Path = "$($board.review)"; Sha256 = "$($board.review_sha256)" }
+            )
+            foreach ($item in $textFiles) {
+                $path = Get-SafeManifestChildPath -Root $Root -RelativePath $item.Path
+                if (-not (Test-PublishFileHash -Path $path -ExpectedSha256 $item.Sha256)) {
+                    return $false
+                }
+            }
+            $images = @($board.images)
+            if ($images.Count -lt 1) {
+                return $false
+            }
+            foreach ($image in $images) {
+                if ($RequireCopies -and $image.materialization -ne "copy") {
+                    return $false
+                }
+                $path = Get-SafeManifestChildPath `
+                    -Root $boardDirectory `
+                    -RelativePath "$($image.path)"
+                if (-not (Test-PublishFileHash -Path $path -ExpectedSha256 "$($image.sha256)")) {
+                    return $false
+                }
+            }
+        }
+        return $true
+    }
+    catch {
+        return $false
+    }
 }
 
 function Set-PublishManifestMaterializationToCopy {
-    param([Parameter(Mandatory = $true)][string]$ManifestPath)
+    param(
+        [Parameter(Mandatory = $true)][string]$ManifestPath,
+        [string]$AllowedRoot = (Join-Path $RepoRoot "publish")
+    )
 
-    Assert-PublishChild $ManifestPath
+    Assert-ChildPath -Path $ManifestPath -Root $AllowedRoot -Label "publication bundle"
     $manifest = Get-Content -LiteralPath $ManifestPath -Raw -Encoding utf8 | ConvertFrom-Json
     foreach ($board in @($manifest.boards)) {
         foreach ($image in @($board.images)) {
@@ -237,6 +403,233 @@ function Set-PublishManifestMaterializationToCopy {
     )
 }
 
+function Get-AvailablePublishArchivePath {
+    param([Parameter(Mandatory = $true)][string]$BasePath)
+
+    if (-not (Test-Path -LiteralPath $BasePath)) {
+        return $BasePath
+    }
+    for ($revision = 2; $revision -lt 10000; $revision++) {
+        $candidate = "{0}-r{1:d2}" -f $BasePath, $revision
+        if (-not (Test-Path -LiteralPath $candidate)) {
+            return $candidate
+        }
+    }
+    throw "Unable to allocate a publication archive revision path."
+}
+
+function Get-PublishArchivePath {
+    param(
+        [Parameter(Mandatory = $true)][string]$PublishRoot,
+        [Parameter(Mandatory = $true)][string]$TargetPeriod,
+        $Manifest
+    )
+
+    $archiveRoot = Join-Path $PublishRoot "archive\$TargetPeriod"
+    try {
+        if ($null -eq $Manifest -or "$($Manifest.period)" -ne $TargetPeriod) {
+            throw "invalid manifest period"
+        }
+        $archiveDate = [DateTime]::ParseExact(
+            "$($Manifest.run_date)",
+            "yyyy-MM-dd",
+            [System.Globalization.CultureInfo]::InvariantCulture
+        )
+        $stem = "$($Manifest.issue.stem)"
+        if ($stem -notmatch "^[A-Za-z0-9][A-Za-z0-9._-]*$") {
+            throw "invalid manifest issue stem"
+        }
+        $archiveYear = if ($TargetPeriod -eq "weekly") {
+            Get-IsoWeekYear -Date $archiveDate
+        }
+        else {
+            $archiveDate.Year
+        }
+        $basePath = Join-Path $archiveRoot "$archiveYear\$stem"
+    }
+    catch {
+        $recoveryStamp = Get-Date -Format "yyyyMMddTHHmmss"
+        $recoveryId = [guid]::NewGuid().ToString("N").Substring(0, 8)
+        $recoveryName = "$TargetPeriod-recovery-$recoveryStamp-$recoveryId"
+        $basePath = Join-Path $archiveRoot "recovery\$recoveryName"
+    }
+    Assert-ChildPath -Path $basePath -Root $PublishRoot -Label "publication archive"
+    return Get-AvailablePublishArchivePath -BasePath $basePath
+}
+
+function Switch-PublishStaging {
+    param(
+        [Parameter(Mandatory = $true)][string]$Staging,
+        [Parameter(Mandatory = $true)][string]$Target,
+        [Parameter(Mandatory = $true)][string]$PublishRoot,
+        [Parameter(Mandatory = $true)][ValidateSet("daily", "weekly")][string]$TargetPeriod,
+        $TargetManifest,
+        [scriptblock]$Activation = {
+            param($SourcePath, $DestinationPath)
+            Move-Item -LiteralPath $SourcePath -Destination $DestinationPath -ErrorAction Stop
+        }
+    )
+
+    $archive = $null
+    if (Test-Path -LiteralPath $Target) {
+        $archive = Get-PublishArchivePath `
+            -PublishRoot $PublishRoot `
+            -TargetPeriod $TargetPeriod `
+            -Manifest $TargetManifest
+        New-Item -ItemType Directory -Force -Path (Split-Path $archive -Parent) | Out-Null
+        Move-Item -LiteralPath $Target -Destination $archive -ErrorAction Stop
+    }
+    try {
+        & $Activation $Staging $Target
+    }
+    catch {
+        if (
+            $archive -and
+            (Test-Path -LiteralPath $archive) -and
+            -not (Test-Path -LiteralPath $Target)
+        ) {
+            try {
+                Move-Item -LiteralPath $archive -Destination $Target -ErrorAction Stop
+                Write-RunLog "publication activation failed; restored previous local publish folder"
+                $archive = $null
+            }
+            catch {
+                throw "Publication activation and rollback both failed. Preserved prior bundle: $archive"
+            }
+        }
+        throw
+    }
+    if ($archive) {
+        Write-RunLog "archived previous local publish folder path=$archive"
+    }
+    return $archive
+}
+
+function Install-PublishDirectory {
+    param(
+        [Parameter(Mandatory = $true)][string]$Source,
+        [Parameter(Mandatory = $true)][string]$PublishRoot,
+        [Parameter(Mandatory = $true)][ValidateSet("daily", "weekly")][string]$TargetPeriod
+    )
+
+    $publishRootPath = [System.IO.Path]::GetFullPath($PublishRoot)
+    $target = Join-Path $publishRootPath "current\$TargetPeriod"
+    Assert-ChildPath -Path $target -Root $publishRootPath -Label "publication directory"
+    if (-not (Test-Path -LiteralPath $Source -PathType Container)) {
+        throw "Generated publication folder is missing: $Source"
+    }
+    $sourceManifestPath = Join-Path $Source "MANIFEST.json"
+    if (-not (Test-Path -LiteralPath $sourceManifestPath -PathType Leaf)) {
+        throw "Generated publication folder has no MANIFEST.json: $Source"
+    }
+    $sourceManifest = Get-Content -LiteralPath $sourceManifestPath -Raw -Encoding utf8 | ConvertFrom-Json
+    $sourceFingerprint = "$($sourceManifest.content_fingerprint)"
+    $sourceDate = [DateTime]::ParseExact(
+        "$($sourceManifest.run_date)",
+        "yyyy-MM-dd",
+        [System.Globalization.CultureInfo]::InvariantCulture
+    )
+    if (
+        $sourceFingerprint -notmatch "^[0-9a-f]{64}$" -or
+        "$($sourceManifest.period)" -ne $TargetPeriod -or
+        -not (Test-PublishManifestFiles -Root $Source -Manifest $sourceManifest)
+    ) {
+        throw "Generated publication folder failed manifest and file integrity validation: $Source"
+    }
+
+    $targetManifest = $null
+    if (Test-Path -LiteralPath $target -PathType Container) {
+        $targetManifestPath = Join-Path $target "MANIFEST.json"
+        if (Test-Path -LiteralPath $targetManifestPath -PathType Leaf) {
+            try {
+                $targetManifest = Get-Content `
+                    -LiteralPath $targetManifestPath `
+                    -Raw `
+                    -Encoding utf8 | ConvertFrom-Json
+            }
+            catch {
+                Write-RunLog "existing local publication manifest is unreadable; preserving it in recovery archive"
+            }
+        }
+        $targetFingerprint = ""
+        if ($null -ne $targetManifest) {
+            try {
+                $targetFingerprint = "$($targetManifest.content_fingerprint)"
+                $targetDate = [DateTime]::ParseExact(
+                    "$($targetManifest.run_date)",
+                    "yyyy-MM-dd",
+                    [System.Globalization.CultureInfo]::InvariantCulture
+                )
+                if ("$($targetManifest.period)" -eq $TargetPeriod -and $targetDate -gt $sourceDate) {
+                    throw (
+                        "Refusing to replace newer $TargetPeriod publication " +
+                        "$($targetDate.ToString('yyyy-MM-dd')) with older $($sourceDate.ToString('yyyy-MM-dd'))."
+                    )
+                }
+            }
+            catch {
+                if ($_.Exception.Message -like "Refusing to replace newer*") {
+                    throw
+                }
+                $targetFingerprint = ""
+                $targetManifest = $null
+                Write-RunLog "existing local publication manifest is incomplete; preserving it in recovery archive"
+            }
+        }
+        if (
+            $targetFingerprint -eq $sourceFingerprint -and
+            (Test-PublishManifestUsesCopies -Manifest $targetManifest) -and
+            (Test-PublishManifestFiles -Root $target -Manifest $targetManifest -RequireCopies)
+        ) {
+            Write-RunLog "local publish folder already matches source report"
+            return [pscustomobject]@{
+                Changed = $false
+                Target = $target
+                Archived = $null
+            }
+        }
+    }
+
+    $currentRoot = Split-Path $target -Parent
+    New-Item -ItemType Directory -Force -Path $currentRoot | Out-Null
+    $staging = Join-Path $currentRoot (".{0}-staging-{1}" -f $TargetPeriod, ([guid]::NewGuid().ToString("N")))
+    Assert-ChildPath -Path $staging -Root $publishRootPath -Label "publication staging directory"
+    $archive = $null
+    try {
+        Copy-Item -LiteralPath $Source -Destination $staging -Recurse -ErrorAction Stop
+        $stagingManifestPath = Join-Path $staging "MANIFEST.json"
+        Set-PublishManifestMaterializationToCopy `
+            -ManifestPath $stagingManifestPath `
+            -AllowedRoot $publishRootPath
+        $stagingManifest = Get-Content `
+            -LiteralPath $stagingManifestPath `
+            -Raw `
+            -Encoding utf8 | ConvertFrom-Json
+        if (-not (Test-PublishManifestFiles -Root $staging -Manifest $stagingManifest -RequireCopies)) {
+            throw "Staged publication folder failed manifest and file integrity validation."
+        }
+
+        $archive = Switch-PublishStaging `
+            -Staging $staging `
+            -Target $target `
+            -PublishRoot $publishRootPath `
+            -TargetPeriod $TargetPeriod `
+            -TargetManifest $targetManifest
+    }
+    finally {
+        if (Test-Path -LiteralPath $staging) {
+            Assert-ChildPath -Path $staging -Root $publishRootPath -Label "publication staging directory"
+            Remove-Item -LiteralPath $staging -Recurse -Force -ErrorAction SilentlyContinue
+        }
+    }
+
+    return [pscustomobject]@{
+        Changed = $true
+        Target = $target
+        Archived = $archive
+    }
+}
+
 function Sync-PublishDirectory {
     param(
         [Parameter(Mandatory = $true)][string]$SourceRoot,
@@ -244,59 +637,15 @@ function Sync-PublishDirectory {
     )
 
     $source = Join-Path $SourceRoot "publish\current\$Period"
-    if (-not (Test-Path -LiteralPath $source -PathType Container)) {
-        throw "Generated publication folder is missing: $source"
-    }
     $publishRoot = Join-Path $RepoRoot "publish"
-    $target = Join-Path $publishRoot "current\$Period"
-    $sourceManifestPath = Join-Path $source "MANIFEST.json"
-    $sourceManifest = Get-Content -LiteralPath $sourceManifestPath -Raw -Encoding utf8 | ConvertFrom-Json
-    Assert-PublishChild $target
-
-    if (Test-Path -LiteralPath $target -PathType Container) {
-        $targetManifestPath = Join-Path $target "MANIFEST.json"
-        if (-not (Test-Path -LiteralPath $targetManifestPath -PathType Leaf)) {
-            throw "Existing local publication folder has no MANIFEST.json: $target"
-        }
-        $targetManifest = Get-Content -LiteralPath $targetManifestPath -Raw -Encoding utf8 | ConvertFrom-Json
-        $sourceFingerprint = "$($sourceManifest.content_fingerprint)"
-        $targetFingerprint = "$($targetManifest.content_fingerprint)"
-        if (
-            $sourceFingerprint -match "^[0-9a-f]{64}$" -and
-            $targetFingerprint -eq $sourceFingerprint -and
-            (Test-PublishManifestUsesCopies -Manifest $targetManifest)
-        ) {
-            Write-RunLog "local publish folder already matches source report"
-            Update-PublishTodayIndex -SourceRoot $SourceRoot -Python $Python
-            return
-        }
-        $archiveDate = [DateTime]::ParseExact(
-            "$($targetManifest.run_date)",
-            "yyyy-MM-dd",
-            [System.Globalization.CultureInfo]::InvariantCulture
-        )
-        $archiveYear = if ($Period -eq "weekly") {
-            Get-IsoWeekYear -Date $archiveDate
-        }
-        else {
-            $archiveDate.Year
-        }
-        $archiveBase = Join-Path $publishRoot "archive\$Period\$archiveYear\$($targetManifest.issue.stem)"
-        $archive = $archiveBase
-        if (Test-Path -LiteralPath $archive) {
-            $archive = "$archiveBase-sync-$((Get-Date).ToString('yyyyMMddTHHmmss'))"
-        }
-        Assert-PublishChild $archive
-        New-Item -ItemType Directory -Force -Path (Split-Path $archive -Parent) | Out-Null
-        Move-Item -LiteralPath $target -Destination $archive
-        Write-RunLog "archived previous local publish folder path=$archive"
-    }
-
-    New-Item -ItemType Directory -Force -Path (Split-Path $target -Parent) | Out-Null
-    Copy-Item -LiteralPath $source -Destination $target -Recurse
-    Set-PublishManifestMaterializationToCopy -ManifestPath (Join-Path $target "MANIFEST.json")
+    $result = Install-PublishDirectory `
+        -Source $source `
+        -PublishRoot $publishRoot `
+        -TargetPeriod $Period
     Update-PublishTodayIndex -SourceRoot $SourceRoot -Python $Python
-    Write-RunLog "synchronised local publish folder path=$target"
+    if ($result.Changed) {
+        Write-RunLog "synchronised local publish folder path=$($result.Target)"
+    }
 }
 
 function Build-And-SyncPublication {
@@ -389,7 +738,7 @@ function Build-And-SyncRemotePublication {
                 "-C", $RepoRoot, "worktree", "add", "--detach", $remotePath, $VerifiedRemoteCommit
             ) | Out-Null
         $added = $true
-        if (-not (Test-Bundle -Root $remotePath -Python $Python -TargetPeriod $TargetPeriod -TargetDate $TargetDate)) {
+        if (-not (Test-CompleteBundle -Root $remotePath -Python $Python -TargetPeriod $TargetPeriod -TargetDate $TargetDate)) {
             throw "Remote publication bundle failed strict validation."
         }
         Build-And-SyncPublication `
@@ -440,16 +789,15 @@ function Write-PathFile {
 }
 
 function Assert-TrustedRemoteState {
-    param([Parameter(Mandatory = $true)][string]$Python)
+    param(
+        [Parameter(Mandatory = $true)][string]$Python,
+        [Parameter(Mandatory = $true)][string]$RemoteCommit
+    )
 
     if (-not $TrustedCommit) {
         throw "Trusted local commit has not been recorded."
     }
-    $remoteCommit = ((Invoke-Captured `
-        -Label "read origin main commit" `
-        -FilePath "git" `
-        -ArgumentList @("-C", $RepoRoot, "rev-parse", "origin/main")) -join "").Trim()
-    if ($remoteCommit -notmatch "^[0-9a-f]{40}$") {
+    if ($RemoteCommit -notmatch "^[0-9a-f]{40}$") {
         throw "origin/main did not resolve to a full commit SHA."
     }
 
@@ -458,7 +806,7 @@ function Assert-TrustedRemoteState {
         -FilePath "git" `
         -ArgumentList @(
             "-C", $RepoRoot,
-            "merge-base", "--is-ancestor", $TrustedCommit, $remoteCommit
+            "merge-base", "--is-ancestor", $TrustedCommit, $RemoteCommit
         ) `
         -AllowFailure
     if ($ancestorExit -ne 0) {
@@ -471,7 +819,7 @@ function Assert-TrustedRemoteState {
         -ArgumentList @(
             "-C", $RepoRoot,
             "-c", "core.quotepath=false",
-            "diff", "--name-only", "--no-renames", "$TrustedCommit..$remoteCommit"
+            "diff", "--name-only", "--no-renames", "$TrustedCommit..$RemoteCommit"
         ) | ForEach-Object { "$_".Trim() } | Where-Object { $_ })
     $remotePathFile = Join-Path $StateRoot ("{0}.remote.paths" -f $RunId)
     Write-PathFile -Path $remotePathFile -Values $remotePaths
@@ -484,8 +832,8 @@ function Assert-TrustedRemoteState {
         ) `
         -WorkingDirectory $RepoRoot | Out-Null
 
-    $script:VerifiedRemoteCommit = $remoteCommit
-    Write-RunLog "trusted remote verified commit=$remoteCommit path_count=$($remotePaths.Count)"
+    $script:VerifiedRemoteCommit = $RemoteCommit
+    Write-RunLog "trusted remote verified commit=$RemoteCommit path_count=$($remotePaths.Count)"
 }
 
 function Update-VerifiedOriginMain {
@@ -498,7 +846,21 @@ function Update-VerifiedOriginMain {
     Invoke-Logged `
         -Label $Label `
         -FilePath "git" `
-        -ArgumentList @("-C", $RepoRoot, "fetch", "origin", "main") | Out-Null
+        -ArgumentList @(
+            "-C", $RepoRoot,
+            "fetch", "--no-tags", "origin",
+            "+refs/heads/main:refs/remotes/origin/main"
+        ) | Out-Null
+    $remoteCommit = ((Invoke-Captured `
+        -Label "read fetched origin main commit" `
+        -FilePath "git" `
+        -ArgumentList @(
+            "-C", $RepoRoot,
+            "rev-parse", "refs/remotes/origin/main^{commit}"
+        )) -join "").Trim()
+    if ($remoteCommit -notmatch "^[0-9a-f]{40}$") {
+        throw "Fetched origin/main did not resolve to a full commit SHA."
+    }
     if ($RecordTrustedCommit) {
         $localCommit = ((Invoke-Captured `
             -Label "record trusted local HEAD" `
@@ -510,7 +872,7 @@ function Update-VerifiedOriginMain {
         $script:TrustedCommit = $localCommit
         Write-RunLog "trusted local commit=$localCommit"
     }
-    Assert-TrustedRemoteState -Python $Python
+    Assert-TrustedRemoteState -Python $Python -RemoteCommit $remoteCommit
 }
 
 function Remove-StaleAutomationState {
@@ -578,7 +940,7 @@ function Test-RemoteBundle {
                 "-C", $RepoRoot, "worktree", "add", "--detach", $remotePath, $VerifiedRemoteCommit
             ) | Out-Null
         $added = $true
-        return Test-Bundle `
+        return Test-CompleteBundle `
             -Root $remotePath `
             -Python $Python `
             -TargetPeriod $TargetPeriod `
@@ -595,49 +957,217 @@ function Test-RemoteBundle {
     }
 }
 
+function ConvertFrom-PagesRunListJson {
+    param([Parameter(Mandatory = $true)][AllowEmptyString()][string]$Json)
+
+    if (-not $Json.Trim()) {
+        return [pscustomobject]@{
+            State = "malformed"
+            Status = $null
+            Conclusion = $null
+            Url = $null
+            Message = "GitHub CLI returned empty stdout."
+        }
+    }
+    try {
+        # Windows PowerShell 5.1 wraps ConvertFrom-Json's empty array output when the conversion
+        # is nested directly inside @(...). Assign first, then enumerate, so [] remains Count=0.
+        $parsed = $Json | ConvertFrom-Json
+        $runs = @($parsed)
+    }
+    catch {
+        return [pscustomobject]@{
+            State = "malformed"
+            Status = $null
+            Conclusion = $null
+            Url = $null
+            Message = "GitHub CLI returned invalid JSON: $($_.Exception.Message)"
+        }
+    }
+    if ($runs.Count -eq 0) {
+        return [pscustomobject]@{
+            State = "not_found"
+            Status = $null
+            Conclusion = $null
+            Url = $null
+            Message = "No matching Pages workflow run exists yet."
+        }
+    }
+
+    $run = $runs[0]
+    if ($null -eq $run) {
+        return [pscustomobject]@{
+            State = "malformed"
+            Status = $null
+            Conclusion = $null
+            Url = $null
+            Message = "GitHub CLI returned a null workflow run."
+        }
+    }
+    $statusProperty = $run.PSObject.Properties["status"]
+    $conclusionProperty = $run.PSObject.Properties["conclusion"]
+    $urlProperty = $run.PSObject.Properties["url"]
+    if ($null -eq $statusProperty -or $null -eq $conclusionProperty -or $null -eq $urlProperty) {
+        return [pscustomobject]@{
+            State = "malformed"
+            Status = $null
+            Conclusion = $null
+            Url = $null
+            Message = "GitHub CLI workflow run is missing status, conclusion, or url."
+        }
+    }
+
+    $status = "$($statusProperty.Value)"
+    $conclusion = "$($conclusionProperty.Value)"
+    $url = "$($urlProperty.Value)"
+    if (-not $status.Trim()) {
+        return [pscustomobject]@{
+            State = "malformed"
+            Status = $status
+            Conclusion = $conclusion
+            Url = $url
+            Message = "GitHub CLI workflow run has an empty status."
+        }
+    }
+    if ($status -eq "completed") {
+        if ($conclusion -eq "success") {
+            return [pscustomobject]@{
+                State = "success"
+                Status = $status
+                Conclusion = $conclusion
+                Url = $url
+                Message = "Pages deployment completed successfully."
+            }
+        }
+        if (-not $conclusion.Trim()) {
+            return [pscustomobject]@{
+                State = "malformed"
+                Status = $status
+                Conclusion = $conclusion
+                Url = $url
+                Message = "Completed Pages workflow run has no conclusion."
+            }
+        }
+        return [pscustomobject]@{
+            State = "failure"
+            Status = $status
+            Conclusion = $conclusion
+            Url = $url
+            Message = "Pages deployment completed with $conclusion."
+        }
+    }
+    return [pscustomobject]@{
+        State = "pending"
+        Status = $status
+        Conclusion = $conclusion
+        Url = $url
+        Message = "Pages deployment is $status."
+    }
+}
+
+function Invoke-PagesRunQuery {
+    param(
+        [Parameter(Mandatory = $true)][string]$Commit,
+        [Parameter(Mandatory = $true)][string]$WorkingDirectory,
+        [string]$GitHubCli = "gh"
+    )
+
+    $captureId = [guid]::NewGuid().ToString("N")
+    $stdoutPath = Join-Path $StateRoot ("{0}.pages-{1}.stdout" -f $RunId, $captureId)
+    $stderrPath = Join-Path $StateRoot ("{0}.pages-{1}.stderr" -f $RunId, $captureId)
+    Assert-StateChild $stdoutPath
+    Assert-StateChild $stderrPath
+    $exitCode = 1
+    $stdout = ""
+    $stderr = ""
+    $nativeErrorActionPreference = $ErrorActionPreference
+    $pushed = $false
+    try {
+        Push-Location $WorkingDirectory
+        $pushed = $true
+        $ErrorActionPreference = "Continue"
+        $global:LASTEXITCODE = 1
+        & $GitHubCli @(
+            "run", "list",
+            "--workflow", "pages.yml",
+            "--commit", $Commit,
+            "--limit", "1",
+            "--json", "status,conclusion,url"
+        ) 1> $stdoutPath 2> $stderrPath
+        $exitCode = $LASTEXITCODE
+    }
+    finally {
+        $ErrorActionPreference = $nativeErrorActionPreference
+        if ($pushed) {
+            Pop-Location
+        }
+        if (Test-Path -LiteralPath $stdoutPath -PathType Leaf) {
+            $stdout = "$(Get-Content -LiteralPath $stdoutPath -Raw)"
+        }
+        if (Test-Path -LiteralPath $stderrPath -PathType Leaf) {
+            $stderr = "$(Get-Content -LiteralPath $stderrPath -Raw)"
+        }
+        Remove-Item -LiteralPath $stdoutPath, $stderrPath -Force -ErrorAction SilentlyContinue
+    }
+    foreach ($line in @($stderr -split "`r?`n" | Where-Object { $_ })) {
+        Write-RunLog "Pages query stderr: $line"
+    }
+    return [pscustomobject]@{
+        ExitCode = $exitCode
+        Stdout = $stdout.Trim()
+    }
+}
+
 function Wait-PagesDeployment {
     param(
         [Parameter(Mandatory = $true)][string]$Commit,
-        [Parameter(Mandatory = $true)][string]$WorkingDirectory
+        [Parameter(Mandatory = $true)][string]$WorkingDirectory,
+        [ValidateRange(1, 1000)][int]$MaxAttempts = 40,
+        [ValidateRange(0, 3600)][int]$PollSeconds = 15,
+        [string]$GitHubCli = "gh"
     )
 
     if ($SkipPagesWait) {
         Write-RunLog "Pages verification skipped by option"
         return
     }
-    if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
+    if (-not (Get-Command $GitHubCli -ErrorAction SilentlyContinue)) {
         throw "GitHub CLI is required to verify Pages deployment."
     }
 
-    for ($attempt = 1; $attempt -le 40; $attempt++) {
-        $raw = @(Invoke-Captured `
-            -Label "query Pages run attempt $attempt" `
-            -FilePath "gh" `
-            -ArgumentList @(
-                "run", "list",
-                "--workflow", "pages.yml",
-                "--commit", $Commit,
-                "--limit", "1",
-                "--json", "status,conclusion,url"
-            ) `
-            -WorkingDirectory $WorkingDirectory)
-        $json = ($raw -join "`n").Trim()
-        if ($json) {
-            $runs = @($json | ConvertFrom-Json)
-            if ($runs.Count -gt 0) {
-                $run = $runs[0]
-                if ($run.status -eq "completed" -and $run.conclusion -eq "success") {
-                    Write-RunLog "Pages deployment succeeded url=$($run.url)"
-                    return
-                }
-                if ($run.status -eq "completed" -and $run.conclusion -ne "success") {
-                    throw "Pages deployment completed with $($run.conclusion)."
-                }
-            }
+    $lastMessage = "No Pages query has completed."
+    for ($attempt = 1; $attempt -le $MaxAttempts; $attempt++) {
+        Write-RunLog "start query Pages run attempt $attempt"
+        $query = Invoke-PagesRunQuery `
+            -Commit $Commit `
+            -WorkingDirectory $WorkingDirectory `
+            -GitHubCli $GitHubCli
+        Write-RunLog "finish query Pages run attempt $attempt exit=$($query.ExitCode)"
+        if ($query.ExitCode -ne 0) {
+            $lastMessage = "GitHub CLI query failed with exit code $($query.ExitCode)."
+            Write-RunLog "$lastMessage Retrying within the Pages timeout."
         }
-        Start-Sleep -Seconds 15
+        else {
+            $observation = ConvertFrom-PagesRunListJson -Json $query.Stdout
+            $lastMessage = $observation.Message
+            if ($observation.State -eq "success") {
+                Write-RunLog "Pages deployment succeeded url=$($observation.Url)"
+                return
+            }
+            if ($observation.State -eq "failure") {
+                throw $observation.Message
+            }
+            Write-RunLog "Pages deployment not ready state=$($observation.State) message=$lastMessage"
+        }
+        if ($attempt -lt $MaxAttempts -and $PollSeconds -gt 0) {
+            Start-Sleep -Seconds $PollSeconds
+        }
     }
-    throw "Timed out waiting for the Pages deployment."
+    throw "Timed out waiting for the Pages deployment. Last observation: $lastMessage"
+}
+
+if ($LoadFunctionsOnly) {
+    return
 }
 
 try {
@@ -706,7 +1236,20 @@ try {
     Remove-Item Env:CI -ErrorAction SilentlyContinue
     Remove-Item Env:GITHUB_ACTIONS -ErrorAction SilentlyContinue
 
-    if (Test-Bundle -Root $WorktreePath -Python $Python -TargetPeriod $Period -TargetDate $RunDate) {
+    $reportAlreadyValid = Test-Bundle `
+        -Root $WorktreePath `
+        -Python $Python `
+        -TargetPeriod $Period `
+        -TargetDate $RunDate
+    $historyAlreadyValid = $false
+    if ($reportAlreadyValid) {
+        $historyAlreadyValid = Test-PublicationHistory `
+            -Root $WorktreePath `
+            -Python $Python `
+            -TargetPeriod $Period `
+            -TargetDate $RunDate
+    }
+    if ($reportAlreadyValid -and $historyAlreadyValid) {
         $currentCommit = (Invoke-Captured `
             -Label "read current commit" `
             -FilePath "git" `
@@ -722,41 +1265,53 @@ try {
         return
     }
 
-    Invoke-Logged `
-        -Label "pytest" `
-        -FilePath $Python `
-        -ArgumentList @("-m", "pytest") `
-        -WorkingDirectory $WorktreePath | Out-Null
-    Invoke-Logged `
-        -Label "ruff check" `
-        -FilePath $Python `
-        -ArgumentList @("-m", "ruff", "check", ".") `
-        -WorkingDirectory $WorktreePath | Out-Null
-    Invoke-Logged `
-        -Label "ruff format check" `
-        -FilePath $Python `
-        -ArgumentList @("-m", "ruff", "format", "--check", ".") `
-        -WorkingDirectory $WorktreePath | Out-Null
+    if ($reportAlreadyValid) {
+        Write-RunLog "valid Codex report exists but publication history needs repair; skipping regeneration"
+    }
+    else {
+        Invoke-Logged `
+            -Label "pytest" `
+            -FilePath $Python `
+            -ArgumentList @("-m", "pytest") `
+            -WorkingDirectory $WorktreePath | Out-Null
+        Invoke-Logged `
+            -Label "ruff check" `
+            -FilePath $Python `
+            -ArgumentList @("-m", "ruff", "check", ".") `
+            -WorkingDirectory $WorktreePath | Out-Null
+        Invoke-Logged `
+            -Label "ruff format check" `
+            -FilePath $Python `
+            -ArgumentList @("-m", "ruff", "format", "--check", ".") `
+            -WorkingDirectory $WorktreePath | Out-Null
 
-    Invoke-Logged `
-        -Label "generate $Period report with local Codex" `
-        -FilePath $Python `
-        -ArgumentList @(
-            "-m", "github_hotspots.cli", "run",
-            "--period", $Period,
-            "--date", $RunDate,
-            "--editorial-backend", "codex-cli"
-        ) `
-        -WorkingDirectory $WorktreePath | Out-Null
+        Invoke-Logged `
+            -Label "generate $Period report with local Codex" `
+            -FilePath $Python `
+            -ArgumentList @(
+                "-m", "github_hotspots.cli", "run",
+                "--period", $Period,
+                "--date", $RunDate,
+                "--editorial-backend", "codex-cli"
+            ) `
+            -WorkingDirectory $WorktreePath | Out-Null
 
-    if (-not (Test-Bundle -Root $WorktreePath -Python $Python -TargetPeriod $Period -TargetDate $RunDate)) {
-        throw "Strict post-run bundle verification failed."
+        if (-not (Test-Bundle -Root $WorktreePath -Python $Python -TargetPeriod $Period -TargetDate $RunDate)) {
+            throw "Strict post-run bundle verification failed."
+        }
     }
     Invoke-PublicationPreflight `
         -SourceRoot $WorktreePath `
         -Python $Python `
         -TargetPeriod $Period `
         -TargetDate $RunDate
+    if (-not (Test-PublicationHistory `
+        -Root $WorktreePath `
+        -Python $Python `
+        -TargetPeriod $Period `
+        -TargetDate $RunDate)) {
+        throw "Publication history verification failed after preflight."
+    }
 
     $changedPaths = @(Get-ChangedPaths -Root $WorktreePath)
     if ($changedPaths.Count -eq 0) {
@@ -790,6 +1345,17 @@ try {
             "--date", $RunDate
         ) `
         -WorkingDirectory $RepoRoot) -join "").Trim()
+    $historyDate = [DateTime]::ParseExact(
+        $RunDate,
+        "yyyy-MM-dd",
+        [System.Globalization.CultureInfo]::InvariantCulture
+    )
+    $historyYear = if ($Period -eq "weekly") {
+        Get-IsoWeekYear -Date $historyDate
+    }
+    else {
+        $historyDate.Year
+    }
     $stageCandidates = @(
         "data/snapshots/$RunDate.json",
         "reports/$Period/$stem.md",
@@ -797,7 +1363,10 @@ try {
         "reports/$Period/$stem.xiaohongshu.md",
         "reports/$Period/$stem.ai.xiaohongshu.md",
         "reports/$Period/assets/$stem",
-        "reports/$Period/avatars/$stem"
+        "reports/$Period/avatars/$stem",
+        "publish/history/INDEX.json",
+        "publish/history/INDEX.md",
+        "publish/history/$Period/$historyYear/$stem"
     )
     foreach ($relativePath in $stageCandidates) {
         if (Test-Path -LiteralPath (Join-Path $WorktreePath $relativePath)) {
@@ -901,7 +1470,7 @@ try {
                 -AllowFailure | Out-Null
             throw "Remote changed overlapping generated files; retry from a fresh worktree."
         }
-        if (-not (Test-Bundle -Root $WorktreePath -Python $Python -TargetPeriod $Period -TargetDate $RunDate)) {
+        if (-not (Test-CompleteBundle -Root $WorktreePath -Python $Python -TargetPeriod $Period -TargetDate $RunDate)) {
             throw "Strict bundle verification failed after the report-only rebase."
         }
         Invoke-PublicationPreflight `
@@ -909,6 +1478,13 @@ try {
             -Python $Python `
             -TargetPeriod $Period `
             -TargetDate $RunDate
+        $postRebaseChanges = @(Get-ChangedPaths -Root $WorktreePath)
+        if ($postRebaseChanges.Count -gt 0) {
+            throw (
+                "Publication preflight changed generated history after rebase; " +
+                "retry from a fresh worktree before pushing."
+            )
+        }
     }
 
     $pushExit = Invoke-Logged `

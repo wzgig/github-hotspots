@@ -40,7 +40,7 @@ github_hotspots = ["templates/*.j2"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
-addopts = "-ra --cov=github_hotspots --cov-report=term-missing"
+addopts = "-ra --cov=github_hotspots --cov-report=term-missing --basetemp=.pytest_tmp"
 
 [tool.coverage.run]
 source = ["github_hotspots"]

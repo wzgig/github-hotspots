@@ -42,11 +42,20 @@ jobs:
           echo "run_date=${RUN_DATE}" >> "${GITHUB_OUTPUT}"
           if python src/github_hotspots/automation.py verify \
             --root . --period daily --date "${RUN_DATE}" --require-codex --quiet; then
-            echo "should_generate=false" >> "${GITHUB_OUTPUT}"
-            echo "skip_reason=Exact local Codex report already exists." >> "${GITHUB_OUTPUT}"
-            echo "A complete local Codex report already exists; fallback skipped."
+            if python src/github_hotspots/automation.py verify-history \
+              --root . --period daily --date "${RUN_DATE}" --quiet; then
+              echo "should_generate=false" >> "${GITHUB_OUTPUT}"
+              echo "should_backfill_history=false" >> "${GITHUB_OUTPUT}"
+              echo "skip_reason=Exact local Codex report and publication history already exist." >> "${GITHUB_OUTPUT}"
+              echo "A complete local Codex report and history already exist; fallback skipped."
+            else
+              echo "should_generate=false" >> "${GITHUB_OUTPUT}"
+              echo "should_backfill_history=true" >> "${GITHUB_OUTPUT}"
+              echo "The Codex report exists, but publication history needs repair."
+            fi
           else
             echo "should_generate=true" >> "${GITHUB_OUTPUT}"
+            echo "should_backfill_history=false" >> "${GITHUB_OUTPUT}"
             echo "No complete local Codex report exists; deterministic fallback will run."
           fi
 
@@ -57,13 +66,13 @@ jobs:
           sudo apt-get install --yes fonts-noto-cjk
 
       - name: Install project and development dependencies
-        if: steps.current.outputs.should_generate == 'true'
+        if: steps.current.outputs.should_generate == 'true' || steps.current.outputs.should_backfill_history == 'true'
         run: |
           python -m pip install --upgrade pip
           python -m pip install -e ".[dev]"
 
       - name: Run quality gates
-        if: steps.current.outputs.should_generate == 'true'
+        if: steps.current.outputs.should_generate == 'true' || steps.current.outputs.should_backfill_history == 'true'
         run: |
           python -m pytest
           python -m ruff check .
@@ -82,13 +91,23 @@ jobs:
             --root . --period daily --date "${{ steps.current.outputs.run_date }}"
 
       - name: Preflight local publication bundle
-        if: steps.current.outputs.should_generate == 'true'
+        if: steps.current.outputs.should_generate == 'true' || steps.current.outputs.should_backfill_history == 'true'
         run: |
+          args=()
+          if [[ "${{ steps.current.outputs.should_backfill_history }}" == "true" ]]; then
+            args+=(--history-only)
+          fi
           python -m github_hotspots.cli publish \
-            "reports/daily/${{ steps.current.outputs.run_date }}.json"
+            "reports/daily/${{ steps.current.outputs.run_date }}.json" "${args[@]}"
+
+      - name: Verify publication history
+        if: steps.current.outputs.should_generate == 'true' || steps.current.outputs.should_backfill_history == 'true'
+        run: |
+          python src/github_hotspots/automation.py verify-history \
+            --root . --period daily --date "${{ steps.current.outputs.run_date }}"
 
       - name: Commit generated daily artifacts safely
-        if: steps.current.outputs.should_generate == 'true'
+        if: steps.current.outputs.should_generate == 'true' || steps.current.outputs.should_backfill_history == 'true'
         id: publish
         env:
           PERIOD: daily
@@ -104,7 +123,10 @@ jobs:
             git worktree add --detach "${remote_dir}" origin/main >/dev/null
             if python -S src/github_hotspots/automation.py verify \
               --root "${remote_dir}" --period "${PERIOD}" --date "${RUN_DATE}" \
-              --require-codex --quiet; then
+              --require-codex --quiet && \
+              python -S src/github_hotspots/automation.py verify-history \
+                --root "${remote_dir}" --period "${PERIOD}" --date "${RUN_DATE}" \
+                --quiet; then
               status=0
             else
               status=1
@@ -115,6 +137,7 @@ jobs:
           }
 
           STEM="$(python src/github_hotspots/automation.py stem --period "${PERIOD}" --date "${RUN_DATE}")"
+          HISTORY_YEAR="${STEM:0:4}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           paths=(
@@ -125,6 +148,9 @@ jobs:
             "reports/${PERIOD}/${STEM}.ai.xiaohongshu.md"
             "reports/${PERIOD}/assets/${STEM}"
             "reports/${PERIOD}/avatars/${STEM}"
+            "publish/history/INDEX.json"
+            "publish/history/INDEX.md"
+            "publish/history/${PERIOD}/${HISTORY_YEAR}/${STEM}"
           )
           for path in "${paths[@]}"; do
             if [[ -e "${path}" ]]; then
@@ -146,7 +172,7 @@ jobs:
           fi
 
           git commit -m "chore(hotspots): update daily report for ${RUN_DATE}"
-          git fetch origin main
+          git fetch origin "+refs/heads/main:refs/remotes/origin/main"
           if ! git merge-base --is-ancestor origin/main HEAD; then
             if remote_bundle_valid; then
               echo "result=Remote already contains a valid local Codex report." >> "${GITHUB_OUTPUT}"
@@ -163,7 +189,7 @@ jobs:
             exit 0
           fi
 
-          git fetch origin main
+          git fetch origin "+refs/heads/main:refs/remotes/origin/main"
           if remote_bundle_valid; then
             echo "result=Remote won the push race with a valid local Codex report." >> "${GITHUB_OUTPUT}"
             echo "commit=$(git rev-parse origin/main)" >> "${GITHUB_OUTPUT}"
@@ -176,12 +202,13 @@ jobs:
         if: always()
         env:
           SHOULD_GENERATE: ${{ steps.current.outputs.should_generate }}
+          SHOULD_BACKFILL_HISTORY: ${{ steps.current.outputs.should_backfill_history }}
           SKIP_REASON: ${{ steps.current.outputs.skip_reason }}
           RUN_DATE: ${{ steps.current.outputs.run_date }}
           RESULT: ${{ steps.publish.outputs.result }}
           COMMIT: ${{ steps.publish.outputs.commit }}
         run: |
-          if [[ "${SHOULD_GENERATE}" == "false" ]]; then
+          if [[ "${SHOULD_GENERATE}" == "false" && "${SHOULD_BACKFILL_HISTORY}" != "true" ]]; then
             RESULT="Skipped: ${SKIP_REASON:-fallback not needed}"
             COMMIT="$(git rev-parse HEAD)"
           fi
@@ -190,13 +217,14 @@ jobs:
             echo "- Result: ${RESULT:-Generation did not complete.}"
             echo "- Run date: \`${RUN_DATE}\`"
             echo "- Report: \`reports/daily/${RUN_DATE}.json\`"
+            echo "- Publication history: \`publish/history/daily/${RUN_DATE:0:4}/${RUN_DATE}/\`"
             echo "- Commit: \`${COMMIT:-none}\`"
             echo "- Trigger: \`${GITHUB_EVENT_NAME}\`"
             echo "- Workflow run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
           } >> "${GITHUB_STEP_SUMMARY}"
 
       - name: Request Pages deployment for fallback output
-        if: steps.current.outputs.should_generate == 'true' && steps.publish.outcome == 'success'
+        if: (steps.current.outputs.should_generate == 'true' || steps.current.outputs.should_backfill_history == 'true') && steps.publish.outcome == 'success'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run pages.yml --ref main

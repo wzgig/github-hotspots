@@ -46,7 +46,7 @@ Markdown + JSON + 两份小红书审核稿
         ↓
 Signal Broadsheet 封面与逐项目海报
         ↓
-publish/current 可粘贴文案、审核稿与有序图片
+publish/current 最新发布工作台 + publish/history 可追溯薄历史
 ```
 
 ## 更新频率
@@ -62,11 +62,11 @@ publish/current 可粘贴文案、审核稿与有序图片
 
 三种运行环境的语义不同：
 
-| 模式 | 文案后端与失败语义 | `publish/current` |
+| 模式 | 文案后端与失败语义 | 发布工作台与历史 |
 | --- | --- | --- |
-| 普通本地 CLI | 配置默认使用 `deterministic`；显式添加 `--editorial-backend codex-cli` 才调用本机 Codex。Codex 失败时 CLI 可以保留确定性回退结果供人工检查 | 运行报告命令不会自动建立发布工作台；需要再执行 `python -m github_hotspots.cli publish <report.json>` |
-| 已注册的本地计划任务 | 强制使用 `codex-cli`，两榜任一回退都会使严格门禁失败，不提交该次本地结果；稍后的 Actions 再负责连续性兜底 | 成功推送或确认远端已有同日期完整 Codex 报告后，同步刷新本机对应周期目录 |
-| GitHub Actions | 始终使用 `deterministic`，不能读取个人电脑上的 Codex 登录态；只更新公开快照、报告、图片和 Pages | 不能直接写回一台离线电脑的本地目录；需要之后在本机拉取报告并执行 `publish` |
+| 普通本地 CLI | 配置默认使用 `deterministic`；显式添加 `--editorial-backend codex-cli` 才调用本机 Codex。Codex 失败时 CLI 可以保留确定性回退结果供人工检查 | 报告命令不会自动打包；执行 `publish <report.json>` 后同时刷新本机 `current` 并写入 Git 可跟踪的 `history` |
+| 已注册的本地计划任务 | 强制使用 `codex-cli`，两榜任一回退都会使严格门禁失败，不提交该次本地结果；稍后的 Actions 再负责连续性兜底 | 成功推送或确认远端已有同日期完整 Codex 报告与历史后，同步刷新本机对应周期目录；历史缺失时只修复历史，不重跑 Codex |
+| GitHub Actions | 始终使用 `deterministic`，不能读取个人电脑上的 Codex 登录态 | 提交公开快照、报告、图片和 `publish/history`；不能直接写回离线电脑的 `publish/current` |
 
 当前不默认启用小时级或“实时”提交。GitHub API 提供的是查询时刻的累计计数，本项目的增量又依赖按日期保存的快照；高频运行还需要重新设计同日多快照标识、并发写入、API 速率预算、历史保留和 Pages 发布节奏。在这些约束完成前，所谓“近实时”只能作为按需刷新，不应被描述为秒级 Star 事件流。
 
@@ -122,9 +122,18 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m github_hotspots.cli publish reports/weekly/2026-W28.json
 ```
 
-结果位于 `publish/current/`：日报和周报周期根目录各有共享的 `CHECKLIST.md` 与 `MANIFEST.json`，每个榜单帖子目录分别包含 `TITLE.txt`、`CAPTION.txt`、`REVIEW.md` 和按上传顺序编号的 `images/`。
+完整图片工作台位于 `publish/current/`：日报和周报周期根目录各有共享的 `CHECKLIST.md` 与 `MANIFEST.json`，每个榜单帖子目录分别包含 `TITLE.txt`、`CAPTION.txt`、`REVIEW.md` 和按上传顺序编号的 `images/`。同一次命令还会写入 [发布历史索引](publish/history/INDEX.md)。
 
-`current` 只保存每个周期最新生成的工作包。下一次日报或周报生成时，旧包会移动到 `publish/archive/<period>/<year>/<issue-stem>/`；尚未发布的 AI 配套帖可按期号从该目录找回。`current/` 与 `archive/` 都是本地、已忽略的运营文件夹，不进入 Git 历史；人工修改后的最终版本应自行备份。
+三层目录各有不同职责：`current` 是每个周期最新、带完整图片的上传工作台；被替换的本地包进入 `archive/<period>/<year>/<issue-stem>/`，用于保护人工修改；`history` 是提交 Git 的永久薄历史，保存每期标题、正文、审核稿、清单和图片哈希，但不重复复制 PNG，而是引用 `reports/.../assets/`。相同内容指纹重跑保持幂等，内容变化才产生新修订；旧日期默认不能覆盖较新的 `current`。
+
+回填旧期但不改变当前工作台，或重建历史索引：
+
+```powershell
+.\.venv\Scripts\python.exe -m github_hotspots.cli publish reports/daily/2026-07-12.json --history-only
+.\.venv\Scripts\python.exe -m github_hotspots.cli publish-history-index
+```
+
+只有明确需要把旧期重新放进工作台时才使用 `--activate-older`。`history` 保存的是自动生成基线；之后在 `current` 中做的人工改稿不会自动提交，仍应自行备份最终发布版。
 
 > [!TIP]
 > 公共仓库查询可以无 Token 运行，但更容易遇到 GitHub API 限流。本地可在环境变量 `GITHUB_TOKEN` 中放置只读 Token；GitHub Actions 会自动使用仓库自带的 Token。
@@ -146,9 +155,11 @@ reports/weekly/avatars/YYYY-Www/*.png
 publish/current/TODAY.md
 publish/current/daily/{01-comprehensive,02-ai}/
 publish/current/weekly/{01-comprehensive,02-ai}/
+publish/history/INDEX.{json,md}
+publish/history/<period>/<year>/<report-stem>/<revision>/
 ```
 
-本次图像升级的输出契约是：综合榜与 AI 榜分别生成 1 张封面和每个入榜项目 1 张 `1200×1600` PNG，集中放在当期报告的资产目录中，并用 Schema 2 `manifest.json` 记录生成器、样式、源报告、窗口、Top N 和每项资产。例如：
+默认图像输出契约是：综合榜与 AI 榜分别生成 1 张封面和每个入榜项目 1 张 `1200×1600` PNG；配置也支持 `600×800` 至 `2400×3200` 范围内的其他合法 3:4 尺寸。图片集中放在当期报告的资产目录中，并用 Schema 2 `manifest.json` 记录实际尺寸、生成器、样式、源报告、窗口、Top N 和每项资产。例如：
 
 ```text
 reports/daily/assets/YYYY-MM-DD/
@@ -174,7 +185,7 @@ reports/weekly/assets/YYYY-Www/
 
 报告 JSON 的顶层 `repositories` 继续表示综合主榜，以兼容现有消费者；`boards.comprehensive.repositories` 和 `boards.ai.repositories` 分别保存两榜的独立排名。
 
-仓库已包含真实运行样例：[2026-07-12 日榜](reports/daily/2026-07-12.md)和 [2026-W28 周榜](reports/weekly/2026-W28.md)。
+仓库已包含真实运行样例：[2026-07-12 日榜](reports/daily/2026-07-12.md)、[2026-W28 周榜](reports/weekly/2026-W28.md)与[可查找的发布历史](publish/history/INDEX.md)。
 
 ## 数据口径
 
@@ -200,14 +211,14 @@ reports/weekly/assets/YYYY-Www/
 - `outputs`：快照和报告目录。
 - `editorial`：确定性文案或本地 `codex-cli` Prompt 4.1 / Schema 4.0 证据编辑后端、超时、提示词和 Schema；默认 `deterministic`，CI 不启用本地 Codex。
 - `posters`：确定性海报开关与 3:4 尺寸；本次升级约定为 `1200×1600`。
-- `publication`：首发日期、`publish` 根目录、标题/正文长度门禁和硬链接策略；2026-07-12 对应 `D001`、`W001`。
+- `publication`：首发日期、`publish` 根目录与标题/正文长度门禁；2026-07-12 对应 `D001`、`W001`。
 
 ## GitHub Actions
 
 - [.github/workflows/daily.yml](.github/workflows/daily.yml)：每日北京时间 09:17 的确定性兜底。
 - [.github/workflows/weekly.yml](.github/workflows/weekly.yml)：每周日北京时间 10:27 的确定性兜底。
 
-两个工作流都支持在 GitHub 仓库的 **Actions** 页面通过 **Run workflow** 手动触发。工作流会安装项目、运行测试、生成产物，然后只提交 `data/snapshots` 和对应报告目录。需要在仓库设置中允许 Actions 对内容进行写入。
+两个工作流都支持在 GitHub 仓库的 **Actions** 页面通过 **Run workflow** 手动触发。工作流会安装项目、运行测试、生成产物，并只提交 `data/snapshots`、对应报告目录和 `publish/history` 薄历史。报告存在但历史缺失、索引不一致或同指纹修订损坏时，工作流只重建历史，不覆盖已经完成的 Codex 文案。需要在仓库设置中允许 Actions 对内容进行写入。
 
 ## 提示词与产品说明
 

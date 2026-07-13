@@ -6,6 +6,7 @@ import math
 from collections.abc import Iterable, Mapping, Sequence
 from dataclasses import dataclass
 from datetime import date, datetime
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from .github_client import deduplicate_repositories
 from .models import RankedRepository, Repository, RepositorySnapshot
@@ -37,6 +38,7 @@ def rank_repositories(
     period: str = "daily",
     weights: Mapping[str, float] | None = None,
     as_of: date | None = None,
+    timezone: str | None = None,
 ) -> list[RankedRepository]:
     """Rank repositories with a transparent weighted-percentile formula.
 
@@ -61,6 +63,7 @@ def rank_repositories(
     selected_baseline = baseline_1d if period == "daily" else baseline_7d
     baseline_index = _BaselineIndex(selected_baseline or [])
     run_date = as_of or date.today()
+    report_timezone = _report_timezone(timezone)
     signals = [
         _growth_signal(repository, baseline_index, period, run_date)
         for repository in repositories_list
@@ -88,7 +91,12 @@ def rank_repositories(
     }
     direct_signals = {
         "activity": [
-            _activity_score(signal.repository.pushed_at, window_days, run_date)
+            _activity_score(
+                signal.repository.pushed_at,
+                window_days,
+                run_date,
+                report_timezone,
+            )
             for signal in signals
         ],
         "trending_signal": [_trending_score(signal.repository, period) for signal in signals],
@@ -210,8 +218,13 @@ def _growth_signal(
     )
 
 
-def _activity_score(pushed_at: str | None, window_days: int, as_of: date) -> float:
-    pushed_on = _parse_date(pushed_at)
+def _activity_score(
+    pushed_at: str | None,
+    window_days: int,
+    as_of: date,
+    timezone: ZoneInfo | None = None,
+) -> float:
+    pushed_on = _parse_date(pushed_at, timezone)
     if pushed_on is None:
         return 0.0
     days_since_push = max((as_of - pushed_on).days, 0)
@@ -237,13 +250,28 @@ def _historical_average_estimate(
     return estimated_stars, estimated_forks
 
 
-def _parse_date(value: str | None) -> date | None:
+def _parse_date(value: str | None, timezone: ZoneInfo | None = None) -> date | None:
     if not value:
         return None
     try:
-        return datetime.fromisoformat(value.replace("Z", "+00:00")).date()
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
     except ValueError:
         return None
+    if timezone is not None:
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone)
+        else:
+            parsed = parsed.astimezone(timezone)
+    return parsed.date()
+
+
+def _report_timezone(value: str | None) -> ZoneInfo | None:
+    if value is None:
+        return None
+    try:
+        return ZoneInfo(value)
+    except (TypeError, ZoneInfoNotFoundError) as exc:
+        raise ValueError(f"unknown report timezone: {value}") from exc
 
 
 def _normalise_weights(

@@ -365,3 +365,58 @@
 ### 线上状态
 
 - 当前条目记录提交前的本地完成状态；提交 hash、Actions run、Pages 部署和 Windows 计划任务实装结果将在推送后核验，并在本次用户交付说明中给出。
+
+## 2026-07-13 — 发布历史、防覆盖机制与自动化可靠性修复
+
+### 目的
+
+解决 `publish/current` 后一天覆盖前一天、旧期只能依赖本机忽略目录找回的问题，并主动审计日报/周报自动化中的潜在数据、并发、跨平台和发布故障。目标是让每期生成基线可以在 GitHub 永久查找，同时继续保留本机最新完整图片工作台和人工发布边界。
+
+### 发布历史与本机工作台
+
+- 新增 Git 跟踪的薄历史：`publish/history/<period>/<year>/<report-stem>/<fingerprint前12位>/`。每个修订保存 Manifest、Checklist、两榜 Title/Caption/Review，不重复复制 PNG；图片通过 `reports/.../assets/` 路径、SHA-256 和尺寸核验。
+- 新增 `publish/history/INDEX.json` 与可点击的 `INDEX.md`；回填 `2026-07-11` 预览日报、`D001`、`D002` 和 `W001`，共 4 个日期/周期记录，history 内 PNG 数为 0。
+- `publish/current` 继续作为每个周期最新、带完整图片的上传工作台；`publish/archive` 继续保护本机人工修改；`publish/history` 作为公开、可版本化的自动生成基线。三者职责不再混用。
+- 相同内容指纹重复执行保持幂等，不再产生 `r02/r03/...` 重复 archive 或 history；同一期内容变化时才新增修订。
+- 同指纹 history 修订被改坏时先在临时目录重建并完整验证，再用可回滚 rename 替换损坏目录；不会因“目录已经存在”永久卡住自动修复。
+- 损坏 history 修复后的旧目录隔离到 Git 忽略的 `publish/archive/history-recovery/`；若 Windows 文件锁导致隔离副本暂时无法删除，已验证的新 revision 仍保持成功，不会污染历史索引或让后续无人值守任务持续失败。
+- 默认拒绝旧日期替换较新的 `current`；只回填历史使用 `--history-only`，明确需要把旧期放回工作台时才使用 `--activate-older`。新增 `publish-history-index` 重建命令。
+- current 快速复用不再只看 Manifest 指纹，而会核验 Checklist、Title、Caption、Review、全部 PNG 的哈希和尺寸；文件被改动或缺失时归档旧包并原子重建，激活失败会恢复原目录。
+- 发布工作台图片改为强制独立副本，不再使用 NTFS 硬链接；人工裁剪或标注 `current` 图片不会污染 `reports` 源图、Pages 资产和 history 哈希。
+
+### 自动化与数据 Bug 修复
+
+- 修复 Windows PowerShell 5.1 将合法 Pages `[]` 查询结果误判并访问空对象 `status` 的问题；`gh` stdout/stderr 分离，临时查询失败在总超时内重试，失败/成功/缺字段状态均安全解析。
+- 将本地 runner 与 daily/weekly Actions 的 `git fetch` 改为显式更新 `refs/remotes/origin/main`，立即冻结并验证完整远端 SHA，避免读取陈旧跟踪引用。
+- 本地 runner 与 Actions 均暂存 history 索引和当期修订；报告完整但 history 缺失或损坏时只修复 history，不重新调用 Codex，也不以 deterministic 文案覆盖现有 Codex 报告。新增标准库 `verify-history` 门禁：重新计算完整内容指纹、全部文本/图片哈希与尺寸，并从所有 revision Manifest 重建期望 INDEX.json/INDEX.md 后逐结构比较；该门禁已纳入 skip、远端胜出和 push-race 判断。
+- rebase 后的 publication preflight 若再次改动 history index，会中止并从新 worktree 重试，禁止带脏树报告 push 成功。
+- 文本指纹统一按 LF 规范化，并新增 `.gitattributes`，消除 Windows CRLF 与 Actions/Linux LF 导致的伪修订、哈希失配和 current 误损坏。
+- 快照存储加入 Windows/POSIX 跨进程锁、锁内重读合并、唯一临时文件、`fsync`、原子替换和失败清理，避免日报/周报并发覆盖同日仓库数据。
+- GitHub `pushed_at` 先转换到配置时区再计算活跃日期，修复北京时间凌晨项目被低估一天的问题。
+- 海报尺寸契约统一为 `600×800` 至 `2400×3200` 范围内的合法 3:4 尺寸；publish 与 Pages 不再硬编码 `1200×1600`，同时继续以该尺寸作为默认值。
+- 测试临时目录固定到仓库忽略的 `.pytest_tmp/`，绕过本机全局 pytest 死 reparse point 导致的 WinError 5 清理失败。
+
+### 文件与模块
+
+- 发布核心：`src/github_hotspots/{publish_bundle,cli,automation}.py`、`publish/history/**`、`.gitattributes`、`.gitignore`。
+- 自动化：`scripts/automation/run_scheduled.ps1`、`.github/workflows/{daily,weekly}.yml`。
+- 数据正确性：`src/github_hotspots/{snapshot,ranking,pipeline,config}.py`、`scripts/build_site.py`、`site/data/{site-data.json,site-data.js}`。
+- 测试：`tests/test_{automation,powershell_automation,publish_bundle,cli,config,ranking,snapshot,site_builder}.py`。
+- 文档：`README.md`、`publish/README.md`、`docs/{AUTOMATION,LOCAL_CODEX_API,OPERATIONS,PRODUCT_SPEC,PROJECT_PLAN,PUBLISHING_PLAYBOOK}.md`。
+
+### 验证
+
+- `pytest`：260 项全部通过，总覆盖率 81%；仓库内 `.pytest_tmp` 使 AGENTS 规定的原始命令可直接成功退出；新增回归测试覆盖 Windows 锁定 history recovery 隔离目录的场景。
+- PowerShell 5.1 行为测试：Pages 查询重试、损坏 current 修复、Checklist 哈希、旧期防降级、无效 Manifest recovery archive、激活失败回滚等 8 项通过；runner 语法解析通过。
+- `ruff check .`、`ruff format --check .`、daily/weekly/pages YAML 解析、`node --check site/app.js`、`git diff --check`：通过。
+- `verify-history`：`2026-07-11`、`2026-07-12`、`2026-07-13` 日报与 `2026-W28` 周报全部通过；历史索引 4 项，全部有可点击的综合榜/AI 榜文案入口，无 PNG 重复提交。
+- Pages 数据已从仓库内旧的 D001 重建到最新 `D002 / 2026-07-13`，日榜综合 3 / AI 3、周榜综合 7 / AI 7。
+- 本机 current 实测保持日报 `D002 / 2026-07-13`、周报 `W001 / 2026-W28`；相同输入连续发布不再新增 archive，尝试用 `D001` 覆盖 `D002` 会被拒绝。
+- Windows 计划任务已重新注册为 `Ready`：日报下一次 `2026-07-14 07:30`，周报下一次 `2026-07-19 08:45`。
+
+### 已知限制
+
+- `publish/history` 保存自动生成基线，不会自动捕获之后在 `publish/current` 中进行的人工改稿或平台链接；最终发布版仍需另行运营记录。
+- 薄历史不复制 PNG。同日期重渲染会更新 `reports/.../assets/<stem>`；旧图片字节仍可从对应 Git 提交恢复，但 history Manifest 当前没有单独记录图片所属提交。长期可改为内容寻址资产路径或记录 Git blob/commit。
+- Pages 当前继续展示报告与海报，不直接渲染发布文案历史；公开历史入口是 GitHub 仓库中的 `publish/history/INDEX.md`。
+- 小红书仍为人工审核、人工发布；本次没有增加自动登录、发帖、评论或账号操作。

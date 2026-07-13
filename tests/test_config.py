@@ -59,7 +59,6 @@ def test_project_configuration_loads_with_expected_cadence() -> None:
     assert publication.weekly_first_issue_date.isoformat() == "2026-07-12"
     assert publication.title_max_chars == 30
     assert publication.caption_max_chars == 1000
-    assert publication.prefer_hardlinks is True
 
 
 def test_configuration_rejects_unknown_period() -> None:
@@ -101,7 +100,6 @@ def test_configuration_requires_mapping_codex_cli_options(tmp_path: Path) -> Non
         ("boards", "ai", "enabled"),
         ("editorial", "allow_in_ci"),
         ("posters", "enabled"),
-        ("publication", "prefer_hardlinks"),
         ("sources", "search", "enabled"),
         ("filters", "require_description"),
     ],
@@ -122,6 +120,17 @@ def test_configuration_caps_poster_dimensions(tmp_path: Path) -> None:
 
     with pytest.raises(ConfigurationError, match="must not exceed 2400x3200"):
         load_settings(_write_config(tmp_path, document))
+
+
+def test_configuration_accepts_non_default_legal_poster_dimensions(tmp_path: Path) -> None:
+    document = _config_document()
+    posters = document["posters"]
+    assert isinstance(posters, dict)
+    posters.update({"width": 600, "height": 800})
+
+    settings = load_settings(_write_config(tmp_path, document))
+
+    assert (settings.poster_settings().width, settings.poster_settings().height) == (600, 800)
 
 
 @pytest.mark.parametrize(

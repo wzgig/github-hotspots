@@ -1,8 +1,13 @@
 from __future__ import annotations
 
 import json
+import threading
 from datetime import date
+from pathlib import Path
 
+import pytest
+
+from github_hotspots import snapshot as snapshot_module
 from github_hotspots.models import Repository, RepositorySnapshot
 from github_hotspots.snapshot import SnapshotStore
 
@@ -116,3 +121,85 @@ def test_load_malformed_json_degrades_to_empty_list(tmp_path) -> None:
     # Assert
     assert loaded == []
     assert store.load_baseline("2026-07-11", 1) == []
+
+
+def test_concurrent_saves_reload_and_merge_inside_the_store_lock(tmp_path, monkeypatch) -> None:
+    # Arrange: pause the first writer while it still owns the store lock.
+    store = SnapshotStore(tmp_path / "snapshots")
+    original_write = snapshot_module._atomic_write_snapshot
+    first_write_entered = threading.Event()
+    release_first_write = threading.Event()
+    second_save_finished = threading.Event()
+    call_guard = threading.Lock()
+    write_calls = 0
+    errors: list[BaseException] = []
+
+    def delayed_first_write(path: Path, payload: dict[str, object]) -> None:
+        nonlocal write_calls
+        with call_guard:
+            write_calls += 1
+            is_first = write_calls == 1
+        if is_first:
+            first_write_entered.set()
+            assert release_first_write.wait(5)
+        original_write(path, payload)
+
+    def save(repository: Repository, finished: threading.Event | None = None) -> None:
+        try:
+            store.save("2026-07-11", [repository])
+        except BaseException as exc:  # Surface worker failures in the main test thread.
+            errors.append(exc)
+        finally:
+            if finished is not None:
+                finished.set()
+
+    monkeypatch.setattr(snapshot_module, "_atomic_write_snapshot", delayed_first_write)
+    first = threading.Thread(target=save, args=(Repository(full_name="acme/first", stars=1),))
+    second = threading.Thread(
+        target=save,
+        args=(Repository(full_name="acme/second", stars=2), second_save_finished),
+    )
+
+    # Act
+    first.start()
+    assert first_write_entered.wait(5)
+    second.start()
+    assert not second_save_finished.wait(0.2)
+    release_first_write.set()
+    first.join(5)
+    second.join(5)
+
+    # Assert
+    assert not first.is_alive()
+    assert not second.is_alive()
+    assert errors == []
+    assert {item.full_name for item in store.load("2026-07-11")} == {
+        "acme/first",
+        "acme/second",
+    }
+
+
+def test_failed_snapshot_replace_cleans_each_unique_temporary_file(tmp_path, monkeypatch) -> None:
+    # Arrange
+    store = SnapshotStore(tmp_path / "snapshots")
+    target = store.path_for("2026-07-11")
+    original_replace = Path.replace
+    temporary_paths: list[Path] = []
+
+    def fail_snapshot_replace(path: Path, destination: Path) -> Path:
+        if Path(destination) == target and path.suffix == ".tmp":
+            temporary_paths.append(path)
+            raise OSError("simulated replace failure")
+        return original_replace(path, destination)
+
+    monkeypatch.setattr(Path, "replace", fail_snapshot_replace)
+
+    # Act / Assert
+    for stars in (1, 2):
+        with pytest.raises(OSError, match="simulated replace failure"):
+            store.save("2026-07-11", [Repository(full_name="acme/failure", stars=stars)])
+
+    assert len(temporary_paths) == 2
+    assert temporary_paths[0] != temporary_paths[1]
+    assert all(not path.exists() for path in temporary_paths)
+    assert list(target.parent.glob(f".{target.name}.*.tmp")) == []

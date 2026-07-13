@@ -26,9 +26,9 @@
 
 | 模式 | Codex 使用方式 | 失败与产物语义 |
 | --- | --- | --- |
-| 普通本地 CLI | 默认 `deterministic`；只有显式传入 `--editorial-backend codex-cli` 才复用当前用户的 Codex CLI | Codex 不可用或输出不合格时可生成确定性回退报告，供人工审核；发布工作台需另行执行 `publish` 命令 |
-| 已注册的本地计划任务 | 每天 07:30 / 周日 08:45 强制选择 `codex-cli`，不读取其 endpoint、provider、model 或密钥 | 两榜必须均为 Codex 且无回退，否则不提交、不推送；成功后同步本机 `publish/current/<period>` |
-| GitHub Actions | 固定使用 `deterministic`，无法访问本机 Codex 会话 | 在没有同日期完整 Codex 报告时更新公开快照、报告、图片和 Pages；不能直接更新离线电脑上的 `publish/current` |
+| 普通本地 CLI | 默认 `deterministic`；只有显式传入 `--editorial-backend codex-cli` 才复用当前用户的 Codex CLI | Codex 不可用或输出不合格时可生成确定性回退报告；另行执行 `publish` 会刷新 `current` 并写入 `history` |
+| 已注册的本地计划任务 | 每天 07:30 / 周日 08:45 强制选择 `codex-cli`，不读取其 endpoint、provider、model 或密钥 | 两榜必须均为 Codex 且无回退；成功后提交薄历史并同步本机 `publish/current/<period>`，history 缺失时不重跑 Codex |
+| GitHub Actions | 固定使用 `deterministic`，无法访问本机 Codex 会话 | 更新公开快照、报告、图片、Pages 数据与 `publish/history`；不能直接更新离线电脑上的 `publish/current` |
 
 ## Codex 在流水线中的位置
 
@@ -41,7 +41,7 @@
 6. 采集并清洗 README / metadata，生成可用 evidence IDs
 7. 可选 Codex 按整榜进行证据化中文编辑
 8. Schema 4.0、逐字段证据、README SHA、许可证和冻结事实回查
-9. 报告、Signal Broadsheet V4 海报与 `publish/current` 人工发布包
+9. 报告、Signal Broadsheet V4 海报、`publish/current` 人工发布包与 `publish/history` 薄历史
 ```
 
 Codex 可以完成：
@@ -182,7 +182,7 @@ python -m github_hotspots.cli rerender reports/daily/2026-07-12.json `
 
 ## GitHub Actions 与凭据边界
 
-Windows 本地计划任务在每天 07:30 和周日 08:45 调用当前用户的 Codex CLI；Actions 在 09:17 和周日 10:27 使用 `deterministic` 兜底，并在检测到同日期完整 Codex 报告时跳过。GitHub-hosted runner 无法访问用户电脑上的 Codex 登录态，项目也不得通过脚本上传本机配置、认证文件、环境变量或当前会话信息。Actions 生成的公开报告可以在之后被本机拉取并手动打包，但 Actions 本身不能把 `publish/current` 写回用户电脑。
+Windows 本地计划任务在每天 07:30 和周日 08:45 调用当前用户的 Codex CLI；Actions 在 09:17 和周日 10:27 使用 `deterministic` 兜底，并在同日期完整 Codex 报告与 publication history 都存在时跳过。若报告完整但 history 缺失，只修复 history，不用确定性文案覆盖 Codex 报告。GitHub-hosted runner 无法访问用户电脑上的 Codex 登录态，项目也不得通过脚本上传本机配置、认证文件、环境变量或当前会话信息。Actions 会提交公开薄历史，但不能把带完整图片的 `publish/current` 写回用户电脑。
 
 以下内容不得进入 Git、日志、报告、Pages、测试 fixture 或 artifact：
 
@@ -204,7 +204,7 @@ Windows 本地计划任务在每天 07:30 和周日 08:45 调用当前用户的 
 - [x] Owner 头像经过域名、下载、像素、格式、路径和重新编码门禁；失败时安全降级。
 - [x] `rerender --refresh-evidence --editorial-backend codex-cli` 可在冻结排名上刷新证据并重建发布物。
 - [x] GitHub Actions 默认不调用 Codex，不复制或加载本机凭据。
-- [x] 本地计划任务脚本支持独立 worktree、Codex 无回退门禁、安全 push，并同步刷新本地 `publish/current`；Windows 任务注册属于显式部署步骤，不会因安装或测试自动发生。
+- [x] 本地计划任务脚本支持独立 worktree、Codex 无回退门禁、安全 push、history 自愈与本地 `publish/current` 同步；Windows 任务注册属于显式部署步骤，不会因安装或测试自动发生。
 
 ## 官方参考
 

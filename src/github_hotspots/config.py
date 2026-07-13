@@ -10,6 +10,8 @@ from typing import Any
 
 import yaml
 
+MIN_POSTER_WIDTH = 600
+MIN_POSTER_HEIGHT = 800
 MAX_POSTER_WIDTH = 2400
 MAX_POSTER_HEIGHT = 3200
 
@@ -81,7 +83,6 @@ class PublicationSettings:
     weekly_first_issue_date: date
     title_max_chars: int
     caption_max_chars: int
-    prefer_hardlinks: bool
 
     def first_issue_date(self, period: str) -> date:
         """Return the first public issue date for one cadence."""
@@ -191,16 +192,12 @@ class Settings:
         """Return validated poster dimensions and enablement."""
 
         raw = _mapping(self.posters, "posters")
-        width = int(raw.get("width", 1200))
-        height = int(raw.get("height", 1600))
-        if width < 600 or height < 800 or width * 4 != height * 3:
-            raise ConfigurationError(
-                "posters dimensions must use a 3:4 ratio and be at least 600x800"
-            )
-        if width > MAX_POSTER_WIDTH or height > MAX_POSTER_HEIGHT:
-            raise ConfigurationError(
-                f"posters dimensions must not exceed {MAX_POSTER_WIDTH}x{MAX_POSTER_HEIGHT}"
-            )
+        try:
+            width = int(raw.get("width", 1200))
+            height = int(raw.get("height", 1600))
+        except (TypeError, ValueError) as exc:
+            raise ConfigurationError("posters dimensions must be integers") from exc
+        width, height = validate_poster_dimensions(width, height)
         return PosterSettings(
             enabled=_boolean(raw.get("enabled", False), "posters.enabled"),
             width=width,
@@ -235,9 +232,6 @@ class Settings:
             weekly_first_issue_date=weekly_first_issue_date,
             title_max_chars=title_max_chars,
             caption_max_chars=caption_max_chars,
-            prefer_hardlinks=_boolean(
-                raw.get("prefer_hardlinks", True), "publication.prefer_hardlinks"
-            ),
         )
 
     def resolve_path(self, value: str | Path) -> Path:
@@ -322,6 +316,25 @@ def load_settings(path: str | Path = "config/hotspots.yaml") -> Settings:
     if weights and abs(sum(weights.values()) - 1.0) > 1e-6:
         raise ConfigurationError("ranking.weights must add up to 1.0")
     return settings
+
+
+def validate_poster_dimensions(width: int, height: int) -> tuple[int, int]:
+    """Return one legal 3:4 poster size shared by generators and consumers."""
+
+    if (
+        isinstance(width, bool)
+        or isinstance(height, bool)
+        or not isinstance(width, int)
+        or not isinstance(height, int)
+    ):
+        raise ConfigurationError("posters dimensions must be integers")
+    if width < MIN_POSTER_WIDTH or height < MIN_POSTER_HEIGHT or width * 4 != height * 3:
+        raise ConfigurationError("posters dimensions must use a 3:4 ratio and be at least 600x800")
+    if width > MAX_POSTER_WIDTH or height > MAX_POSTER_HEIGHT:
+        raise ConfigurationError(
+            f"posters dimensions must not exceed {MAX_POSTER_WIDTH}x{MAX_POSTER_HEIGHT}"
+        )
+    return width, height
 
 
 def _string_tuple(value: object) -> tuple[str, ...]:

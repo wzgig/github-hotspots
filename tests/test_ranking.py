@@ -128,6 +128,45 @@ def test_weekly_ranking_uses_seven_day_baseline_and_weekly_signal() -> None:
     assert by_name["trending"].component_percentiles["trending_signal"] == 43.07
 
 
+def test_activity_score_uses_report_timezone_before_taking_the_date() -> None:
+    # Arrange: these timestamps describe the same instant, shortly after midnight in Shanghai.
+    repositories = [
+        Repository(
+            full_name="acme/utc-timestamp",
+            stars=100,
+            daily_stars=10,
+            pushed_at="2026-07-12T23:30:00Z",
+        ),
+        Repository(
+            full_name="acme/local-timestamp",
+            stars=100,
+            daily_stars=10,
+            pushed_at="2026-07-13T07:30:00+08:00",
+        ),
+    ]
+
+    # Act
+    ranked = rank_repositories(
+        repositories,
+        period="daily",
+        as_of=date(2026, 7, 13),
+        timezone="Asia/Shanghai",
+    )
+
+    # Assert
+    activity = {item.repository.name: item.component_percentiles["activity"] for item in ranked}
+    assert activity == {"local-timestamp": 100.0, "utc-timestamp": 100.0}
+
+
+def test_rank_repositories_rejects_unknown_report_timezone() -> None:
+    with pytest.raises(ValueError, match="unknown report timezone"):
+        rank_repositories(
+            [Repository(full_name="acme/timezone", daily_stars=1)],
+            period="daily",
+            timezone="Mars/Olympus_Mons",
+        )
+
+
 def test_percentile_ranks_are_tie_aware_and_explainable() -> None:
     # Arrange
     values = [1, 2, 2, 4]

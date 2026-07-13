@@ -11,7 +11,7 @@ import typer
 
 from .config import ConfigurationError, load_settings
 from .pipeline import run_pipeline
-from .publish_bundle import build_publish_bundle
+from .publish_bundle import build_publish_bundle, refresh_history_index
 from .rerender import rerender_report
 
 app = typer.Typer(
@@ -187,24 +187,73 @@ def publish_command(
         Path,
         typer.Option("--config", help="Path to the YAML configuration"),
     ] = Path("config/hotspots.yaml"),
+    history_only: Annotated[
+        bool,
+        typer.Option(
+            "--history-only",
+            help="Write immutable thin history without changing publish/current",
+        ),
+    ] = False,
+    activate_older: Annotated[
+        bool,
+        typer.Option(
+            "--activate-older",
+            help="Explicitly allow an older report to replace the current publication folder",
+        ),
+    ] = False,
 ) -> None:
     """Prepare a local, human-reviewed Xiaohongshu publication folder."""
 
     try:
+        if history_only and activate_older:
+            raise ValueError("--activate-older cannot be combined with --history-only")
         settings = load_settings(config)
-        artifacts = build_publish_bundle(settings, report)
+        artifacts = build_publish_bundle(
+            settings,
+            report,
+            activate_current=not history_only,
+            allow_older_current=activate_older,
+        )
     except (ConfigurationError, RuntimeError, ValueError) as exc:
         typer.echo(f"Error: {exc}", err=True)
         raise typer.Exit(code=1) from exc
 
-    typer.echo(f"Prepared {artifacts.issue_code} {artifacts.period} publication bundle.")
-    typer.echo(f"Current folder: {artifacts.current_dir}")
-    typer.echo(f"Manifest: {artifacts.manifest}")
-    typer.echo(f"Checklist: {artifacts.checklist}")
-    typer.echo(f"Board packages: {len(artifacts.board_dirs)}")
-    typer.echo(f"Today index: {artifacts.today}")
+    typer.echo(
+        f"Prepared {artifacts.issue_code} {artifacts.period} publication bundle and history."
+    )
+    typer.echo(f"History revision: {artifacts.history_dir}")
+    typer.echo(f"History manifest: {artifacts.history_manifest}")
+    typer.echo(f"History JSON index: {artifacts.history_index_json}")
+    typer.echo(f"History Markdown index: {artifacts.history_index_markdown}")
+    if artifacts.activated_current:
+        typer.echo(f"Current folder: {artifacts.current_dir}")
+        typer.echo(f"Manifest: {artifacts.manifest}")
+        typer.echo(f"Checklist: {artifacts.checklist}")
+        typer.echo(f"Board packages: {len(artifacts.board_dirs)}")
+        typer.echo(f"Today index: {artifacts.today}")
+    else:
+        typer.echo("History-only mode: publish/current was not changed.")
     if artifacts.archived_dir is not None:
         typer.echo(f"Archived previous bundle: {artifacts.archived_dir}")
+
+
+@app.command("publish-history-index")
+def publish_history_index_command(
+    config: Annotated[
+        Path,
+        typer.Option("--config", help="Path to the YAML configuration"),
+    ] = Path("config/hotspots.yaml"),
+) -> None:
+    """Rebuild publication history indexes from immutable revision manifests."""
+
+    try:
+        settings = load_settings(config)
+        json_path, markdown_path = refresh_history_index(settings.publication_settings().root_dir)
+    except (ConfigurationError, RuntimeError, ValueError) as exc:
+        typer.echo(f"Error: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"History JSON index: {json_path}")
+    typer.echo(f"History Markdown index: {markdown_path}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "e25f1796fbe7b4303a1834db436decafb643c6d3fbe8f8e234a7eb432ba76fb1",
+  "checklist_sha256": "52f80a7ee991d2bbb4d8797e898bed8f9e62e5a324610cfddd1c21d26b2fbcee",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-07-13",
+  "generated_at": "2026-07-13T13:26:19.952123+08:00",
+  "issue": {
+    "number": 2,
+    "code": "D002",
+    "stem": "D002-2026-07-13",
+    "label": "第2期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-07-13.json",
+    "report_sha256": "c6aa37c95999a63a2176b9e5f56e90fae6e8b335b35dd4cd647b9a72a4218665",
+    "poster_manifest": "reports/daily/assets/2026-07-13/manifest.json",
+    "poster_manifest_sha256": "54e23263296cee9defdc88df6e136c37fa2a1a68f32c8b9030a500779ed633ed",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D002-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 21,
+      "title_sha256": "8d04e4d948b8a3fc461fca63412b93ad50b64723c0b48d59b8235b56246e1686",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 377,
+      "caption_sha256": "a365c29bd9ab5d96b98f08c163153dfa50e6977449b8f4adc4797453668af369",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "3535ec99840013c7c44d0b8fc6f5c2d6efe9909ca9ed2a786dfbf36bdda75c6b",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.cover.png",
+          "sha256": "d3014112c136efc5947d397847e25fd49d1ab4fe833af19ad9ac13c81adec5ea",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.01.nousresearch--hermes-agent.png",
+          "sha256": "1b3b5beda7a21adf24f4d8282f98f13989c448a877c6e14828e6f542430e527e",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/02-rank-01-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.02.shubhamsaboo--awesome-llm-apps.png",
+          "sha256": "d668e4467e93083c331562bf9699dd85955b3e4fe975725d3eed9682ca986d72",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "publication_path": "images/03-rank-02-shubhamsaboo-awesome-llm-apps.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.03.hkuds--vibe-trading.png",
+          "sha256": "d19ce68b13028f6dd3e230ef4a9d612c1632d12959b3f92b3810f2159e698ba9",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "HKUDS/Vibe-Trading",
+          "publication_path": "images/04-rank-03-hkuds-vibe-trading.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D002-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 24,
+      "title_sha256": "805d1a64dd30ff4ac772387fcc2d57b26c5b1ac73495dceb77b729b7990c8d68",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 352,
+      "caption_sha256": "20f5f8b272153733e3cb8cf0f22635d3aebbf261bb6392ed5669ba7aad19d83e",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "3eac8f9558117d1a1e203c9ad0c5fb768ca026137ff25fc22dc112bfb6bcc010",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-13/2026-07-13.ai.cover.png",
+          "sha256": "da29d3192e090830bd4c8a04aab402373e468d20b89621b90c303a8a545c6a84",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-13/2026-07-13.ai.01.shubhamsaboo--awesome-llm-apps.png",
+          "sha256": "93b35d3442678e5e9e35f95c3bd9198d4d8bf71a7c8a7593bb1dff535309fc3e",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "publication_path": "images/02-rank-01-shubhamsaboo-awesome-llm-apps.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-13/2026-07-13.ai.02.nousresearch--hermes-agent.png",
+          "sha256": "83db3a136bdb4b5ae4f8326993acc9b60091a3ce8dcf8d4a08bb4eb96332b523",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/03-rank-02-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-13/2026-07-13.ai.03.hkuds--vibe-trading.png",
+          "sha256": "8851997493af45e4e4a5dddbb6216a3fde9fdc094d998713ca8d6270cdca1557",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "HKUDS/Vibe-Trading",
+          "publication_path": "images/04-rank-03-hkuds-vibe-trading.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-07-13",
+    "revision": "e25f1796fbe7",
+    "image_policy": "repository-source-reference"
+  }
+}

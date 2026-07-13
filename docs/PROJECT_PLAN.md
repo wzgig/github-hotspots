@@ -13,7 +13,7 @@
 
 ### Proposed Solution
 
-将现有 Python 3.12 流水线建设为一个公开、可复现、可审计的 GitHub 开源情报与内容生产产品：本地计划任务按时运行 Codex 证据编辑，GitHub Actions 提供无本机凭据的确定性兜底；同一份冻结事实驱动报告、Signal Broadsheet 海报、Pages 和 `publish/current` 发布工作台。内容进入外部平台前保留人工审核；任一模型、证据或推送门禁失败时不提交本地结果，由稍后的云端任务保证连续性。
+将现有 Python 3.12 流水线建设为一个公开、可复现、可审计的 GitHub 开源情报与内容生产产品：本地计划任务按时运行 Codex 证据编辑，GitHub Actions 提供无本机凭据的确定性兜底；同一份冻结事实驱动报告、Signal Broadsheet 海报、Pages、`publish/current` 最新工作台与 `publish/history` 永久薄历史。内容进入外部平台前保留人工审核；任一模型、证据或推送门禁失败时不提交本地结果，由稍后的云端任务保证连续性。
 
 ### Product Positioning
 
@@ -27,7 +27,7 @@
 
 - 产品范围已锁定为“综合主榜 + AI 专题榜”：两榜日榜各 Top 3、周榜各 Top 7，分别排名且允许同一仓库重叠入榜。
 - 已有 GitHub Trending、GitHub REST Search、GitHub API 元数据补全、日快照、六因子排序和降级逻辑。
-- 已有包含双榜的 Markdown/JSON、综合榜与 AI 榜两份小红书审核稿、本地 `publish/current` 四个帖子包，以及本地 Codex / Actions 双层自动化。
+- 已有包含双榜的 Markdown/JSON、综合榜与 AI 榜两份小红书审核稿、本地 `publish/current` 四个帖子包、Git 跟踪的 `publish/history`，以及本地 Codex / Actions 双层自动化。
 - 已实现确定性海报模块、报告资产清单、日/周工作流字体环境和 Pages 预览/下载；V4 单项目卡使用安全缓存的 GitHub Owner 头像，并在头像失败时显示确定性占位图。
 - 当前 Git 分支为 `main`；公开远程仓库已创建，静态 GitHub Pages 与正式发布工作流已实现并通过首次线上部署验证。
 - 默认文案路径仍为确定性摘要；本地 Codex 已升级到 Prompt 4.1 / Schema 4.0，可在清洗后的 README/metadata 证据范围内写白话定位、最多 5 条能力、核心亮点、受众、前置条件、限制和许可证说明，并返回逐字段 `evidence_ids`。身份、URL、数字、排名和许可证事实由程序冻结回查；GitHub Actions 仍保持 `deterministic` 默认值。
@@ -329,7 +329,7 @@ config loader + scope definitions
 | Editorial backend | 已实现 | 生成确定性兜底与 7 类候选；可选 Codex Prompt 4.1 / Schema 4.0 在证据内白话编辑 | 任一 Schema、证据、README SHA、许可证或事实校验失败时整榜回退 |
 | Report renderer | 已有 | 输出榜单、社交审核包、质量说明 | 缺必填字段时失败 |
 | Poster renderer | 已实现 V4 | 每榜封面、逐项目 `1200×1600` PNG、Owner 头像、最多 5 条能力、核心亮点、受众与资产清单 | 头像失败降级占位图；缺字体、溢出、事实漂移或保存失败时明确失败 |
-| Publish bundle | 已实现 | D001/W001 期号、可粘贴标题/正文、审核稿、有序图片、Manifest、current/archive 轮转 | 路径、图片、哈希或编辑元数据不合法时拒绝生成 |
+| Publish bundle | 已实现 | D001/W001 期号、可粘贴标题/正文、审核稿、有序图片、Manifest、current/archive 轮转、幂等薄历史和旧期防降级 | 路径、图片、哈希、history 索引或编辑元数据不合法时拒绝生成 |
 | Local scheduler | 已实现 | 独立 worktree、Codex 严格门禁、锁、路径白名单、Secret 扫描、安全 push 与 Pages 验证 | 失败不提交；Actions 稍后 deterministic 兜底 |
 | Static site generator | 已上线 | 从已提交 JSON/Markdown 构建首页、历史页、方法页和 AI 数据雷达 | 构建失败保留上一版 Pages |
 | CI/CD | 日/周任务已有 | 测试、产物提交、Pages 部署、状态摘要 | 非零退出并保留日志 |

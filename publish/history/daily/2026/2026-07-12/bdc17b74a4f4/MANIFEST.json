@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "bdc17b74a4f47990c6d852a40430938c6828ef538379a2cddd44bab21be68e04",
+  "checklist_sha256": "6804ceb4e041edae665c8b760151bbf25a303bcc72578c44d6b6cfd44f41317f",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-07-12",
+  "generated_at": "2026-07-13T13:26:18.924865+08:00",
+  "issue": {
+    "number": 1,
+    "code": "D001",
+    "stem": "D001-2026-07-12",
+    "label": "第1期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-07-12.json",
+    "report_sha256": "04631f60ce1929b9b0604b0038f6f06dd8b693be00a60186929a8940a27b8145",
+    "poster_manifest": "reports/daily/assets/2026-07-12/manifest.json",
+    "poster_manifest_sha256": "8ea4f001811298d29df86cb03d51406dc9589b43112f0751e43c191c794fdd87",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D001-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 21,
+      "title_sha256": "dc2607b892024e25ede5c9f08d207ad97140918e3964dc9b4f33d02f7bfb1b0a",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 324,
+      "caption_sha256": "a76e6315ca74f097382a807fe3d8e469d5d1b1c01c36b21d01d864e21170b58f",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "003ee466e8a8ca026410703cb703e1e7ab6820002cbebafc49e25138ce90ce35",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-12/2026-07-12.comprehensive.cover.png",
+          "sha256": "2f9ef5983e69b680624f099d3c226b76d22943c0ffe2c0bfddc9685db1a41bba",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-12/2026-07-12.comprehensive.01.catchorg--catch2.png",
+          "sha256": "66242ccb279b67747c68a5ddcb8f55e0c81291f6ede74123a889d3f515c836a9",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "catchorg/Catch2",
+          "publication_path": "images/02-rank-01-catchorg-catch2.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-12/2026-07-12.comprehensive.02.firecrawl--firecrawl.png",
+          "sha256": "798d38ff56f97be50ba02da5647ae59db311a0fc65682777768365cec96763dc",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "firecrawl/firecrawl",
+          "publication_path": "images/03-rank-02-firecrawl-firecrawl.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-12/2026-07-12.comprehensive.03.home-assistant--core.png",
+          "sha256": "7ebf8542c0c9cf4fbd6424078b1bb016d383d3921264ca6c1055453a42abddae",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "home-assistant/core",
+          "publication_path": "images/04-rank-03-home-assistant-core.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D001-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 24,
+      "title_sha256": "d84e7b99f1729f636eb04434203e0174d6c5a01ebe9f0a4337bdb9e0f95c3532",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 333,
+      "caption_sha256": "a7e340cf8b93bf6b4c4c2d9bf144849b516d835102555b18cf0a283ed6887569",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "5527940e0cd27a4d99f0d4f1f59d0729fb670e09c5131974983f3c06d70045b4",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-12/2026-07-12.ai.cover.png",
+          "sha256": "64f2bdf1120396ca3e56d86399f6b436c02c3124d8140798c2ead1a54af165b5",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-12/2026-07-12.ai.01.obra--superpowers.png",
+          "sha256": "2bf57d7dabf7f7b361cd7a3414b9b6a6a182722e9353072ea5ecc60a015d3234",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "obra/superpowers",
+          "publication_path": "images/02-rank-01-obra-superpowers.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-12/2026-07-12.ai.02.firecrawl--firecrawl.png",
+          "sha256": "6213d969214c3010c88ede07ef09272be3c5ffd9ea23e2a626f5b6326a190e20",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "firecrawl/firecrawl",
+          "publication_path": "images/03-rank-02-firecrawl-firecrawl.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-12/2026-07-12.ai.03.nousresearch--hermes-agent.png",
+          "sha256": "6e7ace07b7c555bfd5b6a9dbe25427b8c8504ca9be9362e1a0ee60114b4652d7",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/04-rank-03-nousresearch-hermes-agent.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-07-12",
+    "revision": "bdc17b74a4f4",
+    "image_policy": "repository-source-reference"
+  }
+}

@@ -2,11 +2,16 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
+import os
+import tempfile
 from collections.abc import Iterable
+from contextlib import contextmanager
 from dataclasses import replace
 from datetime import date, timedelta
 from pathlib import Path
+from typing import BinaryIO
 
 from .models import Repository, RepositorySnapshot
 
@@ -36,22 +41,20 @@ class SnapshotStore:
 
         snapshot_date = _coerce_date(captured_on)
         incoming = [_as_snapshot(repository, snapshot_date) for repository in repositories]
-        merged = _merge_snapshots(self.load(snapshot_date), incoming)
         path = self.path_for(snapshot_date)
         path.parent.mkdir(parents=True, exist_ok=True)
-        payload = {
-            "date": snapshot_date.isoformat(),
-            "repositories": [
-                snapshot.to_dict()
-                for snapshot in sorted(merged, key=lambda item: item.full_name.casefold())
-            ],
-        }
-        temporary = path.with_suffix(".json.tmp")
-        temporary.write_text(
-            json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
-        )
-        temporary.replace(path)
+        with _exclusive_store_lock(self.directory):
+            # Reload after acquiring the process-wide lock.  A writer that was
+            # waiting must merge the snapshot committed by the previous writer.
+            merged = _merge_snapshots(self.load(snapshot_date), incoming)
+            payload = {
+                "date": snapshot_date.isoformat(),
+                "repositories": [
+                    snapshot.to_dict()
+                    for snapshot in sorted(merged, key=lambda item: item.full_name.casefold())
+                ],
+            }
+            _atomic_write_snapshot(path, payload)
         return path
 
     def load(self, captured_on: date | str) -> list[RepositorySnapshot]:
@@ -179,6 +182,82 @@ def _same_identity(
         and left.repository_id == right.repository_id
     )
     return ids_match or left.full_name.casefold() == right.full_name.casefold()
+
+
+@contextmanager
+def _exclusive_store_lock(directory: Path):
+    """Serialise snapshot read-modify-write cycles across local processes."""
+
+    lock_path = _store_lock_path(directory)
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    with lock_path.open("a+b") as stream:
+        # Windows byte-range locks work reliably when the range exists.  The
+        # file lives under the OS temp directory, never in the Git worktree.
+        stream.seek(0, os.SEEK_END)
+        if stream.tell() == 0:
+            stream.write(b"\0")
+            stream.flush()
+        _lock_stream(stream)
+        try:
+            yield
+        finally:
+            _unlock_stream(stream)
+
+
+def _store_lock_path(directory: Path) -> Path:
+    resolved = str(directory.resolve())
+    identity = os.path.normcase(resolved) if os.name == "nt" else resolved
+    digest = hashlib.sha256(os.fsencode(identity)).hexdigest()
+    return Path(tempfile.gettempdir()) / "github-hotspots" / "snapshot-locks" / f"{digest}.lock"
+
+
+def _lock_stream(stream: BinaryIO) -> None:
+    stream.seek(0)
+    if os.name == "nt":
+        import msvcrt
+
+        msvcrt.locking(stream.fileno(), msvcrt.LK_LOCK, 1)
+        return
+
+    import fcntl
+
+    fcntl.flock(stream.fileno(), fcntl.LOCK_EX)
+
+
+def _unlock_stream(stream: BinaryIO) -> None:
+    stream.seek(0)
+    if os.name == "nt":
+        import msvcrt
+
+        msvcrt.locking(stream.fileno(), msvcrt.LK_UNLCK, 1)
+        return
+
+    import fcntl
+
+    fcntl.flock(stream.fileno(), fcntl.LOCK_UN)
+
+
+def _atomic_write_snapshot(path: Path, payload: dict[str, object]) -> None:
+    temporary: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            newline="\n",
+            prefix=f".{path.name}.",
+            suffix=".tmp",
+            dir=path.parent,
+            delete=False,
+        ) as stream:
+            temporary = Path(stream.name)
+            json.dump(payload, stream, ensure_ascii=False, indent=2)
+            stream.write("\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+        temporary.replace(path)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
 
 
 def _coerce_date(value: date | str) -> date:

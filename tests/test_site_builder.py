@@ -234,6 +234,24 @@ def test_build_site_publishes_safe_report_posters(tmp_path: Path) -> None:
         assert published.size == (1200, 1600)
 
 
+def test_build_site_uses_non_default_poster_dimensions_from_report(tmp_path: Path) -> None:
+    daily = _report("daily", "2026-07-11", 1, "2026-07-11T08:00:00+08:00")
+    weekly = _report("weekly", "2026-07-11", 1, "2026-07-11T08:05:00+08:00")
+    daily["assets"] = {"enabled": True, "width": 600, "height": 800}
+    poster = tmp_path / "reports" / "daily" / "assets" / "2026-07-11" / "poster.png"
+    _write_png(poster, (600, 800))
+    daily["repositories"][0]["assets"] = {"poster": "reports/daily/assets/2026-07-11/poster.png"}
+    _write_report(tmp_path, "daily", "2026-07-11.json", daily)
+    _write_report(tmp_path, "weekly", "2026-W28.json", weekly)
+
+    payload = build_site(tmp_path)
+
+    public_path = payload["daily"]["repositories"][0]["poster_path"]
+    assert public_path == "generated/reports/daily/assets/2026-07-11/poster.png"
+    with Image.open(tmp_path / "site" / public_path) as published:
+        assert published.size == (600, 800)
+
+
 def test_build_site_rejects_unsupported_report_schema(tmp_path: Path) -> None:
     daily = _report("daily", "2026-07-11", 1, "2026-07-11T08:00:00+08:00")
     daily["schema_version"] = 99

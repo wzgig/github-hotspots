@@ -45,7 +45,7 @@ GitHub Trending / REST Search
 → 本地 Codex 按 Prompt 4.1 生成证据化中文文案
 → 严格回查身份、数字、README SHA、许可证与证据 ID
 → 渲染 Signal Broadsheet 海报
-→ 生成 publish/current 发布包
+→ 生成 publish/current 最新工作台与 publish/history 永久薄历史
 → 自动检查标题、正文、图片顺序、尺寸与哈希
 → 人工审核
 → 人工发布
@@ -58,7 +58,7 @@ GitHub Trending / REST Search
 2. 本地主链路要求两榜均为 `used_backend=codex-cli` 且 `fallback_used=false`；
 3. 排名、URL、Star、Fork、增量、日期和许可证不得由模型改写；
 4. 每个项目最多五条互不重复能力，优先使用“对象 + 动作 + 结果”；
-5. 所有项目图必须为 `1200×1600` PNG，Owner 头像失败时只能使用稳定身份块；
+5. 所有项目图必须使用 Manifest 声明的合法 3:4 PNG 尺寸（默认 `1200×1600`），Owner 头像失败时只能使用稳定身份块；
 6. 可粘贴正文不得包含 Markdown 内部标题、报告路径、配图清单或审核说明；
 7. 小红书发布前必须阅读对应 `REVIEW.md` 与 `CHECKLIST.md`。
 
@@ -69,6 +69,13 @@ GitHub Trending / REST Search
 ```powershell
 .\.venv\Scripts\python.exe -m github_hotspots.cli publish reports/daily/2026-07-12.json
 .\.venv\Scripts\python.exe -m github_hotspots.cli publish reports/weekly/2026-W28.json
+```
+
+正常 `publish` 会同时刷新本机最新工作台和 Git 跟踪的历史。回填旧期但不改变当前工作台时使用：
+
+```powershell
+.\.venv\Scripts\python.exe -m github_hotspots.cli publish `
+  reports/daily/2026-07-12.json --history-only
 ```
 
 打开 `publish/current/TODAY.md` 后，先进入日报或周报周期目录。周期根目录包含：
@@ -85,7 +92,13 @@ GitHub Trending / REST Search
 
 所有自动生成的帖子初始状态都是 `draft`。当前项目没有“批准并发布”的 CLI 命令，也不会自动改写小红书状态；`approved` 只表示人工已经完成事实、图片、标题和平台合规复核。操作时勾选共享 `CHECKLIST.md`，并在 `REVIEW.md` 或独立运营记录中补充发布时间和帖子链接。不要为了看起来已批准而直接篡改来源哈希或编辑后端字段。
 
-旧的 `current/<period>` 会在下一次同周期生成前自动移到 `archive/<period>/<year>/<issue-stem>/`，因此人工修改不会被静默覆盖。`current` 只保留最新日报和最新周报，不是永久待发布队列：如果 `D001-A` 延后到 `D002` 生成之后发布，应从 `publish/archive/daily/2026/D001-2026-07-12/02-ai/` 找回；周报同理。`current/` 和 `archive/` 都只存在于本机且不进入 Git 历史，重要的人工修改应另行备份。
+目录分为三层：
+
+- `current`：最新日报与最新周报的完整图片工作台；
+- `archive`：被替换的本地包和人工修改备份，不进入 Git；
+- `history`：每期自动生成基线的 Git 永久记录，保存标题、正文、审核稿、清单和图片引用，不复制 PNG。
+
+旧的 `current/<period>` 在内容变化时移动到 `archive/<period>/<year>/<issue-stem>/`，相同指纹重跑不会制造重复副本。如果 `D001-A` 延后到 `D002` 之后发布，人工改过的版本应从本机 `archive` 找回；未改动的生成基线也可以从 [历史索引](../publish/history/INDEX.md) 查阅。旧日期默认不能覆盖较新的 `current`；只有明确需要时才使用 `--activate-older`。对 `current` 的人工改稿不会自动进入 `history`，最终发布版仍应另行备份。
 
 ## 6. 第一周发布节奏
 
@@ -93,7 +106,7 @@ GitHub Trending / REST Search
 
 1. 上午发布 `D001-C` 日报综合榜；
 2. 晚些时候发布 `W001-C` 周报综合榜；
-3. `D001-A` 和 `W001-A` 作为独立 AI 帖子，留到后续时段或根据评论需求发布；如果跨过下一次同周期生成时间，从 `publish/archive/` 中按期号找回；
+3. `D001-A` 和 `W001-A` 作为独立 AI 帖子，留到后续时段或根据评论需求发布；跨过下一次同周期生成时间时，从本机 `archive/` 找回人工版，或从 `publish/history/INDEX.md` 查找生成基线；
 4. 第一周先验证读者是否更愿意收藏“用途解释”还是“上手教程”，不要过早增加发帖频率。
 
 ## 7. 人工复盘指标
@@ -113,7 +126,7 @@ GitHub Trending / REST Search
 
 - 电脑关机或用户未登录时，本地 Codex 计划任务不保证运行；Actions 会稍后兜底。
 - Actions 不能使用只存在于个人电脑的 Codex 登录态或 My Codex 密钥。
-- Actions 兜底只更新公开报告、图片和 Pages，不能把 `publish/current` 写回一台离线的个人电脑；本地发布包需要由本地计划任务同步，或在拉取报告后手动运行 `publish` 命令。
+- Actions 兜底更新公开报告、图片、Pages 数据与 `publish/history`，但不能把 `publish/current` 写回一台离线的个人电脑；本地完整图片工作台需要由本地计划任务同步，或在拉取报告后手动运行 `publish` 命令。
 - 周榜增长仍可能来自明确标注的 GitHub Trending 周期 Star，而非精确 7 日快照净增。
 - 项目不会自动登录、发布、回复评论或操作小红书账号。
 - 小红书平台表现仍需人工记录；自动读取平台数据和自动发布属于未来单独授权范围。

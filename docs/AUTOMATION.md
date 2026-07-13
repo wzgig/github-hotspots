@@ -71,23 +71,28 @@ so a moving remote-tracking ref cannot bypass the path gate.
 5. Create a detached temporary worktree at the exact verified remote SHA below
    `%LOCALAPPDATA%\GitHubHotspots\worktrees\`.
 6. If the remote commit already contains a current, complete report for the exact date with
-   both boards using Codex without fallback, skip generation.
+   both boards using Codex without fallback, also verify its indexed `publish/history` revision.
+   Skip only when both are complete; if only history is missing, rebuild history without
+   calling Codex or replacing the report.
 7. Run pytest, Ruff lint, and Ruff format checks in the isolated worktree.
 8. Run the daily or weekly pipeline with `--editorial-backend codex-cli`.
 9. Strictly validate Prompt 4.1 / Schema 4.0, both non-empty boards, current publication issue
    metadata, renderer 4.0, `signal-broadsheet-v1`, Markdown copies, ranked identities, and each
    PNG chunk, CRC, dimension, IDAT, and IEND.
-10. Build `publish/current/<period>` inside the temporary worktree as a complete preflight.
-    A publication packaging failure happens before commit or push.
-11. Reject any changed path outside the exact snapshot/report allowlist and scan staged text
-   for high-confidence credential signatures.
+10. Build `publish/current/<period>` inside the temporary worktree as a complete preflight and
+    write the thin revision below `publish/history/<period>/<year>/<stem>/<fingerprint>/`.
+    A publication packaging or history verification failure happens before commit or push.
+11. Reject any changed path outside the exact snapshot/report/history allowlist and scan staged
+    text for high-confidence credential signatures. History may contain only its two indexes,
+    revision manifests/checklists, and the two boards' title/caption/review text; PNG is rejected.
 12. Create one `chore(hotspots): ...` report-only commit.
 13. Fetch and rerun the trusted remote path gate before every rebase, remote publication read,
     or push-race decision. Only report-only remote movement may be rebased; code or configuration
     movement aborts and requires a fresh trusted local update. Never force push.
 14. After a successful push or verified remote win, rebuild or idempotently reuse the package
     and copy it to the IDE workspace. Equality uses the publish `content_fingerprint`; copied
-    images are recorded as `materialization: copy` in the final target manifest.
+    images are recorded as `materialization: copy` in the final target manifest. A newer local
+    `current` cannot be replaced by an older run date, and a damaged matching bundle is rebuilt.
 15. Verify the Pages workflow for the resulting commit, then remove the temporary worktree.
 
 The IDE checkout is never reset, cleaned, rebased, or used as the generation worktree.
@@ -110,6 +115,19 @@ issue, or incomplete/corrupt PNG. `--require-codex` additionally exits non-zero 
 used deterministic writing or any fallback. This extra backend gate is required because the
 interactive CLI intentionally treats deterministic fallback as a usable report and normally
 exits successfully.
+
+Verify the permanent thin-history record independently:
+
+```powershell
+.\.venv\Scripts\python.exe -S .\src\github_hotspots\automation.py verify-history `
+  --root . `
+  --period daily `
+  --date 2026-07-13
+```
+
+`verify-history` requires a revision matching the current report and poster-manifest hashes,
+checks every stored text hash and referenced PNG hash/dimension, rejects packaged PNG under
+`publish/history`, and confirms that the revision appears in `INDEX.json`.
 
 The path gate is also available independently:
 
@@ -211,10 +229,13 @@ later run. Logs and temporary worktrees are outside Git. If PowerShell is force-
 machine loses power before `finally`, the next lock owner safely removes automation-named state
 worktrees older than six hours and `*.paths` manifests older than one day.
 
-`publish/archive/` is intentionally not deleted automatically because a historical issue may
-still be waiting for manual Xiaohongshu publication. Weekly archive folders use the ISO week-year,
-matching Python report stems around New Year. The archive will grow over time; review it manually
-and define a separate retention/export policy before deleting any historical release package.
+`publish/archive/` is intentionally not deleted automatically because a locally edited issue may
+still be waiting for manual Xiaohongshu publication. It is not the permanent project archive:
+Git-tracked generated baselines live in `publish/history/`, while `archive/` protects local human
+edits and can grow over time. Weekly folders use the ISO week-year. Review local archive retention
+manually before deletion. Persistent scheduler runtime logs are under
+`%LOCALAPPDATA%\GitHubHotspots\logs`; the ignored `publish/logs` created in a temporary worktree is
+not the authoritative unattended-run log.
 
 ## Failure behaviour
 
@@ -226,6 +247,8 @@ and define a separate retention/export policy before deleting any historical rel
 | Remote is force-pushed or contains code/config/prompt/workflow/doc changes after trusted `HEAD` | Abort before executing the remote worktree; manually review and update the local checkout |
 | Current report uses an old prompt/schema/renderer/style, wrong issue metadata, empty board, or corrupt PNG | Strict gate fails; regenerate with the trusted current code |
 | Publication package preflight fails | No commit and no push |
+| Publication history is missing while the Codex report is valid | Rebuild and commit only the history; do not rerun Codex or replace report facts |
+| Publication preflight changes the history index after a report-only rebase | Abort and retry from a fresh worktree instead of pushing a dirty tree |
 | Unexpected or suspicious staged file | No commit and no push |
 | Non-fast-forward with a valid remote Codex report | Remote wins; no duplicate commit and no force push |
 | Non-fast-forward without a valid remote report | Clean rebase only; conflict fails and retries from a fresh worktree |

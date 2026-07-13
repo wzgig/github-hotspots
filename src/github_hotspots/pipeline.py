@@ -184,6 +184,7 @@ def _rank_boards(
             period=period,
             weights=settings.ranking_weights,
             as_of=as_of,
+            timezone=settings.timezone,
         )[: comprehensive.top_n(period)]
         if comprehensive.enabled
         else []
@@ -197,6 +198,7 @@ def _rank_boards(
             period=period,
             weights=settings.ranking_weights,
             as_of=as_of,
+            timezone=settings.timezone,
         )[: ai.top_n(period)]
         if ai.enabled
         else []

@@ -8,6 +8,7 @@ import os
 import re
 import shutil
 import tempfile
+import uuid
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from datetime import date, datetime
@@ -17,7 +18,7 @@ from zoneinfo import ZoneInfo
 
 from PIL import Image, UnidentifiedImageError
 
-from .config import PublicationSettings, Settings
+from .config import PublicationSettings, Settings, validate_poster_dimensions
 
 _BOARD_ORDER = (
     ("comprehensive", "综合主榜", "C"),
@@ -25,7 +26,8 @@ _BOARD_ORDER = (
 )
 _ALLOWED_BACKENDS = frozenset({"deterministic", "codex-cli"})
 PUBLISH_BUNDLE_GENERATOR_NAME = "github-hotspots-publish-bundle"
-PUBLISH_BUNDLE_GENERATOR_VERSION = "1.0"
+PUBLISH_BUNDLE_GENERATOR_VERSION = "1.1"
+PUBLISH_HISTORY_SCHEMA_VERSION = 1
 _CAPTION_FORBIDDEN = (
     "# 标题",
     "# 正文",
@@ -55,12 +57,17 @@ class PublishBundleArtifacts:
     period: str
     issue_code: str
     issue_stem: str
-    current_dir: Path
-    manifest: Path
-    checklist: Path
+    current_dir: Path | None
+    manifest: Path | None
+    checklist: Path | None
     today: Path
     board_dirs: tuple[Path, ...]
     archived_dir: Path | None
+    history_dir: Path
+    history_manifest: Path
+    history_index_json: Path
+    history_index_markdown: Path
+    activated_current: bool
 
 
 def publication_issue(
@@ -105,8 +112,11 @@ def publication_issue(
 def build_publish_bundle(
     settings: Settings,
     report_path: str | Path,
+    *,
+    activate_current: bool = True,
+    allow_older_current: bool = False,
 ) -> PublishBundleArtifacts:
-    """Create one atomic local bundle with two independently reviewable board posts."""
+    """Create immutable thin history and optionally activate a local publication bundle."""
 
     publication = settings.publication_settings()
     repository_root = settings.path.parent.parent.resolve()
@@ -130,8 +140,9 @@ def build_publish_bundle(
         "report.assets.manifest",
     )
     poster_manifest = _read_json_object(poster_manifest_path, "poster manifest")
-    _validate_poster_manifest(
+    poster_size = _validate_poster_manifest(
         poster_manifest,
+        report_assets=report_assets,
         period=period,
         run_date=run_date,
         source_report=source_report,
@@ -140,10 +151,17 @@ def build_publish_bundle(
 
     current_root = publish_root / "current"
     current_root.mkdir(parents=True, exist_ok=True)
+    target = current_root / period
+    if activate_current and not allow_older_current:
+        _reject_older_activation(target, run_date)
+
     staging = Path(tempfile.mkdtemp(prefix=f".{period}.", dir=current_root))
-    now = datetime.now(ZoneInfo(settings.timezone)).isoformat(timespec="seconds")
+    now = datetime.now(ZoneInfo(settings.timezone)).isoformat(timespec="microseconds")
     board_manifests: list[dict[str, Any]] = []
     board_dirs: list[Path] = []
+    archived_dir: Path | None = None
+    activated_current = False
+    history_dir: Path | None = None
     try:
         report_boards = _mapping(report.get("boards"), "report.boards")
         poster_boards = _mapping(poster_manifest.get("boards"), "poster manifest.boards")
@@ -164,6 +182,7 @@ def build_publish_bundle(
                 poster_board=poster_board,
                 editorial=editorial["boards"][board_key],
                 issue=issue,
+                poster_size=poster_size,
             )
             board_manifests.append(board_manifest)
             board_dirs.append(Path(board_manifest["directory"]))
@@ -190,8 +209,8 @@ def build_publish_bundle(
                 "status": issue.status,
             },
             "source": {
-                "report_sha256": _sha256(source_report),
-                "poster_manifest_sha256": _sha256(poster_manifest_path),
+                "report_sha256": _sha256_text_file(source_report),
+                "poster_manifest_sha256": _sha256_text_file(poster_manifest_path),
             },
             "editorial": editorial,
             "boards": _fingerprint_boards(board_manifests),
@@ -208,6 +227,7 @@ def build_publish_bundle(
                     separators=(",", ":"),
                 )
             ),
+            "checklist_sha256": _sha256_text(checklist_content),
             "status": bundle_status,
             "period": period,
             "run_date": run_date.isoformat(),
@@ -221,9 +241,9 @@ def build_publish_bundle(
             },
             "source": {
                 "report": source_report_relative,
-                "report_sha256": _sha256(source_report),
+                "report_sha256": _sha256_text_file(source_report),
                 "poster_manifest": poster_manifest_relative,
-                "poster_manifest_sha256": _sha256(poster_manifest_path),
+                "poster_manifest_sha256": _sha256_text_file(poster_manifest_path),
                 "poster_style_version": _text(
                     poster_manifest.get("style_version"), "poster manifest.style_version"
                 ),
@@ -236,16 +256,30 @@ def build_publish_bundle(
             json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=False) + "\n",
         )
 
-        target = current_root / period
-        archived_dir = _rotate_current(target, publish_root / "archive")
-        try:
-            staging.replace(target)
-        except Exception:
-            if archived_dir is not None and archived_dir.exists() and not target.exists():
-                archived_dir.replace(target)
-            raise
+        history_dir = _write_history_revision(
+            publish_root=publish_root,
+            repository_root=repository_root,
+            source_report=source_report,
+            period=period,
+            run_date=run_date,
+            staging=staging,
+            manifest=manifest,
+        )
+        history_index_json, history_index_markdown = refresh_history_index(publish_root)
 
-        refresh_publish_index(publish_root, timezone=settings.timezone, generated_at=now)
+        if activate_current:
+            current_is_identical = _current_bundle_matches(target, manifest)
+            if not current_is_identical:
+                archived_dir = _rotate_current(target, publish_root / "archive")
+                try:
+                    staging.replace(target)
+                except Exception:
+                    if archived_dir is not None and archived_dir.exists() and not target.exists():
+                        archived_dir.replace(target)
+                    raise
+            activated_current = True
+            refresh_publish_index(publish_root, timezone=settings.timezone, generated_at=now)
+
         _append_local_log(
             publish_root / "logs" / "publication.jsonl",
             {
@@ -255,7 +289,15 @@ def build_publish_bundle(
                 "issue_code": issue.code,
                 "issue_stem": issue.stem,
                 "source_report": source_report_relative,
-                "current": _relative_path(target, repository_root),
+                "history": _relative_path(history_dir, repository_root),
+                "current": (_relative_path(target, repository_root) if activate_current else None),
+                "action": (
+                    "history-only"
+                    if not activate_current
+                    else "reused-current"
+                    if current_is_identical
+                    else "activated-current"
+                ),
                 "archived": (
                     _relative_path(archived_dir, repository_root)
                     if archived_dir is not None
@@ -267,17 +309,26 @@ def build_publish_bundle(
         if staging.exists():
             shutil.rmtree(staging, ignore_errors=True)
 
-    current_dir = current_root / period
+    if history_dir is None:
+        raise RuntimeError("publication history was not created")
+    current_dir = target if activate_current else None
     return PublishBundleArtifacts(
         period=period,
         issue_code=issue.code,
         issue_stem=issue.stem,
         current_dir=current_dir,
-        manifest=current_dir / "MANIFEST.json",
-        checklist=current_dir / "CHECKLIST.md",
+        manifest=current_dir / "MANIFEST.json" if current_dir is not None else None,
+        checklist=current_dir / "CHECKLIST.md" if current_dir is not None else None,
         today=current_root / "TODAY.md",
-        board_dirs=tuple(current_dir / path for path in board_dirs),
+        board_dirs=(
+            tuple(current_dir / path for path in board_dirs) if current_dir is not None else ()
+        ),
         archived_dir=archived_dir,
+        history_dir=history_dir,
+        history_manifest=history_dir / "MANIFEST.json",
+        history_index_json=history_index_json,
+        history_index_markdown=history_index_markdown,
+        activated_current=activated_current,
     )
 
 
@@ -298,6 +349,115 @@ def refresh_publish_index(
     return today
 
 
+def refresh_history_index(publish_root: str | Path) -> tuple[Path, Path]:
+    """Rebuild deterministic JSON and Markdown indexes from thin history manifests."""
+
+    root = Path(publish_root).resolve()
+    history_root = root / "history"
+    history_root.mkdir(parents=True, exist_ok=True)
+    grouped: dict[tuple[str, int, str], list[dict[str, Any]]] = {}
+    generated_values: list[str] = []
+
+    for manifest_path in sorted(history_root.glob("*/*/*/*/MANIFEST.json")):
+        relative = manifest_path.relative_to(history_root)
+        if len(relative.parts) != 5:
+            continue
+        period_dir, year_dir, report_stem_dir, revision_dir, _ = relative.parts
+        if period_dir not in {"daily", "weekly"} or not year_dir.isdigit():
+            continue
+
+        manifest = _read_json_object(manifest_path, "publication history manifest")
+        period = _text(manifest.get("period"), "history manifest.period")
+        run_date = _iso_date(manifest.get("run_date"), "history manifest.run_date")
+        issue = _mapping(manifest.get("issue"), "history manifest.issue")
+        history = _mapping(manifest.get("history"), "history manifest.history")
+        fingerprint = _history_fingerprint(manifest)
+        report_stem = _safe_component(
+            _text(history.get("report_stem"), "history manifest.history.report_stem")
+        )
+        generated_at = _text(manifest.get("generated_at"), "history manifest.generated_at")
+        try:
+            datetime.fromisoformat(generated_at)
+        except ValueError as exc:
+            raise ValueError("history manifest.generated_at must be ISO 8601") from exc
+
+        expected_year = run_date.year if period == "daily" else run_date.isocalendar().year
+        if (
+            period != period_dir
+            or int(year_dir) != expected_year
+            or report_stem != report_stem_dir
+            or revision_dir != fingerprint[:12]
+        ):
+            raise ValueError(f"publication history path does not match manifest: {manifest_path}")
+
+        revision = {
+            "fingerprint": fingerprint,
+            "revision": revision_dir,
+            "generated_at": generated_at,
+            "path": _relative_path(manifest_path.parent, root),
+        }
+        grouped.setdefault((period, expected_year, report_stem), []).append(
+            {
+                "run_date": run_date.isoformat(),
+                "issue": dict(issue),
+                "source_report": _text(
+                    _mapping(manifest.get("source"), "history manifest.source").get("report"),
+                    "history manifest.source.report",
+                ),
+                "revision": revision,
+            }
+        )
+        generated_values.append(generated_at)
+
+    issues: list[dict[str, Any]] = []
+    for (period, year, report_stem), values in grouped.items():
+        run_dates = {str(value["run_date"]) for value in values}
+        issue_values = {
+            json.dumps(value["issue"], ensure_ascii=False, sort_keys=True) for value in values
+        }
+        source_reports = {str(value["source_report"]) for value in values}
+        if len(run_dates) != 1 or len(issue_values) != 1 or len(source_reports) != 1:
+            raise ValueError(f"publication history revisions disagree for {period}/{report_stem}")
+        revisions = sorted(
+            (dict(value["revision"]) for value in values),
+            key=lambda item: (str(item["generated_at"]), str(item["fingerprint"])),
+        )
+        issues.append(
+            {
+                "period": period,
+                "year": year,
+                "report_stem": report_stem,
+                "run_date": next(iter(run_dates)),
+                "issue": json.loads(next(iter(issue_values))),
+                "source_report": next(iter(source_reports)),
+                "latest": dict(revisions[-1]),
+                "revisions": revisions,
+            }
+        )
+
+    issues.sort(
+        key=lambda item: (
+            str(item["run_date"]),
+            1 if item["period"] == "daily" else 0,
+            str(item["report_stem"]),
+        ),
+        reverse=True,
+    )
+    index = {
+        "schema_version": PUBLISH_HISTORY_SCHEMA_VERSION,
+        "updated_at": max(generated_values) if generated_values else None,
+        "issues": issues,
+    }
+    json_path = history_root / "INDEX.json"
+    markdown_path = history_root / "INDEX.md"
+    _write_text(
+        json_path,
+        json.dumps(index, ensure_ascii=False, indent=2, sort_keys=False) + "\n",
+    )
+    _write_text(markdown_path, _render_history_index(index))
+    return json_path, markdown_path
+
+
 def _build_board_package(
     *,
     publication: PublicationSettings,
@@ -310,6 +470,7 @@ def _build_board_package(
     poster_board: Mapping[str, Any],
     editorial: Mapping[str, Any],
     issue: PublicationIssue,
+    poster_size: tuple[int, int],
 ) -> dict[str, Any]:
     label = _text(report_board.get("label", default_label), f"{board_key}.label")
     repositories = _sequence(report_board.get("repositories"), f"{board_key}.repositories")
@@ -344,7 +505,7 @@ def _build_board_package(
             package_root=board_dir,
             order=1,
             role="cover",
-            prefer_hardlinks=publication.prefer_hardlinks,
+            expected_size=poster_size,
         )
     )
 
@@ -382,7 +543,7 @@ def _build_board_package(
             package_root=board_dir,
             order=rank + 1,
             role="project",
-            prefer_hardlinks=publication.prefer_hardlinks,
+            expected_size=poster_size,
         )
         image_manifest.update({"rank": rank, "full_name": full_name})
         images.append(image_manifest)
@@ -412,12 +573,12 @@ def _build_board_package(
         "directory": directory,
         "title": f"{directory}/TITLE.txt",
         "title_chars": len(title),
-        "title_sha256": _sha256(title_path),
+        "title_sha256": _sha256_text_file(title_path),
         "caption": f"{directory}/CAPTION.txt",
         "caption_chars": len(caption.rstrip("\n")),
-        "caption_sha256": _sha256(caption_path),
+        "caption_sha256": _sha256_text_file(caption_path),
         "review": f"{directory}/REVIEW.md",
-        "review_sha256": _sha256(review_path),
+        "review_sha256": _sha256_text_file(review_path),
         "editorial": dict(editorial),
         "images": images,
     }
@@ -510,20 +671,15 @@ def _materialize_image(
     package_root: Path,
     order: int,
     role: str,
-    prefer_hardlinks: bool,
+    expected_size: tuple[int, int],
 ) -> dict[str, Any]:
-    width, height = _validate_png(source)
+    width, height = _validate_png(source, expected_size=expected_size)
     destination.parent.mkdir(parents=True, exist_ok=True)
-    link_mode = "copy"
-    if prefer_hardlinks:
-        try:
-            os.link(source, destination)
-            link_mode = "hardlink"
-        except OSError:
-            shutil.copy2(source, destination)
-    else:
-        shutil.copy2(source, destination)
-    destination_width, destination_height = _validate_png(destination)
+    # The publication folder is an editable workbench.  Hard links would let
+    # an in-place crop or annotation mutate the versioned report asset and
+    # invalidate both Pages and publication-history hashes.
+    shutil.copy2(source, destination)
+    destination_width, destination_height = _validate_png(destination, expected_size=expected_size)
     source_hash = _sha256(source)
     destination_hash = _sha256(destination)
     if (destination_width, destination_height) != (
@@ -539,11 +695,15 @@ def _materialize_image(
         "sha256": destination_hash,
         "width": destination_width,
         "height": destination_height,
-        "materialization": link_mode,
+        "materialization": "copy",
     }
 
 
-def _validate_png(path: Path) -> tuple[int, int]:
+def _validate_png(
+    path: Path,
+    *,
+    expected_size: tuple[int, int] | None = None,
+) -> tuple[int, int]:
     if not path.is_file():
         raise ValueError(f"publication image does not exist: {path}")
     try:
@@ -551,11 +711,20 @@ def _validate_png(path: Path) -> tuple[int, int]:
             image.load()
             if image.format != "PNG":
                 raise ValueError(f"publication image must be PNG: {path}")
-            if image.size != (1200, 1600):
+            try:
+                actual_size = validate_poster_dimensions(image.width, image.height)
+            except ValueError as exc:
                 raise ValueError(
-                    f"publication image must be 1200x1600: {path} is {image.width}x{image.height}"
+                    f"publication image must use a legal 3:4 poster size: {path} is "
+                    f"{image.width}x{image.height}"
+                ) from exc
+            if expected_size is not None and actual_size != expected_size:
+                raise ValueError(
+                    f"publication image size does not match its manifest: {path} is "
+                    f"{image.width}x{image.height}, expected "
+                    f"{expected_size[0]}x{expected_size[1]}"
                 )
-            return image.size
+            return actual_size
     except (OSError, UnidentifiedImageError) as exc:
         raise ValueError(f"publication image cannot be decoded: {path}") from exc
 
@@ -597,11 +766,12 @@ def _validate_editorial(report: Mapping[str, Any]) -> dict[str, Any]:
 def _validate_poster_manifest(
     manifest: Mapping[str, Any],
     *,
+    report_assets: Mapping[str, Any],
     period: str,
     run_date: date,
     source_report: Path,
     repository_root: Path,
-) -> None:
+) -> tuple[int, int]:
     if _positive_integer(manifest.get("schema_version"), "poster manifest.schema_version") != 2:
         raise ValueError("poster manifest.schema_version must be 2")
     if _text(manifest.get("period"), "poster manifest.period") != period:
@@ -612,10 +782,18 @@ def _validate_poster_manifest(
         raise ValueError("poster manifest.enabled must be true")
     if _text(manifest.get("format"), "poster manifest.format").casefold() != "png":
         raise ValueError("poster manifest.format must be png")
-    if _positive_integer(manifest.get("width"), "poster manifest.width") != 1200:
-        raise ValueError("poster manifest.width must be 1200")
-    if _positive_integer(manifest.get("height"), "poster manifest.height") != 1600:
-        raise ValueError("poster manifest.height must be 1600")
+    poster_size = validate_poster_dimensions(
+        _positive_integer(manifest.get("width"), "poster manifest.width"),
+        _positive_integer(manifest.get("height"), "poster manifest.height"),
+    )
+    if report_assets.get("enabled") is not True:
+        raise ValueError("report.assets.enabled must be true")
+    report_size = validate_poster_dimensions(
+        _positive_integer(report_assets.get("width"), "report.assets.width"),
+        _positive_integer(report_assets.get("height"), "report.assets.height"),
+    )
+    if report_size != poster_size:
+        raise ValueError("poster manifest dimensions do not match report assets")
     manifest_source = _resolve_repository_path(
         _text(manifest.get("source_report"), "poster manifest.source_report"),
         repository_root,
@@ -623,6 +801,7 @@ def _validate_poster_manifest(
     )
     if manifest_source != source_report:
         raise ValueError("poster manifest.source_report does not match report")
+    return poster_size
 
 
 def _render_review(
@@ -806,6 +985,411 @@ def _render_today(current_root: Path, generated_at: str) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def _render_history_index(index: Mapping[str, Any]) -> str:
+    lines = [
+        "# 发布历史",
+        "",
+        "这里保存每期文案、审核稿和可验证清单；配图复用 `reports/` 中已版本化的源文件。",
+        "",
+        "| 日期 | 周期 | 期号 | 最新修订 | 修订数 | 内容 |",
+        "| --- | --- | --- | --- | ---: | --- |",
+    ]
+    issues = _sequence(index.get("issues"), "history index.issues")
+    for raw_issue in issues:
+        issue = _mapping(raw_issue, "history index.issue")
+        publication_issue_data = _mapping(issue.get("issue"), "history index.issue.issue")
+        latest = _mapping(issue.get("latest"), "history index.issue.latest")
+        revisions = _sequence(issue.get("revisions"), "history index.issue.revisions")
+        period = _text(issue.get("period"), "history index.issue.period")
+        period_label = "日报" if period == "daily" else "周报"
+        latest_path = _text(latest.get("path"), "history index.issue.latest.path")
+        if not latest_path.startswith("history/"):
+            raise ValueError("history index revision path must stay below publish/history")
+        relative_path = latest_path.removeprefix("history/")
+        links = (
+            f"[清单]({relative_path}/MANIFEST.json) · "
+            f"[综合文案]({relative_path}/01-comprehensive/CAPTION.txt) · "
+            f"[AI 文案]({relative_path}/02-ai/CAPTION.txt)"
+        )
+        lines.append(
+            "| "
+            f"{_text(issue.get('run_date'), 'history index.issue.run_date')} | "
+            f"{period_label} | "
+            f"{_text(publication_issue_data.get('code'), 'history index.issue.code')} | "
+            f"`{_text(latest.get('revision'), 'history index.issue.latest.revision')}` | "
+            f"{len(revisions)} | "
+            f"{links} |"
+        )
+    if not issues:
+        lines.append("| - | - | - | - | 0 | - |")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def _reject_older_activation(target: Path, incoming_date: date) -> None:
+    if not target.exists():
+        return
+    if not target.is_dir():
+        raise ValueError(f"current publication target is not a directory: {target}")
+    manifest = _read_json_object(target / "MANIFEST.json", "current publication manifest")
+    period = _text(manifest.get("period"), "current manifest.period")
+    if period != target.name or period not in {"daily", "weekly"}:
+        raise ValueError("current publication manifest period is invalid")
+    current_date = _iso_date(manifest.get("run_date"), "current manifest.run_date")
+    if current_date > incoming_date:
+        raise ValueError(
+            f"refusing to activate older {period} report {incoming_date.isoformat()} over "
+            f"current {current_date.isoformat()}; use history-only mode or explicitly allow "
+            "older current activation"
+        )
+
+
+def _write_history_revision(
+    *,
+    publish_root: Path,
+    repository_root: Path,
+    source_report: Path,
+    period: str,
+    run_date: date,
+    staging: Path,
+    manifest: Mapping[str, Any],
+) -> Path:
+    fingerprint = _history_fingerprint(manifest)
+    report_stem = _safe_component(source_report.stem)
+    year = run_date.year if period == "daily" else run_date.isocalendar().year
+    issue_root = publish_root / "history" / period / str(year) / report_stem
+    revision = issue_root / fingerprint[:12]
+    thin_manifest = _thin_history_manifest(
+        manifest,
+        report_stem=report_stem,
+        revision=fingerprint[:12],
+    )
+    _validate_history_image_sources(
+        thin_manifest,
+        repository_root=repository_root,
+        period=period,
+        report_stem=report_stem,
+    )
+
+    repair_existing = False
+    if revision.exists():
+        try:
+            _validate_history_revision(
+                revision,
+                repository_root=repository_root,
+                expected_fingerprint=fingerprint,
+            )
+            return revision
+        except (OSError, ValueError):
+            repair_existing = True
+
+    issue_root.mkdir(parents=True, exist_ok=True)
+    temporary = Path(tempfile.mkdtemp(prefix=f".{fingerprint[:12]}.", dir=issue_root))
+    try:
+        _copy_history_text_files(staging, temporary, thin_manifest)
+        _write_text(
+            temporary / "MANIFEST.json",
+            json.dumps(thin_manifest, ensure_ascii=False, indent=2, sort_keys=False) + "\n",
+        )
+        _validate_history_revision(
+            temporary,
+            repository_root=repository_root,
+            expected_fingerprint=fingerprint,
+        )
+        if repair_existing:
+            quarantine_root = (
+                publish_root / "archive" / "history-recovery" / period / str(year) / report_stem
+            )
+            quarantine_root.mkdir(parents=True, exist_ok=True)
+            quarantine = quarantine_root / f"{revision.name}-{uuid.uuid4().hex[:12]}"
+            revision.replace(quarantine)
+            try:
+                temporary.replace(revision)
+            except Exception:
+                if not revision.exists() and quarantine.exists():
+                    quarantine.replace(revision)
+                raise
+            try:
+                if quarantine.is_dir():
+                    shutil.rmtree(quarantine)
+                else:
+                    quarantine.unlink(missing_ok=True)
+            except OSError:
+                # The valid revision is already active. Windows can temporarily lock files,
+                # so retain the quarantined copy under ignored local archive storage instead
+                # of turning a successful repair into a recurring automation failure.
+                pass
+        else:
+            try:
+                temporary.replace(revision)
+            except OSError:
+                if not revision.exists():
+                    raise
+                _validate_history_revision(
+                    revision,
+                    repository_root=repository_root,
+                    expected_fingerprint=fingerprint,
+                )
+    finally:
+        if temporary.exists():
+            shutil.rmtree(temporary, ignore_errors=True)
+    return revision
+
+
+def _thin_history_manifest(
+    manifest: Mapping[str, Any],
+    *,
+    report_stem: str,
+    revision: str,
+) -> dict[str, Any]:
+    thin = json.loads(json.dumps(dict(manifest), ensure_ascii=False))
+    thin["history"] = {
+        "schema_version": PUBLISH_HISTORY_SCHEMA_VERSION,
+        "kind": "thin-publication-history",
+        "report_stem": report_stem,
+        "revision": revision,
+        "image_policy": "repository-source-reference",
+    }
+    for raw_board in _sequence(thin.get("boards"), "history manifest.boards"):
+        board = _mapping(raw_board, "history manifest.board")
+        history_images: list[dict[str, Any]] = []
+        for raw_image in _sequence(board.get("images"), "history manifest.board.images"):
+            image = dict(_mapping(raw_image, "history manifest.board.image"))
+            image["publication_path"] = image.pop("path")
+            image.pop("materialization", None)
+            history_images.append(image)
+        raw_board["images"] = history_images
+    return thin
+
+
+def _copy_history_text_files(
+    source_root: Path,
+    destination_root: Path,
+    manifest: Mapping[str, Any],
+) -> None:
+    relative_paths = ["CHECKLIST.md"]
+    for raw_board in _sequence(manifest.get("boards"), "history manifest.boards"):
+        board = _mapping(raw_board, "history manifest.board")
+        relative_paths.extend(
+            _text(board.get(field), f"history manifest.board.{field}")
+            for field in ("title", "caption", "review")
+        )
+    for relative in relative_paths:
+        source = _bundle_child(source_root, relative, "history source text")
+        if not source.is_file():
+            raise ValueError(f"publication history source file is missing: {source}")
+        _write_text(
+            _bundle_child(destination_root, relative, "history destination text"),
+            source.read_text(encoding="utf-8"),
+        )
+
+
+def _validate_history_revision(
+    revision: Path,
+    *,
+    repository_root: Path,
+    expected_fingerprint: str,
+) -> None:
+    if not revision.is_dir():
+        raise ValueError(f"publication history revision is not a directory: {revision}")
+    manifest = _read_json_object(revision / "MANIFEST.json", "publication history manifest")
+    fingerprint = _history_fingerprint(manifest)
+    if fingerprint != expected_fingerprint:
+        raise ValueError(f"publication history fingerprint collision: {revision}")
+    history = _mapping(manifest.get("history"), "history manifest.history")
+    if (
+        _positive_integer(history.get("schema_version"), "history manifest.schema_version")
+        != PUBLISH_HISTORY_SCHEMA_VERSION
+        or _text(history.get("kind"), "history manifest.kind") != "thin-publication-history"
+        or _text(history.get("image_policy"), "history manifest.image_policy")
+        != "repository-source-reference"
+    ):
+        raise ValueError(f"publication history metadata is invalid: {revision}")
+    period = _text(manifest.get("period"), "history manifest.period")
+    report_stem = _safe_component(_text(history.get("report_stem"), "history manifest.report_stem"))
+    _validate_history_image_sources(
+        manifest,
+        repository_root=repository_root,
+        period=period,
+        report_stem=report_stem,
+    )
+    _validate_bundle_text_files(revision, manifest)
+
+    expected_files = {"MANIFEST.json", "CHECKLIST.md"}
+    for raw_board in _sequence(manifest.get("boards"), "history manifest.boards"):
+        board = _mapping(raw_board, "history manifest.board")
+        expected_files.update(
+            _text(board.get(field), f"history manifest.board.{field}")
+            for field in ("title", "caption", "review")
+        )
+        for raw_image in _sequence(board.get("images"), "history manifest.board.images"):
+            image = _mapping(raw_image, "history manifest.board.image")
+            if "path" in image or "materialization" in image:
+                raise ValueError("thin publication history must not reference packaged images")
+    actual_files = {
+        path.relative_to(revision).as_posix() for path in revision.rglob("*") if path.is_file()
+    }
+    if actual_files != expected_files or any(
+        path.suffix.casefold() == ".png" for path in revision.rglob("*")
+    ):
+        raise ValueError(f"publication history revision contains unexpected files: {revision}")
+
+
+def _validate_history_image_sources(
+    manifest: Mapping[str, Any],
+    *,
+    repository_root: Path,
+    period: str,
+    report_stem: str,
+) -> None:
+    expected_root = (repository_root / "reports" / period / "assets" / report_stem).resolve()
+    for raw_board in _sequence(manifest.get("boards"), "history manifest.boards"):
+        board = _mapping(raw_board, "history manifest.board")
+        for raw_image in _sequence(board.get("images"), "history manifest.board.images"):
+            image = _mapping(raw_image, "history manifest.board.image")
+            source = _resolve_repository_path(
+                _text(image.get("source"), "history manifest.image.source"),
+                repository_root,
+                "history manifest.image.source",
+            )
+            if source == expected_root or not source.is_relative_to(expected_root):
+                raise ValueError("publication history images must reference report poster assets")
+            if _sha256(source) != _text(image.get("sha256"), "history manifest.image.sha256"):
+                raise ValueError(f"publication history image source hash mismatch: {source}")
+            expected_size = (
+                _positive_integer(image.get("width"), "history manifest.image.width"),
+                _positive_integer(image.get("height"), "history manifest.image.height"),
+            )
+            if _validate_png(source) != expected_size:
+                raise ValueError(f"publication history image source dimensions mismatch: {source}")
+
+
+def _current_bundle_matches(target: Path, incoming_manifest: Mapping[str, Any]) -> bool:
+    if not target.exists():
+        return False
+    if not target.is_dir():
+        return False
+    try:
+        manifest = _read_json_object(target / "MANIFEST.json", "current publication manifest")
+        if _history_fingerprint(manifest) != _history_fingerprint(incoming_manifest):
+            return False
+        if _manifest_content_projection(manifest) != _manifest_content_projection(
+            incoming_manifest
+        ):
+            return False
+        _validate_materialized_bundle(target, manifest)
+    except (OSError, ValueError):
+        return False
+    return True
+
+
+def _validate_materialized_bundle(root: Path, manifest: Mapping[str, Any]) -> None:
+    _validate_bundle_text_files(root, manifest)
+    for raw_board in _sequence(manifest.get("boards"), "publication manifest.boards"):
+        board = _mapping(raw_board, "publication manifest.board")
+        board_root = _bundle_child(
+            root,
+            _text(board.get("directory"), "publication manifest.board.directory"),
+            "publication board directory",
+        )
+        for raw_image in _sequence(board.get("images"), "publication manifest.board.images"):
+            image = _mapping(raw_image, "publication manifest.board.image")
+            if image.get("materialization") != "copy":
+                raise ValueError("publication working images must be independent copies")
+            packaged = _bundle_child(
+                board_root,
+                _text(image.get("path"), "publication manifest.image.path"),
+                "publication image",
+            )
+            if not packaged.is_file():
+                raise ValueError(f"publication image is missing: {packaged}")
+            if _sha256(packaged) != _text(image.get("sha256"), "publication manifest.image.sha256"):
+                raise ValueError(f"publication image hash mismatch: {packaged}")
+            expected_size = (
+                _positive_integer(image.get("width"), "publication manifest.image.width"),
+                _positive_integer(image.get("height"), "publication manifest.image.height"),
+            )
+            if _validate_png(packaged) != expected_size:
+                raise ValueError(f"publication image dimensions mismatch: {packaged}")
+
+
+def _validate_bundle_text_files(root: Path, manifest: Mapping[str, Any]) -> None:
+    checklist = _bundle_child(root, "CHECKLIST.md", "publication checklist")
+    if not checklist.is_file() or _sha256_text_file(checklist) != _text(
+        manifest.get("checklist_sha256"), "publication manifest.checklist_sha256"
+    ):
+        raise ValueError(f"publication checklist hash mismatch: {checklist}")
+    for raw_board in _sequence(manifest.get("boards"), "publication manifest.boards"):
+        board = _mapping(raw_board, "publication manifest.board")
+        for field in ("title", "caption", "review"):
+            path = _bundle_child(
+                root,
+                _text(board.get(field), f"publication manifest.board.{field}"),
+                f"publication {field}",
+            )
+            expected_hash = _text(
+                board.get(f"{field}_sha256"),
+                f"publication manifest.board.{field}_sha256",
+            )
+            if not path.is_file() or _sha256_text_file(path) != expected_hash:
+                raise ValueError(f"publication {field} hash mismatch: {path}")
+
+
+def _bundle_child(root: Path, relative: str, label: str) -> Path:
+    candidate = (root / relative).resolve()
+    resolved_root = root.resolve()
+    if candidate == resolved_root or not candidate.is_relative_to(resolved_root):
+        raise ValueError(f"{label} must stay inside its publication bundle")
+    return candidate
+
+
+def _history_fingerprint(manifest: Mapping[str, Any]) -> str:
+    fingerprint = _text(manifest.get("content_fingerprint"), "manifest.content_fingerprint")
+    if re.fullmatch(r"[0-9a-f]{64}", fingerprint) is None:
+        raise ValueError("manifest.content_fingerprint must be a lowercase SHA-256 digest")
+    calculated = _sha256_text(
+        json.dumps(
+            _fingerprint_payload_from_manifest(manifest),
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        )
+    )
+    if fingerprint != calculated:
+        raise ValueError("manifest.content_fingerprint does not match publication content")
+    return fingerprint
+
+
+def _fingerprint_payload_from_manifest(manifest: Mapping[str, Any]) -> dict[str, Any]:
+    source = _mapping(manifest.get("source"), "manifest.source")
+    return {
+        "generator": dict(_mapping(manifest.get("generator"), "manifest.generator")),
+        "status": _text(manifest.get("status"), "manifest.status"),
+        "period": _text(manifest.get("period"), "manifest.period"),
+        "run_date": _text(manifest.get("run_date"), "manifest.run_date"),
+        "issue": dict(_mapping(manifest.get("issue"), "manifest.issue")),
+        "source": {
+            "report_sha256": _text(source.get("report_sha256"), "manifest.report_sha256"),
+            "poster_manifest_sha256": _text(
+                source.get("poster_manifest_sha256"),
+                "manifest.poster_manifest_sha256",
+            ),
+        },
+        "editorial": dict(_mapping(manifest.get("editorial"), "manifest.editorial")),
+        "boards": _fingerprint_boards(_sequence(manifest.get("boards"), "manifest.boards")),
+        "checklist_sha256": _text(manifest.get("checklist_sha256"), "manifest.checklist_sha256"),
+    }
+
+
+def _manifest_content_projection(manifest: Mapping[str, Any]) -> dict[str, Any]:
+    return {
+        "schema_version": manifest.get("schema_version"),
+        "content_fingerprint": _history_fingerprint(manifest),
+        **_fingerprint_payload_from_manifest(manifest),
+        "source": dict(_mapping(manifest.get("source"), "manifest.source")),
+    }
+
+
 def _rotate_current(target: Path, archive_root: Path) -> Path | None:
     if not target.exists():
         return None
@@ -908,6 +1492,21 @@ def _sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def _sha256_text_file(path: Path) -> str:
+    """Hash UTF-8 text after universal-newline normalization.
+
+    Git may check tracked text out as CRLF on Windows and LF on Linux.  A
+    publication fingerprint must describe content rather than a workstation's
+    line-ending policy, so all text hashes use canonical LF before hashing.
+    """
+
+    try:
+        value = path.read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as exc:
+        raise ValueError(f"publication text cannot be read as UTF-8: {path}") from exc
+    return _sha256_text(value)
+
+
 def _sha256_text(value: str) -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
 
@@ -918,14 +1517,18 @@ def _fingerprint_boards(boards: Sequence[Mapping[str, Any]]) -> list[dict[str, A
     normalized: list[dict[str, Any]] = []
     for board in boards:
         item = dict(board)
-        item["images"] = [
-            {
+        normalized_images: list[dict[str, Any]] = []
+        for image in _sequence(board.get("images"), "board.images"):
+            normalized_image = {
                 key: value
                 for key, value in _mapping(image, "board.image").items()
-                if key != "materialization"
+                if key not in {"materialization", "publication_path"}
             }
-            for image in _sequence(board.get("images"), "board.images")
-        ]
+            publication_path = _mapping(image, "board.image").get("publication_path")
+            if "path" not in normalized_image and publication_path is not None:
+                normalized_image["path"] = publication_path
+            normalized_images.append(normalized_image)
+        item["images"] = normalized_images
         normalized.append(item)
     return normalized
 

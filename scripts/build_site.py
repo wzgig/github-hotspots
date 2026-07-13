@@ -15,6 +15,8 @@ from typing import Any
 
 from PIL import Image, UnidentifiedImageError
 
+from github_hotspots.config import ConfigurationError, validate_poster_dimensions
+
 DATA_VARIABLE = "GITHUB_HOTSPOTS_DATA"
 REPORT_LIMITS = {"daily": 3, "weekly": 7}
 BOARD_LABELS = {
@@ -22,7 +24,7 @@ BOARD_LABELS = {
     "ai": "AI 专题榜",
 }
 SUPPORTED_REPORT_SCHEMAS = {1, 2, 3}
-POSTER_SIZE = (1200, 1600)
+DEFAULT_POSTER_SIZE = (1200, 1600)
 MAX_POSTER_BYTES = 5 * 1024 * 1024
 
 METRICS = [
@@ -226,8 +228,15 @@ def _safe_float(value: Any, default: float = 0.0) -> float:
         return default
 
 
-def _publish_asset(root: Path, public_root: Path, value: Any, *, period: str) -> str:
-    if not isinstance(value, str) or not value.strip():
+def _publish_asset(
+    root: Path,
+    public_root: Path,
+    value: Any,
+    *,
+    period: str,
+    poster_size: tuple[int, int] | None,
+) -> str:
+    if poster_size is None or not isinstance(value, str) or not value.strip():
         return ""
     root = root.resolve()
     asset_root = (root / "reports" / period / "assets").resolve()
@@ -243,7 +252,7 @@ def _publish_asset(root: Path, public_root: Path, value: Any, *, period: str) ->
         if source.stat().st_size > MAX_POSTER_BYTES:
             return ""
         with Image.open(source) as poster:
-            if poster.format != "PNG" or poster.size != POSTER_SIZE:
+            if poster.format != "PNG" or poster.size != poster_size:
                 return ""
             poster.verify()
     except (OSError, UnidentifiedImageError, Image.DecompressionBombError):
@@ -261,6 +270,7 @@ def _normalise_repository(
     *,
     root: Path,
     public_root: Path,
+    poster_size: tuple[int, int] | None,
 ) -> dict[str, Any]:
     summary = repository.get("summary")
     summary = summary if isinstance(summary, dict) else {}
@@ -312,6 +322,7 @@ def _normalise_repository(
             public_root,
             assets.get("poster"),
             period=period,
+            poster_size=poster_size,
         ),
         "component_percentiles": (
             {str(key): round(_safe_float(value), 2) for key, value in percentiles.items()}
@@ -327,6 +338,7 @@ def _normalise_repositories(
     *,
     root: Path,
     public_root: Path,
+    poster_size: tuple[int, int] | None,
 ) -> list[dict[str, Any]]:
     if not isinstance(repositories, list):
         return []
@@ -341,6 +353,7 @@ def _normalise_repositories(
             period,
             root=root,
             public_root=public_root,
+            poster_size=poster_size,
         )
         for index, repository in enumerate(ordered, start=1)
     ]
@@ -354,6 +367,7 @@ def _normalise_board(
     *,
     root: Path,
     public_root: Path,
+    poster_size: tuple[int, int] | None,
 ) -> dict[str, Any]:
     boards = payload.get("boards")
     board = boards.get(board_name) if isinstance(boards, dict) else None
@@ -371,12 +385,14 @@ def _normalise_board(
             public_root,
             board_assets.get("cover"),
             period=period,
+            poster_size=poster_size,
         ),
         "repositories": _normalise_repositories(
             repositories,
             period,
             root=root,
             public_root=public_root,
+            poster_size=poster_size,
         ),
     }
 
@@ -389,6 +405,7 @@ def _normalise_report(
     public_root: Path,
 ) -> dict[str, Any]:
     legacy_repositories = payload.get("repositories")
+    poster_size = _report_poster_size(payload)
     comprehensive = _normalise_board(
         payload,
         "comprehensive",
@@ -396,6 +413,7 @@ def _normalise_report(
         fallback_repositories=legacy_repositories,
         root=root,
         public_root=public_root,
+        poster_size=poster_size,
     )
     ai = _normalise_board(
         payload,
@@ -403,6 +421,7 @@ def _normalise_report(
         period,
         root=root,
         public_root=public_root,
+        poster_size=poster_size,
     )
     warnings = payload.get("warnings")
     publication = payload.get("publication")
@@ -429,6 +448,26 @@ def _normalise_report(
             "ai": ai,
         },
     }
+
+
+def _report_poster_size(payload: dict[str, Any]) -> tuple[int, int] | None:
+    """Read the generated report's poster contract, preserving legacy defaults."""
+
+    assets = payload.get("assets")
+    if not isinstance(assets, dict):
+        return DEFAULT_POSTER_SIZE
+    if assets.get("enabled") is not True:
+        return None
+    width = assets.get("width")
+    height = assets.get("height")
+    if isinstance(width, bool) or not isinstance(width, int):
+        return None
+    if isinstance(height, bool) or not isinstance(height, int):
+        return None
+    try:
+        return validate_poster_dimensions(width, height)
+    except ConfigurationError:
+        return None
 
 
 def _github_url(value: str) -> str:

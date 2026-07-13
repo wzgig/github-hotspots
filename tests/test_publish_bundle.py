@@ -8,18 +8,21 @@ import pytest
 import yaml
 from PIL import Image
 
-from github_hotspots import publish_bundle
+import github_hotspots.publish_bundle as publish_bundle_module
 from github_hotspots.config import Settings, load_settings
-from github_hotspots.publish_bundle import build_publish_bundle, publication_issue
+from github_hotspots.publish_bundle import (
+    build_publish_bundle,
+    publication_issue,
+    refresh_history_index,
+)
 
 
-def _settings(tmp_path: Path, *, prefer_hardlinks: bool = True) -> Settings:
+def _settings(tmp_path: Path) -> Settings:
     document = yaml.safe_load(Path("config/hotspots.yaml").read_text(encoding="utf-8"))
     assert isinstance(document, dict)
     publication = document["publication"]
     assert isinstance(publication, dict)
     publication["root_dir"] = "publish"
-    publication["prefer_hardlinks"] = prefer_hardlinks
     config_path = tmp_path / "config" / "hotspots.yaml"
     config_path.parent.mkdir(parents=True)
     config_path.write_text(
@@ -86,7 +89,7 @@ def _write_report(
         cover = asset_dir / f"{stem}.{board}.cover.png"
         project = asset_dir / f"{stem}.{board}.01.{board}.png"
         _write_png(cover, size=image_size, color=colors[board])
-        _write_png(project, color="#F5F0E8")
+        _write_png(project, size=image_size, color="#F5F0E8")
         cover_path = cover.relative_to(tmp_path).as_posix()
         if board == "comprehensive" and cover_override is not None:
             cover_path = cover_override
@@ -131,7 +134,12 @@ def _write_report(
         "period": period,
         "run_date": run_date.isoformat(),
         "generated_at": f"{run_date.isoformat()}T09:00:00+08:00",
-        "assets": {"manifest": manifest_path.relative_to(tmp_path).as_posix()},
+        "assets": {
+            "enabled": True,
+            "width": image_size[0],
+            "height": image_size[1],
+            "manifest": manifest_path.relative_to(tmp_path).as_posix(),
+        },
         "editorial": editorial,
         "boards": report_boards,
     }
@@ -148,8 +156,8 @@ def _write_report(
         "style_version": "original-editorial-v4",
         "enabled": True,
         "format": "png",
-        "width": 1200,
-        "height": 1600,
+        "width": image_size[0],
+        "height": image_size[1],
         "boards": manifest_boards,
     }
     manifest_path.write_text(
@@ -161,6 +169,12 @@ def _write_report(
 
 def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _rewrite_with_crlf(path: Path) -> None:
+    value = path.read_text(encoding="utf-8")
+    normalized = value.replace("\r\n", "\n").replace("\r", "\n")
+    path.write_bytes(normalized.replace("\n", "\r\n").encode("utf-8"))
 
 
 def test_publication_issue_starts_daily_and_weekly_at_one(tmp_path: Path) -> None:
@@ -229,7 +243,7 @@ def test_build_publish_bundle_creates_four_ready_board_packages(tmp_path: Path) 
     assert manifest["status"] == "draft"
     assert manifest["generator"] == {
         "name": "github-hotspots-publish-bundle",
-        "version": "1.0",
+        "version": "1.1",
     }
     assert len(manifest["content_fingerprint"]) == 64
     assert manifest["issue"] == {
@@ -251,7 +265,7 @@ def test_build_publish_bundle_creates_four_ready_board_packages(tmp_path: Path) 
             assert packaged.is_file()
             assert image["sha256"] == _sha256(packaged) == _sha256(source)
             assert (image["width"], image["height"]) == (1200, 1600)
-            assert image["materialization"] in {"hardlink", "copy"}
+            assert image["materialization"] == "copy"
 
     today = daily.today.read_text(encoding="utf-8")
     assert "日报 · D001" in today
@@ -259,6 +273,58 @@ def test_build_publish_bundle_creates_four_ready_board_packages(tmp_path: Path) 
     assert "D001-C" in today and "D001-A" in today
     assert "W001-C" in today and "W001-A" in today
     assert (tmp_path / "publish" / "logs" / "publication.jsonl").is_file()
+
+    daily_history = daily.history_dir
+    assert daily_history == (
+        tmp_path
+        / "publish"
+        / "history"
+        / "daily"
+        / "2026"
+        / "2026-07-12"
+        / manifest["content_fingerprint"][:12]
+    )
+    history_manifest = json.loads(daily.history_manifest.read_text(encoding="utf-8"))
+    assert history_manifest["history"] == {
+        "schema_version": 1,
+        "kind": "thin-publication-history",
+        "report_stem": "2026-07-12",
+        "revision": manifest["content_fingerprint"][:12],
+        "image_policy": "repository-source-reference",
+    }
+    assert not list(daily_history.rglob("*.png"))
+    assert {
+        path.relative_to(daily_history).as_posix()
+        for path in daily_history.rglob("*")
+        if path.is_file()
+    } == {
+        "MANIFEST.json",
+        "CHECKLIST.md",
+        "01-comprehensive/TITLE.txt",
+        "01-comprehensive/CAPTION.txt",
+        "01-comprehensive/REVIEW.md",
+        "02-ai/TITLE.txt",
+        "02-ai/CAPTION.txt",
+        "02-ai/REVIEW.md",
+    }
+    for board in history_manifest["boards"]:
+        for image in board["images"]:
+            assert "path" not in image
+            assert "materialization" not in image
+            assert image["source"].startswith("reports/daily/assets/2026-07-12/")
+            assert _sha256(tmp_path / image["source"]) == image["sha256"]
+
+    history_index = json.loads(daily.history_index_json.read_text(encoding="utf-8"))
+    assert [(item["period"], item["issue"]["code"]) for item in history_index["issues"]] == [
+        ("daily", "D001"),
+        ("weekly", "W001"),
+    ]
+    assert all(item["latest"] in item["revisions"] for item in history_index["issues"])
+    history_markdown = daily.history_index_markdown.read_text(encoding="utf-8")
+    assert "D001" in history_markdown
+    assert "W001" in history_markdown
+    assert "/01-comprehensive/CAPTION.txt)" in history_markdown
+    assert "/02-ai/CAPTION.txt)" in history_markdown
 
 
 def test_build_publish_bundle_archives_previous_current_without_overwrite(tmp_path: Path) -> None:
@@ -285,6 +351,206 @@ def test_build_publish_bundle_archives_previous_current_without_overwrite(tmp_pa
     assert "晚些时候再发布周报综合榜" not in today
 
 
+def test_same_fingerprint_reuses_intact_current_and_history(tmp_path: Path) -> None:
+    settings = _settings(tmp_path)
+    report = _write_report(tmp_path, period="daily", run_date=date(2026, 7, 12))
+
+    first = build_publish_bundle(settings, report)
+    first_index = first.history_index_json.read_bytes()
+    second = build_publish_bundle(settings, report)
+
+    assert second.current_dir == first.current_dir
+    assert second.history_dir == first.history_dir
+    assert second.archived_dir is None
+    assert second.history_index_json.read_bytes() == first_index
+    assert not (tmp_path / "publish" / "archive").exists()
+    revisions = list((tmp_path / "publish" / "history" / "daily" / "2026" / "2026-07-12").iterdir())
+    assert revisions == [first.history_dir]
+
+
+def test_publish_hashes_are_stable_across_lf_and_crlf_checkouts(tmp_path: Path) -> None:
+    settings = _settings(tmp_path)
+    report = _write_report(tmp_path, period="daily", run_date=date(2026, 7, 12))
+    first = build_publish_bundle(settings, report)
+    assert first.current_dir is not None
+
+    poster_manifest = tmp_path / "reports" / "daily" / "assets" / "2026-07-12" / "manifest.json"
+    for path in (report, poster_manifest):
+        _rewrite_with_crlf(path)
+    for root in (first.current_dir, first.history_dir):
+        for path in root.rglob("*"):
+            if path.is_file() and path.suffix.casefold() in {".json", ".md", ".txt"}:
+                _rewrite_with_crlf(path)
+
+    rebuilt = build_publish_bundle(settings, report)
+
+    assert rebuilt.history_dir == first.history_dir
+    assert rebuilt.archived_dir is None
+    assert not (tmp_path / "publish" / "archive").exists()
+
+
+@pytest.mark.parametrize("damage", ["caption", "image"])
+def test_same_fingerprint_does_not_reuse_modified_or_missing_current(
+    tmp_path: Path,
+    damage: str,
+) -> None:
+    settings = _settings(tmp_path)
+    report = _write_report(tmp_path, period="daily", run_date=date(2026, 7, 12))
+    first = build_publish_bundle(settings, report)
+    assert first.current_dir is not None
+    original_caption = (first.current_dir / "01-comprehensive" / "CAPTION.txt").read_text(
+        encoding="utf-8"
+    )
+    if damage == "caption":
+        (first.current_dir / "01-comprehensive" / "CAPTION.txt").write_text(
+            "人工修改后的待发布文案\n",
+            encoding="utf-8",
+        )
+    else:
+        next((first.current_dir / "01-comprehensive" / "images").glob("*.png")).unlink()
+
+    rebuilt = build_publish_bundle(settings, report)
+
+    assert rebuilt.archived_dir is not None
+    assert rebuilt.current_dir is not None
+    assert (rebuilt.current_dir / "01-comprehensive" / "CAPTION.txt").read_text(
+        encoding="utf-8"
+    ) == original_caption
+    assert len(list(rebuilt.history_dir.parent.iterdir())) == 1
+    if damage == "caption":
+        assert (rebuilt.archived_dir / "01-comprehensive" / "CAPTION.txt").read_text(
+            encoding="utf-8"
+        ) == "人工修改后的待发布文案\n"
+
+
+def test_changed_fingerprint_creates_revision_without_overwriting_history(tmp_path: Path) -> None:
+    settings = _settings(tmp_path)
+    report = _write_report(tmp_path, period="daily", run_date=date(2026, 7, 12))
+    first = build_publish_bundle(settings, report)
+    report_data = json.loads(report.read_text(encoding="utf-8"))
+    report_data["boards"]["comprehensive"]["repositories"][0]["summary"]["one_line"] = (
+        "把重复开发任务变成可检查的自动化流水线"
+    )
+    report.write_text(
+        json.dumps(report_data, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    revised = build_publish_bundle(settings, report)
+
+    assert revised.history_dir != first.history_dir
+    assert first.history_dir.is_dir()
+    assert revised.history_dir.is_dir()
+    assert len(list(revised.history_dir.parent.iterdir())) == 2
+    index = json.loads(revised.history_index_json.read_text(encoding="utf-8"))
+    daily = next(item for item in index["issues"] if item["period"] == "daily")
+    assert len(daily["revisions"]) == 2
+    assert (
+        daily["latest"]["fingerprint"]
+        == json.loads(revised.history_manifest.read_text(encoding="utf-8"))["content_fingerprint"]
+    )
+
+
+def test_history_only_repairs_corrupt_existing_revision(tmp_path: Path) -> None:
+    settings = _settings(tmp_path)
+    report = _write_report(tmp_path, period="daily", run_date=date(2026, 7, 12))
+    first = build_publish_bundle(settings, report)
+    damaged = first.history_dir / "01-comprehensive" / "CAPTION.txt"
+    expected = damaged.read_text(encoding="utf-8")
+    damaged.write_text("corrupt history\n", encoding="utf-8")
+
+    repaired = build_publish_bundle(settings, report, activate_current=False)
+
+    assert repaired.history_dir == first.history_dir
+    assert damaged.read_text(encoding="utf-8") == expected
+    assert [path.name for path in repaired.history_dir.parent.iterdir()] == [
+        repaired.history_dir.name
+    ]
+
+
+def test_history_repair_survives_locked_quarantine_cleanup(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    settings = _settings(tmp_path)
+    report = _write_report(tmp_path, period="daily", run_date=date(2026, 7, 12))
+    first = build_publish_bundle(settings, report)
+    damaged = first.history_dir / "01-comprehensive" / "CAPTION.txt"
+    expected = damaged.read_text(encoding="utf-8")
+    damaged.write_text("corrupt history\n", encoding="utf-8")
+    original_rmtree = publish_bundle_module.shutil.rmtree
+
+    def locked_quarantine(path: Path, *args: Any, **kwargs: Any) -> None:
+        candidate = Path(path)
+        if "history-recovery" in candidate.parts:
+            raise OSError("simulated Windows file lock")
+        original_rmtree(path, *args, **kwargs)
+
+    monkeypatch.setattr(publish_bundle_module.shutil, "rmtree", locked_quarantine)
+
+    repaired = build_publish_bundle(settings, report, activate_current=False)
+
+    assert repaired.history_dir == first.history_dir
+    assert damaged.read_text(encoding="utf-8") == expected
+    refresh_history_index(tmp_path / "publish")
+    assert [path.name for path in repaired.history_dir.parent.iterdir()] == [
+        repaired.history_dir.name
+    ]
+    recovery_root = (
+        tmp_path / "publish" / "archive" / "history-recovery" / "daily" / "2026" / "2026-07-12"
+    )
+    assert len(list(recovery_root.iterdir())) == 1
+
+
+def test_history_only_backfill_does_not_downgrade_current(tmp_path: Path) -> None:
+    settings = _settings(tmp_path)
+    older_report = _write_report(tmp_path, period="daily", run_date=date(2026, 7, 12))
+    newer_report = _write_report(tmp_path, period="daily", run_date=date(2026, 7, 13))
+    current = build_publish_bundle(settings, newer_report)
+    assert current.current_dir is not None
+
+    with pytest.raises(ValueError, match="refusing to activate older daily report"):
+        build_publish_bundle(settings, older_report)
+
+    history = build_publish_bundle(settings, older_report, activate_current=False)
+    assert history.activated_current is False
+    assert history.current_dir is None
+    assert history.manifest is None
+    assert history.board_dirs == ()
+    assert history.history_dir.is_dir()
+    assert (
+        json.loads((current.current_dir / "MANIFEST.json").read_text(encoding="utf-8"))["issue"][
+            "code"
+        ]
+        == "D002"
+    )
+
+    activated = build_publish_bundle(
+        settings,
+        older_report,
+        allow_older_current=True,
+    )
+    assert activated.activated_current is True
+    assert activated.archived_dir is not None
+    assert activated.manifest is not None
+    assert json.loads(activated.manifest.read_text(encoding="utf-8"))["issue"]["code"] == "D001"
+
+
+def test_history_indexes_can_be_rebuilt_from_revision_manifests(tmp_path: Path) -> None:
+    settings = _settings(tmp_path)
+    report = _write_report(tmp_path, period="daily", run_date=date(2026, 7, 12))
+    artifacts = build_publish_bundle(settings, report, activate_current=False)
+    expected_json = artifacts.history_index_json.read_bytes()
+    expected_markdown = artifacts.history_index_markdown.read_bytes()
+    artifacts.history_index_json.unlink()
+    artifacts.history_index_markdown.unlink()
+
+    json_path, markdown_path = refresh_history_index(tmp_path / "publish")
+
+    assert json_path.read_bytes() == expected_json
+    assert markdown_path.read_bytes() == expected_markdown
+
+
 def test_build_publish_bundle_marks_prelaunch_report_as_preview(tmp_path: Path) -> None:
     settings = _settings(tmp_path)
     report = _write_report(tmp_path, period="daily", run_date=date(2026, 7, 11))
@@ -298,43 +564,47 @@ def test_build_publish_bundle_marks_prelaunch_report_as_preview(tmp_path: Path) 
     assert all(board["status"] == "preview" for board in manifest["boards"])
 
 
-def test_build_publish_bundle_falls_back_to_copy_when_hardlink_fails(
-    tmp_path: Path,
-    monkeypatch,
-) -> None:
-    settings = _settings(tmp_path, prefer_hardlinks=True)
+def test_publish_workbench_images_are_independent_copies(tmp_path: Path) -> None:
+    settings = _settings(tmp_path)
     report = _write_report(tmp_path, period="daily", run_date=date(2026, 7, 12))
-
-    def fail_link(*_args, **_kwargs):
-        raise OSError("hardlinks unavailable")
-
-    monkeypatch.setattr(publish_bundle.os, "link", fail_link)
     artifacts = build_publish_bundle(settings, report)
     manifest = json.loads(artifacts.manifest.read_text(encoding="utf-8"))
+    board = manifest["boards"][0]
+    image = board["images"][0]
+    packaged = artifacts.current_dir / board["directory"] / image["path"]
+    source = tmp_path / image["source"]
+    source_hash = _sha256(source)
 
     assert {
         image["materialization"] for board in manifest["boards"] for image in board["images"]
     } == {"copy"}
+    packaged.write_bytes(b"human-edited-working-copy")
+    assert _sha256(source) == source_hash
+
+    rebuilt = build_publish_bundle(settings, report)
+
+    assert rebuilt.archived_dir is not None
+    assert _sha256(source) == source_hash
+    assert _sha256(rebuilt.current_dir / board["directory"] / image["path"]) == source_hash
 
 
-def test_publish_fingerprint_is_independent_of_hardlink_or_copy(tmp_path: Path) -> None:
-    linked_root = tmp_path / "linked"
-    copied_root = tmp_path / "copied"
-    linked_root.mkdir()
-    copied_root.mkdir()
-    linked_report = _write_report(linked_root, period="daily", run_date=date(2026, 7, 12))
-    copied_report = _write_report(copied_root, period="daily", run_date=date(2026, 7, 12))
+def test_build_publish_bundle_accepts_configured_legal_poster_dimensions(tmp_path: Path) -> None:
+    settings = _settings(tmp_path)
+    report = _write_report(
+        tmp_path,
+        period="daily",
+        run_date=date(2026, 7, 12),
+        image_size=(600, 800),
+    )
 
-    linked = build_publish_bundle(_settings(linked_root, prefer_hardlinks=True), linked_report)
-    linked_manifest = json.loads(linked.manifest.read_text(encoding="utf-8"))
+    artifacts = build_publish_bundle(settings, report)
+    manifest = json.loads(artifacts.manifest.read_text(encoding="utf-8"))
 
-    copied = build_publish_bundle(_settings(copied_root, prefer_hardlinks=False), copied_report)
-    copied_manifest = json.loads(copied.manifest.read_text(encoding="utf-8"))
-
-    assert linked_manifest["content_fingerprint"] == copied_manifest["content_fingerprint"]
     assert {
-        image["materialization"] for board in copied_manifest["boards"] for image in board["images"]
-    } == {"copy"}
+        (image["width"], image["height"])
+        for board in manifest["boards"]
+        for image in board["images"]
+    } == {(600, 800)}
 
 
 def test_build_publish_bundle_rejects_unsafe_or_unpublishable_inputs(tmp_path: Path) -> None:
@@ -352,9 +622,9 @@ def test_build_publish_bundle_rejects_unsafe_or_unpublishable_inputs(tmp_path: P
         tmp_path,
         period="daily",
         run_date=date(2026, 7, 13),
-        image_size=(600, 800),
+        image_size=(601, 800),
     )
-    with pytest.raises(ValueError, match="must be 1200x1600"):
+    with pytest.raises(ValueError, match="3:4"):
         build_publish_bundle(settings, wrong_size)
 
     invalid_editorial = {
