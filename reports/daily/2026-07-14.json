@@ -1,0 +1,1519 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-14",
+  "window_start": "2026-07-13",
+  "window_end": "2026-07-14",
+  "generated_at": "2026-07-14T07:30:43+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-13 至 2026-07-14",
+  "publication": {
+    "issue_number": 3,
+    "issue_code": "D003",
+    "issue_label": "第3期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "AI 专题榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-14",
+    "manifest": "reports/daily/assets/2026-07-14/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "HKUDS/Vibe-Trading",
+            "path": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.01.hkuds--vibe-trading.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.03.firecrawl--firecrawl.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-14/2026-07-14.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "HKUDS/Vibe-Trading",
+            "path": "reports/daily/assets/2026-07-14/2026-07-14.ai.01.hkuds--vibe-trading.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Graphify-Labs/graphify",
+            "path": "reports/daily/assets/2026-07-14/2026-07-14.ai.02.graphify-labs--graphify.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-14/2026-07-14.ai.03.shubhamsaboo--awesome-llm-apps.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 3,
+      "issue_code": "D003",
+      "issue_label": "第3期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1198306812,
+      "full_name": "HKUDS/Vibe-Trading",
+      "owner": "HKUDS",
+      "name": "Vibe-Trading",
+      "html_url": "https://github.com/HKUDS/Vibe-Trading",
+      "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+      "language": "Python",
+      "stars": 21701,
+      "forks": 3751,
+      "open_issues": 19,
+      "watchers": 180,
+      "topics": [
+        "ai-agent",
+        "algorithmic-trading",
+        "backtesting",
+        "fintech",
+        "llm",
+        "mcp",
+        "multi-agent",
+        "python",
+        "quantitative-finance",
+        "trading"
+      ],
+      "created_at": "2026-04-01T09:52:20Z",
+      "updated_at": "2026-07-13T23:30:02Z",
+      "pushed_at": "2026-07-13T05:08:00Z",
+      "daily_stars": 1148,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 88.92,
+      "star_delta": 943,
+      "fork_delta": 131,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.88,
+        "relative_growth": 98.44,
+        "fork_growth": 98.44,
+        "total_stars": 12.5,
+        "activity": 71.65,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "把金融问题变成可运行的研究、策略回测和报告，并保留过程与结果供后续复用。",
+        "highlights": [
+          "用自然语言发起市场研究与策略回测",
+          "从交易记录提取规则并对照影子策略",
+          "组织多智能体团队完成投研与风险复核"
+        ],
+        "audience": "适合需要研究市场、验证策略、复盘交易记录，或把金融分析接入智能体工作流的个人与开发者。",
+        "capabilities": [
+          "查询市场数据并整理研究结论",
+          "生成策略代码并运行跨市场回测",
+          "分析交易日志中的行为偏差",
+          "调用多智能体团队并行完成投研",
+          "导出报告和多平台策略文件"
+        ],
+        "core_title": "从问题到可检查的研究产物",
+        "core_summary": "工作流先加载市场、文档或网页信息，再生成并执行策略，补充指标、验证和警告，最终交付报告、运行记录与可继续使用的导出文件。",
+        "prerequisites": "需要可用的 LLM API Key，或本地运行 Ollama；本地安装要求 Python 3.11+，Docker 路径需要 Docker。",
+        "limitations": "定位于研究、模拟与回测；实盘仅在用户授权和限额内运行，部分券商连接器只读或仅支持模拟盘。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "5f4e751202655d3d7e2f399545d817765afadd23",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+          ],
+          "highlights": [
+            [
+              "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+            ],
+            [
+              "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+            ],
+            [
+              "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+            ]
+          ],
+          "audience": [
+            "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+          ],
+          "capabilities": [
+            [
+              "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+            ],
+            [
+              "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+            ],
+            [
+              "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+            ],
+            [
+              "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+            ],
+            [
+              "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+            ]
+          ],
+          "core_title": [
+            "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+          ],
+          "core_summary": [
+            "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+          ],
+          "prerequisites": [
+            "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+          ],
+          "limitations": [
+            "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-14/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+      "publication_evidence": {
+        "full_name": "HKUDS/Vibe-Trading",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "5f4e751202655d3d7e2f399545d817765afadd23",
+          "source_url": "https://api.github.com/repos/HKUDS/Vibe-Trading/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-14/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+          "sha256": "52cdd4efd7f76c0ac0b36cf6c1f7ca24a8bfbb2db5d8dcd53d7dee8b3f93c721",
+          "width": 357,
+          "height": 357
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.01.hkuds--vibe-trading.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1024554267,
+      "full_name": "NousResearch/hermes-agent",
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "html_url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": 214248,
+      "forks": 39799,
+      "open_issues": 25575,
+      "watchers": 214248,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "clawdbot",
+        "codex",
+        "hermes",
+        "hermes-agent",
+        "llm",
+        "moltbot",
+        "nous-research",
+        "openai",
+        "openclaw"
+      ],
+      "created_at": "2025-07-22T22:22:28Z",
+      "updated_at": "2026-07-13T23:16:16Z",
+      "pushed_at": "2026-07-13T22:58:35Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 85.0,
+      "star_delta": 421,
+      "fork_delta": 149,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 87.5,
+        "relative_growth": 84.38,
+        "fork_growth": 100.0,
+        "total_stars": 87.5,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "让个人智能体从任务经验中沉淀记忆和技能，并跨终端与消息平台持续工作。",
+        "highlights": [
+          "从复杂任务中创建并持续改进技能",
+          "搜索历史对话并积累跨会话用户模型",
+          "把同一智能体接入终端和消息平台"
+        ],
+        "audience": "适合希望长期使用个人智能体，自动处理定时任务、跨平台对话或并行工作流的用户与开发者。",
+        "capabilities": [
+          "保存记忆并检索过往会话",
+          "从任务经验创建和改进技能",
+          "安排定时任务并推送执行结果",
+          "派生隔离子智能体并行处理任务",
+          "切换模型和运行环境而不改代码"
+        ],
+        "core_title": "会积累经验的个人智能体",
+        "core_summary": "它把记忆、会话搜索、用户模型和技能系统连成学习闭环：复杂任务可沉淀为技能，后续使用时继续调整，并在不同会话中调用已有经验。",
+        "prerequisites": "安装器会准备 Python 3.11、Node.js、ripgrep 和 ffmpeg；使用前还需选择可用的模型提供方。",
+        "limitations": "云端、消息平台和部分工具需要额外配置；Termux 的完整依赖包含当前不兼容的语音组件。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "ba1322a389207c79032386e4053ac0e69a3c199d",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+          ],
+          "highlights": [
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ],
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ],
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ]
+          ],
+          "audience": [
+            "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+          ],
+          "capabilities": [
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ],
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ],
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ],
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ],
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ]
+          ],
+          "core_title": [
+            "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+          ],
+          "core_summary": [
+            "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+          ],
+          "prerequisites": [
+            "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+          ],
+          "limitations": [
+            "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-14/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+      "publication_evidence": {
+        "full_name": "NousResearch/hermes-agent",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "ba1322a389207c79032386e4053ac0e69a3c199d",
+          "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-14/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.02.nousresearch--hermes-agent.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 787076358,
+      "full_name": "firecrawl/firecrawl",
+      "owner": "firecrawl",
+      "name": "firecrawl",
+      "html_url": "https://github.com/firecrawl/firecrawl",
+      "description": "The API to search, scrape, and interact with the web at scale. 🔥",
+      "language": "TypeScript",
+      "stars": 150413,
+      "forks": 8594,
+      "open_issues": 395,
+      "watchers": 150413,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-crawler",
+        "ai-scraping",
+        "ai-search",
+        "crawler",
+        "data-extraction",
+        "html-to-markdown",
+        "llm",
+        "markdown",
+        "scraper",
+        "scraping",
+        "web-crawler",
+        "web-data",
+        "web-data-extraction",
+        "web-scraper",
+        "web-scraping",
+        "web-search",
+        "webscraping"
+      ],
+      "created_at": "2024-04-15T21:02:29Z",
+      "updated_at": "2026-07-13T23:27:26Z",
+      "pushed_at": "2026-07-13T20:28:51Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 84.45,
+      "star_delta": 434,
+      "fork_delta": 16,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 89.06,
+        "relative_growth": 87.5,
+        "fork_growth": 92.19,
+        "total_stars": 64.06,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "输入网址或数据需求，搜索并抓取网页，再输出适合程序和智能体处理的内容。",
+        "highlights": [
+          "把单个网页转成 Markdown 或结构化数据",
+          "遍历整站并异步抓取多批网址",
+          "在提取前执行点击、滚动和输入操作"
+        ],
+        "audience": "适合为智能体补充网页上下文、建设搜索与知识库，或批量采集网站内容的开发者。",
+        "capabilities": [
+          "搜索网页并返回结果全文",
+          "抓取页面并输出多种内容格式",
+          "发现站点内可访问的网址",
+          "批量异步处理多个页面",
+          "按提示操作页面后再提取内容"
+        ],
+        "core_title": "网页操作与内容提取合流",
+        "core_summary": "同一套接口覆盖搜索、单页抓取、整站遍历和页面交互；结果可整理成 Markdown、结构化数据或截图，便于直接接入程序与智能体流程。",
+        "prerequisites": "使用托管接口需先注册并获取 API Key；也可以按照自托管文档运行开源版本。",
+        "limitations": "抓取者须自行遵守网站政策、隐私政策和使用条款；默认遵循 robots.txt，云端版另含额外功能。",
+        "license_label": "AGPL-3.0",
+        "license_restrictions": "The SDKs and some UI components are licensed under the MIT License.",
+        "readme_sha": "b529073d6f2ca2f3affb5d06acbab3f65da4a556",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+          ],
+          "highlights": [
+            [
+              "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+            ],
+            [
+              "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+            ],
+            [
+              "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+            ]
+          ],
+          "audience": [
+            "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+          ],
+          "capabilities": [
+            [
+              "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+            ],
+            [
+              "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+            ],
+            [
+              "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+            ],
+            [
+              "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+            ],
+            [
+              "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+            ]
+          ],
+          "core_title": [
+            "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+          ],
+          "core_summary": [
+            "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+          ],
+          "prerequisites": [
+            "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+          ],
+          "limitations": [
+            "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-07-14/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+      "publication_evidence": {
+        "full_name": "firecrawl/firecrawl",
+        "license_spdx_id": "AGPL-3.0",
+        "readme": {
+          "sha": "b529073d6f2ca2f3affb5d06acbab3f65da4a556",
+          "source_url": "https://api.github.com/repos/firecrawl/firecrawl/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-14/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "AGPL-3.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.03.firecrawl--firecrawl.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "HKUDS/Vibe-Trading",
+            "path": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.01.hkuds--vibe-trading.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.03.firecrawl--firecrawl.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1198306812,
+          "full_name": "HKUDS/Vibe-Trading",
+          "owner": "HKUDS",
+          "name": "Vibe-Trading",
+          "html_url": "https://github.com/HKUDS/Vibe-Trading",
+          "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+          "language": "Python",
+          "stars": 21701,
+          "forks": 3751,
+          "open_issues": 19,
+          "watchers": 180,
+          "topics": [
+            "ai-agent",
+            "algorithmic-trading",
+            "backtesting",
+            "fintech",
+            "llm",
+            "mcp",
+            "multi-agent",
+            "python",
+            "quantitative-finance",
+            "trading"
+          ],
+          "created_at": "2026-04-01T09:52:20Z",
+          "updated_at": "2026-07-13T23:30:02Z",
+          "pushed_at": "2026-07-13T05:08:00Z",
+          "daily_stars": 1148,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 88.92,
+          "star_delta": 943,
+          "fork_delta": 131,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.88,
+            "relative_growth": 98.44,
+            "fork_growth": 98.44,
+            "total_stars": 12.5,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把金融问题变成可运行的研究、策略回测和报告，并保留过程与结果供后续复用。",
+            "highlights": [
+              "用自然语言发起市场研究与策略回测",
+              "从交易记录提取规则并对照影子策略",
+              "组织多智能体团队完成投研与风险复核"
+            ],
+            "audience": "适合需要研究市场、验证策略、复盘交易记录，或把金融分析接入智能体工作流的个人与开发者。",
+            "capabilities": [
+              "查询市场数据并整理研究结论",
+              "生成策略代码并运行跨市场回测",
+              "分析交易日志中的行为偏差",
+              "调用多智能体团队并行完成投研",
+              "导出报告和多平台策略文件"
+            ],
+            "core_title": "从问题到可检查的研究产物",
+            "core_summary": "工作流先加载市场、文档或网页信息，再生成并执行策略，补充指标、验证和警告，最终交付报告、运行记录与可继续使用的导出文件。",
+            "prerequisites": "需要可用的 LLM API Key，或本地运行 Ollama；本地安装要求 Python 3.11+，Docker 路径需要 Docker。",
+            "limitations": "定位于研究、模拟与回测；实盘仅在用户授权和限额内运行，部分券商连接器只读或仅支持模拟盘。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "5f4e751202655d3d7e2f399545d817765afadd23",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+              ],
+              "highlights": [
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ],
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ],
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ]
+              ],
+              "audience": [
+                "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ],
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ],
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ],
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ],
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ]
+              ],
+              "core_title": [
+                "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+              ],
+              "core_summary": [
+                "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+              ],
+              "prerequisites": [
+                "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+              ],
+              "limitations": [
+                "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-14/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+          "publication_evidence": {
+            "full_name": "HKUDS/Vibe-Trading",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "5f4e751202655d3d7e2f399545d817765afadd23",
+              "source_url": "https://api.github.com/repos/HKUDS/Vibe-Trading/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-14/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+              "sha256": "52cdd4efd7f76c0ac0b36cf6c1f7ca24a8bfbb2db5d8dcd53d7dee8b3f93c721",
+              "width": 357,
+              "height": 357
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.01.hkuds--vibe-trading.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 214248,
+          "forks": 39799,
+          "open_issues": 25575,
+          "watchers": 214248,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-07-13T23:16:16Z",
+          "pushed_at": "2026-07-13T22:58:35Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 85.0,
+          "star_delta": 421,
+          "fork_delta": 149,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 87.5,
+            "relative_growth": 84.38,
+            "fork_growth": 100.0,
+            "total_stars": 87.5,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "让个人智能体从任务经验中沉淀记忆和技能，并跨终端与消息平台持续工作。",
+            "highlights": [
+              "从复杂任务中创建并持续改进技能",
+              "搜索历史对话并积累跨会话用户模型",
+              "把同一智能体接入终端和消息平台"
+            ],
+            "audience": "适合希望长期使用个人智能体，自动处理定时任务、跨平台对话或并行工作流的用户与开发者。",
+            "capabilities": [
+              "保存记忆并检索过往会话",
+              "从任务经验创建和改进技能",
+              "安排定时任务并推送执行结果",
+              "派生隔离子智能体并行处理任务",
+              "切换模型和运行环境而不改代码"
+            ],
+            "core_title": "会积累经验的个人智能体",
+            "core_summary": "它把记忆、会话搜索、用户模型和技能系统连成学习闭环：复杂任务可沉淀为技能，后续使用时继续调整，并在不同会话中调用已有经验。",
+            "prerequisites": "安装器会准备 Python 3.11、Node.js、ripgrep 和 ffmpeg；使用前还需选择可用的模型提供方。",
+            "limitations": "云端、消息平台和部分工具需要额外配置；Termux 的完整依赖包含当前不兼容的语音组件。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "ba1322a389207c79032386e4053ac0e69a3c199d",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ]
+              ],
+              "audience": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "core_summary": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "prerequisites": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "limitations": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-14/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "ba1322a389207c79032386e4053ac0e69a3c199d",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-14/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.02.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 787076358,
+          "full_name": "firecrawl/firecrawl",
+          "owner": "firecrawl",
+          "name": "firecrawl",
+          "html_url": "https://github.com/firecrawl/firecrawl",
+          "description": "The API to search, scrape, and interact with the web at scale. 🔥",
+          "language": "TypeScript",
+          "stars": 150413,
+          "forks": 8594,
+          "open_issues": 395,
+          "watchers": 150413,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "ai-crawler",
+            "ai-scraping",
+            "ai-search",
+            "crawler",
+            "data-extraction",
+            "html-to-markdown",
+            "llm",
+            "markdown",
+            "scraper",
+            "scraping",
+            "web-crawler",
+            "web-data",
+            "web-data-extraction",
+            "web-scraper",
+            "web-scraping",
+            "web-search",
+            "webscraping"
+          ],
+          "created_at": "2024-04-15T21:02:29Z",
+          "updated_at": "2026-07-13T23:27:26Z",
+          "pushed_at": "2026-07-13T20:28:51Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 84.45,
+          "star_delta": 434,
+          "fork_delta": 16,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 89.06,
+            "relative_growth": 87.5,
+            "fork_growth": 92.19,
+            "total_stars": 64.06,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "输入网址或数据需求，搜索并抓取网页，再输出适合程序和智能体处理的内容。",
+            "highlights": [
+              "把单个网页转成 Markdown 或结构化数据",
+              "遍历整站并异步抓取多批网址",
+              "在提取前执行点击、滚动和输入操作"
+            ],
+            "audience": "适合为智能体补充网页上下文、建设搜索与知识库，或批量采集网站内容的开发者。",
+            "capabilities": [
+              "搜索网页并返回结果全文",
+              "抓取页面并输出多种内容格式",
+              "发现站点内可访问的网址",
+              "批量异步处理多个页面",
+              "按提示操作页面后再提取内容"
+            ],
+            "core_title": "网页操作与内容提取合流",
+            "core_summary": "同一套接口覆盖搜索、单页抓取、整站遍历和页面交互；结果可整理成 Markdown、结构化数据或截图，便于直接接入程序与智能体流程。",
+            "prerequisites": "使用托管接口需先注册并获取 API Key；也可以按照自托管文档运行开源版本。",
+            "limitations": "抓取者须自行遵守网站政策、隐私政策和使用条款；默认遵循 robots.txt，云端版另含额外功能。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "The SDKs and some UI components are licensed under the MIT License.",
+            "readme_sha": "b529073d6f2ca2f3affb5d06acbab3f65da4a556",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+              ],
+              "highlights": [
+                [
+                  "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+                ],
+                [
+                  "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+                ],
+                [
+                  "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+                ]
+              ],
+              "audience": [
+                "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+                ],
+                [
+                  "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+                ],
+                [
+                  "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+                ],
+                [
+                  "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+                ],
+                [
+                  "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+                ]
+              ],
+              "core_title": [
+                "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+              ],
+              "core_summary": [
+                "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+              ],
+              "prerequisites": [
+                "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+              ],
+              "limitations": [
+                "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:b529073d6f2ca2f3affb5d06acbab3f65da4a556"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-07-14/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "publication_evidence": {
+            "full_name": "firecrawl/firecrawl",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "b529073d6f2ca2f3affb5d06acbab3f65da4a556",
+              "source_url": "https://api.github.com/repos/firecrawl/firecrawl/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-14/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+              "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.03.firecrawl--firecrawl.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-14/2026-07-14.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "HKUDS/Vibe-Trading",
+            "path": "reports/daily/assets/2026-07-14/2026-07-14.ai.01.hkuds--vibe-trading.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Graphify-Labs/graphify",
+            "path": "reports/daily/assets/2026-07-14/2026-07-14.ai.02.graphify-labs--graphify.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-14/2026-07-14.ai.03.shubhamsaboo--awesome-llm-apps.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1198306812,
+          "full_name": "HKUDS/Vibe-Trading",
+          "owner": "HKUDS",
+          "name": "Vibe-Trading",
+          "html_url": "https://github.com/HKUDS/Vibe-Trading",
+          "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+          "language": "Python",
+          "stars": 21701,
+          "forks": 3751,
+          "open_issues": 19,
+          "watchers": 180,
+          "topics": [
+            "ai-agent",
+            "algorithmic-trading",
+            "backtesting",
+            "fintech",
+            "llm",
+            "mcp",
+            "multi-agent",
+            "python",
+            "quantitative-finance",
+            "trading"
+          ],
+          "created_at": "2026-04-01T09:52:20Z",
+          "updated_at": "2026-07-13T23:30:02Z",
+          "pushed_at": "2026-07-13T05:08:00Z",
+          "daily_stars": 1148,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 87.32,
+          "star_delta": 943,
+          "fork_delta": 131,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.0,
+            "relative_growth": 96.0,
+            "fork_growth": 96.0,
+            "total_stars": 4.0,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把交易问题变成可执行的研究、回测与报告，并可接入经纪商完成受限交易。",
+            "highlights": [
+              "自然语言串联数据、策略、回测与报告",
+              "用 Shadow Account 对照真实交易与规则策略",
+              "将研究会话接入多种消息渠道"
+            ],
+            "audience": "想把交易想法落成研究与回测的量化研究者，也适合需要复盘个人交易记录或编排多角色评审的用户。",
+            "capabilities": [
+              "用自然语言发起市场研究与策略分析",
+              "生成策略代码并运行跨市场回测",
+              "解析券商交易记录并诊断行为偏差",
+              "组织多智能体团队完成投资与风险评审",
+              "导出报告及 TradingView、TDX、MT5 产物"
+            ],
+            "core_title": "交易研究全流程工作台",
+            "core_summary": "同一工作区把自然语言问题路由到市场数据、策略生成、回测验证和报告导出，并用持久记忆保存可复用的研究流程。",
+            "prerequisites": "需要受支持的 LLM API Key，或本地运行 Ollama；本地安装要求 Python 3.11+，Docker 路径需 Docker。",
+            "limitations": "自主交易仅在用户自行授权经纪商并设定限制后启用；项目不托管资金，可随时停止。历史数据加载器不覆盖实时盘口。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "5f4e751202655d3d7e2f399545d817765afadd23",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+              ],
+              "highlights": [
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ],
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ],
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ]
+              ],
+              "audience": [
+                "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ],
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ],
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ],
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ],
+                [
+                  "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+                ]
+              ],
+              "core_title": [
+                "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+              ],
+              "core_summary": [
+                "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+              ],
+              "prerequisites": [
+                "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+              ],
+              "limitations": [
+                "github.readme:5f4e751202655d3d7e2f399545d817765afadd23"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-14/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+          "publication_evidence": {
+            "full_name": "HKUDS/Vibe-Trading",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "5f4e751202655d3d7e2f399545d817765afadd23",
+              "source_url": "https://api.github.com/repos/HKUDS/Vibe-Trading/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-14/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+              "sha256": "52cdd4efd7f76c0ac0b36cf6c1f7ca24a8bfbb2db5d8dcd53d7dee8b3f93c721",
+              "width": 357,
+              "height": 357
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-14/2026-07-14.ai.01.hkuds--vibe-trading.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1200597263,
+          "full_name": "Graphify-Labs/graphify",
+          "owner": "Graphify-Labs",
+          "name": "graphify",
+          "html_url": "https://github.com/Graphify-Labs/graphify",
+          "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+          "language": "Python",
+          "stars": 84634,
+          "forks": 8339,
+          "open_issues": 506,
+          "watchers": 299,
+          "topics": [
+            "antigravity",
+            "claude-code",
+            "codex",
+            "gemini",
+            "graphrag",
+            "knowledge-graph",
+            "leiden",
+            "openclaw",
+            "rag",
+            "skills",
+            "tree-sitter"
+          ],
+          "created_at": "2026-04-03T15:49:07Z",
+          "updated_at": "2026-07-13T23:30:12Z",
+          "pushed_at": "2026-07-13T22:21:17Z",
+          "daily_stars": 1028,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 83.47,
+          "star_delta": 1028,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 92.0,
+            "fork_growth": 26.0,
+            "total_stars": 16.0,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "把代码、文档和媒体整理成可查询的知识图谱，替代逐文件搜索和反复通读。",
+            "highlights": [
+              "本地解析代码并建立跨文件调用关系",
+              "为每条关系标记提取、推断或歧义状态",
+              "输出可交互图谱、摘要报告和完整 JSON"
+            ],
+            "audience": "维护大型代码库、做架构梳理或接手陌生项目的开发者，也适合需要把代码、数据库结构和资料放进同一图谱的团队。",
+            "capabilities": [
+              "扫描项目并生成统一知识图谱",
+              "查询概念并返回相关子图",
+              "追踪两个节点之间的最短路径",
+              "解释单个节点的来源与连接",
+              "合并代码、文档、PDF、图像和视频信息"
+            ],
+            "core_title": "从文件搜索切到图谱追踪",
+            "core_summary": "代码通过 tree-sitter 在本地解析，跨文件关系汇入 graph.json；查询、路径和节点解释直接沿图遍历，并标明源码关系与推断关系。",
+            "prerequisites": "需要 Python 3.10+；推荐使用 uv，也可用 pipx。处理 PDF、Office、视频等内容需安装对应可选组件。",
+            "limitations": "代码解析可完全本地完成；文档、PDF 和图像的语义提取会调用所选模型，除非改用本地后端。部分格式需额外组件。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "0a883e75b802e136bfffdbc17fff26bdfd087906",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+              ],
+              "highlights": [
+                [
+                  "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+                ],
+                [
+                  "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+                ],
+                [
+                  "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+                ]
+              ],
+              "audience": [
+                "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+                ],
+                [
+                  "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+                ],
+                [
+                  "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+                ],
+                [
+                  "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+                ],
+                [
+                  "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+                ]
+              ],
+              "core_title": [
+                "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+              ],
+              "core_summary": [
+                "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+              ],
+              "prerequisites": [
+                "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+              ],
+              "limitations": [
+                "github.readme:0a883e75b802e136bfffdbc17fff26bdfd087906"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-14/repo-6d32f94b62b2e7d2c679cc85-b1b141ca1ac91b5fdc5a5436.png",
+          "publication_evidence": {
+            "full_name": "Graphify-Labs/graphify",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "0a883e75b802e136bfffdbc17fff26bdfd087906",
+              "source_url": "https://api.github.com/repos/Graphify-Labs/graphify/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-14/repo-6d32f94b62b2e7d2c679cc85-b1b141ca1ac91b5fdc5a5436.png",
+              "sha256": "3118c47bbc24dfb7078e74d871b406eeb37aaf0d821a978315823bb38d89fab5",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-14/2026-07-14.ai.02.graphify-labs--graphify.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 793375104,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "owner": "Shubhamsaboo",
+          "name": "awesome-llm-apps",
+          "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+          "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+          "language": "Python",
+          "stars": 119551,
+          "forks": 17734,
+          "open_issues": 17,
+          "watchers": 1189,
+          "topics": [
+            "agents",
+            "llms",
+            "python",
+            "rag"
+          ],
+          "created_at": "2024-04-29T05:30:25Z",
+          "updated_at": "2026-07-13T23:30:09Z",
+          "pushed_at": "2026-07-11T00:14:37Z",
+          "daily_stars": 1006,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 80.03,
+          "star_delta": 784,
+          "fork_delta": 81,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.0,
+            "relative_growth": 88.0,
+            "fork_growth": 92.0,
+            "total_stars": 28.0,
+            "activity": 36.79,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "提供可直接运行和改造的 LLM 应用模板，省去重复搭建 Agent、RAG 与 MCP 基础流程。",
+            "highlights": [
+              "每个模板包含独立源码与运行入口",
+              "覆盖单智能体、多智能体、语音、RAG 和 MCP",
+              "可切换多家模型服务并配套分步教程"
+            ],
+            "audience": "准备学习或验证 LLM 应用思路的开发者，尤其适合从可运行样例起步，再替换模型、数据源和业务逻辑的场景。",
+            "capabilities": [
+              "克隆模板快速启动一个 AI Agent",
+              "改造现有 Agent 循环和工具调用",
+              "搭建多智能体协作任务",
+              "组合检索、记忆与多源 RAG 流程",
+              "参考语音、生成式界面和微调示例"
+            ],
+            "core_title": "按场景挑选可运行模板",
+            "core_summary": "仓库按 Agent、常驻任务、多智能体、语音、MCP、RAG、记忆和微调分类；每个示例独立放置源码，可从相近场景直接克隆和定制。",
+            "prerequisites": "需先克隆仓库，进入目标模板目录并安装 requirements.txt；部分示例需要相应模型服务的 API Key。",
+            "limitations": "各模板是彼此独立的起步代码，需按子目录配置依赖、模型和密钥，再结合自己的业务继续定制。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "97ecd4f1a9c72465e5924bbe838938c1d1aafa2c",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "highlights": [
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ]
+              ],
+              "audience": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ]
+              ],
+              "core_title": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "core_summary": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "prerequisites": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "limitations": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-14/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+          "publication_evidence": {
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "97ecd4f1a9c72465e5924bbe838938c1d1aafa2c",
+              "source_url": "https://api.github.com/repos/Shubhamsaboo/awesome-llm-apps/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-14/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+              "sha256": "9c1100d2d55c39b2ae1596fc4f14a81fcec96123d3ba96857d3a8fdb86d7a42a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-14/2026-07-14.ai.03.shubhamsaboo--awesome-llm-apps.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}

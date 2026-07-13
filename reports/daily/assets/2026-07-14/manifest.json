@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-07-14",
+  "window": {
+    "start": "2026-07-13",
+    "end": "2026-07-14"
+  },
+  "source_report": "reports/daily/2026-07-14.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-07-14",
+  "manifest": "reports/daily/assets/2026-07-14/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "HKUDS/Vibe-Trading",
+          "path": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.01.hkuds--vibe-trading.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.02.nousresearch--hermes-agent.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "firecrawl/firecrawl",
+          "path": "reports/daily/assets/2026-07-14/2026-07-14.comprehensive.03.firecrawl--firecrawl.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-07-14/2026-07-14.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "HKUDS/Vibe-Trading",
+          "path": "reports/daily/assets/2026-07-14/2026-07-14.ai.01.hkuds--vibe-trading.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "Graphify-Labs/graphify",
+          "path": "reports/daily/assets/2026-07-14/2026-07-14.ai.02.graphify-labs--graphify.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "path": "reports/daily/assets/2026-07-14/2026-07-14.ai.03.shubhamsaboo--awesome-llm-apps.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 3,
+    "issue_code": "D003",
+    "issue_label": "第3期",
+    "status": "official"
+  }
+}
