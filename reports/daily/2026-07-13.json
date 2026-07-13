@@ -1,0 +1,1490 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-13",
+  "window_start": "2026-07-12",
+  "window_end": "2026-07-13",
+  "generated_at": "2026-07-13T12:30:08+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-12 至 2026-07-13",
+  "publication": {
+    "issue_number": 2,
+    "issue_code": "D002",
+    "issue_label": "第2期",
+    "status": "official"
+  },
+  "data_quality": "中高：快照与 Trending 混合",
+  "warnings": [
+    "综合主榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号",
+    "AI 专题榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-13",
+    "manifest": "reports/daily/assets/2026-07-13/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.01.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.02.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "HKUDS/Vibe-Trading",
+            "path": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.03.hkuds--vibe-trading.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-13/2026-07-13.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-13/2026-07-13.ai.01.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-13/2026-07-13.ai.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "HKUDS/Vibe-Trading",
+            "path": "reports/daily/assets/2026-07-13/2026-07-13.ai.03.hkuds--vibe-trading.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 2,
+      "issue_code": "D002",
+      "issue_label": "第2期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1024554267,
+      "full_name": "NousResearch/hermes-agent",
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "html_url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": 213827,
+      "forks": 39650,
+      "open_issues": 26630,
+      "watchers": 213827,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "clawdbot",
+        "codex",
+        "hermes",
+        "hermes-agent",
+        "llm",
+        "moltbot",
+        "nous-research",
+        "openai",
+        "openclaw"
+      ],
+      "created_at": "2025-07-22T22:22:28Z",
+      "updated_at": "2026-07-13T04:29:33Z",
+      "pushed_at": "2026-07-13T04:28:46Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 87.47,
+      "star_delta": 478,
+      "fork_delta": 185,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 93.15,
+        "relative_growth": 80.82,
+        "fork_growth": 100.0,
+        "total_stars": 94.52,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "hermes-agent 把终端、聊天平台和云端环境连成一个能积累经验、持续执行任务的个人智能体",
+        "highlights": [
+          "从任务经验中创建并改进可复用技能",
+          "跨会话检索对话并维护长期记忆",
+          "通过聊天平台远程安排和接收任务"
+        ],
+        "audience": "希望从终端或聊天软件管理长期任务，并让智能体逐步积累个人工作习惯的用户与开发者",
+        "capabilities": [
+          "切换不同模型提供方而无需改代码",
+          "连接多种聊天平台延续同一会话",
+          "创建定时任务并把结果发送到平台",
+          "派生隔离子智能体并行处理工作",
+          "迁移 OpenClaw 的设置、记忆和技能"
+        ],
+        "core_title": "经验驱动的学习闭环",
+        "core_summary": "它会从复杂任务中创建技能，在使用过程中继续改进，并结合会话搜索、长期记忆和用户模型，把一次性经验沉淀为后续可调用的工作方式。",
+        "prerequisites": "安装后需选择模型提供方并完成配置；云端工具可使用自备密钥或 Nous Portal。",
+        "limitations": "工具启用范围需自行配置；Windows 杀毒软件可能误报捆绑的 uv.exe，README 提供校验与白名单步骤。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "ba1322a389207c79032386e4053ac0e69a3c199d",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+          ],
+          "highlights": [
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ],
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ],
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ]
+          ],
+          "audience": [
+            "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+          ],
+          "capabilities": [
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ],
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ],
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ],
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ],
+            [
+              "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+            ]
+          ],
+          "core_title": [
+            "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+          ],
+          "core_summary": [
+            "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+          ],
+          "prerequisites": [
+            "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+          ],
+          "limitations": [
+            "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-13/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+      "publication_evidence": {
+        "full_name": "NousResearch/hermes-agent",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "ba1322a389207c79032386e4053ac0e69a3c199d",
+          "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-13/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.01.nousresearch--hermes-agent.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 793375104,
+      "full_name": "Shubhamsaboo/awesome-llm-apps",
+      "owner": "Shubhamsaboo",
+      "name": "awesome-llm-apps",
+      "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+      "language": "Python",
+      "stars": 118767,
+      "forks": 17653,
+      "open_issues": 9,
+      "watchers": 1184,
+      "topics": [
+        "agents",
+        "llms",
+        "python",
+        "rag"
+      ],
+      "created_at": "2024-04-29T05:30:25Z",
+      "updated_at": "2026-07-13T04:26:19Z",
+      "pushed_at": "2026-07-11T00:14:37Z",
+      "daily_stars": 408,
+      "weekly_stars": null,
+      "trending_rank_daily": 5,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 86.79,
+      "star_delta": 710,
+      "fork_delta": 110,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.63,
+        "relative_growth": 89.04,
+        "fork_growth": 98.63,
+        "total_stars": 54.79,
+        "activity": 51.34,
+        "trending_signal": 38.69
+      },
+      "summary": {
+        "one_line": "从可运行模板起步，直接改造 AI Agent、RAG、语音交互和多智能体应用，不必反复重搭基础流程",
+        "highlights": [
+          "每个模板提供独立源码和启动结构",
+          "覆盖智能体、RAG、语音与微调流程",
+          "可通过配置切换多种模型提供方"
+        ],
+        "audience": "需要快速验证 LLM 应用想法、学习常见实现方式，或寻找可改造项目骨架的开发者",
+        "capabilities": [
+          "克隆模板搭建入门或进阶智能体",
+          "组合多个智能体处理跨领域任务",
+          "接入外部工具和数据构建 MCP 智能体",
+          "构建语音输入与语音输出应用",
+          "搭建多来源和多模态 RAG 流程"
+        ],
+        "core_title": "按任务挑选可运行模板",
+        "core_summary": "仓库按智能体、RAG、语音、多智能体、记忆和微调等场景组织独立项目，每个模板附源码，读者可先运行示例，再替换模型、数据和业务逻辑。",
+        "prerequisites": "需克隆仓库并按所选模板安装 requirements.txt；入门智能体通常还需模型 API Key。",
+        "limitations": "不同模板使用的模型、框架和依赖不同，需进入对应目录核对配置；它不是一个统一部署的单体应用。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "97ecd4f1a9c72465e5924bbe838938c1d1aafa2c",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+          ],
+          "highlights": [
+            [
+              "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+            ],
+            [
+              "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+            ],
+            [
+              "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+            ]
+          ],
+          "audience": [
+            "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+          ],
+          "capabilities": [
+            [
+              "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+            ],
+            [
+              "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+            ],
+            [
+              "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+            ],
+            [
+              "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+            ],
+            [
+              "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+            ]
+          ],
+          "core_title": [
+            "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+          ],
+          "core_summary": [
+            "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+          ],
+          "prerequisites": [
+            "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+          ],
+          "limitations": [
+            "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-13/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+      "publication_evidence": {
+        "full_name": "Shubhamsaboo/awesome-llm-apps",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "97ecd4f1a9c72465e5924bbe838938c1d1aafa2c",
+          "source_url": "https://api.github.com/repos/Shubhamsaboo/awesome-llm-apps/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-13/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+          "sha256": "9c1100d2d55c39b2ae1596fc4f14a81fcec96123d3ba96857d3a8fdb86d7a42a",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.02.shubhamsaboo--awesome-llm-apps.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1198306812,
+      "full_name": "HKUDS/Vibe-Trading",
+      "owner": "HKUDS",
+      "name": "Vibe-Trading",
+      "html_url": "https://github.com/HKUDS/Vibe-Trading",
+      "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+      "language": "Python",
+      "stars": 20758,
+      "forks": 3620,
+      "open_issues": 8,
+      "watchers": 176,
+      "topics": [
+        "ai-agent",
+        "algorithmic-trading",
+        "backtesting",
+        "fintech",
+        "llm",
+        "mcp",
+        "multi-agent",
+        "python",
+        "quantitative-finance",
+        "trading"
+      ],
+      "created_at": "2026-04-01T09:52:20Z",
+      "updated_at": "2026-07-13T04:29:38Z",
+      "pushed_at": "2026-07-13T04:27:53Z",
+      "daily_stars": 768,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 83.87,
+      "star_delta": 768,
+      "fork_delta": 0,
+      "delta_source": "trending",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 94.52,
+        "fork_growth": 14.38,
+        "total_stars": 20.55,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "把自然语言里的交易问题接到市场数据、策略代码、回测和报告，形成可复查的量化研究流程",
+        "highlights": [
+          "跨市场加载数据并执行策略回测",
+          "从券商流水提取行为和交易规则",
+          "组织多智能体团队完成研究审查"
+        ],
+        "audience": "需要研究市场、验证策略、复盘个人交易，或把量化分析能力接入现有智能体的研究者与开发者",
+        "capabilities": [
+          "输入交易问题生成可运行分析",
+          "回测策略并输出指标与验证材料",
+          "解析交易流水诊断行为偏差",
+          "比较实际交易与规则化影子策略",
+          "导出报告和多平台策略文件"
+        ],
+        "core_title": "从交易流水生成影子策略",
+        "core_summary": "上传券商导出记录后，它会统计交易行为、提取反复出现的进出场规则，再回测规则化的影子账户，对比违规、早退、漏信号和替代交易路径。",
+        "prerequisites": "需准备 LLM API Key 或本地 Ollama；本地安装要求 Python 3.11+，也可选择 Docker。",
+        "limitations": "定位于研究、模拟和回测；自动交易仅在用户授权券商与设定限额内运行，部分连接器只读或仅支持模拟盘。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "01d3ed7796a2ab96a39d6d1012889bba373c3861",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+          ],
+          "highlights": [
+            [
+              "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+            ],
+            [
+              "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+            ],
+            [
+              "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+            ]
+          ],
+          "audience": [
+            "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+          ],
+          "capabilities": [
+            [
+              "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+            ],
+            [
+              "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+            ],
+            [
+              "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+            ],
+            [
+              "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+            ],
+            [
+              "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+            ]
+          ],
+          "core_title": [
+            "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+          ],
+          "core_summary": [
+            "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+          ],
+          "prerequisites": [
+            "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+          ],
+          "limitations": [
+            "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-13/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+      "publication_evidence": {
+        "full_name": "HKUDS/Vibe-Trading",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "01d3ed7796a2ab96a39d6d1012889bba373c3861",
+          "source_url": "https://api.github.com/repos/HKUDS/Vibe-Trading/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-13/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+          "sha256": "52cdd4efd7f76c0ac0b36cf6c1f7ca24a8bfbb2db5d8dcd53d7dee8b3f93c721",
+          "width": 357,
+          "height": 357
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.03.hkuds--vibe-trading.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.01.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.02.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "HKUDS/Vibe-Trading",
+            "path": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.03.hkuds--vibe-trading.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 213827,
+          "forks": 39650,
+          "open_issues": 26630,
+          "watchers": 213827,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-07-13T04:29:33Z",
+          "pushed_at": "2026-07-13T04:28:46Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 87.47,
+          "star_delta": 478,
+          "fork_delta": 185,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.15,
+            "relative_growth": 80.82,
+            "fork_growth": 100.0,
+            "total_stars": 94.52,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "hermes-agent 把终端、聊天平台和云端环境连成一个能积累经验、持续执行任务的个人智能体",
+            "highlights": [
+              "从任务经验中创建并改进可复用技能",
+              "跨会话检索对话并维护长期记忆",
+              "通过聊天平台远程安排和接收任务"
+            ],
+            "audience": "希望从终端或聊天软件管理长期任务，并让智能体逐步积累个人工作习惯的用户与开发者",
+            "capabilities": [
+              "切换不同模型提供方而无需改代码",
+              "连接多种聊天平台延续同一会话",
+              "创建定时任务并把结果发送到平台",
+              "派生隔离子智能体并行处理工作",
+              "迁移 OpenClaw 的设置、记忆和技能"
+            ],
+            "core_title": "经验驱动的学习闭环",
+            "core_summary": "它会从复杂任务中创建技能，在使用过程中继续改进，并结合会话搜索、长期记忆和用户模型，把一次性经验沉淀为后续可调用的工作方式。",
+            "prerequisites": "安装后需选择模型提供方并完成配置；云端工具可使用自备密钥或 Nous Portal。",
+            "limitations": "工具启用范围需自行配置；Windows 杀毒软件可能误报捆绑的 uv.exe，README 提供校验与白名单步骤。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "ba1322a389207c79032386e4053ac0e69a3c199d",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ]
+              ],
+              "audience": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "core_summary": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "prerequisites": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "limitations": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-13/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "ba1322a389207c79032386e4053ac0e69a3c199d",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-13/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.01.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 793375104,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "owner": "Shubhamsaboo",
+          "name": "awesome-llm-apps",
+          "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+          "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+          "language": "Python",
+          "stars": 118767,
+          "forks": 17653,
+          "open_issues": 9,
+          "watchers": 1184,
+          "topics": [
+            "agents",
+            "llms",
+            "python",
+            "rag"
+          ],
+          "created_at": "2024-04-29T05:30:25Z",
+          "updated_at": "2026-07-13T04:26:19Z",
+          "pushed_at": "2026-07-11T00:14:37Z",
+          "daily_stars": 408,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 86.79,
+          "star_delta": 710,
+          "fork_delta": 110,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.63,
+            "relative_growth": 89.04,
+            "fork_growth": 98.63,
+            "total_stars": 54.79,
+            "activity": 51.34,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "从可运行模板起步，直接改造 AI Agent、RAG、语音交互和多智能体应用，不必反复重搭基础流程",
+            "highlights": [
+              "每个模板提供独立源码和启动结构",
+              "覆盖智能体、RAG、语音与微调流程",
+              "可通过配置切换多种模型提供方"
+            ],
+            "audience": "需要快速验证 LLM 应用想法、学习常见实现方式，或寻找可改造项目骨架的开发者",
+            "capabilities": [
+              "克隆模板搭建入门或进阶智能体",
+              "组合多个智能体处理跨领域任务",
+              "接入外部工具和数据构建 MCP 智能体",
+              "构建语音输入与语音输出应用",
+              "搭建多来源和多模态 RAG 流程"
+            ],
+            "core_title": "按任务挑选可运行模板",
+            "core_summary": "仓库按智能体、RAG、语音、多智能体、记忆和微调等场景组织独立项目，每个模板附源码，读者可先运行示例，再替换模型、数据和业务逻辑。",
+            "prerequisites": "需克隆仓库并按所选模板安装 requirements.txt；入门智能体通常还需模型 API Key。",
+            "limitations": "不同模板使用的模型、框架和依赖不同，需进入对应目录核对配置；它不是一个统一部署的单体应用。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "97ecd4f1a9c72465e5924bbe838938c1d1aafa2c",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "highlights": [
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ]
+              ],
+              "audience": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ]
+              ],
+              "core_title": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "core_summary": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "prerequisites": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "limitations": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-13/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+          "publication_evidence": {
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "97ecd4f1a9c72465e5924bbe838938c1d1aafa2c",
+              "source_url": "https://api.github.com/repos/Shubhamsaboo/awesome-llm-apps/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-13/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+              "sha256": "9c1100d2d55c39b2ae1596fc4f14a81fcec96123d3ba96857d3a8fdb86d7a42a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.02.shubhamsaboo--awesome-llm-apps.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1198306812,
+          "full_name": "HKUDS/Vibe-Trading",
+          "owner": "HKUDS",
+          "name": "Vibe-Trading",
+          "html_url": "https://github.com/HKUDS/Vibe-Trading",
+          "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+          "language": "Python",
+          "stars": 20758,
+          "forks": 3620,
+          "open_issues": 8,
+          "watchers": 176,
+          "topics": [
+            "ai-agent",
+            "algorithmic-trading",
+            "backtesting",
+            "fintech",
+            "llm",
+            "mcp",
+            "multi-agent",
+            "python",
+            "quantitative-finance",
+            "trading"
+          ],
+          "created_at": "2026-04-01T09:52:20Z",
+          "updated_at": "2026-07-13T04:29:38Z",
+          "pushed_at": "2026-07-13T04:27:53Z",
+          "daily_stars": 768,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 83.87,
+          "star_delta": 768,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 94.52,
+            "fork_growth": 14.38,
+            "total_stars": 20.55,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把自然语言里的交易问题接到市场数据、策略代码、回测和报告，形成可复查的量化研究流程",
+            "highlights": [
+              "跨市场加载数据并执行策略回测",
+              "从券商流水提取行为和交易规则",
+              "组织多智能体团队完成研究审查"
+            ],
+            "audience": "需要研究市场、验证策略、复盘个人交易，或把量化分析能力接入现有智能体的研究者与开发者",
+            "capabilities": [
+              "输入交易问题生成可运行分析",
+              "回测策略并输出指标与验证材料",
+              "解析交易流水诊断行为偏差",
+              "比较实际交易与规则化影子策略",
+              "导出报告和多平台策略文件"
+            ],
+            "core_title": "从交易流水生成影子策略",
+            "core_summary": "上传券商导出记录后，它会统计交易行为、提取反复出现的进出场规则，再回测规则化的影子账户，对比违规、早退、漏信号和替代交易路径。",
+            "prerequisites": "需准备 LLM API Key 或本地 Ollama；本地安装要求 Python 3.11+，也可选择 Docker。",
+            "limitations": "定位于研究、模拟和回测；自动交易仅在用户授权券商与设定限额内运行，部分连接器只读或仅支持模拟盘。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "01d3ed7796a2ab96a39d6d1012889bba373c3861",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+              ],
+              "highlights": [
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ],
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ],
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ]
+              ],
+              "audience": [
+                "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ],
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ],
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ],
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ],
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ]
+              ],
+              "core_title": [
+                "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+              ],
+              "core_summary": [
+                "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+              ],
+              "prerequisites": [
+                "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+              ],
+              "limitations": [
+                "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-13/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+          "publication_evidence": {
+            "full_name": "HKUDS/Vibe-Trading",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "01d3ed7796a2ab96a39d6d1012889bba373c3861",
+              "source_url": "https://api.github.com/repos/HKUDS/Vibe-Trading/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-13/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+              "sha256": "52cdd4efd7f76c0ac0b36cf6c1f7ca24a8bfbb2db5d8dcd53d7dee8b3f93c721",
+              "width": 357,
+              "height": 357
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.03.hkuds--vibe-trading.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-13/2026-07-13.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-13/2026-07-13.ai.01.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-13/2026-07-13.ai.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "HKUDS/Vibe-Trading",
+            "path": "reports/daily/assets/2026-07-13/2026-07-13.ai.03.hkuds--vibe-trading.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 793375104,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "owner": "Shubhamsaboo",
+          "name": "awesome-llm-apps",
+          "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+          "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+          "language": "Python",
+          "stars": 118767,
+          "forks": 17653,
+          "open_issues": 9,
+          "watchers": 1184,
+          "topics": [
+            "agents",
+            "llms",
+            "python",
+            "rag"
+          ],
+          "created_at": "2024-04-29T05:30:25Z",
+          "updated_at": "2026-07-13T04:26:19Z",
+          "pushed_at": "2026-07-11T00:14:37Z",
+          "daily_stars": 408,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 84.14,
+          "star_delta": 710,
+          "fork_delta": 110,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.55,
+            "relative_growth": 82.76,
+            "fork_growth": 96.55,
+            "total_stars": 51.72,
+            "activity": 51.34,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "把重复搭建的 Agent、RAG 与 MCP 流程变成可直接运行和改造的 LLM 应用模板。",
+            "highlights": [
+              "提供可独立运行和修改的应用模板",
+              "覆盖智能体、RAG、语音与 MCP 工作流",
+              "通过配置切换不同模型提供商"
+            ],
+            "audience": "想快速验证 LLM 应用构想，或需要现成代码搭建智能体、RAG 和多智能体流程的开发者。",
+            "capabilities": [
+              "克隆独立模板并改造成 LLM 应用",
+              "切换 Claude、Gemini、GPT 等模型",
+              "搭建单智能体、多智能体与常驻任务",
+              "组合 RAG、语音、MCP 和记忆工作流",
+              "跟随配套教程运行和修改模板"
+            ],
+            "core_title": "从可运行模板开始搭应用",
+            "core_summary": "每个模板自带完整源码和独立运行结构，覆盖智能体循环、RAG、MCP、语音及多智能体协作，可先跑通示例，再替换模型与业务逻辑。",
+            "prerequisites": "按所选模板配置对应模型或服务的 API Key，并安装 requirements.txt 中声明的依赖。",
+            "limitations": "",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "97ecd4f1a9c72465e5924bbe838938c1d1aafa2c",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "highlights": [
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ]
+              ],
+              "audience": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ],
+                [
+                  "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+                ]
+              ],
+              "core_title": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "core_summary": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "prerequisites": [
+                "github.readme:97ecd4f1a9c72465e5924bbe838938c1d1aafa2c"
+              ],
+              "limitations": [],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-13/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+          "publication_evidence": {
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "97ecd4f1a9c72465e5924bbe838938c1d1aafa2c",
+              "source_url": "https://api.github.com/repos/Shubhamsaboo/awesome-llm-apps/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-13/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+              "sha256": "9c1100d2d55c39b2ae1596fc4f14a81fcec96123d3ba96857d3a8fdb86d7a42a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-13/2026-07-13.ai.01.shubhamsaboo--awesome-llm-apps.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 213827,
+          "forks": 39650,
+          "open_issues": 26630,
+          "watchers": 213827,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-07-13T04:29:33Z",
+          "pushed_at": "2026-07-13T04:28:46Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 84.14,
+          "star_delta": 478,
+          "fork_delta": 185,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 89.66,
+            "relative_growth": 72.41,
+            "fork_growth": 100.0,
+            "total_stars": 96.55,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "让 AI 助手跨终端和聊天平台持续工作，并从任务经验中生成、改进可复用技能。",
+            "highlights": [
+              "从任务经验中创建并改进技能",
+              "跨会话检索记忆并延续用户上下文",
+              "在消息平台定时投递自动化任务"
+            ],
+            "audience": "需要让个人 AI 助手长期运行、跨设备接续对话，或定时处理多步骤任务的开发者和个人用户。",
+            "capabilities": [
+              "从复杂任务中自动创建并改进技能",
+              "搜索历史会话并延续跨会话记忆",
+              "通过终端或消息平台继续同一对话",
+              "按自然语言计划定时执行并投递任务",
+              "启动隔离子智能体并行处理工作流"
+            ],
+            "core_title": "会积累经验的技能循环",
+            "core_summary": "它把持久记忆、会话搜索、用户建模和技能系统连成闭环：任务完成后沉淀技能，后续使用中继续改进，并在新会话里调用过去经验。",
+            "prerequisites": "需选择并配置一个模型提供商；使用消息网关时还需配置对应聊天平台。",
+            "limitations": "Termux 需使用专用安装额外项，完整依赖目前包含 Android 不兼容的语音组件。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "ba1322a389207c79032386e4053ac0e69a3c199d",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ]
+              ],
+              "audience": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ],
+                [
+                  "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "core_summary": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "prerequisites": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "limitations": [
+                "github.readme:ba1322a389207c79032386e4053ac0e69a3c199d"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-13/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "ba1322a389207c79032386e4053ac0e69a3c199d",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-13/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-13/2026-07-13.ai.02.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1198306812,
+          "full_name": "HKUDS/Vibe-Trading",
+          "owner": "HKUDS",
+          "name": "Vibe-Trading",
+          "html_url": "https://github.com/HKUDS/Vibe-Trading",
+          "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+          "language": "Python",
+          "stars": 20758,
+          "forks": 3620,
+          "open_issues": 8,
+          "watchers": 176,
+          "topics": [
+            "ai-agent",
+            "algorithmic-trading",
+            "backtesting",
+            "fintech",
+            "llm",
+            "mcp",
+            "multi-agent",
+            "python",
+            "quantitative-finance",
+            "trading"
+          ],
+          "created_at": "2026-04-01T09:52:20Z",
+          "updated_at": "2026-07-13T04:29:38Z",
+          "pushed_at": "2026-07-13T04:27:53Z",
+          "daily_stars": 768,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 83.53,
+          "star_delta": 768,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 93.1,
+            "fork_growth": 12.07,
+            "total_stars": 24.14,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把自然语言交易问题串成数据获取、策略生成、回测验证和报告交付的研究流程。",
+            "highlights": [
+              "从问题到回测与报告形成可检查链路",
+              "从个人交易流水提取规则并运行影子策略",
+              "统一接入多市场数据、回测和研究记忆"
+            ],
+            "audience": "需要研究交易想法、复盘个人流水、比较策略或组织多角色投研流程的量化研究者和交易开发者。",
+            "capabilities": [
+              "把自然语言问题转成可运行分析",
+              "生成策略代码并执行跨市场回测",
+              "读取券商流水并诊断交易行为偏差",
+              "组织多智能体完成投研与风险复核",
+              "导出报告及 Pine Script、TDX、MQL5 产物"
+            ],
+            "core_title": "从问题到可检查研究产物",
+            "core_summary": "请求先路由到数据、技能和工具，再生成策略、运行匹配的回测引擎，并补充指标、基准、验证产物和报告，方便后续复核或导出。",
+            "prerequisites": "需要受支持模型的 API Key，或本地 Ollama；本地安装要求 Python 3.11+，也可使用 Docker。",
+            "limitations": "自主交易仅在用户授权的经纪商和设定限额内运行；项目不托管资金，历史数据加载器不处理实时逐笔与订单簿。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "01d3ed7796a2ab96a39d6d1012889bba373c3861",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+              ],
+              "highlights": [
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ],
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ],
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ]
+              ],
+              "audience": [
+                "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ],
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ],
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ],
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ],
+                [
+                  "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+                ]
+              ],
+              "core_title": [
+                "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+              ],
+              "core_summary": [
+                "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+              ],
+              "prerequisites": [
+                "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+              ],
+              "limitations": [
+                "github.readme:01d3ed7796a2ab96a39d6d1012889bba373c3861"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-13/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+          "publication_evidence": {
+            "full_name": "HKUDS/Vibe-Trading",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "01d3ed7796a2ab96a39d6d1012889bba373c3861",
+              "source_url": "https://api.github.com/repos/HKUDS/Vibe-Trading/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-13/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+              "sha256": "52cdd4efd7f76c0ac0b36cf6c1f7ca24a8bfbb2db5d8dcd53d7dee8b3f93c721",
+              "width": 357,
+              "height": 357
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-13/2026-07-13.ai.03.hkuds--vibe-trading.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}

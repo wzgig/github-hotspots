@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-07-13",
+  "window": {
+    "start": "2026-07-12",
+    "end": "2026-07-13"
+  },
+  "source_report": "reports/daily/2026-07-13.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-07-13",
+  "manifest": "reports/daily/assets/2026-07-13/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.01.nousresearch--hermes-agent.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "path": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.02.shubhamsaboo--awesome-llm-apps.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "HKUDS/Vibe-Trading",
+          "path": "reports/daily/assets/2026-07-13/2026-07-13.comprehensive.03.hkuds--vibe-trading.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-07-13/2026-07-13.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "path": "reports/daily/assets/2026-07-13/2026-07-13.ai.01.shubhamsaboo--awesome-llm-apps.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/daily/assets/2026-07-13/2026-07-13.ai.02.nousresearch--hermes-agent.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "HKUDS/Vibe-Trading",
+          "path": "reports/daily/assets/2026-07-13/2026-07-13.ai.03.hkuds--vibe-trading.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 2,
+    "issue_code": "D002",
+    "issue_label": "第2期",
+    "status": "official"
+  }
+}
