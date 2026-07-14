@@ -1,0 +1,1451 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-15",
+  "window_start": "2026-07-14",
+  "window_end": "2026-07-15",
+  "generated_at": "2026-07-15T07:30:45+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-14 至 2026-07-15",
+  "publication": {
+    "issue_number": 4,
+    "issue_code": "D004",
+    "issue_label": "第4期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-15",
+    "manifest": "reports/daily/assets/2026-07-15/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Graphify-Labs/graphify",
+            "path": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.02.graphify-labs--graphify.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.03.shubhamsaboo--awesome-llm-apps.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-15/2026-07-15.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "Graphify-Labs/graphify",
+            "path": "reports/daily/assets/2026-07-15/2026-07-15.ai.01.graphify-labs--graphify.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-15/2026-07-15.ai.02.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "HKUDS/Vibe-Trading",
+            "path": "reports/daily/assets/2026-07-15/2026-07-15.ai.03.hkuds--vibe-trading.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 4,
+      "issue_code": "D004",
+      "issue_label": "第4期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .claude directory.",
+      "language": "Shell",
+      "stars": 170158,
+      "forks": 14640,
+      "open_issues": 164,
+      "watchers": 170158,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-07-14T23:26:11Z",
+      "pushed_at": "2026-07-14T18:32:39Z",
+      "daily_stars": 1864,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 93.3,
+      "star_delta": 1858,
+      "fork_delta": 145,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.59,
+        "relative_growth": 90.14,
+        "fork_growth": 94.37,
+        "total_stars": 67.61,
+        "activity": 100.0,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "把软件工程方法做成可组合的代理技能，帮助开发者对齐需求、测试代码并控制架构复杂度",
+        "highlights": [
+          "先通过追问厘清需求，再让代理开始改代码",
+          "建立共享术语与决策文档，减少沟通偏差",
+          "把测试驱动、故障诊断和代码审查嵌入流程"
+        ],
+        "audience": "适合使用 Claude Code、Codex 等编码代理，并希望保留流程控制权的软件开发者",
+        "capabilities": [
+          "追问需求细节并梳理待解决的决策分支",
+          "生成共享术语文档与架构决策记录",
+          "把讨论内容整理成规格或可执行工单",
+          "按红绿重构循环实现功能与修复缺陷",
+          "检查代码标准及其对原始规格的符合度"
+        ],
+        "core_title": "可拆装的工程工作流",
+        "core_summary": "每项技能只负责一类工程任务，可由用户主动调用或由代理按场景选用；从需求澄清、领域建模到实现和审查，开发者可组合流程而不必交出全部控制权。",
+        "prerequisites": "需可运行 npx，并在每个仓库先执行一次 /setup-matt-pocock-skills 完成配置。",
+        "limitations": "插件安装得到只读托管包，不能直接编辑；Codex 原生插件仍在路线图中。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "8cc79099b6932f274c501e58318db3190fd4662a",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+          ],
+          "highlights": [
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ],
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ],
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ]
+          ],
+          "audience": [
+            "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+          ],
+          "capabilities": [
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ],
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ],
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ],
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ],
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ]
+          ],
+          "core_title": [
+            "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+          ],
+          "core_summary": [
+            "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+          ],
+          "prerequisites": [
+            "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+          ],
+          "limitations": [
+            "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-15/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "8cc79099b6932f274c501e58318db3190fd4662a",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-15/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.01.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1200597263,
+      "full_name": "Graphify-Labs/graphify",
+      "owner": "Graphify-Labs",
+      "name": "graphify",
+      "html_url": "https://github.com/Graphify-Labs/graphify",
+      "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+      "language": "Python",
+      "stars": 86307,
+      "forks": 8493,
+      "open_issues": 512,
+      "watchers": 304,
+      "topics": [
+        "antigravity",
+        "claude-code",
+        "codex",
+        "gemini",
+        "graphrag",
+        "knowledge-graph",
+        "leiden",
+        "openclaw",
+        "rag",
+        "skills",
+        "tree-sitter"
+      ],
+      "created_at": "2026-04-03T15:49:07Z",
+      "updated_at": "2026-07-14T23:26:13Z",
+      "pushed_at": "2026-07-14T23:00:58Z",
+      "daily_stars": 1858,
+      "weekly_stars": null,
+      "trending_rank_daily": 14,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 89.24,
+      "star_delta": 1673,
+      "fork_delta": 154,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.18,
+        "relative_growth": 91.55,
+        "fork_growth": 95.77,
+        "total_stars": 29.58,
+        "activity": 100.0,
+        "trending_signal": 25.6
+      },
+      "summary": {
+        "one_line": "把代码、文档和媒体资料连成可查询的知识图谱，让编码代理沿关系查项目而不是逐文件搜索",
+        "highlights": [
+          "用语法树解析跨文件调用、导入和继承关系",
+          "为每条连接标记直接提取或推断来源",
+          "同时输出可点击图谱、摘要报告和完整数据"
+        ],
+        "audience": "适合需要理解陌生代码库、追踪模块关系或让编码代理查询项目上下文的开发者与团队",
+        "capabilities": [
+          "扫描项目并生成可交互的知识图谱",
+          "查询与问题相关的局部关系子图",
+          "追踪任意两个概念之间的连接路径",
+          "解释节点来源、关联关系与置信标记",
+          "合并代码、文档、PDF、图片及音视频信息"
+        ],
+        "core_title": "可追溯的项目关系图",
+        "core_summary": "代码通过 tree-sitter 在本地解析，关系边区分 EXTRACTED 与 INFERRED；生成的图谱可查询节点、路径和概念，并把代码与设计文档、媒体资料放进同一关系网络。",
+        "prerequisites": "需要 Python 3.10+，并使用 uv 或 pipx 安装 PyPI 包 graphifyy。",
+        "limitations": "代码可本地解析；文档、PDF 和图片的语义提取会调用助手模型或已配置的后端。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "81685cf729a4ef6a55236604f78a6b21293a96fa",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+          ],
+          "highlights": [
+            [
+              "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+            ],
+            [
+              "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+            ],
+            [
+              "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+            ]
+          ],
+          "audience": [
+            "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+          ],
+          "capabilities": [
+            [
+              "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+            ],
+            [
+              "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+            ],
+            [
+              "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+            ],
+            [
+              "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+            ],
+            [
+              "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+            ]
+          ],
+          "core_title": [
+            "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+          ],
+          "core_summary": [
+            "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+          ],
+          "prerequisites": [
+            "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+          ],
+          "limitations": [
+            "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-15/repo-6d32f94b62b2e7d2c679cc85-b1b141ca1ac91b5fdc5a5436.png",
+      "publication_evidence": {
+        "full_name": "Graphify-Labs/graphify",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "81685cf729a4ef6a55236604f78a6b21293a96fa",
+          "source_url": "https://api.github.com/repos/Graphify-Labs/graphify/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-15/repo-6d32f94b62b2e7d2c679cc85-b1b141ca1ac91b5fdc5a5436.png",
+          "sha256": "3118c47bbc24dfb7078e74d871b406eeb37aaf0d821a978315823bb38d89fab5",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.02.graphify-labs--graphify.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 793375104,
+      "full_name": "Shubhamsaboo/awesome-llm-apps",
+      "owner": "Shubhamsaboo",
+      "name": "awesome-llm-apps",
+      "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+      "language": "Python",
+      "stars": 120738,
+      "forks": 17871,
+      "open_issues": 18,
+      "watchers": 120738,
+      "topics": [
+        "agents",
+        "llms",
+        "python",
+        "rag"
+      ],
+      "created_at": "2024-04-29T05:30:25Z",
+      "updated_at": "2026-07-14T23:30:32Z",
+      "pushed_at": "2026-07-14T06:23:01Z",
+      "daily_stars": 1104,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 88.75,
+      "star_delta": 1187,
+      "fork_delta": 137,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.77,
+        "relative_growth": 87.32,
+        "fork_growth": 92.96,
+        "total_stars": 38.73,
+        "activity": 71.65,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "提供可克隆改造的 AI 代理、RAG 和代理技能样例，帮你从具体任务直接找到可运行起点",
+        "highlights": [
+          "按入门代理、多代理团队和常驻任务分类选型",
+          "覆盖文档问答、研究、数据分析与浏览器操作",
+          "同时提供语音、多模态、生成式界面和 MCP 样例"
+        ],
+        "audience": "适合想学习代理应用结构、验证产品想法，或从现成样例改造成业务工具的 Python 开发者",
+        "capabilities": [
+          "克隆单文件代理并替换模型或业务逻辑",
+          "安装代理技能为编码助手增加专项任务能力",
+          "搭建多代理协作、路由与结果汇总流程",
+          "构建面向网页、PDF 和多媒体的 RAG 应用",
+          "参考可交互界面、语音代理和 MCP 集成样例"
+        ],
+        "core_title": "按任务挑选可运行样例",
+        "core_summary": "仓库把样例按入门代理、进阶代理、多代理团队、RAG、语音和生成式界面等场景组织；读者可先运行单个项目，再替换模型、数据源和工具形成自己的应用。",
+        "prerequisites": "按所选样例准备模型 API Key，并安装对应目录的 requirements.txt 依赖。",
+        "limitations": "",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "2969b8728ca10d24f45c9b4aab30692fbba0d051",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+          ],
+          "highlights": [
+            [
+              "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+            ],
+            [
+              "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+            ],
+            [
+              "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+            ]
+          ],
+          "audience": [
+            "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+          ],
+          "capabilities": [
+            [
+              "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+            ],
+            [
+              "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+            ],
+            [
+              "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+            ],
+            [
+              "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+            ],
+            [
+              "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+            ]
+          ],
+          "core_title": [
+            "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+          ],
+          "core_summary": [
+            "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+          ],
+          "prerequisites": [
+            "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+          ],
+          "limitations": [],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-15/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+      "publication_evidence": {
+        "full_name": "Shubhamsaboo/awesome-llm-apps",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "2969b8728ca10d24f45c9b4aab30692fbba0d051",
+          "source_url": "https://api.github.com/repos/Shubhamsaboo/awesome-llm-apps/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-15/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+          "sha256": "9c1100d2d55c39b2ae1596fc4f14a81fcec96123d3ba96857d3a8fdb86d7a42a",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.03.shubhamsaboo--awesome-llm-apps.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Graphify-Labs/graphify",
+            "path": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.02.graphify-labs--graphify.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.03.shubhamsaboo--awesome-llm-apps.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .claude directory.",
+          "language": "Shell",
+          "stars": 170158,
+          "forks": 14640,
+          "open_issues": 164,
+          "watchers": 170158,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-07-14T23:26:11Z",
+          "pushed_at": "2026-07-14T18:32:39Z",
+          "daily_stars": 1864,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 93.3,
+          "star_delta": 1858,
+          "fork_delta": 145,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.59,
+            "relative_growth": 90.14,
+            "fork_growth": 94.37,
+            "total_stars": 67.61,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把软件工程方法做成可组合的代理技能，帮助开发者对齐需求、测试代码并控制架构复杂度",
+            "highlights": [
+              "先通过追问厘清需求，再让代理开始改代码",
+              "建立共享术语与决策文档，减少沟通偏差",
+              "把测试驱动、故障诊断和代码审查嵌入流程"
+            ],
+            "audience": "适合使用 Claude Code、Codex 等编码代理，并希望保留流程控制权的软件开发者",
+            "capabilities": [
+              "追问需求细节并梳理待解决的决策分支",
+              "生成共享术语文档与架构决策记录",
+              "把讨论内容整理成规格或可执行工单",
+              "按红绿重构循环实现功能与修复缺陷",
+              "检查代码标准及其对原始规格的符合度"
+            ],
+            "core_title": "可拆装的工程工作流",
+            "core_summary": "每项技能只负责一类工程任务，可由用户主动调用或由代理按场景选用；从需求澄清、领域建模到实现和审查，开发者可组合流程而不必交出全部控制权。",
+            "prerequisites": "需可运行 npx，并在每个仓库先执行一次 /setup-matt-pocock-skills 完成配置。",
+            "limitations": "插件安装得到只读托管包，不能直接编辑；Codex 原生插件仍在路线图中。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "8cc79099b6932f274c501e58318db3190fd4662a",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+              ],
+              "highlights": [
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ],
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ],
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ]
+              ],
+              "audience": [
+                "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ],
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ],
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ],
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ],
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ]
+              ],
+              "core_title": [
+                "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+              ],
+              "core_summary": [
+                "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+              ],
+              "prerequisites": [
+                "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+              ],
+              "limitations": [
+                "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-15/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "8cc79099b6932f274c501e58318db3190fd4662a",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-15/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.01.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1200597263,
+          "full_name": "Graphify-Labs/graphify",
+          "owner": "Graphify-Labs",
+          "name": "graphify",
+          "html_url": "https://github.com/Graphify-Labs/graphify",
+          "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+          "language": "Python",
+          "stars": 86307,
+          "forks": 8493,
+          "open_issues": 512,
+          "watchers": 304,
+          "topics": [
+            "antigravity",
+            "claude-code",
+            "codex",
+            "gemini",
+            "graphrag",
+            "knowledge-graph",
+            "leiden",
+            "openclaw",
+            "rag",
+            "skills",
+            "tree-sitter"
+          ],
+          "created_at": "2026-04-03T15:49:07Z",
+          "updated_at": "2026-07-14T23:26:13Z",
+          "pushed_at": "2026-07-14T23:00:58Z",
+          "daily_stars": 1858,
+          "weekly_stars": null,
+          "trending_rank_daily": 14,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.24,
+          "star_delta": 1673,
+          "fork_delta": 154,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.18,
+            "relative_growth": 91.55,
+            "fork_growth": 95.77,
+            "total_stars": 29.58,
+            "activity": 100.0,
+            "trending_signal": 25.6
+          },
+          "summary": {
+            "one_line": "把代码、文档和媒体资料连成可查询的知识图谱，让编码代理沿关系查项目而不是逐文件搜索",
+            "highlights": [
+              "用语法树解析跨文件调用、导入和继承关系",
+              "为每条连接标记直接提取或推断来源",
+              "同时输出可点击图谱、摘要报告和完整数据"
+            ],
+            "audience": "适合需要理解陌生代码库、追踪模块关系或让编码代理查询项目上下文的开发者与团队",
+            "capabilities": [
+              "扫描项目并生成可交互的知识图谱",
+              "查询与问题相关的局部关系子图",
+              "追踪任意两个概念之间的连接路径",
+              "解释节点来源、关联关系与置信标记",
+              "合并代码、文档、PDF、图片及音视频信息"
+            ],
+            "core_title": "可追溯的项目关系图",
+            "core_summary": "代码通过 tree-sitter 在本地解析，关系边区分 EXTRACTED 与 INFERRED；生成的图谱可查询节点、路径和概念，并把代码与设计文档、媒体资料放进同一关系网络。",
+            "prerequisites": "需要 Python 3.10+，并使用 uv 或 pipx 安装 PyPI 包 graphifyy。",
+            "limitations": "代码可本地解析；文档、PDF 和图片的语义提取会调用助手模型或已配置的后端。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "81685cf729a4ef6a55236604f78a6b21293a96fa",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+              ],
+              "highlights": [
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ],
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ],
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ]
+              ],
+              "audience": [
+                "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ],
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ],
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ],
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ],
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ]
+              ],
+              "core_title": [
+                "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+              ],
+              "core_summary": [
+                "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+              ],
+              "prerequisites": [
+                "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+              ],
+              "limitations": [
+                "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-15/repo-6d32f94b62b2e7d2c679cc85-b1b141ca1ac91b5fdc5a5436.png",
+          "publication_evidence": {
+            "full_name": "Graphify-Labs/graphify",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "81685cf729a4ef6a55236604f78a6b21293a96fa",
+              "source_url": "https://api.github.com/repos/Graphify-Labs/graphify/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-15/repo-6d32f94b62b2e7d2c679cc85-b1b141ca1ac91b5fdc5a5436.png",
+              "sha256": "3118c47bbc24dfb7078e74d871b406eeb37aaf0d821a978315823bb38d89fab5",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.02.graphify-labs--graphify.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 793375104,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "owner": "Shubhamsaboo",
+          "name": "awesome-llm-apps",
+          "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+          "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+          "language": "Python",
+          "stars": 120738,
+          "forks": 17871,
+          "open_issues": 18,
+          "watchers": 120738,
+          "topics": [
+            "agents",
+            "llms",
+            "python",
+            "rag"
+          ],
+          "created_at": "2024-04-29T05:30:25Z",
+          "updated_at": "2026-07-14T23:30:32Z",
+          "pushed_at": "2026-07-14T06:23:01Z",
+          "daily_stars": 1104,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.75,
+          "star_delta": 1187,
+          "fork_delta": 137,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.77,
+            "relative_growth": 87.32,
+            "fork_growth": 92.96,
+            "total_stars": 38.73,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "提供可克隆改造的 AI 代理、RAG 和代理技能样例，帮你从具体任务直接找到可运行起点",
+            "highlights": [
+              "按入门代理、多代理团队和常驻任务分类选型",
+              "覆盖文档问答、研究、数据分析与浏览器操作",
+              "同时提供语音、多模态、生成式界面和 MCP 样例"
+            ],
+            "audience": "适合想学习代理应用结构、验证产品想法，或从现成样例改造成业务工具的 Python 开发者",
+            "capabilities": [
+              "克隆单文件代理并替换模型或业务逻辑",
+              "安装代理技能为编码助手增加专项任务能力",
+              "搭建多代理协作、路由与结果汇总流程",
+              "构建面向网页、PDF 和多媒体的 RAG 应用",
+              "参考可交互界面、语音代理和 MCP 集成样例"
+            ],
+            "core_title": "按任务挑选可运行样例",
+            "core_summary": "仓库把样例按入门代理、进阶代理、多代理团队、RAG、语音和生成式界面等场景组织；读者可先运行单个项目，再替换模型、数据源和工具形成自己的应用。",
+            "prerequisites": "按所选样例准备模型 API Key，并安装对应目录的 requirements.txt 依赖。",
+            "limitations": "",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "2969b8728ca10d24f45c9b4aab30692fbba0d051",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ],
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ],
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ]
+              ],
+              "audience": [
+                "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ],
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ],
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ],
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ],
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+              ],
+              "core_summary": [
+                "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+              ],
+              "prerequisites": [
+                "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+              ],
+              "limitations": [],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-15/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+          "publication_evidence": {
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "2969b8728ca10d24f45c9b4aab30692fbba0d051",
+              "source_url": "https://api.github.com/repos/Shubhamsaboo/awesome-llm-apps/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-15/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+              "sha256": "9c1100d2d55c39b2ae1596fc4f14a81fcec96123d3ba96857d3a8fdb86d7a42a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-15/2026-07-15.comprehensive.03.shubhamsaboo--awesome-llm-apps.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-15/2026-07-15.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "Graphify-Labs/graphify",
+            "path": "reports/daily/assets/2026-07-15/2026-07-15.ai.01.graphify-labs--graphify.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-15/2026-07-15.ai.02.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "HKUDS/Vibe-Trading",
+            "path": "reports/daily/assets/2026-07-15/2026-07-15.ai.03.hkuds--vibe-trading.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1200597263,
+          "full_name": "Graphify-Labs/graphify",
+          "owner": "Graphify-Labs",
+          "name": "graphify",
+          "html_url": "https://github.com/Graphify-Labs/graphify",
+          "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+          "language": "Python",
+          "stars": 86307,
+          "forks": 8493,
+          "open_issues": 512,
+          "watchers": 304,
+          "topics": [
+            "antigravity",
+            "claude-code",
+            "codex",
+            "gemini",
+            "graphrag",
+            "knowledge-graph",
+            "leiden",
+            "openclaw",
+            "rag",
+            "skills",
+            "tree-sitter"
+          ],
+          "created_at": "2026-04-03T15:49:07Z",
+          "updated_at": "2026-07-14T23:26:13Z",
+          "pushed_at": "2026-07-14T23:00:58Z",
+          "daily_stars": 1858,
+          "weekly_stars": null,
+          "trending_rank_daily": 14,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 89.36,
+          "star_delta": 1673,
+          "fork_delta": 154,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 88.46,
+            "fork_growth": 92.31,
+            "total_stars": 23.08,
+            "activity": 100.0,
+            "trending_signal": 25.6
+          },
+          "summary": {
+            "one_line": "把代码、文档和媒体整理成可查询的知识图谱，帮 AI 助手追踪项目概念与关联",
+            "highlights": [
+              "将跨文件调用、导入和继承关系连成图",
+              "区分源码提取关系与工具推断关系",
+              "输出可浏览、检索和复用的项目图谱"
+            ],
+            "audience": "需要理解陌生代码库、梳理系统架构，或让 AI 助手减少逐文件搜索的开发者与团队",
+            "capabilities": [
+              "解析代码并连接跨文件依赖关系",
+              "合并文档、图片和视频中的概念",
+              "查询与问题相关的局部子图",
+              "追踪任意两个概念之间的路径",
+              "生成交互图、摘要报告和图数据"
+            ],
+            "core_title": "用关系图替代逐文件搜索",
+            "core_summary": "它先用语法树解析代码，再把文档和媒体的语义概念并入同一张图；每条关系标明来自源码还是推断，便于沿路径核对项目结构。",
+            "prerequisites": "需要 Python 3.10+，并使用 uv 或 pipx 安装；文档和媒体分析还需助手模型或配置后端。",
+            "limitations": "代码可在本地解析；文档、PDF、图片等语义分析会调用助手模型或已配置后端。PowerShell 中需使用 graphify .。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "81685cf729a4ef6a55236604f78a6b21293a96fa",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+              ],
+              "highlights": [
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ],
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ],
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ]
+              ],
+              "audience": [
+                "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ],
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ],
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ],
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ],
+                [
+                  "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+                ]
+              ],
+              "core_title": [
+                "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+              ],
+              "core_summary": [
+                "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+              ],
+              "prerequisites": [
+                "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+              ],
+              "limitations": [
+                "github.readme:81685cf729a4ef6a55236604f78a6b21293a96fa"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-15/repo-6d32f94b62b2e7d2c679cc85-b1b141ca1ac91b5fdc5a5436.png",
+          "publication_evidence": {
+            "full_name": "Graphify-Labs/graphify",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "81685cf729a4ef6a55236604f78a6b21293a96fa",
+              "source_url": "https://api.github.com/repos/Graphify-Labs/graphify/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-15/repo-6d32f94b62b2e7d2c679cc85-b1b141ca1ac91b5fdc5a5436.png",
+              "sha256": "3118c47bbc24dfb7078e74d871b406eeb37aaf0d821a978315823bb38d89fab5",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-15/2026-07-15.ai.01.graphify-labs--graphify.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 793375104,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "owner": "Shubhamsaboo",
+          "name": "awesome-llm-apps",
+          "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+          "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+          "language": "Python",
+          "stars": 120738,
+          "forks": 17871,
+          "open_issues": 18,
+          "watchers": 120738,
+          "topics": [
+            "agents",
+            "llms",
+            "python",
+            "rag"
+          ],
+          "created_at": "2024-04-29T05:30:25Z",
+          "updated_at": "2026-07-14T23:30:32Z",
+          "pushed_at": "2026-07-14T06:23:01Z",
+          "daily_stars": 1104,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 87.84,
+          "star_delta": 1187,
+          "fork_delta": 137,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.15,
+            "relative_growth": 84.62,
+            "fork_growth": 88.46,
+            "total_stars": 36.54,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "汇集可直接克隆改造的 AI 智能体、RAG 与多智能体应用，省去从空项目搭框架",
+            "highlights": [
+              "按智能体、语音、RAG 等场景整理模板",
+              "覆盖单文件入门案例与复杂协作流程",
+              "提供多种模型和开源模型的应用示例"
+            ],
+            "audience": "想快速验证 AI 应用点子、学习智能体工作流，或寻找可改造项目骨架的开发者",
+            "capabilities": [
+              "克隆并运行不同场景的智能体模板",
+              "给编程助手安装可调用的技能",
+              "搭建多智能体协作与任务路由",
+              "实现文档、网页和多模态 RAG",
+              "参考语音、生成式界面与 MCP 案例"
+            ],
+            "core_title": "从案例目录直接挑应用骨架",
+            "core_summary": "项目把不同难度和交互方式的 AI 应用分目录整理，既有单文件入门智能体，也有带工具、记忆、多步推理和协作团队的完整案例。",
+            "prerequisites": "需按所选模板安装依赖，并准备模板对应的模型、API Key 或本地模型环境。",
+            "limitations": "各模板使用的模型、数据源、外部服务和启动方式不同，运行前需进入对应目录核对说明与依赖。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "2969b8728ca10d24f45c9b4aab30692fbba0d051",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ],
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ],
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ]
+              ],
+              "audience": [
+                "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ],
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ],
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ],
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ],
+                [
+                  "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+              ],
+              "core_summary": [
+                "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+              ],
+              "prerequisites": [
+                "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+              ],
+              "limitations": [
+                "github.readme:2969b8728ca10d24f45c9b4aab30692fbba0d051"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-15/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+          "publication_evidence": {
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "2969b8728ca10d24f45c9b4aab30692fbba0d051",
+              "source_url": "https://api.github.com/repos/Shubhamsaboo/awesome-llm-apps/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-15/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+              "sha256": "9c1100d2d55c39b2ae1596fc4f14a81fcec96123d3ba96857d3a8fdb86d7a42a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-15/2026-07-15.ai.02.shubhamsaboo--awesome-llm-apps.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1198306812,
+          "full_name": "HKUDS/Vibe-Trading",
+          "owner": "HKUDS",
+          "name": "Vibe-Trading",
+          "html_url": "https://github.com/HKUDS/Vibe-Trading",
+          "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+          "language": "Python",
+          "stars": 22808,
+          "forks": 3915,
+          "open_issues": 21,
+          "watchers": 191,
+          "topics": [
+            "ai-agent",
+            "algorithmic-trading",
+            "backtesting",
+            "fintech",
+            "llm",
+            "mcp",
+            "multi-agent",
+            "python",
+            "quantitative-finance",
+            "trading"
+          ],
+          "created_at": "2026-04-01T09:52:20Z",
+          "updated_at": "2026-07-14T23:30:27Z",
+          "pushed_at": "2026-07-14T05:52:07Z",
+          "daily_stars": 1265,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 83.83,
+          "star_delta": 1107,
+          "fork_delta": 164,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.31,
+            "relative_growth": 92.31,
+            "fork_growth": 96.15,
+            "total_stars": 15.38,
+            "activity": 71.65,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "把自然语言交易问题接到市场数据、策略生成和回测流程，交付可检查的研究报告与代码",
+            "highlights": [
+              "从交易问题生成并验证可运行策略",
+              "跨股票、加密、期货和外汇执行回测",
+              "用交易记录诊断行为并构建影子策略"
+            ],
+            "audience": "需要研究市场、验证策略想法、复盘个人交易，或组织多角色投研流程的量化与交易研究者",
+            "capabilities": [
+              "调用市场数据完成自然语言研究",
+              "生成策略代码并运行跨市场回测",
+              "分析券商记录中的交易行为偏差",
+              "组织投研、量化和风控智能体协作",
+              "导出报告与多平台策略文件"
+            ],
+            "core_title": "研究问题一路落到回测产物",
+            "core_summary": "它把问题路由到数据源、金融技能和回测引擎，再补充指标、基准比较、验证结果与运行记录，让策略结论能回看对应代码和产物。",
+            "prerequisites": "需要 LLM API Key 或本地 Ollama；本地安装要求 Python 3.11+，也可使用 Docker。",
+            "limitations": "实盘功能需自行授权券商并设定交易边界，可随时停止；项目不持有资金，部分连接器仅支持模拟盘和只读。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "4da1bc73725cf3a46747d2ddc8de06a3a9555819",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+              ],
+              "highlights": [
+                [
+                  "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+                ],
+                [
+                  "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+                ],
+                [
+                  "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+                ]
+              ],
+              "audience": [
+                "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+                ],
+                [
+                  "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+                ],
+                [
+                  "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+                ],
+                [
+                  "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+                ],
+                [
+                  "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+                ]
+              ],
+              "core_title": [
+                "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+              ],
+              "core_summary": [
+                "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+              ],
+              "prerequisites": [
+                "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+              ],
+              "limitations": [
+                "github.readme:4da1bc73725cf3a46747d2ddc8de06a3a9555819"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-15/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+          "publication_evidence": {
+            "full_name": "HKUDS/Vibe-Trading",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "4da1bc73725cf3a46747d2ddc8de06a3a9555819",
+              "source_url": "https://api.github.com/repos/HKUDS/Vibe-Trading/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-15/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+              "sha256": "52cdd4efd7f76c0ac0b36cf6c1f7ca24a8bfbb2db5d8dcd53d7dee8b3f93c721",
+              "width": 357,
+              "height": 357
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-15/2026-07-15.ai.03.hkuds--vibe-trading.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
