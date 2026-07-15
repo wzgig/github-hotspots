@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "bdd7084afcee979d2ae927b29c27168c5ccc82ef74bb2fd7f9acf5b5804f6336",
+  "checklist_sha256": "b88e02192fa838431a83aa947c23b61428419e5f2d19c8635f2c25b98a2fc677",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-07-16",
+  "generated_at": "2026-07-16T07:32:57.227425+08:00",
+  "issue": {
+    "number": 5,
+    "code": "D005",
+    "stem": "D005-2026-07-16",
+    "label": "第5期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-07-16.json",
+    "report_sha256": "6b6d38e248a2aa18b96860806a56467c07e782f38808e7fd49048b9e725e8846",
+    "poster_manifest": "reports/daily/assets/2026-07-16/manifest.json",
+    "poster_manifest_sha256": "3a1a32690b863b9c20262e5c3499a211595c841f4379e0462531116fd224c83f",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D005-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 21,
+      "title_sha256": "bcc78fbe5e08aebbea3ccdcd685309b2abd2a54ed8575bf200221b083be40bfc",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 324,
+      "caption_sha256": "d6f5b6a09d450dcc02d38774e6314113801b8d3a3e443ae0bc7927cf954570f8",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "c56a74817d00fc6aa28e5c5820ed2b82d9638657f95f205b70bf528bca369433",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-16/2026-07-16.comprehensive.cover.png",
+          "sha256": "ced52c5a224be8ceedb85a9571b393ee789015620505f615db3706cc4ddfe7be",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-16/2026-07-16.comprehensive.01.mattpocock--skills.png",
+          "sha256": "31892abf46f5dc3912eaafaaa7748d083b7a8dadeafacb83dd512387abdf5772",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "mattpocock/skills",
+          "publication_path": "images/02-rank-01-mattpocock-skills.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-16/2026-07-16.comprehensive.02.opencut-app--opencut.png",
+          "sha256": "6d5c8505263720fcbf1c50b681e43e6eb6e39bbb0e74dffd17bb951db9c32002",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "OpenCut-app/OpenCut",
+          "publication_path": "images/03-rank-02-opencut-app-opencut.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-16/2026-07-16.comprehensive.03.obra--superpowers.png",
+          "sha256": "b0d6da2e492028a78d3b20e46dcda6bf937a05dfbdca85d2e9035d2a018bd000",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "obra/superpowers",
+          "publication_path": "images/04-rank-03-obra-superpowers.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D005-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 24,
+      "title_sha256": "ed4439b953c80c9afd355ad0e6d4c5ea688e949b9d14d9bae65837f275889ed9",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 320,
+      "caption_sha256": "d9f7c4b3c01749876bdf989585a578e83c6625c1ff9df73b9d59f4d79fb79d98",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "380ae5026b7c382e543797831e5310509b1263a723203a2707e9e52dcca377f3",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-16/2026-07-16.ai.cover.png",
+          "sha256": "2b999b4b1313c90f2946af63cd992efdea3bad08ee0556337151b4e21a3d4cf3",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-16/2026-07-16.ai.01.hkuds--vibe-trading.png",
+          "sha256": "7055890e9f8a03d20e019504766b4ef4e68c9a60000120bf0663e9af8f018cd1",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "HKUDS/Vibe-Trading",
+          "publication_path": "images/02-rank-01-hkuds-vibe-trading.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-16/2026-07-16.ai.02.shubhamsaboo--awesome-llm-apps.png",
+          "sha256": "ef29c7ba90a13ef67f6da3fa4d64e0d41988f2d8b8b5b75d3f8760c5bfb0157e",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "publication_path": "images/03-rank-02-shubhamsaboo-awesome-llm-apps.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-16/2026-07-16.ai.03.obra--superpowers.png",
+          "sha256": "e424cf19393d9d0aaf42a95e5575a830aff5364e5486e34fcff6452d3c34eb6d",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "obra/superpowers",
+          "publication_path": "images/04-rank-03-obra-superpowers.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-07-16",
+    "revision": "bdd7084afcee",
+    "image_policy": "repository-source-reference"
+  }
+}
