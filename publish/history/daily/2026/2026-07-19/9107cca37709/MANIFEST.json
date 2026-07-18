@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "9107cca3770950d6ca3b23df510880c9a3e295e49ac36b4ed478924ced17654c",
+  "checklist_sha256": "fa706f904f061e2c4c270ad6f0b5b91eed4df6792df29dfe1c1d179ae70784f3",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-07-19",
+  "generated_at": "2026-07-19T07:33:31.491696+08:00",
+  "issue": {
+    "number": 8,
+    "code": "D008",
+    "stem": "D008-2026-07-19",
+    "label": "第8期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-07-19.json",
+    "report_sha256": "57fc6e137edc620d981d9f91cfc89dea64f95f99929d7fdc5a8538c590dfd08e",
+    "poster_manifest": "reports/daily/assets/2026-07-19/manifest.json",
+    "poster_manifest_sha256": "bfbbb560cc9e0e01e748845d2c8c471498de18e0e9e9a859188bae0576e4eeb2",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D008-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 21,
+      "title_sha256": "7d6b0e0fd8717e533634743b1334fe953671423f01d0795cb89140e0ef0e9af4",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 359,
+      "caption_sha256": "0b730381951ccef382246f82aef3d0a6173b6fedbbd41f314b2736fa08e88c35",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "4bfeb2d3631408965d352c32a447b29b9756dfae0b6b73c98842fe884dcfd8e0",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.cover.png",
+          "sha256": "85604176869a26a8c78efc39072d77ce7b7763749686d89b45f698c0158e8a47",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.01.posthog--posthog.png",
+          "sha256": "594b674076c7b6a8e025c061cfc75badc2f8ad92173d84b7d944a9eb8d9031dc",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "PostHog/posthog",
+          "publication_path": "images/02-rank-01-posthog-posthog.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.02.nousresearch--hermes-agent.png",
+          "sha256": "4ae1883444f1a5f62e898593b4561a0fa4447381f257cb1a3dc2cc30ea2db0cc",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/03-rank-02-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.03.codecrafters-io--build-your-own-x.png",
+          "sha256": "361cdf03a3919c095b1dc6438902d713fcacb0042bee472c68b5e1a77b940276",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "codecrafters-io/build-your-own-x",
+          "publication_path": "images/04-rank-03-codecrafters-io-build-your-own-x.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D008-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 24,
+      "title_sha256": "6f3a9479a79b7a100d037a3741be31e1ef0d262d8bdc21918852e74a70ebcfe0",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 351,
+      "caption_sha256": "6e6a1ff69a6af94274d87dc6556683d8e9fbfe34ee74ffa2ddc9e7a0ed9f92ee",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "b3fa0f4b52695ca23587b9e4f75eaaa7089c936c9ba28ffa03fd6c03115c3a64",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-19/2026-07-19.ai.cover.png",
+          "sha256": "40c5d33ba0747a396141c01c1f79bf4b1c02e38f4ed33b3bf17584e0cb28a9a3",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-19/2026-07-19.ai.01.posthog--posthog.png",
+          "sha256": "bcb3f54b1f26607cc18836868b415c25adceaa0fc45186e9d6fb824bd0791383",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "PostHog/posthog",
+          "publication_path": "images/02-rank-01-posthog-posthog.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-19/2026-07-19.ai.02.tirth8205--code-review-graph.png",
+          "sha256": "5e07c83b904beb892076b83a85435a1adaf88c912b2c3b3337f87b057bb5458a",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "tirth8205/code-review-graph",
+          "publication_path": "images/03-rank-02-tirth8205-code-review-graph.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-19/2026-07-19.ai.03.nousresearch--hermes-agent.png",
+          "sha256": "6301b2477a6163c6da40ed03ddaab45551f87b25e5e4fa7ffc25d51f7375cd40",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/04-rank-03-nousresearch-hermes-agent.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-07-19",
+    "revision": "9107cca37709",
+    "image_policy": "repository-source-reference"
+  }
+}

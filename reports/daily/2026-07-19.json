@@ -1,0 +1,1518 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-19",
+  "window_start": "2026-07-18",
+  "window_end": "2026-07-19",
+  "generated_at": "2026-07-19T07:30:53+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-18 至 2026-07-19",
+  "publication": {
+    "issue_number": 8,
+    "issue_code": "D008",
+    "issue_label": "第8期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-19",
+    "manifest": "reports/daily/assets/2026-07-19/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "PostHog/posthog",
+            "path": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.01.posthog--posthog.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "codecrafters-io/build-your-own-x",
+            "path": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.03.codecrafters-io--build-your-own-x.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-19/2026-07-19.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "PostHog/posthog",
+            "path": "reports/daily/assets/2026-07-19/2026-07-19.ai.01.posthog--posthog.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-19/2026-07-19.ai.02.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-19/2026-07-19.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 8,
+      "issue_code": "D008",
+      "issue_label": "第8期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 235901813,
+      "full_name": "PostHog/posthog",
+      "owner": "PostHog",
+      "name": "posthog",
+      "html_url": "https://github.com/PostHog/posthog",
+      "description": ":hedgehog: PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+      "language": "Python",
+      "stars": 36573,
+      "forks": 3026,
+      "open_issues": 4895,
+      "watchers": 133,
+      "topics": [
+        "ab-testing",
+        "ai-analytics",
+        "analytics",
+        "cdp",
+        "data-warehouse",
+        "experiments",
+        "feature-flags",
+        "javascript",
+        "product-analytics",
+        "python",
+        "react",
+        "session-replay",
+        "surveys",
+        "typescript",
+        "web-analytics"
+      ],
+      "created_at": "2020-01-23T22:46:58Z",
+      "updated_at": "2026-07-18T23:29:15Z",
+      "pushed_at": "2026-07-18T22:31:36Z",
+      "daily_stars": 337,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 87.11,
+      "star_delta": 354,
+      "fork_delta": 16,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.38,
+        "relative_growth": 93.85,
+        "fork_growth": 71.54,
+        "total_stars": 20.0,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "把产品行为、错误与日志汇到一起，帮助团队分析问题、验证改动，并生成待审阅的修复建议",
+        "highlights": [
+          "从异常信号生成研究报告和待审阅 PR",
+          "结合事件分析与会话回放定位用户问题",
+          "用功能开关和实验控制发布并衡量效果"
+        ],
+        "audience": "需要统一分析用户行为、排查产品问题、验证功能改动，并让 Agent 参与诊断流程的产品与研发团队",
+        "capabilities": [
+          "分析事件数据和用户行为",
+          "回放网站或移动端真实会话",
+          "分批向用户或群组发布功能",
+          "测试改动对目标指标的影响",
+          "采集 LLM 应用的调用链、延迟与成本"
+        ],
+        "core_title": "从产品信号到待审阅修复",
+        "core_summary": "自驱模式读取错误、愤怒点击和失败查询等产品信号，整理成研究报告与修复 PR；团队审阅并合并结果，把诊断、机会发现和改动交付串成闭环。",
+        "prerequisites": "先准备 PostHog 实例，再通过网页片段、SDK 或 API 接入产品数据。",
+        "limitations": "自托管开源部署约支持每月 100k events，且不提供客户支持或保证；自动生成的报告和 PR 仍需人工审阅合并。",
+        "license_label": "MIT expat license",
+        "license_restrictions": "except for the `ee` directory",
+        "readme_sha": "8e59b34910283d70b2d0c55b6bfd39472a9f24f3",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+          ],
+          "highlights": [
+            [
+              "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+            ],
+            [
+              "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+            ],
+            [
+              "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+            ]
+          ],
+          "audience": [
+            "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+          ],
+          "capabilities": [
+            [
+              "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+            ],
+            [
+              "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+            ],
+            [
+              "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+            ],
+            [
+              "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+            ],
+            [
+              "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+            ]
+          ],
+          "core_title": [
+            "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+          ],
+          "core_summary": [
+            "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+          ],
+          "prerequisites": [
+            "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+          ],
+          "limitations": [
+            "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+          ],
+          "license_label": [
+            "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+          ],
+          "license_restrictions": [
+            "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-07-19/repo-fd5f3536fc4822362d822197-935dac4fdd9419cc4b866006.png",
+      "publication_evidence": {
+        "full_name": "PostHog/posthog",
+        "license_spdx_id": "NOASSERTION",
+        "readme": {
+          "sha": "8e59b34910283d70b2d0c55b6bfd39472a9f24f3",
+          "source_url": "https://api.github.com/repos/PostHog/posthog/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-19/repo-fd5f3536fc4822362d822197-935dac4fdd9419cc4b866006.png",
+          "sha256": "d680e58711541278ca83a63302106092c189d71fa5fc5e2186f4c7d2bedb9a6f",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT expat license",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.01.posthog--posthog.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1024554267,
+      "full_name": "NousResearch/hermes-agent",
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "html_url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": 216834,
+      "forks": 40721,
+      "open_issues": 23664,
+      "watchers": 216834,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "clawdbot",
+        "codex",
+        "hermes",
+        "hermes-agent",
+        "llm",
+        "moltbot",
+        "nous-research",
+        "openai",
+        "openclaw"
+      ],
+      "created_at": "2025-07-22T22:22:28Z",
+      "updated_at": "2026-07-18T23:26:33Z",
+      "pushed_at": "2026-07-18T23:27:41Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 87.0,
+      "star_delta": 346,
+      "fork_delta": 149,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 92.31,
+        "relative_growth": 81.54,
+        "fork_growth": 100.0,
+        "total_stars": 90.77,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "让个人 AI Agent 在不同设备持续工作，并从任务经验中创建技能、积累记忆和改进流程",
+        "highlights": [
+          "把复杂任务经验沉淀为可复用技能",
+          "跨会话检索历史并维护持续记忆",
+          "通过消息平台远程指挥云端 Agent"
+        ],
+        "audience": "希望搭建个人长期 Agent，用它跨设备处理任务、定时自动化工作或并行调度子 Agent 的用户与开发者",
+        "capabilities": [
+          "创建并在使用中改进任务技能",
+          "搜索历史会话并总结相关上下文",
+          "切换模型提供商而无需修改代码",
+          "定时执行报告、备份或审计任务",
+          "派生隔离子 Agent 并行处理工作流"
+        ],
+        "core_title": "会从经验中成长的技能循环",
+        "core_summary": "Agent 会从复杂任务中创建技能，在后续使用时继续改进，并通过记忆提醒、会话搜索和用户模型保留跨会话经验，让重复任务逐渐形成可复用流程。",
+        "prerequisites": "安装后需选择 LLM 提供商与模型；如需消息平台交互，还要配置并启动 gateway。",
+        "limitations": "Termux 不能使用完整 `.[all]` 依赖；开发虚拟环境不要放在 Agent 操作的源码目录内。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+          ],
+          "highlights": [
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ],
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ],
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ]
+          ],
+          "audience": [
+            "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+          ],
+          "capabilities": [
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ],
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ],
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ],
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ],
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ]
+          ],
+          "core_title": [
+            "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+          ],
+          "core_summary": [
+            "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+          ],
+          "prerequisites": [
+            "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+          ],
+          "limitations": [
+            "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-19/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+      "publication_evidence": {
+        "full_name": "NousResearch/hermes-agent",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+          "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-19/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.02.nousresearch--hermes-agent.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 132750724,
+      "full_name": "codecrafters-io/build-your-own-x",
+      "owner": "codecrafters-io",
+      "name": "build-your-own-x",
+      "html_url": "https://github.com/codecrafters-io/build-your-own-x",
+      "description": "Master programming by recreating your favorite technologies from scratch.",
+      "language": "Markdown",
+      "stars": 528224,
+      "forks": 49981,
+      "open_issues": 526,
+      "watchers": 6822,
+      "topics": [
+        "awesome-list",
+        "free",
+        "programming",
+        "tutorial-code",
+        "tutorial-exercises",
+        "tutorials"
+      ],
+      "created_at": "2018-05-09T12:03:18Z",
+      "updated_at": "2026-07-18T23:29:52Z",
+      "pushed_at": "2026-07-14T19:25:58Z",
+      "daily_stars": 1131,
+      "weekly_stars": null,
+      "trending_rank_daily": 10,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 85.7,
+      "star_delta": 766,
+      "fork_delta": 70,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.46,
+        "relative_growth": 87.69,
+        "fork_growth": 98.46,
+        "total_stars": 100.0,
+        "activity": 26.36,
+        "trending_signal": 28.91
+      },
+      "summary": {
+        "one_line": "按技术主题汇集从零复刻教程，让学习者通过亲手重建常用系统理解其内部原理",
+        "highlights": [
+          "按技术类别整理分步重建指南",
+          "同类项目提供多种编程语言路径",
+          "覆盖数据库、操作系统、浏览器等主题"
+        ],
+        "audience": "想通过动手复刻技术来学习原理，或正在寻找数据库、编程语言、网络栈等专项练习路径的程序员",
+        "capabilities": [
+          "按技术类别查找从零重建教程",
+          "选择不同语言的同类实现路径",
+          "跟随分步指南复刻常用技术",
+          "比较同一主题的多种实现方式",
+          "提交教程或参与审核待收录内容"
+        ],
+        "core_title": "用重建过程理解技术原理",
+        "core_summary": "仓库把分步教程按技术主题归档，并在条目中标注实现语言。学习者先选想理解的系统，再沿外部指南从头实现，用成品背后的构造过程补足原理认识。",
+        "prerequisites": "",
+        "limitations": "仓库本身是教程索引，不提供统一代码或单一学习路径；具体实现内容由各外部指南决定。",
+        "license_label": "CC0",
+        "license_restrictions": "",
+        "readme_sha": "9a553c729b29bc69296d7092fc1c314c2c811bad",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+          ],
+          "highlights": [
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ],
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ],
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ]
+          ],
+          "audience": [
+            "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+          ],
+          "capabilities": [
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ],
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ],
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ],
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ],
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ]
+          ],
+          "core_title": [
+            "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+          ],
+          "core_summary": [
+            "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+          ],
+          "prerequisites": [],
+          "limitations": [
+            "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+          ],
+          "license_label": [
+            "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-19/repo-d5549494bcee1ca04524fe68-69e062fe630f055e9327e93f.png",
+      "publication_evidence": {
+        "full_name": "codecrafters-io/build-your-own-x",
+        "license_spdx_id": null,
+        "readme": {
+          "sha": "9a553c729b29bc69296d7092fc1c314c2c811bad",
+          "source_url": "https://api.github.com/repos/codecrafters-io/build-your-own-x/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-19/repo-d5549494bcee1ca04524fe68-69e062fe630f055e9327e93f.png",
+          "sha256": "559c21296615f8ff06effb9fae00ddd81f3954b246be7918c3c22e452f32c811",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "CC0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.03.codecrafters-io--build-your-own-x.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "PostHog/posthog",
+            "path": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.01.posthog--posthog.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "codecrafters-io/build-your-own-x",
+            "path": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.03.codecrafters-io--build-your-own-x.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 235901813,
+          "full_name": "PostHog/posthog",
+          "owner": "PostHog",
+          "name": "posthog",
+          "html_url": "https://github.com/PostHog/posthog",
+          "description": ":hedgehog: PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+          "language": "Python",
+          "stars": 36573,
+          "forks": 3026,
+          "open_issues": 4895,
+          "watchers": 133,
+          "topics": [
+            "ab-testing",
+            "ai-analytics",
+            "analytics",
+            "cdp",
+            "data-warehouse",
+            "experiments",
+            "feature-flags",
+            "javascript",
+            "product-analytics",
+            "python",
+            "react",
+            "session-replay",
+            "surveys",
+            "typescript",
+            "web-analytics"
+          ],
+          "created_at": "2020-01-23T22:46:58Z",
+          "updated_at": "2026-07-18T23:29:15Z",
+          "pushed_at": "2026-07-18T22:31:36Z",
+          "daily_stars": 337,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 87.11,
+          "star_delta": 354,
+          "fork_delta": 16,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.38,
+            "relative_growth": 93.85,
+            "fork_growth": 71.54,
+            "total_stars": 20.0,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把产品行为、错误与日志汇到一起，帮助团队分析问题、验证改动，并生成待审阅的修复建议",
+            "highlights": [
+              "从异常信号生成研究报告和待审阅 PR",
+              "结合事件分析与会话回放定位用户问题",
+              "用功能开关和实验控制发布并衡量效果"
+            ],
+            "audience": "需要统一分析用户行为、排查产品问题、验证功能改动，并让 Agent 参与诊断流程的产品与研发团队",
+            "capabilities": [
+              "分析事件数据和用户行为",
+              "回放网站或移动端真实会话",
+              "分批向用户或群组发布功能",
+              "测试改动对目标指标的影响",
+              "采集 LLM 应用的调用链、延迟与成本"
+            ],
+            "core_title": "从产品信号到待审阅修复",
+            "core_summary": "自驱模式读取错误、愤怒点击和失败查询等产品信号，整理成研究报告与修复 PR；团队审阅并合并结果，把诊断、机会发现和改动交付串成闭环。",
+            "prerequisites": "先准备 PostHog 实例，再通过网页片段、SDK 或 API 接入产品数据。",
+            "limitations": "自托管开源部署约支持每月 100k events，且不提供客户支持或保证；自动生成的报告和 PR 仍需人工审阅合并。",
+            "license_label": "MIT expat license",
+            "license_restrictions": "except for the `ee` directory",
+            "readme_sha": "8e59b34910283d70b2d0c55b6bfd39472a9f24f3",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "highlights": [
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ],
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ],
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ]
+              ],
+              "audience": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ],
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ],
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ],
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ],
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ]
+              ],
+              "core_title": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "core_summary": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "prerequisites": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "limitations": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "license_label": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "license_restrictions": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-07-19/repo-fd5f3536fc4822362d822197-935dac4fdd9419cc4b866006.png",
+          "publication_evidence": {
+            "full_name": "PostHog/posthog",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "8e59b34910283d70b2d0c55b6bfd39472a9f24f3",
+              "source_url": "https://api.github.com/repos/PostHog/posthog/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-19/repo-fd5f3536fc4822362d822197-935dac4fdd9419cc4b866006.png",
+              "sha256": "d680e58711541278ca83a63302106092c189d71fa5fc5e2186f4c7d2bedb9a6f",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT expat license",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.01.posthog--posthog.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 216834,
+          "forks": 40721,
+          "open_issues": 23664,
+          "watchers": 216834,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-07-18T23:26:33Z",
+          "pushed_at": "2026-07-18T23:27:41Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 87.0,
+          "star_delta": 346,
+          "fork_delta": 149,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.31,
+            "relative_growth": 81.54,
+            "fork_growth": 100.0,
+            "total_stars": 90.77,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "让个人 AI Agent 在不同设备持续工作，并从任务经验中创建技能、积累记忆和改进流程",
+            "highlights": [
+              "把复杂任务经验沉淀为可复用技能",
+              "跨会话检索历史并维护持续记忆",
+              "通过消息平台远程指挥云端 Agent"
+            ],
+            "audience": "希望搭建个人长期 Agent，用它跨设备处理任务、定时自动化工作或并行调度子 Agent 的用户与开发者",
+            "capabilities": [
+              "创建并在使用中改进任务技能",
+              "搜索历史会话并总结相关上下文",
+              "切换模型提供商而无需修改代码",
+              "定时执行报告、备份或审计任务",
+              "派生隔离子 Agent 并行处理工作流"
+            ],
+            "core_title": "会从经验中成长的技能循环",
+            "core_summary": "Agent 会从复杂任务中创建技能，在后续使用时继续改进，并通过记忆提醒、会话搜索和用户模型保留跨会话经验，让重复任务逐渐形成可复用流程。",
+            "prerequisites": "安装后需选择 LLM 提供商与模型；如需消息平台交互，还要配置并启动 gateway。",
+            "limitations": "Termux 不能使用完整 `.[all]` 依赖；开发虚拟环境不要放在 Agent 操作的源码目录内。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "highlights": [
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ]
+              ],
+              "audience": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ]
+              ],
+              "core_title": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "core_summary": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "prerequisites": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "limitations": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-19/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-19/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.02.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 132750724,
+          "full_name": "codecrafters-io/build-your-own-x",
+          "owner": "codecrafters-io",
+          "name": "build-your-own-x",
+          "html_url": "https://github.com/codecrafters-io/build-your-own-x",
+          "description": "Master programming by recreating your favorite technologies from scratch.",
+          "language": "Markdown",
+          "stars": 528224,
+          "forks": 49981,
+          "open_issues": 526,
+          "watchers": 6822,
+          "topics": [
+            "awesome-list",
+            "free",
+            "programming",
+            "tutorial-code",
+            "tutorial-exercises",
+            "tutorials"
+          ],
+          "created_at": "2018-05-09T12:03:18Z",
+          "updated_at": "2026-07-18T23:29:52Z",
+          "pushed_at": "2026-07-14T19:25:58Z",
+          "daily_stars": 1131,
+          "weekly_stars": null,
+          "trending_rank_daily": 10,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 85.7,
+          "star_delta": 766,
+          "fork_delta": 70,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.46,
+            "relative_growth": 87.69,
+            "fork_growth": 98.46,
+            "total_stars": 100.0,
+            "activity": 26.36,
+            "trending_signal": 28.91
+          },
+          "summary": {
+            "one_line": "按技术主题汇集从零复刻教程，让学习者通过亲手重建常用系统理解其内部原理",
+            "highlights": [
+              "按技术类别整理分步重建指南",
+              "同类项目提供多种编程语言路径",
+              "覆盖数据库、操作系统、浏览器等主题"
+            ],
+            "audience": "想通过动手复刻技术来学习原理，或正在寻找数据库、编程语言、网络栈等专项练习路径的程序员",
+            "capabilities": [
+              "按技术类别查找从零重建教程",
+              "选择不同语言的同类实现路径",
+              "跟随分步指南复刻常用技术",
+              "比较同一主题的多种实现方式",
+              "提交教程或参与审核待收录内容"
+            ],
+            "core_title": "用重建过程理解技术原理",
+            "core_summary": "仓库把分步教程按技术主题归档，并在条目中标注实现语言。学习者先选想理解的系统，再沿外部指南从头实现，用成品背后的构造过程补足原理认识。",
+            "prerequisites": "",
+            "limitations": "仓库本身是教程索引，不提供统一代码或单一学习路径；具体实现内容由各外部指南决定。",
+            "license_label": "CC0",
+            "license_restrictions": "",
+            "readme_sha": "9a553c729b29bc69296d7092fc1c314c2c811bad",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+              ],
+              "highlights": [
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ],
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ],
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ]
+              ],
+              "audience": [
+                "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ],
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ],
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ],
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ],
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ]
+              ],
+              "core_title": [
+                "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+              ],
+              "core_summary": [
+                "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+              ],
+              "prerequisites": [],
+              "limitations": [
+                "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+              ],
+              "license_label": [
+                "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-19/repo-d5549494bcee1ca04524fe68-69e062fe630f055e9327e93f.png",
+          "publication_evidence": {
+            "full_name": "codecrafters-io/build-your-own-x",
+            "license_spdx_id": null,
+            "readme": {
+              "sha": "9a553c729b29bc69296d7092fc1c314c2c811bad",
+              "source_url": "https://api.github.com/repos/codecrafters-io/build-your-own-x/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-19/repo-d5549494bcee1ca04524fe68-69e062fe630f055e9327e93f.png",
+              "sha256": "559c21296615f8ff06effb9fae00ddd81f3954b246be7918c3c22e452f32c811",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "CC0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-19/2026-07-19.comprehensive.03.codecrafters-io--build-your-own-x.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-19/2026-07-19.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "PostHog/posthog",
+            "path": "reports/daily/assets/2026-07-19/2026-07-19.ai.01.posthog--posthog.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-19/2026-07-19.ai.02.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-19/2026-07-19.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 235901813,
+          "full_name": "PostHog/posthog",
+          "owner": "PostHog",
+          "name": "posthog",
+          "html_url": "https://github.com/PostHog/posthog",
+          "description": ":hedgehog: PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+          "language": "Python",
+          "stars": 36573,
+          "forks": 3026,
+          "open_issues": 4895,
+          "watchers": 133,
+          "topics": [
+            "ab-testing",
+            "ai-analytics",
+            "analytics",
+            "cdp",
+            "data-warehouse",
+            "experiments",
+            "feature-flags",
+            "javascript",
+            "product-analytics",
+            "python",
+            "react",
+            "session-replay",
+            "surveys",
+            "typescript",
+            "web-analytics"
+          ],
+          "created_at": "2020-01-23T22:46:58Z",
+          "updated_at": "2026-07-18T23:29:15Z",
+          "pushed_at": "2026-07-18T22:31:36Z",
+          "daily_stars": 337,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 86.34,
+          "star_delta": 354,
+          "fork_delta": 16,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.15,
+            "relative_growth": 92.31,
+            "fork_growth": 63.46,
+            "total_stars": 19.23,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把产品分析、回放、发布实验和故障排查放进同一套平台，并让智能体协助发现问题、提交修复",
+            "highlights": [
+              "把产品数据中的异常信号整理成报告和待审核修复",
+              "结合事件分析与会话回放定位用户行为问题",
+              "用功能开关和实验控制发布范围并衡量效果"
+            ],
+            "audience": "需要统一分析用户行为、排查线上问题、验证功能改动，并让智能体参与产品迭代的产品与研发团队",
+            "capabilities": [
+              "分析事件数据并用可视化或 SQL 查看行为",
+              "回放网站或移动应用中的真实用户操作",
+              "按用户或群组逐步开放功能",
+              "运行实验并衡量改动对目标指标的影响",
+              "同步外部数据并执行过滤、转换和分发"
+            ],
+            "core_title": "从产品信号生成待审核修复",
+            "core_summary": "自驱模式会把错误、愤怒点击和失败查询等信号研究成报告与拉取请求；团队仍负责审查和合并，让发现问题到提交修复形成连续流程。",
+            "prerequisites": "需要先获得 PostHog 实例，再通过网页片段、SDK 或 API 接入产品数据。",
+            "limitations": "开源部署约支持每月 100k events；不提供客户支持或保证，超出后建议迁移到 PostHog Cloud。",
+            "license_label": "MIT expat license",
+            "license_restrictions": "except for the `ee` directory",
+            "readme_sha": "8e59b34910283d70b2d0c55b6bfd39472a9f24f3",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "highlights": [
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ],
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ],
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ]
+              ],
+              "audience": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ],
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ],
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ],
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ],
+                [
+                  "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+                ]
+              ],
+              "core_title": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "core_summary": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "prerequisites": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "limitations": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "license_label": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ],
+              "license_restrictions": [
+                "github.readme:8e59b34910283d70b2d0c55b6bfd39472a9f24f3"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-07-19/repo-fd5f3536fc4822362d822197-935dac4fdd9419cc4b866006.png",
+          "publication_evidence": {
+            "full_name": "PostHog/posthog",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "8e59b34910283d70b2d0c55b6bfd39472a9f24f3",
+              "source_url": "https://api.github.com/repos/PostHog/posthog/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-19/repo-fd5f3536fc4822362d822197-935dac4fdd9419cc4b866006.png",
+              "sha256": "d680e58711541278ca83a63302106092c189d71fa5fc5e2186f4c7d2bedb9a6f",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT expat license",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-19/2026-07-19.ai.01.posthog--posthog.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1167788341,
+          "full_name": "tirth8205/code-review-graph",
+          "owner": "tirth8205",
+          "name": "code-review-graph",
+          "html_url": "https://github.com/tirth8205/code-review-graph",
+          "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+          "language": "Python",
+          "stars": 20145,
+          "forks": 2125,
+          "open_issues": 79,
+          "watchers": 66,
+          "topics": [
+            "ai-coding",
+            "claude",
+            "claude-code",
+            "code-review",
+            "graphrag",
+            "incremental",
+            "knowledge-graph",
+            "llm",
+            "mcp",
+            "python",
+            "static-analysis",
+            "tree-sitter"
+          ],
+          "created_at": "2026-02-26T17:25:13Z",
+          "updated_at": "2026-07-18T23:11:24Z",
+          "pushed_at": "2026-07-18T00:32:48Z",
+          "daily_stars": 356,
+          "weekly_stars": null,
+          "trending_rank_daily": 6,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 85.1,
+          "star_delta": 365,
+          "fork_delta": 16,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 96.15,
+            "fork_growth": 63.46,
+            "total_stars": 11.54,
+            "activity": 71.65,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "先把代码库解析成可增量更新的结构图，再只向 AI 提供审查当前改动所需的文件和依赖",
+            "highlights": [
+              "用 Tree-sitter 建立函数、类、导入与调用关系图",
+              "沿调用方、依赖项和测试追踪改动影响范围",
+              "通过 MCP、命令行和 CI 输出针对性审查上下文"
+            ],
+            "audience": "经常审查大型仓库或多语言单体仓库，希望减少 AI 重读代码并定位受影响流程的研发团队",
+            "capabilities": [
+              "解析代码库并持久保存结构关系图",
+              "追踪改动涉及的调用方、依赖项和测试",
+              "仅重新解析发生变化的文件",
+              "在拉取请求中标注风险函数和测试缺口",
+              "导出交互图、GraphML、SVG 或知识库"
+            ],
+            "core_title": "用代码关系图缩小审查范围",
+            "core_summary": "它以语法树提取函数、类、导入和调用关系，保存为本地图谱；审查时沿关系计算改动影响范围，让 AI 聚焦相关文件而不是扫描整个仓库。",
+            "prerequisites": "需要 Python 3.10+；安装并生成 MCP 配置后，应重启编辑器或 AI 工具。",
+            "limitations": "小型仓库、简单单文件改动或一次性问题未必适合；影响分析会保守标出可能受影响的文件，存在误报。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "highlights": [
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ]
+              ],
+              "audience": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ]
+              ],
+              "core_title": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "core_summary": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "prerequisites": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "limitations": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-19/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+          "publication_evidence": {
+            "full_name": "tirth8205/code-review-graph",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+              "source_url": "https://api.github.com/repos/tirth8205/code-review-graph/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-19/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+              "sha256": "e4ec211724f39785b798a6ddbeb1f804af20b65fcbede4802ff584cdbc57f8b9",
+              "width": 351,
+              "height": 351
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-19/2026-07-19.ai.02.tirth8205--code-review-graph.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 216834,
+          "forks": 40721,
+          "open_issues": 23664,
+          "watchers": 216834,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-07-18T23:26:33Z",
+          "pushed_at": "2026-07-18T23:27:41Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 82.11,
+          "star_delta": 346,
+          "fork_delta": 149,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 88.46,
+            "relative_growth": 65.38,
+            "fork_growth": 100.0,
+            "total_stars": 96.15,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "让个人 AI 助手跨会话记住经验、生成并改进技能，还能从终端或消息平台持续执行任务",
+            "highlights": [
+              "从复杂任务中创建技能，并在后续使用中改进",
+              "搜索过往对话并维护跨会话记忆与用户模型",
+              "通过消息网关远程安排任务并接收执行结果"
+            ],
+            "audience": "希望长期积累个人工作偏好，并从终端、聊天软件或远程环境安排自动化任务的 AI 工具用户与开发者",
+            "capabilities": [
+              "从执行经验中创建并持续改进技能",
+              "检索历史会话并总结跨会话信息",
+              "连接多种消息平台保持对话连续",
+              "按自然语言计划定时任务并投递结果",
+              "派生隔离子智能体并行处理不同工作流"
+            ],
+            "core_title": "把任务经验沉淀成可复用技能",
+            "core_summary": "内置学习闭环会保存记忆、提醒自己沉淀知识，并在复杂任务后生成技能；技能在实际调用中继续调整，使后续会话能复用过去的处理方式。",
+            "prerequisites": "需完成模型提供商配置；消息渠道和外部工具还要按需设置对应账号、订阅或密钥。",
+            "limitations": "Termux 的完整可选依赖包含 Android 不兼容的语音组件，需要改用专门的 termux 依赖组。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "highlights": [
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ]
+              ],
+              "audience": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ]
+              ],
+              "core_title": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "core_summary": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "prerequisites": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "limitations": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-19/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-19/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-19/2026-07-19.ai.03.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
