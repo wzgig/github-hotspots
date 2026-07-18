@@ -34,6 +34,19 @@
 - `ruff check .`、`ruff format --check .`、`node --check site/app.js`：通过。
 - `verify-history --period daily --date 2026-07-17`：清理后通过。
 
+### 恢复与线上闭环
+
+- 7 月 17 日使用冻结事实重绘而非重新采集历史计数；两榜均升级为
+  `used_backend=codex-cli`，仓库、排名、Star/Fork、增量、URL 与原始报告逐字段零差异，提交为
+  `da60fd2`。
+- 7 月 18 日首次计划任务式运行因 AI 榜 Codex 超时发生回退，被严格门禁拒绝且没有提交；随后把
+  单次恢复运行的超时临时提高到 480 秒，两榜均以 Codex、无回退生成，临时配置已恢复，报告提交为
+  `9759b92`。
+- Pages 运行 `29627912240` 对 `9759b92` 完成 build/deploy；公开首页、站点 JSON 和
+  7 月 18 日封面均返回 HTTP 200，线上日期为 `2026-07-18`、期号为 `D007`。
+- Daily Actions 手动核验运行 `29627962874` 成功识别现有完整 Codex 报告与 history，跳过生成、
+  测试、提交和 Pages 重复部署，没有覆盖正式报告。
+
 ### 已知限制
 
 - 启用 Windows Task Scheduler Operational 系统日志需要管理员权限，本次普通用户会话返回
