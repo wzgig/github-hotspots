@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "1f3ec9ad1e651de115eeb338b50d002c85f5fda7f0335a98f1c02d903fbd75c9",
+  "checklist_sha256": "de2d365855da592d6f7f6b7e5cea274068e33c5a087b1524db0291938d59f482",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-07-17",
+  "generated_at": "2026-07-18T10:37:36.479881+08:00",
+  "issue": {
+    "number": 6,
+    "code": "D006",
+    "stem": "D006-2026-07-17",
+    "label": "第6期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-07-17.json",
+    "report_sha256": "e91744f1bb5f9ed041f0dfe5690c47931789ba241c7de9255306ba46ba8149b9",
+    "poster_manifest": "reports/daily/assets/2026-07-17/manifest.json",
+    "poster_manifest_sha256": "6b096fb55791b4bb097fb297f1258057da515e3f8e41ac54e560b0b8cdeb9eaa",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D006-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 21,
+      "title_sha256": "1c51b342eda5b36140c229af9e1102f57beae7ac07710e8a6a1d5269e82042d0",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 361,
+      "caption_sha256": "344ae16e70e028b9bdace110fe23e5d0ae66ccecd1a3bd5d395d80c86456430f",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "654e80d58b61bf60edfb9e3de5b9485d7be311ad047dcb2c8ceee324337d49bc",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-17/2026-07-17.comprehensive.cover.png",
+          "sha256": "5483e3ced77592670624d4d7b727472b1d4a69272c16771ca505928e0d590ab3",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-17/2026-07-17.comprehensive.01.mattpocock--skills.png",
+          "sha256": "90021a9e3d40241ad2d341db1b2438b6711212b33da17c350da8ed8d0c57b418",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "mattpocock/skills",
+          "publication_path": "images/02-rank-01-mattpocock-skills.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-17/2026-07-17.comprehensive.02.nousresearch--hermes-agent.png",
+          "sha256": "fcfc5bf0ecc7046ad63a43ea3303e318f84a396120a0479b4442767b05dc574b",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/03-rank-02-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-17/2026-07-17.comprehensive.03.hasaneyldrm--exercises-dataset.png",
+          "sha256": "9388175ac2eec9cef5cc44f70c628ef9870d4202c8eaed102d8712cc3a616128",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "hasaneyldrm/exercises-dataset",
+          "publication_path": "images/04-rank-03-hasaneyldrm-exercises-dataset.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D006-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 24,
+      "title_sha256": "1c85651f63e7b383ed207e9c9b033b47332e714e190a862846f01681102de760",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 361,
+      "caption_sha256": "ad3058ddac0138654adaef2224c8ee3b9950d59bfdb01d8f2ced6ede940ce9c1",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "cb7900b2e3303e02a5100d00bae7294ab6a08c69a588d837f3b2ce178aab5e05",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-17/2026-07-17.ai.cover.png",
+          "sha256": "e1e95a5d29b3dc1dc616161b2b17688e59fa9eb8c5dec7c5e8eb5a786cc7c869",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-17/2026-07-17.ai.01.nutlope--hallmark.png",
+          "sha256": "b02232d7a4b24cfc985263ef4d01b918601808152de5d64ff2129bf7c3f7f491",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "Nutlope/hallmark",
+          "publication_path": "images/02-rank-01-nutlope-hallmark.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-17/2026-07-17.ai.02.shubhamsaboo--awesome-llm-apps.png",
+          "sha256": "63840da4411574ce4dfddde3f324b3ff07a322238f5d2ac91645adae86a20e20",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "publication_path": "images/03-rank-02-shubhamsaboo-awesome-llm-apps.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-17/2026-07-17.ai.03.nousresearch--hermes-agent.png",
+          "sha256": "490fbebe25dd36bb0ab50071340e705e99d97b97465df7625eb3cde3ee4c47b7",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/04-rank-03-nousresearch-hermes-agent.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-07-17",
+    "revision": "1f3ec9ad1e65",
+    "image_policy": "repository-source-reference"
+  }
+}
