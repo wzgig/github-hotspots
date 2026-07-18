@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-07-18",
+  "window": {
+    "start": "2026-07-17",
+    "end": "2026-07-18"
+  },
+  "source_report": "reports/daily/2026-07-18.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-07-18",
+  "manifest": "reports/daily/assets/2026-07-18/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "OpenCut-app/OpenCut",
+          "path": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.01.opencut-app--opencut.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "codecrafters-io/build-your-own-x",
+          "path": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.02.codecrafters-io--build-your-own-x.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "mattpocock/skills",
+          "path": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.03.mattpocock--skills.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-07-18/2026-07-18.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "path": "reports/daily/assets/2026-07-18/2026-07-18.ai.01.shubhamsaboo--awesome-llm-apps.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "obra/superpowers",
+          "path": "reports/daily/assets/2026-07-18/2026-07-18.ai.02.obra--superpowers.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/daily/assets/2026-07-18/2026-07-18.ai.03.nousresearch--hermes-agent.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 7,
+    "issue_code": "D007",
+    "issue_label": "第7期",
+    "status": "official"
+  }
+}

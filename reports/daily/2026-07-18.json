@@ -1,0 +1,1383 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-18",
+  "window_start": "2026-07-17",
+  "window_end": "2026-07-18",
+  "generated_at": "2026-07-18T10:51:10+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-17 至 2026-07-18",
+  "publication": {
+    "issue_number": 7,
+    "issue_code": "D007",
+    "issue_label": "第7期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "3 个上榜项目未获取到 Owner 头像，海报已使用身份占位图",
+    "4 个上榜项目未获取到 README，相关文案将使用受控回退"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-18",
+    "manifest": "reports/daily/assets/2026-07-18/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "OpenCut-app/OpenCut",
+            "path": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.01.opencut-app--opencut.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "codecrafters-io/build-your-own-x",
+            "path": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.02.codecrafters-io--build-your-own-x.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.03.mattpocock--skills.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-18/2026-07-18.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-18/2026-07-18.ai.01.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-07-18/2026-07-18.ai.02.obra--superpowers.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-18/2026-07-18.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 7,
+      "issue_code": "D007",
+      "issue_label": "第7期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1006414368,
+      "full_name": "OpenCut-app/OpenCut",
+      "owner": "OpenCut-app",
+      "name": "OpenCut",
+      "html_url": "https://github.com/OpenCut-app/OpenCut",
+      "description": "The open-source CapCut alternative",
+      "language": "TypeScript",
+      "stars": 74928,
+      "forks": 7553,
+      "open_issues": 351,
+      "watchers": 366,
+      "topics": [
+        "editor",
+        "oss",
+        "videoeditor"
+      ],
+      "created_at": "2025-06-22T08:02:17Z",
+      "updated_at": "2026-07-18T02:50:35Z",
+      "pushed_at": "2026-07-17T21:23:26Z",
+      "daily_stars": 1074,
+      "weekly_stars": null,
+      "trending_rank_daily": 14,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 91.51,
+      "star_delta": 746,
+      "fork_delta": 58,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.3,
+        "relative_growth": 97.3,
+        "fork_growth": 94.14,
+        "total_stars": 54.05,
+        "activity": 100.0,
+        "trending_signal": 25.6
+      },
+      "summary": {
+        "one_line": "正在重写的开源视频编辑器，计划用一套代码覆盖网页、桌面和移动端",
+        "highlights": [
+          "以 Rust 核心支撑多端编辑器",
+          "采用插件优先架构接入第三方扩展",
+          "计划提供无界面模式处理自动化渲染"
+        ],
+        "audience": "适合跟进视频编辑器架构、插件系统和跨端方案的开发者；当前不适合直接依赖新版完成日常剪辑。",
+        "capabilities": [
+          "计划开放 Editor API",
+          "计划接入第三方插件",
+          "计划让 AI 智能体通过 MCP 调用",
+          "计划执行自动化与批量渲染",
+          "计划在编辑器内运行脚本"
+        ],
+        "core_title": "一套核心覆盖多端与自动化",
+        "core_summary": "新版围绕 Rust 核心、插件优先架构和 Editor API 重建，并计划加入 MCP、无界面渲染与脚本入口，让交互剪辑和自动化处理共用同一套能力。",
+        "prerequisites": "开发前需安装 proto，在仓库根目录运行 proto use，再用 moon 启动网页、API 或桌面端开发任务。",
+        "limitations": "项目正在从头重写；当前应使用 classic 版本。架构设计期间尚不接受外部贡献。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "08cef45afb531c600819ff3dde2d05a3a6c5006e",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+          ],
+          "highlights": [
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ],
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ],
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ]
+          ],
+          "audience": [
+            "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+          ],
+          "capabilities": [
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ],
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ],
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ],
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ],
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ]
+          ],
+          "core_title": [
+            "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+          ],
+          "core_summary": [
+            "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+          ],
+          "prerequisites": [
+            "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+          ],
+          "limitations": [
+            "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-18/repo-5150ac7e610cb3d0c8539e42-330c5082177040ee5631e760.png",
+      "publication_evidence": {
+        "full_name": "OpenCut-app/OpenCut",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "08cef45afb531c600819ff3dde2d05a3a6c5006e",
+          "source_url": "https://api.github.com/repos/OpenCut-app/OpenCut/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-18/repo-5150ac7e610cb3d0c8539e42-330c5082177040ee5631e760.png",
+          "sha256": "150435ca3751cb8e94618b4f5226636690a842040ef889eb15c62a6f64d15952",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.01.opencut-app--opencut.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 132750724,
+      "full_name": "codecrafters-io/build-your-own-x",
+      "owner": "codecrafters-io",
+      "name": "build-your-own-x",
+      "html_url": "https://github.com/codecrafters-io/build-your-own-x",
+      "description": "Master programming by recreating your favorite technologies from scratch.",
+      "language": "Markdown",
+      "stars": 527458,
+      "forks": 49911,
+      "open_issues": 523,
+      "watchers": 6813,
+      "topics": [
+        "awesome-list",
+        "free",
+        "programming",
+        "tutorial-code",
+        "tutorial-exercises",
+        "tutorials"
+      ],
+      "created_at": "2018-05-09T12:03:18Z",
+      "updated_at": "2026-07-18T02:49:53Z",
+      "pushed_at": "2026-07-14T19:25:58Z",
+      "daily_stars": 1068,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 91.34,
+      "star_delta": 988,
+      "fork_delta": 106,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 99.1,
+        "relative_growth": 90.99,
+        "fork_growth": 99.1,
+        "total_stars": 100.0,
+        "activity": 36.79,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "按技术主题汇集从零重造教程，帮助学习者通过亲手实现理解系统原理",
+        "highlights": [
+          "按技术类别查找分步实现指南",
+          "覆盖数据库、操作系统与网络栈等底层主题",
+          "收录 AI 模型、渲染器和前端框架教程"
+        ],
+        "audience": "适合希望通过重写现有技术理解内部机制的程序员，可按目标系统和熟悉的编程语言选择教程。",
+        "capabilities": [
+          "查找从零实现数据库的教程",
+          "学习编写操作系统与网络栈",
+          "练习构建编程语言和正则引擎",
+          "选择 AI 模型与神经网络指南",
+          "探索浏览器、服务器和 Git 的实现"
+        ],
+        "core_title": "用重造技术代替只读原理",
+        "core_summary": "它把分散的分步教程按技术类型整理，并标出教程使用的编程语言。读者可选定数据库、操作系统、AI 模型等目标，沿具体实现过程理解内部机制。",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "CC0",
+        "license_restrictions": "",
+        "readme_sha": "9a553c729b29bc69296d7092fc1c314c2c811bad",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+          ],
+          "highlights": [
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ],
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ],
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ]
+          ],
+          "audience": [
+            "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+          ],
+          "capabilities": [
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ],
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ],
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ],
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ],
+            [
+              "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+            ]
+          ],
+          "core_title": [
+            "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+          ],
+          "core_summary": [
+            "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [
+            "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-18/repo-d5549494bcee1ca04524fe68-69e062fe630f055e9327e93f.png",
+      "publication_evidence": {
+        "full_name": "codecrafters-io/build-your-own-x",
+        "license_spdx_id": null,
+        "readme": {
+          "sha": "9a553c729b29bc69296d7092fc1c314c2c811bad",
+          "source_url": "https://api.github.com/repos/codecrafters-io/build-your-own-x/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-18/repo-d5549494bcee1ca04524fe68-69e062fe630f055e9327e93f.png",
+          "sha256": "559c21296615f8ff06effb9fae00ddd81f3954b246be7918c3c22e452f32c811",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "CC0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.02.codecrafters-io--build-your-own-x.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 175730,
+      "forks": 15058,
+      "open_issues": 189,
+      "watchers": 175730,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-07-18T02:47:28Z",
+      "pushed_at": "2026-07-17T09:51:15Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 90.86,
+      "star_delta": 1222,
+      "fork_delta": 88,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 98.2,
+        "fork_growth": 98.2,
+        "total_stars": 84.68,
+        "activity": 71.65,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "目前无法从公开字段确认 skills 能完成哪些任务",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "目前无法从公开字段确认 skills 能完成哪些任务",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-18/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-07-18/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": [
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          }
+        ]
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.03.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "OpenCut-app/OpenCut",
+            "path": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.01.opencut-app--opencut.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "codecrafters-io/build-your-own-x",
+            "path": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.02.codecrafters-io--build-your-own-x.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.03.mattpocock--skills.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1006414368,
+          "full_name": "OpenCut-app/OpenCut",
+          "owner": "OpenCut-app",
+          "name": "OpenCut",
+          "html_url": "https://github.com/OpenCut-app/OpenCut",
+          "description": "The open-source CapCut alternative",
+          "language": "TypeScript",
+          "stars": 74928,
+          "forks": 7553,
+          "open_issues": 351,
+          "watchers": 366,
+          "topics": [
+            "editor",
+            "oss",
+            "videoeditor"
+          ],
+          "created_at": "2025-06-22T08:02:17Z",
+          "updated_at": "2026-07-18T02:50:35Z",
+          "pushed_at": "2026-07-17T21:23:26Z",
+          "daily_stars": 1074,
+          "weekly_stars": null,
+          "trending_rank_daily": 14,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.51,
+          "star_delta": 746,
+          "fork_delta": 58,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.3,
+            "relative_growth": 97.3,
+            "fork_growth": 94.14,
+            "total_stars": 54.05,
+            "activity": 100.0,
+            "trending_signal": 25.6
+          },
+          "summary": {
+            "one_line": "正在重写的开源视频编辑器，计划用一套代码覆盖网页、桌面和移动端",
+            "highlights": [
+              "以 Rust 核心支撑多端编辑器",
+              "采用插件优先架构接入第三方扩展",
+              "计划提供无界面模式处理自动化渲染"
+            ],
+            "audience": "适合跟进视频编辑器架构、插件系统和跨端方案的开发者；当前不适合直接依赖新版完成日常剪辑。",
+            "capabilities": [
+              "计划开放 Editor API",
+              "计划接入第三方插件",
+              "计划让 AI 智能体通过 MCP 调用",
+              "计划执行自动化与批量渲染",
+              "计划在编辑器内运行脚本"
+            ],
+            "core_title": "一套核心覆盖多端与自动化",
+            "core_summary": "新版围绕 Rust 核心、插件优先架构和 Editor API 重建，并计划加入 MCP、无界面渲染与脚本入口，让交互剪辑和自动化处理共用同一套能力。",
+            "prerequisites": "开发前需安装 proto，在仓库根目录运行 proto use，再用 moon 启动网页、API 或桌面端开发任务。",
+            "limitations": "项目正在从头重写；当前应使用 classic 版本。架构设计期间尚不接受外部贡献。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "08cef45afb531c600819ff3dde2d05a3a6c5006e",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+              ],
+              "highlights": [
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ],
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ],
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ]
+              ],
+              "audience": [
+                "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ],
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ],
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ],
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ],
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ]
+              ],
+              "core_title": [
+                "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+              ],
+              "core_summary": [
+                "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+              ],
+              "prerequisites": [
+                "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+              ],
+              "limitations": [
+                "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-18/repo-5150ac7e610cb3d0c8539e42-330c5082177040ee5631e760.png",
+          "publication_evidence": {
+            "full_name": "OpenCut-app/OpenCut",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "08cef45afb531c600819ff3dde2d05a3a6c5006e",
+              "source_url": "https://api.github.com/repos/OpenCut-app/OpenCut/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-18/repo-5150ac7e610cb3d0c8539e42-330c5082177040ee5631e760.png",
+              "sha256": "150435ca3751cb8e94618b4f5226636690a842040ef889eb15c62a6f64d15952",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.01.opencut-app--opencut.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 132750724,
+          "full_name": "codecrafters-io/build-your-own-x",
+          "owner": "codecrafters-io",
+          "name": "build-your-own-x",
+          "html_url": "https://github.com/codecrafters-io/build-your-own-x",
+          "description": "Master programming by recreating your favorite technologies from scratch.",
+          "language": "Markdown",
+          "stars": 527458,
+          "forks": 49911,
+          "open_issues": 523,
+          "watchers": 6813,
+          "topics": [
+            "awesome-list",
+            "free",
+            "programming",
+            "tutorial-code",
+            "tutorial-exercises",
+            "tutorials"
+          ],
+          "created_at": "2018-05-09T12:03:18Z",
+          "updated_at": "2026-07-18T02:49:53Z",
+          "pushed_at": "2026-07-14T19:25:58Z",
+          "daily_stars": 1068,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 91.34,
+          "star_delta": 988,
+          "fork_delta": 106,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 99.1,
+            "relative_growth": 90.99,
+            "fork_growth": 99.1,
+            "total_stars": 100.0,
+            "activity": 36.79,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "按技术主题汇集从零重造教程，帮助学习者通过亲手实现理解系统原理",
+            "highlights": [
+              "按技术类别查找分步实现指南",
+              "覆盖数据库、操作系统与网络栈等底层主题",
+              "收录 AI 模型、渲染器和前端框架教程"
+            ],
+            "audience": "适合希望通过重写现有技术理解内部机制的程序员，可按目标系统和熟悉的编程语言选择教程。",
+            "capabilities": [
+              "查找从零实现数据库的教程",
+              "学习编写操作系统与网络栈",
+              "练习构建编程语言和正则引擎",
+              "选择 AI 模型与神经网络指南",
+              "探索浏览器、服务器和 Git 的实现"
+            ],
+            "core_title": "用重造技术代替只读原理",
+            "core_summary": "它把分散的分步教程按技术类型整理，并标出教程使用的编程语言。读者可选定数据库、操作系统、AI 模型等目标，沿具体实现过程理解内部机制。",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "CC0",
+            "license_restrictions": "",
+            "readme_sha": "9a553c729b29bc69296d7092fc1c314c2c811bad",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+              ],
+              "highlights": [
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ],
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ],
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ]
+              ],
+              "audience": [
+                "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ],
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ],
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ],
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ],
+                [
+                  "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+                ]
+              ],
+              "core_title": [
+                "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+              ],
+              "core_summary": [
+                "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [
+                "github.readme:9a553c729b29bc69296d7092fc1c314c2c811bad"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-18/repo-d5549494bcee1ca04524fe68-69e062fe630f055e9327e93f.png",
+          "publication_evidence": {
+            "full_name": "codecrafters-io/build-your-own-x",
+            "license_spdx_id": null,
+            "readme": {
+              "sha": "9a553c729b29bc69296d7092fc1c314c2c811bad",
+              "source_url": "https://api.github.com/repos/codecrafters-io/build-your-own-x/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-18/repo-d5549494bcee1ca04524fe68-69e062fe630f055e9327e93f.png",
+              "sha256": "559c21296615f8ff06effb9fae00ddd81f3954b246be7918c3c22e452f32c811",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "CC0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.02.codecrafters-io--build-your-own-x.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 175730,
+          "forks": 15058,
+          "open_issues": 189,
+          "watchers": 175730,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-07-18T02:47:28Z",
+          "pushed_at": "2026-07-17T09:51:15Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 90.86,
+          "star_delta": 1222,
+          "fork_delta": 88,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 98.2,
+            "fork_growth": 98.2,
+            "total_stars": 84.68,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 skills 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 skills 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-18/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-07-18/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": [
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              }
+            ]
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-18/2026-07-18.comprehensive.03.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-18/2026-07-18.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-18/2026-07-18.ai.01.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-07-18/2026-07-18.ai.02.obra--superpowers.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-18/2026-07-18.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 793375104,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "owner": "Shubhamsaboo",
+          "name": "awesome-llm-apps",
+          "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+          "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+          "language": "Python",
+          "stars": 123637,
+          "forks": 18221,
+          "open_issues": 17,
+          "watchers": 123637,
+          "topics": [
+            "agents",
+            "llms",
+            "python",
+            "rag"
+          ],
+          "created_at": "2024-04-29T05:30:25Z",
+          "updated_at": "2026-07-18T02:47:32Z",
+          "pushed_at": "2026-07-17T21:51:17Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 85.48,
+          "star_delta": 579,
+          "fork_delta": 78,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.55,
+            "relative_growth": 83.87,
+            "fork_growth": 96.77,
+            "total_stars": 45.16,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 awesome-llm-apps 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 awesome-llm-apps 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-18/2026-07-18.ai.01.shubhamsaboo--awesome-llm-apps.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 256701,
+          "forks": 22859,
+          "open_issues": 320,
+          "watchers": 256701,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-07-18T02:48:19Z",
+          "pushed_at": "2026-07-17T00:52:29Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 85.23,
+          "star_delta": 611,
+          "fork_delta": 58,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.77,
+            "relative_growth": 77.42,
+            "fork_growth": 93.55,
+            "total_stars": 96.77,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "想要给编程 Agent 提供可复用的软件开发技能，可以用 superpowers；它能让需求、编码和验证按固定流程推进",
+            "highlights": [
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
+            ],
+            "audience": "希望让编程 Agent 按固定方法完成研发任务的开发者",
+            "capabilities": [
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
+            ],
+            "core_title": "给编程 Agent 提供可复用的软件开发技能",
+            "core_summary": "想要给编程 Agent 提供可复用的软件开发技能，可以用 superpowers；它能让需求、编码和验证按固定流程推进",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-18/2026-07-18.ai.02.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 216488,
+          "forks": 40572,
+          "open_issues": 23504,
+          "watchers": 216488,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-07-18T02:50:35Z",
+          "pushed_at": "2026-07-18T00:08:58Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 83.22,
+          "star_delta": 422,
+          "fork_delta": 187,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 90.32,
+            "relative_growth": 67.74,
+            "fork_growth": 100.0,
+            "total_stars": 90.32,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-18/2026-07-18.ai.03.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
