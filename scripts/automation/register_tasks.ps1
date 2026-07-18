@@ -17,6 +17,7 @@ $PowerShell = "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe"
 $DailyTaskName = "GitHub Hotspots Daily (Local Codex)"
 $WeeklyTaskName = "GitHub Hotspots Weekly (Local Codex)"
 $RequiredTimeZoneId = "China Standard Time"
+$CurrentUser = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
 
 $currentTimeZoneId = [System.TimeZoneInfo]::Local.Id
 if ($currentTimeZoneId -ne $RequiredTimeZoneId) {
@@ -49,13 +50,12 @@ $weeklyTime = [DateTime]::ParseExact(
     [System.Globalization.CultureInfo]::InvariantCulture
 )
 $principal = New-ScheduledTaskPrincipal `
-    -UserId ([System.Security.Principal.WindowsIdentity]::GetCurrent().Name) `
+    -UserId $CurrentUser `
     -LogonType Interactive `
     -RunLevel Limited
 $settings = New-ScheduledTaskSettingsSet `
     -StartWhenAvailable `
     -WakeToRun `
-    -RunOnlyIfNetworkAvailable `
     -MultipleInstances IgnoreNew `
     -RestartCount 3 `
     -RestartInterval (New-TimeSpan -Minutes 15) `
@@ -80,12 +80,17 @@ function New-HotspotsAction {
         -WorkingDirectory $RepoRoot
 }
 
+$dailyTriggers = @(
+    New-ScheduledTaskTrigger -Daily -At $dailyTime
+    New-ScheduledTaskTrigger -AtLogOn -User $CurrentUser
+)
+
 $dailyTask = New-ScheduledTask `
     -Action (New-HotspotsAction -Period "daily") `
-    -Trigger (New-ScheduledTaskTrigger -Daily -At $dailyTime) `
+    -Trigger $dailyTriggers `
     -Principal $principal `
     -Settings $settings `
-    -Description "Generate and push the daily GitHub Hotspots bundle with the current user's local Codex CLI."
+    -Description "Generate and push the daily GitHub Hotspots bundle at the scheduled time or after the next user logon."
 $weeklyTask = New-ScheduledTask `
     -Action (New-HotspotsAction -Period "weekly") `
     -Trigger (New-ScheduledTaskTrigger -Weekly -WeeksInterval 1 -DaysOfWeek Sunday -At $weeklyTime) `

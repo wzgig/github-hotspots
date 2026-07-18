@@ -1,5 +1,45 @@
 # Project Log
 
+## 2026-07-18 — 修复本地日更中断与百度网盘同步污染
+
+### 目的
+
+恢复 2026-07-17、2026-07-18 缺失或降级的日报更新，并修复导致本地 Codex 主链路连续两天没有启动的 Windows 计划任务问题。
+
+### 根因与处置
+
+- Windows Task Scheduler 中的 `GitHub Hotspots Daily (Local Codex)` 和
+  `GitHub Hotspots Weekly (Local Codex)` 已经不存在，因此 7 月 17/18 日没有产生任何本地运行日志；这不是 Python 流水线内部异常。
+- 7 月 17 日 Actions 兜底运行 `29554862825` 和 Pages 部署 `29554917125` 均成功，但报告使用
+  `deterministic` 后端，不满足本地 Codex 严格门禁；7 月 18 日在修复开始时尚无远端报告。
+- 清除项目目录、虚拟环境、测试缓存和 `.git/objects` 中全部
+  `*.baiduyun.uploading.cfg` 旁路文件；清理后数量为 0，`git fsck --full` 未发现对象损坏。
+- 重新注册日报和周报任务。日报同时使用每日 07:30 与当前用户登录触发器；删除
+  `RunOnlyIfNetworkAvailable`，避免 FlClash 或 Windows 网络配置识别阻止任务进程启动和写日志。
+- `.gitignore` 增加百度网盘上传旁路文件规则，避免同类残留再次污染工作树。
+
+### 文件与模块
+
+- 计划任务：`scripts/automation/register_tasks.ps1`
+- 回归测试：`tests/test_powershell_automation.py`
+- 忽略规则：`.gitignore`
+- 文档：`README.md`、`docs/AUTOMATION.md`、`docs/OPERATIONS.md`
+
+### 验证
+
+- 两个计划任务均为 `Ready`、`Enabled=True`、`RunOnlyIfNetworkAvailable=False`；日报具有每日和登录两个触发器。
+- `register_tasks.ps1 -WhatIf` 与两个 PowerShell 自动化脚本语法解析通过。
+- `pytest`：261 项全部通过，总覆盖率 81%。首次完整测试暴露百度同步遗留的
+  `.pytest_tmp` WinError 5；清空忽略的测试临时目录后，单项复测和完整测试均通过。
+- `ruff check .`、`ruff format --check .`、`node --check site/app.js`：通过。
+- `verify-history --period daily --date 2026-07-17`：清理后通过。
+
+### 已知限制
+
+- 启用 Windows Task Scheduler Operational 系统日志需要管理员权限，本次普通用户会话返回
+  `Access is denied`；项目自己的 `%LOCALAPPDATA%\GitHubHotspots\logs` 运行日志仍正常启用。
+- 百度网盘客户端若继续同步此目录，仍可能在 Git 元数据和虚拟环境中重新生成旁路文件；建议在客户端中排除此项目目录。
+
 ## 2026-07-11 — MVP 初始化
 
 - 解析用户提供的小红书笔记与主页公开内容，确认日榜 Top 3、周榜 Top 7/10、周期 Star、单项目卡片等信息结构。

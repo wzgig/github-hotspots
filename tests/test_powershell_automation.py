@@ -11,6 +11,7 @@ import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
 RUNNER = ROOT / "scripts" / "automation" / "run_scheduled.ps1"
+REGISTER = ROOT / "scripts" / "automation" / "register_tasks.ps1"
 POWERSHELL = shutil.which("powershell.exe") if os.name == "nt" else None
 requires_windows_powershell = pytest.mark.skipif(
     POWERSHELL is None,
@@ -380,3 +381,12 @@ def test_runner_fetches_origin_main_with_an_explicit_tracking_ref() -> None:
     assert '"publish/history/INDEX.json"' in source
     assert '"publish/history/INDEX.md"' in source
     assert '"publish/history/$Period/$historyYear/$stem"' in source
+
+
+def test_task_registration_has_logon_catchup_without_network_launch_gate() -> None:
+    source = REGISTER.read_text(encoding="utf-8")
+
+    assert "New-ScheduledTaskTrigger -AtLogOn -User $CurrentUser" in source
+    assert "-Trigger $dailyTriggers" in source
+    assert "-StartWhenAvailable" in source
+    assert "-RunOnlyIfNetworkAvailable" not in source

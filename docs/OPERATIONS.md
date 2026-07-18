@@ -262,7 +262,7 @@ gh run view <run-id> --log-failed
 
 | 方式 | 入口 | 运行语义 |
 | --- | --- | --- |
-| 本地日榜主链路 | Windows Task Scheduler | 每天 07:30 在独立 worktree 中调用当前用户的 Codex CLI |
+| 本地日榜主链路 | Windows Task Scheduler | 每天 07:30 在独立 worktree 中调用当前用户的 Codex CLI；当前用户登录时执行幂等缺失补跑 |
 | 本地周榜主链路 | Windows Task Scheduler | 每周日 08:45 生成周报 |
 | Actions 兜底 | `daily.yml` / `weekly.yml` | 09:17 / 周日 10:27；报告与 history 都完整时跳过，只有 history 缺失时只修复 history |
 | 按需刷新 | Actions `workflow_dispatch` 或本地 CLI | 人工触发完整采集、排名和内容生成 |

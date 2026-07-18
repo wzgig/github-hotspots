@@ -15,8 +15,10 @@ The automation has two independent layers:
 | Actions weekly fallback | Sunday 10:27 | Deterministic | Generate only when no exact, complete Sunday Codex report exists |
 
 GitHub Actions cron can be delayed, so it is a continuity fallback rather than the
-publication clock. The two local tasks share one lock. If the daily task is still running
-when the Sunday task starts, Task Scheduler retries instead of running both writers.
+publication clock. The daily task also has a current-user logon trigger: if the scheduled
+time was missed, the next sign-in runs the same idempotent transaction. The two local tasks
+share one lock. If the daily task is still running when the Sunday task starts, Task Scheduler
+retries instead of running both writers.
 
 A normal local-user push triggers `pages.yml` through its `push` event. A push made with the
 workflow `GITHUB_TOKEN` does not recursively trigger another workflow, so a successful daily
@@ -183,8 +185,10 @@ Choose different local generation times when needed:
 The registered settings are:
 
 - current Windows user, interactive logon, limited privileges;
+- daily schedule plus a current-user logon catch-up trigger;
 - wake from sleep when supported and start when available;
-- network required;
+- no Task Scheduler network launch gate; the runner starts, records a log, and lets fetch or
+  source collection fail visibly when connectivity is unavailable;
 - ignore a duplicate instance of the same task;
 - retry three times at 15-minute intervals;
 - stop after 75 minutes;
@@ -200,6 +204,10 @@ $names = @(
 Get-ScheduledTask -TaskName $names
 Get-ScheduledTaskInfo -TaskName $names
 ```
+
+If either task is missing, rerun `register_tasks.ps1`. A healthy daily task is `Ready`,
+has one daily trigger plus one current-user logon trigger, and reports
+`RunOnlyIfNetworkAvailable=False`.
 
 Run one registered task manually:
 
@@ -241,6 +249,7 @@ not the authoritative unattended-run log.
 
 | Failure | Result |
 | --- | --- |
+| Daily or weekly task is missing | Re-run `register_tasks.ps1`, verify both tasks are `Ready`, then use an explicit reviewed recovery run for any missing current-date report |
 | Lock already held | Exit `75`; Task Scheduler retries |
 | Tests, lint, source collection, or report render fails | No commit and no push |
 | Codex unavailable, times out, or falls back | Strict gate fails; no local commit; Actions may generate the deterministic fallback |
