@@ -1,0 +1,1527 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-20",
+  "window_start": "2026-07-19",
+  "window_end": "2026-07-20",
+  "generated_at": "2026-07-20T07:31:01+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-19 至 2026-07-20",
+  "publication": {
+    "issue_number": 9,
+    "issue_code": "D009",
+    "issue_label": "第9期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "AI 专题榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-20",
+    "manifest": "reports/daily/assets/2026-07-20/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.01.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.02.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "KnockOutEZ/wigolo",
+            "path": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.03.knockoutez--wigolo.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-20/2026-07-20.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-20/2026-07-20.ai.01.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "bojieli/ai-agent-book",
+            "path": "reports/daily/assets/2026-07-20/2026-07-20.ai.02.bojieli--ai-agent-book.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "KnockOutEZ/wigolo",
+            "path": "reports/daily/assets/2026-07-20/2026-07-20.ai.03.knockoutez--wigolo.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 9,
+      "issue_code": "D009",
+      "issue_label": "第9期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1167788341,
+      "full_name": "tirth8205/code-review-graph",
+      "owner": "tirth8205",
+      "name": "code-review-graph",
+      "html_url": "https://github.com/tirth8205/code-review-graph",
+      "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+      "language": "Python",
+      "stars": 21124,
+      "forks": 2176,
+      "open_issues": 87,
+      "watchers": 70,
+      "topics": [
+        "ai-coding",
+        "claude",
+        "claude-code",
+        "code-review",
+        "graphrag",
+        "incremental",
+        "knowledge-graph",
+        "llm",
+        "mcp",
+        "python",
+        "static-analysis",
+        "tree-sitter"
+      ],
+      "created_at": "2026-02-26T17:25:13Z",
+      "updated_at": "2026-07-19T23:30:45Z",
+      "pushed_at": "2026-07-18T00:32:48Z",
+      "daily_stars": 551,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 87.2,
+      "star_delta": 979,
+      "fork_delta": 51,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.55,
+        "relative_growth": 97.1,
+        "fork_growth": 94.2,
+        "total_stars": 15.94,
+        "activity": 51.34,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "为 AI 编程工具建立本地代码关系图，只提供审查当前变更所需的文件与依赖上下文",
+        "highlights": [
+          "解析函数、类、导入和调用关系",
+          "沿依赖图追踪代码变更的影响范围",
+          "通过 MCP 向 AI 提供精简审查上下文"
+        ],
+        "audience": "需要让 AI 审查大型仓库、分析跨文件影响或梳理陌生代码架构的开发者与研发团队",
+        "capabilities": [
+          "构建可增量更新的代码关系图",
+          "追踪变更影响的调用方、依赖和测试",
+          "生成带风险与测试缺口的合并请求审查",
+          "搜索代码实体并遍历调用与继承关系",
+          "导出交互图、架构概览或 Markdown Wiki"
+        ],
+        "core_title": "按变更影响范围提供上下文",
+        "core_summary": "它用 Tree-sitter 把仓库解析成代码关系图；文件变化后沿调用、依赖和测试边追踪影响范围，再让 AI 只读取相关文件，而非反复扫描整个项目。",
+        "prerequisites": "需要 Python 3.10+；安装后需重启编辑器或工具，再构建代码图。",
+        "limitations": "小仓库或单文件轻改可能得不偿失；搜索排序、流程检测仍有不足，影响分析会保守地产生误报。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+          ],
+          "highlights": [
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ],
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ],
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ]
+          ],
+          "audience": [
+            "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+          ],
+          "capabilities": [
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ],
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ],
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ],
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ],
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ]
+          ],
+          "core_title": [
+            "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+          ],
+          "core_summary": [
+            "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+          ],
+          "prerequisites": [
+            "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+          ],
+          "limitations": [
+            "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-20/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+      "publication_evidence": {
+        "full_name": "tirth8205/code-review-graph",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+          "source_url": "https://api.github.com/repos/tirth8205/code-review-graph/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-20/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+          "sha256": "e4ec211724f39785b798a6ddbeb1f804af20b65fcbede4802ff584cdbc57f8b9",
+          "width": 351,
+          "height": 351
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.01.tirth8205--code-review-graph.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 793375104,
+      "full_name": "Shubhamsaboo/awesome-llm-apps",
+      "owner": "Shubhamsaboo",
+      "name": "awesome-llm-apps",
+      "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+      "language": "Python",
+      "stars": 124521,
+      "forks": 18388,
+      "open_issues": 13,
+      "watchers": 124521,
+      "topics": [
+        "agents",
+        "llms",
+        "python",
+        "rag"
+      ],
+      "created_at": "2024-04-29T05:30:25Z",
+      "updated_at": "2026-07-19T23:22:04Z",
+      "pushed_at": "2026-07-19T18:47:08Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 85.14,
+      "star_delta": 516,
+      "fork_delta": 94,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 91.3,
+        "relative_growth": 84.06,
+        "fork_growth": 98.55,
+        "total_stars": 56.52,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "把 AI Agent、RAG 和多智能体案例整理成可克隆运行的模板库，方便选型与改造",
+        "highlights": [
+          "按入门、进阶和多智能体场景浏览案例",
+          "直接克隆旅行规划、数据分析等代理",
+          "查找语音、生成式界面与 RAG 示例"
+        ],
+        "audience": "想快速试跑 AI Agent、比较框架工作流，或为课程演示和原型寻找可改造样例的开发者",
+        "capabilities": [
+          "安装可供编程代理调用的技能",
+          "运行单文件入门代理示例",
+          "复用工具、记忆与多步推理工作流",
+          "搭建多智能体协作任务模板",
+          "选择本地、云端或多模态 RAG 案例"
+        ],
+        "core_title": "按任务类型查找可运行模板",
+        "core_summary": "仓库把代理技能、入门代理、进阶应用、多智能体团队、语音代理和 RAG 等案例分区整理；读者可先按任务选模板，再进入子目录安装依赖并替换模型或数据源。",
+        "prerequisites": "克隆示例后需安装对应 requirements.txt；部分单文件代理还需要模型 API Key。",
+        "limitations": "不同模板使用不同模型、框架和数据源，运行前仍需进入对应目录核对依赖与配置。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "7abcbdc3cc90ef81e7d69688e11657a7590e25aa",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+          ],
+          "highlights": [
+            [
+              "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+            ],
+            [
+              "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+            ],
+            [
+              "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+            ]
+          ],
+          "audience": [
+            "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+          ],
+          "capabilities": [
+            [
+              "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+            ],
+            [
+              "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+            ],
+            [
+              "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+            ],
+            [
+              "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+            ],
+            [
+              "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+            ]
+          ],
+          "core_title": [
+            "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+          ],
+          "core_summary": [
+            "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+          ],
+          "prerequisites": [
+            "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+          ],
+          "limitations": [
+            "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-20/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+      "publication_evidence": {
+        "full_name": "Shubhamsaboo/awesome-llm-apps",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "7abcbdc3cc90ef81e7d69688e11657a7590e25aa",
+          "source_url": "https://api.github.com/repos/Shubhamsaboo/awesome-llm-apps/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-20/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+          "sha256": "9c1100d2d55c39b2ae1596fc4f14a81fcec96123d3ba96857d3a8fdb86d7a42a",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.02.shubhamsaboo--awesome-llm-apps.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1208642537,
+      "full_name": "KnockOutEZ/wigolo",
+      "owner": "KnockOutEZ",
+      "name": "wigolo",
+      "html_url": "https://github.com/KnockOutEZ/wigolo",
+      "description": "The go-to web for your AI coding agent — local-first search, fetch, crawl & research over MCP. No API keys, no cloud, $0/query. Public beta.",
+      "language": "TypeScript",
+      "stars": 1785,
+      "forks": 111,
+      "open_issues": 22,
+      "watchers": 6,
+      "topics": [
+        "agent",
+        "ai",
+        "ai-agent",
+        "claude",
+        "cli",
+        "developer-tools",
+        "local-first",
+        "mcp",
+        "mcp-server",
+        "metasearch",
+        "model-context-protocol",
+        "nodejs",
+        "privacy",
+        "rag",
+        "search",
+        "search-engine",
+        "typescript",
+        "web-crawler",
+        "web-scraping",
+        "web-search"
+      ],
+      "created_at": "2026-04-12T15:04:11Z",
+      "updated_at": "2026-07-19T23:30:17Z",
+      "pushed_at": "2026-07-19T11:22:27Z",
+      "daily_stars": 605,
+      "weekly_stars": null,
+      "trending_rank_daily": 6,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 83.94,
+      "star_delta": 573,
+      "fork_delta": 28,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.2,
+        "relative_growth": 98.55,
+        "fork_growth": 79.71,
+        "total_stars": 4.35,
+        "activity": 71.65,
+        "trending_signal": 35.62
+      },
+      "summary": {
+        "one_line": "给 AI 代理提供本地网页搜索、抓取、爬取与研究入口，并保留可核对的来源证据",
+        "highlights": [
+          "融合多个搜索引擎并解释结果评分",
+          "抓取网页并返回带位置的原文证据",
+          "缓存已访问页面并追踪后续变化"
+        ],
+        "audience": "需要让编程代理或自托管 Agent 查网页、收集资料、抽取结构化数据并保留引用依据的开发者",
+        "capabilities": [
+          "并行搜索多个查询并融合排序结果",
+          "抓取动态网页、PDF 或指定页面区域",
+          "按站点地图或遍历策略爬取多页内容",
+          "从页面抽取表格、元数据与自定义结构",
+          "分解研究问题并生成带引用的资料简报"
+        ],
+        "core_title": "从网页操作到证据交付",
+        "core_summary": "它把搜索、抓取、爬取、抽取、缓存和研究放进同一本地工具层；结果附原文摘录、来源位置和评分，失败引擎、过期缓存与受阻页面也会明确标记。",
+        "prerequisites": "需要 Node ≥ 20，并预留约 1.5 GB 磁盘空间。",
+        "limitations": "处于 public beta；无 LLM 时 research、agent 与回答格式只返回较薄的原始简报，受挑战保护的网站也可能抓取失败。",
+        "license_label": "GNU AGPL-3.0-only",
+        "license_restrictions": "you must publish your modified source under the same license.",
+        "readme_sha": "d8f1020c245a157fddb417cf999d1b807ce990d9",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+          ],
+          "highlights": [
+            [
+              "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+            ],
+            [
+              "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+            ],
+            [
+              "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+            ]
+          ],
+          "audience": [
+            "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+          ],
+          "capabilities": [
+            [
+              "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+            ],
+            [
+              "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+            ],
+            [
+              "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+            ],
+            [
+              "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+            ],
+            [
+              "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+            ]
+          ],
+          "core_title": [
+            "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+          ],
+          "core_summary": [
+            "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+          ],
+          "prerequisites": [
+            "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+          ],
+          "limitations": [
+            "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+          ],
+          "license_label": [
+            "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+          ],
+          "license_restrictions": [
+            "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-07-20/repo-98a2f2a4127d8cc538547eba-44e1ddc0a2fff22c9fe6a24a.png",
+      "publication_evidence": {
+        "full_name": "KnockOutEZ/wigolo",
+        "license_spdx_id": "NOASSERTION",
+        "readme": {
+          "sha": "d8f1020c245a157fddb417cf999d1b807ce990d9",
+          "source_url": "https://api.github.com/repos/KnockOutEZ/wigolo/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-20/repo-98a2f2a4127d8cc538547eba-44e1ddc0a2fff22c9fe6a24a.png",
+          "sha256": "0f759c06b65b9a9fc5c1fedaf44630a9f88798ad1bf9bd275225e11ac9fc0f26",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "GNU AGPL-3.0-only",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.03.knockoutez--wigolo.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.01.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.02.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "KnockOutEZ/wigolo",
+            "path": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.03.knockoutez--wigolo.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1167788341,
+          "full_name": "tirth8205/code-review-graph",
+          "owner": "tirth8205",
+          "name": "code-review-graph",
+          "html_url": "https://github.com/tirth8205/code-review-graph",
+          "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+          "language": "Python",
+          "stars": 21124,
+          "forks": 2176,
+          "open_issues": 87,
+          "watchers": 70,
+          "topics": [
+            "ai-coding",
+            "claude",
+            "claude-code",
+            "code-review",
+            "graphrag",
+            "incremental",
+            "knowledge-graph",
+            "llm",
+            "mcp",
+            "python",
+            "static-analysis",
+            "tree-sitter"
+          ],
+          "created_at": "2026-02-26T17:25:13Z",
+          "updated_at": "2026-07-19T23:30:45Z",
+          "pushed_at": "2026-07-18T00:32:48Z",
+          "daily_stars": 551,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 87.2,
+          "star_delta": 979,
+          "fork_delta": 51,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.55,
+            "relative_growth": 97.1,
+            "fork_growth": 94.2,
+            "total_stars": 15.94,
+            "activity": 51.34,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "为 AI 编程工具建立本地代码关系图，只提供审查当前变更所需的文件与依赖上下文",
+            "highlights": [
+              "解析函数、类、导入和调用关系",
+              "沿依赖图追踪代码变更的影响范围",
+              "通过 MCP 向 AI 提供精简审查上下文"
+            ],
+            "audience": "需要让 AI 审查大型仓库、分析跨文件影响或梳理陌生代码架构的开发者与研发团队",
+            "capabilities": [
+              "构建可增量更新的代码关系图",
+              "追踪变更影响的调用方、依赖和测试",
+              "生成带风险与测试缺口的合并请求审查",
+              "搜索代码实体并遍历调用与继承关系",
+              "导出交互图、架构概览或 Markdown Wiki"
+            ],
+            "core_title": "按变更影响范围提供上下文",
+            "core_summary": "它用 Tree-sitter 把仓库解析成代码关系图；文件变化后沿调用、依赖和测试边追踪影响范围，再让 AI 只读取相关文件，而非反复扫描整个项目。",
+            "prerequisites": "需要 Python 3.10+；安装后需重启编辑器或工具，再构建代码图。",
+            "limitations": "小仓库或单文件轻改可能得不偿失；搜索排序、流程检测仍有不足，影响分析会保守地产生误报。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "highlights": [
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ]
+              ],
+              "audience": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ]
+              ],
+              "core_title": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "core_summary": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "prerequisites": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "limitations": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-20/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+          "publication_evidence": {
+            "full_name": "tirth8205/code-review-graph",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+              "source_url": "https://api.github.com/repos/tirth8205/code-review-graph/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-20/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+              "sha256": "e4ec211724f39785b798a6ddbeb1f804af20b65fcbede4802ff584cdbc57f8b9",
+              "width": 351,
+              "height": 351
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.01.tirth8205--code-review-graph.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 793375104,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "owner": "Shubhamsaboo",
+          "name": "awesome-llm-apps",
+          "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+          "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+          "language": "Python",
+          "stars": 124521,
+          "forks": 18388,
+          "open_issues": 13,
+          "watchers": 124521,
+          "topics": [
+            "agents",
+            "llms",
+            "python",
+            "rag"
+          ],
+          "created_at": "2024-04-29T05:30:25Z",
+          "updated_at": "2026-07-19T23:22:04Z",
+          "pushed_at": "2026-07-19T18:47:08Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 85.14,
+          "star_delta": 516,
+          "fork_delta": 94,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 91.3,
+            "relative_growth": 84.06,
+            "fork_growth": 98.55,
+            "total_stars": 56.52,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "把 AI Agent、RAG 和多智能体案例整理成可克隆运行的模板库，方便选型与改造",
+            "highlights": [
+              "按入门、进阶和多智能体场景浏览案例",
+              "直接克隆旅行规划、数据分析等代理",
+              "查找语音、生成式界面与 RAG 示例"
+            ],
+            "audience": "想快速试跑 AI Agent、比较框架工作流，或为课程演示和原型寻找可改造样例的开发者",
+            "capabilities": [
+              "安装可供编程代理调用的技能",
+              "运行单文件入门代理示例",
+              "复用工具、记忆与多步推理工作流",
+              "搭建多智能体协作任务模板",
+              "选择本地、云端或多模态 RAG 案例"
+            ],
+            "core_title": "按任务类型查找可运行模板",
+            "core_summary": "仓库把代理技能、入门代理、进阶应用、多智能体团队、语音代理和 RAG 等案例分区整理；读者可先按任务选模板，再进入子目录安装依赖并替换模型或数据源。",
+            "prerequisites": "克隆示例后需安装对应 requirements.txt；部分单文件代理还需要模型 API Key。",
+            "limitations": "不同模板使用不同模型、框架和数据源，运行前仍需进入对应目录核对依赖与配置。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "7abcbdc3cc90ef81e7d69688e11657a7590e25aa",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+              ],
+              "highlights": [
+                [
+                  "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+                ],
+                [
+                  "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+                ],
+                [
+                  "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+                ]
+              ],
+              "audience": [
+                "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+                ],
+                [
+                  "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+                ],
+                [
+                  "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+                ],
+                [
+                  "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+                ],
+                [
+                  "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+                ]
+              ],
+              "core_title": [
+                "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+              ],
+              "core_summary": [
+                "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+              ],
+              "prerequisites": [
+                "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+              ],
+              "limitations": [
+                "github.readme:7abcbdc3cc90ef81e7d69688e11657a7590e25aa"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-20/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+          "publication_evidence": {
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "7abcbdc3cc90ef81e7d69688e11657a7590e25aa",
+              "source_url": "https://api.github.com/repos/Shubhamsaboo/awesome-llm-apps/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-20/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+              "sha256": "9c1100d2d55c39b2ae1596fc4f14a81fcec96123d3ba96857d3a8fdb86d7a42a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.02.shubhamsaboo--awesome-llm-apps.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1208642537,
+          "full_name": "KnockOutEZ/wigolo",
+          "owner": "KnockOutEZ",
+          "name": "wigolo",
+          "html_url": "https://github.com/KnockOutEZ/wigolo",
+          "description": "The go-to web for your AI coding agent — local-first search, fetch, crawl & research over MCP. No API keys, no cloud, $0/query. Public beta.",
+          "language": "TypeScript",
+          "stars": 1785,
+          "forks": 111,
+          "open_issues": 22,
+          "watchers": 6,
+          "topics": [
+            "agent",
+            "ai",
+            "ai-agent",
+            "claude",
+            "cli",
+            "developer-tools",
+            "local-first",
+            "mcp",
+            "mcp-server",
+            "metasearch",
+            "model-context-protocol",
+            "nodejs",
+            "privacy",
+            "rag",
+            "search",
+            "search-engine",
+            "typescript",
+            "web-crawler",
+            "web-scraping",
+            "web-search"
+          ],
+          "created_at": "2026-04-12T15:04:11Z",
+          "updated_at": "2026-07-19T23:30:17Z",
+          "pushed_at": "2026-07-19T11:22:27Z",
+          "daily_stars": 605,
+          "weekly_stars": null,
+          "trending_rank_daily": 6,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 83.94,
+          "star_delta": 573,
+          "fork_delta": 28,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.2,
+            "relative_growth": 98.55,
+            "fork_growth": 79.71,
+            "total_stars": 4.35,
+            "activity": 71.65,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "给 AI 代理提供本地网页搜索、抓取、爬取与研究入口，并保留可核对的来源证据",
+            "highlights": [
+              "融合多个搜索引擎并解释结果评分",
+              "抓取网页并返回带位置的原文证据",
+              "缓存已访问页面并追踪后续变化"
+            ],
+            "audience": "需要让编程代理或自托管 Agent 查网页、收集资料、抽取结构化数据并保留引用依据的开发者",
+            "capabilities": [
+              "并行搜索多个查询并融合排序结果",
+              "抓取动态网页、PDF 或指定页面区域",
+              "按站点地图或遍历策略爬取多页内容",
+              "从页面抽取表格、元数据与自定义结构",
+              "分解研究问题并生成带引用的资料简报"
+            ],
+            "core_title": "从网页操作到证据交付",
+            "core_summary": "它把搜索、抓取、爬取、抽取、缓存和研究放进同一本地工具层；结果附原文摘录、来源位置和评分，失败引擎、过期缓存与受阻页面也会明确标记。",
+            "prerequisites": "需要 Node ≥ 20，并预留约 1.5 GB 磁盘空间。",
+            "limitations": "处于 public beta；无 LLM 时 research、agent 与回答格式只返回较薄的原始简报，受挑战保护的网站也可能抓取失败。",
+            "license_label": "GNU AGPL-3.0-only",
+            "license_restrictions": "you must publish your modified source under the same license.",
+            "readme_sha": "d8f1020c245a157fddb417cf999d1b807ce990d9",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "highlights": [
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ],
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ],
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ]
+              ],
+              "audience": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ],
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ],
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ],
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ],
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ]
+              ],
+              "core_title": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "core_summary": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "prerequisites": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "limitations": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "license_label": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "license_restrictions": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-07-20/repo-98a2f2a4127d8cc538547eba-44e1ddc0a2fff22c9fe6a24a.png",
+          "publication_evidence": {
+            "full_name": "KnockOutEZ/wigolo",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "d8f1020c245a157fddb417cf999d1b807ce990d9",
+              "source_url": "https://api.github.com/repos/KnockOutEZ/wigolo/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-20/repo-98a2f2a4127d8cc538547eba-44e1ddc0a2fff22c9fe6a24a.png",
+              "sha256": "0f759c06b65b9a9fc5c1fedaf44630a9f88798ad1bf9bd275225e11ac9fc0f26",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "GNU AGPL-3.0-only",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.03.knockoutez--wigolo.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-20/2026-07-20.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-20/2026-07-20.ai.01.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "bojieli/ai-agent-book",
+            "path": "reports/daily/assets/2026-07-20/2026-07-20.ai.02.bojieli--ai-agent-book.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "KnockOutEZ/wigolo",
+            "path": "reports/daily/assets/2026-07-20/2026-07-20.ai.03.knockoutez--wigolo.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1167788341,
+          "full_name": "tirth8205/code-review-graph",
+          "owner": "tirth8205",
+          "name": "code-review-graph",
+          "html_url": "https://github.com/tirth8205/code-review-graph",
+          "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+          "language": "Python",
+          "stars": 21124,
+          "forks": 2176,
+          "open_issues": 87,
+          "watchers": 70,
+          "topics": [
+            "ai-coding",
+            "claude",
+            "claude-code",
+            "code-review",
+            "graphrag",
+            "incremental",
+            "knowledge-graph",
+            "llm",
+            "mcp",
+            "python",
+            "static-analysis",
+            "tree-sitter"
+          ],
+          "created_at": "2026-02-26T17:25:13Z",
+          "updated_at": "2026-07-19T23:30:45Z",
+          "pushed_at": "2026-07-18T00:32:48Z",
+          "daily_stars": 551,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 85.63,
+          "star_delta": 979,
+          "fork_delta": 51,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.88,
+            "relative_growth": 93.75,
+            "fork_growth": 90.62,
+            "total_stars": 21.88,
+            "activity": 51.34,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "为代码库建立持续更新的结构图，让 AI 审查变更时只读取相关代码与测试。",
+            "highlights": [
+              "追踪改动可能影响的调用方、依赖与测试",
+              "按文件变化增量更新代码结构图",
+              "通过 MCP 向编码助手提供精简审查上下文"
+            ],
+            "audience": "适合用 AI 审查合并请求、分析跨文件影响或梳理大型代码库架构的开发者与团队。",
+            "capabilities": [
+              "解析函数、类、导入与调用关系",
+              "计算代码改动的影响范围",
+              "定位受影响的执行流程与测试缺口",
+              "搜索跨仓库的代码实体与关联",
+              "导出图谱、架构文档与 Markdown Wiki"
+            ],
+            "core_title": "用代码关系图缩小审查范围",
+            "core_summary": "它用 Tree-sitter 解析仓库，把函数、类、导入和调用存成关系图；文件变化时只更新相关部分，再经 MCP 返回审查所需的最小代码范围。",
+            "prerequisites": "需 Python 3.10+；安装并构建图谱后，应重启编辑器或编码工具。",
+            "limitations": "小型单文件改动可能比直接读文件更重；搜索排序及部分语言的流程识别仍需改进，影响分析也可能多报候选文件。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "highlights": [
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ]
+              ],
+              "audience": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ]
+              ],
+              "core_title": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "core_summary": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "prerequisites": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "limitations": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-20/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+          "publication_evidence": {
+            "full_name": "tirth8205/code-review-graph",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+              "source_url": "https://api.github.com/repos/tirth8205/code-review-graph/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-20/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+              "sha256": "e4ec211724f39785b798a6ddbeb1f804af20b65fcbede4802ff584cdbc57f8b9",
+              "width": 351,
+              "height": 351
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-20/2026-07-20.ai.01.tirth8205--code-review-graph.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1053118194,
+          "full_name": "bojieli/ai-agent-book",
+          "owner": "bojieli",
+          "name": "ai-agent-book",
+          "html_url": "https://github.com/bojieli/ai-agent-book",
+          "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
+          "language": "Python",
+          "stars": 5348,
+          "forks": 505,
+          "open_issues": 5,
+          "watchers": 30,
+          "topics": [
+            "agent",
+            "agent-memory",
+            "ai-agent",
+            "book",
+            "coding-agent",
+            "context-engineering",
+            "large-language-models",
+            "llm",
+            "mcp",
+            "multi-agent",
+            "multimodal",
+            "rag",
+            "reinforcement-learning"
+          ],
+          "created_at": "2025-09-09T02:41:44Z",
+          "updated_at": "2026-07-19T23:30:41Z",
+          "pushed_at": "2026-07-19T14:38:13Z",
+          "daily_stars": 1734,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 84.04,
+          "star_delta": 1734,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 15.62,
+            "total_stars": 6.25,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把 AI Agent 的设计原理、工程方法和按章实验放在同一仓库，供读者边读边实践。",
+            "highlights": [
+              "用模型、上下文与工具串起知识框架",
+              "按章节提供正文、配图和实验代码",
+              "覆盖评估、后训练、多模态与多 Agent 协作"
+            ],
+            "audience": "适合希望系统学习 Agent 原理，并通过代码实验理解上下文、工具、评估和协作机制的读者。",
+            "capabilities": [
+              "阅读中文、英文与泰米尔语电子书",
+              "运行按章节组织的 Agent 示例",
+              "对比不同上下文与检索策略",
+              "搭建感知、执行和协作类 MCP 工具",
+              "复现实验并修改配套代码"
+            ],
+            "core_title": "按章节贯通原理与实验",
+            "core_summary": "全书以“Agent = LLM + 上下文 + 工具”为主线，正文解释设计方法，配套目录把概念落到可运行示例、复现指南或设计文档中。",
+            "prerequisites": "自行编译 PDF 需安装 pandoc、xelatex、ElegantBook 文档类与相关字体；运行部分示例需配置 API Key。",
+            "limitations": "英文与泰米尔语内容可能滞后于中文原版；部分训练、评测和机器人实验依赖外部仓库或真实硬件，部分项目仅有设计文档。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "部分子项目可能包含各自的许可证信息，请以子项目中的说明为准。",
+            "readme_sha": "2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+                ],
+                [
+                  "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+                ],
+                [
+                  "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+                ]
+              ],
+              "audience": [
+                "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+                ],
+                [
+                  "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+                ],
+                [
+                  "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+                ],
+                [
+                  "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+                ],
+                [
+                  "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+              ],
+              "core_summary": [
+                "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+              ],
+              "prerequisites": [
+                "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+              ],
+              "limitations": [
+                "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-07-20/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
+          "publication_evidence": {
+            "full_name": "bojieli/ai-agent-book",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "2888f2f39dc0dd292e5e37a14f56cea0f22c8ac0",
+              "source_url": "https://api.github.com/repos/bojieli/ai-agent-book/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-20/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
+              "sha256": "a015f4da8a29824e9e8a77ad8f14074ad399278f2852b123dae5cb8179da7adb",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-20/2026-07-20.ai.02.bojieli--ai-agent-book.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1208642537,
+          "full_name": "KnockOutEZ/wigolo",
+          "owner": "KnockOutEZ",
+          "name": "wigolo",
+          "html_url": "https://github.com/KnockOutEZ/wigolo",
+          "description": "The go-to web for your AI coding agent — local-first search, fetch, crawl & research over MCP. No API keys, no cloud, $0/query. Public beta.",
+          "language": "TypeScript",
+          "stars": 1785,
+          "forks": 111,
+          "open_issues": 22,
+          "watchers": 6,
+          "topics": [
+            "agent",
+            "ai",
+            "ai-agent",
+            "claude",
+            "cli",
+            "developer-tools",
+            "local-first",
+            "mcp",
+            "mcp-server",
+            "metasearch",
+            "model-context-protocol",
+            "nodejs",
+            "privacy",
+            "rag",
+            "search",
+            "search-engine",
+            "typescript",
+            "web-crawler",
+            "web-scraping",
+            "web-search"
+          ],
+          "created_at": "2026-04-12T15:04:11Z",
+          "updated_at": "2026-07-19T23:30:17Z",
+          "pushed_at": "2026-07-19T11:22:27Z",
+          "daily_stars": 605,
+          "weekly_stars": null,
+          "trending_rank_daily": 6,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 80.98,
+          "star_delta": 573,
+          "fork_delta": 28,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 90.62,
+            "relative_growth": 96.88,
+            "fork_growth": 71.88,
+            "total_stars": 3.12,
+            "activity": 71.65,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "给 AI Agent 一套本地网页工具，完成搜索、抓取、爬取、提取与带引用的研究整理。",
+            "highlights": [
+              "融合多个搜索来源并标注结果质量",
+              "抓取网页并返回可定位的原文证据",
+              "把已访问内容缓存在本机供离线检索"
+            ],
+            "audience": "适合需要让编码助手或自托管 Agent 搜网页、整理来源、监控页面变化并保留本地缓存的开发者。",
+            "capabilities": [
+              "并行搜索多个查询与来源",
+              "抓取动态网页、PDF 和指定页面区域",
+              "爬取站点并提取表格或结构化数据",
+              "缓存页面并检索相似内容",
+              "拆解问题并生成带引用的研究材料"
+            ],
+            "core_title": "让 Agent 获得本地网页工作台",
+            "core_summary": "它把搜索、抓取、爬取、提取和缓存放进同一套 MCP、REST 与 SDK 接口；结果附原文位置、评分和失败状态，方便 Agent 判断证据质量。",
+            "prerequisites": "需 Node ≥ 20，并预留约 1.5 GB 磁盘空间；核心工具无需 API Key。",
+            "limitations": "项目仍处于 public beta；research、agent 和回答合成功能若不配置 LLM，只返回原始简报与证据；受挑战保护的网站可能无法读取。",
+            "license_label": "GNU AGPL-3.0-only",
+            "license_restrictions": "you must publish your modified source under the same license.",
+            "readme_sha": "d8f1020c245a157fddb417cf999d1b807ce990d9",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "highlights": [
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ],
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ],
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ]
+              ],
+              "audience": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ],
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ],
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ],
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ],
+                [
+                  "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+                ]
+              ],
+              "core_title": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "core_summary": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "prerequisites": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "limitations": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "license_label": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ],
+              "license_restrictions": [
+                "github.readme:d8f1020c245a157fddb417cf999d1b807ce990d9"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-07-20/repo-98a2f2a4127d8cc538547eba-44e1ddc0a2fff22c9fe6a24a.png",
+          "publication_evidence": {
+            "full_name": "KnockOutEZ/wigolo",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "d8f1020c245a157fddb417cf999d1b807ce990d9",
+              "source_url": "https://api.github.com/repos/KnockOutEZ/wigolo/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-20/repo-98a2f2a4127d8cc538547eba-44e1ddc0a2fff22c9fe6a24a.png",
+              "sha256": "0f759c06b65b9a9fc5c1fedaf44630a9f88798ad1bf9bd275225e11ac9fc0f26",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "GNU AGPL-3.0-only",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-20/2026-07-20.ai.03.knockoutez--wigolo.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}

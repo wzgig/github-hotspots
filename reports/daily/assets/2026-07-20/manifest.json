@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-07-20",
+  "window": {
+    "start": "2026-07-19",
+    "end": "2026-07-20"
+  },
+  "source_report": "reports/daily/2026-07-20.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-07-20",
+  "manifest": "reports/daily/assets/2026-07-20/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "tirth8205/code-review-graph",
+          "path": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.01.tirth8205--code-review-graph.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "path": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.02.shubhamsaboo--awesome-llm-apps.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "KnockOutEZ/wigolo",
+          "path": "reports/daily/assets/2026-07-20/2026-07-20.comprehensive.03.knockoutez--wigolo.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-07-20/2026-07-20.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "tirth8205/code-review-graph",
+          "path": "reports/daily/assets/2026-07-20/2026-07-20.ai.01.tirth8205--code-review-graph.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "bojieli/ai-agent-book",
+          "path": "reports/daily/assets/2026-07-20/2026-07-20.ai.02.bojieli--ai-agent-book.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "KnockOutEZ/wigolo",
+          "path": "reports/daily/assets/2026-07-20/2026-07-20.ai.03.knockoutez--wigolo.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 9,
+    "issue_code": "D009",
+    "issue_label": "第9期",
+    "status": "official"
+  }
+}
