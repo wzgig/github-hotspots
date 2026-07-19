@@ -1,0 +1,3322 @@
+{
+  "schema_version": 3,
+  "period": "weekly",
+  "run_date": "2026-07-19",
+  "window_start": "2026-07-12",
+  "window_end": "2026-07-19",
+  "generated_at": "2026-07-19T09:10:11+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-12 至 2026-07-19",
+  "publication": {
+    "issue_number": 2,
+    "issue_code": "W002",
+    "issue_label": "第2期",
+    "status": "official"
+  },
+  "data_quality": "中高：快照与 Trending 混合",
+  "warnings": [
+    "综合主榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号",
+    "AI 专题榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/weekly/assets/2026-W29",
+    "manifest": "reports/weekly/assets/2026-W29/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.02.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.03.stablyai--orca.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "iOfficeAI/OfficeCLI",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.04.iofficeai--officecli.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "OpenCut-app/OpenCut",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.05.opencut-app--opencut.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.06.obra--superpowers.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.07.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W29/2026-W29.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.01.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.02.stablyai--orca.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "iOfficeAI/OfficeCLI",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.03.iofficeai--officecli.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "Graphify-Labs/graphify",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.04.graphify-labs--graphify.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.05.obra--superpowers.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "HKUDS/Vibe-Trading",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.06.hkuds--vibe-trading.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "Nutlope/hallmark",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.07.nutlope--hallmark.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 2,
+      "issue_code": "W002",
+      "issue_label": "第2期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 176583,
+      "forks": 15131,
+      "open_issues": 193,
+      "watchers": 176583,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-07-19T01:05:15Z",
+      "pushed_at": "2026-07-17T09:51:15Z",
+      "daily_stars": null,
+      "weekly_stars": 11131,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 7,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 92.49,
+      "star_delta": 11004,
+      "fork_delta": 893,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 99.04,
+        "relative_growth": 94.23,
+        "fork_growth": 99.04,
+        "total_stars": 75.96,
+        "activity": 87.52,
+        "trending_signal": 33.33
+      },
+      "summary": {
+        "one_line": "给编程 Agent 补上一套可组合的工程技能，用提问、测试和审查减少开发跑偏",
+        "highlights": [
+          "先通过追问对齐需求，再开始改代码",
+          "建立共享术语与决策记录，减少沟通歧义",
+          "把测试、调试和代码审查变成可复用流程"
+        ],
+        "audience": "希望保留流程控制权，并让 Claude Code、Codex 等 Agent 按工程方法做事的开发者",
+        "capabilities": [
+          "追问需求并把模糊想法整理清楚",
+          "建立项目术语文档与架构决策记录",
+          "用红绿重构循环推进测试驱动开发",
+          "按复现、缩小范围和验证假设诊断故障",
+          "拆分实现任务并在完成前执行代码审查"
+        ],
+        "core_title": "小技能组合成完整工程流程",
+        "core_summary": "每项技能只负责一个环节，可按任务组合：先澄清需求和术语，再规划、实现、测试、调试与审查，避免由一套封闭流程包办所有决策。",
+        "prerequisites": "通过 skills.sh 安装后，需运行 setup 技能并选择问题跟踪器、分诊标签和文档保存位置。",
+        "limitations": "Claude Code 插件是只读托管包；Codex 原生插件仍在路线图中，其他 Agent 可使用 skills.sh。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "8cc79099b6932f274c501e58318db3190fd4662a",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+          ],
+          "highlights": [
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ],
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ],
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ]
+          ],
+          "audience": [
+            "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+          ],
+          "capabilities": [
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ],
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ],
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ],
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ],
+            [
+              "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+            ]
+          ],
+          "core_title": [
+            "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+          ],
+          "core_summary": [
+            "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+          ],
+          "prerequisites": [
+            "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+          ],
+          "limitations": [
+            "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W29/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "8cc79099b6932f274c501e58318db3190fd4662a",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W29/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.01.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 793375104,
+      "full_name": "Shubhamsaboo/awesome-llm-apps",
+      "owner": "Shubhamsaboo",
+      "name": "awesome-llm-apps",
+      "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+      "language": "Python",
+      "stars": 124005,
+      "forks": 18294,
+      "open_issues": 7,
+      "watchers": 1216,
+      "topics": [
+        "agents",
+        "llms",
+        "python",
+        "rag"
+      ],
+      "created_at": "2024-04-29T05:30:25Z",
+      "updated_at": "2026-07-19T01:08:36Z",
+      "pushed_at": "2026-07-19T00:39:40Z",
+      "daily_stars": null,
+      "weekly_stars": 6146,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 3,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 91.25,
+      "star_delta": 5948,
+      "fork_delta": 751,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.15,
+        "relative_growth": 91.35,
+        "fork_growth": 98.08,
+        "total_stars": 51.92,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "从可运行的 Agent、RAG 与多模型应用模板起步，挑一个场景克隆后继续改造",
+        "highlights": [
+          "覆盖入门 Agent、复杂工作流与多 Agent 团队",
+          "收录文档问答、研究、语音和浏览器自动化案例",
+          "提供可安装技能与可直接运行的 Python 示例"
+        ],
+        "audience": "想用现成代码学习或验证 AI Agent、RAG、多模型协作和生成式界面的开发者",
+        "capabilities": [
+          "克隆旅行助手等单文件 Agent 示例",
+          "把博客网址转换成带旁白的播客",
+          "对 PDF、网页和多媒体内容构建 RAG 问答",
+          "组合多个 Agent 完成研究、招聘或竞品分析",
+          "为编码 Agent 安装范围检查等任务技能"
+        ],
+        "core_title": "按应用场景挑选可运行模板",
+        "core_summary": "仓库把示例分成入门 Agent、复杂应用、多 Agent 团队、语音、RAG、记忆与生成式界面等类别，便于从具体任务找到可改造的代码起点。",
+        "prerequisites": "运行示例通常需要克隆仓库、安装对应目录的 Python 依赖，并配置所用模型或服务的 API Key。",
+        "limitations": "各模板使用的模型、工具和外部服务不同，实际依赖与配置要求需进入对应示例目录核对。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "b819022ca8272e3cfd110ff7f4fd37dfd79ff784",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+          ],
+          "highlights": [
+            [
+              "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+            ],
+            [
+              "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+            ],
+            [
+              "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+            ]
+          ],
+          "audience": [
+            "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+          ],
+          "capabilities": [
+            [
+              "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+            ],
+            [
+              "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+            ],
+            [
+              "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+            ],
+            [
+              "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+            ],
+            [
+              "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+            ]
+          ],
+          "core_title": [
+            "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+          ],
+          "core_summary": [
+            "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+          ],
+          "prerequisites": [
+            "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+          ],
+          "limitations": [
+            "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W29/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+      "publication_evidence": {
+        "full_name": "Shubhamsaboo/awesome-llm-apps",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "b819022ca8272e3cfd110ff7f4fd37dfd79ff784",
+          "source_url": "https://api.github.com/repos/Shubhamsaboo/awesome-llm-apps/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W29/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+          "sha256": "9c1100d2d55c39b2ae1596fc4f14a81fcec96123d3ba96857d3a8fdb86d7a42a",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.02.shubhamsaboo--awesome-llm-apps.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1183888342,
+      "full_name": "stablyai/orca",
+      "owner": "stablyai",
+      "name": "orca",
+      "html_url": "https://github.com/stablyai/orca",
+      "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+      "language": "TypeScript",
+      "stars": 21814,
+      "forks": 1572,
+      "open_issues": 1724,
+      "watchers": 52,
+      "topics": [
+        "ade",
+        "agent-ide",
+        "ai-agents",
+        "claude-code",
+        "cli",
+        "codex",
+        "cursor-agent",
+        "devtools",
+        "ghostty",
+        "ide",
+        "mobile-app",
+        "opencode",
+        "orchestration",
+        "parallel-agents",
+        "pi",
+        "terminal",
+        "worktrees",
+        "yc-backed"
+      ],
+      "created_at": "2026-03-17T03:28:57Z",
+      "updated_at": "2026-07-19T01:09:17Z",
+      "pushed_at": "2026-07-19T00:56:29Z",
+      "daily_stars": null,
+      "weekly_stars": 5520,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 13,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 89.73,
+      "star_delta": 5508,
+      "fork_delta": 298,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.23,
+        "relative_growth": 98.08,
+        "fork_growth": 94.23,
+        "total_stars": 45.19,
+        "activity": 100.0,
+        "trending_signal": 26.26
+      },
+      "summary": {
+        "one_line": "把多个命令行编程 Agent 放进隔离工作区并行运行，再集中比较、审查和合并结果",
+        "highlights": [
+          "让多个 Agent 在独立 Git worktree 中并行工作",
+          "从手机查看进度、接收完成通知并追加指令",
+          "在应用内审查差异并把逐行意见发回 Agent"
+        ],
+        "audience": "同时使用多个命令行编程 Agent，需要并行试做、远程监控和集中审查代码的开发者",
+        "capabilities": [
+          "把同一提示分发给多个隔离 Agent",
+          "比较并合并不同 Agent 的实现结果",
+          "点击浏览器界面元素并发送视觉上下文",
+          "从 GitHub 或 Linear 任务直接创建工作区",
+          "通过 SSH 在远程机器运行 Agent"
+        ],
+        "core_title": "隔离并行，再挑选最佳实现",
+        "core_summary": "每个 Agent 使用独立 Git worktree，避免互相覆盖文件；同一任务可并行试做，完成后集中比较差异、添加审查意见并合并选中的结果。",
+        "prerequisites": "需安装桌面端，并准备可在终端运行的编程 Agent；移动端需要与桌面应用配对。",
+        "limitations": "移动端依赖桌面应用配对；README 提示会收集匿名使用数据，并提供退出遥测的设置。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "87ccc4995ff494303781dbb6a47f43bfa42b802b",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+          ],
+          "highlights": [
+            [
+              "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+            ],
+            [
+              "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+            ],
+            [
+              "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+            ]
+          ],
+          "audience": [
+            "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+          ],
+          "capabilities": [
+            [
+              "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+            ],
+            [
+              "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+            ],
+            [
+              "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+            ],
+            [
+              "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+            ],
+            [
+              "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+            ]
+          ],
+          "core_title": [
+            "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+          ],
+          "core_summary": [
+            "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+          ],
+          "prerequisites": [
+            "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+          ],
+          "limitations": [
+            "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W29/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+      "publication_evidence": {
+        "full_name": "stablyai/orca",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "87ccc4995ff494303781dbb6a47f43bfa42b802b",
+          "source_url": "https://api.github.com/repos/stablyai/orca/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W29/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+          "sha256": "74c9f9ca37e1d708720845638e4947b594c011bd6eb473475d8b04512c5f221e",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.03.stablyai--orca.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1182212878,
+      "full_name": "iOfficeAI/OfficeCLI",
+      "owner": "iOfficeAI",
+      "name": "OfficeCLI",
+      "html_url": "https://github.com/iOfficeAI/OfficeCLI",
+      "description": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "language": "C#",
+      "stars": 19304,
+      "forks": 1300,
+      "open_issues": 53,
+      "watchers": 50,
+      "topics": [
+        "agent",
+        "ai",
+        "claude-code",
+        "cli",
+        "codex",
+        "docx",
+        "excel",
+        "office",
+        "openclaw",
+        "pptx",
+        "presentation",
+        "skills",
+        "word",
+        "xlsx"
+      ],
+      "created_at": "2026-03-15T07:39:12Z",
+      "updated_at": "2026-07-19T01:03:17Z",
+      "pushed_at": "2026-07-18T20:52:54Z",
+      "daily_stars": null,
+      "weekly_stars": 4284,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 6,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 4,
+      "score": 88.7,
+      "star_delta": 4290,
+      "fork_delta": 278,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 92.31,
+        "relative_growth": 96.15,
+        "fork_growth": 93.27,
+        "total_stars": 44.23,
+        "activity": 100.0,
+        "trending_signal": 35.62
+      },
+      "summary": {
+        "one_line": "让脚本或 AI Agent 用命令行创建、读取和修改 Word、Excel 与 PowerPoint 文件",
+        "highlights": [
+          "用统一路径定位并操作文档中的具体元素",
+          "渲染 HTML 或 PNG，让 Agent 检查版面后再修正",
+          "把现有文档转成可重放 JSON，批量生成变体"
+        ],
+        "audience": "需要在自动化脚本、Agent 工作流、容器或持续集成环境中处理 Office 文档的团队",
+        "capabilities": [
+          "创建并编辑三类 Office 文档",
+          "读取文本、结构、样式、公式和图表",
+          "渲染文档预览并实时刷新修改结果",
+          "用 JSON 数据批量填充跨格式模板",
+          "校验文档并返回结构化问题与修正提示"
+        ],
+        "core_title": "让 Agent 看见并修正文档版面",
+        "core_summary": "内置渲染引擎可把文档输出为 HTML 或 PNG，Agent 先修改元素，再查看实际排版并继续修正，形成“渲染、检查、修复”的反馈循环。",
+        "prerequisites": "直接使用无需安装 Microsoft Office 或额外运行时；仅从源码编译时需要 .NET SDK。",
+        "limitations": "驻留模式会延迟写入磁盘；其他程序读取文件前，必须先用 save 或 close 刷新文件。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "7530b03caa7180f7fd11edacb72d3c3c173e0933",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+          ],
+          "highlights": [
+            [
+              "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+            ],
+            [
+              "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+            ],
+            [
+              "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+            ]
+          ],
+          "audience": [
+            "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+          ],
+          "capabilities": [
+            [
+              "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+            ],
+            [
+              "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+            ],
+            [
+              "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+            ],
+            [
+              "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+            ],
+            [
+              "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+            ]
+          ],
+          "core_title": [
+            "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+          ],
+          "core_summary": [
+            "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+          ],
+          "prerequisites": [
+            "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+          ],
+          "limitations": [
+            "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W29/repo-1f9acea81d3dda5f94ec479e-098828e612292ec9493bc31c.png",
+      "publication_evidence": {
+        "full_name": "iOfficeAI/OfficeCLI",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "7530b03caa7180f7fd11edacb72d3c3c173e0933",
+          "source_url": "https://api.github.com/repos/iOfficeAI/OfficeCLI/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W29/repo-1f9acea81d3dda5f94ec479e-098828e612292ec9493bc31c.png",
+          "sha256": "903fd909a3c18b91fcbcbae630489ef22092f311273513594607ece3fe912ed4",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.04.iofficeai--officecli.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1006414368,
+      "full_name": "OpenCut-app/OpenCut",
+      "owner": "OpenCut-app",
+      "name": "OpenCut",
+      "html_url": "https://github.com/OpenCut-app/OpenCut",
+      "description": "The open-source CapCut alternative",
+      "language": "TypeScript",
+      "stars": 75431,
+      "forks": 7592,
+      "open_issues": 352,
+      "watchers": 367,
+      "topics": [
+        "editor",
+        "oss",
+        "videoeditor"
+      ],
+      "created_at": "2025-06-22T08:02:17Z",
+      "updated_at": "2026-07-19T01:05:13Z",
+      "pushed_at": "2026-07-17T21:23:26Z",
+      "daily_stars": null,
+      "weekly_stars": 13319,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 2,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 5,
+      "score": 88.09,
+      "star_delta": 13319,
+      "fork_delta": 0,
+      "delta_source": "trending",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 99.04,
+        "fork_growth": 33.17,
+        "total_stars": 49.04,
+        "activity": 93.55,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "正在从头重写的跨端视频编辑器，目标是用同一套核心覆盖浏览器、桌面与移动端",
+        "highlights": [
+          "规划用 Rust 核心支撑浏览器、桌面和移动端",
+          "采用插件优先架构，为第三方扩展预留接口",
+          "规划无头模式、脚本页与面向 Agent 的 MCP 服务"
+        ],
+        "audience": "想评估跨端视频编辑架构、插件系统和批量渲染自动化方向的开发者",
+        "capabilities": [
+          "规划用统一代码库覆盖多个终端",
+          "提供 Editor API 作为编辑能力接口",
+          "接入第三方插件扩展编辑器功能",
+          "规划无头模式执行自动化批量渲染",
+          "规划通过 MCP 服务连接 AI Agent"
+        ],
+        "core_title": "重写中的插件优先跨端架构",
+        "core_summary": "新版计划以 Rust 核心共享跨端能力，并把编辑接口、第三方插件、无头渲染、脚本和 MCP 纳入同一架构，但这些能力仍处于重写规划阶段。",
+        "prerequisites": "本地开发需先安装 proto，再从仓库根目录用 moon 启动网页、接口或桌面应用。",
+        "limitations": "当前仓库正在从头重写，现阶段应使用 classic 版本；架构设计期间暂不接受外部贡献。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "08cef45afb531c600819ff3dde2d05a3a6c5006e",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+          ],
+          "highlights": [
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ],
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ],
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ]
+          ],
+          "audience": [
+            "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+          ],
+          "capabilities": [
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ],
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ],
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ],
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ],
+            [
+              "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+            ]
+          ],
+          "core_title": [
+            "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+          ],
+          "core_summary": [
+            "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+          ],
+          "prerequisites": [
+            "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+          ],
+          "limitations": [
+            "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W29/repo-5150ac7e610cb3d0c8539e42-330c5082177040ee5631e760.png",
+      "publication_evidence": {
+        "full_name": "OpenCut-app/OpenCut",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "08cef45afb531c600819ff3dde2d05a3a6c5006e",
+          "source_url": "https://api.github.com/repos/OpenCut-app/OpenCut/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W29/repo-5150ac7e610cb3d0c8539e42-330c5082177040ee5631e760.png",
+          "sha256": "150435ca3751cb8e94618b4f5226636690a842040ef889eb15c62a6f64d15952",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.05.opencut-app--opencut.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1073224795,
+      "full_name": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "html_url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "stars": 257116,
+      "forks": 22910,
+      "open_issues": 324,
+      "watchers": 257116,
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "created_at": "2025-10-09T19:45:18Z",
+      "updated_at": "2026-07-19T01:07:43Z",
+      "pushed_at": "2026-07-17T00:52:29Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 6,
+      "score": 87.17,
+      "star_delta": 4585,
+      "fork_delta": 368,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 93.27,
+        "relative_growth": 88.46,
+        "fork_growth": 95.19,
+        "total_stars": 91.35,
+        "activity": 87.52,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "把编程 Agent 纳入一套强制工程流程：先确认设计，再规划、测试、审查和收尾",
+        "highlights": [
+          "写代码前通过问答完善设计并等待确认",
+          "按小任务拆解计划，再交给独立子 Agent 执行",
+          "用测试先行和两阶段审查约束实现过程"
+        ],
+        "audience": "希望编程 Agent 遵循明确设计、测试和审查纪律，而不是直接生成代码的开发者",
+        "capabilities": [
+          "通过苏格拉底式提问完善需求与设计",
+          "创建隔离 worktree 并检查测试基线",
+          "把实现计划拆成可验证的小任务",
+          "用红绿重构循环逐步完成代码",
+          "按规格符合度和代码质量执行审查"
+        ],
+        "core_title": "强制 Agent 先设计再实现",
+        "core_summary": "技能会在开发各阶段自动触发：先澄清并确认设计，再建立隔离环境、拆解计划、测试驱动实现、分阶段审查，最后验证并选择合并方式。",
+        "prerequisites": "需按所用编程 Agent 的插件或包管理方式分别安装；使用多个运行环境时要逐个安装。",
+        "limitations": "仓库通常不接受新增技能贡献，技能更新必须兼容其支持的全部编程 Agent；可选视觉功能默认加载遥测资源。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "48e3f1985dbcd5c1ea6a8237bff28ba63931f767",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+          ],
+          "highlights": [
+            [
+              "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+            ],
+            [
+              "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+            ],
+            [
+              "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+            ]
+          ],
+          "audience": [
+            "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+          ],
+          "capabilities": [
+            [
+              "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+            ],
+            [
+              "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+            ],
+            [
+              "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+            ],
+            [
+              "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+            ],
+            [
+              "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+            ]
+          ],
+          "core_title": [
+            "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+          ],
+          "core_summary": [
+            "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+          ],
+          "prerequisites": [
+            "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+          ],
+          "limitations": [
+            "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W29/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+      "publication_evidence": {
+        "full_name": "obra/superpowers",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "48e3f1985dbcd5c1ea6a8237bff28ba63931f767",
+          "source_url": "https://api.github.com/repos/obra/superpowers/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W29/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "sha256": "d38b9c9b368fcb5bf36b16f443d783cc9588fa66f5b399ed5e966b50ab857937",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.06.obra--superpowers.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1024554267,
+      "full_name": "NousResearch/hermes-agent",
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "html_url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": 216854,
+      "forks": 40731,
+      "open_issues": 23657,
+      "watchers": 216854,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "clawdbot",
+        "codex",
+        "hermes",
+        "hermes-agent",
+        "llm",
+        "moltbot",
+        "nous-research",
+        "openai",
+        "openclaw"
+      ],
+      "created_at": "2025-07-22T22:22:28Z",
+      "updated_at": "2026-07-19T01:05:06Z",
+      "pushed_at": "2026-07-18T23:27:41Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 7,
+      "score": 87.17,
+      "star_delta": 3505,
+      "fork_delta": 1266,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 91.35,
+        "relative_growth": 85.58,
+        "fork_growth": 100.0,
+        "total_stars": 87.5,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "把长期使用中的经验沉淀成记忆和技能，并从终端或消息平台持续执行任务",
+        "highlights": [
+          "从复杂任务经验中创建并持续改进技能",
+          "搜索历史会话，在不同入口延续上下文",
+          "调度定时任务，并把结果投递到消息平台"
+        ],
+        "audience": "需要跨终端与聊天平台使用、保留长期记忆，并在云端持续运行任务的 Agent 用户",
+        "capabilities": [
+          "从执行经验自动创建和改进技能",
+          "检索历史会话并保留跨会话记忆",
+          "启动隔离子 Agent 并行处理工作流",
+          "安排定时任务并投递到消息平台",
+          "切换本地、容器、SSH 与云端执行后端"
+        ],
+        "core_title": "经验会回流成记忆与技能",
+        "core_summary": "Agent 会整理长期记忆、搜索过往会话，并在复杂任务后创建技能；技能还能在使用中继续调整，让一次解决问题的过程变成后续可复用的工作方法。",
+        "prerequisites": "安装后需选择模型提供方并完成相应配置；使用 Telegram、Discord 等入口还需设置并启动消息网关。",
+        "limitations": "Termux 的完整依赖包含不兼容的语音组件，因此需使用精简依赖集合；外部模型和工具可能需要账号或密钥。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+          ],
+          "highlights": [
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ],
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ],
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ]
+          ],
+          "audience": [
+            "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+          ],
+          "capabilities": [
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ],
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ],
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ],
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ],
+            [
+              "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+            ]
+          ],
+          "core_title": [
+            "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+          ],
+          "core_summary": [
+            "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+          ],
+          "prerequisites": [
+            "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+          ],
+          "limitations": [
+            "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W29/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+      "publication_evidence": {
+        "full_name": "NousResearch/hermes-agent",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+          "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W29/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.07.nousresearch--hermes-agent.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.02.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.03.stablyai--orca.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "iOfficeAI/OfficeCLI",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.04.iofficeai--officecli.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "OpenCut-app/OpenCut",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.05.opencut-app--opencut.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.06.obra--superpowers.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.07.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 176583,
+          "forks": 15131,
+          "open_issues": 193,
+          "watchers": 176583,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-07-19T01:05:15Z",
+          "pushed_at": "2026-07-17T09:51:15Z",
+          "daily_stars": null,
+          "weekly_stars": 11131,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 7,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.49,
+          "star_delta": 11004,
+          "fork_delta": 893,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 99.04,
+            "relative_growth": 94.23,
+            "fork_growth": 99.04,
+            "total_stars": 75.96,
+            "activity": 87.52,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "给编程 Agent 补上一套可组合的工程技能，用提问、测试和审查减少开发跑偏",
+            "highlights": [
+              "先通过追问对齐需求，再开始改代码",
+              "建立共享术语与决策记录，减少沟通歧义",
+              "把测试、调试和代码审查变成可复用流程"
+            ],
+            "audience": "希望保留流程控制权，并让 Claude Code、Codex 等 Agent 按工程方法做事的开发者",
+            "capabilities": [
+              "追问需求并把模糊想法整理清楚",
+              "建立项目术语文档与架构决策记录",
+              "用红绿重构循环推进测试驱动开发",
+              "按复现、缩小范围和验证假设诊断故障",
+              "拆分实现任务并在完成前执行代码审查"
+            ],
+            "core_title": "小技能组合成完整工程流程",
+            "core_summary": "每项技能只负责一个环节，可按任务组合：先澄清需求和术语，再规划、实现、测试、调试与审查，避免由一套封闭流程包办所有决策。",
+            "prerequisites": "通过 skills.sh 安装后，需运行 setup 技能并选择问题跟踪器、分诊标签和文档保存位置。",
+            "limitations": "Claude Code 插件是只读托管包；Codex 原生插件仍在路线图中，其他 Agent 可使用 skills.sh。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "8cc79099b6932f274c501e58318db3190fd4662a",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+              ],
+              "highlights": [
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ],
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ],
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ]
+              ],
+              "audience": [
+                "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ],
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ],
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ],
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ],
+                [
+                  "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+                ]
+              ],
+              "core_title": [
+                "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+              ],
+              "core_summary": [
+                "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+              ],
+              "prerequisites": [
+                "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+              ],
+              "limitations": [
+                "github.readme:8cc79099b6932f274c501e58318db3190fd4662a"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "8cc79099b6932f274c501e58318db3190fd4662a",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.01.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 793375104,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "owner": "Shubhamsaboo",
+          "name": "awesome-llm-apps",
+          "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+          "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+          "language": "Python",
+          "stars": 124005,
+          "forks": 18294,
+          "open_issues": 7,
+          "watchers": 1216,
+          "topics": [
+            "agents",
+            "llms",
+            "python",
+            "rag"
+          ],
+          "created_at": "2024-04-29T05:30:25Z",
+          "updated_at": "2026-07-19T01:08:36Z",
+          "pushed_at": "2026-07-19T00:39:40Z",
+          "daily_stars": null,
+          "weekly_stars": 6146,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 3,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 91.25,
+          "star_delta": 5948,
+          "fork_delta": 751,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.15,
+            "relative_growth": 91.35,
+            "fork_growth": 98.08,
+            "total_stars": 51.92,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "从可运行的 Agent、RAG 与多模型应用模板起步，挑一个场景克隆后继续改造",
+            "highlights": [
+              "覆盖入门 Agent、复杂工作流与多 Agent 团队",
+              "收录文档问答、研究、语音和浏览器自动化案例",
+              "提供可安装技能与可直接运行的 Python 示例"
+            ],
+            "audience": "想用现成代码学习或验证 AI Agent、RAG、多模型协作和生成式界面的开发者",
+            "capabilities": [
+              "克隆旅行助手等单文件 Agent 示例",
+              "把博客网址转换成带旁白的播客",
+              "对 PDF、网页和多媒体内容构建 RAG 问答",
+              "组合多个 Agent 完成研究、招聘或竞品分析",
+              "为编码 Agent 安装范围检查等任务技能"
+            ],
+            "core_title": "按应用场景挑选可运行模板",
+            "core_summary": "仓库把示例分成入门 Agent、复杂应用、多 Agent 团队、语音、RAG、记忆与生成式界面等类别，便于从具体任务找到可改造的代码起点。",
+            "prerequisites": "运行示例通常需要克隆仓库、安装对应目录的 Python 依赖，并配置所用模型或服务的 API Key。",
+            "limitations": "各模板使用的模型、工具和外部服务不同，实际依赖与配置要求需进入对应示例目录核对。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "b819022ca8272e3cfd110ff7f4fd37dfd79ff784",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+              ],
+              "highlights": [
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ],
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ],
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ]
+              ],
+              "audience": [
+                "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ],
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ],
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ],
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ],
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ]
+              ],
+              "core_title": [
+                "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+              ],
+              "core_summary": [
+                "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+              ],
+              "prerequisites": [
+                "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+              ],
+              "limitations": [
+                "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+          "publication_evidence": {
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "b819022ca8272e3cfd110ff7f4fd37dfd79ff784",
+              "source_url": "https://api.github.com/repos/Shubhamsaboo/awesome-llm-apps/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+              "sha256": "9c1100d2d55c39b2ae1596fc4f14a81fcec96123d3ba96857d3a8fdb86d7a42a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.02.shubhamsaboo--awesome-llm-apps.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1183888342,
+          "full_name": "stablyai/orca",
+          "owner": "stablyai",
+          "name": "orca",
+          "html_url": "https://github.com/stablyai/orca",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "language": "TypeScript",
+          "stars": 21814,
+          "forks": 1572,
+          "open_issues": 1724,
+          "watchers": 52,
+          "topics": [
+            "ade",
+            "agent-ide",
+            "ai-agents",
+            "claude-code",
+            "cli",
+            "codex",
+            "cursor-agent",
+            "devtools",
+            "ghostty",
+            "ide",
+            "mobile-app",
+            "opencode",
+            "orchestration",
+            "parallel-agents",
+            "pi",
+            "terminal",
+            "worktrees",
+            "yc-backed"
+          ],
+          "created_at": "2026-03-17T03:28:57Z",
+          "updated_at": "2026-07-19T01:09:17Z",
+          "pushed_at": "2026-07-19T00:56:29Z",
+          "daily_stars": null,
+          "weekly_stars": 5520,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 13,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 89.73,
+          "star_delta": 5508,
+          "fork_delta": 298,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.23,
+            "relative_growth": 98.08,
+            "fork_growth": 94.23,
+            "total_stars": 45.19,
+            "activity": 100.0,
+            "trending_signal": 26.26
+          },
+          "summary": {
+            "one_line": "把多个命令行编程 Agent 放进隔离工作区并行运行，再集中比较、审查和合并结果",
+            "highlights": [
+              "让多个 Agent 在独立 Git worktree 中并行工作",
+              "从手机查看进度、接收完成通知并追加指令",
+              "在应用内审查差异并把逐行意见发回 Agent"
+            ],
+            "audience": "同时使用多个命令行编程 Agent，需要并行试做、远程监控和集中审查代码的开发者",
+            "capabilities": [
+              "把同一提示分发给多个隔离 Agent",
+              "比较并合并不同 Agent 的实现结果",
+              "点击浏览器界面元素并发送视觉上下文",
+              "从 GitHub 或 Linear 任务直接创建工作区",
+              "通过 SSH 在远程机器运行 Agent"
+            ],
+            "core_title": "隔离并行，再挑选最佳实现",
+            "core_summary": "每个 Agent 使用独立 Git worktree，避免互相覆盖文件；同一任务可并行试做，完成后集中比较差异、添加审查意见并合并选中的结果。",
+            "prerequisites": "需安装桌面端，并准备可在终端运行的编程 Agent；移动端需要与桌面应用配对。",
+            "limitations": "移动端依赖桌面应用配对；README 提示会收集匿名使用数据，并提供退出遥测的设置。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "87ccc4995ff494303781dbb6a47f43bfa42b802b",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+              ],
+              "highlights": [
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ],
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ],
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ]
+              ],
+              "audience": [
+                "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ],
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ],
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ],
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ],
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ]
+              ],
+              "core_title": [
+                "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+              ],
+              "core_summary": [
+                "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+              ],
+              "prerequisites": [
+                "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+              ],
+              "limitations": [
+                "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+          "publication_evidence": {
+            "full_name": "stablyai/orca",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "87ccc4995ff494303781dbb6a47f43bfa42b802b",
+              "source_url": "https://api.github.com/repos/stablyai/orca/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+              "sha256": "74c9f9ca37e1d708720845638e4947b594c011bd6eb473475d8b04512c5f221e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.03.stablyai--orca.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1182212878,
+          "full_name": "iOfficeAI/OfficeCLI",
+          "owner": "iOfficeAI",
+          "name": "OfficeCLI",
+          "html_url": "https://github.com/iOfficeAI/OfficeCLI",
+          "description": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+          "language": "C#",
+          "stars": 19304,
+          "forks": 1300,
+          "open_issues": 53,
+          "watchers": 50,
+          "topics": [
+            "agent",
+            "ai",
+            "claude-code",
+            "cli",
+            "codex",
+            "docx",
+            "excel",
+            "office",
+            "openclaw",
+            "pptx",
+            "presentation",
+            "skills",
+            "word",
+            "xlsx"
+          ],
+          "created_at": "2026-03-15T07:39:12Z",
+          "updated_at": "2026-07-19T01:03:17Z",
+          "pushed_at": "2026-07-18T20:52:54Z",
+          "daily_stars": null,
+          "weekly_stars": 4284,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 6,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 88.7,
+          "star_delta": 4290,
+          "fork_delta": 278,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.31,
+            "relative_growth": 96.15,
+            "fork_growth": 93.27,
+            "total_stars": 44.23,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "让脚本或 AI Agent 用命令行创建、读取和修改 Word、Excel 与 PowerPoint 文件",
+            "highlights": [
+              "用统一路径定位并操作文档中的具体元素",
+              "渲染 HTML 或 PNG，让 Agent 检查版面后再修正",
+              "把现有文档转成可重放 JSON，批量生成变体"
+            ],
+            "audience": "需要在自动化脚本、Agent 工作流、容器或持续集成环境中处理 Office 文档的团队",
+            "capabilities": [
+              "创建并编辑三类 Office 文档",
+              "读取文本、结构、样式、公式和图表",
+              "渲染文档预览并实时刷新修改结果",
+              "用 JSON 数据批量填充跨格式模板",
+              "校验文档并返回结构化问题与修正提示"
+            ],
+            "core_title": "让 Agent 看见并修正文档版面",
+            "core_summary": "内置渲染引擎可把文档输出为 HTML 或 PNG，Agent 先修改元素，再查看实际排版并继续修正，形成“渲染、检查、修复”的反馈循环。",
+            "prerequisites": "直接使用无需安装 Microsoft Office 或额外运行时；仅从源码编译时需要 .NET SDK。",
+            "limitations": "驻留模式会延迟写入磁盘；其他程序读取文件前，必须先用 save 或 close 刷新文件。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "7530b03caa7180f7fd11edacb72d3c3c173e0933",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+              ],
+              "highlights": [
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ],
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ],
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ]
+              ],
+              "audience": [
+                "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ],
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ],
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ],
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ],
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ]
+              ],
+              "core_title": [
+                "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+              ],
+              "core_summary": [
+                "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+              ],
+              "prerequisites": [
+                "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+              ],
+              "limitations": [
+                "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-1f9acea81d3dda5f94ec479e-098828e612292ec9493bc31c.png",
+          "publication_evidence": {
+            "full_name": "iOfficeAI/OfficeCLI",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "7530b03caa7180f7fd11edacb72d3c3c173e0933",
+              "source_url": "https://api.github.com/repos/iOfficeAI/OfficeCLI/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-1f9acea81d3dda5f94ec479e-098828e612292ec9493bc31c.png",
+              "sha256": "903fd909a3c18b91fcbcbae630489ef22092f311273513594607ece3fe912ed4",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.04.iofficeai--officecli.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1006414368,
+          "full_name": "OpenCut-app/OpenCut",
+          "owner": "OpenCut-app",
+          "name": "OpenCut",
+          "html_url": "https://github.com/OpenCut-app/OpenCut",
+          "description": "The open-source CapCut alternative",
+          "language": "TypeScript",
+          "stars": 75431,
+          "forks": 7592,
+          "open_issues": 352,
+          "watchers": 367,
+          "topics": [
+            "editor",
+            "oss",
+            "videoeditor"
+          ],
+          "created_at": "2025-06-22T08:02:17Z",
+          "updated_at": "2026-07-19T01:05:13Z",
+          "pushed_at": "2026-07-17T21:23:26Z",
+          "daily_stars": null,
+          "weekly_stars": 13319,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 2,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 88.09,
+          "star_delta": 13319,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 99.04,
+            "fork_growth": 33.17,
+            "total_stars": 49.04,
+            "activity": 93.55,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "正在从头重写的跨端视频编辑器，目标是用同一套核心覆盖浏览器、桌面与移动端",
+            "highlights": [
+              "规划用 Rust 核心支撑浏览器、桌面和移动端",
+              "采用插件优先架构，为第三方扩展预留接口",
+              "规划无头模式、脚本页与面向 Agent 的 MCP 服务"
+            ],
+            "audience": "想评估跨端视频编辑架构、插件系统和批量渲染自动化方向的开发者",
+            "capabilities": [
+              "规划用统一代码库覆盖多个终端",
+              "提供 Editor API 作为编辑能力接口",
+              "接入第三方插件扩展编辑器功能",
+              "规划无头模式执行自动化批量渲染",
+              "规划通过 MCP 服务连接 AI Agent"
+            ],
+            "core_title": "重写中的插件优先跨端架构",
+            "core_summary": "新版计划以 Rust 核心共享跨端能力，并把编辑接口、第三方插件、无头渲染、脚本和 MCP 纳入同一架构，但这些能力仍处于重写规划阶段。",
+            "prerequisites": "本地开发需先安装 proto，再从仓库根目录用 moon 启动网页、接口或桌面应用。",
+            "limitations": "当前仓库正在从头重写，现阶段应使用 classic 版本；架构设计期间暂不接受外部贡献。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "08cef45afb531c600819ff3dde2d05a3a6c5006e",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+              ],
+              "highlights": [
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ],
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ],
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ]
+              ],
+              "audience": [
+                "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ],
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ],
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ],
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ],
+                [
+                  "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+                ]
+              ],
+              "core_title": [
+                "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+              ],
+              "core_summary": [
+                "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+              ],
+              "prerequisites": [
+                "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+              ],
+              "limitations": [
+                "github.readme:08cef45afb531c600819ff3dde2d05a3a6c5006e"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-5150ac7e610cb3d0c8539e42-330c5082177040ee5631e760.png",
+          "publication_evidence": {
+            "full_name": "OpenCut-app/OpenCut",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "08cef45afb531c600819ff3dde2d05a3a6c5006e",
+              "source_url": "https://api.github.com/repos/OpenCut-app/OpenCut/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-5150ac7e610cb3d0c8539e42-330c5082177040ee5631e760.png",
+              "sha256": "150435ca3751cb8e94618b4f5226636690a842040ef889eb15c62a6f64d15952",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.05.opencut-app--opencut.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 257116,
+          "forks": 22910,
+          "open_issues": 324,
+          "watchers": 257116,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-07-19T01:07:43Z",
+          "pushed_at": "2026-07-17T00:52:29Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 87.17,
+          "star_delta": 4585,
+          "fork_delta": 368,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.27,
+            "relative_growth": 88.46,
+            "fork_growth": 95.19,
+            "total_stars": 91.35,
+            "activity": 87.52,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "把编程 Agent 纳入一套强制工程流程：先确认设计，再规划、测试、审查和收尾",
+            "highlights": [
+              "写代码前通过问答完善设计并等待确认",
+              "按小任务拆解计划，再交给独立子 Agent 执行",
+              "用测试先行和两阶段审查约束实现过程"
+            ],
+            "audience": "希望编程 Agent 遵循明确设计、测试和审查纪律，而不是直接生成代码的开发者",
+            "capabilities": [
+              "通过苏格拉底式提问完善需求与设计",
+              "创建隔离 worktree 并检查测试基线",
+              "把实现计划拆成可验证的小任务",
+              "用红绿重构循环逐步完成代码",
+              "按规格符合度和代码质量执行审查"
+            ],
+            "core_title": "强制 Agent 先设计再实现",
+            "core_summary": "技能会在开发各阶段自动触发：先澄清并确认设计，再建立隔离环境、拆解计划、测试驱动实现、分阶段审查，最后验证并选择合并方式。",
+            "prerequisites": "需按所用编程 Agent 的插件或包管理方式分别安装；使用多个运行环境时要逐个安装。",
+            "limitations": "仓库通常不接受新增技能贡献，技能更新必须兼容其支持的全部编程 Agent；可选视觉功能默认加载遥测资源。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "48e3f1985dbcd5c1ea6a8237bff28ba63931f767",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "highlights": [
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ]
+              ],
+              "audience": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ]
+              ],
+              "core_title": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "core_summary": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "prerequisites": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "limitations": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "48e3f1985dbcd5c1ea6a8237bff28ba63931f767",
+              "source_url": "https://api.github.com/repos/obra/superpowers/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+              "sha256": "d38b9c9b368fcb5bf36b16f443d783cc9588fa66f5b399ed5e966b50ab857937",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.06.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 216854,
+          "forks": 40731,
+          "open_issues": 23657,
+          "watchers": 216854,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-07-19T01:05:06Z",
+          "pushed_at": "2026-07-18T23:27:41Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 87.17,
+          "star_delta": 3505,
+          "fork_delta": 1266,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 91.35,
+            "relative_growth": 85.58,
+            "fork_growth": 100.0,
+            "total_stars": 87.5,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "把长期使用中的经验沉淀成记忆和技能，并从终端或消息平台持续执行任务",
+            "highlights": [
+              "从复杂任务经验中创建并持续改进技能",
+              "搜索历史会话，在不同入口延续上下文",
+              "调度定时任务，并把结果投递到消息平台"
+            ],
+            "audience": "需要跨终端与聊天平台使用、保留长期记忆，并在云端持续运行任务的 Agent 用户",
+            "capabilities": [
+              "从执行经验自动创建和改进技能",
+              "检索历史会话并保留跨会话记忆",
+              "启动隔离子 Agent 并行处理工作流",
+              "安排定时任务并投递到消息平台",
+              "切换本地、容器、SSH 与云端执行后端"
+            ],
+            "core_title": "经验会回流成记忆与技能",
+            "core_summary": "Agent 会整理长期记忆、搜索过往会话，并在复杂任务后创建技能；技能还能在使用中继续调整，让一次解决问题的过程变成后续可复用的工作方法。",
+            "prerequisites": "安装后需选择模型提供方并完成相应配置；使用 Telegram、Discord 等入口还需设置并启动消息网关。",
+            "limitations": "Termux 的完整依赖包含不兼容的语音组件，因此需使用精简依赖集合；外部模型和工具可能需要账号或密钥。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "highlights": [
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ]
+              ],
+              "audience": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ]
+              ],
+              "core_title": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "core_summary": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "prerequisites": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "limitations": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.comprehensive.07.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W29/2026-W29.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.01.shubhamsaboo--awesome-llm-apps.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.02.stablyai--orca.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "iOfficeAI/OfficeCLI",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.03.iofficeai--officecli.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "Graphify-Labs/graphify",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.04.graphify-labs--graphify.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.05.obra--superpowers.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "HKUDS/Vibe-Trading",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.06.hkuds--vibe-trading.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "Nutlope/hallmark",
+            "path": "reports/weekly/assets/2026-W29/2026-W29.ai.07.nutlope--hallmark.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 793375104,
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "owner": "Shubhamsaboo",
+          "name": "awesome-llm-apps",
+          "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+          "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+          "language": "Python",
+          "stars": 124005,
+          "forks": 18294,
+          "open_issues": 7,
+          "watchers": 1216,
+          "topics": [
+            "agents",
+            "llms",
+            "python",
+            "rag"
+          ],
+          "created_at": "2024-04-29T05:30:25Z",
+          "updated_at": "2026-07-19T01:08:36Z",
+          "pushed_at": "2026-07-19T00:39:40Z",
+          "daily_stars": null,
+          "weekly_stars": 6146,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 3,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 89.7,
+          "star_delta": 5948,
+          "fork_delta": 751,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.12,
+            "relative_growth": 85.37,
+            "fork_growth": 97.56,
+            "total_stars": 56.1,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "从可运行模板入手搭建 AI Agent、RAG、语音与多智能体应用",
+            "highlights": [
+              "按场景浏览可克隆运行的 Agent 模板",
+              "为编程 Agent 安装可复用技能",
+              "从基础示例进阶到多智能体工作流"
+            ],
+            "audience": "想快速验证 AI 应用想法，或寻找 Agent、RAG 与多智能体参考实现的开发者",
+            "capabilities": [
+              "安装项目复盘等编程 Agent 技能",
+              "克隆并运行旅行、研究等入门 Agent",
+              "搭建文档问答与多来源 RAG 流程",
+              "组合多个 Agent 完成研究或业务任务",
+              "生成卡片、图表等交互式 Agent 界面"
+            ],
+            "core_title": "按任务挑选可运行模板",
+            "core_summary": "仓库把示例分成技能、入门与进阶 Agent、多智能体、语音、RAG 和生成式界面等类别，可直接选择子项目运行，再替换模型或业务逻辑。",
+            "prerequisites": "入门 Agent 通常需要对应模型的 API Key；克隆示例后需安装其 requirements.txt。",
+            "limitations": "",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "b819022ca8272e3cfd110ff7f4fd37dfd79ff784",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+              ],
+              "highlights": [
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ],
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ],
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ]
+              ],
+              "audience": [
+                "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ],
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ],
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ],
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ],
+                [
+                  "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+                ]
+              ],
+              "core_title": [
+                "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+              ],
+              "core_summary": [
+                "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+              ],
+              "prerequisites": [
+                "github.readme:b819022ca8272e3cfd110ff7f4fd37dfd79ff784"
+              ],
+              "limitations": [],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+          "publication_evidence": {
+            "full_name": "Shubhamsaboo/awesome-llm-apps",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "b819022ca8272e3cfd110ff7f4fd37dfd79ff784",
+              "source_url": "https://api.github.com/repos/Shubhamsaboo/awesome-llm-apps/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-87426ec952de1b534dbfbff1-21265c7264fe600787f70c23.png",
+              "sha256": "9c1100d2d55c39b2ae1596fc4f14a81fcec96123d3ba96857d3a8fdb86d7a42a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.ai.01.shubhamsaboo--awesome-llm-apps.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1183888342,
+          "full_name": "stablyai/orca",
+          "owner": "stablyai",
+          "name": "orca",
+          "html_url": "https://github.com/stablyai/orca",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "language": "TypeScript",
+          "stars": 21814,
+          "forks": 1572,
+          "open_issues": 1724,
+          "watchers": 52,
+          "topics": [
+            "ade",
+            "agent-ide",
+            "ai-agents",
+            "claude-code",
+            "cli",
+            "codex",
+            "cursor-agent",
+            "devtools",
+            "ghostty",
+            "ide",
+            "mobile-app",
+            "opencode",
+            "orchestration",
+            "parallel-agents",
+            "pi",
+            "terminal",
+            "worktrees",
+            "yc-backed"
+          ],
+          "created_at": "2026-03-17T03:28:57Z",
+          "updated_at": "2026-07-19T01:09:17Z",
+          "pushed_at": "2026-07-19T00:56:29Z",
+          "daily_stars": null,
+          "weekly_stars": 5520,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 13,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 87.29,
+          "star_delta": 5508,
+          "fork_delta": 298,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 90.24,
+            "relative_growth": 97.56,
+            "fork_growth": 90.24,
+            "total_stars": 46.34,
+            "activity": 100.0,
+            "trending_signal": 26.26
+          },
+          "summary": {
+            "one_line": "把多个终端编程 Agent 放进隔离工作区，并行执行、比较和审查结果",
+            "highlights": [
+              "把同一任务分发到多个隔离工作树",
+              "在桌面与手机查看 Agent 进度",
+              "直接批注代码差异并发回修改意见"
+            ],
+            "audience": "同时使用多个 CLI 编程 Agent，需要并行试方案、集中审查与远程跟进任务的开发者",
+            "capabilities": [
+              "并排运行不同 CLI 编程 Agent",
+              "分发同一提示并比较各自结果",
+              "从手机接收完成通知并追加指令",
+              "点击页面元素把界面上下文交给 Agent",
+              "批注代码差异并完成编辑与提交"
+            ],
+            "core_title": "隔离工作树并行试方案",
+            "core_summary": "每个 Agent 在独立 Git worktree 中执行同一任务，结果可集中比较并合并选中的方案，避免多个 Agent 同时修改一份工作区。",
+            "prerequisites": "需安装桌面端；手机伴侣需与桌面应用配对，所用 Agent 必须能够在终端中运行。",
+            "limitations": "手机端用于监控和引导桌面端 Agent，不能脱离桌面应用单独运行工作流。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "87ccc4995ff494303781dbb6a47f43bfa42b802b",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+              ],
+              "highlights": [
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ],
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ],
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ]
+              ],
+              "audience": [
+                "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ],
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ],
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ],
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ],
+                [
+                  "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+                ]
+              ],
+              "core_title": [
+                "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+              ],
+              "core_summary": [
+                "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+              ],
+              "prerequisites": [
+                "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+              ],
+              "limitations": [
+                "github.readme:87ccc4995ff494303781dbb6a47f43bfa42b802b"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+          "publication_evidence": {
+            "full_name": "stablyai/orca",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "87ccc4995ff494303781dbb6a47f43bfa42b802b",
+              "source_url": "https://api.github.com/repos/stablyai/orca/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+              "sha256": "74c9f9ca37e1d708720845638e4947b594c011bd6eb473475d8b04512c5f221e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.ai.02.stablyai--orca.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1182212878,
+          "full_name": "iOfficeAI/OfficeCLI",
+          "owner": "iOfficeAI",
+          "name": "OfficeCLI",
+          "html_url": "https://github.com/iOfficeAI/OfficeCLI",
+          "description": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+          "language": "C#",
+          "stars": 19304,
+          "forks": 1300,
+          "open_issues": 53,
+          "watchers": 50,
+          "topics": [
+            "agent",
+            "ai",
+            "claude-code",
+            "cli",
+            "codex",
+            "docx",
+            "excel",
+            "office",
+            "openclaw",
+            "pptx",
+            "presentation",
+            "skills",
+            "word",
+            "xlsx"
+          ],
+          "created_at": "2026-03-15T07:39:12Z",
+          "updated_at": "2026-07-19T01:03:17Z",
+          "pushed_at": "2026-07-18T20:52:54Z",
+          "daily_stars": null,
+          "weekly_stars": 4284,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 6,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 83.98,
+          "star_delta": 4290,
+          "fork_delta": 278,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 85.37,
+            "relative_growth": 92.68,
+            "fork_growth": 87.8,
+            "total_stars": 43.9,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "让脚本和 AI Agent 在无 Office 环境中创建、读取与修改办公文档",
+            "highlights": [
+              "统一处理 Word、Excel 与 PowerPoint",
+              "把文档结构读取为文本或 JSON",
+              "渲染预览后让 Agent 检查并修正排版"
+            ],
+            "audience": "需要在命令行、容器或 Agent 流程中批量生成、校验和改写办公文件的开发者与团队",
+            "capabilities": [
+              "创建并编辑三类 Office 文档",
+              "查询文本、样式、公式与结构数据",
+              "渲染文档为 HTML 或页面截图",
+              "合并模板占位符生成批量文档",
+              "校验结构与排版问题后继续修正"
+            ],
+            "core_title": "让 Agent 看见文档成品",
+            "core_summary": "内置渲染引擎把文档转成 HTML 或 PNG，并配合实时预览形成“渲染、查看、修正”闭环，让 Agent 不只依赖文档结构猜测版面。",
+            "prerequisites": "直接使用只需自包含二进制，无需 Office 或 .NET 运行时；源码编译需 .NET 10 SDK。",
+            "limitations": "驻留模式会延迟写入磁盘；交给其他程序读取前，需执行 save 或 close 刷新文件。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "7530b03caa7180f7fd11edacb72d3c3c173e0933",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+              ],
+              "highlights": [
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ],
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ],
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ]
+              ],
+              "audience": [
+                "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ],
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ],
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ],
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ],
+                [
+                  "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+                ]
+              ],
+              "core_title": [
+                "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+              ],
+              "core_summary": [
+                "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+              ],
+              "prerequisites": [
+                "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+              ],
+              "limitations": [
+                "github.readme:7530b03caa7180f7fd11edacb72d3c3c173e0933"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-1f9acea81d3dda5f94ec479e-098828e612292ec9493bc31c.png",
+          "publication_evidence": {
+            "full_name": "iOfficeAI/OfficeCLI",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "7530b03caa7180f7fd11edacb72d3c3c173e0933",
+              "source_url": "https://api.github.com/repos/iOfficeAI/OfficeCLI/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-1f9acea81d3dda5f94ec479e-098828e612292ec9493bc31c.png",
+              "sha256": "903fd909a3c18b91fcbcbae630489ef22092f311273513594607ece3fe912ed4",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.ai.03.iofficeai--officecli.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1200597263,
+          "full_name": "Graphify-Labs/graphify",
+          "owner": "Graphify-Labs",
+          "name": "graphify",
+          "html_url": "https://github.com/Graphify-Labs/graphify",
+          "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+          "language": "Python",
+          "stars": 90955,
+          "forks": 8869,
+          "open_issues": 556,
+          "watchers": 310,
+          "topics": [
+            "antigravity",
+            "claude-code",
+            "codex",
+            "gemini",
+            "graphrag",
+            "knowledge-graph",
+            "leiden",
+            "openclaw",
+            "rag",
+            "skills",
+            "tree-sitter"
+          ],
+          "created_at": "2026-04-03T15:49:07Z",
+          "updated_at": "2026-07-19T01:07:49Z",
+          "pushed_at": "2026-07-18T21:29:17Z",
+          "daily_stars": null,
+          "weekly_stars": 8611,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 15,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 83.57,
+          "star_delta": 8611,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 97.56,
+            "relative_growth": 90.24,
+            "fork_growth": 28.05,
+            "total_stars": 53.66,
+            "activity": 100.0,
+            "trending_signal": 25.0
+          },
+          "summary": {
+            "one_line": "把代码、文档和媒体整理成可查询的知识图谱，减少逐文件搜索",
+            "highlights": [
+              "解析跨文件调用、导入与继承关系",
+              "标明关系来自原文还是推断",
+              "输出可浏览图谱、报告与查询数据"
+            ],
+            "audience": "需要理解陌生代码库、追踪模块关系，或让编程 Agent 先查项目全局结构的开发者",
+            "capabilities": [
+              "扫描项目并生成可点击的关系图",
+              "查询问题对应的局部子图",
+              "追踪两个概念之间的连接路径",
+              "解释单个节点及其关联来源",
+              "增量更新变更文件并重建图谱"
+            ],
+            "core_title": "用图谱代替逐文件搜索",
+            "core_summary": "代码通过 tree-sitter 在本地解析成节点和关系，再按社区聚类；查询时读取 graph.json 的相关子图，并区分原文提取与推断关系。",
+            "prerequisites": "需要 Python 3.10+；推荐使用 uv 安装，也可使用 pipx。",
+            "limitations": "代码解析可完全本地运行；文档、PDF 和图片的语义提取会调用助手模型或已配置的后端。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "970ebf179a5cedaec668024765a1f0fed3d1a4ef",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+              ],
+              "highlights": [
+                [
+                  "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+                ],
+                [
+                  "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+                ],
+                [
+                  "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+                ]
+              ],
+              "audience": [
+                "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+                ],
+                [
+                  "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+                ],
+                [
+                  "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+                ],
+                [
+                  "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+                ],
+                [
+                  "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+                ]
+              ],
+              "core_title": [
+                "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+              ],
+              "core_summary": [
+                "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+              ],
+              "prerequisites": [
+                "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+              ],
+              "limitations": [
+                "github.readme:970ebf179a5cedaec668024765a1f0fed3d1a4ef"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-6d32f94b62b2e7d2c679cc85-b1b141ca1ac91b5fdc5a5436.png",
+          "publication_evidence": {
+            "full_name": "Graphify-Labs/graphify",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "970ebf179a5cedaec668024765a1f0fed3d1a4ef",
+              "source_url": "https://api.github.com/repos/Graphify-Labs/graphify/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-6d32f94b62b2e7d2c679cc85-b1b141ca1ac91b5fdc5a5436.png",
+              "sha256": "3118c47bbc24dfb7078e74d871b406eeb37aaf0d821a978315823bb38d89fab5",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.ai.04.graphify-labs--graphify.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 257116,
+          "forks": 22910,
+          "open_issues": 324,
+          "watchers": 257116,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-07-19T01:07:43Z",
+          "pushed_at": "2026-07-17T00:52:29Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 82.9,
+          "star_delta": 4585,
+          "fork_delta": 368,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 87.8,
+            "relative_growth": 80.49,
+            "fork_growth": 92.68,
+            "total_stars": 97.56,
+            "activity": 87.52,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "让编程 Agent 先澄清需求、确认设计，再按测试与审查流程完成开发",
+            "highlights": [
+              "通过提问把模糊想法整理成设计",
+              "把实现拆成可验证的小任务",
+              "用子 Agent 执行并分阶段审查结果"
+            ],
+            "audience": "希望减少 Agent 直接开写和偏离需求，让研发过程保留设计确认、测试与代码审查的开发者",
+            "capabilities": [
+              "梳理需求并分段提交设计确认",
+              "建立隔离工作树并检查测试基线",
+              "拆分包含路径与验证步骤的计划",
+              "执行测试驱动的红绿重构循环",
+              "审查实现并给出合并或保留选项"
+            ],
+            "core_title": "先确认设计，再让 Agent 开工",
+            "core_summary": "技能会在编码前追问目标并形成设计，经用户确认后生成任务计划，再由子 Agent 分项实现、检查规格与代码质量，最后验证测试结果。",
+            "prerequisites": "需按所用编程 Agent 的安装方式单独安装；同时使用多个 Agent 时需要分别配置。",
+            "limitations": "设计需要用户确认后才进入计划，执行也需明确表示继续；不同宿主的安装与更新方式不同。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "48e3f1985dbcd5c1ea6a8237bff28ba63931f767",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "highlights": [
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ]
+              ],
+              "audience": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ],
+                [
+                  "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+                ]
+              ],
+              "core_title": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "core_summary": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "prerequisites": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "limitations": [
+                "github.readme:48e3f1985dbcd5c1ea6a8237bff28ba63931f767"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "48e3f1985dbcd5c1ea6a8237bff28ba63931f767",
+              "source_url": "https://api.github.com/repos/obra/superpowers/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+              "sha256": "d38b9c9b368fcb5bf36b16f443d783cc9588fa66f5b399ed5e966b50ab857937",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.ai.05.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1198306812,
+          "full_name": "HKUDS/Vibe-Trading",
+          "owner": "HKUDS",
+          "name": "Vibe-Trading",
+          "html_url": "https://github.com/HKUDS/Vibe-Trading",
+          "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+          "language": "Python",
+          "stars": 24975,
+          "forks": 4118,
+          "open_issues": 70,
+          "watchers": 146,
+          "topics": [
+            "ai-agent",
+            "algorithmic-trading",
+            "backtesting",
+            "fintech",
+            "llm",
+            "mcp",
+            "multi-agent",
+            "python",
+            "quantitative-finance",
+            "trading"
+          ],
+          "created_at": "2026-04-01T09:52:20Z",
+          "updated_at": "2026-07-19T01:05:21Z",
+          "pushed_at": "2026-07-18T18:22:23Z",
+          "daily_stars": null,
+          "weekly_stars": 5635,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 4,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 82.76,
+          "star_delta": 5635,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 92.68,
+            "relative_growth": 95.12,
+            "fork_growth": 28.05,
+            "total_stars": 48.78,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "把自然语言交易问题转成市场研究、策略回测与可检查的报告产物",
+            "highlights": [
+              "连接多市场数据并自动选择回退来源",
+              "生成策略代码、回测指标与验证产物",
+              "从交易记录提取规则并做影子对照"
+            ],
+            "audience": "需要研究股票、加密资产或期货策略，并希望把问题、数据、回测和报告串成流程的研究者",
+            "capabilities": [
+              "提问并生成带数据依据的市场研究",
+              "生成策略代码并运行跨市场回测",
+              "分析交易日志中的行为与偏差",
+              "组织多 Agent 投研与风险评审",
+              "导出报告及多平台策略文件"
+            ],
+            "core_title": "从问题走到可复查回测",
+            "core_summary": "流程先选择金融技能和数据源，再生成并执行策略，补充基准比较、验证与运行记录，最后交付报告、代码和可继续研究的会话产物。",
+            "prerequisites": "需要受支持的 LLM API Key，或使用本地 Ollama；本地安装路径要求 Python 3.11+。",
+            "limitations": "定位以研究、模拟和回测为主；自动交易仅在用户授权的经纪商与限制内启用，并可随时停止。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "7b2d8c789d0af42f8928ceb5b75187308389c5f2",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+              ],
+              "highlights": [
+                [
+                  "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+                ],
+                [
+                  "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+                ],
+                [
+                  "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+                ]
+              ],
+              "audience": [
+                "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+                ],
+                [
+                  "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+                ],
+                [
+                  "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+                ],
+                [
+                  "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+                ],
+                [
+                  "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+                ]
+              ],
+              "core_title": [
+                "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+              ],
+              "core_summary": [
+                "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+              ],
+              "prerequisites": [
+                "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+              ],
+              "limitations": [
+                "github.readme:7b2d8c789d0af42f8928ceb5b75187308389c5f2"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+          "publication_evidence": {
+            "full_name": "HKUDS/Vibe-Trading",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "7b2d8c789d0af42f8928ceb5b75187308389c5f2",
+              "source_url": "https://api.github.com/repos/HKUDS/Vibe-Trading/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-b5681011b0f2878165f511e1-a709352b8301dc991b289d29.png",
+              "sha256": "52cdd4efd7f76c0ac0b36cf6c1f7ca24a8bfbb2db5d8dcd53d7dee8b3f93c721",
+              "width": 357,
+              "height": 357
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.ai.06.hkuds--vibe-trading.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1222917575,
+          "full_name": "Nutlope/hallmark",
+          "owner": "Nutlope",
+          "name": "hallmark",
+          "html_url": "https://github.com/Nutlope/hallmark",
+          "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+          "language": "CSS",
+          "stars": 12850,
+          "forks": 640,
+          "open_issues": 20,
+          "watchers": 32,
+          "topics": [],
+          "created_at": "2026-04-27T20:47:10Z",
+          "updated_at": "2026-07-19T01:07:32Z",
+          "pushed_at": "2026-06-26T10:08:58Z",
+          "daily_stars": null,
+          "weekly_stars": 8834,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 1,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 82.04,
+          "star_delta": 8834,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 28.05,
+            "total_stars": 41.46,
+            "activity": 21.58,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "给编程 Agent 一套网页设计规则，生成、审查或重做更有区分度的界面",
+            "highlights": [
+              "按需求选择页面结构与视觉主题",
+              "审查现有界面的常见生成式痕迹",
+              "提取参考设计语言但不做像素复刻"
+            ],
+            "audience": "使用 Claude Code、Cursor 或 Codex 制作网页，希望减少模板感并审查现有界面的设计开发者",
+            "capabilities": [
+              "根据需求从头构建网页界面",
+              "审查代码并输出问题清单",
+              "保留文案与品牌重新设计结构",
+              "提取参考设计的结构与视觉语言",
+              "输出可交接给其他工具的设计文档"
+            ],
+            "core_title": "先定结构，再过反模板检查",
+            "core_summary": "技能先按需求选择宏观结构和主题，再用规则门槛与输出前自检筛掉常见模板痕迹；不同需求会采用不同页面骨架，而非只换配色。",
+            "prerequisites": "可用 npx skills 安装，或把 SKILL.md 与 references 复制到对应 Agent 的技能目录。",
+            "limitations": "study 模式拒绝像素级复刻和付费模板；audit 只输出问题清单，不会直接修改代码。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "a615a8007804ee0912c2a94a4d987acdd75c3cbe",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+              ],
+              "highlights": [
+                [
+                  "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+                ],
+                [
+                  "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+                ],
+                [
+                  "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+                ]
+              ],
+              "audience": [
+                "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+                ],
+                [
+                  "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+                ],
+                [
+                  "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+                ],
+                [
+                  "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+                ],
+                [
+                  "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+                ]
+              ],
+              "core_title": [
+                "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+              ],
+              "core_summary": [
+                "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+              ],
+              "prerequisites": [
+                "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+              ],
+              "limitations": [
+                "github.readme:a615a8007804ee0912c2a94a4d987acdd75c3cbe"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W29/repo-2eddf6c05698cca8aca7f1c8-005a322aac55d61cc86f54af.png",
+          "publication_evidence": {
+            "full_name": "Nutlope/hallmark",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "a615a8007804ee0912c2a94a4d987acdd75c3cbe",
+              "source_url": "https://api.github.com/repos/Nutlope/hallmark/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W29/repo-2eddf6c05698cca8aca7f1c8-005a322aac55d61cc86f54af.png",
+              "sha256": "1f63beede764d46642e474c0a919577a3892885758978c883863117659eba75b",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W29/2026-W29.ai.07.nutlope--hallmark.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
