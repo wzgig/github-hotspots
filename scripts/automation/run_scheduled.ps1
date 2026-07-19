@@ -764,7 +764,11 @@ function Get-ChangedPaths {
     $tracked = @(Invoke-Captured `
         -Label "list tracked changes" `
         -FilePath "git" `
-        -ArgumentList @("-c", "core.quotepath=false", "diff", "--name-only") `
+        -ArgumentList @(
+            "-c", "core.quotepath=false",
+            "-c", "core.safecrlf=false",
+            "diff", "--name-only"
+        ) `
         -WorkingDirectory $Root)
     $untracked = @(Invoke-Captured `
         -Label "list untracked changes" `
@@ -1373,7 +1377,7 @@ try {
             Invoke-Logged `
                 -Label "stage $relativePath" `
                 -FilePath "git" `
-                -ArgumentList @("add", "--", $relativePath) `
+                -ArgumentList @("-c", "core.safecrlf=false", "add", "--", $relativePath) `
                 -WorkingDirectory $WorktreePath | Out-Null
         }
     }

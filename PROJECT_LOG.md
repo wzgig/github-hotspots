@@ -12,6 +12,7 @@
 - 新增根目录 `CHECK_AND_UPDATE_REPORTS.cmd`，便于双击运行并在窗口关闭前保留结果和失败提示。
 - 新增 `scripts/automation/run_manual_update.ps1`，按北京时间生成检查计划，并调用现有 `run_scheduled.ps1` 严格事务；日报每天检查，周报在周日同时检查。
 - 已有完整远端报告和 history 时不重复生成或提交，仍同步本地发布工作台并核验 Pages；缺失时执行测试、Codex 生成、严格校验、提交和推送。
+- 首次一键实跑已证明日报幂等检查有效，并成功生成通过严格校验的 W002；随后暴露系统级 `core.safecrlf=true` 把 Git 换行警告混入路径捕获的问题。runner 现对路径读取和生成物暂存显式关闭该次命令的 `safecrlf` 警告，仍保留仓库内容与路径白名单校验。
 - 周一至周六只提示最近与下一次周日，不自动使用当前累计数据伪造历史周报。
 
 ### 文件与模块
@@ -24,7 +25,8 @@
 ### 验证与已知限制
 
 - PowerShell 回归覆盖周日同时运行日报/周报、工作日只运行日报、下一周日期计算，以及 `.cmd` 对安全入口和退出码的传递。
-- `pytest`：263 项全部通过，总覆盖率 81%；`ruff check .`、`ruff format --check .`、`node --check site/app.js`、PowerShell 语法解析和 `git diff --check` 均通过。
+- 新增真实临时 Git 仓库回归，复现 `LF will be replaced by CRLF` 写入 stderr 的 Windows 场景，并确认路径捕获只返回实际文件名。
+- `pytest`：264 项全部通过，总覆盖率 81%；`ruff check .`、`ruff format --check .`、`node --check site/app.js`、PowerShell 语法解析和 `git diff --check` 均通过。
 - 手动入口仍受共享运行锁、本机 Codex 登录态、GitHub 网络和 75 分钟单次执行上限约束；遇到正在运行的任务会明确提示稍后重试，不会并发写入。
 - 非周日缺失的历史周报需要按事故恢复流程显式指定日期并核对事实，不由一键入口静默回填。
 

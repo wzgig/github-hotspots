@@ -429,3 +429,52 @@ def test_manual_launcher_calls_safe_powershell_entrypoint_and_preserves_exit_cod
     assert "-ExecutionPolicy RemoteSigned" in source
     assert 'set "EXIT_CODE=%ERRORLEVEL%"' in source
     assert "pause" in source.lower()
+
+
+@requires_windows_powershell
+def test_changed_path_capture_ignores_safecrlf_stderr_warning(tmp_path: Path) -> None:
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    for args in (
+        ("init",),
+        ("config", "user.name", "Automation Test"),
+        ("config", "user.email", "automation@example.invalid"),
+        ("config", "core.autocrlf", "true"),
+        ("config", "core.safecrlf", "true"),
+    ):
+        subprocess.run(
+            ["git", *args],
+            cwd=repo,
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
+    tracked = repo / "tracked.txt"
+    tracked.write_bytes(b"base\r\n")
+    subprocess.run(["git", "add", "tracked.txt"], cwd=repo, check=True)
+    subprocess.run(["git", "commit", "-m", "test fixture"], cwd=repo, check=True)
+    tracked.write_bytes(b"changed\n")
+
+    baseline = subprocess.run(
+        ["git", "diff", "--name-only"],
+        cwd=repo,
+        check=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+    )
+    assert "will be replaced by CRLF" in baseline.stderr
+
+    state_root = tmp_path / "state"
+    script = (
+        _load_functions(state_root)
+        + f"[pscustomobject]@{{ Paths = @(Get-ChangedPaths -Root {_ps_quote(repo)}) }} | "
+        "ConvertTo-Json -Compress"
+    )
+    result = _run_powershell(script)
+
+    assert result.returncode == 0, result.stderr
+    assert _last_json(result.stdout) == {"Paths": ["tracked.txt"]}
