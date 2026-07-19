@@ -12,6 +12,8 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 RUNNER = ROOT / "scripts" / "automation" / "run_scheduled.ps1"
 REGISTER = ROOT / "scripts" / "automation" / "register_tasks.ps1"
+MANUAL_RUNNER = ROOT / "scripts" / "automation" / "run_manual_update.ps1"
+MANUAL_LAUNCHER = ROOT / "CHECK_AND_UPDATE_REPORTS.cmd"
 POWERSHELL = shutil.which("powershell.exe") if os.name == "nt" else None
 requires_windows_powershell = pytest.mark.skipif(
     POWERSHELL is None,
@@ -390,3 +392,40 @@ def test_task_registration_has_logon_catchup_without_network_launch_gate() -> No
     assert "-Trigger $dailyTriggers" in source
     assert "-StartWhenAvailable" in source
     assert "-RunOnlyIfNetworkAvailable" not in source
+
+
+@requires_windows_powershell
+def test_manual_update_plan_runs_weekly_only_on_sunday(tmp_path: Path) -> None:
+    state_root = tmp_path / "state"
+    script = (
+        f". {_ps_quote(MANUAL_RUNNER)} -LoadFunctionsOnly; "
+        "$sunday = @(Get-ManualUpdatePlan -ChinaNow "
+        "([DateTimeOffset]'2026-07-19T09:00:00+08:00')); "
+        "$monday = @(Get-ManualUpdatePlan -ChinaNow "
+        "([DateTimeOffset]'2026-07-20T09:00:00+08:00')); "
+        "[pscustomobject]@{ Sunday = $sunday; Monday = $monday } | ConvertTo-Json -Depth 4 -Compress"
+    )
+
+    result = _run_powershell(script)
+
+    assert result.returncode == 0, result.stderr
+    payload = _last_json(result.stdout)
+    assert [(item["Period"], item["ShouldRun"], item["RunDate"]) for item in payload["Sunday"]] == [
+        ("daily", True, "2026-07-19"),
+        ("weekly", True, "2026-07-19"),
+    ]
+    assert [(item["Period"], item["ShouldRun"], item["RunDate"]) for item in payload["Monday"]] == [
+        ("daily", True, "2026-07-20"),
+        ("weekly", False, "2026-07-19"),
+    ]
+    assert payload["Monday"][1]["NextDueDate"] == "2026-07-26"
+    assert not state_root.exists()
+
+
+def test_manual_launcher_calls_safe_powershell_entrypoint_and_preserves_exit_code() -> None:
+    source = MANUAL_LAUNCHER.read_text(encoding="utf-8")
+
+    assert "%~dp0scripts\\automation\\run_manual_update.ps1" in source
+    assert "-ExecutionPolicy RemoteSigned" in source
+    assert 'set "EXIT_CODE=%ERRORLEVEL%"' in source
+    assert "pause" in source.lower()

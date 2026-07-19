@@ -215,6 +215,28 @@ Run one registered task manually:
 Start-ScheduledTask -TaskName "GitHub Hotspots Daily (Local Codex)"
 ```
 
+## Manual check and catch-up launcher
+
+For a visible, double-clickable recovery entrypoint, run the root-level
+`CHECK_AND_UPDATE_REPORTS.cmd`. The launcher calls
+`scripts/automation/run_manual_update.ps1`, which in turn reuses the same isolated,
+strict, idempotent transaction as the scheduled tasks.
+
+- The daily bundle is checked for the current China Standard Time date on every run.
+- The weekly bundle is also checked and generated when the current China Standard Time date
+  is Sunday.
+- A complete remote Codex report plus matching publication history is reused without a new
+  report commit; the local publication workspace and Pages status are still synchronized.
+- A missing due bundle is generated, verified, committed, and pushed immediately.
+- On Monday through Saturday, the launcher reports the latest and next scheduled Sunday but
+  does not label current cumulative GitHub counts as a historical Sunday snapshot.
+- If another local run owns the shared lock, the launcher exits visibly and can be run again
+  after that transaction finishes.
+
+The command window pauses before closing so a double-click user can read the result. Detailed
+runner logs remain under `%LOCALAPPDATA%\GitHubHotspots\logs\` and keep the same credential
+boundary as scheduled automation.
+
 Remove the tasks without touching reports or credentials:
 
 ```powershell

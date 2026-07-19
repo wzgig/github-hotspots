@@ -1,5 +1,33 @@
 # Project Log
 
+## 2026-07-19 — 新增日报/周报手动检查与补更入口
+
+### 目的
+
+提供一个可从仓库根目录直接双击的 Windows 启动文件。无论定时任务是否已经完成，用户运行后都能检查当期日报/周报是否已经完整同步；完整时幂等复用，缺失时立即复用正式本地 Codex 流水线生成、提交、推送并核验 Pages。
+
+### 现场情况与变更
+
+- 2026-07-19 日报已由 07:30 本地任务成功推送；周报任务在 08:45 启动后以 `0xC000013A` 中断，日志停在周报 Codex 生成开始处，远端和本地仍只有 `2026-W28`，因此当日 `W002` 尚未完成。
+- 新增根目录 `CHECK_AND_UPDATE_REPORTS.cmd`，便于双击运行并在窗口关闭前保留结果和失败提示。
+- 新增 `scripts/automation/run_manual_update.ps1`，按北京时间生成检查计划，并调用现有 `run_scheduled.ps1` 严格事务；日报每天检查，周报在周日同时检查。
+- 已有完整远端报告和 history 时不重复生成或提交，仍同步本地发布工作台并核验 Pages；缺失时执行测试、Codex 生成、严格校验、提交和推送。
+- 周一至周六只提示最近与下一次周日，不自动使用当前累计数据伪造历史周报。
+
+### 文件与模块
+
+- 手动入口：`CHECK_AND_UPDATE_REPORTS.cmd`
+- 手动编排：`scripts/automation/run_manual_update.ps1`
+- 回归测试：`tests/test_powershell_automation.py`
+- 文档：`README.md`、`docs/AUTOMATION.md`、`docs/OPERATIONS.md`
+
+### 验证与已知限制
+
+- PowerShell 回归覆盖周日同时运行日报/周报、工作日只运行日报、下一周日期计算，以及 `.cmd` 对安全入口和退出码的传递。
+- `pytest`：263 项全部通过，总覆盖率 81%；`ruff check .`、`ruff format --check .`、`node --check site/app.js`、PowerShell 语法解析和 `git diff --check` 均通过。
+- 手动入口仍受共享运行锁、本机 Codex 登录态、GitHub 网络和 75 分钟单次执行上限约束；遇到正在运行的任务会明确提示稍后重试，不会并发写入。
+- 非周日缺失的历史周报需要按事故恢复流程显式指定日期并核对事实，不由一键入口静默回填。
+
 ## 2026-07-18 — 修复本地日更中断与百度网盘同步污染
 
 ### 目的
