@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "ec9620859d5423965fe7db4c375e6b9a450136444620a8f9c6c28b11738ea5b8",
+  "checklist_sha256": "eaaab7fbc4bc6c6d0b64a7c5c9aaaa6755aac12297bf86e41977912576a54b63",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-07-21",
+  "generated_at": "2026-07-21T07:33:23.282074+08:00",
+  "issue": {
+    "number": 10,
+    "code": "D010",
+    "stem": "D010-2026-07-21",
+    "label": "第10期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-07-21.json",
+    "report_sha256": "d7170e0b9db59983d97a8c91fcabad74a8cfba94ed2e780144cc528787564caa",
+    "poster_manifest": "reports/daily/assets/2026-07-21/manifest.json",
+    "poster_manifest_sha256": "977f8da281e753d9e4743d379391926e6b0900969d17d9741f2b9d3d6d90f58d",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D010-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "abb5d95b042b1e4eb09c553a50e4e2981f047c0aef3be50fc018272775cbe670",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 330,
+      "caption_sha256": "3802ed775f343c0e91fce4b377286f745397241238e457579451c88d9a40f843",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "f6b5d2677a42704ea1578ba080e308cb672bb94760b8f3ad675e3d563e38f6d9",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.cover.png",
+          "sha256": "1f735e7f2c1aa81460ff7857b9e82c05f1b388fb4dd6b111e768f2e050e1ee62",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.01.tirth8205--code-review-graph.png",
+          "sha256": "00160125bad8818f32a5cf10ca740d3c874d3962212f87a4b34af35b72b69284",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "tirth8205/code-review-graph",
+          "publication_path": "images/02-rank-01-tirth8205-code-review-graph.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.02.jamiepine--voicebox.png",
+          "sha256": "2b782061bbb171d10e1d43fa1f993d6122492d8189fd19b0e5528235c7e26f7c",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "jamiepine/voicebox",
+          "publication_path": "images/03-rank-02-jamiepine-voicebox.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.03.1jehuang--jcode.png",
+          "sha256": "fa5c7f327c2e99758c99cb21f1895d89f1705d050de3f7306e8023114dd6e5e5",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "1jehuang/jcode",
+          "publication_path": "images/04-rank-03-1jehuang-jcode.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D010-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "05370904e159ead64961a6fc7fe3fd24be081ca397bfd7351b8ebfd694c9ca99",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 327,
+      "caption_sha256": "eb400b259ed654bbe9e2655e3fe15634eff0b03b2b64b3022bd4f916b0587a11",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "4bae5572135c6392b8b0bad99f91f7925f46f3ae823601daf5d95f1fe4e0289f",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-21/2026-07-21.ai.cover.png",
+          "sha256": "fc13c3bd79b995b15891877fa16299c2ed79e59819fc6a0dc956fd42c0302544",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-21/2026-07-21.ai.01.tirth8205--code-review-graph.png",
+          "sha256": "59d2209e14c7079a07207556d9bcfa49f8640d0afe417086ca5d980b07f8930f",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "tirth8205/code-review-graph",
+          "publication_path": "images/02-rank-01-tirth8205-code-review-graph.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-21/2026-07-21.ai.02.jamiepine--voicebox.png",
+          "sha256": "511f2f0e330b3a39c100a785a20d02755338437bbe5e4b1cec02a128adfcb186",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "jamiepine/voicebox",
+          "publication_path": "images/03-rank-02-jamiepine-voicebox.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-21/2026-07-21.ai.03.oblien--openship.png",
+          "sha256": "dc07b0eb92475c64fd0999d8c60cb98280ac1f65dae57f3e1eb1072dc796a400",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "oblien/openship",
+          "publication_path": "images/04-rank-03-oblien-openship.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-07-21",
+    "revision": "ec9620859d54",
+    "image_policy": "repository-source-reference"
+  }
+}

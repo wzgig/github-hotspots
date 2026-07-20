@@ -1,0 +1,1492 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-21",
+  "window_start": "2026-07-20",
+  "window_end": "2026-07-21",
+  "generated_at": "2026-07-21T07:31:01+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-20 至 2026-07-21",
+  "publication": {
+    "issue_number": 10,
+    "issue_code": "D010",
+    "issue_label": "第10期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "AI 专题榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-21",
+    "manifest": "reports/daily/assets/2026-07-21/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.01.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "jamiepine/voicebox",
+            "path": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.02.jamiepine--voicebox.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "1jehuang/jcode",
+            "path": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.03.1jehuang--jcode.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-21/2026-07-21.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-21/2026-07-21.ai.01.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "jamiepine/voicebox",
+            "path": "reports/daily/assets/2026-07-21/2026-07-21.ai.02.jamiepine--voicebox.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "oblien/openship",
+            "path": "reports/daily/assets/2026-07-21/2026-07-21.ai.03.oblien--openship.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 10,
+      "issue_code": "D010",
+      "issue_label": "第10期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1167788341,
+      "full_name": "tirth8205/code-review-graph",
+      "owner": "tirth8205",
+      "name": "code-review-graph",
+      "html_url": "https://github.com/tirth8205/code-review-graph",
+      "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+      "language": "Python",
+      "stars": 23067,
+      "forks": 2272,
+      "open_issues": 99,
+      "watchers": 80,
+      "topics": [
+        "ai-coding",
+        "claude",
+        "claude-code",
+        "code-review",
+        "graphrag",
+        "incremental",
+        "knowledge-graph",
+        "llm",
+        "mcp",
+        "python",
+        "static-analysis",
+        "tree-sitter"
+      ],
+      "created_at": "2026-02-26T17:25:13Z",
+      "updated_at": "2026-07-20T23:28:35Z",
+      "pushed_at": "2026-07-18T00:32:48Z",
+      "daily_stars": 1876,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 88.27,
+      "star_delta": 1943,
+      "fork_delta": 96,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 93.24,
+        "fork_growth": 97.3,
+        "total_stars": 24.32,
+        "activity": 36.79,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "为大型代码库建立结构图，让 AI 审查变更时只读取相关文件与依赖",
+        "highlights": [
+          "追踪改动波及的调用方、依赖与测试",
+          "按文件变化增量更新代码结构图",
+          "在拉取请求中标出风险函数与测试缺口"
+        ],
+        "audience": "需要让 AI 审查大型仓库、分析改动影响或梳理跨文件依赖的开发者与研发团队",
+        "capabilities": [
+          "解析函数、类、导入与调用关系",
+          "定位改动可能影响的文件和执行流",
+          "筛选审查任务所需的最小上下文",
+          "持续更新保存或提交后的代码变化",
+          "生成架构图、代码 Wiki 与多种导出文件"
+        ],
+        "core_title": "用代码图缩小审查范围",
+        "core_summary": "它用 Tree-sitter 解析仓库，把函数、类、导入和调用存成图；文件变化后沿依赖边寻找受影响代码，再把精简上下文交给 AI，而不是反复扫描整个项目。",
+        "prerequisites": "需要 Python 3.10+；安装并构建代码图后，应重启编辑器或 AI 工具。",
+        "limitations": "小仓库和简单单文件改动可能得不偿失；影响分析会保守地多报文件，关键词排序和部分语言的执行流识别仍有不足。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+          ],
+          "highlights": [
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ],
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ],
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ]
+          ],
+          "audience": [
+            "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+          ],
+          "capabilities": [
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ],
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ],
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ],
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ],
+            [
+              "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+            ]
+          ],
+          "core_title": [
+            "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+          ],
+          "core_summary": [
+            "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+          ],
+          "prerequisites": [
+            "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+          ],
+          "limitations": [
+            "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-21/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+      "publication_evidence": {
+        "full_name": "tirth8205/code-review-graph",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+          "source_url": "https://api.github.com/repos/tirth8205/code-review-graph/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-21/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+          "sha256": "e4ec211724f39785b798a6ddbeb1f804af20b65fcbede4802ff584cdbc57f8b9",
+          "width": 351,
+          "height": 351
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.01.tirth8205--code-review-graph.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1141782198,
+      "full_name": "jamiepine/voicebox",
+      "owner": "jamiepine",
+      "name": "voicebox",
+      "html_url": "https://github.com/jamiepine/voicebox",
+      "description": "The open-source AI voice studio. Clone, dictate, create.",
+      "language": "TypeScript",
+      "stars": 44132,
+      "forks": 5364,
+      "open_issues": 576,
+      "watchers": 212,
+      "topics": [
+        "ai",
+        "cuda",
+        "mlx",
+        "qwen3-tts",
+        "qwen3-tts-ui",
+        "voice-ai",
+        "voice-clone",
+        "whisper"
+      ],
+      "created_at": "2026-01-25T12:27:03Z",
+      "updated_at": "2026-07-20T23:28:55Z",
+      "pushed_at": "2026-07-20T22:31:11Z",
+      "daily_stars": 839,
+      "weekly_stars": null,
+      "trending_rank_daily": 7,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 86.46,
+      "star_delta": 826,
+      "fork_delta": 75,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 93.24,
+        "relative_growth": 85.14,
+        "fork_growth": 95.95,
+        "total_stars": 31.08,
+        "activity": 100.0,
+        "trending_signal": 33.33
+      },
+      "summary": {
+        "one_line": "把声音克隆、语音生成、全局听写和 AI 代理播报放进本地桌面工作流",
+        "highlights": [
+          "用参考录音创建声音档案并生成语音",
+          "按全局快捷键听写到当前文本输入框",
+          "让兼容 MCP 的 AI 代理使用指定声音播报"
+        ],
+        "audience": "需要制作多角色音频、用语音输入文字，或为 AI 代理接入本地语音输入输出的创作者与开发者",
+        "capabilities": [
+          "克隆参考录音或选用预设声音",
+          "生成多语言语音并添加音频效果",
+          "编辑多人对话、播客和叙事时间线",
+          "转写录音并整理口误与停顿",
+          "通过 REST API 或 MCP 接入应用与代理"
+        ],
+        "core_title": "打通本地语音输入输出",
+        "core_summary": "它把语音克隆与合成、Whisper 转写、全局听写、时间线编辑和代理播报组合在同一桌面应用中，并通过本地模型、REST API 与 MCP 串起输入到输出。",
+        "prerequisites": "直接使用需下载对应平台版本；源码开发需要 Bun、Rust、Python 3.11+、Tauri 前置环境，macOS 还需 Xcode。",
+        "limitations": "Linux 暂无预编译版本；自动粘贴目前只在 macOS 提供，情绪标签也仅由 Chatterbox Turbo 解析。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+          ],
+          "highlights": [
+            [
+              "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+            ],
+            [
+              "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+            ],
+            [
+              "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+            ]
+          ],
+          "audience": [
+            "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+          ],
+          "capabilities": [
+            [
+              "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+            ],
+            [
+              "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+            ],
+            [
+              "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+            ],
+            [
+              "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+            ],
+            [
+              "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+            ]
+          ],
+          "core_title": [
+            "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+          ],
+          "core_summary": [
+            "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+          ],
+          "prerequisites": [
+            "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+          ],
+          "limitations": [
+            "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-21/repo-886294fb8b37fefa88e7e530-44538412119b6d90952c29f5.png",
+      "publication_evidence": {
+        "full_name": "jamiepine/voicebox",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3",
+          "source_url": "https://api.github.com/repos/jamiepine/voicebox/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-21/repo-886294fb8b37fefa88e7e530-44538412119b6d90952c29f5.png",
+          "sha256": "dbec5cf16c4b03deca6460832a64d2038e48de2d992c6229059efde9a23a6f2d",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.02.jamiepine--voicebox.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1128204614,
+      "full_name": "1jehuang/jcode",
+      "owner": "1jehuang",
+      "name": "jcode",
+      "html_url": "https://github.com/1jehuang/jcode",
+      "description": "The most intelligent agent harness for code",
+      "language": "Rust",
+      "stars": 9597,
+      "forks": 1082,
+      "open_issues": 107,
+      "watchers": 56,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-coding-agent",
+        "claude",
+        "cli",
+        "coding-agent",
+        "llm",
+        "mcp",
+        "openai",
+        "rust",
+        "terminal",
+        "tui"
+      ],
+      "created_at": "2026-01-05T09:43:36Z",
+      "updated_at": "2026-07-20T23:28:14Z",
+      "pushed_at": "2026-07-20T23:09:58Z",
+      "daily_stars": 612,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 85.52,
+      "star_delta": 716,
+      "fork_delta": 53,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 89.19,
+        "relative_growth": 89.19,
+        "fork_growth": 91.22,
+        "total_stars": 16.22,
+        "activity": 100.0,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "在终端中管理多会话编码代理，让它们共享记忆、并行协作并处理代码与浏览器任务",
+        "highlights": [
+          "从历史会话和记忆图自动召回相关信息",
+          "协调同一仓库中的多个代理并提醒文件冲突",
+          "用侧栏展示文件、差异和 Mermaid 图"
+        ],
+        "audience": "需要长期维护编码上下文、并行调度多个代理，或在终端里连接不同模型提供方的开发者",
+        "capabilities": [
+          "运行交互会话或单次非交互任务",
+          "恢复其他编码工具留下的历史会话",
+          "检索并整理跨会话的代理记忆",
+          "派生多个代理并协调消息与完成状态",
+          "控制 Firefox 完成网页点击、输入与截图"
+        ],
+        "core_title": "多会话代理共享记忆协作",
+        "core_summary": "它以持久服务管理多个终端会话，把对话提取进记忆图并按语义召回；多个代理在同一仓库工作时还能互发消息、感知文件变动，由主代理协调并行任务。",
+        "prerequisites": "需先安装 jcode，并登录或配置可用模型提供方；从源码构建需要 Git 和 Rust。",
+        "limitations": "MCP 目前只支持 stdio 服务，HTTP 与 SSE 配置会被跳过；自我修改模式建议使用能力较强的模型，较弱模型可能造成破坏性改动。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "fc24a36269661c8257e031332926e624c890b738",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:fc24a36269661c8257e031332926e624c890b738"
+          ],
+          "highlights": [
+            [
+              "github.readme:fc24a36269661c8257e031332926e624c890b738"
+            ],
+            [
+              "github.readme:fc24a36269661c8257e031332926e624c890b738"
+            ],
+            [
+              "github.readme:fc24a36269661c8257e031332926e624c890b738"
+            ]
+          ],
+          "audience": [
+            "github.readme:fc24a36269661c8257e031332926e624c890b738"
+          ],
+          "capabilities": [
+            [
+              "github.readme:fc24a36269661c8257e031332926e624c890b738"
+            ],
+            [
+              "github.readme:fc24a36269661c8257e031332926e624c890b738"
+            ],
+            [
+              "github.readme:fc24a36269661c8257e031332926e624c890b738"
+            ],
+            [
+              "github.readme:fc24a36269661c8257e031332926e624c890b738"
+            ],
+            [
+              "github.readme:fc24a36269661c8257e031332926e624c890b738"
+            ]
+          ],
+          "core_title": [
+            "github.readme:fc24a36269661c8257e031332926e624c890b738"
+          ],
+          "core_summary": [
+            "github.readme:fc24a36269661c8257e031332926e624c890b738"
+          ],
+          "prerequisites": [
+            "github.readme:fc24a36269661c8257e031332926e624c890b738"
+          ],
+          "limitations": [
+            "github.readme:fc24a36269661c8257e031332926e624c890b738"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-21/repo-f9d109b36990e5221e33d34b-b6d7ba2e6c191f04e75099a6.png",
+      "publication_evidence": {
+        "full_name": "1jehuang/jcode",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "fc24a36269661c8257e031332926e624c890b738",
+          "source_url": "https://api.github.com/repos/1jehuang/jcode/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-21/repo-f9d109b36990e5221e33d34b-b6d7ba2e6c191f04e75099a6.png",
+          "sha256": "0622ac379368b9428b8683e85b5692dc4bd906ebf69bfd8aea9ac1c68091a7f4",
+          "width": 420,
+          "height": 420
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.03.1jehuang--jcode.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.01.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "jamiepine/voicebox",
+            "path": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.02.jamiepine--voicebox.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "1jehuang/jcode",
+            "path": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.03.1jehuang--jcode.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1167788341,
+          "full_name": "tirth8205/code-review-graph",
+          "owner": "tirth8205",
+          "name": "code-review-graph",
+          "html_url": "https://github.com/tirth8205/code-review-graph",
+          "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+          "language": "Python",
+          "stars": 23067,
+          "forks": 2272,
+          "open_issues": 99,
+          "watchers": 80,
+          "topics": [
+            "ai-coding",
+            "claude",
+            "claude-code",
+            "code-review",
+            "graphrag",
+            "incremental",
+            "knowledge-graph",
+            "llm",
+            "mcp",
+            "python",
+            "static-analysis",
+            "tree-sitter"
+          ],
+          "created_at": "2026-02-26T17:25:13Z",
+          "updated_at": "2026-07-20T23:28:35Z",
+          "pushed_at": "2026-07-18T00:32:48Z",
+          "daily_stars": 1876,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 88.27,
+          "star_delta": 1943,
+          "fork_delta": 96,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 93.24,
+            "fork_growth": 97.3,
+            "total_stars": 24.32,
+            "activity": 36.79,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "为大型代码库建立结构图，让 AI 审查变更时只读取相关文件与依赖",
+            "highlights": [
+              "追踪改动波及的调用方、依赖与测试",
+              "按文件变化增量更新代码结构图",
+              "在拉取请求中标出风险函数与测试缺口"
+            ],
+            "audience": "需要让 AI 审查大型仓库、分析改动影响或梳理跨文件依赖的开发者与研发团队",
+            "capabilities": [
+              "解析函数、类、导入与调用关系",
+              "定位改动可能影响的文件和执行流",
+              "筛选审查任务所需的最小上下文",
+              "持续更新保存或提交后的代码变化",
+              "生成架构图、代码 Wiki 与多种导出文件"
+            ],
+            "core_title": "用代码图缩小审查范围",
+            "core_summary": "它用 Tree-sitter 解析仓库，把函数、类、导入和调用存成图；文件变化后沿依赖边寻找受影响代码，再把精简上下文交给 AI，而不是反复扫描整个项目。",
+            "prerequisites": "需要 Python 3.10+；安装并构建代码图后，应重启编辑器或 AI 工具。",
+            "limitations": "小仓库和简单单文件改动可能得不偿失；影响分析会保守地多报文件，关键词排序和部分语言的执行流识别仍有不足。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "highlights": [
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ]
+              ],
+              "audience": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ]
+              ],
+              "core_title": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "core_summary": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "prerequisites": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "limitations": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-21/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+          "publication_evidence": {
+            "full_name": "tirth8205/code-review-graph",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+              "source_url": "https://api.github.com/repos/tirth8205/code-review-graph/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-21/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+              "sha256": "e4ec211724f39785b798a6ddbeb1f804af20b65fcbede4802ff584cdbc57f8b9",
+              "width": 351,
+              "height": 351
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.01.tirth8205--code-review-graph.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1141782198,
+          "full_name": "jamiepine/voicebox",
+          "owner": "jamiepine",
+          "name": "voicebox",
+          "html_url": "https://github.com/jamiepine/voicebox",
+          "description": "The open-source AI voice studio. Clone, dictate, create.",
+          "language": "TypeScript",
+          "stars": 44132,
+          "forks": 5364,
+          "open_issues": 576,
+          "watchers": 212,
+          "topics": [
+            "ai",
+            "cuda",
+            "mlx",
+            "qwen3-tts",
+            "qwen3-tts-ui",
+            "voice-ai",
+            "voice-clone",
+            "whisper"
+          ],
+          "created_at": "2026-01-25T12:27:03Z",
+          "updated_at": "2026-07-20T23:28:55Z",
+          "pushed_at": "2026-07-20T22:31:11Z",
+          "daily_stars": 839,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 86.46,
+          "star_delta": 826,
+          "fork_delta": 75,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.24,
+            "relative_growth": 85.14,
+            "fork_growth": 95.95,
+            "total_stars": 31.08,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "把声音克隆、语音生成、全局听写和 AI 代理播报放进本地桌面工作流",
+            "highlights": [
+              "用参考录音创建声音档案并生成语音",
+              "按全局快捷键听写到当前文本输入框",
+              "让兼容 MCP 的 AI 代理使用指定声音播报"
+            ],
+            "audience": "需要制作多角色音频、用语音输入文字，或为 AI 代理接入本地语音输入输出的创作者与开发者",
+            "capabilities": [
+              "克隆参考录音或选用预设声音",
+              "生成多语言语音并添加音频效果",
+              "编辑多人对话、播客和叙事时间线",
+              "转写录音并整理口误与停顿",
+              "通过 REST API 或 MCP 接入应用与代理"
+            ],
+            "core_title": "打通本地语音输入输出",
+            "core_summary": "它把语音克隆与合成、Whisper 转写、全局听写、时间线编辑和代理播报组合在同一桌面应用中，并通过本地模型、REST API 与 MCP 串起输入到输出。",
+            "prerequisites": "直接使用需下载对应平台版本；源码开发需要 Bun、Rust、Python 3.11+、Tauri 前置环境，macOS 还需 Xcode。",
+            "limitations": "Linux 暂无预编译版本；自动粘贴目前只在 macOS 提供，情绪标签也仅由 Chatterbox Turbo 解析。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+              ],
+              "highlights": [
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ],
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ],
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ]
+              ],
+              "audience": [
+                "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ],
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ],
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ],
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ],
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ]
+              ],
+              "core_title": [
+                "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+              ],
+              "core_summary": [
+                "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+              ],
+              "prerequisites": [
+                "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+              ],
+              "limitations": [
+                "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-21/repo-886294fb8b37fefa88e7e530-44538412119b6d90952c29f5.png",
+          "publication_evidence": {
+            "full_name": "jamiepine/voicebox",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3",
+              "source_url": "https://api.github.com/repos/jamiepine/voicebox/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-21/repo-886294fb8b37fefa88e7e530-44538412119b6d90952c29f5.png",
+              "sha256": "dbec5cf16c4b03deca6460832a64d2038e48de2d992c6229059efde9a23a6f2d",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.02.jamiepine--voicebox.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1128204614,
+          "full_name": "1jehuang/jcode",
+          "owner": "1jehuang",
+          "name": "jcode",
+          "html_url": "https://github.com/1jehuang/jcode",
+          "description": "The most intelligent agent harness for code",
+          "language": "Rust",
+          "stars": 9597,
+          "forks": 1082,
+          "open_issues": 107,
+          "watchers": 56,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-coding-agent",
+            "claude",
+            "cli",
+            "coding-agent",
+            "llm",
+            "mcp",
+            "openai",
+            "rust",
+            "terminal",
+            "tui"
+          ],
+          "created_at": "2026-01-05T09:43:36Z",
+          "updated_at": "2026-07-20T23:28:14Z",
+          "pushed_at": "2026-07-20T23:09:58Z",
+          "daily_stars": 612,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 85.52,
+          "star_delta": 716,
+          "fork_delta": 53,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 89.19,
+            "relative_growth": 89.19,
+            "fork_growth": 91.22,
+            "total_stars": 16.22,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "在终端中管理多会话编码代理，让它们共享记忆、并行协作并处理代码与浏览器任务",
+            "highlights": [
+              "从历史会话和记忆图自动召回相关信息",
+              "协调同一仓库中的多个代理并提醒文件冲突",
+              "用侧栏展示文件、差异和 Mermaid 图"
+            ],
+            "audience": "需要长期维护编码上下文、并行调度多个代理，或在终端里连接不同模型提供方的开发者",
+            "capabilities": [
+              "运行交互会话或单次非交互任务",
+              "恢复其他编码工具留下的历史会话",
+              "检索并整理跨会话的代理记忆",
+              "派生多个代理并协调消息与完成状态",
+              "控制 Firefox 完成网页点击、输入与截图"
+            ],
+            "core_title": "多会话代理共享记忆协作",
+            "core_summary": "它以持久服务管理多个终端会话，把对话提取进记忆图并按语义召回；多个代理在同一仓库工作时还能互发消息、感知文件变动，由主代理协调并行任务。",
+            "prerequisites": "需先安装 jcode，并登录或配置可用模型提供方；从源码构建需要 Git 和 Rust。",
+            "limitations": "MCP 目前只支持 stdio 服务，HTTP 与 SSE 配置会被跳过；自我修改模式建议使用能力较强的模型，较弱模型可能造成破坏性改动。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "fc24a36269661c8257e031332926e624c890b738",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:fc24a36269661c8257e031332926e624c890b738"
+              ],
+              "highlights": [
+                [
+                  "github.readme:fc24a36269661c8257e031332926e624c890b738"
+                ],
+                [
+                  "github.readme:fc24a36269661c8257e031332926e624c890b738"
+                ],
+                [
+                  "github.readme:fc24a36269661c8257e031332926e624c890b738"
+                ]
+              ],
+              "audience": [
+                "github.readme:fc24a36269661c8257e031332926e624c890b738"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:fc24a36269661c8257e031332926e624c890b738"
+                ],
+                [
+                  "github.readme:fc24a36269661c8257e031332926e624c890b738"
+                ],
+                [
+                  "github.readme:fc24a36269661c8257e031332926e624c890b738"
+                ],
+                [
+                  "github.readme:fc24a36269661c8257e031332926e624c890b738"
+                ],
+                [
+                  "github.readme:fc24a36269661c8257e031332926e624c890b738"
+                ]
+              ],
+              "core_title": [
+                "github.readme:fc24a36269661c8257e031332926e624c890b738"
+              ],
+              "core_summary": [
+                "github.readme:fc24a36269661c8257e031332926e624c890b738"
+              ],
+              "prerequisites": [
+                "github.readme:fc24a36269661c8257e031332926e624c890b738"
+              ],
+              "limitations": [
+                "github.readme:fc24a36269661c8257e031332926e624c890b738"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-21/repo-f9d109b36990e5221e33d34b-b6d7ba2e6c191f04e75099a6.png",
+          "publication_evidence": {
+            "full_name": "1jehuang/jcode",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "fc24a36269661c8257e031332926e624c890b738",
+              "source_url": "https://api.github.com/repos/1jehuang/jcode/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-21/repo-f9d109b36990e5221e33d34b-b6d7ba2e6c191f04e75099a6.png",
+              "sha256": "0622ac379368b9428b8683e85b5692dc4bd906ebf69bfd8aea9ac1c68091a7f4",
+              "width": 420,
+              "height": 420
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-21/2026-07-21.comprehensive.03.1jehuang--jcode.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-21/2026-07-21.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-21/2026-07-21.ai.01.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "jamiepine/voicebox",
+            "path": "reports/daily/assets/2026-07-21/2026-07-21.ai.02.jamiepine--voicebox.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "oblien/openship",
+            "path": "reports/daily/assets/2026-07-21/2026-07-21.ai.03.oblien--openship.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1167788341,
+          "full_name": "tirth8205/code-review-graph",
+          "owner": "tirth8205",
+          "name": "code-review-graph",
+          "html_url": "https://github.com/tirth8205/code-review-graph",
+          "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+          "language": "Python",
+          "stars": 23067,
+          "forks": 2272,
+          "open_issues": 99,
+          "watchers": 80,
+          "topics": [
+            "ai-coding",
+            "claude",
+            "claude-code",
+            "code-review",
+            "graphrag",
+            "incremental",
+            "knowledge-graph",
+            "llm",
+            "mcp",
+            "python",
+            "static-analysis",
+            "tree-sitter"
+          ],
+          "created_at": "2026-02-26T17:25:13Z",
+          "updated_at": "2026-07-20T23:28:35Z",
+          "pushed_at": "2026-07-18T00:32:48Z",
+          "daily_stars": 1876,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 87.74,
+          "star_delta": 1943,
+          "fork_delta": 96,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 93.75,
+            "fork_growth": 93.75,
+            "total_stars": 18.75,
+            "activity": 36.79,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "为 AI 编程工具建立本地代码结构图，只把审查相关的文件和依赖送入上下文",
+            "highlights": [
+              "追踪改动可能影响的调用方、依赖和测试",
+              "按文件变化增量更新代码结构图",
+              "在拉取请求中标出风险、执行链和测试缺口"
+            ],
+            "audience": "适合在大型仓库或多文件改动中做代码审查、影响排查和架构梳理的开发者与团队",
+            "capabilities": [
+              "解析函数、类、导入和调用关系",
+              "定位代码改动的影响范围",
+              "生成面向审查的精简上下文",
+              "搜索跨文件与跨仓库的代码实体",
+              "导出可视化图、Wiki 和多种图格式"
+            ],
+            "core_title": "按影响范围裁剪审查上下文",
+            "core_summary": "它用 Tree-sitter 解析仓库并保存函数、调用、继承和测试关系；文件变化后沿图追踪受影响范围，让 AI 优先读取相关代码，而不是反复扫描整个项目。",
+            "prerequisites": "需要 Python 3.10+；安装后需重启编辑器或 AI 工具",
+            "limitations": "小型仓库、简单单文件改动和一次性问题未必适合；影响分析会保守多报，搜索排序与流程检测仍有不足",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "highlights": [
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ]
+              ],
+              "audience": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ],
+                [
+                  "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+                ]
+              ],
+              "core_title": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "core_summary": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "prerequisites": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "limitations": [
+                "github.readme:0b1d91c943bc37e97716475df1c1f1ec9320f435"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-21/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+          "publication_evidence": {
+            "full_name": "tirth8205/code-review-graph",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "0b1d91c943bc37e97716475df1c1f1ec9320f435",
+              "source_url": "https://api.github.com/repos/tirth8205/code-review-graph/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-21/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+              "sha256": "e4ec211724f39785b798a6ddbeb1f804af20b65fcbede4802ff584cdbc57f8b9",
+              "width": 351,
+              "height": 351
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-21/2026-07-21.ai.01.tirth8205--code-review-graph.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1141782198,
+          "full_name": "jamiepine/voicebox",
+          "owner": "jamiepine",
+          "name": "voicebox",
+          "html_url": "https://github.com/jamiepine/voicebox",
+          "description": "The open-source AI voice studio. Clone, dictate, create.",
+          "language": "TypeScript",
+          "stars": 44132,
+          "forks": 5364,
+          "open_issues": 576,
+          "watchers": 212,
+          "topics": [
+            "ai",
+            "cuda",
+            "mlx",
+            "qwen3-tts",
+            "qwen3-tts-ui",
+            "voice-ai",
+            "voice-clone",
+            "whisper"
+          ],
+          "created_at": "2026-01-25T12:27:03Z",
+          "updated_at": "2026-07-20T23:28:55Z",
+          "pushed_at": "2026-07-20T22:31:11Z",
+          "daily_stars": 839,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 82.45,
+          "star_delta": 826,
+          "fork_delta": 75,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 87.5,
+            "relative_growth": 81.25,
+            "fork_growth": 90.62,
+            "total_stars": 34.38,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "把声音克隆、语音生成、全局听写和 AI 代理播报放进一套本地桌面工具",
+            "highlights": [
+              "用参考音频克隆声音或选择预设音色",
+              "在多轨时间线上制作对话、播客和故事",
+              "通过 REST API 与 MCP 接入应用和 AI 代理"
+            ],
+            "audience": "适合制作配音、播客和互动角色，或希望用语音输入并让 AI 代理以指定声音播报的人",
+            "capabilities": [
+              "克隆参考音频中的声音",
+              "把长文本分段合成为连续语音",
+              "用全局快捷键录音并转写文字",
+              "为生成语音叠加音高、混响等效果",
+              "让 MCP 代理调用指定声音播报"
+            ],
+            "core_title": "打通本地语音输入与输出",
+            "core_summary": "它把 TTS、Whisper 转写、本地语言模型和声音档案连成一套流程：用户可以听写内容、润色文本、生成语音，也能让接入 MCP 的代理调用同一套声音。",
+            "prerequisites": "从源码开发需 Bun、Rust、Python 3.11+ 与 Tauri 前置组件；macOS 还需 Xcode",
+            "limitations": "Linux 暂无预编译版本；全局听写自动粘贴目前明确覆盖 macOS；拟声标签仅由 Chatterbox Turbo 解析",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+              ],
+              "highlights": [
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ],
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ],
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ]
+              ],
+              "audience": [
+                "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ],
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ],
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ],
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ],
+                [
+                  "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+                ]
+              ],
+              "core_title": [
+                "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+              ],
+              "core_summary": [
+                "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+              ],
+              "prerequisites": [
+                "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+              ],
+              "limitations": [
+                "github.readme:34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-21/repo-886294fb8b37fefa88e7e530-44538412119b6d90952c29f5.png",
+          "publication_evidence": {
+            "full_name": "jamiepine/voicebox",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "34ef1c0c8d37ea17406bac396bffe7b8ae6b83e3",
+              "source_url": "https://api.github.com/repos/jamiepine/voicebox/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-21/repo-886294fb8b37fefa88e7e530-44538412119b6d90952c29f5.png",
+              "sha256": "dbec5cf16c4b03deca6460832a64d2038e48de2d992c6229059efde9a23a6f2d",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-21/2026-07-21.ai.02.jamiepine--voicebox.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1173848034,
+          "full_name": "oblien/openship",
+          "owner": "oblien",
+          "name": "openship",
+          "html_url": "https://github.com/oblien/openship",
+          "description": "Self-hosted deployment platform",
+          "language": "TypeScript",
+          "stars": 4745,
+          "forks": 328,
+          "open_issues": 27,
+          "watchers": 18,
+          "topics": [
+            "agents",
+            "ai",
+            "deployments",
+            "self-hosted"
+          ],
+          "created_at": "2026-03-05T20:16:56Z",
+          "updated_at": "2026-07-20T23:30:20Z",
+          "pushed_at": "2026-07-20T20:24:36Z",
+          "daily_stars": 1719,
+          "weekly_stars": null,
+          "trending_rank_daily": 17,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 82.14,
+          "star_delta": 1719,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 96.88,
+            "relative_growth": 100.0,
+            "fork_growth": 21.88,
+            "total_stars": 6.25,
+            "activity": 100.0,
+            "trending_signal": 23.98
+          },
+          "summary": {
+            "one_line": "把代码仓库自动构建成容器并部署到云端或自有服务器，同时管理配套基础设施",
+            "highlights": [
+              "识别项目技术栈并完成构建与部署",
+              "统一管理数据库、域名、证书、邮件和备份",
+              "通过桌面端、网页端或命令行操作同一平台"
+            ],
+            "audience": "适合需要自托管应用、维护预览与正式环境，或统一管理服务和基础设施的个人开发者与团队",
+            "capabilities": [
+              "检测仓库技术栈并构建容器",
+              "按代码推送触发部署和预览环境",
+              "配置数据库、存储与后台任务",
+              "管理域名、证书、邮件和备份",
+              "查看构建日志、容器指标和资源用量"
+            ],
+            "core_title": "同一界面部署到不同服务器",
+            "core_summary": "它把代码构建、容器部署和基础设施管理放在同一平台，并提供桌面端、网页端、命令行、REST API 与 MCP；工作负载可运行在托管云或自有 Linux 服务器。",
+            "prerequisites": "自托管需可用的 Linux 服务器；使用 Docker Compose 时需复制 .env.example 为 .env",
+            "limitations": "文档仍在补全；多节点集群、负载均衡界面、私有网络和高级监控等能力尚在后续计划中",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "04129154c5097058bc5b5ccc9a30b06590143f56",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "highlights": [
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ]
+              ],
+              "audience": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ]
+              ],
+              "core_title": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "core_summary": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "prerequisites": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "limitations": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-21/repo-70c9103343e142dcbcc7396a-ddc06c88eda5e7d5097b6a62.png",
+          "publication_evidence": {
+            "full_name": "oblien/openship",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "04129154c5097058bc5b5ccc9a30b06590143f56",
+              "source_url": "https://api.github.com/repos/oblien/openship/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-21/repo-70c9103343e142dcbcc7396a-ddc06c88eda5e7d5097b6a62.png",
+              "sha256": "9c3812b94956c24921f87808439102bbaddb1263c5fd66b239f356f710b126da",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-21/2026-07-21.ai.03.oblien--openship.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
