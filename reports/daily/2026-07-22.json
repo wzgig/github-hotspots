@@ -1,0 +1,1510 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-22",
+  "window_start": "2026-07-21",
+  "window_end": "2026-07-22",
+  "generated_at": "2026-07-22T07:31:11+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-21 至 2026-07-22",
+  "publication": {
+    "issue_number": 11,
+    "issue_code": "D011",
+    "issue_label": "第11期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-22",
+    "manifest": "reports/daily/assets/2026-07-22/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.01.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "oblien/openship",
+            "path": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.02.oblien--openship.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.03.tirth8205--code-review-graph.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-22/2026-07-22.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/daily/assets/2026-07-22/2026-07-22.ai.01.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "oblien/openship",
+            "path": "reports/daily/assets/2026-07-22/2026-07-22.ai.02.oblien--openship.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-22/2026-07-22.ai.03.tirth8205--code-review-graph.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 11,
+      "issue_code": "D011",
+      "issue_label": "第11期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1157102282,
+      "full_name": "diegosouzapw/OmniRoute",
+      "owner": "diegosouzapw",
+      "name": "OmniRoute",
+      "html_url": "https://github.com/diegosouzapw/OmniRoute",
+      "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+      "language": "TypeScript",
+      "stars": 23528,
+      "forks": 3148,
+      "open_issues": 232,
+      "watchers": 138,
+      "topics": [
+        "a2a",
+        "ai-agents",
+        "ai-gateway",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "cline",
+        "codex",
+        "copilot",
+        "cursor",
+        "deepseek",
+        "free-ai",
+        "gemini",
+        "kimi",
+        "llm-gateway",
+        "mcp",
+        "openai",
+        "openai-proxy",
+        "qwen",
+        "token-saver"
+      ],
+      "created_at": "2026-02-13T12:38:31Z",
+      "updated_at": "2026-07-21T23:30:29Z",
+      "pushed_at": "2026-07-21T23:02:07Z",
+      "daily_stars": 2040,
+      "weekly_stars": null,
+      "trending_rank_daily": 16,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 89.91,
+      "star_delta": 1796,
+      "fork_delta": 193,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.37,
+        "relative_growth": 94.74,
+        "fork_growth": 98.68,
+        "total_stars": 23.68,
+        "activity": 100.0,
+        "trending_signal": 24.47
+      },
+      "summary": {
+        "one_line": "把多个 AI 模型供应商接到同一入口，并在额度不足或调用失败时自动切换路线",
+        "highlights": [
+          "按额度、成本、延迟等条件自动选择模型",
+          "将多个模型串成可自动回退的调用链",
+          "在请求进入模型前压缩提示词和工具输出"
+        ],
+        "audience": "需要为 Codex、Claude Code、Cursor 等工具统一管理模型入口、额度与调用成本的开发者",
+        "capabilities": [
+          "连接不同供应商的模型服务",
+          "按任务偏好自动选择调用路线",
+          "在额度耗尽或失败时切换模型",
+          "为团队分配共享账户的调用额度",
+          "压缩提示词、上下文和工具输出"
+        ],
+        "core_title": "会自动换路的模型调用链",
+        "core_summary": "把多个候选模型组成调用链，持续参考健康状态、额度、成本和延迟选择目标；当前供应商失败或额度不足时，自动转向下一项，减少手动改配置。",
+        "prerequisites": "全局安装需 Node.js 22.22.2 以上，并至少连接一个模型供应商。",
+        "limitations": "记忆功能默认关闭；部分压缩方式会进行语义裁剪，README 建议先用离线评估工具检查保真度再推广配置。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "ef5bd845ab5a00145e9f1b1a70b51e01e6708225",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+          ],
+          "highlights": [
+            [
+              "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+            ],
+            [
+              "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+            ],
+            [
+              "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+            ]
+          ],
+          "audience": [
+            "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+          ],
+          "capabilities": [
+            [
+              "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+            ],
+            [
+              "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+            ],
+            [
+              "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+            ],
+            [
+              "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+            ],
+            [
+              "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+            ]
+          ],
+          "core_title": [
+            "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+          ],
+          "core_summary": [
+            "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+          ],
+          "prerequisites": [
+            "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+          ],
+          "limitations": [
+            "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-22/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+      "publication_evidence": {
+        "full_name": "diegosouzapw/OmniRoute",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "ef5bd845ab5a00145e9f1b1a70b51e01e6708225",
+          "source_url": "https://api.github.com/repos/diegosouzapw/OmniRoute/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-22/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "sha256": "6d871cb62c7c54edf4cb091efe3bab15fb8e9fc0f59fb6f2426bc1063761b340",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.01.diegosouzapw--omniroute.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1173848034,
+      "full_name": "oblien/openship",
+      "owner": "oblien",
+      "name": "openship",
+      "html_url": "https://github.com/oblien/openship",
+      "description": "Self-hosted deployment platform",
+      "language": "TypeScript",
+      "stars": 6167,
+      "forks": 447,
+      "open_issues": 46,
+      "watchers": 25,
+      "topics": [
+        "agents",
+        "ai",
+        "deployments",
+        "self-hosted"
+      ],
+      "created_at": "2026-03-05T20:16:56Z",
+      "updated_at": "2026-07-21T23:30:20Z",
+      "pushed_at": "2026-07-21T22:25:47Z",
+      "daily_stars": 1556,
+      "weekly_stars": null,
+      "trending_rank_daily": 7,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 88.97,
+      "star_delta": 1422,
+      "fork_delta": 119,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.74,
+        "relative_growth": 97.37,
+        "fork_growth": 97.37,
+        "total_stars": 14.47,
+        "activity": 100.0,
+        "trending_signal": 33.33
+      },
+      "summary": {
+        "one_line": "把代码仓库构建成容器并部署到云端或自有服务器，连同域名、数据库和备份一起管理",
+        "highlights": [
+          "推送代码后触发构建、预览和部署流程",
+          "统一配置数据库、域名、证书与邮件服务",
+          "通过桌面端、网页或命令行管理部署"
+        ],
+        "audience": "希望少写流水线配置，把副项目或团队服务部署到云端、自有服务器和多机环境的开发者",
+        "capabilities": [
+          "识别代码技术栈并构建容器",
+          "随代码推送创建预览和部署环境",
+          "配置数据库、域名和 SSL 证书",
+          "安排数据库与数据卷备份恢复",
+          "查看构建日志、容器指标和资源占用"
+        ],
+        "core_title": "同一界面部署到不同机器",
+        "core_summary": "输入代码仓库后，它负责识别技术栈、构建容器并配置运行资源；无论选择托管云、自有 Linux 服务器还是多台机器，都可沿用桌面端、网页或命令行流程。",
+        "prerequisites": "快速开始需安装 openship 命令行；自托管可使用自有 Linux 服务器或 Docker Compose。",
+        "limitations": "项目文档仍在补充；多节点集群、负载均衡界面、私有网络和可视化流水线被列为后续功能。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "04129154c5097058bc5b5ccc9a30b06590143f56",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+          ],
+          "highlights": [
+            [
+              "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+            ],
+            [
+              "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+            ],
+            [
+              "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+            ]
+          ],
+          "audience": [
+            "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+          ],
+          "capabilities": [
+            [
+              "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+            ],
+            [
+              "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+            ],
+            [
+              "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+            ],
+            [
+              "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+            ],
+            [
+              "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+            ]
+          ],
+          "core_title": [
+            "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+          ],
+          "core_summary": [
+            "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+          ],
+          "prerequisites": [
+            "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+          ],
+          "limitations": [
+            "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-22/repo-70c9103343e142dcbcc7396a-ddc06c88eda5e7d5097b6a62.png",
+      "publication_evidence": {
+        "full_name": "oblien/openship",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "04129154c5097058bc5b5ccc9a30b06590143f56",
+          "source_url": "https://api.github.com/repos/oblien/openship/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-22/repo-70c9103343e142dcbcc7396a-ddc06c88eda5e7d5097b6a62.png",
+          "sha256": "9c3812b94956c24921f87808439102bbaddb1263c5fd66b239f356f710b126da",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.02.oblien--openship.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1167788341,
+      "full_name": "tirth8205/code-review-graph",
+      "owner": "tirth8205",
+      "name": "code-review-graph",
+      "html_url": "https://github.com/tirth8205/code-review-graph",
+      "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+      "language": "Python",
+      "stars": 24503,
+      "forks": 2349,
+      "open_issues": 116,
+      "watchers": 80,
+      "topics": [
+        "ai-coding",
+        "claude",
+        "claude-code",
+        "code-review",
+        "graphrag",
+        "incremental",
+        "knowledge-graph",
+        "llm",
+        "mcp",
+        "python",
+        "static-analysis",
+        "tree-sitter"
+      ],
+      "created_at": "2026-02-26T17:25:13Z",
+      "updated_at": "2026-07-21T23:28:53Z",
+      "pushed_at": "2026-07-21T04:49:59Z",
+      "daily_stars": 1921,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 86.97,
+      "star_delta": 1436,
+      "fork_delta": 77,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.05,
+        "relative_growth": 92.11,
+        "fork_growth": 96.05,
+        "total_stars": 25.0,
+        "activity": 71.65,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "把代码库解析成持续更新的结构图，让 AI 审查变更时只读取相关函数、依赖和测试",
+        "highlights": [
+          "沿调用、导入和继承关系追踪改动影响",
+          "只重新解析变动文件并更新本地图谱",
+          "在拉取请求中标出风险函数与测试缺口"
+        ],
+        "audience": "维护大型仓库或多语言单体仓库，希望减少 AI 审查上下文并定位跨文件影响的开发者和团队",
+        "capabilities": [
+          "解析函数、类、导入和调用关系",
+          "追踪改动涉及的依赖与测试",
+          "按变化增量更新本地代码图谱",
+          "向 AI 工具提供精简审查上下文",
+          "在持续集成中生成风险审查结果"
+        ],
+        "core_title": "先算改动半径，再交给 AI",
+        "core_summary": "它用 Tree-sitter 把代码解析为函数、类和依赖组成的本地图谱；文件变化后沿调用与测试关系计算影响范围，再通过 MCP 只交付相关上下文。",
+        "prerequisites": "需要 Python 3.10 以上；安装并构建图谱后，应重启已配置的编辑器或 AI 工具。",
+        "limitations": "不适合小仓库、单文件小改动或一次性查询；影响分析会偏保守产生误报，搜索排序和部分语言的流程识别仍有限。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "48188036da3adaf8cba68566656e1e3624976af4",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+          ],
+          "highlights": [
+            [
+              "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+            ],
+            [
+              "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+            ],
+            [
+              "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+            ]
+          ],
+          "audience": [
+            "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+          ],
+          "capabilities": [
+            [
+              "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+            ],
+            [
+              "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+            ],
+            [
+              "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+            ],
+            [
+              "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+            ],
+            [
+              "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+            ]
+          ],
+          "core_title": [
+            "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+          ],
+          "core_summary": [
+            "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+          ],
+          "prerequisites": [
+            "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+          ],
+          "limitations": [
+            "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-22/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+      "publication_evidence": {
+        "full_name": "tirth8205/code-review-graph",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "48188036da3adaf8cba68566656e1e3624976af4",
+          "source_url": "https://api.github.com/repos/tirth8205/code-review-graph/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-22/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+          "sha256": "e4ec211724f39785b798a6ddbeb1f804af20b65fcbede4802ff584cdbc57f8b9",
+          "width": 351,
+          "height": 351
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.03.tirth8205--code-review-graph.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.01.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "oblien/openship",
+            "path": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.02.oblien--openship.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.03.tirth8205--code-review-graph.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1157102282,
+          "full_name": "diegosouzapw/OmniRoute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "html_url": "https://github.com/diegosouzapw/OmniRoute",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+          "language": "TypeScript",
+          "stars": 23528,
+          "forks": 3148,
+          "open_issues": 232,
+          "watchers": 138,
+          "topics": [
+            "a2a",
+            "ai-agents",
+            "ai-gateway",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "cline",
+            "codex",
+            "copilot",
+            "cursor",
+            "deepseek",
+            "free-ai",
+            "gemini",
+            "kimi",
+            "llm-gateway",
+            "mcp",
+            "openai",
+            "openai-proxy",
+            "qwen",
+            "token-saver"
+          ],
+          "created_at": "2026-02-13T12:38:31Z",
+          "updated_at": "2026-07-21T23:30:29Z",
+          "pushed_at": "2026-07-21T23:02:07Z",
+          "daily_stars": 2040,
+          "weekly_stars": null,
+          "trending_rank_daily": 16,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 89.91,
+          "star_delta": 1796,
+          "fork_delta": 193,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.37,
+            "relative_growth": 94.74,
+            "fork_growth": 98.68,
+            "total_stars": 23.68,
+            "activity": 100.0,
+            "trending_signal": 24.47
+          },
+          "summary": {
+            "one_line": "把多个 AI 模型供应商接到同一入口，并在额度不足或调用失败时自动切换路线",
+            "highlights": [
+              "按额度、成本、延迟等条件自动选择模型",
+              "将多个模型串成可自动回退的调用链",
+              "在请求进入模型前压缩提示词和工具输出"
+            ],
+            "audience": "需要为 Codex、Claude Code、Cursor 等工具统一管理模型入口、额度与调用成本的开发者",
+            "capabilities": [
+              "连接不同供应商的模型服务",
+              "按任务偏好自动选择调用路线",
+              "在额度耗尽或失败时切换模型",
+              "为团队分配共享账户的调用额度",
+              "压缩提示词、上下文和工具输出"
+            ],
+            "core_title": "会自动换路的模型调用链",
+            "core_summary": "把多个候选模型组成调用链，持续参考健康状态、额度、成本和延迟选择目标；当前供应商失败或额度不足时，自动转向下一项，减少手动改配置。",
+            "prerequisites": "全局安装需 Node.js 22.22.2 以上，并至少连接一个模型供应商。",
+            "limitations": "记忆功能默认关闭；部分压缩方式会进行语义裁剪，README 建议先用离线评估工具检查保真度再推广配置。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "ef5bd845ab5a00145e9f1b1a70b51e01e6708225",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ],
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ],
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ]
+              ],
+              "audience": [
+                "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ],
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ],
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ],
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ],
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+              ],
+              "core_summary": [
+                "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+              ],
+              "prerequisites": [
+                "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+              ],
+              "limitations": [
+                "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-22/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "publication_evidence": {
+            "full_name": "diegosouzapw/OmniRoute",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "ef5bd845ab5a00145e9f1b1a70b51e01e6708225",
+              "source_url": "https://api.github.com/repos/diegosouzapw/OmniRoute/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-22/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+              "sha256": "6d871cb62c7c54edf4cb091efe3bab15fb8e9fc0f59fb6f2426bc1063761b340",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.01.diegosouzapw--omniroute.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1173848034,
+          "full_name": "oblien/openship",
+          "owner": "oblien",
+          "name": "openship",
+          "html_url": "https://github.com/oblien/openship",
+          "description": "Self-hosted deployment platform",
+          "language": "TypeScript",
+          "stars": 6167,
+          "forks": 447,
+          "open_issues": 46,
+          "watchers": 25,
+          "topics": [
+            "agents",
+            "ai",
+            "deployments",
+            "self-hosted"
+          ],
+          "created_at": "2026-03-05T20:16:56Z",
+          "updated_at": "2026-07-21T23:30:20Z",
+          "pushed_at": "2026-07-21T22:25:47Z",
+          "daily_stars": 1556,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.97,
+          "star_delta": 1422,
+          "fork_delta": 119,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.74,
+            "relative_growth": 97.37,
+            "fork_growth": 97.37,
+            "total_stars": 14.47,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "把代码仓库构建成容器并部署到云端或自有服务器，连同域名、数据库和备份一起管理",
+            "highlights": [
+              "推送代码后触发构建、预览和部署流程",
+              "统一配置数据库、域名、证书与邮件服务",
+              "通过桌面端、网页或命令行管理部署"
+            ],
+            "audience": "希望少写流水线配置，把副项目或团队服务部署到云端、自有服务器和多机环境的开发者",
+            "capabilities": [
+              "识别代码技术栈并构建容器",
+              "随代码推送创建预览和部署环境",
+              "配置数据库、域名和 SSL 证书",
+              "安排数据库与数据卷备份恢复",
+              "查看构建日志、容器指标和资源占用"
+            ],
+            "core_title": "同一界面部署到不同机器",
+            "core_summary": "输入代码仓库后，它负责识别技术栈、构建容器并配置运行资源；无论选择托管云、自有 Linux 服务器还是多台机器，都可沿用桌面端、网页或命令行流程。",
+            "prerequisites": "快速开始需安装 openship 命令行；自托管可使用自有 Linux 服务器或 Docker Compose。",
+            "limitations": "项目文档仍在补充；多节点集群、负载均衡界面、私有网络和可视化流水线被列为后续功能。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "04129154c5097058bc5b5ccc9a30b06590143f56",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "highlights": [
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ]
+              ],
+              "audience": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ]
+              ],
+              "core_title": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "core_summary": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "prerequisites": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "limitations": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-22/repo-70c9103343e142dcbcc7396a-ddc06c88eda5e7d5097b6a62.png",
+          "publication_evidence": {
+            "full_name": "oblien/openship",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "04129154c5097058bc5b5ccc9a30b06590143f56",
+              "source_url": "https://api.github.com/repos/oblien/openship/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-22/repo-70c9103343e142dcbcc7396a-ddc06c88eda5e7d5097b6a62.png",
+              "sha256": "9c3812b94956c24921f87808439102bbaddb1263c5fd66b239f356f710b126da",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.02.oblien--openship.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1167788341,
+          "full_name": "tirth8205/code-review-graph",
+          "owner": "tirth8205",
+          "name": "code-review-graph",
+          "html_url": "https://github.com/tirth8205/code-review-graph",
+          "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+          "language": "Python",
+          "stars": 24503,
+          "forks": 2349,
+          "open_issues": 116,
+          "watchers": 80,
+          "topics": [
+            "ai-coding",
+            "claude",
+            "claude-code",
+            "code-review",
+            "graphrag",
+            "incremental",
+            "knowledge-graph",
+            "llm",
+            "mcp",
+            "python",
+            "static-analysis",
+            "tree-sitter"
+          ],
+          "created_at": "2026-02-26T17:25:13Z",
+          "updated_at": "2026-07-21T23:28:53Z",
+          "pushed_at": "2026-07-21T04:49:59Z",
+          "daily_stars": 1921,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 86.97,
+          "star_delta": 1436,
+          "fork_delta": 77,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.05,
+            "relative_growth": 92.11,
+            "fork_growth": 96.05,
+            "total_stars": 25.0,
+            "activity": 71.65,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把代码库解析成持续更新的结构图，让 AI 审查变更时只读取相关函数、依赖和测试",
+            "highlights": [
+              "沿调用、导入和继承关系追踪改动影响",
+              "只重新解析变动文件并更新本地图谱",
+              "在拉取请求中标出风险函数与测试缺口"
+            ],
+            "audience": "维护大型仓库或多语言单体仓库，希望减少 AI 审查上下文并定位跨文件影响的开发者和团队",
+            "capabilities": [
+              "解析函数、类、导入和调用关系",
+              "追踪改动涉及的依赖与测试",
+              "按变化增量更新本地代码图谱",
+              "向 AI 工具提供精简审查上下文",
+              "在持续集成中生成风险审查结果"
+            ],
+            "core_title": "先算改动半径，再交给 AI",
+            "core_summary": "它用 Tree-sitter 把代码解析为函数、类和依赖组成的本地图谱；文件变化后沿调用与测试关系计算影响范围，再通过 MCP 只交付相关上下文。",
+            "prerequisites": "需要 Python 3.10 以上；安装并构建图谱后，应重启已配置的编辑器或 AI 工具。",
+            "limitations": "不适合小仓库、单文件小改动或一次性查询；影响分析会偏保守产生误报，搜索排序和部分语言的流程识别仍有限。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "48188036da3adaf8cba68566656e1e3624976af4",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+              ],
+              "highlights": [
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ],
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ],
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ]
+              ],
+              "audience": [
+                "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ],
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ],
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ],
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ],
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ]
+              ],
+              "core_title": [
+                "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+              ],
+              "core_summary": [
+                "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+              ],
+              "prerequisites": [
+                "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+              ],
+              "limitations": [
+                "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-22/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+          "publication_evidence": {
+            "full_name": "tirth8205/code-review-graph",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "48188036da3adaf8cba68566656e1e3624976af4",
+              "source_url": "https://api.github.com/repos/tirth8205/code-review-graph/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-22/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+              "sha256": "e4ec211724f39785b798a6ddbeb1f804af20b65fcbede4802ff584cdbc57f8b9",
+              "width": 351,
+              "height": 351
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.03.tirth8205--code-review-graph.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-22/2026-07-22.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/daily/assets/2026-07-22/2026-07-22.ai.01.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "oblien/openship",
+            "path": "reports/daily/assets/2026-07-22/2026-07-22.ai.02.oblien--openship.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/daily/assets/2026-07-22/2026-07-22.ai.03.tirth8205--code-review-graph.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1157102282,
+          "full_name": "diegosouzapw/OmniRoute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "html_url": "https://github.com/diegosouzapw/OmniRoute",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+          "language": "TypeScript",
+          "stars": 23528,
+          "forks": 3148,
+          "open_issues": 232,
+          "watchers": 138,
+          "topics": [
+            "a2a",
+            "ai-agents",
+            "ai-gateway",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "cline",
+            "codex",
+            "copilot",
+            "cursor",
+            "deepseek",
+            "free-ai",
+            "gemini",
+            "kimi",
+            "llm-gateway",
+            "mcp",
+            "openai",
+            "openai-proxy",
+            "qwen",
+            "token-saver"
+          ],
+          "created_at": "2026-02-13T12:38:31Z",
+          "updated_at": "2026-07-21T23:30:29Z",
+          "pushed_at": "2026-07-21T23:02:07Z",
+          "daily_stars": 2040,
+          "weekly_stars": null,
+          "trending_rank_daily": 16,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 89.08,
+          "star_delta": 1796,
+          "fork_delta": 193,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.14,
+            "relative_growth": 91.43,
+            "fork_growth": 97.14,
+            "total_stars": 25.71,
+            "activity": 100.0,
+            "trending_signal": 24.47
+          },
+          "summary": {
+            "one_line": "把多个 AI 供应商收进一个接口，并在额度耗尽或请求失败时自动切换模型。",
+            "highlights": [
+              "用自动组合按额度、成本和延迟选择模型",
+              "在供应商失败或额度耗尽时切换目标",
+              "压缩提示词与工具输出，减少上下文占用"
+            ],
+            "audience": "同时使用多个模型供应商，希望为编程工具统一接口、故障切换和额度管理的开发者。",
+            "capabilities": [
+              "连接多个模型供应商和本地模型",
+              "配置自动、低延迟或低成本路由",
+              "组合多个模型完成串联或融合任务",
+              "压缩提示词、代码日志和工具输出",
+              "通过 MCP 或 A2A 交给智能体管理"
+            ],
+            "core_title": "自动组合与额度感知路由",
+            "core_summary": "自动组合会根据连接健康、剩余额度、成本和延迟为请求选择目标；当前供应商失败或额度不足时，再沿组合链切换到下一模型。",
+            "prerequisites": "需要 Node.js 22.x 或 24.x LTS；运行时版本至少为 22.22.2。",
+            "limitations": "内存功能默认关闭；远程模式按 read、write、admin 授权，启动进程的路由仅限本机回环。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "ef5bd845ab5a00145e9f1b1a70b51e01e6708225",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ],
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ],
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ]
+              ],
+              "audience": [
+                "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ],
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ],
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ],
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ],
+                [
+                  "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+              ],
+              "core_summary": [
+                "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+              ],
+              "prerequisites": [
+                "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+              ],
+              "limitations": [
+                "github.readme:ef5bd845ab5a00145e9f1b1a70b51e01e6708225"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-22/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "publication_evidence": {
+            "full_name": "diegosouzapw/OmniRoute",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "ef5bd845ab5a00145e9f1b1a70b51e01e6708225",
+              "source_url": "https://api.github.com/repos/diegosouzapw/OmniRoute/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-22/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+              "sha256": "6d871cb62c7c54edf4cb091efe3bab15fb8e9fc0f59fb6f2426bc1063761b340",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-22/2026-07-22.ai.01.diegosouzapw--omniroute.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1173848034,
+          "full_name": "oblien/openship",
+          "owner": "oblien",
+          "name": "openship",
+          "html_url": "https://github.com/oblien/openship",
+          "description": "Self-hosted deployment platform",
+          "language": "TypeScript",
+          "stars": 6167,
+          "forks": 447,
+          "open_issues": 46,
+          "watchers": 25,
+          "topics": [
+            "agents",
+            "ai",
+            "deployments",
+            "self-hosted"
+          ],
+          "created_at": "2026-03-05T20:16:56Z",
+          "updated_at": "2026-07-21T23:30:20Z",
+          "pushed_at": "2026-07-21T22:25:47Z",
+          "daily_stars": 1556,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 86.81,
+          "star_delta": 1422,
+          "fork_delta": 119,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 91.43,
+            "relative_growth": 97.14,
+            "fork_growth": 94.29,
+            "total_stars": 11.43,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "把代码仓库交给 openship，它会识别技术栈、构建容器并部署到自有服务器或托管云。",
+            "highlights": [
+              "推送代码后自动构建、预览和回滚",
+              "集中管理数据库、域名、证书与备份",
+              "用桌面端、网页或命令行操作同一平台"
+            ],
+            "audience": "需要自托管应用、管理多种后端资源，或为团队统一部署入口的个人开发者和运维团队。",
+            "capabilities": [
+              "识别仓库技术栈并自动完成部署",
+              "创建预览、暂存与正式环境",
+              "管理数据库、域名、证书和邮件",
+              "查看实时构建日志与容器资源",
+              "迁移标准 Docker 容器到不同主机"
+            ],
+            "core_title": "从代码仓库直接交付容器",
+            "core_summary": "连接代码仓库后，平台负责识别技术栈、构建容器和配置部署环境；数据库、域名、证书、CDN 与备份也能在同一界面管理。",
+            "prerequisites": "自托管需准备 Linux 服务器；也可克隆仓库并使用 Docker Compose 启动。",
+            "limitations": "文档仍在完善；多节点集群、负载均衡界面、私有网络和可视化流水线仍列为后续功能。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "04129154c5097058bc5b5ccc9a30b06590143f56",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "highlights": [
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ]
+              ],
+              "audience": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ],
+                [
+                  "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+                ]
+              ],
+              "core_title": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "core_summary": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "prerequisites": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "limitations": [
+                "github.readme:04129154c5097058bc5b5ccc9a30b06590143f56"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-22/repo-70c9103343e142dcbcc7396a-ddc06c88eda5e7d5097b6a62.png",
+          "publication_evidence": {
+            "full_name": "oblien/openship",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "04129154c5097058bc5b5ccc9a30b06590143f56",
+              "source_url": "https://api.github.com/repos/oblien/openship/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-22/repo-70c9103343e142dcbcc7396a-ddc06c88eda5e7d5097b6a62.png",
+              "sha256": "9c3812b94956c24921f87808439102bbaddb1263c5fd66b239f356f710b126da",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-22/2026-07-22.ai.02.oblien--openship.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1167788341,
+          "full_name": "tirth8205/code-review-graph",
+          "owner": "tirth8205",
+          "name": "code-review-graph",
+          "html_url": "https://github.com/tirth8205/code-review-graph",
+          "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+          "language": "Python",
+          "stars": 24503,
+          "forks": 2349,
+          "open_issues": 116,
+          "watchers": 80,
+          "topics": [
+            "ai-coding",
+            "claude",
+            "claude-code",
+            "code-review",
+            "graphrag",
+            "incremental",
+            "knowledge-graph",
+            "llm",
+            "mcp",
+            "python",
+            "static-analysis",
+            "tree-sitter"
+          ],
+          "created_at": "2026-02-26T17:25:13Z",
+          "updated_at": "2026-07-21T23:28:53Z",
+          "pushed_at": "2026-07-21T04:49:59Z",
+          "daily_stars": 1921,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 85.1,
+          "star_delta": 1436,
+          "fork_delta": 77,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.29,
+            "relative_growth": 88.57,
+            "fork_growth": 91.43,
+            "total_stars": 28.57,
+            "activity": 71.65,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "先把代码库解析成结构图，再只把与变更相关的函数、依赖和测试交给 AI 审查。",
+            "highlights": [
+              "用语法树建立可持续更新的代码关系图",
+              "追踪改动会影响的调用方、依赖和测试",
+              "通过 MCP 提供更聚焦的审查上下文"
+            ],
+            "audience": "维护大型仓库或多语言单体仓库，希望减少 AI 重复读代码并分析改动影响的研发团队。",
+            "capabilities": [
+              "解析函数、类、导入和调用关系",
+              "增量重建发生变化的代码文件",
+              "追踪改动涉及的依赖与测试范围",
+              "向 AI 提供精简的审查上下文",
+              "在拉取请求中标记风险和测试缺口"
+            ],
+            "core_title": "用代码关系图缩小审查范围",
+            "core_summary": "项目用 Tree-sitter 解析代码并保存函数、类、调用、继承和测试关系；审查变更时沿关系图寻找受影响部分，只返回需要读取的代码上下文。",
+            "prerequisites": "需要 Python 3.10+；安装后要重启编辑器或 AI 工具，才能加载 MCP 配置。",
+            "limitations": "不适合小仓库和琐碎单文件改动；影响分析偏保守，可能产生误报；云端嵌入会传出源代码衍生文本。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "48188036da3adaf8cba68566656e1e3624976af4",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+              ],
+              "highlights": [
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ],
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ],
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ]
+              ],
+              "audience": [
+                "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ],
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ],
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ],
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ],
+                [
+                  "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+                ]
+              ],
+              "core_title": [
+                "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+              ],
+              "core_summary": [
+                "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+              ],
+              "prerequisites": [
+                "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+              ],
+              "limitations": [
+                "github.readme:48188036da3adaf8cba68566656e1e3624976af4"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-22/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+          "publication_evidence": {
+            "full_name": "tirth8205/code-review-graph",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "48188036da3adaf8cba68566656e1e3624976af4",
+              "source_url": "https://api.github.com/repos/tirth8205/code-review-graph/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-22/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+              "sha256": "e4ec211724f39785b798a6ddbeb1f804af20b65fcbede4802ff584cdbc57f8b9",
+              "width": 351,
+              "height": 351
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-22/2026-07-22.ai.03.tirth8205--code-review-graph.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}

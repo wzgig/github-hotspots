@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-07-22",
+  "window": {
+    "start": "2026-07-21",
+    "end": "2026-07-22"
+  },
+  "source_report": "reports/daily/2026-07-22.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-07-22",
+  "manifest": "reports/daily/assets/2026-07-22/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "diegosouzapw/OmniRoute",
+          "path": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.01.diegosouzapw--omniroute.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "oblien/openship",
+          "path": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.02.oblien--openship.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "tirth8205/code-review-graph",
+          "path": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.03.tirth8205--code-review-graph.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-07-22/2026-07-22.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "diegosouzapw/OmniRoute",
+          "path": "reports/daily/assets/2026-07-22/2026-07-22.ai.01.diegosouzapw--omniroute.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "oblien/openship",
+          "path": "reports/daily/assets/2026-07-22/2026-07-22.ai.02.oblien--openship.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "tirth8205/code-review-graph",
+          "path": "reports/daily/assets/2026-07-22/2026-07-22.ai.03.tirth8205--code-review-graph.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 11,
+    "issue_code": "D011",
+    "issue_label": "第11期",
+    "status": "official"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "ad4b9765de2464c0645ec327862493b75467ae7226ca5fc7136f7d133d41e883",
+  "checklist_sha256": "19f4ede12872dc83db763e05e319530b963b210e4aae340dc1ad50a730e3023b",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-07-22",
+  "generated_at": "2026-07-22T07:33:36.098305+08:00",
+  "issue": {
+    "number": 11,
+    "code": "D011",
+    "stem": "D011-2026-07-22",
+    "label": "第11期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-07-22.json",
+    "report_sha256": "1ed9ac16b0bc22cc61794ecc3ea250e053e78445dae9cfa080635906b78c4ba7",
+    "poster_manifest": "reports/daily/assets/2026-07-22/manifest.json",
+    "poster_manifest_sha256": "b06e9568b48f598ce00e9c198a5c17bf5430c7898508d4e0132a9d717789378b",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D011-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "84037bc41d9855b2ef460a13ad79fd48c0f860db6e705bd4d25a391ac5d826e8",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 347,
+      "caption_sha256": "ee4caa33c0e6546f0b400b3cddc7c6132b119579b3342e92d62c9f4dd2571e12",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "3807d84ddb056774df41da128c9f5a601050771edaefffe24b91d4c4338f94f8",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.cover.png",
+          "sha256": "3c897827370c75c2a17833fabb39407203a46d9fa631996e1ef5e9f2110e3927",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.01.diegosouzapw--omniroute.png",
+          "sha256": "46b76382a8a8d597f66d94ea1dc0d38a6f967706738d2733349c2e25e3e43c60",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "diegosouzapw/OmniRoute",
+          "publication_path": "images/02-rank-01-diegosouzapw-omniroute.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.02.oblien--openship.png",
+          "sha256": "b5d314328c86de28f16f3b7d6bef7ce6cf3ab5e4f4980786e5fcf3ca81a08abf",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "oblien/openship",
+          "publication_path": "images/03-rank-02-oblien-openship.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-22/2026-07-22.comprehensive.03.tirth8205--code-review-graph.png",
+          "sha256": "7efea687c2914e0844bfcd2a6cd78988b267074089e25f0512a8bf36b8a8951b",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "tirth8205/code-review-graph",
+          "publication_path": "images/04-rank-03-tirth8205-code-review-graph.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D011-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "0a9b943856b2b09f813aedcd7c9eabde71892f010cfffa8ea996556efc457a11",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 343,
+      "caption_sha256": "a54a93d919d8332ea9a9bd5afa38846d2a7e83a2575557c8cff74624c60beab8",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "432eb359a3e65822ac578236a10b715e77ee2cf037a3ecb8b3ae4bb45d0b2b91",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-22/2026-07-22.ai.cover.png",
+          "sha256": "360331137b644999030ea1c18a3f0b2ec48751c2b79eea2dcfbd6a9a241c66ff",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-22/2026-07-22.ai.01.diegosouzapw--omniroute.png",
+          "sha256": "e80b90f0370fa7d1521eccbee87ecc3a0e34c29f83a4b01c160e886152bfa288",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "diegosouzapw/OmniRoute",
+          "publication_path": "images/02-rank-01-diegosouzapw-omniroute.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-22/2026-07-22.ai.02.oblien--openship.png",
+          "sha256": "e89d4f834e1c2a1430aaec8a52268a4b985159f16552ab5ba5284f1897b6496d",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "oblien/openship",
+          "publication_path": "images/03-rank-02-oblien-openship.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-22/2026-07-22.ai.03.tirth8205--code-review-graph.png",
+          "sha256": "1906be758a1f30ae2e7968d26d97343a4d3f04b2254952c342096045422f5b39",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "tirth8205/code-review-graph",
+          "publication_path": "images/04-rank-03-tirth8205-code-review-graph.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-07-22",
+    "revision": "ad4b9765de24",
+    "image_policy": "repository-source-reference"
+  }
+}
