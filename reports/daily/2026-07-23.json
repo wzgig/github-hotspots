@@ -1,0 +1,1520 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-23",
+  "window_start": "2026-07-22",
+  "window_end": "2026-07-23",
+  "generated_at": "2026-07-23T07:31:07+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-22 至 2026-07-23",
+  "publication": {
+    "issue_number": 12,
+    "issue_code": "D012",
+    "issue_label": "第12期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-23",
+    "manifest": "reports/daily/assets/2026-07-23/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "koala73/worldmonitor",
+            "path": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.01.koala73--worldmonitor.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "ayghri/i-have-adhd",
+            "path": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.02.ayghri--i-have-adhd.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.03.diegosouzapw--omniroute.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-23/2026-07-23.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "koala73/worldmonitor",
+            "path": "reports/daily/assets/2026-07-23/2026-07-23.ai.01.koala73--worldmonitor.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/daily/assets/2026-07-23/2026-07-23.ai.02.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "oblien/openship",
+            "path": "reports/daily/assets/2026-07-23/2026-07-23.ai.03.oblien--openship.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 12,
+      "issue_code": "D012",
+      "issue_label": "第12期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1130564872,
+      "full_name": "koala73/worldmonitor",
+      "owner": "koala73",
+      "name": "worldmonitor",
+      "html_url": "https://github.com/koala73/worldmonitor",
+      "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+      "language": "TypeScript",
+      "stars": 68851,
+      "forks": 10524,
+      "open_issues": 252,
+      "watchers": 432,
+      "topics": [
+        "agent",
+        "ai",
+        "dashboard",
+        "geopolitics",
+        "mcp",
+        "mcp-server",
+        "monitoring",
+        "news",
+        "opensource",
+        "osint",
+        "palantir",
+        "situation"
+      ],
+      "created_at": "2026-01-08T17:26:06Z",
+      "updated_at": "2026-07-22T23:30:50Z",
+      "pushed_at": "2026-07-22T22:11:14Z",
+      "daily_stars": 4131,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 96.7,
+      "star_delta": 3601,
+      "fork_delta": 349,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 98.82,
+        "fork_growth": 100.0,
+        "total_stars": 38.82,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "把新闻、地缘风险、金融与基础设施信号汇入同一看板，帮助分析者持续掌握全球态势。",
+        "highlights": [
+          "聚合多类新闻源并生成简报",
+          "在地图上叠加全球态势数据",
+          "关联军事、经济、灾害与升级信号"
+        ],
+        "audience": "适合需要追踪国际新闻、区域风险、市场变化或基础设施事件的研究者、分析人员与情报团队。",
+        "capabilities": [
+          "汇总新闻源并生成 AI 简报",
+          "切换三维地球与平面地图",
+          "叠加军事、经济和灾害信号",
+          "追踪市场、能源、航空与基础设施",
+          "通过 MCP、API、CLI 或 SDK 查询数据"
+        ],
+        "core_title": "跨数据流关联全球信号",
+        "core_summary": "它把新闻、地图图层、市场与基础设施数据放进统一界面，再关联军事、经济、灾害和局势升级信号，便于从分散事件中观察同一地区的变化。",
+        "prerequisites": "本地启动需克隆仓库并运行 npm install、npm run dev；特定数据源可能需要凭据。",
+        "limitations": "基础应用无需环境变量，但特定数据源可能需要凭据；MCP 工具调用需密钥或 OAuth。",
+        "license_label": "AGPL-3.0-only",
+        "license_restrictions": "Separate commercial or trademark permission needed",
+        "readme_sha": "31231a2a0e798f8f55cac0f6f120fc3384049136",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "highlights": [
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ],
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ],
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ]
+          ],
+          "audience": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "capabilities": [
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ],
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ],
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ],
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ],
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ]
+          ],
+          "core_title": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "core_summary": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "prerequisites": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "limitations": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "license_label": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "license_restrictions": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-07-23/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+      "publication_evidence": {
+        "full_name": "koala73/worldmonitor",
+        "license_spdx_id": "NOASSERTION",
+        "readme": {
+          "sha": "31231a2a0e798f8f55cac0f6f120fc3384049136",
+          "source_url": "https://api.github.com/repos/koala73/worldmonitor/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-23/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+          "sha256": "020a898862a29cafb4a70f81587c58230afa61547ab14d1be12eba6af8094956",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "AGPL-3.0-only",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.01.koala73--worldmonitor.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1238120057,
+      "full_name": "ayghri/i-have-adhd",
+      "owner": "ayghri",
+      "name": "i-have-adhd",
+      "html_url": "https://github.com/ayghri/i-have-adhd",
+      "description": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
+      "language": "Python",
+      "stars": 8229,
+      "forks": 377,
+      "open_issues": 5,
+      "watchers": 19,
+      "topics": [
+        "adhd",
+        "claude-",
+        "claude-code-plugin",
+        "claude-skills",
+        "developer-tools",
+        "productivity"
+      ],
+      "created_at": "2026-05-13T20:42:06Z",
+      "updated_at": "2026-07-22T23:28:00Z",
+      "pushed_at": "2026-07-22T22:14:47Z",
+      "daily_stars": 1682,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 92.15,
+      "star_delta": 1454,
+      "fork_delta": 99,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.65,
+        "relative_growth": 100.0,
+        "fork_growth": 96.47,
+        "total_stars": 23.53,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "让编码助手先给行动结论，再用编号步骤说明操作，减少寒暄、旁支和埋在长文里的答案。",
+        "highlights": [
+          "把下一步行动放在回答开头",
+          "将多步骤任务改成编号清单",
+          "用一个具体下一步结束回答"
+        ],
+        "audience": "适合容易被冗长回答打断思路，或希望 Claude Code、Codex 直接给出可执行步骤的使用者。",
+        "capabilities": [
+          "先输出当前最该执行的动作",
+          "把多步骤任务整理成编号清单",
+          "压缩与当前任务无关的旁支",
+          "用明确时间代替模糊耗时描述",
+          "在结尾留下一个具体下一步"
+        ],
+        "core_title": "把答案从长文里提到最前",
+        "core_summary": "这项技能用一组固定输出规则约束编码助手：行动优先、步骤编号、减少旁支和客套，并在每轮结束时给出一个可继续执行的动作。",
+        "prerequisites": "需先在 Claude Code 或 Codex 安装插件，再通过对应命令启用输出风格。",
+        "limitations": "只调整编码助手的输出风格；规则会压制旁支、取消寒暄，并把列表限制在 5 项。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "aeedca60403ea75b675ab5cce2d9457f61bbdcbe",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+          ],
+          "highlights": [
+            [
+              "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+            ],
+            [
+              "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+            ],
+            [
+              "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+            ]
+          ],
+          "audience": [
+            "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+          ],
+          "capabilities": [
+            [
+              "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+            ],
+            [
+              "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+            ],
+            [
+              "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+            ],
+            [
+              "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+            ],
+            [
+              "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+            ]
+          ],
+          "core_title": [
+            "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+          ],
+          "core_summary": [
+            "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+          ],
+          "prerequisites": [
+            "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+          ],
+          "limitations": [
+            "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-23/repo-32d4385133b004ff67b76591-b1305a6802c37dd64103952c.png",
+      "publication_evidence": {
+        "full_name": "ayghri/i-have-adhd",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "aeedca60403ea75b675ab5cce2d9457f61bbdcbe",
+          "source_url": "https://api.github.com/repos/ayghri/i-have-adhd/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-23/repo-32d4385133b004ff67b76591-b1305a6802c37dd64103952c.png",
+          "sha256": "c280689774a4b6abb104245827197b254640bdc27c13bc263a8ea7ea0989b7b7",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.02.ayghri--i-have-adhd.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1157102282,
+      "full_name": "diegosouzapw/OmniRoute",
+      "owner": "diegosouzapw",
+      "name": "OmniRoute",
+      "html_url": "https://github.com/diegosouzapw/OmniRoute",
+      "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+      "language": "TypeScript",
+      "stars": 25185,
+      "forks": 3348,
+      "open_issues": 231,
+      "watchers": 145,
+      "topics": [
+        "a2a",
+        "ai-agents",
+        "ai-gateway",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "cline",
+        "codex",
+        "copilot",
+        "cursor",
+        "deepseek",
+        "free-ai",
+        "gemini",
+        "kimi",
+        "llm-gateway",
+        "mcp",
+        "openai",
+        "openai-proxy",
+        "qwen",
+        "token-saver"
+      ],
+      "created_at": "2026-02-13T12:38:31Z",
+      "updated_at": "2026-07-22T23:29:40Z",
+      "pushed_at": "2026-07-22T23:29:23Z",
+      "daily_stars": 1648,
+      "weekly_stars": null,
+      "trending_rank_daily": 8,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 91.58,
+      "star_delta": 1657,
+      "fork_delta": 200,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.82,
+        "relative_growth": 96.47,
+        "fork_growth": 98.82,
+        "total_stars": 28.24,
+        "activity": 100.0,
+        "trending_signal": 31.55
+      },
+      "summary": {
+        "one_line": "把多个模型供应商接到同一入口，并在额度耗尽或调用失败时自动切换后备模型。",
+        "highlights": [
+          "用统一接口连接不同模型供应商",
+          "按额度、成本、延迟和健康度路由",
+          "在失败或限额触发时自动回退"
+        ],
+        "audience": "适合同时使用多个模型服务，并希望为编码工具统一接口、分配额度和准备后备线路的 AI 开发者与团队。",
+        "capabilities": [
+          "汇集不同供应商的模型接口",
+          "按策略选择当前请求的模型",
+          "在限额或故障时切换后备模型",
+          "压缩提示词与工具输出以减少用量",
+          "通过 MCP 和 A2A 交给智能体管理"
+        ],
+        "core_title": "用模型组合自动接力请求",
+        "core_summary": "核心工作流是把多个模型排成组合，并依据额度、成本、延迟、成功率等状态实时选择；当前目标不可用时，请求会转向组合中的下一个模型。",
+        "prerequisites": "全局安装可用 npm；源码运行要求 Node.js 22.x 或 24.x LTS，并连接至少一个模型供应商。",
+        "limitations": "记忆功能默认关闭；远程令牌有作用域，启动进程的路由仅允许本机回环访问。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "b0d070df0aee52611ab1d88f2055bd9f0cebcc3a",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+          ],
+          "highlights": [
+            [
+              "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+            ],
+            [
+              "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+            ],
+            [
+              "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+            ]
+          ],
+          "audience": [
+            "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+          ],
+          "capabilities": [
+            [
+              "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+            ],
+            [
+              "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+            ],
+            [
+              "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+            ],
+            [
+              "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+            ],
+            [
+              "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+            ]
+          ],
+          "core_title": [
+            "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+          ],
+          "core_summary": [
+            "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+          ],
+          "prerequisites": [
+            "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+          ],
+          "limitations": [
+            "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-23/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+      "publication_evidence": {
+        "full_name": "diegosouzapw/OmniRoute",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "b0d070df0aee52611ab1d88f2055bd9f0cebcc3a",
+          "source_url": "https://api.github.com/repos/diegosouzapw/OmniRoute/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-23/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "sha256": "6d871cb62c7c54edf4cb091efe3bab15fb8e9fc0f59fb6f2426bc1063761b340",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.03.diegosouzapw--omniroute.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "koala73/worldmonitor",
+            "path": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.01.koala73--worldmonitor.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "ayghri/i-have-adhd",
+            "path": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.02.ayghri--i-have-adhd.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.03.diegosouzapw--omniroute.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1130564872,
+          "full_name": "koala73/worldmonitor",
+          "owner": "koala73",
+          "name": "worldmonitor",
+          "html_url": "https://github.com/koala73/worldmonitor",
+          "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+          "language": "TypeScript",
+          "stars": 68851,
+          "forks": 10524,
+          "open_issues": 252,
+          "watchers": 432,
+          "topics": [
+            "agent",
+            "ai",
+            "dashboard",
+            "geopolitics",
+            "mcp",
+            "mcp-server",
+            "monitoring",
+            "news",
+            "opensource",
+            "osint",
+            "palantir",
+            "situation"
+          ],
+          "created_at": "2026-01-08T17:26:06Z",
+          "updated_at": "2026-07-22T23:30:50Z",
+          "pushed_at": "2026-07-22T22:11:14Z",
+          "daily_stars": 4131,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 96.7,
+          "star_delta": 3601,
+          "fork_delta": 349,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 98.82,
+            "fork_growth": 100.0,
+            "total_stars": 38.82,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把新闻、地缘风险、金融与基础设施信号汇入同一看板，帮助分析者持续掌握全球态势。",
+            "highlights": [
+              "聚合多类新闻源并生成简报",
+              "在地图上叠加全球态势数据",
+              "关联军事、经济、灾害与升级信号"
+            ],
+            "audience": "适合需要追踪国际新闻、区域风险、市场变化或基础设施事件的研究者、分析人员与情报团队。",
+            "capabilities": [
+              "汇总新闻源并生成 AI 简报",
+              "切换三维地球与平面地图",
+              "叠加军事、经济和灾害信号",
+              "追踪市场、能源、航空与基础设施",
+              "通过 MCP、API、CLI 或 SDK 查询数据"
+            ],
+            "core_title": "跨数据流关联全球信号",
+            "core_summary": "它把新闻、地图图层、市场与基础设施数据放进统一界面，再关联军事、经济、灾害和局势升级信号，便于从分散事件中观察同一地区的变化。",
+            "prerequisites": "本地启动需克隆仓库并运行 npm install、npm run dev；特定数据源可能需要凭据。",
+            "limitations": "基础应用无需环境变量，但特定数据源可能需要凭据；MCP 工具调用需密钥或 OAuth。",
+            "license_label": "AGPL-3.0-only",
+            "license_restrictions": "Separate commercial or trademark permission needed",
+            "readme_sha": "31231a2a0e798f8f55cac0f6f120fc3384049136",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "highlights": [
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ]
+              ],
+              "audience": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ]
+              ],
+              "core_title": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "core_summary": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "prerequisites": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "limitations": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "license_label": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "license_restrictions": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-07-23/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+          "publication_evidence": {
+            "full_name": "koala73/worldmonitor",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "31231a2a0e798f8f55cac0f6f120fc3384049136",
+              "source_url": "https://api.github.com/repos/koala73/worldmonitor/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-23/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+              "sha256": "020a898862a29cafb4a70f81587c58230afa61547ab14d1be12eba6af8094956",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0-only",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.01.koala73--worldmonitor.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1238120057,
+          "full_name": "ayghri/i-have-adhd",
+          "owner": "ayghri",
+          "name": "i-have-adhd",
+          "html_url": "https://github.com/ayghri/i-have-adhd",
+          "description": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
+          "language": "Python",
+          "stars": 8229,
+          "forks": 377,
+          "open_issues": 5,
+          "watchers": 19,
+          "topics": [
+            "adhd",
+            "claude-",
+            "claude-code-plugin",
+            "claude-skills",
+            "developer-tools",
+            "productivity"
+          ],
+          "created_at": "2026-05-13T20:42:06Z",
+          "updated_at": "2026-07-22T23:28:00Z",
+          "pushed_at": "2026-07-22T22:14:47Z",
+          "daily_stars": 1682,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 92.15,
+          "star_delta": 1454,
+          "fork_delta": 99,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.65,
+            "relative_growth": 100.0,
+            "fork_growth": 96.47,
+            "total_stars": 23.53,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "让编码助手先给行动结论，再用编号步骤说明操作，减少寒暄、旁支和埋在长文里的答案。",
+            "highlights": [
+              "把下一步行动放在回答开头",
+              "将多步骤任务改成编号清单",
+              "用一个具体下一步结束回答"
+            ],
+            "audience": "适合容易被冗长回答打断思路，或希望 Claude Code、Codex 直接给出可执行步骤的使用者。",
+            "capabilities": [
+              "先输出当前最该执行的动作",
+              "把多步骤任务整理成编号清单",
+              "压缩与当前任务无关的旁支",
+              "用明确时间代替模糊耗时描述",
+              "在结尾留下一个具体下一步"
+            ],
+            "core_title": "把答案从长文里提到最前",
+            "core_summary": "这项技能用一组固定输出规则约束编码助手：行动优先、步骤编号、减少旁支和客套，并在每轮结束时给出一个可继续执行的动作。",
+            "prerequisites": "需先在 Claude Code 或 Codex 安装插件，再通过对应命令启用输出风格。",
+            "limitations": "只调整编码助手的输出风格；规则会压制旁支、取消寒暄，并把列表限制在 5 项。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "aeedca60403ea75b675ab5cce2d9457f61bbdcbe",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+              ],
+              "highlights": [
+                [
+                  "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+                ],
+                [
+                  "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+                ],
+                [
+                  "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+                ]
+              ],
+              "audience": [
+                "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+                ],
+                [
+                  "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+                ],
+                [
+                  "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+                ],
+                [
+                  "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+                ],
+                [
+                  "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+                ]
+              ],
+              "core_title": [
+                "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+              ],
+              "core_summary": [
+                "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+              ],
+              "prerequisites": [
+                "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+              ],
+              "limitations": [
+                "github.readme:aeedca60403ea75b675ab5cce2d9457f61bbdcbe"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-23/repo-32d4385133b004ff67b76591-b1305a6802c37dd64103952c.png",
+          "publication_evidence": {
+            "full_name": "ayghri/i-have-adhd",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "aeedca60403ea75b675ab5cce2d9457f61bbdcbe",
+              "source_url": "https://api.github.com/repos/ayghri/i-have-adhd/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-23/repo-32d4385133b004ff67b76591-b1305a6802c37dd64103952c.png",
+              "sha256": "c280689774a4b6abb104245827197b254640bdc27c13bc263a8ea7ea0989b7b7",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.02.ayghri--i-have-adhd.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1157102282,
+          "full_name": "diegosouzapw/OmniRoute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "html_url": "https://github.com/diegosouzapw/OmniRoute",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+          "language": "TypeScript",
+          "stars": 25185,
+          "forks": 3348,
+          "open_issues": 231,
+          "watchers": 145,
+          "topics": [
+            "a2a",
+            "ai-agents",
+            "ai-gateway",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "cline",
+            "codex",
+            "copilot",
+            "cursor",
+            "deepseek",
+            "free-ai",
+            "gemini",
+            "kimi",
+            "llm-gateway",
+            "mcp",
+            "openai",
+            "openai-proxy",
+            "qwen",
+            "token-saver"
+          ],
+          "created_at": "2026-02-13T12:38:31Z",
+          "updated_at": "2026-07-22T23:29:40Z",
+          "pushed_at": "2026-07-22T23:29:23Z",
+          "daily_stars": 1648,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 91.58,
+          "star_delta": 1657,
+          "fork_delta": 200,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.82,
+            "relative_growth": 96.47,
+            "fork_growth": 98.82,
+            "total_stars": 28.24,
+            "activity": 100.0,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "把多个模型供应商接到同一入口，并在额度耗尽或调用失败时自动切换后备模型。",
+            "highlights": [
+              "用统一接口连接不同模型供应商",
+              "按额度、成本、延迟和健康度路由",
+              "在失败或限额触发时自动回退"
+            ],
+            "audience": "适合同时使用多个模型服务，并希望为编码工具统一接口、分配额度和准备后备线路的 AI 开发者与团队。",
+            "capabilities": [
+              "汇集不同供应商的模型接口",
+              "按策略选择当前请求的模型",
+              "在限额或故障时切换后备模型",
+              "压缩提示词与工具输出以减少用量",
+              "通过 MCP 和 A2A 交给智能体管理"
+            ],
+            "core_title": "用模型组合自动接力请求",
+            "core_summary": "核心工作流是把多个模型排成组合，并依据额度、成本、延迟、成功率等状态实时选择；当前目标不可用时，请求会转向组合中的下一个模型。",
+            "prerequisites": "全局安装可用 npm；源码运行要求 Node.js 22.x 或 24.x LTS，并连接至少一个模型供应商。",
+            "limitations": "记忆功能默认关闭；远程令牌有作用域，启动进程的路由仅允许本机回环访问。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "b0d070df0aee52611ab1d88f2055bd9f0cebcc3a",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+              ],
+              "highlights": [
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ],
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ],
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ]
+              ],
+              "audience": [
+                "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ],
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ],
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ],
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ],
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ]
+              ],
+              "core_title": [
+                "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+              ],
+              "core_summary": [
+                "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+              ],
+              "prerequisites": [
+                "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+              ],
+              "limitations": [
+                "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-23/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "publication_evidence": {
+            "full_name": "diegosouzapw/OmniRoute",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "b0d070df0aee52611ab1d88f2055bd9f0cebcc3a",
+              "source_url": "https://api.github.com/repos/diegosouzapw/OmniRoute/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-23/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+              "sha256": "6d871cb62c7c54edf4cb091efe3bab15fb8e9fc0f59fb6f2426bc1063761b340",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-23/2026-07-23.comprehensive.03.diegosouzapw--omniroute.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-23/2026-07-23.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "koala73/worldmonitor",
+            "path": "reports/daily/assets/2026-07-23/2026-07-23.ai.01.koala73--worldmonitor.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/daily/assets/2026-07-23/2026-07-23.ai.02.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "oblien/openship",
+            "path": "reports/daily/assets/2026-07-23/2026-07-23.ai.03.oblien--openship.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1130564872,
+          "full_name": "koala73/worldmonitor",
+          "owner": "koala73",
+          "name": "worldmonitor",
+          "html_url": "https://github.com/koala73/worldmonitor",
+          "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+          "language": "TypeScript",
+          "stars": 68851,
+          "forks": 10524,
+          "open_issues": 252,
+          "watchers": 432,
+          "topics": [
+            "agent",
+            "ai",
+            "dashboard",
+            "geopolitics",
+            "mcp",
+            "mcp-server",
+            "monitoring",
+            "news",
+            "opensource",
+            "osint",
+            "palantir",
+            "situation"
+          ],
+          "created_at": "2026-01-08T17:26:06Z",
+          "updated_at": "2026-07-22T23:30:50Z",
+          "pushed_at": "2026-07-22T22:11:14Z",
+          "daily_stars": 4131,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 96.45,
+          "star_delta": 3601,
+          "fork_delta": 349,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 29.03,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把全球新闻、地缘风险、市场与基础设施信号汇进同一张态势看板。",
+            "highlights": [
+              "聚合新闻源并用 AI 生成简报",
+              "在地球仪和平面地图上叠加多类图层",
+              "交叉关联军事、经济、灾害与升级信号"
+            ],
+            "audience": "需要持续观察全球事件、市场与关键基础设施的研究者、分析人员和自建情报看板团队",
+            "capabilities": [
+              "汇总多类别新闻源并生成简报",
+              "切换三维地球与平面地图查看事件",
+              "关联军事、经济、灾害等信号",
+              "追踪股票市场、商品与加密资产",
+              "通过 MCP、REST API、CLI 或 SDK 调用数据"
+            ],
+            "core_title": "多源信号汇成一张态势图",
+            "core_summary": "项目把新闻、地图图层、风险评分和市场数据放进统一界面，并用跨流关联寻找同时出现的军事、经济、灾害与升级信号。",
+            "prerequisites": "本地开发需安装 npm 依赖；应用本身可无环境变量运行，特定数据源可能需要凭据。",
+            "limitations": "部分数据源需要凭据；MCP 的 tools/call 需要 X-WorldMonitor-Key 或 OAuth 认证。",
+            "license_label": "AGPL-3.0-only",
+            "license_restrictions": "share source under AGPL-3.0-only when required",
+            "readme_sha": "31231a2a0e798f8f55cac0f6f120fc3384049136",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "highlights": [
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ]
+              ],
+              "audience": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ]
+              ],
+              "core_title": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "core_summary": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "prerequisites": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "limitations": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "license_label": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "license_restrictions": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-07-23/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+          "publication_evidence": {
+            "full_name": "koala73/worldmonitor",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "31231a2a0e798f8f55cac0f6f120fc3384049136",
+              "source_url": "https://api.github.com/repos/koala73/worldmonitor/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-23/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+              "sha256": "020a898862a29cafb4a70f81587c58230afa61547ab14d1be12eba6af8094956",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0-only",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-23/2026-07-23.ai.01.koala73--worldmonitor.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1157102282,
+          "full_name": "diegosouzapw/OmniRoute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "html_url": "https://github.com/diegosouzapw/OmniRoute",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+          "language": "TypeScript",
+          "stars": 25185,
+          "forks": 3348,
+          "open_issues": 231,
+          "watchers": 145,
+          "topics": [
+            "a2a",
+            "ai-agents",
+            "ai-gateway",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "cline",
+            "codex",
+            "copilot",
+            "cursor",
+            "deepseek",
+            "free-ai",
+            "gemini",
+            "kimi",
+            "llm-gateway",
+            "mcp",
+            "openai",
+            "openai-proxy",
+            "qwen",
+            "token-saver"
+          ],
+          "created_at": "2026-02-13T12:38:31Z",
+          "updated_at": "2026-07-22T23:29:40Z",
+          "pushed_at": "2026-07-22T23:29:23Z",
+          "daily_stars": 1648,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.99,
+          "star_delta": 1657,
+          "fork_delta": 200,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.77,
+            "relative_growth": 93.55,
+            "fork_growth": 96.77,
+            "total_stars": 12.9,
+            "activity": 100.0,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "把多个模型供应商收进一个本地网关，按配额、成本与健康状态自动路由和切换。",
+            "highlights": [
+              "用 auto 自动组合已连接的模型",
+              "在配额耗尽或供应商失败时回退",
+              "压缩提示与工具输出以减少令牌占用"
+            ],
+            "audience": "同时使用多家模型服务、需要统一接入编码 CLI，并希望减少配额中断的个人或团队",
+            "capabilities": [
+              "统一暴露 OpenAI 兼容调用入口",
+              "按配额、成本、延迟等条件选模型",
+              "串联模型并在故障时自动切换",
+              "为编码 CLI 写入接入配置",
+              "通过 MCP 与 A2A 交给智能体管理"
+            ],
+            "core_title": "配额感知的模型自动接力",
+            "core_summary": "Auto-Combo 会实时给已连接模型评分，并在配额耗尽、服务失败或成本变化时切到下一目标；也可自定义路由策略和组合步骤。",
+            "prerequisites": "运行需 Node.js 22.x 或 24.x LTS；使用前先连接模型供应商并配置客户端接口。",
+            "limitations": "记忆功能默认关闭；远程模式的进程启动路由仅限本机回环地址；供应商免费额度会变化。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "b0d070df0aee52611ab1d88f2055bd9f0cebcc3a",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+              ],
+              "highlights": [
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ],
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ],
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ]
+              ],
+              "audience": [
+                "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ],
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ],
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ],
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ],
+                [
+                  "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+                ]
+              ],
+              "core_title": [
+                "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+              ],
+              "core_summary": [
+                "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+              ],
+              "prerequisites": [
+                "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+              ],
+              "limitations": [
+                "github.readme:b0d070df0aee52611ab1d88f2055bd9f0cebcc3a"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-23/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "publication_evidence": {
+            "full_name": "diegosouzapw/OmniRoute",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "b0d070df0aee52611ab1d88f2055bd9f0cebcc3a",
+              "source_url": "https://api.github.com/repos/diegosouzapw/OmniRoute/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-23/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+              "sha256": "6d871cb62c7c54edf4cb091efe3bab15fb8e9fc0f59fb6f2426bc1063761b340",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-23/2026-07-23.ai.02.diegosouzapw--omniroute.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1173848034,
+          "full_name": "oblien/openship",
+          "owner": "oblien",
+          "name": "openship",
+          "html_url": "https://github.com/oblien/openship",
+          "description": "Self-hosted deployment platform",
+          "language": "TypeScript",
+          "stars": 7263,
+          "forks": 535,
+          "open_issues": 22,
+          "watchers": 24,
+          "topics": [
+            "agents",
+            "ai",
+            "deployments",
+            "self-hosted"
+          ],
+          "created_at": "2026-03-05T20:16:56Z",
+          "updated_at": "2026-07-22T23:27:58Z",
+          "pushed_at": "2026-07-22T21:59:34Z",
+          "daily_stars": 1304,
+          "weekly_stars": null,
+          "trending_rank_daily": 11,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 86.88,
+          "star_delta": 1096,
+          "fork_delta": 88,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.55,
+            "relative_growth": 96.77,
+            "fork_growth": 90.32,
+            "total_stars": 6.45,
+            "activity": 100.0,
+            "trending_signal": 27.89
+          },
+          "summary": {
+            "one_line": "把代码仓库变成可运行容器，并在自有服务器上统一管理部署、域名、数据库和备份。",
+            "highlights": [
+              "识别项目技术栈并自动构建部署",
+              "提供推送发布、预览环境与回滚",
+              "用桌面端、网页或 CLI 管理服务器"
+            ],
+            "audience": "想在 VPS、独立服务器或家庭实验室自托管应用，并统一管理交付流程的个人开发者和团队",
+            "capabilities": [
+              "检测代码栈并构建 Docker 容器",
+              "配置推送发布、预览环境和回滚",
+              "管理数据库、域名、SSL 与 CDN",
+              "安排数据库和数据卷备份恢复",
+              "通过 REST API 与 MCP 接入自动化"
+            ],
+            "core_title": "零配置文件的自托管发布",
+            "core_summary": "指向代码仓库后，它会识别技术栈、构建容器并配置部署；控制面可从桌面端、网页或 CLI 驱动服务器，把交付与基础设施放在同一处管理。",
+            "prerequisites": "个人模式需安装桌面应用并通过 SSH 管理服务器；团队常驻模式需在服务器安装 CLI 并完成管理员与域名向导。",
+            "limitations": "文档仍在完善；源码 Docker Compose 方式更重，且控制面容器可访问宿主机 Docker 守护进程，只建议有明确容器化需求时使用。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "c2424f8c0d2eaa4fdace81086884ad867ed2aeab",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+              ],
+              "highlights": [
+                [
+                  "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+                ],
+                [
+                  "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+                ],
+                [
+                  "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+                ]
+              ],
+              "audience": [
+                "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+                ],
+                [
+                  "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+                ],
+                [
+                  "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+                ],
+                [
+                  "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+                ],
+                [
+                  "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+                ]
+              ],
+              "core_title": [
+                "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+              ],
+              "core_summary": [
+                "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+              ],
+              "prerequisites": [
+                "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+              ],
+              "limitations": [
+                "github.readme:c2424f8c0d2eaa4fdace81086884ad867ed2aeab"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-23/repo-70c9103343e142dcbcc7396a-ddc06c88eda5e7d5097b6a62.png",
+          "publication_evidence": {
+            "full_name": "oblien/openship",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "c2424f8c0d2eaa4fdace81086884ad867ed2aeab",
+              "source_url": "https://api.github.com/repos/oblien/openship/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-23/repo-70c9103343e142dcbcc7396a-ddc06c88eda5e7d5097b6a62.png",
+              "sha256": "9c3812b94956c24921f87808439102bbaddb1263c5fd66b239f356f710b126da",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-23/2026-07-23.ai.03.oblien--openship.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
