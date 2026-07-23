@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "3e7e3ce191aad916c70fee8ae126a0be9c70eb76e6ac2130801523afb479c54f",
+  "checklist_sha256": "c16d8ce49ba2276cb12d44405a7a73c05ada06cdd5b40e563b9c60f9664add18",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-07-24",
+  "generated_at": "2026-07-24T07:33:24.418720+08:00",
+  "issue": {
+    "number": 13,
+    "code": "D013",
+    "stem": "D013-2026-07-24",
+    "label": "第13期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-07-24.json",
+    "report_sha256": "6b52e1488c13f92e7ead7136d2defa54b958cd3611b6788896133fc498538114",
+    "poster_manifest": "reports/daily/assets/2026-07-24/manifest.json",
+    "poster_manifest_sha256": "a6e60fc03a6a2d6b9580cb163766d953547d3e023e006a01ed40f48425ff163c",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D013-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "5ce01d56cf41e696f0f1cbc8bc4ea1eda27a5c3746833bc7fd30067da00a5f4b",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 321,
+      "caption_sha256": "471e201f3b0aea65bf403f67f787c6825aa7fe432ad7699af7245f8a7dacd3cb",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "921096a596ccc52e51e65aa776099582b9a7b19771bde93c7158bde3257e04c5",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-24/2026-07-24.comprehensive.cover.png",
+          "sha256": "9a9b1718c5201e010e33b57f6eaa5b6c2fe2a8e3f16f38a506dbc6b34d0d2db3",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-24/2026-07-24.comprehensive.01.koala73--worldmonitor.png",
+          "sha256": "48644c2c7d205bc0eda7ae6229680b38cdce6ecfa2ba85b7976d1c9cc79e3b8f",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "koala73/worldmonitor",
+          "publication_path": "images/02-rank-01-koala73-worldmonitor.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-24/2026-07-24.comprehensive.02.diegosouzapw--omniroute.png",
+          "sha256": "03b73246e72f335cdf0e9b5bcf377e8a0e36e435195ee823d98d8e776d3b65bf",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "diegosouzapw/OmniRoute",
+          "publication_path": "images/03-rank-02-diegosouzapw-omniroute.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-24/2026-07-24.comprehensive.03.ruvnet--ruview.png",
+          "sha256": "09d39bdab24364187dfc24e0c066aba68fe55b3d3be0857cb507dcf699ac43db",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "ruvnet/RuView",
+          "publication_path": "images/04-rank-03-ruvnet-ruview.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D013-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "63d3a778c42224be09050e2fe10982a050dae406dbfbe6b8ffcdfe9c94be5b07",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 326,
+      "caption_sha256": "24810f1fa9d908e63cbd0472f5f9f0ce52f41047216bfc0b8315e42a57705081",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "c382dda99dd0c48c9fc3a7a4c43b1d52a430672ad8fb64c1dc9587a0d6c08cb7",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-24/2026-07-24.ai.cover.png",
+          "sha256": "80edb8bdf060da8959c33f3812595e4c95dfd3b5899d059a28ff678ec96e93dd",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-24/2026-07-24.ai.01.koala73--worldmonitor.png",
+          "sha256": "cc33f3617480e1dafef704a620a16cf93c75f468d773884e80f94a26d75336cf",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "koala73/worldmonitor",
+          "publication_path": "images/02-rank-01-koala73-worldmonitor.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-24/2026-07-24.ai.02.diegosouzapw--omniroute.png",
+          "sha256": "6e3d2103e39f949cebbbe0fb5b6a26740fb1bf073068d4548ecdd57c152d79f0",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "diegosouzapw/OmniRoute",
+          "publication_path": "images/03-rank-02-diegosouzapw-omniroute.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-24/2026-07-24.ai.03.obra--superpowers.png",
+          "sha256": "f08bf07f4acb355b3cbc8fc9ca2b28da2b6d2ec6753673815191c0616188b3df",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "obra/superpowers",
+          "publication_path": "images/04-rank-03-obra-superpowers.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-07-24",
+    "revision": "3e7e3ce191aa",
+    "image_policy": "repository-source-reference"
+  }
+}
