@@ -1,0 +1,1507 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-25",
+  "window_start": "2026-07-24",
+  "window_end": "2026-07-25",
+  "generated_at": "2026-07-25T07:31:07+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-24 至 2026-07-25",
+  "publication": {
+    "issue_number": 14,
+    "issue_code": "D014",
+    "issue_label": "第14期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-25",
+    "manifest": "reports/daily/assets/2026-07-25/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "block/buzz",
+            "path": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.01.block--buzz.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "koala73/worldmonitor",
+            "path": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.02.koala73--worldmonitor.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.03.diegosouzapw--omniroute.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-25/2026-07-25.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "koala73/worldmonitor",
+            "path": "reports/daily/assets/2026-07-25/2026-07-25.ai.01.koala73--worldmonitor.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/daily/assets/2026-07-25/2026-07-25.ai.02.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/daily/assets/2026-07-25/2026-07-25.ai.03.citrolabs--ego-lite.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 14,
+      "issue_code": "D014",
+      "issue_label": "第14期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1174789082,
+      "full_name": "block/buzz",
+      "owner": "block",
+      "name": "buzz",
+      "html_url": "https://github.com/block/buzz",
+      "description": "A hive mind communication platform",
+      "language": "Rust",
+      "stars": 9875,
+      "forks": 765,
+      "open_issues": 605,
+      "watchers": 53,
+      "topics": [],
+      "created_at": "2026-03-06T21:00:56Z",
+      "updated_at": "2026-07-24T23:29:44Z",
+      "pushed_at": "2026-07-24T23:30:39Z",
+      "daily_stars": 3274,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 95.42,
+      "star_delta": 3084,
+      "fork_delta": 219,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 97.18,
+        "total_stars": 14.08,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "把人类、AI 代理、代码与工作流放进同一协作空间，让讨论、执行和审计留在一条事件记录里",
+        "highlights": [
+          "让人和代理以成员身份共用频道与房间",
+          "把补丁、CI、评审和合并决定留在分支房间",
+          "用签名事件统一搜索消息、流程与 Git 记录"
+        ],
+        "audience": "适合希望自建协作空间，并让 AI 代理参与代码评审、故障追溯、发布流程和团队讨论的开发团队",
+        "capabilities": [
+          "创建频道、私聊、画布和媒体讨论",
+          "让代理打开仓库、提交补丁并评审代码",
+          "把功能分支变成承载 CI 与合并决策的房间",
+          "用 YAML 触发消息、反应、定时或 Webhook 流程",
+          "搜索消息、补丁、审批与工作流记录"
+        ],
+        "core_title": "同一事件日志里的协作",
+        "core_summary": "消息、反应、流程步骤、审批和 Git 事件都写成带签名的事件；人和代理沿用同一身份模型、搜索索引与审计轨迹。",
+        "prerequisites": "源码运行需 Docker、Hermit；或 Rust 1.88+、Node 24+、pnpm 10+、just。Windows 需 bash 兼容 shell。",
+        "limitations": "移动端、审批门禁和语音会话生命周期仍在接线；愿景栏目尚未落地，协作强调人类保持参与。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "6aa3eeff0be958ee56d794add7b8fc75ad617719",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+          ],
+          "highlights": [
+            [
+              "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+            ],
+            [
+              "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+            ],
+            [
+              "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+            ]
+          ],
+          "audience": [
+            "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+          ],
+          "capabilities": [
+            [
+              "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+            ],
+            [
+              "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+            ],
+            [
+              "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+            ],
+            [
+              "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+            ],
+            [
+              "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+            ]
+          ],
+          "core_title": [
+            "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+          ],
+          "core_summary": [
+            "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+          ],
+          "prerequisites": [
+            "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+          ],
+          "limitations": [
+            "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-25/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+      "publication_evidence": {
+        "full_name": "block/buzz",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "6aa3eeff0be958ee56d794add7b8fc75ad617719",
+          "source_url": "https://api.github.com/repos/block/buzz/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-25/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+          "sha256": "da1dee26e748f51b90f0396340de20f653da2726fed41626cc29f3843aaabef3",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.01.block--buzz.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1130564872,
+      "full_name": "koala73/worldmonitor",
+      "owner": "koala73",
+      "name": "worldmonitor",
+      "html_url": "https://github.com/koala73/worldmonitor",
+      "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+      "language": "TypeScript",
+      "stars": 73230,
+      "forks": 10980,
+      "open_issues": 254,
+      "watchers": 451,
+      "topics": [
+        "agent",
+        "ai",
+        "dashboard",
+        "geopolitics",
+        "mcp",
+        "mcp-server",
+        "monitoring",
+        "news",
+        "opensource",
+        "osint",
+        "palantir",
+        "situation"
+      ],
+      "created_at": "2026-01-08T17:26:06Z",
+      "updated_at": "2026-07-24T23:29:45Z",
+      "pushed_at": "2026-07-24T21:00:41Z",
+      "daily_stars": 2194,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 91.53,
+      "star_delta": 1725,
+      "fork_delta": 187,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.18,
+        "relative_growth": 94.37,
+        "fork_growth": 95.77,
+        "total_stars": 26.76,
+        "activity": 100.0,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "把新闻、地缘政治、市场与基础设施信号汇总到一张态势面板，方便持续观察全球事件变化",
+        "highlights": [
+          "聚合多类新闻源并生成 AI 简报",
+          "在地球与平面地图上叠加态势图层",
+          "关联军事、经济、灾害与升级信号"
+        ],
+        "audience": "适合需要追踪全球新闻、地缘风险、市场和基础设施动态的研究人员、分析团队与信息整合开发者",
+        "capabilities": [
+          "汇总新闻源并生成 AI 简报",
+          "切换地球与 WebGL 平面地图",
+          "关联军事、经济、灾害和升级信号",
+          "查看国家压力、市场与基础设施指标",
+          "通过 MCP、REST、CLI 或 SDK 读取数据"
+        ],
+        "core_title": "跨数据流的态势关联",
+        "core_summary": "同一界面将新闻、地图、市场和基础设施数据并排呈现，再把军事、经济、灾害等信号做交叉关联，减少在多个来源间来回切换。",
+        "prerequisites": "本地开发需安装项目依赖并运行开发服务；基础应用无需环境变量，特定数据源可能需要凭据。",
+        "limitations": "特定数据源可能需要凭据；MCP 工具调用需要密钥或 OAuth，公开访问仅支持列出工具。",
+        "license_label": "AGPL-3.0-only",
+        "license_restrictions": "Separate commercial or trademark permission needed",
+        "readme_sha": "31231a2a0e798f8f55cac0f6f120fc3384049136",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "highlights": [
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ],
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ],
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ]
+          ],
+          "audience": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "capabilities": [
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ],
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ],
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ],
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ],
+            [
+              "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+            ]
+          ],
+          "core_title": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "core_summary": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "prerequisites": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "limitations": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "license_label": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ],
+          "license_restrictions": [
+            "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-07-25/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+      "publication_evidence": {
+        "full_name": "koala73/worldmonitor",
+        "license_spdx_id": "NOASSERTION",
+        "readme": {
+          "sha": "31231a2a0e798f8f55cac0f6f120fc3384049136",
+          "source_url": "https://api.github.com/repos/koala73/worldmonitor/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-25/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+          "sha256": "020a898862a29cafb4a70f81587c58230afa61547ab14d1be12eba6af8094956",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "AGPL-3.0-only",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.02.koala73--worldmonitor.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1157102282,
+      "full_name": "diegosouzapw/OmniRoute",
+      "owner": "diegosouzapw",
+      "name": "OmniRoute",
+      "html_url": "https://github.com/diegosouzapw/OmniRoute",
+      "description": "Never stop coding. Free MIT AI gateway: one endpoint, 290+ providers (90+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+      "language": "TypeScript",
+      "stars": 28781,
+      "forks": 3775,
+      "open_issues": 279,
+      "watchers": 157,
+      "topics": [
+        "a2a",
+        "ai-agents",
+        "ai-gateway",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "cline",
+        "codex",
+        "copilot",
+        "cursor",
+        "deepseek",
+        "free-ai",
+        "gemini",
+        "kimi",
+        "llm-gateway",
+        "mcp",
+        "openai",
+        "openai-proxy",
+        "qwen",
+        "token-saver"
+      ],
+      "created_at": "2026-02-13T12:38:31Z",
+      "updated_at": "2026-07-24T23:26:56Z",
+      "pushed_at": "2026-07-24T20:26:10Z",
+      "daily_stars": 1843,
+      "weekly_stars": null,
+      "trending_rank_daily": 15,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 89.42,
+      "star_delta": 1673,
+      "fork_delta": 221,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.77,
+        "relative_growth": 97.18,
+        "fork_growth": 98.59,
+        "total_stars": 19.72,
+        "activity": 100.0,
+        "trending_signal": 25.0
+      },
+      "summary": {
+        "one_line": "把多个 AI 模型供应商收进一个兼容 OpenAI 的入口，按额度、成本和健康状态自动选路与切换",
+        "highlights": [
+          "用统一端点连接多家模型供应商",
+          "额度耗尽或服务失败时自动切换",
+          "在请求进入模型前压缩上下文与工具输出"
+        ],
+        "audience": "适合需要统一管理多个模型供应商，并为编码工具、代理或应用配置路由、回退和用量控制的开发者",
+        "capabilities": [
+          "接入兼容 OpenAI 的聊天与多媒体接口",
+          "按成本、延迟、额度和健康状态路由",
+          "组合多个模型做回退、融合或流水线",
+          "压缩提示词、工具日志和历史上下文",
+          "通过 MCP、A2A、CLI 与 Webhook 管理网关"
+        ],
+        "core_title": "配额感知的自动模型路由",
+        "core_summary": "自动组合会持续评分已连接模型；遇到额度耗尽、服务失败或成本变化时转向下一目标，并可为编码、低延迟、低成本等任务选不同策略。",
+        "prerequisites": "全局安装需 Node ≥22.22.2；源码运行需复制 .env 并安装依赖。",
+        "limitations": "记忆功能默认关闭；远程令牌按权限分级，启动进程的接口仅允许本机回环访问。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "cc49454f00ea0fcc097a308e94a6384819e66d11",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+          ],
+          "highlights": [
+            [
+              "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+            ],
+            [
+              "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+            ],
+            [
+              "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+            ]
+          ],
+          "audience": [
+            "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+          ],
+          "capabilities": [
+            [
+              "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+            ],
+            [
+              "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+            ],
+            [
+              "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+            ],
+            [
+              "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+            ],
+            [
+              "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+            ]
+          ],
+          "core_title": [
+            "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+          ],
+          "core_summary": [
+            "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+          ],
+          "prerequisites": [
+            "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+          ],
+          "limitations": [
+            "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-25/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+      "publication_evidence": {
+        "full_name": "diegosouzapw/OmniRoute",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "cc49454f00ea0fcc097a308e94a6384819e66d11",
+          "source_url": "https://api.github.com/repos/diegosouzapw/OmniRoute/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-25/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "sha256": "6d871cb62c7c54edf4cb091efe3bab15fb8e9fc0f59fb6f2426bc1063761b340",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.03.diegosouzapw--omniroute.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "block/buzz",
+            "path": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.01.block--buzz.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "koala73/worldmonitor",
+            "path": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.02.koala73--worldmonitor.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.03.diegosouzapw--omniroute.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1174789082,
+          "full_name": "block/buzz",
+          "owner": "block",
+          "name": "buzz",
+          "html_url": "https://github.com/block/buzz",
+          "description": "A hive mind communication platform",
+          "language": "Rust",
+          "stars": 9875,
+          "forks": 765,
+          "open_issues": 605,
+          "watchers": 53,
+          "topics": [],
+          "created_at": "2026-03-06T21:00:56Z",
+          "updated_at": "2026-07-24T23:29:44Z",
+          "pushed_at": "2026-07-24T23:30:39Z",
+          "daily_stars": 3274,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.42,
+          "star_delta": 3084,
+          "fork_delta": 219,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 97.18,
+            "total_stars": 14.08,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把人类、AI 代理、代码与工作流放进同一协作空间，让讨论、执行和审计留在一条事件记录里",
+            "highlights": [
+              "让人和代理以成员身份共用频道与房间",
+              "把补丁、CI、评审和合并决定留在分支房间",
+              "用签名事件统一搜索消息、流程与 Git 记录"
+            ],
+            "audience": "适合希望自建协作空间，并让 AI 代理参与代码评审、故障追溯、发布流程和团队讨论的开发团队",
+            "capabilities": [
+              "创建频道、私聊、画布和媒体讨论",
+              "让代理打开仓库、提交补丁并评审代码",
+              "把功能分支变成承载 CI 与合并决策的房间",
+              "用 YAML 触发消息、反应、定时或 Webhook 流程",
+              "搜索消息、补丁、审批与工作流记录"
+            ],
+            "core_title": "同一事件日志里的协作",
+            "core_summary": "消息、反应、流程步骤、审批和 Git 事件都写成带签名的事件；人和代理沿用同一身份模型、搜索索引与审计轨迹。",
+            "prerequisites": "源码运行需 Docker、Hermit；或 Rust 1.88+、Node 24+、pnpm 10+、just。Windows 需 bash 兼容 shell。",
+            "limitations": "移动端、审批门禁和语音会话生命周期仍在接线；愿景栏目尚未落地，协作强调人类保持参与。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "6aa3eeff0be958ee56d794add7b8fc75ad617719",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+              ],
+              "highlights": [
+                [
+                  "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+                ],
+                [
+                  "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+                ],
+                [
+                  "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+                ]
+              ],
+              "audience": [
+                "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+                ],
+                [
+                  "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+                ],
+                [
+                  "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+                ],
+                [
+                  "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+                ],
+                [
+                  "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+                ]
+              ],
+              "core_title": [
+                "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+              ],
+              "core_summary": [
+                "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+              ],
+              "prerequisites": [
+                "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+              ],
+              "limitations": [
+                "github.readme:6aa3eeff0be958ee56d794add7b8fc75ad617719"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-25/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+          "publication_evidence": {
+            "full_name": "block/buzz",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "6aa3eeff0be958ee56d794add7b8fc75ad617719",
+              "source_url": "https://api.github.com/repos/block/buzz/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-25/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+              "sha256": "da1dee26e748f51b90f0396340de20f653da2726fed41626cc29f3843aaabef3",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.01.block--buzz.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1130564872,
+          "full_name": "koala73/worldmonitor",
+          "owner": "koala73",
+          "name": "worldmonitor",
+          "html_url": "https://github.com/koala73/worldmonitor",
+          "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+          "language": "TypeScript",
+          "stars": 73230,
+          "forks": 10980,
+          "open_issues": 254,
+          "watchers": 451,
+          "topics": [
+            "agent",
+            "ai",
+            "dashboard",
+            "geopolitics",
+            "mcp",
+            "mcp-server",
+            "monitoring",
+            "news",
+            "opensource",
+            "osint",
+            "palantir",
+            "situation"
+          ],
+          "created_at": "2026-01-08T17:26:06Z",
+          "updated_at": "2026-07-24T23:29:45Z",
+          "pushed_at": "2026-07-24T21:00:41Z",
+          "daily_stars": 2194,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 91.53,
+          "star_delta": 1725,
+          "fork_delta": 187,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.18,
+            "relative_growth": 94.37,
+            "fork_growth": 95.77,
+            "total_stars": 26.76,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把新闻、地缘政治、市场与基础设施信号汇总到一张态势面板，方便持续观察全球事件变化",
+            "highlights": [
+              "聚合多类新闻源并生成 AI 简报",
+              "在地球与平面地图上叠加态势图层",
+              "关联军事、经济、灾害与升级信号"
+            ],
+            "audience": "适合需要追踪全球新闻、地缘风险、市场和基础设施动态的研究人员、分析团队与信息整合开发者",
+            "capabilities": [
+              "汇总新闻源并生成 AI 简报",
+              "切换地球与 WebGL 平面地图",
+              "关联军事、经济、灾害和升级信号",
+              "查看国家压力、市场与基础设施指标",
+              "通过 MCP、REST、CLI 或 SDK 读取数据"
+            ],
+            "core_title": "跨数据流的态势关联",
+            "core_summary": "同一界面将新闻、地图、市场和基础设施数据并排呈现，再把军事、经济、灾害等信号做交叉关联，减少在多个来源间来回切换。",
+            "prerequisites": "本地开发需安装项目依赖并运行开发服务；基础应用无需环境变量，特定数据源可能需要凭据。",
+            "limitations": "特定数据源可能需要凭据；MCP 工具调用需要密钥或 OAuth，公开访问仅支持列出工具。",
+            "license_label": "AGPL-3.0-only",
+            "license_restrictions": "Separate commercial or trademark permission needed",
+            "readme_sha": "31231a2a0e798f8f55cac0f6f120fc3384049136",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "highlights": [
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ]
+              ],
+              "audience": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ]
+              ],
+              "core_title": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "core_summary": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "prerequisites": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "limitations": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "license_label": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "license_restrictions": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-07-25/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+          "publication_evidence": {
+            "full_name": "koala73/worldmonitor",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "31231a2a0e798f8f55cac0f6f120fc3384049136",
+              "source_url": "https://api.github.com/repos/koala73/worldmonitor/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-25/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+              "sha256": "020a898862a29cafb4a70f81587c58230afa61547ab14d1be12eba6af8094956",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0-only",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.02.koala73--worldmonitor.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1157102282,
+          "full_name": "diegosouzapw/OmniRoute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "html_url": "https://github.com/diegosouzapw/OmniRoute",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 290+ providers (90+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+          "language": "TypeScript",
+          "stars": 28781,
+          "forks": 3775,
+          "open_issues": 279,
+          "watchers": 157,
+          "topics": [
+            "a2a",
+            "ai-agents",
+            "ai-gateway",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "cline",
+            "codex",
+            "copilot",
+            "cursor",
+            "deepseek",
+            "free-ai",
+            "gemini",
+            "kimi",
+            "llm-gateway",
+            "mcp",
+            "openai",
+            "openai-proxy",
+            "qwen",
+            "token-saver"
+          ],
+          "created_at": "2026-02-13T12:38:31Z",
+          "updated_at": "2026-07-24T23:26:56Z",
+          "pushed_at": "2026-07-24T20:26:10Z",
+          "daily_stars": 1843,
+          "weekly_stars": null,
+          "trending_rank_daily": 15,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 89.42,
+          "star_delta": 1673,
+          "fork_delta": 221,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.77,
+            "relative_growth": 97.18,
+            "fork_growth": 98.59,
+            "total_stars": 19.72,
+            "activity": 100.0,
+            "trending_signal": 25.0
+          },
+          "summary": {
+            "one_line": "把多个 AI 模型供应商收进一个兼容 OpenAI 的入口，按额度、成本和健康状态自动选路与切换",
+            "highlights": [
+              "用统一端点连接多家模型供应商",
+              "额度耗尽或服务失败时自动切换",
+              "在请求进入模型前压缩上下文与工具输出"
+            ],
+            "audience": "适合需要统一管理多个模型供应商，并为编码工具、代理或应用配置路由、回退和用量控制的开发者",
+            "capabilities": [
+              "接入兼容 OpenAI 的聊天与多媒体接口",
+              "按成本、延迟、额度和健康状态路由",
+              "组合多个模型做回退、融合或流水线",
+              "压缩提示词、工具日志和历史上下文",
+              "通过 MCP、A2A、CLI 与 Webhook 管理网关"
+            ],
+            "core_title": "配额感知的自动模型路由",
+            "core_summary": "自动组合会持续评分已连接模型；遇到额度耗尽、服务失败或成本变化时转向下一目标，并可为编码、低延迟、低成本等任务选不同策略。",
+            "prerequisites": "全局安装需 Node ≥22.22.2；源码运行需复制 .env 并安装依赖。",
+            "limitations": "记忆功能默认关闭；远程令牌按权限分级，启动进程的接口仅允许本机回环访问。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "cc49454f00ea0fcc097a308e94a6384819e66d11",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+              ],
+              "highlights": [
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ],
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ],
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ]
+              ],
+              "audience": [
+                "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ],
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ],
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ],
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ],
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ]
+              ],
+              "core_title": [
+                "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+              ],
+              "core_summary": [
+                "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+              ],
+              "prerequisites": [
+                "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+              ],
+              "limitations": [
+                "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-25/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "publication_evidence": {
+            "full_name": "diegosouzapw/OmniRoute",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "cc49454f00ea0fcc097a308e94a6384819e66d11",
+              "source_url": "https://api.github.com/repos/diegosouzapw/OmniRoute/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-25/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+              "sha256": "6d871cb62c7c54edf4cb091efe3bab15fb8e9fc0f59fb6f2426bc1063761b340",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-25/2026-07-25.comprehensive.03.diegosouzapw--omniroute.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-25/2026-07-25.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "koala73/worldmonitor",
+            "path": "reports/daily/assets/2026-07-25/2026-07-25.ai.01.koala73--worldmonitor.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/daily/assets/2026-07-25/2026-07-25.ai.02.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/daily/assets/2026-07-25/2026-07-25.ai.03.citrolabs--ego-lite.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1130564872,
+          "full_name": "koala73/worldmonitor",
+          "owner": "koala73",
+          "name": "worldmonitor",
+          "html_url": "https://github.com/koala73/worldmonitor",
+          "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+          "language": "TypeScript",
+          "stars": 73230,
+          "forks": 10980,
+          "open_issues": 254,
+          "watchers": 451,
+          "topics": [
+            "agent",
+            "ai",
+            "dashboard",
+            "geopolitics",
+            "mcp",
+            "mcp-server",
+            "monitoring",
+            "news",
+            "opensource",
+            "osint",
+            "palantir",
+            "situation"
+          ],
+          "created_at": "2026-01-08T17:26:06Z",
+          "updated_at": "2026-07-24T23:29:45Z",
+          "pushed_at": "2026-07-24T21:00:41Z",
+          "daily_stars": 2194,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.35,
+          "star_delta": 1725,
+          "fork_delta": 187,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 92.0,
+            "fork_growth": 96.0,
+            "total_stars": 24.0,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把全球新闻、地缘风险与基础设施信号汇入同一仪表盘，供读者研判局势与追踪变化。",
+            "highlights": [
+              "汇总多类别新闻源并生成 AI 简报",
+              "在地球仪与平面地图上叠加监测图层",
+              "关联军事、经济、灾害与升级信号"
+            ],
+            "audience": "需要持续跟踪地缘、金融、灾害或基础设施动态的研究者、分析人员与自建情报看板团队",
+            "capabilities": [
+              "聚合新闻源并生成 AI 简报",
+              "切换三维地球仪与平面地图",
+              "叠加多类地缘与基础设施图层",
+              "计算重点国家的局势压力评分",
+              "通过 MCP、REST、CLI 或 SDK 调用数据"
+            ],
+            "core_title": "跨信号的全球态势看板",
+            "core_summary": "它把新闻、地图图层、市场与风险评分放进同一界面，并关联军事、经济、灾害等信号，便于从多个维度核对局势。",
+            "prerequisites": "本地开发需安装项目依赖；基础运行不要求环境变量，特定功能的数据源可能需要凭据。",
+            "limitations": "MCP 的 tools/call 需要 X-WorldMonitor-Key 或 OAuth；部分功能的数据源需要凭据。",
+            "license_label": "AGPL-3.0-only",
+            "license_restrictions": "Separate commercial or trademark permission needed",
+            "readme_sha": "31231a2a0e798f8f55cac0f6f120fc3384049136",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "highlights": [
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ]
+              ],
+              "audience": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ],
+                [
+                  "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+                ]
+              ],
+              "core_title": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "core_summary": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "prerequisites": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "limitations": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "license_label": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ],
+              "license_restrictions": [
+                "github.readme:31231a2a0e798f8f55cac0f6f120fc3384049136"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-07-25/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+          "publication_evidence": {
+            "full_name": "koala73/worldmonitor",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "31231a2a0e798f8f55cac0f6f120fc3384049136",
+              "source_url": "https://api.github.com/repos/koala73/worldmonitor/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-25/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+              "sha256": "020a898862a29cafb4a70f81587c58230afa61547ab14d1be12eba6af8094956",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0-only",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-25/2026-07-25.ai.01.koala73--worldmonitor.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1157102282,
+          "full_name": "diegosouzapw/OmniRoute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "html_url": "https://github.com/diegosouzapw/OmniRoute",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 290+ providers (90+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+          "language": "TypeScript",
+          "stars": 28781,
+          "forks": 3775,
+          "open_issues": 279,
+          "watchers": 157,
+          "topics": [
+            "a2a",
+            "ai-agents",
+            "ai-gateway",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "cline",
+            "codex",
+            "copilot",
+            "cursor",
+            "deepseek",
+            "free-ai",
+            "gemini",
+            "kimi",
+            "llm-gateway",
+            "mcp",
+            "openai",
+            "openai-proxy",
+            "qwen",
+            "token-saver"
+          ],
+          "created_at": "2026-02-13T12:38:31Z",
+          "updated_at": "2026-07-24T23:26:56Z",
+          "pushed_at": "2026-07-24T20:26:10Z",
+          "daily_stars": 1843,
+          "weekly_stars": null,
+          "trending_rank_daily": 15,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.05,
+          "star_delta": 1673,
+          "fork_delta": 221,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.0,
+            "relative_growth": 96.0,
+            "fork_growth": 100.0,
+            "total_stars": 12.0,
+            "activity": 100.0,
+            "trending_signal": 25.0
+          },
+          "summary": {
+            "one_line": "把多个模型供应商收进一个兼容接口，按配额、成本、延迟或故障自动选择与切换模型。",
+            "highlights": [
+              "用 OpenAI 兼容接口连接多家模型服务",
+              "在配额耗尽或供应商失败时自动回退",
+              "按任务组合路由与上下文压缩流程"
+            ],
+            "audience": "需要为编码工具统一接入多家模型、管理配额并降低切换成本的个人开发者与 AI 平台团队",
+            "capabilities": [
+              "连接不同供应商与本地模型",
+              "用 auto 模式实时选择可用模型",
+              "为组合配置优先级、轮询等路由策略",
+              "压缩提示词与工具输出以控制上下文",
+              "通过 MCP、A2A、REST 或远程 CLI 管理网关"
+            ],
+            "core_title": "配额感知的模型组合路由",
+            "core_summary": "它把多个模型串成可自动切换的组合，根据健康状态、配额、成本和延迟选择目标；某个供应商失败或额度不足时，继续尝试后续模型。",
+            "prerequisites": "全局安装需要 Node ≥22.22.2；也可使用 Docker、桌面应用或从源码运行。",
+            "limitations": "远程模式中，启动进程的路由仅限本机回环；记忆功能默认关闭，需要主动启用。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "cc49454f00ea0fcc097a308e94a6384819e66d11",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+              ],
+              "highlights": [
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ],
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ],
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ]
+              ],
+              "audience": [
+                "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ],
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ],
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ],
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ],
+                [
+                  "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+                ]
+              ],
+              "core_title": [
+                "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+              ],
+              "core_summary": [
+                "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+              ],
+              "prerequisites": [
+                "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+              ],
+              "limitations": [
+                "github.readme:cc49454f00ea0fcc097a308e94a6384819e66d11"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-25/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "publication_evidence": {
+            "full_name": "diegosouzapw/OmniRoute",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "cc49454f00ea0fcc097a308e94a6384819e66d11",
+              "source_url": "https://api.github.com/repos/diegosouzapw/OmniRoute/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-25/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+              "sha256": "6d871cb62c7c54edf4cb091efe3bab15fb8e9fc0f59fb6f2426bc1063761b340",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-25/2026-07-25.ai.02.diegosouzapw--omniroute.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1212503250,
+          "full_name": "citrolabs/ego-lite",
+          "owner": "citrolabs",
+          "name": "ego-lite",
+          "html_url": "https://github.com/citrolabs/ego-lite",
+          "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+          "language": "JavaScript",
+          "stars": 2536,
+          "forks": 120,
+          "open_issues": 28,
+          "watchers": 10,
+          "topics": [
+            "agent-skills",
+            "ai-agent",
+            "browser",
+            "skills",
+            "skills-sh"
+          ],
+          "created_at": "2026-04-16T12:51:09Z",
+          "updated_at": "2026-07-24T23:30:43Z",
+          "pushed_at": "2026-07-24T14:25:24Z",
+          "daily_stars": 884,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 80.74,
+          "star_delta": 940,
+          "fork_delta": 28,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.0,
+            "relative_growth": 100.0,
+            "fork_growth": 58.0,
+            "total_stars": 4.0,
+            "activity": 71.65,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "让 AI 代理在共享浏览器的独立空间里操作真实登录页面，同时不占用你的标签页。",
+            "highlights": [
+              "为每个代理分配隔离的浏览空间",
+              "继承本机 Chrome 登录、Cookie 与扩展",
+              "用 JavaScript 工具一次编排多步网页任务"
+            ],
+            "audience": "需要让 Codex、Claude Code 等外部代理处理登录后网页、并行采集或批量操作的 macOS 用户",
+            "capabilities": [
+              "读取页面快照并定位可操作内容",
+              "填写、点击、等待与跳转网页",
+              "并行运行多个代理浏览任务",
+              "复用现有登录状态处理需认证页面",
+              "让外部代理通过 ego-browser 驱动浏览器"
+            ],
+            "core_title": "人和代理共享浏览器但互不抢页",
+            "core_summary": "每个代理在独立 Space 中读取页面快照并执行 JavaScript 工具，可继承现有登录状态；你继续使用自己的标签页，也能随时接管或停止代理空间。",
+            "prerequisites": "当前需在 macOS 安装 ego lite 应用与 ego-browser skill；首次任务会引导完成安装。",
+            "limitations": "Windows 和 Linux 尚在路线图中；经验积累与复用能力仍标为即将推出。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "53fed33f84768d533643bc6a72abe58583de2827",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "highlights": [
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ]
+              ],
+              "audience": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ]
+              ],
+              "core_title": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "core_summary": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "prerequisites": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "limitations": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-25/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+          "publication_evidence": {
+            "full_name": "citrolabs/ego-lite",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "53fed33f84768d533643bc6a72abe58583de2827",
+              "source_url": "https://api.github.com/repos/citrolabs/ego-lite/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-25/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+              "sha256": "2445c13708491bce07019fa0e774232a9bfaf9a4eba4ca1abfcc3be7abb09e5e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-25/2026-07-25.ai.03.citrolabs--ego-lite.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
