@@ -1,0 +1,1450 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-26",
+  "window_start": "2026-07-25",
+  "window_end": "2026-07-26",
+  "generated_at": "2026-07-26T09:35:18+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-25 至 2026-07-26",
+  "publication": {
+    "issue_number": 15,
+    "issue_code": "D015",
+    "issue_label": "第15期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-26",
+    "manifest": "reports/daily/assets/2026-07-26/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "block/buzz",
+            "path": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.01.block--buzz.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "CoreBunch/Instatic",
+            "path": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.02.corebunch--instatic.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.03.citrolabs--ego-lite.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-26/2026-07-26.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/daily/assets/2026-07-26/2026-07-26.ai.01.citrolabs--ego-lite.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-07-26/2026-07-26.ai.02.obra--superpowers.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-26/2026-07-26.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 15,
+      "issue_code": "D015",
+      "issue_label": "第15期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1174789082,
+      "full_name": "block/buzz",
+      "owner": "block",
+      "name": "buzz",
+      "html_url": "https://github.com/block/buzz",
+      "description": "A hive mind communication platform",
+      "language": "Rust",
+      "stars": 11969,
+      "forks": 957,
+      "open_issues": 610,
+      "watchers": 65,
+      "topics": [],
+      "created_at": "2026-03-06T21:00:56Z",
+      "updated_at": "2026-07-26T01:34:47Z",
+      "pushed_at": "2026-07-26T00:56:20Z",
+      "daily_stars": 2491,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 95.41,
+      "star_delta": 2094,
+      "fork_delta": 192,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 98.63,
+        "fork_growth": 100.0,
+        "total_stars": 13.7,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "让人和 AI Agent 在同一工作区协作，把对话、代码、流程与审批留在统一记录中",
+        "highlights": [
+          "让 Agent 像团队成员一样加入频道协作",
+          "把分支、补丁、检查与合并决定放进同一房间",
+          "统一搜索对话、代码事件、流程与审批记录"
+        ],
+        "audience": "适合希望自托管团队协作空间，并让 AI Agent 参与开发、审查和发布流程的团队",
+        "capabilities": [
+          "创建频道、私聊、画布与媒体讨论空间",
+          "让 Agent 打开仓库、提交补丁并审查代码",
+          "把功能分支关联为包含检查与审批的房间",
+          "用消息、反应、计划或 Webhook 触发流程",
+          "搜索对话、补丁、流程结果与审计记录"
+        ],
+        "core_title": "人和 Agent 共用事件日志",
+        "core_summary": "人、Agent、工作流与 Git 操作都写成带签名的事件，共用身份模型、搜索索引和审计轨迹，便于追溯一次决策从讨论到合并的全过程。",
+        "prerequisites": "源码运行需 Docker 与 Hermit；也可自行准备 Rust、Node、pnpm 和 just。",
+        "limitations": "项目尚未完成；移动客户端和流程审批仍在接线中，愿景栏目中的能力还没有代码，使用时应保留人工参与。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "89a131e73ea377fe7e94a327c7796d38b59b4a79",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+          ],
+          "highlights": [
+            [
+              "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+            ],
+            [
+              "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+            ],
+            [
+              "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+            ]
+          ],
+          "audience": [
+            "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+          ],
+          "capabilities": [
+            [
+              "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+            ],
+            [
+              "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+            ],
+            [
+              "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+            ],
+            [
+              "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+            ],
+            [
+              "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+            ]
+          ],
+          "core_title": [
+            "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+          ],
+          "core_summary": [
+            "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+          ],
+          "prerequisites": [
+            "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+          ],
+          "limitations": [
+            "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-26/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+      "publication_evidence": {
+        "full_name": "block/buzz",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "89a131e73ea377fe7e94a327c7796d38b59b4a79",
+          "source_url": "https://api.github.com/repos/block/buzz/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-26/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+          "sha256": "da1dee26e748f51b90f0396340de20f653da2726fed41626cc29f3843aaabef3",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.01.block--buzz.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1225753223,
+      "full_name": "CoreBunch/Instatic",
+      "owner": "CoreBunch",
+      "name": "Instatic",
+      "html_url": "https://github.com/CoreBunch/Instatic",
+      "description": "The open-source alternative to Webflow, Framer and WordPress. Agentic self-hosted visual CMS outputting clean static pages. Users, roles, plugins, content, database, it's all there. ",
+      "language": "TypeScript",
+      "stars": 5096,
+      "forks": 479,
+      "open_issues": 48,
+      "watchers": 42,
+      "topics": [
+        "cms",
+        "css",
+        "css-framework",
+        "page-builder",
+        "static",
+        "website"
+      ],
+      "created_at": "2026-04-30T15:48:54Z",
+      "updated_at": "2026-07-26T01:31:32Z",
+      "pushed_at": "2026-07-25T18:47:54Z",
+      "daily_stars": 426,
+      "weekly_stars": null,
+      "trending_rank_daily": 13,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 88.03,
+      "star_delta": 835,
+      "fork_delta": 72,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.52,
+        "relative_growth": 97.26,
+        "fork_growth": 94.52,
+        "total_stars": 10.96,
+        "activity": 100.0,
+        "trending_signal": 26.26
+      },
+      "summary": {
+        "one_line": "把可视化建站、内容管理与静态发布收进一个自托管 Bun 服务",
+        "highlights": [
+          "在多断点画布中同步设计桌面与移动页面",
+          "发布语义化 HTML 和紧凑 CSS，不带编辑器运行时",
+          "让 AI Agent 直接生成可继续编辑的页面节点"
+        ],
+        "audience": "适合想自托管博客、作品集或企业网站，并统一管理设计、内容、表单和发布的建站者与团队",
+        "capabilities": [
+          "拖放模块并组合可复用组件与模板",
+          "从 HTML 或整站文件导入可编辑页面",
+          "创建集合并管理草稿、定时发布和版本",
+          "生成静态页面并按需加载访客动态部分",
+          "安装沙箱插件扩展路由、模块与数据源"
+        ],
+        "core_title": "编辑器不进入发布页面",
+        "core_summary": "画布负责设计，内容引擎管理数据，发布器把页面烘焙为语义化 HTML 与紧凑 CSS；常见访问直接读取静态文件，编辑器框架不会跟进前台。",
+        "prerequisites": "本地开发只需 Bun，默认使用 SQLite，无需启动额外服务。",
+        "limitations": "项目仍处早期版本，接口和工作流在正式版前可能变化；当前分析功能侧重后台状态、审计历史和表单数据。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "0964c5f9364d5d921f33a5ad6aac40d1202d98cc",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+          ],
+          "highlights": [
+            [
+              "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+            ],
+            [
+              "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+            ],
+            [
+              "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+            ]
+          ],
+          "audience": [
+            "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+          ],
+          "capabilities": [
+            [
+              "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+            ],
+            [
+              "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+            ],
+            [
+              "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+            ],
+            [
+              "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+            ],
+            [
+              "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+            ]
+          ],
+          "core_title": [
+            "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+          ],
+          "core_summary": [
+            "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+          ],
+          "prerequisites": [
+            "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+          ],
+          "limitations": [
+            "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-26/repo-e8cc38623cecfc0c43bb7a2d-9e7d53cd2b15e556c7b55554.png",
+      "publication_evidence": {
+        "full_name": "CoreBunch/Instatic",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "0964c5f9364d5d921f33a5ad6aac40d1202d98cc",
+          "source_url": "https://api.github.com/repos/CoreBunch/Instatic/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-26/repo-e8cc38623cecfc0c43bb7a2d-9e7d53cd2b15e556c7b55554.png",
+          "sha256": "c80e2b0ae57b64c51c07ce172912ce48df19528e03812132c914341c62cd91fb",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.02.corebunch--instatic.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1212503250,
+      "full_name": "citrolabs/ego-lite",
+      "owner": "citrolabs",
+      "name": "ego-lite",
+      "html_url": "https://github.com/citrolabs/ego-lite",
+      "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+      "language": "JavaScript",
+      "stars": 3608,
+      "forks": 176,
+      "open_issues": 31,
+      "watchers": 13,
+      "topics": [
+        "agent-skills",
+        "ai-agent",
+        "browser",
+        "skills",
+        "skills-sh"
+      ],
+      "created_at": "2026-04-16T12:51:09Z",
+      "updated_at": "2026-07-26T01:34:07Z",
+      "pushed_at": "2026-07-25T15:39:13Z",
+      "daily_stars": 986,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 87.13,
+      "star_delta": 1072,
+      "fork_delta": 56,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.89,
+        "relative_growth": 100.0,
+        "fork_growth": 90.41,
+        "total_stars": 9.59,
+        "activity": 71.65,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "让外部 AI Agent 借用你的登录状态执行网页任务，同时不占用你正在浏览的标签页",
+        "highlights": [
+          "给每个 Agent 分配隔离的浏览空间",
+          "继承本机 Chrome 登录、Cookie、扩展和书签",
+          "让 Agent 用 JavaScript 组合多步网页操作"
+        ],
+        "audience": "适合用 Codex、Claude Code 等 Agent 处理登录后网页操作，又想继续使用自己浏览器的用户",
+        "capabilities": [
+          "读取页面快照并定位可操作内容",
+          "填写、点击、等待、跳转和截取页面",
+          "并行运行多个 Agent 或多个网页任务",
+          "迁移 Chrome 数据供 Agent 使用现有登录",
+          "随时接管或停止 Agent 所在空间"
+        ],
+        "core_title": "同一浏览器里的隔离空间",
+        "core_summary": "每个 Agent 在独立 Space 中读取快照并执行 JavaScript 工具调用，可并行使用已有登录状态；你的标签页和鼠标保持原位，也能随时接管或终止任务。",
+        "prerequisites": "当前需使用 macOS，并安装 ego lite 应用及 ego-browser skill。",
+        "limitations": "目前仅支持 macOS，Windows 和 Linux 尚在路线图中；经验积累与复用能力也仍未上线。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "53fed33f84768d533643bc6a72abe58583de2827",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+          ],
+          "highlights": [
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ],
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ],
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ]
+          ],
+          "audience": [
+            "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+          ],
+          "capabilities": [
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ],
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ],
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ],
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ],
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ]
+          ],
+          "core_title": [
+            "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+          ],
+          "core_summary": [
+            "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+          ],
+          "prerequisites": [
+            "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+          ],
+          "limitations": [
+            "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-26/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+      "publication_evidence": {
+        "full_name": "citrolabs/ego-lite",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "53fed33f84768d533643bc6a72abe58583de2827",
+          "source_url": "https://api.github.com/repos/citrolabs/ego-lite/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-26/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+          "sha256": "2445c13708491bce07019fa0e774232a9bfaf9a4eba4ca1abfcc3be7abb09e5e",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.03.citrolabs--ego-lite.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "block/buzz",
+            "path": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.01.block--buzz.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "CoreBunch/Instatic",
+            "path": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.02.corebunch--instatic.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.03.citrolabs--ego-lite.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1174789082,
+          "full_name": "block/buzz",
+          "owner": "block",
+          "name": "buzz",
+          "html_url": "https://github.com/block/buzz",
+          "description": "A hive mind communication platform",
+          "language": "Rust",
+          "stars": 11969,
+          "forks": 957,
+          "open_issues": 610,
+          "watchers": 65,
+          "topics": [],
+          "created_at": "2026-03-06T21:00:56Z",
+          "updated_at": "2026-07-26T01:34:47Z",
+          "pushed_at": "2026-07-26T00:56:20Z",
+          "daily_stars": 2491,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.41,
+          "star_delta": 2094,
+          "fork_delta": 192,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 98.63,
+            "fork_growth": 100.0,
+            "total_stars": 13.7,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "让人和 AI Agent 在同一工作区协作，把对话、代码、流程与审批留在统一记录中",
+            "highlights": [
+              "让 Agent 像团队成员一样加入频道协作",
+              "把分支、补丁、检查与合并决定放进同一房间",
+              "统一搜索对话、代码事件、流程与审批记录"
+            ],
+            "audience": "适合希望自托管团队协作空间，并让 AI Agent 参与开发、审查和发布流程的团队",
+            "capabilities": [
+              "创建频道、私聊、画布与媒体讨论空间",
+              "让 Agent 打开仓库、提交补丁并审查代码",
+              "把功能分支关联为包含检查与审批的房间",
+              "用消息、反应、计划或 Webhook 触发流程",
+              "搜索对话、补丁、流程结果与审计记录"
+            ],
+            "core_title": "人和 Agent 共用事件日志",
+            "core_summary": "人、Agent、工作流与 Git 操作都写成带签名的事件，共用身份模型、搜索索引和审计轨迹，便于追溯一次决策从讨论到合并的全过程。",
+            "prerequisites": "源码运行需 Docker 与 Hermit；也可自行准备 Rust、Node、pnpm 和 just。",
+            "limitations": "项目尚未完成；移动客户端和流程审批仍在接线中，愿景栏目中的能力还没有代码，使用时应保留人工参与。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "89a131e73ea377fe7e94a327c7796d38b59b4a79",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+              ],
+              "highlights": [
+                [
+                  "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+                ],
+                [
+                  "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+                ],
+                [
+                  "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+                ]
+              ],
+              "audience": [
+                "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+                ],
+                [
+                  "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+                ],
+                [
+                  "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+                ],
+                [
+                  "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+                ],
+                [
+                  "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+                ]
+              ],
+              "core_title": [
+                "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+              ],
+              "core_summary": [
+                "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+              ],
+              "prerequisites": [
+                "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+              ],
+              "limitations": [
+                "github.readme:89a131e73ea377fe7e94a327c7796d38b59b4a79"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-26/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+          "publication_evidence": {
+            "full_name": "block/buzz",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "89a131e73ea377fe7e94a327c7796d38b59b4a79",
+              "source_url": "https://api.github.com/repos/block/buzz/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-26/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+              "sha256": "da1dee26e748f51b90f0396340de20f653da2726fed41626cc29f3843aaabef3",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.01.block--buzz.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1225753223,
+          "full_name": "CoreBunch/Instatic",
+          "owner": "CoreBunch",
+          "name": "Instatic",
+          "html_url": "https://github.com/CoreBunch/Instatic",
+          "description": "The open-source alternative to Webflow, Framer and WordPress. Agentic self-hosted visual CMS outputting clean static pages. Users, roles, plugins, content, database, it's all there. ",
+          "language": "TypeScript",
+          "stars": 5096,
+          "forks": 479,
+          "open_issues": 48,
+          "watchers": 42,
+          "topics": [
+            "cms",
+            "css",
+            "css-framework",
+            "page-builder",
+            "static",
+            "website"
+          ],
+          "created_at": "2026-04-30T15:48:54Z",
+          "updated_at": "2026-07-26T01:31:32Z",
+          "pushed_at": "2026-07-25T18:47:54Z",
+          "daily_stars": 426,
+          "weekly_stars": null,
+          "trending_rank_daily": 13,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.03,
+          "star_delta": 835,
+          "fork_delta": 72,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.52,
+            "relative_growth": 97.26,
+            "fork_growth": 94.52,
+            "total_stars": 10.96,
+            "activity": 100.0,
+            "trending_signal": 26.26
+          },
+          "summary": {
+            "one_line": "把可视化建站、内容管理与静态发布收进一个自托管 Bun 服务",
+            "highlights": [
+              "在多断点画布中同步设计桌面与移动页面",
+              "发布语义化 HTML 和紧凑 CSS，不带编辑器运行时",
+              "让 AI Agent 直接生成可继续编辑的页面节点"
+            ],
+            "audience": "适合想自托管博客、作品集或企业网站，并统一管理设计、内容、表单和发布的建站者与团队",
+            "capabilities": [
+              "拖放模块并组合可复用组件与模板",
+              "从 HTML 或整站文件导入可编辑页面",
+              "创建集合并管理草稿、定时发布和版本",
+              "生成静态页面并按需加载访客动态部分",
+              "安装沙箱插件扩展路由、模块与数据源"
+            ],
+            "core_title": "编辑器不进入发布页面",
+            "core_summary": "画布负责设计，内容引擎管理数据，发布器把页面烘焙为语义化 HTML 与紧凑 CSS；常见访问直接读取静态文件，编辑器框架不会跟进前台。",
+            "prerequisites": "本地开发只需 Bun，默认使用 SQLite，无需启动额外服务。",
+            "limitations": "项目仍处早期版本，接口和工作流在正式版前可能变化；当前分析功能侧重后台状态、审计历史和表单数据。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "0964c5f9364d5d921f33a5ad6aac40d1202d98cc",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+              ],
+              "highlights": [
+                [
+                  "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+                ],
+                [
+                  "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+                ],
+                [
+                  "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+                ]
+              ],
+              "audience": [
+                "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+                ],
+                [
+                  "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+                ],
+                [
+                  "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+                ],
+                [
+                  "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+                ],
+                [
+                  "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+                ]
+              ],
+              "core_title": [
+                "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+              ],
+              "core_summary": [
+                "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+              ],
+              "prerequisites": [
+                "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+              ],
+              "limitations": [
+                "github.readme:0964c5f9364d5d921f33a5ad6aac40d1202d98cc"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-26/repo-e8cc38623cecfc0c43bb7a2d-9e7d53cd2b15e556c7b55554.png",
+          "publication_evidence": {
+            "full_name": "CoreBunch/Instatic",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "0964c5f9364d5d921f33a5ad6aac40d1202d98cc",
+              "source_url": "https://api.github.com/repos/CoreBunch/Instatic/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-26/repo-e8cc38623cecfc0c43bb7a2d-9e7d53cd2b15e556c7b55554.png",
+              "sha256": "c80e2b0ae57b64c51c07ce172912ce48df19528e03812132c914341c62cd91fb",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.02.corebunch--instatic.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1212503250,
+          "full_name": "citrolabs/ego-lite",
+          "owner": "citrolabs",
+          "name": "ego-lite",
+          "html_url": "https://github.com/citrolabs/ego-lite",
+          "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+          "language": "JavaScript",
+          "stars": 3608,
+          "forks": 176,
+          "open_issues": 31,
+          "watchers": 13,
+          "topics": [
+            "agent-skills",
+            "ai-agent",
+            "browser",
+            "skills",
+            "skills-sh"
+          ],
+          "created_at": "2026-04-16T12:51:09Z",
+          "updated_at": "2026-07-26T01:34:07Z",
+          "pushed_at": "2026-07-25T15:39:13Z",
+          "daily_stars": 986,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 87.13,
+          "star_delta": 1072,
+          "fork_delta": 56,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.89,
+            "relative_growth": 100.0,
+            "fork_growth": 90.41,
+            "total_stars": 9.59,
+            "activity": 71.65,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "让外部 AI Agent 借用你的登录状态执行网页任务，同时不占用你正在浏览的标签页",
+            "highlights": [
+              "给每个 Agent 分配隔离的浏览空间",
+              "继承本机 Chrome 登录、Cookie、扩展和书签",
+              "让 Agent 用 JavaScript 组合多步网页操作"
+            ],
+            "audience": "适合用 Codex、Claude Code 等 Agent 处理登录后网页操作，又想继续使用自己浏览器的用户",
+            "capabilities": [
+              "读取页面快照并定位可操作内容",
+              "填写、点击、等待、跳转和截取页面",
+              "并行运行多个 Agent 或多个网页任务",
+              "迁移 Chrome 数据供 Agent 使用现有登录",
+              "随时接管或停止 Agent 所在空间"
+            ],
+            "core_title": "同一浏览器里的隔离空间",
+            "core_summary": "每个 Agent 在独立 Space 中读取快照并执行 JavaScript 工具调用，可并行使用已有登录状态；你的标签页和鼠标保持原位，也能随时接管或终止任务。",
+            "prerequisites": "当前需使用 macOS，并安装 ego lite 应用及 ego-browser skill。",
+            "limitations": "目前仅支持 macOS，Windows 和 Linux 尚在路线图中；经验积累与复用能力也仍未上线。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "53fed33f84768d533643bc6a72abe58583de2827",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "highlights": [
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ]
+              ],
+              "audience": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ]
+              ],
+              "core_title": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "core_summary": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "prerequisites": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "limitations": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-26/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+          "publication_evidence": {
+            "full_name": "citrolabs/ego-lite",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "53fed33f84768d533643bc6a72abe58583de2827",
+              "source_url": "https://api.github.com/repos/citrolabs/ego-lite/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-26/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+              "sha256": "2445c13708491bce07019fa0e774232a9bfaf9a4eba4ca1abfcc3be7abb09e5e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-26/2026-07-26.comprehensive.03.citrolabs--ego-lite.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-26/2026-07-26.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/daily/assets/2026-07-26/2026-07-26.ai.01.citrolabs--ego-lite.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-07-26/2026-07-26.ai.02.obra--superpowers.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-26/2026-07-26.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1212503250,
+          "full_name": "citrolabs/ego-lite",
+          "owner": "citrolabs",
+          "name": "ego-lite",
+          "html_url": "https://github.com/citrolabs/ego-lite",
+          "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+          "language": "JavaScript",
+          "stars": 3608,
+          "forks": 176,
+          "open_issues": 31,
+          "watchers": 13,
+          "topics": [
+            "agent-skills",
+            "ai-agent",
+            "browser",
+            "skills",
+            "skills-sh"
+          ],
+          "created_at": "2026-04-16T12:51:09Z",
+          "updated_at": "2026-07-26T01:34:07Z",
+          "pushed_at": "2026-07-25T15:39:13Z",
+          "daily_stars": 986,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 88.55,
+          "star_delta": 1072,
+          "fork_delta": 56,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 88.89,
+            "total_stars": 0.0,
+            "activity": 71.65,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "让 AI Agent 直接操作你已登录的浏览器，并在独立空间并行完成网页任务，不占用你的标签页",
+            "highlights": [
+              "沿用现有登录、Cookie、扩展与书签",
+              "为每个 Agent 分配隔离的浏览空间",
+              "用 JavaScript 工具一次编排多步网页操作"
+            ],
+            "audience": "需要让编码 Agent 使用真实登录状态处理网页流程，同时自己继续浏览的 macOS 用户",
+            "capabilities": [
+              "读取页面快照，定位可交互内容",
+              "填写、点击、等待并跳转网页",
+              "并行运行多个互不干扰的浏览任务",
+              "接入 Codex、Claude Code 等 Agent CLI",
+              "迁移 Chrome 数据供 Agent 继承登录状态"
+            ],
+            "core_title": "人与 Agent 共用浏览器",
+            "core_summary": "每个 Agent 在独立 Space 中读取页面快照并调用浏览器工具；任务可并行执行，你仍保留自己的标签页和鼠标控制。",
+            "prerequisites": "当前仅支持 macOS；需安装 ego lite 应用及 ego-browser 技能。",
+            "limitations": "Windows 和 Linux 仍在路线图中；经验积累与技能自我改进能力标注为即将推出。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "53fed33f84768d533643bc6a72abe58583de2827",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "highlights": [
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ]
+              ],
+              "audience": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ]
+              ],
+              "core_title": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "core_summary": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "prerequisites": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "limitations": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-26/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+          "publication_evidence": {
+            "full_name": "citrolabs/ego-lite",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "53fed33f84768d533643bc6a72abe58583de2827",
+              "source_url": "https://api.github.com/repos/citrolabs/ego-lite/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-26/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+              "sha256": "2445c13708491bce07019fa0e774232a9bfaf9a4eba4ca1abfcc3be7abb09e5e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-26/2026-07-26.ai.01.citrolabs--ego-lite.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 261114,
+          "forks": 23300,
+          "open_issues": 321,
+          "watchers": 975,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-07-26T01:34:08Z",
+          "pushed_at": "2026-07-24T21:21:36Z",
+          "daily_stars": 479,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 83.93,
+          "star_delta": 523,
+          "fork_delta": 57,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.59,
+            "relative_growth": 74.07,
+            "fork_growth": 92.59,
+            "total_stars": 96.3,
+            "activity": 71.65,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "把需求澄清、方案确认、测试驱动开发和代码审查编成一套自动触发的 Agent 研发流程",
+            "highlights": [
+              "编码前先通过提问澄清需求并确认设计",
+              "按任务分派子 Agent，并进行规格与质量审查",
+              "用红绿重构和完成前验证约束实现过程"
+            ],
+            "audience": "希望编码 Agent 按明确方案、测试和审查流程完成研发任务，而不是直接动手写代码的开发者",
+            "capabilities": [
+              "引导对话，把模糊想法整理成设计文档",
+              "拆解计划，写明文件、实现与验证步骤",
+              "创建隔离工作区并检查测试基线",
+              "分派子 Agent 执行任务并逐项审查",
+              "验证测试后提供合并或保留分支选项"
+            ],
+            "core_title": "自动触发的研发方法链",
+            "core_summary": "技能会随开发阶段自动介入：先澄清与确认设计，再规划、测试驱动实现、代码审查，最后验证并处理开发分支。",
+            "prerequisites": "需按所用编码 Agent 单独安装；同时使用多个工具时要分别安装。",
+            "limitations": "通常不接受新增技能贡献，更新还需兼容全部受支持的编码 Agent；可选视觉组件默认会向网站加载标识并携带版本信息，可关闭。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "bb398c6b68b0214439981acf8217a13cd5dcc562",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+              ],
+              "highlights": [
+                [
+                  "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+                ],
+                [
+                  "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+                ],
+                [
+                  "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+                ]
+              ],
+              "audience": [
+                "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+                ],
+                [
+                  "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+                ],
+                [
+                  "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+                ],
+                [
+                  "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+                ],
+                [
+                  "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+                ]
+              ],
+              "core_title": [
+                "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+              ],
+              "core_summary": [
+                "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+              ],
+              "prerequisites": [
+                "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+              ],
+              "limitations": [
+                "github.readme:bb398c6b68b0214439981acf8217a13cd5dcc562"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-26/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "bb398c6b68b0214439981acf8217a13cd5dcc562",
+              "source_url": "https://api.github.com/repos/obra/superpowers/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-26/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+              "sha256": "d38b9c9b368fcb5bf36b16f443d783cc9588fa66f5b399ed5e966b50ab857937",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-26/2026-07-26.ai.02.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 220471,
+          "forks": 41974,
+          "open_issues": 25337,
+          "watchers": 220471,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-07-26T01:35:01Z",
+          "pushed_at": "2026-07-26T01:33:38Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 82.96,
+          "star_delta": 462,
+          "fork_delta": 158,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 88.89,
+            "relative_growth": 70.37,
+            "fork_growth": 100.0,
+            "total_stars": 88.89,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "把终端、聊天平台、定时任务和可学习技能接到同一个可长期运行的个人 Agent",
+            "highlights": [
+              "从任务经验中创建并持续改进技能",
+              "跨会话搜索记忆并维护用户模型",
+              "在本地、容器、远程或无服务器环境运行"
+            ],
+            "audience": "想把个人 Agent 部署在云端或本机，并通过终端和聊天应用持续处理自动化任务的用户",
+            "capabilities": [
+              "切换模型提供方，无需修改代码",
+              "接入 Telegram、Discord 等消息平台",
+              "安排定时任务并把结果发送到指定平台",
+              "派生隔离子 Agent 并行处理工作流",
+              "迁移 OpenClaw 的设置、记忆、技能与密钥"
+            ],
+            "core_title": "会积累经验的闭环 Agent",
+            "core_summary": "它把持久记忆、会话检索、用户建模和技能创建串成学习闭环；复杂任务完成后沉淀技能，后续使用时继续改进。",
+            "prerequisites": "需选择并配置模型提供方；消息平台使用前需完成 gateway 设置。安装器会准备 Python、Node.js 等依赖。",
+            "limitations": "Termux 的完整依赖包含不兼容的语音组件，需使用专用安装选项；手动开发安装应把虚拟环境放在源码目录外。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "highlights": [
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ]
+              ],
+              "audience": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ]
+              ],
+              "core_title": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "core_summary": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "prerequisites": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "limitations": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-26/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-26/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-26/2026-07-26.ai.03.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
