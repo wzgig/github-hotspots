@@ -5,6 +5,7 @@
 | 日期 | 周期 | 期号 | 最新修订 | 修订数 | 内容 |
 | --- | --- | --- | --- | ---: | --- |
 | 2026-07-26 | 日报 | D015 | `d613495918d5` | 1 | [清单](daily/2026/2026-07-26/d613495918d5/MANIFEST.json) · [综合文案](daily/2026/2026-07-26/d613495918d5/01-comprehensive/CAPTION.txt) · [AI 文案](daily/2026/2026-07-26/d613495918d5/02-ai/CAPTION.txt) |
+| 2026-07-26 | 周报 | W003 | `2b2a652024a3` | 1 | [清单](weekly/2026/2026-W30/2b2a652024a3/MANIFEST.json) · [综合文案](weekly/2026/2026-W30/2b2a652024a3/01-comprehensive/CAPTION.txt) · [AI 文案](weekly/2026/2026-W30/2b2a652024a3/02-ai/CAPTION.txt) |
 | 2026-07-25 | 日报 | D014 | `b117a44166c3` | 1 | [清单](daily/2026/2026-07-25/b117a44166c3/MANIFEST.json) · [综合文案](daily/2026/2026-07-25/b117a44166c3/01-comprehensive/CAPTION.txt) · [AI 文案](daily/2026/2026-07-25/b117a44166c3/02-ai/CAPTION.txt) |
 | 2026-07-24 | 日报 | D013 | `3e7e3ce191aa` | 1 | [清单](daily/2026/2026-07-24/3e7e3ce191aa/MANIFEST.json) · [综合文案](daily/2026/2026-07-24/3e7e3ce191aa/01-comprehensive/CAPTION.txt) · [AI 文案](daily/2026/2026-07-24/3e7e3ce191aa/02-ai/CAPTION.txt) |
 | 2026-07-23 | 日报 | D012 | `0840995cf7c4` | 1 | [清单](daily/2026/2026-07-23/0840995cf7c4/MANIFEST.json) · [综合文案](daily/2026/2026-07-23/0840995cf7c4/01-comprehensive/CAPTION.txt) · [AI 文案](daily/2026/2026-07-23/0840995cf7c4/02-ai/CAPTION.txt) |

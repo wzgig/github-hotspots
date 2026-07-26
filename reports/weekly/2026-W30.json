@@ -1,0 +1,3063 @@
+{
+  "schema_version": 3,
+  "period": "weekly",
+  "run_date": "2026-07-26",
+  "window_start": "2026-07-19",
+  "window_end": "2026-07-26",
+  "generated_at": "2026-07-26T13:46:11+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-19 至 2026-07-26",
+  "publication": {
+    "issue_number": 3,
+    "issue_code": "W003",
+    "issue_label": "第3期",
+    "status": "official"
+  },
+  "data_quality": "中高：快照与 Trending 混合",
+  "warnings": [
+    "综合主榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号",
+    "AI 专题榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/weekly/assets/2026-W30",
+    "manifest": "reports/weekly/assets/2026-W30/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.02.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.03.stablyai--orca.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "bojieli/ai-agent-book",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.04.bojieli--ai-agent-book.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "rohitg00/ai-engineering-from-scratch",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.05.rohitg00--ai-engineering-from-scratch.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "koala73/worldmonitor",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.06.koala73--worldmonitor.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.07.diegosouzapw--omniroute.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W30/2026-W30.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "bojieli/ai-agent-book",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.01.bojieli--ai-agent-book.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.02.stablyai--orca.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.03.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "koala73/worldmonitor",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.04.koala73--worldmonitor.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.05.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "rohitg00/ai-engineering-from-scratch",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.06.rohitg00--ai-engineering-from-scratch.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "earendil-works/pi",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.07.earendil-works--pi.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 3,
+      "issue_code": "W003",
+      "issue_label": "第3期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 188544,
+      "forks": 16197,
+      "open_issues": 233,
+      "watchers": 188544,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-07-26T05:45:25Z",
+      "pushed_at": "2026-07-23T14:29:59Z",
+      "daily_stars": null,
+      "weekly_stars": 11790,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 11,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 91.18,
+      "star_delta": 11961,
+      "fork_delta": 1066,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.23,
+        "relative_growth": 92.04,
+        "fork_growth": 99.12,
+        "total_stars": 83.19,
+        "activity": 81.87,
+        "trending_signal": 27.89
+      },
+      "summary": {
+        "one_line": "公开信息不足，暂不能准确说明 skills 的具体用途",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "公开信息不足，暂不能准确说明 skills 的具体用途",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W30/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W30/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.01.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1167788341,
+      "full_name": "tirth8205/code-review-graph",
+      "owner": "tirth8205",
+      "name": "code-review-graph",
+      "html_url": "https://github.com/tirth8205/code-review-graph",
+      "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+      "language": "Python",
+      "stars": 26441,
+      "forks": 2471,
+      "open_issues": 122,
+      "watchers": 86,
+      "topics": [
+        "ai-coding",
+        "claude",
+        "claude-code",
+        "code-review",
+        "graphrag",
+        "incremental",
+        "knowledge-graph",
+        "llm",
+        "mcp",
+        "python",
+        "static-analysis",
+        "tree-sitter"
+      ],
+      "created_at": "2026-02-26T17:25:13Z",
+      "updated_at": "2026-07-26T05:39:59Z",
+      "pushed_at": "2026-07-25T18:53:05Z",
+      "daily_stars": null,
+      "weekly_stars": 6423,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 3,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 91.0,
+      "star_delta": 6296,
+      "fork_delta": 346,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.58,
+        "relative_growth": 95.58,
+        "fork_growth": 92.92,
+        "total_stars": 46.02,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "想要检查代码变更并整理审查意见，可以用 code-review-graph；它能帮助团队发现问题和统一修改建议",
+        "highlights": [
+          "逐项检查提交中的代码变更",
+          "标出潜在缺陷和需要确认的实现",
+          "把审查意见整理成可跟进的建议"
+        ],
+        "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+        "capabilities": [
+          "逐项检查提交中的代码变更",
+          "标出潜在缺陷和需要确认的实现",
+          "把审查意见整理成可跟进的建议"
+        ],
+        "core_title": "检查代码变更并整理审查意见",
+        "core_summary": "想要检查代码变更并整理审查意见，可以用 code-review-graph；它能帮助团队发现问题和统一修改建议",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W30/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+      "publication_evidence": {
+        "full_name": "tirth8205/code-review-graph",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W30/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+          "sha256": "8d9a1aae8cc3ab4827dd1149c1eb15e10523138d89a21f6666438f23f29d2f3b",
+          "width": 351,
+          "height": 351
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.02.tirth8205--code-review-graph.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1183888342,
+      "full_name": "stablyai/orca",
+      "owner": "stablyai",
+      "name": "orca",
+      "html_url": "https://github.com/stablyai/orca",
+      "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
+      "language": "TypeScript",
+      "stars": 29144,
+      "forks": 2068,
+      "open_issues": 2283,
+      "watchers": 67,
+      "topics": [
+        "ade",
+        "agent-ide",
+        "ai-agents",
+        "claude-code",
+        "cli",
+        "codex",
+        "cursor-agent",
+        "devtools",
+        "ghostty",
+        "ide",
+        "mobile-app",
+        "opencode",
+        "orchestration",
+        "parallel-agents",
+        "pi",
+        "terminal",
+        "worktrees",
+        "yc-backed"
+      ],
+      "created_at": "2026-03-17T03:28:57Z",
+      "updated_at": "2026-07-26T05:44:19Z",
+      "pushed_at": "2026-07-26T05:37:21Z",
+      "daily_stars": null,
+      "weekly_stars": 7327,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 17,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 90.71,
+      "star_delta": 7330,
+      "fork_delta": 496,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.46,
+        "relative_growth": 97.35,
+        "fork_growth": 94.69,
+        "total_stars": 46.9,
+        "activity": 100.0,
+        "trending_signal": 23.98
+      },
+      "summary": {
+        "one_line": "主要任务是集中运行和管理多个编程 Agent；orca 还能让开发任务可以并行推进",
+        "highlights": [
+          "在同一界面启动多个编程 Agent",
+          "把任务拆给不同 Agent 并行执行",
+          "集中查看各个 Agent 的执行状态"
+        ],
+        "audience": "需要统一管理多个编程 Agent 和并行任务的研发团队",
+        "capabilities": [
+          "在同一界面启动多个编程 Agent",
+          "把任务拆给不同 Agent 并行执行",
+          "集中查看各个 Agent 的执行状态"
+        ],
+        "core_title": "集中运行和管理多个编程 Agent",
+        "core_summary": "主要任务是集中运行和管理多个编程 Agent；orca 还能让开发任务可以并行推进",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W30/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+      "publication_evidence": {
+        "full_name": "stablyai/orca",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W30/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+          "sha256": "bfcd55184ce82541489eda90019aace6d2730f9dda13237619ca5026aa5e4d68",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.03.stablyai--orca.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1053118194,
+      "full_name": "bojieli/ai-agent-book",
+      "owner": "bojieli",
+      "name": "ai-agent-book",
+      "html_url": "https://github.com/bojieli/ai-agent-book",
+      "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
+      "language": "Python",
+      "stars": 19975,
+      "forks": 1990,
+      "open_issues": 12,
+      "watchers": 79,
+      "topics": [
+        "agent",
+        "agent-memory",
+        "ai-agent",
+        "book",
+        "coding-agent",
+        "context-engineering",
+        "large-language-models",
+        "llm",
+        "mcp",
+        "multi-agent",
+        "multimodal",
+        "rag",
+        "reinforcement-learning"
+      ],
+      "created_at": "2025-09-09T02:41:44Z",
+      "updated_at": "2026-07-26T05:43:33Z",
+      "pushed_at": "2026-07-26T04:11:37Z",
+      "daily_stars": null,
+      "weekly_stars": 16579,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 1,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 4,
+      "score": 90.22,
+      "star_delta": 16579,
+      "fork_delta": 0,
+      "delta_source": "trending",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 29.65,
+        "total_stars": 45.13,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "用 ai-agent-book 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+        "highlights": [
+          "为模型应用提供标准化工具接口",
+          "连接外部数据源和可调用工具",
+          "把工具能力暴露给兼容 MCP 的客户端"
+        ],
+        "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+        "capabilities": [
+          "为模型应用提供标准化工具接口",
+          "连接外部数据源和可调用工具",
+          "把工具能力暴露给兼容 MCP 的客户端"
+        ],
+        "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+        "core_summary": "用 ai-agent-book 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W30/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
+      "publication_evidence": {
+        "full_name": "bojieli/ai-agent-book",
+        "license_spdx_id": "Apache-2.0",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W30/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
+          "sha256": "7bf420640b189ca4d86a807b446904a1f444ace877062e3da27674c0fa4d733d",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.04.bojieli--ai-agent-book.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1185590488,
+      "full_name": "rohitg00/ai-engineering-from-scratch",
+      "owner": "rohitg00",
+      "name": "ai-engineering-from-scratch",
+      "html_url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "description": "Learn it. Build it. Ship it for others.",
+      "language": "Python",
+      "stars": 43526,
+      "forks": 7292,
+      "open_issues": 94,
+      "watchers": 272,
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "ai-engineering",
+        "computer-vision",
+        "course",
+        "deep-learning",
+        "from-scratch",
+        "generative-ai",
+        "llm",
+        "machine-learning",
+        "mcp",
+        "nlp",
+        "python",
+        "reinforcement-learning",
+        "rust",
+        "swarm-intelligence",
+        "transformers",
+        "tutorial",
+        "typescript"
+      ],
+      "created_at": "2026-03-18T18:38:02Z",
+      "updated_at": "2026-07-26T05:39:09Z",
+      "pushed_at": "2026-07-26T00:08:59Z",
+      "daily_stars": null,
+      "weekly_stars": 4518,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 10,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 5,
+      "score": 87.91,
+      "star_delta": 4441,
+      "fork_delta": 742,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 92.04,
+        "relative_growth": 90.27,
+        "fork_growth": 98.23,
+        "total_stars": 51.33,
+        "activity": 100.0,
+        "trending_signal": 28.91
+      },
+      "summary": {
+        "one_line": "这类任务可以交给 ai-engineering-from-scratch：把外部工具和数据接入支持 MCP 的模型应用，并用统一协议建立工具调用连接",
+        "highlights": [
+          "为模型应用提供标准化工具接口",
+          "连接外部数据源和可调用工具",
+          "把工具能力暴露给兼容 MCP 的客户端"
+        ],
+        "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+        "capabilities": [
+          "为模型应用提供标准化工具接口",
+          "连接外部数据源和可调用工具",
+          "把工具能力暴露给兼容 MCP 的客户端"
+        ],
+        "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+        "core_summary": "这类任务可以交给 ai-engineering-from-scratch：把外部工具和数据接入支持 MCP 的模型应用，并用统一协议建立工具调用连接",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W30/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
+      "publication_evidence": {
+        "full_name": "rohitg00/ai-engineering-from-scratch",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W30/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
+          "sha256": "fbdd06f0a45b919103d284591ec2c2756713857cc0226f36bde7f0a306a9fc8e",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.05.rohitg00--ai-engineering-from-scratch.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1130564872,
+      "full_name": "koala73/worldmonitor",
+      "owner": "koala73",
+      "name": "worldmonitor",
+      "html_url": "https://github.com/koala73/worldmonitor",
+      "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+      "language": "TypeScript",
+      "stars": 74270,
+      "forks": 11151,
+      "open_issues": 257,
+      "watchers": 456,
+      "topics": [
+        "agent",
+        "ai",
+        "dashboard",
+        "geopolitics",
+        "mcp",
+        "mcp-server",
+        "monitoring",
+        "news",
+        "opensource",
+        "osint",
+        "palantir",
+        "situation"
+      ],
+      "created_at": "2026-01-08T17:26:06Z",
+      "updated_at": "2026-07-26T05:43:15Z",
+      "pushed_at": "2026-07-25T23:02:57Z",
+      "daily_stars": null,
+      "weekly_stars": 12085,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 2,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 6,
+      "score": 87.67,
+      "star_delta": 12085,
+      "fork_delta": 0,
+      "delta_source": "trending",
+      "component_percentiles": {
+        "star_growth": 99.12,
+        "relative_growth": 96.46,
+        "fork_growth": 29.65,
+        "total_stars": 53.98,
+        "activity": 100.0,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "当你需要把外部工具和数据接入支持 MCP 的模型应用，worldmonitor 可以接手，同时用统一协议建立工具调用连接",
+        "highlights": [
+          "为模型应用提供标准化工具接口",
+          "连接外部数据源和可调用工具",
+          "把工具能力暴露给兼容 MCP 的客户端"
+        ],
+        "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+        "capabilities": [
+          "为模型应用提供标准化工具接口",
+          "连接外部数据源和可调用工具",
+          "把工具能力暴露给兼容 MCP 的客户端"
+        ],
+        "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+        "core_summary": "当你需要把外部工具和数据接入支持 MCP 的模型应用，worldmonitor 可以接手，同时用统一协议建立工具调用连接",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W30/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+      "publication_evidence": {
+        "full_name": "koala73/worldmonitor",
+        "license_spdx_id": "NOASSERTION",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W30/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+          "sha256": "1178670cba6ce6fc1640933d492b675df3b82fd84c7c0d68b6a2e4a6f5f1e0e5",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.06.koala73--worldmonitor.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1157102282,
+      "full_name": "diegosouzapw/OmniRoute",
+      "owner": "diegosouzapw",
+      "name": "OmniRoute",
+      "html_url": "https://github.com/diegosouzapw/OmniRoute",
+      "description": "Never stop coding. Free MIT AI gateway: one endpoint, 290+ providers (90+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+      "language": "TypeScript",
+      "stars": 30198,
+      "forks": 3935,
+      "open_issues": 333,
+      "watchers": 165,
+      "topics": [
+        "a2a",
+        "ai-agents",
+        "ai-gateway",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "cline",
+        "codex",
+        "copilot",
+        "cursor",
+        "deepseek",
+        "free-ai",
+        "gemini",
+        "kimi",
+        "llm-gateway",
+        "mcp",
+        "openai",
+        "openai-proxy",
+        "qwen",
+        "token-saver"
+      ],
+      "created_at": "2026-02-13T12:38:31Z",
+      "updated_at": "2026-07-26T05:44:39Z",
+      "pushed_at": "2026-07-26T00:46:43Z",
+      "daily_stars": null,
+      "weekly_stars": 11147,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 6,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 7,
+      "score": 85.68,
+      "star_delta": 11147,
+      "fork_delta": 0,
+      "delta_source": "trending",
+      "component_percentiles": {
+        "star_growth": 97.35,
+        "relative_growth": 99.12,
+        "fork_growth": 29.65,
+        "total_stars": 48.67,
+        "activity": 100.0,
+        "trending_signal": 35.62
+      },
+      "summary": {
+        "one_line": "如果工作流里要统一接入并路由多个 AI 模型服务，可以交给 OmniRoute，同时把模型选择和供应商配置集中管理",
+        "highlights": [
+          "用统一入口连接不同模型服务",
+          "按配置把请求路由到目标模型",
+          "集中管理模型供应商和调用方式"
+        ],
+        "audience": "需要接入多个模型供应商或维护统一调用层的 AI 开发者",
+        "capabilities": [
+          "用统一入口连接不同模型服务",
+          "按配置把请求路由到目标模型",
+          "集中管理模型供应商和调用方式"
+        ],
+        "core_title": "统一接入并路由多个 AI 模型服务",
+        "core_summary": "如果工作流里要统一接入并路由多个 AI 模型服务，可以交给 OmniRoute，同时把模型选择和供应商配置集中管理",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W30/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+      "publication_evidence": {
+        "full_name": "diegosouzapw/OmniRoute",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W30/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "sha256": "6711b870e3d791a7d1a46ea15d0a5b263e12af0f61aede5032d8d5b86dd9c521",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.07.diegosouzapw--omniroute.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.02.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.03.stablyai--orca.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "bojieli/ai-agent-book",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.04.bojieli--ai-agent-book.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "rohitg00/ai-engineering-from-scratch",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.05.rohitg00--ai-engineering-from-scratch.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "koala73/worldmonitor",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.06.koala73--worldmonitor.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.07.diegosouzapw--omniroute.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 188544,
+          "forks": 16197,
+          "open_issues": 233,
+          "watchers": 188544,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-07-26T05:45:25Z",
+          "pushed_at": "2026-07-23T14:29:59Z",
+          "daily_stars": null,
+          "weekly_stars": 11790,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 11,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.18,
+          "star_delta": 11961,
+          "fork_delta": 1066,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.23,
+            "relative_growth": 92.04,
+            "fork_growth": 99.12,
+            "total_stars": 83.19,
+            "activity": 81.87,
+            "trending_signal": 27.89
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 skills 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 skills 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.01.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1167788341,
+          "full_name": "tirth8205/code-review-graph",
+          "owner": "tirth8205",
+          "name": "code-review-graph",
+          "html_url": "https://github.com/tirth8205/code-review-graph",
+          "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+          "language": "Python",
+          "stars": 26441,
+          "forks": 2471,
+          "open_issues": 122,
+          "watchers": 86,
+          "topics": [
+            "ai-coding",
+            "claude",
+            "claude-code",
+            "code-review",
+            "graphrag",
+            "incremental",
+            "knowledge-graph",
+            "llm",
+            "mcp",
+            "python",
+            "static-analysis",
+            "tree-sitter"
+          ],
+          "created_at": "2026-02-26T17:25:13Z",
+          "updated_at": "2026-07-26T05:39:59Z",
+          "pushed_at": "2026-07-25T18:53:05Z",
+          "daily_stars": null,
+          "weekly_stars": 6423,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 3,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 91.0,
+          "star_delta": 6296,
+          "fork_delta": 346,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.58,
+            "relative_growth": 95.58,
+            "fork_growth": 92.92,
+            "total_stars": 46.02,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "想要检查代码变更并整理审查意见，可以用 code-review-graph；它能帮助团队发现问题和统一修改建议",
+            "highlights": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+            "capabilities": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "core_title": "检查代码变更并整理审查意见",
+            "core_summary": "想要检查代码变更并整理审查意见，可以用 code-review-graph；它能帮助团队发现问题和统一修改建议",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+          "publication_evidence": {
+            "full_name": "tirth8205/code-review-graph",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+              "sha256": "8d9a1aae8cc3ab4827dd1149c1eb15e10523138d89a21f6666438f23f29d2f3b",
+              "width": 351,
+              "height": 351
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.02.tirth8205--code-review-graph.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1183888342,
+          "full_name": "stablyai/orca",
+          "owner": "stablyai",
+          "name": "orca",
+          "html_url": "https://github.com/stablyai/orca",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
+          "language": "TypeScript",
+          "stars": 29144,
+          "forks": 2068,
+          "open_issues": 2283,
+          "watchers": 67,
+          "topics": [
+            "ade",
+            "agent-ide",
+            "ai-agents",
+            "claude-code",
+            "cli",
+            "codex",
+            "cursor-agent",
+            "devtools",
+            "ghostty",
+            "ide",
+            "mobile-app",
+            "opencode",
+            "orchestration",
+            "parallel-agents",
+            "pi",
+            "terminal",
+            "worktrees",
+            "yc-backed"
+          ],
+          "created_at": "2026-03-17T03:28:57Z",
+          "updated_at": "2026-07-26T05:44:19Z",
+          "pushed_at": "2026-07-26T05:37:21Z",
+          "daily_stars": null,
+          "weekly_stars": 7327,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 17,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 90.71,
+          "star_delta": 7330,
+          "fork_delta": 496,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.46,
+            "relative_growth": 97.35,
+            "fork_growth": 94.69,
+            "total_stars": 46.9,
+            "activity": 100.0,
+            "trending_signal": 23.98
+          },
+          "summary": {
+            "one_line": "主要任务是集中运行和管理多个编程 Agent；orca 还能让开发任务可以并行推进",
+            "highlights": [
+              "在同一界面启动多个编程 Agent",
+              "把任务拆给不同 Agent 并行执行",
+              "集中查看各个 Agent 的执行状态"
+            ],
+            "audience": "需要统一管理多个编程 Agent 和并行任务的研发团队",
+            "capabilities": [
+              "在同一界面启动多个编程 Agent",
+              "把任务拆给不同 Agent 并行执行",
+              "集中查看各个 Agent 的执行状态"
+            ],
+            "core_title": "集中运行和管理多个编程 Agent",
+            "core_summary": "主要任务是集中运行和管理多个编程 Agent；orca 还能让开发任务可以并行推进",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+          "publication_evidence": {
+            "full_name": "stablyai/orca",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+              "sha256": "bfcd55184ce82541489eda90019aace6d2730f9dda13237619ca5026aa5e4d68",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.03.stablyai--orca.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1053118194,
+          "full_name": "bojieli/ai-agent-book",
+          "owner": "bojieli",
+          "name": "ai-agent-book",
+          "html_url": "https://github.com/bojieli/ai-agent-book",
+          "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
+          "language": "Python",
+          "stars": 19975,
+          "forks": 1990,
+          "open_issues": 12,
+          "watchers": 79,
+          "topics": [
+            "agent",
+            "agent-memory",
+            "ai-agent",
+            "book",
+            "coding-agent",
+            "context-engineering",
+            "large-language-models",
+            "llm",
+            "mcp",
+            "multi-agent",
+            "multimodal",
+            "rag",
+            "reinforcement-learning"
+          ],
+          "created_at": "2025-09-09T02:41:44Z",
+          "updated_at": "2026-07-26T05:43:33Z",
+          "pushed_at": "2026-07-26T04:11:37Z",
+          "daily_stars": null,
+          "weekly_stars": 16579,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 1,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 90.22,
+          "star_delta": 16579,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 29.65,
+            "total_stars": 45.13,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "用 ai-agent-book 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+            "highlights": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "capabilities": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+            "core_summary": "用 ai-agent-book 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
+          "publication_evidence": {
+            "full_name": "bojieli/ai-agent-book",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
+              "sha256": "7bf420640b189ca4d86a807b446904a1f444ace877062e3da27674c0fa4d733d",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.04.bojieli--ai-agent-book.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1185590488,
+          "full_name": "rohitg00/ai-engineering-from-scratch",
+          "owner": "rohitg00",
+          "name": "ai-engineering-from-scratch",
+          "html_url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+          "description": "Learn it. Build it. Ship it for others.",
+          "language": "Python",
+          "stars": 43526,
+          "forks": 7292,
+          "open_issues": 94,
+          "watchers": 272,
+          "topics": [
+            "agents",
+            "ai",
+            "ai-agents",
+            "ai-engineering",
+            "computer-vision",
+            "course",
+            "deep-learning",
+            "from-scratch",
+            "generative-ai",
+            "llm",
+            "machine-learning",
+            "mcp",
+            "nlp",
+            "python",
+            "reinforcement-learning",
+            "rust",
+            "swarm-intelligence",
+            "transformers",
+            "tutorial",
+            "typescript"
+          ],
+          "created_at": "2026-03-18T18:38:02Z",
+          "updated_at": "2026-07-26T05:39:09Z",
+          "pushed_at": "2026-07-26T00:08:59Z",
+          "daily_stars": null,
+          "weekly_stars": 4518,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 10,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 87.91,
+          "star_delta": 4441,
+          "fork_delta": 742,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.04,
+            "relative_growth": 90.27,
+            "fork_growth": 98.23,
+            "total_stars": 51.33,
+            "activity": 100.0,
+            "trending_signal": 28.91
+          },
+          "summary": {
+            "one_line": "这类任务可以交给 ai-engineering-from-scratch：把外部工具和数据接入支持 MCP 的模型应用，并用统一协议建立工具调用连接",
+            "highlights": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "capabilities": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+            "core_summary": "这类任务可以交给 ai-engineering-from-scratch：把外部工具和数据接入支持 MCP 的模型应用，并用统一协议建立工具调用连接",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
+          "publication_evidence": {
+            "full_name": "rohitg00/ai-engineering-from-scratch",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
+              "sha256": "fbdd06f0a45b919103d284591ec2c2756713857cc0226f36bde7f0a306a9fc8e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.05.rohitg00--ai-engineering-from-scratch.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1130564872,
+          "full_name": "koala73/worldmonitor",
+          "owner": "koala73",
+          "name": "worldmonitor",
+          "html_url": "https://github.com/koala73/worldmonitor",
+          "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+          "language": "TypeScript",
+          "stars": 74270,
+          "forks": 11151,
+          "open_issues": 257,
+          "watchers": 456,
+          "topics": [
+            "agent",
+            "ai",
+            "dashboard",
+            "geopolitics",
+            "mcp",
+            "mcp-server",
+            "monitoring",
+            "news",
+            "opensource",
+            "osint",
+            "palantir",
+            "situation"
+          ],
+          "created_at": "2026-01-08T17:26:06Z",
+          "updated_at": "2026-07-26T05:43:15Z",
+          "pushed_at": "2026-07-25T23:02:57Z",
+          "daily_stars": null,
+          "weekly_stars": 12085,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 2,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 87.67,
+          "star_delta": 12085,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 99.12,
+            "relative_growth": 96.46,
+            "fork_growth": 29.65,
+            "total_stars": 53.98,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "当你需要把外部工具和数据接入支持 MCP 的模型应用，worldmonitor 可以接手，同时用统一协议建立工具调用连接",
+            "highlights": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "capabilities": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+            "core_summary": "当你需要把外部工具和数据接入支持 MCP 的模型应用，worldmonitor 可以接手，同时用统一协议建立工具调用连接",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+          "publication_evidence": {
+            "full_name": "koala73/worldmonitor",
+            "license_spdx_id": "NOASSERTION",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+              "sha256": "1178670cba6ce6fc1640933d492b675df3b82fd84c7c0d68b6a2e4a6f5f1e0e5",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.06.koala73--worldmonitor.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1157102282,
+          "full_name": "diegosouzapw/OmniRoute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "html_url": "https://github.com/diegosouzapw/OmniRoute",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 290+ providers (90+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+          "language": "TypeScript",
+          "stars": 30198,
+          "forks": 3935,
+          "open_issues": 333,
+          "watchers": 165,
+          "topics": [
+            "a2a",
+            "ai-agents",
+            "ai-gateway",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "cline",
+            "codex",
+            "copilot",
+            "cursor",
+            "deepseek",
+            "free-ai",
+            "gemini",
+            "kimi",
+            "llm-gateway",
+            "mcp",
+            "openai",
+            "openai-proxy",
+            "qwen",
+            "token-saver"
+          ],
+          "created_at": "2026-02-13T12:38:31Z",
+          "updated_at": "2026-07-26T05:44:39Z",
+          "pushed_at": "2026-07-26T00:46:43Z",
+          "daily_stars": null,
+          "weekly_stars": 11147,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 6,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 85.68,
+          "star_delta": 11147,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 97.35,
+            "relative_growth": 99.12,
+            "fork_growth": 29.65,
+            "total_stars": 48.67,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "如果工作流里要统一接入并路由多个 AI 模型服务，可以交给 OmniRoute，同时把模型选择和供应商配置集中管理",
+            "highlights": [
+              "用统一入口连接不同模型服务",
+              "按配置把请求路由到目标模型",
+              "集中管理模型供应商和调用方式"
+            ],
+            "audience": "需要接入多个模型供应商或维护统一调用层的 AI 开发者",
+            "capabilities": [
+              "用统一入口连接不同模型服务",
+              "按配置把请求路由到目标模型",
+              "集中管理模型供应商和调用方式"
+            ],
+            "core_title": "统一接入并路由多个 AI 模型服务",
+            "core_summary": "如果工作流里要统一接入并路由多个 AI 模型服务，可以交给 OmniRoute，同时把模型选择和供应商配置集中管理",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "publication_evidence": {
+            "full_name": "diegosouzapw/OmniRoute",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+              "sha256": "6711b870e3d791a7d1a46ea15d0a5b263e12af0f61aede5032d8d5b86dd9c521",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.07.diegosouzapw--omniroute.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W30/2026-W30.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "bojieli/ai-agent-book",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.01.bojieli--ai-agent-book.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.02.stablyai--orca.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "tirth8205/code-review-graph",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.03.tirth8205--code-review-graph.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "koala73/worldmonitor",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.04.koala73--worldmonitor.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.05.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "rohitg00/ai-engineering-from-scratch",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.06.rohitg00--ai-engineering-from-scratch.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "earendil-works/pi",
+            "path": "reports/weekly/assets/2026-W30/2026-W30.ai.07.earendil-works--pi.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1053118194,
+          "full_name": "bojieli/ai-agent-book",
+          "owner": "bojieli",
+          "name": "ai-agent-book",
+          "html_url": "https://github.com/bojieli/ai-agent-book",
+          "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
+          "language": "Python",
+          "stars": 19975,
+          "forks": 1990,
+          "open_issues": 12,
+          "watchers": 79,
+          "topics": [
+            "agent",
+            "agent-memory",
+            "ai-agent",
+            "book",
+            "coding-agent",
+            "context-engineering",
+            "large-language-models",
+            "llm",
+            "mcp",
+            "multi-agent",
+            "multimodal",
+            "rag",
+            "reinforcement-learning"
+          ],
+          "created_at": "2025-09-09T02:41:44Z",
+          "updated_at": "2026-07-26T05:43:33Z",
+          "pushed_at": "2026-07-26T04:11:37Z",
+          "daily_stars": null,
+          "weekly_stars": 16579,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 1,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 89.32,
+          "star_delta": 16579,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 25.0,
+            "total_stars": 36.36,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "ai-agent-book 可以把外部工具和数据接入支持 MCP 的模型应用，同时用统一协议建立工具调用连接",
+            "highlights": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "capabilities": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+            "core_summary": "ai-agent-book 可以把外部工具和数据接入支持 MCP 的模型应用，同时用统一协议建立工具调用连接",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
+          "publication_evidence": {
+            "full_name": "bojieli/ai-agent-book",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
+              "sha256": "7bf420640b189ca4d86a807b446904a1f444ace877062e3da27674c0fa4d733d",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.ai.01.bojieli--ai-agent-book.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1183888342,
+          "full_name": "stablyai/orca",
+          "owner": "stablyai",
+          "name": "orca",
+          "html_url": "https://github.com/stablyai/orca",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
+          "language": "TypeScript",
+          "stars": 29144,
+          "forks": 2068,
+          "open_issues": 2283,
+          "watchers": 67,
+          "topics": [
+            "ade",
+            "agent-ide",
+            "ai-agents",
+            "claude-code",
+            "cli",
+            "codex",
+            "cursor-agent",
+            "devtools",
+            "ghostty",
+            "ide",
+            "mobile-app",
+            "opencode",
+            "orchestration",
+            "parallel-agents",
+            "pi",
+            "terminal",
+            "worktrees",
+            "yc-backed"
+          ],
+          "created_at": "2026-03-17T03:28:57Z",
+          "updated_at": "2026-07-26T05:44:19Z",
+          "pushed_at": "2026-07-26T05:37:21Z",
+          "daily_stars": null,
+          "weekly_stars": 7327,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 17,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.02,
+          "star_delta": 7330,
+          "fork_delta": 496,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.18,
+            "relative_growth": 95.45,
+            "fork_growth": 90.91,
+            "total_stars": 40.91,
+            "activity": 100.0,
+            "trending_signal": 23.98
+          },
+          "summary": {
+            "one_line": "想要集中运行和管理多个编程 Agent，可以用 orca；它能让开发任务可以并行推进",
+            "highlights": [
+              "在同一界面启动多个编程 Agent",
+              "把任务拆给不同 Agent 并行执行",
+              "集中查看各个 Agent 的执行状态"
+            ],
+            "audience": "需要统一管理多个编程 Agent 和并行任务的研发团队",
+            "capabilities": [
+              "在同一界面启动多个编程 Agent",
+              "把任务拆给不同 Agent 并行执行",
+              "集中查看各个 Agent 的执行状态"
+            ],
+            "core_title": "集中运行和管理多个编程 Agent",
+            "core_summary": "想要集中运行和管理多个编程 Agent，可以用 orca；它能让开发任务可以并行推进",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+          "publication_evidence": {
+            "full_name": "stablyai/orca",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+              "sha256": "bfcd55184ce82541489eda90019aace6d2730f9dda13237619ca5026aa5e4d68",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.ai.02.stablyai--orca.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1167788341,
+          "full_name": "tirth8205/code-review-graph",
+          "owner": "tirth8205",
+          "name": "code-review-graph",
+          "html_url": "https://github.com/tirth8205/code-review-graph",
+          "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+          "language": "Python",
+          "stars": 26441,
+          "forks": 2471,
+          "open_issues": 122,
+          "watchers": 86,
+          "topics": [
+            "ai-coding",
+            "claude",
+            "claude-code",
+            "code-review",
+            "graphrag",
+            "incremental",
+            "knowledge-graph",
+            "llm",
+            "mcp",
+            "python",
+            "static-analysis",
+            "tree-sitter"
+          ],
+          "created_at": "2026-02-26T17:25:13Z",
+          "updated_at": "2026-07-26T05:39:59Z",
+          "pushed_at": "2026-07-25T18:53:05Z",
+          "daily_stars": null,
+          "weekly_stars": 6423,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 3,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 86.7,
+          "star_delta": 6296,
+          "fork_delta": 346,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 90.91,
+            "relative_growth": 90.91,
+            "fork_growth": 86.36,
+            "total_stars": 38.64,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "主要任务是检查代码变更并整理审查意见；code-review-graph 还能帮助团队发现问题和统一修改建议",
+            "highlights": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+            "capabilities": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "core_title": "检查代码变更并整理审查意见",
+            "core_summary": "主要任务是检查代码变更并整理审查意见；code-review-graph 还能帮助团队发现问题和统一修改建议",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+          "publication_evidence": {
+            "full_name": "tirth8205/code-review-graph",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
+              "sha256": "8d9a1aae8cc3ab4827dd1149c1eb15e10523138d89a21f6666438f23f29d2f3b",
+              "width": 351,
+              "height": 351
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.ai.03.tirth8205--code-review-graph.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1130564872,
+          "full_name": "koala73/worldmonitor",
+          "owner": "koala73",
+          "name": "worldmonitor",
+          "html_url": "https://github.com/koala73/worldmonitor",
+          "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+          "language": "TypeScript",
+          "stars": 74270,
+          "forks": 11151,
+          "open_issues": 257,
+          "watchers": 456,
+          "topics": [
+            "agent",
+            "ai",
+            "dashboard",
+            "geopolitics",
+            "mcp",
+            "mcp-server",
+            "monitoring",
+            "news",
+            "opensource",
+            "osint",
+            "palantir",
+            "situation"
+          ],
+          "created_at": "2026-01-08T17:26:06Z",
+          "updated_at": "2026-07-26T05:43:15Z",
+          "pushed_at": "2026-07-25T23:02:57Z",
+          "daily_stars": null,
+          "weekly_stars": 12085,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 2,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 85.88,
+          "star_delta": 12085,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 97.73,
+            "relative_growth": 93.18,
+            "fork_growth": 25.0,
+            "total_stars": 54.55,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "用 worldmonitor 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+            "highlights": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "capabilities": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+            "core_summary": "用 worldmonitor 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+          "publication_evidence": {
+            "full_name": "koala73/worldmonitor",
+            "license_spdx_id": "NOASSERTION",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
+              "sha256": "1178670cba6ce6fc1640933d492b675df3b82fd84c7c0d68b6a2e4a6f5f1e0e5",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.ai.04.koala73--worldmonitor.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1157102282,
+          "full_name": "diegosouzapw/OmniRoute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "html_url": "https://github.com/diegosouzapw/OmniRoute",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 290+ providers (90+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+          "language": "TypeScript",
+          "stars": 30198,
+          "forks": 3935,
+          "open_issues": 333,
+          "watchers": 165,
+          "topics": [
+            "a2a",
+            "ai-agents",
+            "ai-gateway",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "cline",
+            "codex",
+            "copilot",
+            "cursor",
+            "deepseek",
+            "free-ai",
+            "gemini",
+            "kimi",
+            "llm-gateway",
+            "mcp",
+            "openai",
+            "openai-proxy",
+            "qwen",
+            "token-saver"
+          ],
+          "created_at": "2026-02-13T12:38:31Z",
+          "updated_at": "2026-07-26T05:44:39Z",
+          "pushed_at": "2026-07-26T00:46:43Z",
+          "daily_stars": null,
+          "weekly_stars": 11147,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 6,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 83.82,
+          "star_delta": 11147,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 95.45,
+            "relative_growth": 97.73,
+            "fork_growth": 25.0,
+            "total_stars": 45.45,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "这类任务可以交给 OmniRoute：统一接入并路由多个 AI 模型服务，并把模型选择和供应商配置集中管理",
+            "highlights": [
+              "用统一入口连接不同模型服务",
+              "按配置把请求路由到目标模型",
+              "集中管理模型供应商和调用方式"
+            ],
+            "audience": "需要接入多个模型供应商或维护统一调用层的 AI 开发者",
+            "capabilities": [
+              "用统一入口连接不同模型服务",
+              "按配置把请求路由到目标模型",
+              "集中管理模型供应商和调用方式"
+            ],
+            "core_title": "统一接入并路由多个 AI 模型服务",
+            "core_summary": "这类任务可以交给 OmniRoute：统一接入并路由多个 AI 模型服务，并把模型选择和供应商配置集中管理",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "publication_evidence": {
+            "full_name": "diegosouzapw/OmniRoute",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+              "sha256": "6711b870e3d791a7d1a46ea15d0a5b263e12af0f61aede5032d8d5b86dd9c521",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.ai.05.diegosouzapw--omniroute.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1185590488,
+          "full_name": "rohitg00/ai-engineering-from-scratch",
+          "owner": "rohitg00",
+          "name": "ai-engineering-from-scratch",
+          "html_url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+          "description": "Learn it. Build it. Ship it for others.",
+          "language": "Python",
+          "stars": 43526,
+          "forks": 7292,
+          "open_issues": 94,
+          "watchers": 272,
+          "topics": [
+            "agents",
+            "ai",
+            "ai-agents",
+            "ai-engineering",
+            "computer-vision",
+            "course",
+            "deep-learning",
+            "from-scratch",
+            "generative-ai",
+            "llm",
+            "machine-learning",
+            "mcp",
+            "nlp",
+            "python",
+            "reinforcement-learning",
+            "rust",
+            "swarm-intelligence",
+            "transformers",
+            "tutorial",
+            "typescript"
+          ],
+          "created_at": "2026-03-18T18:38:02Z",
+          "updated_at": "2026-07-26T05:39:09Z",
+          "pushed_at": "2026-07-26T00:08:59Z",
+          "daily_stars": null,
+          "weekly_stars": 4518,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 10,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 82.47,
+          "star_delta": 4441,
+          "fork_delta": 742,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 84.09,
+            "relative_growth": 84.09,
+            "fork_growth": 97.73,
+            "total_stars": 47.73,
+            "activity": 100.0,
+            "trending_signal": 28.91
+          },
+          "summary": {
+            "one_line": "当你需要把外部工具和数据接入支持 MCP 的模型应用，ai-engineering-from-scratch 可以接手，同时用统一协议建立工具调用连接",
+            "highlights": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "capabilities": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+            "core_summary": "当你需要把外部工具和数据接入支持 MCP 的模型应用，ai-engineering-from-scratch 可以接手，同时用统一协议建立工具调用连接",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
+          "publication_evidence": {
+            "full_name": "rohitg00/ai-engineering-from-scratch",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
+              "sha256": "fbdd06f0a45b919103d284591ec2c2756713857cc0226f36bde7f0a306a9fc8e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.ai.06.rohitg00--ai-engineering-from-scratch.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1035029907,
+          "full_name": "earendil-works/pi",
+          "owner": "earendil-works",
+          "name": "pi",
+          "html_url": "https://github.com/earendil-works/pi",
+          "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+          "language": "TypeScript",
+          "stars": 77656,
+          "forks": 9560,
+          "open_issues": 79,
+          "watchers": 267,
+          "topics": [],
+          "created_at": "2025-08-09T14:03:50Z",
+          "updated_at": "2026-07-26T05:45:17Z",
+          "pushed_at": "2026-07-25T21:02:44Z",
+          "daily_stars": null,
+          "weekly_stars": 5167,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 8,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 77.15,
+          "star_delta": 5167,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 88.64,
+            "relative_growth": 79.55,
+            "fork_growth": 25.0,
+            "total_stars": 56.82,
+            "activity": 100.0,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "要解释 pi 的用途，还需要补充可核验的 README 信息",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "要解释 pi 的用途，还需要补充可核验的 README 信息",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W30/repo-0c558be2bc3b8ea3bf401725-ba201aaa67a9dd86a655e9be.png",
+          "publication_evidence": {
+            "full_name": "earendil-works/pi",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W30/repo-0c558be2bc3b8ea3bf401725-ba201aaa67a9dd86a655e9be.png",
+              "sha256": "d8cac75f477b6147227e298f682cdf04cb828ba4a78c648890862101ffd8d4c0",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W30/2026-W30.ai.07.earendil-works--pi.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
