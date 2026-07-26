@@ -1,0 +1,1462 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-27",
+  "window_start": "2026-07-26",
+  "window_end": "2026-07-27",
+  "generated_at": "2026-07-27T07:31:11+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-26 至 2026-07-27",
+  "publication": {
+    "issue_number": 16,
+    "issue_code": "D016",
+    "issue_label": "第16期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-27",
+    "manifest": "reports/daily/assets/2026-07-27/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "permissionlesstech/bitchat",
+            "path": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.01.permissionlesstech--bitchat.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "block/buzz",
+            "path": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.02.block--buzz.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.03.citrolabs--ego-lite.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-27/2026-07-27.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/daily/assets/2026-07-27/2026-07-27.ai.01.citrolabs--ego-lite.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/daily/assets/2026-07-27/2026-07-27.ai.02.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "OtterMind/Chat2DB",
+            "path": "reports/daily/assets/2026-07-27/2026-07-27.ai.03.ottermind--chat2db.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 16,
+      "issue_code": "D016",
+      "issue_label": "第16期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1013830656,
+      "full_name": "permissionlesstech/bitchat",
+      "owner": "permissionlesstech",
+      "name": "bitchat",
+      "html_url": "https://github.com/permissionlesstech/bitchat",
+      "description": "bluetooth mesh chat, IRC vibes",
+      "language": "Swift",
+      "stars": 30228,
+      "forks": 4700,
+      "open_issues": 46,
+      "watchers": 284,
+      "topics": [
+        "bluetooth",
+        "bluetooth-le",
+        "decentralized",
+        "e2e-encryption",
+        "ios",
+        "macos",
+        "mesh-network",
+        "messaging",
+        "nostr",
+        "swift"
+      ],
+      "created_at": "2025-07-04T14:34:38Z",
+      "updated_at": "2026-07-26T23:28:06Z",
+      "pushed_at": "2026-07-26T22:45:21Z",
+      "daily_stars": 1198,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 95.45,
+      "star_delta": 1494,
+      "fork_delta": 403,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 97.01,
+        "fork_growth": 100.0,
+        "total_stars": 20.9,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "让手机在无网时通过蓝牙组网聊天，有网时切到 Nostr 中继继续传递消息",
+        "highlights": [
+          "自动发现附近设备，并经多跳蓝牙转发消息",
+          "按连接情况优先走蓝牙，再回退到 Nostr",
+          "提供位置频道、加密私信与 IRC 风格命令"
+        ],
+        "audience": "适合灾害、偏远地区或临时现场的离线沟通，也可用于基于地理范围的社区聊天",
+        "capabilities": [
+          "建立无需互联网的蓝牙网状聊天",
+          "通过附近设备多跳转发消息",
+          "切换到 Nostr 中继发送远程消息",
+          "创建按地理范围划分的位置频道",
+          "清除设备内保存的全部聊天数据"
+        ],
+        "core_title": "蓝牙与 Nostr 双通道传信",
+        "core_summary": "私信会优先使用已建立加密会话的蓝牙连接；蓝牙不可用时改走 Nostr，均不可用则排队，待通道恢复后自动发送。",
+        "prerequisites": "源码构建需 Xcode；真机签名还要填写 Apple Developer Team ID。使用 just 流程需先安装 just。",
+        "limitations": "网状网络会使用由身份密钥派生的持久设备标识；Nostr 私信格式仅与 BitChat 客户端互通。",
+        "license_label": "Unlicense",
+        "license_restrictions": "",
+        "readme_sha": "fc9313c1f9adaa21d22759354de03a8bf569757e",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+          ],
+          "highlights": [
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ],
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ],
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ]
+          ],
+          "audience": [
+            "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+          ],
+          "capabilities": [
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ],
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ],
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ],
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ],
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ]
+          ],
+          "core_title": [
+            "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+          ],
+          "core_summary": [
+            "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+          ],
+          "prerequisites": [
+            "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+          ],
+          "limitations": [
+            "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-27/repo-d5d526d64848ecec66a59d05-19bf1f83c9aed98227eac1d5.png",
+      "publication_evidence": {
+        "full_name": "permissionlesstech/bitchat",
+        "license_spdx_id": "Unlicense",
+        "readme": {
+          "sha": "fc9313c1f9adaa21d22759354de03a8bf569757e",
+          "source_url": "https://api.github.com/repos/permissionlesstech/bitchat/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-27/repo-d5d526d64848ecec66a59d05-19bf1f83c9aed98227eac1d5.png",
+          "sha256": "6c88a869b9c2b85f5f9eff3212ebf4249a8822687e3fc7fe5699161da5592aad",
+          "width": 420,
+          "height": 420
+        },
+        "warnings": []
+      },
+      "license_spdx": "Unlicense",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.01.permissionlesstech--bitchat.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1174789082,
+      "full_name": "block/buzz",
+      "owner": "block",
+      "name": "buzz",
+      "html_url": "https://github.com/block/buzz",
+      "description": "A hive mind communication platform",
+      "language": "Rust",
+      "stars": 13204,
+      "forks": 1083,
+      "open_issues": 702,
+      "watchers": 71,
+      "topics": [],
+      "created_at": "2026-03-06T21:00:56Z",
+      "updated_at": "2026-07-26T23:30:43Z",
+      "pushed_at": "2026-07-26T23:18:00Z",
+      "daily_stars": 1705,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 91.83,
+      "star_delta": 1235,
+      "fork_delta": 126,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.51,
+        "relative_growth": 98.51,
+        "fork_growth": 98.51,
+        "total_stars": 10.45,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "把人、AI Agent、代码变更和工作流放进同一协作空间，并保留统一审计记录",
+        "highlights": [
+          "让 Agent 像成员一样加入频道并操作项目",
+          "把对话、补丁、审批和工作流写入同一事件日志",
+          "将功能分支变成包含评审与合并依据的房间"
+        ],
+        "audience": "适合希望自托管团队空间，并让人和 AI Agent 共同处理代码、评审、发布与项目记忆的团队",
+        "capabilities": [
+          "检索历史讨论并附上相关线程",
+          "让 Agent 分诊问题并保留独立身份记录",
+          "集中搜索对话、补丁、运行结果与审批",
+          "用 YAML 配置消息、反应或定时工作流",
+          "通过命令行以 JSON 接收和返回任务数据"
+        ],
+        "core_title": "所有协作动作汇入同一日志",
+        "core_summary": "消息、反应、补丁、审批、工作流和 Git 事件都以签名事件进入同一日志，因此人和 Agent 共用身份模型、搜索入口与审计轨迹。",
+        "prerequisites": "源码启动需 Docker 与 Hermit；也可自备 Rust、Node、pnpm 和 just。Windows 还需 Git Bash。",
+        "limitations": "移动客户端、工作流审批门和语音房间生命周期仍在接入；项目明确未完成，并要求人保持在决策环节。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "72af92ce1385201e7d2d53c3e4f0b1bcb858d956",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+          ],
+          "highlights": [
+            [
+              "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+            ],
+            [
+              "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+            ],
+            [
+              "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+            ]
+          ],
+          "audience": [
+            "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+          ],
+          "capabilities": [
+            [
+              "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+            ],
+            [
+              "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+            ],
+            [
+              "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+            ],
+            [
+              "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+            ],
+            [
+              "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+            ]
+          ],
+          "core_title": [
+            "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+          ],
+          "core_summary": [
+            "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+          ],
+          "prerequisites": [
+            "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+          ],
+          "limitations": [
+            "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-27/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+      "publication_evidence": {
+        "full_name": "block/buzz",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "72af92ce1385201e7d2d53c3e4f0b1bcb858d956",
+          "source_url": "https://api.github.com/repos/block/buzz/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-27/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+          "sha256": "da1dee26e748f51b90f0396340de20f653da2726fed41626cc29f3843aaabef3",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.02.block--buzz.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1212503250,
+      "full_name": "citrolabs/ego-lite",
+      "owner": "citrolabs",
+      "name": "ego-lite",
+      "html_url": "https://github.com/citrolabs/ego-lite",
+      "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+      "language": "JavaScript",
+      "stars": 4441,
+      "forks": 220,
+      "open_issues": 42,
+      "watchers": 15,
+      "topics": [
+        "agent-skills",
+        "ai-agent",
+        "browser",
+        "skills",
+        "skills-sh"
+      ],
+      "created_at": "2026-04-16T12:51:09Z",
+      "updated_at": "2026-07-26T23:29:03Z",
+      "pushed_at": "2026-07-26T11:41:18Z",
+      "daily_stars": 898,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 88.15,
+      "star_delta": 833,
+      "fork_delta": 44,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.01,
+        "relative_growth": 100.0,
+        "fork_growth": 91.04,
+        "total_stars": 4.48,
+        "activity": 71.65,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "把已登录的浏览器状态交给 AI Agent 使用，同时让你的标签页不被自动化任务打扰",
+        "highlights": [
+          "为每个 Agent 分配隔离的浏览器空间",
+          "让多个网页任务并行执行而不争抢标签页",
+          "通过 JavaScript 工具组合连续的页面操作"
+        ],
+        "audience": "适合让 Codex、Claude Code 等外部 Agent 使用现有登录状态执行网页采集、填写或批量处理任务的人",
+        "capabilities": [
+          "迁移 Chrome 登录、Cookie、扩展和书签",
+          "为每个 Agent 创建独立浏览器空间",
+          "并行运行多个互不干扰的网页任务",
+          "读取包含嵌套 iframe 的页面快照",
+          "调用 snapshot、fill、click 等页面工具"
+        ],
+        "core_title": "共享登录状态，隔离操作空间",
+        "core_summary": "ego-browser 把页面快照、填写、点击、等待和跳转封装为 JavaScript 工具；Agent 在独立空间运行组合脚本，你仍可继续使用自己的标签页。",
+        "prerequisites": "需要 macOS；可安装应用或通过 npx 添加 ego-browser skill，首次浏览任务会引导安装应用。",
+        "limitations": "当前仅运行于 macOS，Windows 与 Linux 仍在路线图；经验积累功能尚未上线。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "53fed33f84768d533643bc6a72abe58583de2827",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+          ],
+          "highlights": [
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ],
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ],
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ]
+          ],
+          "audience": [
+            "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+          ],
+          "capabilities": [
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ],
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ],
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ],
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ],
+            [
+              "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+            ]
+          ],
+          "core_title": [
+            "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+          ],
+          "core_summary": [
+            "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+          ],
+          "prerequisites": [
+            "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+          ],
+          "limitations": [
+            "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-27/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+      "publication_evidence": {
+        "full_name": "citrolabs/ego-lite",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "53fed33f84768d533643bc6a72abe58583de2827",
+          "source_url": "https://api.github.com/repos/citrolabs/ego-lite/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-27/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+          "sha256": "2445c13708491bce07019fa0e774232a9bfaf9a4eba4ca1abfcc3be7abb09e5e",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.03.citrolabs--ego-lite.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "permissionlesstech/bitchat",
+            "path": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.01.permissionlesstech--bitchat.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "block/buzz",
+            "path": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.02.block--buzz.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.03.citrolabs--ego-lite.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1013830656,
+          "full_name": "permissionlesstech/bitchat",
+          "owner": "permissionlesstech",
+          "name": "bitchat",
+          "html_url": "https://github.com/permissionlesstech/bitchat",
+          "description": "bluetooth mesh chat, IRC vibes",
+          "language": "Swift",
+          "stars": 30228,
+          "forks": 4700,
+          "open_issues": 46,
+          "watchers": 284,
+          "topics": [
+            "bluetooth",
+            "bluetooth-le",
+            "decentralized",
+            "e2e-encryption",
+            "ios",
+            "macos",
+            "mesh-network",
+            "messaging",
+            "nostr",
+            "swift"
+          ],
+          "created_at": "2025-07-04T14:34:38Z",
+          "updated_at": "2026-07-26T23:28:06Z",
+          "pushed_at": "2026-07-26T22:45:21Z",
+          "daily_stars": 1198,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.45,
+          "star_delta": 1494,
+          "fork_delta": 403,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 97.01,
+            "fork_growth": 100.0,
+            "total_stars": 20.9,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "让手机在无网时通过蓝牙组网聊天，有网时切到 Nostr 中继继续传递消息",
+            "highlights": [
+              "自动发现附近设备，并经多跳蓝牙转发消息",
+              "按连接情况优先走蓝牙，再回退到 Nostr",
+              "提供位置频道、加密私信与 IRC 风格命令"
+            ],
+            "audience": "适合灾害、偏远地区或临时现场的离线沟通，也可用于基于地理范围的社区聊天",
+            "capabilities": [
+              "建立无需互联网的蓝牙网状聊天",
+              "通过附近设备多跳转发消息",
+              "切换到 Nostr 中继发送远程消息",
+              "创建按地理范围划分的位置频道",
+              "清除设备内保存的全部聊天数据"
+            ],
+            "core_title": "蓝牙与 Nostr 双通道传信",
+            "core_summary": "私信会优先使用已建立加密会话的蓝牙连接；蓝牙不可用时改走 Nostr，均不可用则排队，待通道恢复后自动发送。",
+            "prerequisites": "源码构建需 Xcode；真机签名还要填写 Apple Developer Team ID。使用 just 流程需先安装 just。",
+            "limitations": "网状网络会使用由身份密钥派生的持久设备标识；Nostr 私信格式仅与 BitChat 客户端互通。",
+            "license_label": "Unlicense",
+            "license_restrictions": "",
+            "readme_sha": "fc9313c1f9adaa21d22759354de03a8bf569757e",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+              ],
+              "highlights": [
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ],
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ],
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ]
+              ],
+              "audience": [
+                "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ],
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ],
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ],
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ],
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ]
+              ],
+              "core_title": [
+                "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+              ],
+              "core_summary": [
+                "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+              ],
+              "prerequisites": [
+                "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+              ],
+              "limitations": [
+                "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-27/repo-d5d526d64848ecec66a59d05-19bf1f83c9aed98227eac1d5.png",
+          "publication_evidence": {
+            "full_name": "permissionlesstech/bitchat",
+            "license_spdx_id": "Unlicense",
+            "readme": {
+              "sha": "fc9313c1f9adaa21d22759354de03a8bf569757e",
+              "source_url": "https://api.github.com/repos/permissionlesstech/bitchat/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-27/repo-d5d526d64848ecec66a59d05-19bf1f83c9aed98227eac1d5.png",
+              "sha256": "6c88a869b9c2b85f5f9eff3212ebf4249a8822687e3fc7fe5699161da5592aad",
+              "width": 420,
+              "height": 420
+            },
+            "warnings": []
+          },
+          "license_spdx": "Unlicense",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.01.permissionlesstech--bitchat.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1174789082,
+          "full_name": "block/buzz",
+          "owner": "block",
+          "name": "buzz",
+          "html_url": "https://github.com/block/buzz",
+          "description": "A hive mind communication platform",
+          "language": "Rust",
+          "stars": 13204,
+          "forks": 1083,
+          "open_issues": 702,
+          "watchers": 71,
+          "topics": [],
+          "created_at": "2026-03-06T21:00:56Z",
+          "updated_at": "2026-07-26T23:30:43Z",
+          "pushed_at": "2026-07-26T23:18:00Z",
+          "daily_stars": 1705,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 91.83,
+          "star_delta": 1235,
+          "fork_delta": 126,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.51,
+            "relative_growth": 98.51,
+            "fork_growth": 98.51,
+            "total_stars": 10.45,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把人、AI Agent、代码变更和工作流放进同一协作空间，并保留统一审计记录",
+            "highlights": [
+              "让 Agent 像成员一样加入频道并操作项目",
+              "把对话、补丁、审批和工作流写入同一事件日志",
+              "将功能分支变成包含评审与合并依据的房间"
+            ],
+            "audience": "适合希望自托管团队空间，并让人和 AI Agent 共同处理代码、评审、发布与项目记忆的团队",
+            "capabilities": [
+              "检索历史讨论并附上相关线程",
+              "让 Agent 分诊问题并保留独立身份记录",
+              "集中搜索对话、补丁、运行结果与审批",
+              "用 YAML 配置消息、反应或定时工作流",
+              "通过命令行以 JSON 接收和返回任务数据"
+            ],
+            "core_title": "所有协作动作汇入同一日志",
+            "core_summary": "消息、反应、补丁、审批、工作流和 Git 事件都以签名事件进入同一日志，因此人和 Agent 共用身份模型、搜索入口与审计轨迹。",
+            "prerequisites": "源码启动需 Docker 与 Hermit；也可自备 Rust、Node、pnpm 和 just。Windows 还需 Git Bash。",
+            "limitations": "移动客户端、工作流审批门和语音房间生命周期仍在接入；项目明确未完成，并要求人保持在决策环节。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "72af92ce1385201e7d2d53c3e4f0b1bcb858d956",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+              ],
+              "highlights": [
+                [
+                  "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+                ],
+                [
+                  "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+                ],
+                [
+                  "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+                ]
+              ],
+              "audience": [
+                "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+                ],
+                [
+                  "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+                ],
+                [
+                  "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+                ],
+                [
+                  "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+                ],
+                [
+                  "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+                ]
+              ],
+              "core_title": [
+                "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+              ],
+              "core_summary": [
+                "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+              ],
+              "prerequisites": [
+                "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+              ],
+              "limitations": [
+                "github.readme:72af92ce1385201e7d2d53c3e4f0b1bcb858d956"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-27/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+          "publication_evidence": {
+            "full_name": "block/buzz",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "72af92ce1385201e7d2d53c3e4f0b1bcb858d956",
+              "source_url": "https://api.github.com/repos/block/buzz/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-27/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+              "sha256": "da1dee26e748f51b90f0396340de20f653da2726fed41626cc29f3843aaabef3",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.02.block--buzz.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1212503250,
+          "full_name": "citrolabs/ego-lite",
+          "owner": "citrolabs",
+          "name": "ego-lite",
+          "html_url": "https://github.com/citrolabs/ego-lite",
+          "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+          "language": "JavaScript",
+          "stars": 4441,
+          "forks": 220,
+          "open_issues": 42,
+          "watchers": 15,
+          "topics": [
+            "agent-skills",
+            "ai-agent",
+            "browser",
+            "skills",
+            "skills-sh"
+          ],
+          "created_at": "2026-04-16T12:51:09Z",
+          "updated_at": "2026-07-26T23:29:03Z",
+          "pushed_at": "2026-07-26T11:41:18Z",
+          "daily_stars": 898,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.15,
+          "star_delta": 833,
+          "fork_delta": 44,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.01,
+            "relative_growth": 100.0,
+            "fork_growth": 91.04,
+            "total_stars": 4.48,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把已登录的浏览器状态交给 AI Agent 使用，同时让你的标签页不被自动化任务打扰",
+            "highlights": [
+              "为每个 Agent 分配隔离的浏览器空间",
+              "让多个网页任务并行执行而不争抢标签页",
+              "通过 JavaScript 工具组合连续的页面操作"
+            ],
+            "audience": "适合让 Codex、Claude Code 等外部 Agent 使用现有登录状态执行网页采集、填写或批量处理任务的人",
+            "capabilities": [
+              "迁移 Chrome 登录、Cookie、扩展和书签",
+              "为每个 Agent 创建独立浏览器空间",
+              "并行运行多个互不干扰的网页任务",
+              "读取包含嵌套 iframe 的页面快照",
+              "调用 snapshot、fill、click 等页面工具"
+            ],
+            "core_title": "共享登录状态，隔离操作空间",
+            "core_summary": "ego-browser 把页面快照、填写、点击、等待和跳转封装为 JavaScript 工具；Agent 在独立空间运行组合脚本，你仍可继续使用自己的标签页。",
+            "prerequisites": "需要 macOS；可安装应用或通过 npx 添加 ego-browser skill，首次浏览任务会引导安装应用。",
+            "limitations": "当前仅运行于 macOS，Windows 与 Linux 仍在路线图；经验积累功能尚未上线。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "53fed33f84768d533643bc6a72abe58583de2827",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "highlights": [
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ]
+              ],
+              "audience": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ]
+              ],
+              "core_title": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "core_summary": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "prerequisites": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "limitations": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-27/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+          "publication_evidence": {
+            "full_name": "citrolabs/ego-lite",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "53fed33f84768d533643bc6a72abe58583de2827",
+              "source_url": "https://api.github.com/repos/citrolabs/ego-lite/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-27/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+              "sha256": "2445c13708491bce07019fa0e774232a9bfaf9a4eba4ca1abfcc3be7abb09e5e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-27/2026-07-27.comprehensive.03.citrolabs--ego-lite.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-27/2026-07-27.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/daily/assets/2026-07-27/2026-07-27.ai.01.citrolabs--ego-lite.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/daily/assets/2026-07-27/2026-07-27.ai.02.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "OtterMind/Chat2DB",
+            "path": "reports/daily/assets/2026-07-27/2026-07-27.ai.03.ottermind--chat2db.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1212503250,
+          "full_name": "citrolabs/ego-lite",
+          "owner": "citrolabs",
+          "name": "ego-lite",
+          "html_url": "https://github.com/citrolabs/ego-lite",
+          "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+          "language": "JavaScript",
+          "stars": 4441,
+          "forks": 220,
+          "open_issues": 42,
+          "watchers": 15,
+          "topics": [
+            "agent-skills",
+            "ai-agent",
+            "browser",
+            "skills",
+            "skills-sh"
+          ],
+          "created_at": "2026-04-16T12:51:09Z",
+          "updated_at": "2026-07-26T23:29:03Z",
+          "pushed_at": "2026-07-26T11:41:18Z",
+          "daily_stars": 898,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 89.72,
+          "star_delta": 833,
+          "fork_delta": 44,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 92.0,
+            "total_stars": 4.0,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "让 Codex、Claude Code 等智能体复用你的登录态，在独立浏览空间执行网页任务而不占用当前标签页",
+            "highlights": [
+              "给每个智能体分配隔离的浏览空间",
+              "让多个网页任务在同一浏览器并行运行",
+              "用页面内 JavaScript 工具串联多步操作"
+            ],
+            "audience": "需要让编码智能体代办网页操作，同时保留本人标签页和既有登录状态的开发者",
+            "capabilities": [
+              "继承 Chrome 登录、Cookie、扩展和书签",
+              "分配互不干扰的独立浏览空间",
+              "并行执行多个智能体网页任务",
+              "调用快照、填写、点击和导航工具",
+              "接管或停止正在运行的智能体空间"
+            ],
+            "core_title": "共享登录态，不争抢标签页",
+            "core_summary": "智能体通过 ego-browser 连接同一浏览器，在各自隔离空间读取页面快照并调用 JavaScript 工具；本人可继续浏览，也能随时接管或停止任务。",
+            "prerequisites": "目前仅支持 macOS；可下载应用或用 npx 添加 ego-browser skill。",
+            "limitations": "Windows 和 Linux 尚在路线图中；Chrome 数据迁移需首次启动时由用户选择。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "53fed33f84768d533643bc6a72abe58583de2827",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "highlights": [
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ]
+              ],
+              "audience": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ],
+                [
+                  "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+                ]
+              ],
+              "core_title": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "core_summary": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "prerequisites": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "limitations": [
+                "github.readme:53fed33f84768d533643bc6a72abe58583de2827"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-27/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+          "publication_evidence": {
+            "full_name": "citrolabs/ego-lite",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "53fed33f84768d533643bc6a72abe58583de2827",
+              "source_url": "https://api.github.com/repos/citrolabs/ego-lite/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-27/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+              "sha256": "2445c13708491bce07019fa0e774232a9bfaf9a4eba4ca1abfcc3be7abb09e5e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-27/2026-07-27.ai.01.citrolabs--ego-lite.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1241960226,
+          "full_name": "alibaba/open-code-review",
+          "owner": "alibaba",
+          "name": "open-code-review",
+          "html_url": "https://github.com/alibaba/open-code-review",
+          "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "language": "Go",
+          "stars": 13756,
+          "forks": 939,
+          "open_issues": 58,
+          "watchers": 49,
+          "topics": [
+            "agent",
+            "agent-skills",
+            "code-review",
+            "code-review-assistant",
+            "harness",
+            "repository-level-context"
+          ],
+          "created_at": "2026-05-18T02:16:36Z",
+          "updated_at": "2026-07-26T23:30:41Z",
+          "pushed_at": "2026-07-26T12:30:36Z",
+          "daily_stars": 840,
+          "weekly_stars": null,
+          "trending_rank_daily": 11,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 85.76,
+          "star_delta": 776,
+          "fork_delta": 52,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.0,
+            "relative_growth": 96.0,
+            "fork_growth": 96.0,
+            "total_stars": 8.0,
+            "activity": 71.65,
+            "trending_signal": 27.89
+          },
+          "summary": {
+            "one_line": "把 Git 变更交给受约束的审查流水线和智能体，返回定位到具体代码行的结构化意见",
+            "highlights": [
+              "按规则筛选并组合需要审查的文件",
+              "检索完整文件和仓库上下文辅助判断",
+              "独立校正评论位置与反馈内容"
+            ],
+            "audience": "需要审查工作区、分支、提交或陌生代码目录，并希望减少漏审和位置偏移的研发团队",
+            "capabilities": [
+              "审查暂存、未暂存和未跟踪变更",
+              "比较分支范围或指定提交",
+              "扫描没有有效差异的完整文件",
+              "搜索代码库补充跨文件上下文",
+              "恢复中断的分支或提交审查"
+            ],
+            "core_title": "硬约束流水线配合智能体",
+            "core_summary": "工程逻辑负责选文件、组合关联文件、匹配规则和校正评论；智能体负责动态检索上下文与判断问题，让审查过程不只依赖自然语言提示。",
+            "prerequisites": "需要 Git >= 2.41；默认模式还需配置 LLM，委托模式除外。",
+            "limitations": "项目明确以较低召回率换取更高精度，因此仍可能漏掉真实缺陷。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "1f20ffde796e6ab4d5d7dcba212d719dec927278",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+              ],
+              "highlights": [
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ],
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ],
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ]
+              ],
+              "audience": [
+                "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ],
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ],
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ],
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ],
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ]
+              ],
+              "core_title": [
+                "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+              ],
+              "core_summary": [
+                "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+              ],
+              "prerequisites": [
+                "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+              ],
+              "limitations": [
+                "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-27/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+          "publication_evidence": {
+            "full_name": "alibaba/open-code-review",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "1f20ffde796e6ab4d5d7dcba212d719dec927278",
+              "source_url": "https://api.github.com/repos/alibaba/open-code-review/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-27/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+              "sha256": "a9c8b0eb596ec9f1f4939eb19f3aeb2e3e78cdd8c5e35edf3eead39dba501dbd",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-27/2026-07-27.ai.02.alibaba--open-code-review.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 656227652,
+          "full_name": "OtterMind/Chat2DB",
+          "owner": "OtterMind",
+          "name": "Chat2DB",
+          "html_url": "https://github.com/OtterMind/Chat2DB",
+          "description": "🔥🔥🔥 AI-driven database tool and SQL client, The hottest GUI client, supporting MySQL, Oracle, PostgreSQL, DB2, SQL Server, DB2, SQLite, H2, ClickHouse, and more.",
+          "language": "Java",
+          "stars": 27081,
+          "forks": 2941,
+          "open_issues": 128,
+          "watchers": 154,
+          "topics": [
+            "ai",
+            "bi",
+            "chatgpt",
+            "clickhouse",
+            "clickhouse-client",
+            "database",
+            "datagrip",
+            "db2",
+            "dbeaver",
+            "gpt",
+            "hive",
+            "mysql",
+            "navicat",
+            "oracle",
+            "postgresql",
+            "redis",
+            "redis-client",
+            "sqlserver",
+            "text2sql"
+          ],
+          "created_at": "2023-06-20T14:05:26Z",
+          "updated_at": "2026-07-26T23:30:37Z",
+          "pushed_at": "2026-07-26T08:59:22Z",
+          "daily_stars": 399,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 80.74,
+          "star_delta": 397,
+          "fork_delta": 34,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 88.0,
+            "relative_growth": 92.0,
+            "fork_growth": 88.0,
+            "total_stars": 16.0,
+            "activity": 71.65,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "把多种数据库连接、SQL 编辑和自选模型助手放进同一个本地工作区",
+            "highlights": [
+              "连接关系型、分析型和文档型数据库",
+              "用自然语言生成、解释和优化 SQL",
+              "在界面中管理对象、数据和可视化"
+            ],
+            "audience": "需要跨数据库写 SQL、维护表和数据，或借助自有模型分析查询的开发者、DBA 与分析人员",
+            "capabilities": [
+              "连接多种数据库并浏览元数据",
+              "编辑、补全、格式化并执行 SQL",
+              "生成、解释和优化 SQL",
+              "管理表和对象并就地编辑数据",
+              "导入导出数据并制作图表看板"
+            ],
+            "core_title": "数据库工作区内置 AI 助手",
+            "core_summary": "它把 SQL 编辑器、数据库对象管理和可视化放在本地客户端中，并允许接入自己的 AI 模型，用自然语言处理 SQL 编写与理解任务。",
+            "prerequisites": "桌面版安装后可直接连接；Docker 部署需 Docker 19.03.0+、Compose 2.0.0+、2+ 核 CPU 和 4+ GiB 内存。",
+            "limitations": "社区版是单用户本地应用，没有用户账户或用户间授权边界；HTTP 服务不得暴露给不可信网络。",
+            "license_label": "source-available license",
+            "license_restrictions": "based on the Apache License 2.0 with additional conditions.",
+            "readme_sha": "2a5ed4b998e82db2fc44f7237dc1c25ec034c23f",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+                ],
+                [
+                  "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+                ],
+                [
+                  "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+                ]
+              ],
+              "audience": [
+                "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+                ],
+                [
+                  "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+                ],
+                [
+                  "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+                ],
+                [
+                  "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+                ],
+                [
+                  "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+              ],
+              "core_summary": [
+                "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+              ],
+              "prerequisites": [
+                "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+              ],
+              "limitations": [
+                "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+              ],
+              "license_label": [
+                "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+              ],
+              "license_restrictions": [
+                "github.readme:2a5ed4b998e82db2fc44f7237dc1c25ec034c23f"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-07-27/repo-790bce602b535596364e1997-81f452fdac7fea3282abe7d0.png",
+          "publication_evidence": {
+            "full_name": "OtterMind/Chat2DB",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "2a5ed4b998e82db2fc44f7237dc1c25ec034c23f",
+              "source_url": "https://api.github.com/repos/OtterMind/Chat2DB/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-27/repo-790bce602b535596364e1997-81f452fdac7fea3282abe7d0.png",
+              "sha256": "b4d81d28b270ed497b4e1f61a9dd05b3ed45c05893e76a54803d76757daceb12",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "source-available license",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-27/2026-07-27.ai.03.ottermind--chat2db.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
