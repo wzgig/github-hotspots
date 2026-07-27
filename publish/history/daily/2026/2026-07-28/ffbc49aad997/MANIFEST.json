@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "ffbc49aad9979774c49d01dfdb2eae8cff802e7ac1fa0abcf35103b714529db6",
+  "checklist_sha256": "865e2754a47774efbb76e3aa94e9f9a2b02661178fa2a7376120e4c4e66ec1e2",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-07-28",
+  "generated_at": "2026-07-28T07:33:40.990896+08:00",
+  "issue": {
+    "number": 17,
+    "code": "D017",
+    "stem": "D017-2026-07-28",
+    "label": "第17期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-07-28.json",
+    "report_sha256": "c4a3123a9e6fd2ca9b8c8d06f734634dcac3a27e88ffa5cd1105955850a7704c",
+    "poster_manifest": "reports/daily/assets/2026-07-28/manifest.json",
+    "poster_manifest_sha256": "4a7ddee4f5af72e83ce4a85b65941e9d10b9c4847624079956be3bb9165bf9dc",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D017-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "91d165933718303cc2c2d38c860d10b98d22d12147b8c0c2555088af799bf657",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 335,
+      "caption_sha256": "02b752f634a61a9fd73039201c0a0a5fb5a9184d52cc366f94311aeaf6be4e65",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "cab3835616d4ae3c37d0458e2a489b514d6c62fad47c9d0f6a82b047e0a8c9d2",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.cover.png",
+          "sha256": "83724d1f802905c729421b110aca65c7552dcc16c9b507f907e840d5e114f33f",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.01.permissionlesstech--bitchat.png",
+          "sha256": "52d0c182e1ba181b3bce40c5e0ec0099de3ed10bef1e48e637daff34970fb1b3",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "permissionlesstech/bitchat",
+          "publication_path": "images/02-rank-01-permissionlesstech-bitchat.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.02.pbakaus--impeccable.png",
+          "sha256": "0f9dc33119f229ae4fbf9ad1706b91b2c0d9efcc31754519df5416c16a2d1926",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "pbakaus/impeccable",
+          "publication_path": "images/03-rank-02-pbakaus-impeccable.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.03.yorukot--superfile.png",
+          "sha256": "f590607e049348fa456bfb2a0ce57837f46dba6a5dd0754086d5f3052949b6ff",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "yorukot/superfile",
+          "publication_path": "images/04-rank-03-yorukot-superfile.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D017-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "234da5eb28b61b733ff95b2ff7db81fec154659c1da6a450f927f11f8b5f26c5",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 359,
+      "caption_sha256": "ce49e2ec164169f94606af730c4f4f9982aba37ee8b01e88bcde8a6dc8935aa6",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "5e908386349b48e13e17baa7736dc6323a4bba6005e583e01539c46a5a3d8428",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-28/2026-07-28.ai.cover.png",
+          "sha256": "eea2bdec997cc622f691f44b5ab8befc80616be110a5943943ab7235cc0ceaab",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-28/2026-07-28.ai.01.pbakaus--impeccable.png",
+          "sha256": "854e14d92103cee35ecc832e8c7d6db77a36d8b95cf13cfcd059298a9d682912",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "pbakaus/impeccable",
+          "publication_path": "images/02-rank-01-pbakaus-impeccable.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-28/2026-07-28.ai.02.alibaba--open-code-review.png",
+          "sha256": "332a7bcd7be136f7eee29dead4d928c00fb50cf7a68e25b859bddea5403f6c57",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "alibaba/open-code-review",
+          "publication_path": "images/03-rank-02-alibaba-open-code-review.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-28/2026-07-28.ai.03.firecrawl--firecrawl.png",
+          "sha256": "d280368a249c43aa80b15a4f18a4cb036ef1faba82f932df37b8aa08ab4c1cf2",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "firecrawl/firecrawl",
+          "publication_path": "images/04-rank-03-firecrawl-firecrawl.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-07-28",
+    "revision": "ffbc49aad997",
+    "image_policy": "repository-source-reference"
+  }
+}

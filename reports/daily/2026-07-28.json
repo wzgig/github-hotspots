@@ -1,0 +1,1473 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-28",
+  "window_start": "2026-07-27",
+  "window_end": "2026-07-28",
+  "generated_at": "2026-07-28T07:31:08+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-27 至 2026-07-28",
+  "publication": {
+    "issue_number": 17,
+    "issue_code": "D017",
+    "issue_label": "第17期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-28",
+    "manifest": "reports/daily/assets/2026-07-28/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "permissionlesstech/bitchat",
+            "path": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.01.permissionlesstech--bitchat.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "pbakaus/impeccable",
+            "path": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.02.pbakaus--impeccable.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "yorukot/superfile",
+            "path": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.03.yorukot--superfile.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-28/2026-07-28.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "pbakaus/impeccable",
+            "path": "reports/daily/assets/2026-07-28/2026-07-28.ai.01.pbakaus--impeccable.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/daily/assets/2026-07-28/2026-07-28.ai.02.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/daily/assets/2026-07-28/2026-07-28.ai.03.firecrawl--firecrawl.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 17,
+      "issue_code": "D017",
+      "issue_label": "第17期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1013830656,
+      "full_name": "permissionlesstech/bitchat",
+      "owner": "permissionlesstech",
+      "name": "bitchat",
+      "html_url": "https://github.com/permissionlesstech/bitchat",
+      "description": "bluetooth mesh chat, IRC vibes",
+      "language": "Swift",
+      "stars": 32199,
+      "forks": 5053,
+      "open_issues": 74,
+      "watchers": 294,
+      "topics": [
+        "bluetooth",
+        "bluetooth-le",
+        "decentralized",
+        "e2e-encryption",
+        "ios",
+        "macos",
+        "mesh-network",
+        "messaging",
+        "nostr",
+        "swift"
+      ],
+      "created_at": "2025-07-04T14:34:38Z",
+      "updated_at": "2026-07-27T23:21:50Z",
+      "pushed_at": "2026-07-26T23:58:21Z",
+      "daily_stars": 2344,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 93.11,
+      "star_delta": 1971,
+      "fork_delta": 353,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 100.0,
+        "total_stars": 18.84,
+        "activity": 71.65,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "在断网或联网场景中，用蓝牙网状网络与 Nostr 中继完成无需账号的点对点聊天",
+        "highlights": [
+          "蓝牙多跳中继支持离线近距离通信",
+          "联网后通过 Nostr 进入地域频道",
+          "私信按可用性在蓝牙与 Nostr 间切换"
+        ],
+        "audience": "适合灾害、偏远地区、线下活动等网络不可用场景，也可用于联网后的地域社区聊天。",
+        "capabilities": [
+          "发现附近设备并经蓝牙多跳转发消息",
+          "进入按 geohash 划分的地域聊天室",
+          "优先用蓝牙发送私信，不可用时转至 Nostr",
+          "暂存无可用链路的消息，恢复后自动投递",
+          "通过三连点立即清除全部数据"
+        ],
+        "core_title": "离线蓝牙与联网中继双通道",
+        "core_summary": "本地优先走蓝牙网状网络，设备可代为多跳转发；超出蓝牙范围时切到 Nostr 中继，私信还可排队等待链路恢复。",
+        "prerequisites": "可从 App Store 安装；源码构建需使用 Xcode，签名到设备时还需 Apple Developer Team ID。",
+        "limitations": "网状网络会使用由身份密钥派生的持久设备标识；Nostr 私信格式仅与 BitChat 客户端互通。",
+        "license_label": "Unlicense",
+        "license_restrictions": "",
+        "readme_sha": "fc9313c1f9adaa21d22759354de03a8bf569757e",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+          ],
+          "highlights": [
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ],
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ],
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ]
+          ],
+          "audience": [
+            "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+          ],
+          "capabilities": [
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ],
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ],
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ],
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ],
+            [
+              "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+            ]
+          ],
+          "core_title": [
+            "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+          ],
+          "core_summary": [
+            "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+          ],
+          "prerequisites": [
+            "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+          ],
+          "limitations": [
+            "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-28/repo-d5d526d64848ecec66a59d05-19bf1f83c9aed98227eac1d5.png",
+      "publication_evidence": {
+        "full_name": "permissionlesstech/bitchat",
+        "license_spdx_id": "Unlicense",
+        "readme": {
+          "sha": "fc9313c1f9adaa21d22759354de03a8bf569757e",
+          "source_url": "https://api.github.com/repos/permissionlesstech/bitchat/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-28/repo-d5d526d64848ecec66a59d05-19bf1f83c9aed98227eac1d5.png",
+          "sha256": "6c88a869b9c2b85f5f9eff3212ebf4249a8822687e3fc7fe5699161da5592aad",
+          "width": 420,
+          "height": 420
+        },
+        "warnings": []
+      },
+      "license_spdx": "Unlicense",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.01.permissionlesstech--bitchat.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1097346685,
+      "full_name": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "html_url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "JavaScript",
+      "stars": 51508,
+      "forks": 3038,
+      "open_issues": 39,
+      "watchers": 147,
+      "topics": [],
+      "created_at": "2025-11-16T01:52:04Z",
+      "updated_at": "2026-07-27T23:28:36Z",
+      "pushed_at": "2026-07-27T23:22:10Z",
+      "daily_stars": 849,
+      "weekly_stars": null,
+      "trending_rank_daily": 7,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 88.91,
+      "star_delta": 884,
+      "fork_delta": 54,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.1,
+        "relative_growth": 91.3,
+        "fork_growth": 92.75,
+        "total_stars": 23.19,
+        "activity": 100.0,
+        "trending_signal": 33.33
+      },
+      "summary": {
+        "one_line": "为 AI 编码工具补上一套前端设计流程，从设计上下文、质量审查到浏览器内迭代",
+        "highlights": [
+          "用 PRODUCT.md 与 DESIGN.md 固化设计语境",
+          "提供 23 个统一命令覆盖塑形、审查与润色",
+          "用 60 条确定性规则扫描常见设计问题"
+        ],
+        "audience": "适合让 AI 编写落地页、应用界面或仪表盘，并希望统一视觉方向、检查质量与反复打磨的团队。",
+        "capabilities": [
+          "初始化项目并记录受众、品牌与组件约束",
+          "先规划界面结构，再进入代码实现",
+          "审查层级、清晰度、无障碍与响应式问题",
+          "提取可复用组件与设计令牌",
+          "在浏览器中生成视觉变体并迭代元素"
+        ],
+        "core_title": "让 AI 先读懂设计语境",
+        "core_summary": "初始化流程把受众、产品类型、品牌语气、颜色、字体和组件写入项目文档，后续命令共享这些背景，减少每次修改都从零解释。",
+        "prerequisites": "在项目根目录运行 npx impeccable install，再在 AI 编码工具内执行 /impeccable init。",
+        "limitations": "Codex 安装或更新后仍需在 /hooks 中批准项目钩子；部分工具需重启后才显示新技能。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "c3dec5a46d930eb5ede5d508c0713bbb9fff1647",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+          ],
+          "highlights": [
+            [
+              "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+            ],
+            [
+              "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+            ],
+            [
+              "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+            ]
+          ],
+          "audience": [
+            "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+          ],
+          "capabilities": [
+            [
+              "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+            ],
+            [
+              "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+            ],
+            [
+              "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+            ],
+            [
+              "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+            ],
+            [
+              "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+            ]
+          ],
+          "core_title": [
+            "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+          ],
+          "core_summary": [
+            "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+          ],
+          "prerequisites": [
+            "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+          ],
+          "limitations": [
+            "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-28/repo-21fcbee2e5fa5e511d32f30c-f9a2b235e427fa64b4a09804.png",
+      "publication_evidence": {
+        "full_name": "pbakaus/impeccable",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "c3dec5a46d930eb5ede5d508c0713bbb9fff1647",
+          "source_url": "https://api.github.com/repos/pbakaus/impeccable/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-28/repo-21fcbee2e5fa5e511d32f30c-f9a2b235e427fa64b4a09804.png",
+          "sha256": "24bc48c871c01aac8a8abf3ac36231643ad0916f17a0ecc04e5f5089db829059",
+          "width": 200,
+          "height": 200
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.02.pbakaus--impeccable.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 774468912,
+      "full_name": "yorukot/superfile",
+      "owner": "yorukot",
+      "name": "superfile",
+      "html_url": "https://github.com/yorukot/superfile",
+      "description": "Pretty fancy and modern terminal file manager",
+      "language": "Go",
+      "stars": 20853,
+      "forks": 675,
+      "open_issues": 216,
+      "watchers": 59,
+      "topics": [
+        "bubbletea",
+        "cli",
+        "file-manager",
+        "filemanager",
+        "filesystem",
+        "golang",
+        "hacktoberfest",
+        "linux-app",
+        "terminal-app",
+        "terminal-based",
+        "tui"
+      ],
+      "created_at": "2024-03-19T15:49:52Z",
+      "updated_at": "2026-07-27T23:28:16Z",
+      "pushed_at": "2026-07-27T18:09:24Z",
+      "daily_stars": 600,
+      "weekly_stars": null,
+      "trending_rank_daily": 5,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 88.67,
+      "star_delta": 656,
+      "fork_delta": 36,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.65,
+        "relative_growth": 95.65,
+        "fork_growth": 89.86,
+        "total_stars": 15.94,
+        "activity": 100.0,
+        "trending_signal": 38.69
+      },
+      "summary": {
+        "one_line": "把终端变成可定制的文件管理界面，用快捷键完成日常文件操作",
+        "highlights": [
+          "覆盖 Linux、macOS 与 Windows",
+          "可按需配置插件、主题和快捷键",
+          "内置更新检查，可在配置中关闭"
+        ],
+        "audience": "适合偏好键盘操作，希望在 Linux、macOS 或 Windows 终端中管理文件并调整界面外观的用户。",
+        "capabilities": [
+          "在终端中完成常见文件操作",
+          "用 spf 命令启动文件管理器",
+          "切换为 Vim 风格快捷键配置",
+          "配置自定义主题与快捷键",
+          "关闭自动检查更新的提示"
+        ],
+        "core_title": "可定制的终端文件管理界面",
+        "core_summary": "安装后从终端直接启动，项目同时提供快捷键、主题和插件配置入口，让文件操作方式与界面外观按个人习惯调整。",
+        "prerequisites": "直接安装可按系统选择脚本或包管理器；从源码构建需安装 Go，并把生成的 spf 加入 PATH。",
+        "limitations": "Windows 尚未获得完整支持；Vim 或 Neovim 用户需要把默认快捷键配置切换为 Vim 版本。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "805e402891cf4446ba23d1717a63b3f464c9fc5c",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "repository.description",
+            "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+          ],
+          "highlights": [
+            [
+              "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+            ],
+            [
+              "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+            ],
+            [
+              "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+            ]
+          ],
+          "audience": [
+            "repository.description",
+            "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+          ],
+          "capabilities": [
+            [
+              "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+            ],
+            [
+              "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+            ],
+            [
+              "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+            ],
+            [
+              "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+            ],
+            [
+              "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+            ]
+          ],
+          "core_title": [
+            "repository.description",
+            "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+          ],
+          "core_summary": [
+            "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+          ],
+          "prerequisites": [
+            "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+          ],
+          "limitations": [
+            "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-28/repo-afb757a91696edd65cf68184-da4c16b8c8c61161967ca5a9.png",
+      "publication_evidence": {
+        "full_name": "yorukot/superfile",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "805e402891cf4446ba23d1717a63b3f464c9fc5c",
+          "source_url": "https://api.github.com/repos/yorukot/superfile/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-28/repo-afb757a91696edd65cf68184-da4c16b8c8c61161967ca5a9.png",
+          "sha256": "1ca4848f3907e78d4392f3efbc31599678333eef9be7a3476c92802c198ab9ef",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.03.yorukot--superfile.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "permissionlesstech/bitchat",
+            "path": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.01.permissionlesstech--bitchat.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "pbakaus/impeccable",
+            "path": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.02.pbakaus--impeccable.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "yorukot/superfile",
+            "path": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.03.yorukot--superfile.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1013830656,
+          "full_name": "permissionlesstech/bitchat",
+          "owner": "permissionlesstech",
+          "name": "bitchat",
+          "html_url": "https://github.com/permissionlesstech/bitchat",
+          "description": "bluetooth mesh chat, IRC vibes",
+          "language": "Swift",
+          "stars": 32199,
+          "forks": 5053,
+          "open_issues": 74,
+          "watchers": 294,
+          "topics": [
+            "bluetooth",
+            "bluetooth-le",
+            "decentralized",
+            "e2e-encryption",
+            "ios",
+            "macos",
+            "mesh-network",
+            "messaging",
+            "nostr",
+            "swift"
+          ],
+          "created_at": "2025-07-04T14:34:38Z",
+          "updated_at": "2026-07-27T23:21:50Z",
+          "pushed_at": "2026-07-26T23:58:21Z",
+          "daily_stars": 2344,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 93.11,
+          "star_delta": 1971,
+          "fork_delta": 353,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 18.84,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "在断网或联网场景中，用蓝牙网状网络与 Nostr 中继完成无需账号的点对点聊天",
+            "highlights": [
+              "蓝牙多跳中继支持离线近距离通信",
+              "联网后通过 Nostr 进入地域频道",
+              "私信按可用性在蓝牙与 Nostr 间切换"
+            ],
+            "audience": "适合灾害、偏远地区、线下活动等网络不可用场景，也可用于联网后的地域社区聊天。",
+            "capabilities": [
+              "发现附近设备并经蓝牙多跳转发消息",
+              "进入按 geohash 划分的地域聊天室",
+              "优先用蓝牙发送私信，不可用时转至 Nostr",
+              "暂存无可用链路的消息，恢复后自动投递",
+              "通过三连点立即清除全部数据"
+            ],
+            "core_title": "离线蓝牙与联网中继双通道",
+            "core_summary": "本地优先走蓝牙网状网络，设备可代为多跳转发；超出蓝牙范围时切到 Nostr 中继，私信还可排队等待链路恢复。",
+            "prerequisites": "可从 App Store 安装；源码构建需使用 Xcode，签名到设备时还需 Apple Developer Team ID。",
+            "limitations": "网状网络会使用由身份密钥派生的持久设备标识；Nostr 私信格式仅与 BitChat 客户端互通。",
+            "license_label": "Unlicense",
+            "license_restrictions": "",
+            "readme_sha": "fc9313c1f9adaa21d22759354de03a8bf569757e",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+              ],
+              "highlights": [
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ],
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ],
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ]
+              ],
+              "audience": [
+                "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ],
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ],
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ],
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ],
+                [
+                  "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+                ]
+              ],
+              "core_title": [
+                "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+              ],
+              "core_summary": [
+                "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+              ],
+              "prerequisites": [
+                "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+              ],
+              "limitations": [
+                "github.readme:fc9313c1f9adaa21d22759354de03a8bf569757e"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-28/repo-d5d526d64848ecec66a59d05-19bf1f83c9aed98227eac1d5.png",
+          "publication_evidence": {
+            "full_name": "permissionlesstech/bitchat",
+            "license_spdx_id": "Unlicense",
+            "readme": {
+              "sha": "fc9313c1f9adaa21d22759354de03a8bf569757e",
+              "source_url": "https://api.github.com/repos/permissionlesstech/bitchat/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-28/repo-d5d526d64848ecec66a59d05-19bf1f83c9aed98227eac1d5.png",
+              "sha256": "6c88a869b9c2b85f5f9eff3212ebf4249a8822687e3fc7fe5699161da5592aad",
+              "width": 420,
+              "height": 420
+            },
+            "warnings": []
+          },
+          "license_spdx": "Unlicense",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.01.permissionlesstech--bitchat.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1097346685,
+          "full_name": "pbakaus/impeccable",
+          "owner": "pbakaus",
+          "name": "impeccable",
+          "html_url": "https://github.com/pbakaus/impeccable",
+          "description": "The design language that makes your AI harness better at design.",
+          "language": "JavaScript",
+          "stars": 51508,
+          "forks": 3038,
+          "open_issues": 39,
+          "watchers": 147,
+          "topics": [],
+          "created_at": "2025-11-16T01:52:04Z",
+          "updated_at": "2026-07-27T23:28:36Z",
+          "pushed_at": "2026-07-27T23:22:10Z",
+          "daily_stars": 849,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.91,
+          "star_delta": 884,
+          "fork_delta": 54,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.1,
+            "relative_growth": 91.3,
+            "fork_growth": 92.75,
+            "total_stars": 23.19,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "为 AI 编码工具补上一套前端设计流程，从设计上下文、质量审查到浏览器内迭代",
+            "highlights": [
+              "用 PRODUCT.md 与 DESIGN.md 固化设计语境",
+              "提供 23 个统一命令覆盖塑形、审查与润色",
+              "用 60 条确定性规则扫描常见设计问题"
+            ],
+            "audience": "适合让 AI 编写落地页、应用界面或仪表盘，并希望统一视觉方向、检查质量与反复打磨的团队。",
+            "capabilities": [
+              "初始化项目并记录受众、品牌与组件约束",
+              "先规划界面结构，再进入代码实现",
+              "审查层级、清晰度、无障碍与响应式问题",
+              "提取可复用组件与设计令牌",
+              "在浏览器中生成视觉变体并迭代元素"
+            ],
+            "core_title": "让 AI 先读懂设计语境",
+            "core_summary": "初始化流程把受众、产品类型、品牌语气、颜色、字体和组件写入项目文档，后续命令共享这些背景，减少每次修改都从零解释。",
+            "prerequisites": "在项目根目录运行 npx impeccable install，再在 AI 编码工具内执行 /impeccable init。",
+            "limitations": "Codex 安装或更新后仍需在 /hooks 中批准项目钩子；部分工具需重启后才显示新技能。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "c3dec5a46d930eb5ede5d508c0713bbb9fff1647",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+              ],
+              "highlights": [
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ],
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ],
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ]
+              ],
+              "audience": [
+                "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ],
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ],
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ],
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ],
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ]
+              ],
+              "core_title": [
+                "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+              ],
+              "core_summary": [
+                "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+              ],
+              "prerequisites": [
+                "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+              ],
+              "limitations": [
+                "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-28/repo-21fcbee2e5fa5e511d32f30c-f9a2b235e427fa64b4a09804.png",
+          "publication_evidence": {
+            "full_name": "pbakaus/impeccable",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "c3dec5a46d930eb5ede5d508c0713bbb9fff1647",
+              "source_url": "https://api.github.com/repos/pbakaus/impeccable/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-28/repo-21fcbee2e5fa5e511d32f30c-f9a2b235e427fa64b4a09804.png",
+              "sha256": "24bc48c871c01aac8a8abf3ac36231643ad0916f17a0ecc04e5f5089db829059",
+              "width": 200,
+              "height": 200
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.02.pbakaus--impeccable.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 774468912,
+          "full_name": "yorukot/superfile",
+          "owner": "yorukot",
+          "name": "superfile",
+          "html_url": "https://github.com/yorukot/superfile",
+          "description": "Pretty fancy and modern terminal file manager",
+          "language": "Go",
+          "stars": 20853,
+          "forks": 675,
+          "open_issues": 216,
+          "watchers": 59,
+          "topics": [
+            "bubbletea",
+            "cli",
+            "file-manager",
+            "filemanager",
+            "filesystem",
+            "golang",
+            "hacktoberfest",
+            "linux-app",
+            "terminal-app",
+            "terminal-based",
+            "tui"
+          ],
+          "created_at": "2024-03-19T15:49:52Z",
+          "updated_at": "2026-07-27T23:28:16Z",
+          "pushed_at": "2026-07-27T18:09:24Z",
+          "daily_stars": 600,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.67,
+          "star_delta": 656,
+          "fork_delta": 36,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.65,
+            "relative_growth": 95.65,
+            "fork_growth": 89.86,
+            "total_stars": 15.94,
+            "activity": 100.0,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "把终端变成可定制的文件管理界面，用快捷键完成日常文件操作",
+            "highlights": [
+              "覆盖 Linux、macOS 与 Windows",
+              "可按需配置插件、主题和快捷键",
+              "内置更新检查，可在配置中关闭"
+            ],
+            "audience": "适合偏好键盘操作，希望在 Linux、macOS 或 Windows 终端中管理文件并调整界面外观的用户。",
+            "capabilities": [
+              "在终端中完成常见文件操作",
+              "用 spf 命令启动文件管理器",
+              "切换为 Vim 风格快捷键配置",
+              "配置自定义主题与快捷键",
+              "关闭自动检查更新的提示"
+            ],
+            "core_title": "可定制的终端文件管理界面",
+            "core_summary": "安装后从终端直接启动，项目同时提供快捷键、主题和插件配置入口，让文件操作方式与界面外观按个人习惯调整。",
+            "prerequisites": "直接安装可按系统选择脚本或包管理器；从源码构建需安装 Go，并把生成的 spf 加入 PATH。",
+            "limitations": "Windows 尚未获得完整支持；Vim 或 Neovim 用户需要把默认快捷键配置切换为 Vim 版本。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "805e402891cf4446ba23d1717a63b3f464c9fc5c",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "repository.description",
+                "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+              ],
+              "highlights": [
+                [
+                  "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+                ],
+                [
+                  "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+                ],
+                [
+                  "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+                ]
+              ],
+              "audience": [
+                "repository.description",
+                "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+                ],
+                [
+                  "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+                ],
+                [
+                  "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+                ],
+                [
+                  "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+                ],
+                [
+                  "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+                ]
+              ],
+              "core_title": [
+                "repository.description",
+                "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+              ],
+              "core_summary": [
+                "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+              ],
+              "prerequisites": [
+                "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+              ],
+              "limitations": [
+                "github.readme:805e402891cf4446ba23d1717a63b3f464c9fc5c"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-28/repo-afb757a91696edd65cf68184-da4c16b8c8c61161967ca5a9.png",
+          "publication_evidence": {
+            "full_name": "yorukot/superfile",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "805e402891cf4446ba23d1717a63b3f464c9fc5c",
+              "source_url": "https://api.github.com/repos/yorukot/superfile/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-28/repo-afb757a91696edd65cf68184-da4c16b8c8c61161967ca5a9.png",
+              "sha256": "1ca4848f3907e78d4392f3efbc31599678333eef9be7a3476c92802c198ab9ef",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-28/2026-07-28.comprehensive.03.yorukot--superfile.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-28/2026-07-28.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "pbakaus/impeccable",
+            "path": "reports/daily/assets/2026-07-28/2026-07-28.ai.01.pbakaus--impeccable.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/daily/assets/2026-07-28/2026-07-28.ai.02.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/daily/assets/2026-07-28/2026-07-28.ai.03.firecrawl--firecrawl.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1097346685,
+          "full_name": "pbakaus/impeccable",
+          "owner": "pbakaus",
+          "name": "impeccable",
+          "html_url": "https://github.com/pbakaus/impeccable",
+          "description": "The design language that makes your AI harness better at design.",
+          "language": "JavaScript",
+          "stars": 51508,
+          "forks": 3038,
+          "open_issues": 39,
+          "watchers": 147,
+          "topics": [],
+          "created_at": "2025-11-16T01:52:04Z",
+          "updated_at": "2026-07-27T23:28:36Z",
+          "pushed_at": "2026-07-27T23:22:10Z",
+          "daily_stars": 849,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 88.47,
+          "star_delta": 884,
+          "fork_delta": 54,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.0,
+            "relative_growth": 96.0,
+            "fork_growth": 88.0,
+            "total_stars": 16.0,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "给 AI 编码工具补上一套前端设计工作流，从建立设计上下文到审查、打磨和浏览器迭代",
+            "highlights": [
+              "先写入产品与设计上下文，供后续命令共用",
+              "用设计命令审查、调整和完善具体界面",
+              "用确定性规则扫描常见设计与可用性问题"
+            ],
+            "audience": "使用 AI 编码工具制作落地页、应用界面或仪表盘，需要统一设计方向并检查成品的团队",
+            "capabilities": [
+              "初始化产品定位、品牌语气和设计规范",
+              "规划界面结构后再进入代码实现",
+              "审查层级、清晰度与视觉表达",
+              "检查无障碍、响应式和性能问题",
+              "在浏览器中对界面元素迭代多个方案"
+            ],
+            "core_title": "贯穿项目的设计上下文",
+            "core_summary": "初始化会生成 PRODUCT.md，并可生成 DESIGN.md；后续命令持续读取受众、品牌方向、颜色、字体和组件信息，减少每轮设计任务重新解释背景。",
+            "prerequisites": "在项目根目录运行 npx impeccable install，再执行 /impeccable init。",
+            "limitations": "安装或更新后需重载编码工具；Codex 用户还要在 /hooks 中人工批准项目 Hook。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "c3dec5a46d930eb5ede5d508c0713bbb9fff1647",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+              ],
+              "highlights": [
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ],
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ],
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ]
+              ],
+              "audience": [
+                "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ],
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ],
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ],
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ],
+                [
+                  "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+                ]
+              ],
+              "core_title": [
+                "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+              ],
+              "core_summary": [
+                "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+              ],
+              "prerequisites": [
+                "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+              ],
+              "limitations": [
+                "github.readme:c3dec5a46d930eb5ede5d508c0713bbb9fff1647"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-28/repo-21fcbee2e5fa5e511d32f30c-f9a2b235e427fa64b4a09804.png",
+          "publication_evidence": {
+            "full_name": "pbakaus/impeccable",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "c3dec5a46d930eb5ede5d508c0713bbb9fff1647",
+              "source_url": "https://api.github.com/repos/pbakaus/impeccable/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-28/repo-21fcbee2e5fa5e511d32f30c-f9a2b235e427fa64b4a09804.png",
+              "sha256": "24bc48c871c01aac8a8abf3ac36231643ad0916f17a0ecc04e5f5089db829059",
+              "width": 200,
+              "height": 200
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-28/2026-07-28.ai.01.pbakaus--impeccable.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1241960226,
+          "full_name": "alibaba/open-code-review",
+          "owner": "alibaba",
+          "name": "open-code-review",
+          "html_url": "https://github.com/alibaba/open-code-review",
+          "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "language": "Go",
+          "stars": 14752,
+          "forks": 996,
+          "open_issues": 64,
+          "watchers": 51,
+          "topics": [
+            "agent",
+            "agent-skills",
+            "code-review",
+            "code-review-assistant",
+            "harness",
+            "repository-level-context"
+          ],
+          "created_at": "2026-05-18T02:16:36Z",
+          "updated_at": "2026-07-27T23:29:21Z",
+          "pushed_at": "2026-07-27T13:03:07Z",
+          "daily_stars": 980,
+          "weekly_stars": null,
+          "trending_rank_daily": 9,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.27,
+          "star_delta": 996,
+          "fork_delta": 57,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 92.0,
+            "total_stars": 8.0,
+            "activity": 71.65,
+            "trending_signal": 30.1
+          },
+          "summary": {
+            "one_line": "把确定性审查流程与 LLM Agent 结合，读取代码变更并生成精确到行的结构化审查意见",
+            "highlights": [
+              "先确定待审文件并把相关文件组合处理",
+              "按文件特征匹配规则，减少无关信息干扰",
+              "让 Agent 检索完整文件和仓库上下文"
+            ],
+            "audience": "需要审查工作区、分支、提交或完整目录，并希望把检查接入日常开发与 CI/CD 的研发团队",
+            "capabilities": [
+              "审查暂存、未暂存和未跟踪的变更",
+              "比较分支范围或检查单个提交",
+              "扫描完整文件或指定目录",
+              "定位问题行并输出结构化评论",
+              "恢复中断的分支或提交审查会话"
+            ],
+            "core_title": "确定性流程与 Agent 分工",
+            "core_summary": "工程逻辑负责选文件、组合相关文件、匹配规则和校准评论位置；Agent 负责按场景调用工具、读取上下文并判断问题，兼顾流程约束与动态分析。",
+            "prerequisites": "需要 Git >= 2.41；常规模式还要配置 LLM 提供方、模型和 API key。",
+            "limitations": "其设计取舍偏向提高精确率、减少误报，因此召回率低于 README 对比的通用 Agent；委托模式可免配 OCR 的 LLM。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "1f20ffde796e6ab4d5d7dcba212d719dec927278",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+              ],
+              "highlights": [
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ],
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ],
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ]
+              ],
+              "audience": [
+                "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ],
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ],
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ],
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ],
+                [
+                  "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+                ]
+              ],
+              "core_title": [
+                "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+              ],
+              "core_summary": [
+                "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+              ],
+              "prerequisites": [
+                "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+              ],
+              "limitations": [
+                "github.readme:1f20ffde796e6ab4d5d7dcba212d719dec927278"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-28/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+          "publication_evidence": {
+            "full_name": "alibaba/open-code-review",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "1f20ffde796e6ab4d5d7dcba212d719dec927278",
+              "source_url": "https://api.github.com/repos/alibaba/open-code-review/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-28/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+              "sha256": "a9c8b0eb596ec9f1f4939eb19f3aeb2e3e78cdd8c5e35edf3eead39dba501dbd",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-28/2026-07-28.ai.02.alibaba--open-code-review.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 787076358,
+          "full_name": "firecrawl/firecrawl",
+          "owner": "firecrawl",
+          "name": "firecrawl",
+          "html_url": "https://github.com/firecrawl/firecrawl",
+          "description": "The API to search, scrape, and interact with the web at scale. 🔥",
+          "language": "TypeScript",
+          "stars": 157001,
+          "forks": 8926,
+          "open_issues": 444,
+          "watchers": 157001,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "ai-crawler",
+            "ai-scraping",
+            "ai-search",
+            "crawler",
+            "data-extraction",
+            "html-to-markdown",
+            "llm",
+            "markdown",
+            "scraper",
+            "scraping",
+            "web-crawler",
+            "web-data",
+            "web-data-extraction",
+            "web-scraper",
+            "web-scraping",
+            "web-search",
+            "webscraping"
+          ],
+          "created_at": "2024-04-15T21:02:29Z",
+          "updated_at": "2026-07-27T23:30:54Z",
+          "pushed_at": "2026-07-27T23:09:34Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 84.8,
+          "star_delta": 564,
+          "fork_delta": 33,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.0,
+            "relative_growth": 88.0,
+            "fork_growth": 82.0,
+            "total_stars": 60.0,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "把网页搜索、抓取和交互统一成 API，输出适合程序与 AI 继续处理的 Markdown 或结构化数据",
+            "highlights": [
+              "输入网址，返回正文、截图或结构化数据",
+              "遍历整站或批量异步抓取多个网址",
+              "先操作页面，再提取交互后的内容"
+            ],
+            "audience": "为 AI Agent、搜索、研究或数据管道接入实时网页内容，需要统一抓取接口的开发者",
+            "capabilities": [
+              "搜索网页并返回结果页面的完整内容",
+              "把单个网址转换为 Markdown 或 JSON",
+              "发现并抓取网站内的全部页面",
+              "批量异步处理多个网址",
+              "点击、滚动、输入或等待后再提取页面"
+            ],
+            "core_title": "抓取前先完成网页交互",
+            "core_summary": "同一流程可先抓取页面，再通过提示词或代码执行点击、滚动、输入、等待等动作，最后读取操作后的内容，适合普通静态抓取无法覆盖的页面。",
+            "prerequisites": "使用托管服务需注册并获取 API key；本地运行或自托管需按对应指南部署。",
+            "limitations": "云端版本包含额外功能；抓取时需由使用者遵守网站政策、隐私政策和使用条款，默认遵循 robots.txt。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "The SDKs and some UI components are licensed under the MIT License.",
+            "readme_sha": "ddf61b428ff7282b10407bede759d8c1ff06ccba",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+                ],
+                [
+                  "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+                ],
+                [
+                  "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+                ]
+              ],
+              "audience": [
+                "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+                ],
+                [
+                  "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+                ],
+                [
+                  "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+                ],
+                [
+                  "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+                ],
+                [
+                  "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+              ],
+              "core_summary": [
+                "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+              ],
+              "prerequisites": [
+                "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+              ],
+              "limitations": [
+                "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:ddf61b428ff7282b10407bede759d8c1ff06ccba"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-07-28/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "publication_evidence": {
+            "full_name": "firecrawl/firecrawl",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "ddf61b428ff7282b10407bede759d8c1ff06ccba",
+              "source_url": "https://api.github.com/repos/firecrawl/firecrawl/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-28/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+              "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-28/2026-07-28.ai.03.firecrawl--firecrawl.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
