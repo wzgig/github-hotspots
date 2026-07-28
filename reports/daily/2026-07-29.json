@@ -1,0 +1,1462 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-29",
+  "window_start": "2026-07-28",
+  "window_end": "2026-07-29",
+  "generated_at": "2026-07-29T07:31:11+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-28 至 2026-07-29",
+  "publication": {
+    "issue_number": 18,
+    "issue_code": "D018",
+    "issue_label": "第18期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-29",
+    "manifest": "reports/daily/assets/2026-07-29/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "moeru-ai/airi",
+            "path": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.02.moeru-ai--airi.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "opengeos/GeoLibre",
+            "path": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.03.opengeos--geolibre.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-29/2026-07-29.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "moeru-ai/airi",
+            "path": "reports/daily/assets/2026-07-29/2026-07-29.ai.01.moeru-ai--airi.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-07-29/2026-07-29.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-29/2026-07-29.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 18,
+      "issue_code": "D018",
+      "issue_label": "第18期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 192885,
+      "forks": 16582,
+      "open_issues": 240,
+      "watchers": 192885,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-07-28T23:29:58Z",
+      "pushed_at": "2026-07-28T11:18:20Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 90.0,
+      "star_delta": 1585,
+      "fork_delta": 148,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 94.03,
+        "fork_growth": 98.51,
+        "total_stars": 83.58,
+        "activity": 71.65,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "把软件工程方法拆成可组合的代理技能，帮助开发者对齐需求、测试代码和控制复杂度",
+        "highlights": [
+          "先通过追问澄清需求，再让代理开始改代码",
+          "建立项目共享术语，减少代理误解和冗长表达",
+          "用测试、诊断与代码审查形成持续反馈闭环"
+        ],
+        "audience": "适合使用 Claude Code、Codex 等编码代理，并希望把需求澄清、实现、测试和审查流程标准化的开发者",
+        "capabilities": [
+          "追问计划与设计中的未决问题",
+          "整理项目术语并更新上下文文档",
+          "把对话转成规格或可执行工单",
+          "按红绿重构循环实现和验证代码",
+          "诊断疑难缺陷并补充回归测试"
+        ],
+        "core_title": "小技能组合成工程流程",
+        "core_summary": "每项技能只负责一个清晰环节，可按任务组合使用；既有手动触发的流程编排，也有代理按场景调用的工程规范，让需求、设计、实现和反馈保持衔接。",
+        "prerequisites": "安装后需在每个仓库运行一次 setup-matt-pocock-skills，并配置工单系统、标签与文档保存位置。",
+        "limitations": "插件方式安装的是托管只读集合；文件方式可编辑但不会自动更新。两种方式同时安装会让每项技能重复出现。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "eb26335f5ad16adc027ddac412c255f952099f08",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "highlights": [
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ]
+          ],
+          "audience": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "capabilities": [
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ]
+          ],
+          "core_title": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "core_summary": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "prerequisites": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "limitations": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-29/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "eb26335f5ad16adc027ddac412c255f952099f08",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-29/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.01.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 896924279,
+      "full_name": "moeru-ai/airi",
+      "owner": "moeru-ai",
+      "name": "airi",
+      "html_url": "https://github.com/moeru-ai/airi",
+      "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+      "language": "TypeScript",
+      "stars": 44731,
+      "forks": 4447,
+      "open_issues": 178,
+      "watchers": 169,
+      "topics": [
+        "ai-companion",
+        "ai-vtuber",
+        "airi",
+        "digital-life",
+        "grok-companion",
+        "live2d",
+        "neuro-sama",
+        "neurosama",
+        "openclaw",
+        "vrm",
+        "vtuber"
+      ],
+      "created_at": "2024-12-01T16:33:36Z",
+      "updated_at": "2026-07-28T23:26:22Z",
+      "pushed_at": "2026-07-28T16:41:31Z",
+      "daily_stars": 796,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 89.51,
+      "star_delta": 728,
+      "fork_delta": 55,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.01,
+        "relative_growth": 91.04,
+        "fork_growth": 91.04,
+        "total_stars": 23.88,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "在自己的设备上运行可对话、操控虚拟形象并参与游戏的数字伙伴",
+        "highlights": [
+          "接收浏览器或 Discord 音频并进行语音识别",
+          "驱动 VRM 与 Live2D 角色完成注视、眨眼和待机动作",
+          "连接多种模型与语音服务，组合实时交互链路"
+        ],
+        "audience": "适合制作 AI 虚拟角色、数字宠物或互动主播，并需要语音、形象、聊天与游戏能力协同的开发者和创作者",
+        "capabilities": [
+          "进行实时语音输入、识别与说话检测",
+          "合成角色语音并切换多种服务提供方",
+          "控制 VRM 或 Live2D 模型及其动画",
+          "接入 Telegram 和 Discord 进行聊天",
+          "让角色参与 Minecraft 等游戏环境"
+        ],
+        "core_title": "把角色的脑耳口身接起来",
+        "core_summary": "项目把模型推理、音频输入、语音合成、角色动画和外部连接拆成协作模块，使数字角色不只停留在文字聊天，还能听、说、表现动作并进入游戏场景。",
+        "prerequisites": "源码开发需先安装 pnpm 依赖；开发桌面版应按 CONTRIBUTING.md 配置环境。",
+        "limitations": "项目仍处于早期开发阶段；Factorio 等部分游戏能力仍在开发，浏览器本地推理和记忆系统也尚未完成。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "72cfe3247863fe34313b6627e1d0acd0f0a415b0",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+          ],
+          "highlights": [
+            [
+              "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+            ],
+            [
+              "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+            ],
+            [
+              "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+            ]
+          ],
+          "audience": [
+            "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+          ],
+          "capabilities": [
+            [
+              "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+            ],
+            [
+              "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+            ],
+            [
+              "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+            ],
+            [
+              "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+            ],
+            [
+              "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+            ]
+          ],
+          "core_title": [
+            "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+          ],
+          "core_summary": [
+            "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+          ],
+          "prerequisites": [
+            "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+          ],
+          "limitations": [
+            "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-29/repo-df7fe5c065c70173b41b52b8-aa0b43c5dfaa995b382519ca.png",
+      "publication_evidence": {
+        "full_name": "moeru-ai/airi",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "72cfe3247863fe34313b6627e1d0acd0f0a415b0",
+          "source_url": "https://api.github.com/repos/moeru-ai/airi/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-29/repo-df7fe5c065c70173b41b52b8-aa0b43c5dfaa995b382519ca.png",
+          "sha256": "9bd9c69dd2450e9ea5e8cc27c3bac9a8e23f7acf74c65965de3f951a8ae95dbb",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.02.moeru-ai--airi.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1251648409,
+      "full_name": "opengeos/GeoLibre",
+      "owner": "opengeos",
+      "name": "GeoLibre",
+      "html_url": "https://github.com/opengeos/GeoLibre",
+      "description": "A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs in the web browser, on the desktop, on mobile, and inside Jupyter notebooks.",
+      "language": "TypeScript",
+      "stars": 3367,
+      "forks": 390,
+      "open_issues": 8,
+      "watchers": 28,
+      "topics": [
+        "data-science",
+        "duckdb",
+        "geospatial",
+        "maplibre",
+        "maplibre-gl-js",
+        "tauri-app"
+      ],
+      "created_at": "2026-05-27T19:34:31Z",
+      "updated_at": "2026-07-28T23:29:26Z",
+      "pushed_at": "2026-07-28T22:44:41Z",
+      "daily_stars": 743,
+      "weekly_stars": null,
+      "trending_rank_daily": 8,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 88.44,
+      "star_delta": 721,
+      "fork_delta": 40,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.52,
+        "relative_growth": 100.0,
+        "fork_growth": 86.57,
+        "total_stars": 8.96,
+        "activity": 100.0,
+        "trending_signal": 31.55
+      },
+      "summary": {
+        "one_line": "把本地地理数据带进浏览器、桌面和 Jupyter，完成制图、探索与空间分析",
+        "highlights": [
+          "在本地处理数据，同时提供网页与桌面工作区",
+          "呈现三维城市、地形和行星底图等地图场景",
+          "用空间 SQL、处理工具和属性表分析地理数据"
+        ],
+        "audience": "适合需要制作地图、探索空间数据、执行地理分析或在 Jupyter 中嵌入 GIS 工作流的研究者与数据人员",
+        "capabilities": [
+          "加载并可视化多种地理空间数据",
+          "创建三维城市与地形地图场景",
+          "运行空间 SQL 查询和处理流程",
+          "按时间字段播放地图变化过程",
+          "分享、嵌入并复用地图项目"
+        ],
+        "core_title": "同一工作区跨端处理 GIS",
+        "core_summary": "它以 MapLibre、DuckDB-WASM Spatial 和 deck.gl 组成地图与分析能力，同一工作区可运行于现代浏览器、桌面、移动端和 Jupyter，并尽量把数据留在本地。",
+        "prerequisites": "网页版本无需安装；从源码运行或配置可选凭据时，需按 Getting Started 文档操作。",
+        "limitations": "",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "a13360b3e1781d10c9848f4905a06de604313ff2",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+          ],
+          "highlights": [
+            [
+              "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+            ],
+            [
+              "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+            ],
+            [
+              "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+            ]
+          ],
+          "audience": [
+            "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+          ],
+          "capabilities": [
+            [
+              "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+            ],
+            [
+              "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+            ],
+            [
+              "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+            ],
+            [
+              "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+            ],
+            [
+              "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+            ]
+          ],
+          "core_title": [
+            "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+          ],
+          "core_summary": [
+            "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+          ],
+          "prerequisites": [
+            "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+          ],
+          "limitations": [],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-29/repo-0d1b28e2649230bf1c9d7e2b-ec88396abebb3b260b05f709.png",
+      "publication_evidence": {
+        "full_name": "opengeos/GeoLibre",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "a13360b3e1781d10c9848f4905a06de604313ff2",
+          "source_url": "https://api.github.com/repos/opengeos/GeoLibre/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-29/repo-0d1b28e2649230bf1c9d7e2b-ec88396abebb3b260b05f709.png",
+          "sha256": "71ae0402e27af08b5ec5472ec1866b4a1c9ccf3c77cc282db809c33e172b46cc",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.03.opengeos--geolibre.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "moeru-ai/airi",
+            "path": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.02.moeru-ai--airi.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "opengeos/GeoLibre",
+            "path": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.03.opengeos--geolibre.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 192885,
+          "forks": 16582,
+          "open_issues": 240,
+          "watchers": 192885,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-07-28T23:29:58Z",
+          "pushed_at": "2026-07-28T11:18:20Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 90.0,
+          "star_delta": 1585,
+          "fork_delta": 148,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 94.03,
+            "fork_growth": 98.51,
+            "total_stars": 83.58,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "把软件工程方法拆成可组合的代理技能，帮助开发者对齐需求、测试代码和控制复杂度",
+            "highlights": [
+              "先通过追问澄清需求，再让代理开始改代码",
+              "建立项目共享术语，减少代理误解和冗长表达",
+              "用测试、诊断与代码审查形成持续反馈闭环"
+            ],
+            "audience": "适合使用 Claude Code、Codex 等编码代理，并希望把需求澄清、实现、测试和审查流程标准化的开发者",
+            "capabilities": [
+              "追问计划与设计中的未决问题",
+              "整理项目术语并更新上下文文档",
+              "把对话转成规格或可执行工单",
+              "按红绿重构循环实现和验证代码",
+              "诊断疑难缺陷并补充回归测试"
+            ],
+            "core_title": "小技能组合成工程流程",
+            "core_summary": "每项技能只负责一个清晰环节，可按任务组合使用；既有手动触发的流程编排，也有代理按场景调用的工程规范，让需求、设计、实现和反馈保持衔接。",
+            "prerequisites": "安装后需在每个仓库运行一次 setup-matt-pocock-skills，并配置工单系统、标签与文档保存位置。",
+            "limitations": "插件方式安装的是托管只读集合；文件方式可编辑但不会自动更新。两种方式同时安装会让每项技能重复出现。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "eb26335f5ad16adc027ddac412c255f952099f08",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "highlights": [
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ]
+              ],
+              "audience": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ]
+              ],
+              "core_title": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "core_summary": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "prerequisites": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "limitations": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-29/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "eb26335f5ad16adc027ddac412c255f952099f08",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-29/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.01.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 896924279,
+          "full_name": "moeru-ai/airi",
+          "owner": "moeru-ai",
+          "name": "airi",
+          "html_url": "https://github.com/moeru-ai/airi",
+          "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+          "language": "TypeScript",
+          "stars": 44731,
+          "forks": 4447,
+          "open_issues": 178,
+          "watchers": 169,
+          "topics": [
+            "ai-companion",
+            "ai-vtuber",
+            "airi",
+            "digital-life",
+            "grok-companion",
+            "live2d",
+            "neuro-sama",
+            "neurosama",
+            "openclaw",
+            "vrm",
+            "vtuber"
+          ],
+          "created_at": "2024-12-01T16:33:36Z",
+          "updated_at": "2026-07-28T23:26:22Z",
+          "pushed_at": "2026-07-28T16:41:31Z",
+          "daily_stars": 796,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.51,
+          "star_delta": 728,
+          "fork_delta": 55,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.01,
+            "relative_growth": 91.04,
+            "fork_growth": 91.04,
+            "total_stars": 23.88,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "在自己的设备上运行可对话、操控虚拟形象并参与游戏的数字伙伴",
+            "highlights": [
+              "接收浏览器或 Discord 音频并进行语音识别",
+              "驱动 VRM 与 Live2D 角色完成注视、眨眼和待机动作",
+              "连接多种模型与语音服务，组合实时交互链路"
+            ],
+            "audience": "适合制作 AI 虚拟角色、数字宠物或互动主播，并需要语音、形象、聊天与游戏能力协同的开发者和创作者",
+            "capabilities": [
+              "进行实时语音输入、识别与说话检测",
+              "合成角色语音并切换多种服务提供方",
+              "控制 VRM 或 Live2D 模型及其动画",
+              "接入 Telegram 和 Discord 进行聊天",
+              "让角色参与 Minecraft 等游戏环境"
+            ],
+            "core_title": "把角色的脑耳口身接起来",
+            "core_summary": "项目把模型推理、音频输入、语音合成、角色动画和外部连接拆成协作模块，使数字角色不只停留在文字聊天，还能听、说、表现动作并进入游戏场景。",
+            "prerequisites": "源码开发需先安装 pnpm 依赖；开发桌面版应按 CONTRIBUTING.md 配置环境。",
+            "limitations": "项目仍处于早期开发阶段；Factorio 等部分游戏能力仍在开发，浏览器本地推理和记忆系统也尚未完成。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "72cfe3247863fe34313b6627e1d0acd0f0a415b0",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+              ],
+              "highlights": [
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ],
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ],
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ]
+              ],
+              "audience": [
+                "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ],
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ],
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ],
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ],
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ]
+              ],
+              "core_title": [
+                "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+              ],
+              "core_summary": [
+                "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+              ],
+              "prerequisites": [
+                "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+              ],
+              "limitations": [
+                "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-29/repo-df7fe5c065c70173b41b52b8-aa0b43c5dfaa995b382519ca.png",
+          "publication_evidence": {
+            "full_name": "moeru-ai/airi",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "72cfe3247863fe34313b6627e1d0acd0f0a415b0",
+              "source_url": "https://api.github.com/repos/moeru-ai/airi/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-29/repo-df7fe5c065c70173b41b52b8-aa0b43c5dfaa995b382519ca.png",
+              "sha256": "9bd9c69dd2450e9ea5e8cc27c3bac9a8e23f7acf74c65965de3f951a8ae95dbb",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.02.moeru-ai--airi.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1251648409,
+          "full_name": "opengeos/GeoLibre",
+          "owner": "opengeos",
+          "name": "GeoLibre",
+          "html_url": "https://github.com/opengeos/GeoLibre",
+          "description": "A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs in the web browser, on the desktop, on mobile, and inside Jupyter notebooks.",
+          "language": "TypeScript",
+          "stars": 3367,
+          "forks": 390,
+          "open_issues": 8,
+          "watchers": 28,
+          "topics": [
+            "data-science",
+            "duckdb",
+            "geospatial",
+            "maplibre",
+            "maplibre-gl-js",
+            "tauri-app"
+          ],
+          "created_at": "2026-05-27T19:34:31Z",
+          "updated_at": "2026-07-28T23:29:26Z",
+          "pushed_at": "2026-07-28T22:44:41Z",
+          "daily_stars": 743,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.44,
+          "star_delta": 721,
+          "fork_delta": 40,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.52,
+            "relative_growth": 100.0,
+            "fork_growth": 86.57,
+            "total_stars": 8.96,
+            "activity": 100.0,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "把本地地理数据带进浏览器、桌面和 Jupyter，完成制图、探索与空间分析",
+            "highlights": [
+              "在本地处理数据，同时提供网页与桌面工作区",
+              "呈现三维城市、地形和行星底图等地图场景",
+              "用空间 SQL、处理工具和属性表分析地理数据"
+            ],
+            "audience": "适合需要制作地图、探索空间数据、执行地理分析或在 Jupyter 中嵌入 GIS 工作流的研究者与数据人员",
+            "capabilities": [
+              "加载并可视化多种地理空间数据",
+              "创建三维城市与地形地图场景",
+              "运行空间 SQL 查询和处理流程",
+              "按时间字段播放地图变化过程",
+              "分享、嵌入并复用地图项目"
+            ],
+            "core_title": "同一工作区跨端处理 GIS",
+            "core_summary": "它以 MapLibre、DuckDB-WASM Spatial 和 deck.gl 组成地图与分析能力，同一工作区可运行于现代浏览器、桌面、移动端和 Jupyter，并尽量把数据留在本地。",
+            "prerequisites": "网页版本无需安装；从源码运行或配置可选凭据时，需按 Getting Started 文档操作。",
+            "limitations": "",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "a13360b3e1781d10c9848f4905a06de604313ff2",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+              ],
+              "highlights": [
+                [
+                  "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+                ],
+                [
+                  "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+                ],
+                [
+                  "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+                ]
+              ],
+              "audience": [
+                "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+                ],
+                [
+                  "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+                ],
+                [
+                  "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+                ],
+                [
+                  "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+                ],
+                [
+                  "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+                ]
+              ],
+              "core_title": [
+                "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+              ],
+              "core_summary": [
+                "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+              ],
+              "prerequisites": [
+                "github.readme:a13360b3e1781d10c9848f4905a06de604313ff2"
+              ],
+              "limitations": [],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-29/repo-0d1b28e2649230bf1c9d7e2b-ec88396abebb3b260b05f709.png",
+          "publication_evidence": {
+            "full_name": "opengeos/GeoLibre",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "a13360b3e1781d10c9848f4905a06de604313ff2",
+              "source_url": "https://api.github.com/repos/opengeos/GeoLibre/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-29/repo-0d1b28e2649230bf1c9d7e2b-ec88396abebb3b260b05f709.png",
+              "sha256": "71ae0402e27af08b5ec5472ec1866b4a1c9ccf3c77cc282db809c33e172b46cc",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-29/2026-07-29.comprehensive.03.opengeos--geolibre.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-29/2026-07-29.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "moeru-ai/airi",
+            "path": "reports/daily/assets/2026-07-29/2026-07-29.ai.01.moeru-ai--airi.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-07-29/2026-07-29.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-29/2026-07-29.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 896924279,
+          "full_name": "moeru-ai/airi",
+          "owner": "moeru-ai",
+          "name": "airi",
+          "html_url": "https://github.com/moeru-ai/airi",
+          "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+          "language": "TypeScript",
+          "stars": 44731,
+          "forks": 4447,
+          "open_issues": 178,
+          "watchers": 169,
+          "topics": [
+            "ai-companion",
+            "ai-vtuber",
+            "airi",
+            "digital-life",
+            "grok-companion",
+            "live2d",
+            "neuro-sama",
+            "neurosama",
+            "openclaw",
+            "vrm",
+            "vtuber"
+          ],
+          "created_at": "2024-12-01T16:33:36Z",
+          "updated_at": "2026-07-28T23:26:22Z",
+          "pushed_at": "2026-07-28T16:41:31Z",
+          "daily_stars": 796,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.3,
+          "star_delta": 728,
+          "fork_delta": 55,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 88.0,
+            "total_stars": 20.0,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把大模型装进可自托管的虚拟角色，让它陪你语音聊天、控制形象并参与游戏",
+            "highlights": [
+              "结合语音、角色动画与大模型对话",
+              "在浏览器、桌面端和移动设备运行",
+              "连接聊天平台与多款游戏场景"
+            ],
+            "audience": "想搭建自有数字伙伴、AI 虚拟主播，或研究语音交互与游戏智能体的开发者和创作者",
+            "capabilities": [
+              "接收浏览器或 Discord 的语音输入",
+              "调用多种服务或本地方案合成语音",
+              "驱动 VRM 与 Live2D 模型动作",
+              "接入 Telegram 和 Discord 对话",
+              "参与 Minecraft 等游戏任务"
+            ],
+            "core_title": "让虚拟角色走出聊天框",
+            "core_summary": "它把大模型、语音输入输出、VRM 与 Live2D 角色和游戏连接放进同一套容器，让角色不只聊天，还能在设备与游戏场景中持续互动。",
+            "prerequisites": "开发网页端需先用 pnpm 安装依赖；桌面端需按 CONTRIBUTING 配置环境。",
+            "limitations": "项目仍处早期开发阶段；Factorio、长期记忆与纯浏览器本地推理等部分能力仍在开发。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "72cfe3247863fe34313b6627e1d0acd0f0a415b0",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+              ],
+              "highlights": [
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ],
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ],
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ]
+              ],
+              "audience": [
+                "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ],
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ],
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ],
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ],
+                [
+                  "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+                ]
+              ],
+              "core_title": [
+                "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+              ],
+              "core_summary": [
+                "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+              ],
+              "prerequisites": [
+                "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+              ],
+              "limitations": [
+                "github.readme:72cfe3247863fe34313b6627e1d0acd0f0a415b0"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-29/repo-df7fe5c065c70173b41b52b8-aa0b43c5dfaa995b382519ca.png",
+          "publication_evidence": {
+            "full_name": "moeru-ai/airi",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "72cfe3247863fe34313b6627e1d0acd0f0a415b0",
+              "source_url": "https://api.github.com/repos/moeru-ai/airi/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-29/repo-df7fe5c065c70173b41b52b8-aa0b43c5dfaa995b382519ca.png",
+              "sha256": "9bd9c69dd2450e9ea5e8cc27c3bac9a8e23f7acf74c65965de3f951a8ae95dbb",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-29/2026-07-29.ai.01.moeru-ai--airi.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 234769,
+          "forks": 35773,
+          "open_issues": 100,
+          "watchers": 1224,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-07-28T23:30:43Z",
+          "pushed_at": "2026-07-27T20:45:18Z",
+          "daily_stars": 692,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.7,
+          "star_delta": 623,
+          "fork_delta": 91,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.0,
+            "relative_growth": 92.0,
+            "fork_growth": 96.0,
+            "total_stars": 92.0,
+            "activity": 71.65,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "给编程代理补上一套工程流程，让规划、测试、复核、安全检查和经验沉淀连续运转",
+            "highlights": [
+              "用规则、技能、代理与钩子分担职责",
+              "跨 Claude Code、Codex 等工具复用流程",
+              "通过 Plan Canvas 标注并审批实施计划"
+            ],
+            "audience": "需要约束编程代理工作方式、统一团队开发流程，或审查代理配置安全性的研发团队",
+            "capabilities": [
+              "规划功能并生成可确认的实施方案",
+              "按测试驱动流程保留验证证据",
+              "调用独立上下文审查代码改动",
+              "扫描提示词、钩子、MCP 与权限配置",
+              "沉淀会话摘要、记忆和可复用技能"
+            ],
+            "core_title": "把代理开发变成验证闭环",
+            "core_summary": "它把计划、测试、实现、独立复核、验证和记忆串成固定流程，并用技能、代理、规则与钩子分别承接按需工作、委派、标准和自动检查。",
+            "prerequisites": "需按所用工具选择一种安装路径；Claude Code 插件要求 CLI v2.1.0 或更高版本。",
+            "limitations": "同一工具不可叠加安装方式；Codex 尚无 Claude 式钩子能力，市场插件也可能无法完整加载技能。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "455df701816815dc3536110e72f5b1d7f7fa48ef",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+              ],
+              "highlights": [
+                [
+                  "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+                ],
+                [
+                  "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+                ],
+                [
+                  "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+                ]
+              ],
+              "audience": [
+                "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+                ],
+                [
+                  "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+                ],
+                [
+                  "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+                ],
+                [
+                  "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+                ],
+                [
+                  "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+                ]
+              ],
+              "core_title": [
+                "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+              ],
+              "core_summary": [
+                "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+              ],
+              "prerequisites": [
+                "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+              ],
+              "limitations": [
+                "github.readme:455df701816815dc3536110e72f5b1d7f7fa48ef"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-29/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "455df701816815dc3536110e72f5b1d7f7fa48ef",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-29/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-29/2026-07-29.ai.02.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 221884,
+          "forks": 42457,
+          "open_issues": 26143,
+          "watchers": 221884,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-07-28T23:30:39Z",
+          "pushed_at": "2026-07-28T22:41:58Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 84.4,
+          "star_delta": 479,
+          "fork_delta": 176,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 88.0,
+            "relative_growth": 80.0,
+            "fork_growth": 100.0,
+            "total_stars": 88.0,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "让个人 AI 助手记住跨会话经验、自动改进技能，并从终端或聊天软件持续执行任务",
+            "highlights": [
+              "从任务经验生成并持续改进技能",
+              "跨会话检索记忆并建立用户模型",
+              "在本地、容器、远程与云端环境运行"
+            ],
+            "audience": "需要长期个人助手、跨聊天平台任务入口，或想研究会学习和并行工作的智能体开发者",
+            "capabilities": [
+              "从复杂任务经验中创建并改进技能",
+              "搜索历史会话并摘要相关信息",
+              "定时执行报告、备份和审计任务",
+              "派生隔离子代理并行处理工作流",
+              "通过统一网关接入多种聊天平台"
+            ],
+            "core_title": "把任务经验变成可复用技能",
+            "core_summary": "它把会话记忆、定期提醒、技能生成与使用中改进连成闭环：完成复杂任务后沉淀经验，后续对话再检索并继续完善。",
+            "prerequisites": "安装后需选择模型提供方并完成配置；安装器会准备 Python、Node.js、ripgrep 和 ffmpeg。",
+            "limitations": "Termux 需使用专门的手动安装路径，完整依赖集合包含与 Android 不兼容的语音依赖。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "highlights": [
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ]
+              ],
+              "audience": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ],
+                [
+                  "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+                ]
+              ],
+              "core_title": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "core_summary": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "prerequisites": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "limitations": [
+                "github.readme:d78d6d57f04563f85c4b545703317bed77b6b9b5"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-29/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "d78d6d57f04563f85c4b545703317bed77b6b9b5",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-29/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-29/2026-07-29.ai.03.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
