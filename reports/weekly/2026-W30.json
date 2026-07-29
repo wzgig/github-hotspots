@@ -4,7 +4,7 @@
   "run_date": "2026-07-26",
   "window_start": "2026-07-19",
   "window_end": "2026-07-26",
-  "generated_at": "2026-07-26T13:46:11+08:00",
+  "generated_at": "2026-07-29T11:09:33+08:00",
   "timezone": "Asia/Shanghai",
   "window_label": "2026-07-19 至 2026-07-26",
   "publication": {
@@ -25,16 +25,16 @@
       "comprehensive": {
         "prompt_version": "4.1",
         "schema_version": "4.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       },
       "ai": {
         "prompt_version": "4.1",
         "schema_version": "4.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       }
@@ -179,64 +179,78 @@
         "trending_signal": 27.89
       },
       "summary": {
-        "one_line": "公开信息不足，暂不能准确说明 skills 的具体用途",
+        "one_line": "把软件工程方法拆成可组合的 Agent 技能，帮助编码助手先对齐需求，再测试、调试与审查改动",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "用追问流程澄清需求与项目术语",
+          "以测试驱动和诊断循环建立反馈",
+          "把规格、工单、实现与审查串成流程"
         ],
-        "audience": "公开信息不足，需人工确认后再发布",
+        "audience": "希望保留开发流程控制权，并让编码 Agent 按工程规范完成需求、调试和审查的开发者",
         "capabilities": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "追问需求并补齐决策分支",
+          "建立项目术语表与架构决策记录",
+          "把对话整理成规格和可阻塞工单",
+          "按测试驱动循环实现功能或修复缺陷",
+          "审查改动是否符合规范与原始规格"
         ],
-        "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "公开信息不足，暂不能准确说明 skills 的具体用途",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "可组合的工程技能链",
+        "core_summary": "每项技能只负责一段工程流程，可由用户手动调用或由 Agent 按任务自动选用；组合后覆盖需求澄清、规格拆解、实现、调试和审查。",
+        "prerequisites": "需选择 Claude Code 插件或 skills.sh 其一，并在每个仓库运行 /setup-matt-pocock-skills。",
+        "limitations": "两种安装方式同时使用会重复安装全部技能；Claude Code 插件提供的是托管只读副本。",
+        "license_label": "MIT",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "needs_review",
+        "readme_sha": "eb26335f5ad16adc027ddac412c255f952099f08",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
             ],
             [
-              "deterministic_draft"
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
             ],
             [
-              "deterministic_draft"
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
             ],
             [
-              "deterministic_draft"
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
             ],
             [
-              "deterministic_draft"
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "limitations": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -244,10 +258,13 @@
       "publication_evidence": {
         "full_name": "mattpocock/skills",
         "license_spdx_id": "MIT",
-        "readme": null,
+        "readme": {
+          "sha": "eb26335f5ad16adc027ddac412c255f952099f08",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
         "avatar": {
           "path": "avatars/2026-W30/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
-          "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
           "width": 373,
           "height": 373
         },
@@ -312,64 +329,78 @@
         "trending_signal": 50.0
       },
       "summary": {
-        "one_line": "想要检查代码变更并整理审查意见，可以用 code-review-graph；它能帮助团队发现问题和统一修改建议",
+        "one_line": "把代码库解析成持久结构图，让 AI 审查改动时只读取相关函数、依赖文件和测试",
         "highlights": [
-          "逐项检查提交中的代码变更",
-          "标出潜在缺陷和需要确认的实现",
-          "把审查意见整理成可跟进的建议"
+          "用 Tree-sitter 建立函数与依赖关系图",
+          "沿调用链计算改动影响范围",
+          "通过 MCP 向编码助手提供精简上下文"
         ],
-        "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+        "audience": "需要审查大型仓库、排查跨文件影响，或在合并请求中自动标记风险与测试缺口的研发团队",
         "capabilities": [
-          "逐项检查提交中的代码变更",
-          "标出潜在缺陷和需要确认的实现",
-          "把审查意见整理成可跟进的建议"
+          "解析代码并建立函数、类和导入关系图",
+          "增量更新发生变化的文件",
+          "追踪改动涉及的调用方、依赖和测试",
+          "在合并请求中发布风险审查评论",
+          "导出交互图、GraphML 或代码库 Wiki"
         ],
-        "core_title": "检查代码变更并整理审查意见",
-        "core_summary": "想要检查代码变更并整理审查意见，可以用 code-review-graph；它能帮助团队发现问题和统一修改建议",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "用代码图裁剪审查上下文",
+        "core_summary": "项目把语法树存成节点和调用、继承、测试等边，再从变更位置向外追踪影响范围，把最相关的文件和结构摘要交给 AI。",
+        "prerequisites": "需要 Python 3.10+；安装并配置 MCP 后需重启编辑器或工具，再为仓库构建代码图。",
+        "limitations": "小型单文件改动中，图上下文可能比直接读文件更大；搜索排序与部分语言的执行流检测仍需改进。",
+        "license_label": "MIT",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "metadata_only",
+        "readme_sha": "94fe725fc20930c1a31a4667dcb764806013eb02",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
             ],
             [
-              "deterministic_draft"
+              "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
             ],
             [
-              "deterministic_draft"
+              "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
             ],
             [
-              "deterministic_draft"
+              "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
             ],
             [
-              "deterministic_draft"
+              "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
+            ],
+            [
+              "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
+            ],
+            [
+              "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
+          ],
+          "limitations": [
+            "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -377,10 +408,13 @@
       "publication_evidence": {
         "full_name": "tirth8205/code-review-graph",
         "license_spdx_id": "MIT",
-        "readme": null,
+        "readme": {
+          "sha": "94fe725fc20930c1a31a4667dcb764806013eb02",
+          "source_url": "https://api.github.com/repos/tirth8205/code-review-graph/readme"
+        },
         "avatar": {
           "path": "avatars/2026-W30/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
-          "sha256": "8d9a1aae8cc3ab4827dd1149c1eb15e10523138d89a21f6666438f23f29d2f3b",
+          "sha256": "e4ec211724f39785b798a6ddbeb1f804af20b65fcbede4802ff584cdbc57f8b9",
           "width": 351,
           "height": 351
         },
@@ -451,64 +485,78 @@
         "trending_signal": 23.98
       },
       "summary": {
-        "one_line": "主要任务是集中运行和管理多个编程 Agent；orca 还能让开发任务可以并行推进",
+        "one_line": "在隔离的 Git worktree 中并行运行多个编程 Agent，并从桌面或手机统一跟进结果",
         "highlights": [
-          "在同一界面启动多个编程 Agent",
-          "把任务拆给不同 Agent 并行执行",
-          "集中查看各个 Agent 的执行状态"
+          "把同一任务分发到多个隔离 worktree",
+          "在差异视图中批注并回传修改意见",
+          "从手机接收完成通知并继续对话"
         ],
-        "audience": "需要统一管理多个编程 Agent 和并行任务的研发团队",
+        "audience": "需要并行比较多个 Agent 方案、远程运行开发任务，或集中审查 AI 代码改动的工程师",
         "capabilities": [
-          "在同一界面启动多个编程 Agent",
-          "把任务拆给不同 Agent 并行执行",
-          "集中查看各个 Agent 的执行状态"
+          "并排运行任意终端型编程 Agent",
+          "把同一提示分发到多个隔离 worktree",
+          "批注差异行并把意见发回 Agent",
+          "从手机监控任务并发送后续要求",
+          "通过 SSH 在远程主机运行 Agent"
         ],
-        "core_title": "集中运行和管理多个编程 Agent",
-        "core_summary": "主要任务是集中运行和管理多个编程 Agent；orca 还能让开发任务可以并行推进",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "隔离工作树里的并行 Agent",
+        "core_summary": "每个 Agent 在独立 Git worktree 中处理同一任务，用户可比较结果、选择方案并合并；桌面端集中管理终端和差异，移动端负责提醒与跟进。",
+        "prerequisites": "需安装桌面应用，并准备能在终端运行的编程 Agent；移动端需要与桌面应用配对。",
+        "limitations": "会收集匿名使用数据，但隐私文档提供退出方式；移动端主要用于监控和控制桌面端 Agent。",
+        "license_label": "MIT",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "metadata_only",
+        "readme_sha": "b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
             ],
             [
-              "deterministic_draft"
+              "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
             ],
             [
-              "deterministic_draft"
+              "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
             ],
             [
-              "deterministic_draft"
+              "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
             ],
             [
-              "deterministic_draft"
+              "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
+            ],
+            [
+              "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
+            ],
+            [
+              "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
+          ],
+          "limitations": [
+            "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -516,10 +564,13 @@
       "publication_evidence": {
         "full_name": "stablyai/orca",
         "license_spdx_id": "MIT",
-        "readme": null,
+        "readme": {
+          "sha": "b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4",
+          "source_url": "https://api.github.com/repos/stablyai/orca/readme"
+        },
         "avatar": {
           "path": "avatars/2026-W30/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
-          "sha256": "bfcd55184ce82541489eda90019aace6d2730f9dda13237619ca5026aa5e4d68",
+          "sha256": "74c9f9ca37e1d708720845638e4947b594c011bd6eb473475d8b04512c5f221e",
           "width": 460,
           "height": 460
         },
@@ -585,75 +636,94 @@
         "trending_signal": 100.0
       },
       "summary": {
-        "one_line": "用 ai-agent-book 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+        "one_line": "从 LLM、上下文和工具的组合原理出发，用章节正文与配套实验讲清 AI Agent 的工程实现",
         "highlights": [
-          "为模型应用提供标准化工具接口",
-          "连接外部数据源和可调用工具",
-          "把工具能力暴露给兼容 MCP 的客户端"
+          "串讲上下文、记忆、工具与多 Agent 协作",
+          "提供按章组织的代码实验和复现说明",
+          "支持在线阅读及多语言离线电子书"
         ],
-        "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+        "audience": "想系统理解 Agent 原理，并通过代码练习上下文工程、RAG、工具调用、评估与多 Agent 的学习者",
         "capabilities": [
-          "为模型应用提供标准化工具接口",
-          "连接外部数据源和可调用工具",
-          "把工具能力暴露给兼容 MCP 的客户端"
+          "阅读从基础到多 Agent 协作的章节",
+          "运行按章配套的代码实验",
+          "下载 PDF 或 EPUB 离线阅读",
+          "按脚本编译多语言电子书",
+          "克隆外部仓库补齐进阶实验"
         ],
-        "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
-        "core_summary": "用 ai-agent-book 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
-        "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "metadata_only",
+        "core_title": "正文与实验同步推进",
+        "core_summary": "全书围绕“Agent = LLM + 上下文 + 工具”展开，每章先解释设计原理，再链接对应代码与复现路径，适合边读边运行实验。",
+        "prerequisites": "部分实验需自行申请模型 API Key；自行编译 PDF 需 pandoc、xelatex、ElegantBook 与相关字体。",
+        "limitations": "部分外部仓库未内置；部分实验需 GPU、指定提交或 SO-100 机械臂，社区翻译可能滞后于中文原版。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "部分子项目可能包含各自的许可证信息，请以子项目中的说明为准。",
+        "readme_sha": "a21c589ee3d56e6454e1ec8f1568225aa0842dcf",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
             ],
             [
-              "deterministic_draft"
+              "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
             ],
             [
-              "deterministic_draft"
+              "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
             ],
             [
-              "deterministic_draft"
+              "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
             ],
             [
-              "deterministic_draft"
+              "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+            ],
+            [
+              "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+            ],
+            [
+              "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
-          "license_restrictions": []
+          "prerequisites": [
+            "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+          ],
+          "limitations": [
+            "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+          ]
         }
       },
       "avatar_path": "avatars/2026-W30/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
       "publication_evidence": {
         "full_name": "bojieli/ai-agent-book",
         "license_spdx_id": "Apache-2.0",
-        "readme": null,
+        "readme": {
+          "sha": "a21c589ee3d56e6454e1ec8f1568225aa0842dcf",
+          "source_url": "https://api.github.com/repos/bojieli/ai-agent-book/readme"
+        },
         "avatar": {
           "path": "avatars/2026-W30/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
-          "sha256": "7bf420640b189ca4d86a807b446904a1f444ace877062e3da27674c0fa4d733d",
+          "sha256": "a015f4da8a29824e9e8a77ad8f14074ad399278f2852b123dae5cb8179da7adb",
           "width": 460,
           "height": 460
         },
@@ -726,64 +796,78 @@
         "trending_signal": 28.91
       },
       "summary": {
-        "one_line": "这类任务可以交给 ai-engineering-from-scratch：把外部工具和数据接入支持 MCP 的模型应用，并用统一协议建立工具调用连接",
+        "one_line": "从数学基础一路学到 Agent、部署与安全，每课都要求亲手实现并留下可复用工具",
         "highlights": [
-          "为模型应用提供标准化工具接口",
-          "连接外部数据源和可调用工具",
-          "把工具能力暴露给兼容 MCP 的客户端"
+          "先用原始数学实现算法，再使用常用库",
+          "按阶段覆盖模型、协议、Agent 与部署",
+          "每课产出提示词、技能、Agent 或 MCP 服务"
         ],
-        "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+        "audience": "已经会写代码，想从底层原理补齐 AI 工程能力，并积累可运行作品和日常工具的学习者",
         "capabilities": [
-          "为模型应用提供标准化工具接口",
-          "连接外部数据源和可调用工具",
-          "把工具能力暴露给兼容 MCP 的客户端"
+          "推导并编码机器学习与深度学习算法",
+          "从零实现注意力、模型和 Agent 循环",
+          "运行测试并比较手写实现与常用框架",
+          "按知识水平生成个性化学习路径",
+          "安装课程产出的提示词与 Agent 技能"
         ],
-        "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
-        "core_summary": "这类任务可以交给 ai-engineering-from-scratch：把外部工具和数据接入支持 MCP 的模型应用，并用统一协议建立工具调用连接",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "每课都交付可复用产物",
+        "core_summary": "课程采用“理解问题、推导概念、从零实现、调用框架、交付工具”的固定循环，让学习结果沉淀为提示词、技能、Agent 或 MCP 服务。",
+        "prerequisites": "需要具备任意语言的编程能力，掌握 Python 会更方便；课程强调理解原理，而非只会调用 API。",
+        "limitations": "课程要求亲自推导、编码并运行测试，不提供复制粘贴式部署或手把手教学；完整路径投入较长。",
+        "license_label": "MIT",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "metadata_only",
+        "readme_sha": "f358b97874c6a7f835ceac18421c233427637fb3",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
             ],
             [
-              "deterministic_draft"
+              "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
             ],
             [
-              "deterministic_draft"
+              "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
             ],
             [
-              "deterministic_draft"
+              "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
             ],
             [
-              "deterministic_draft"
+              "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
+            ],
+            [
+              "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
+            ],
+            [
+              "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
+          ],
+          "limitations": [
+            "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -791,10 +875,13 @@
       "publication_evidence": {
         "full_name": "rohitg00/ai-engineering-from-scratch",
         "license_spdx_id": "MIT",
-        "readme": null,
+        "readme": {
+          "sha": "f358b97874c6a7f835ceac18421c233427637fb3",
+          "source_url": "https://api.github.com/repos/rohitg00/ai-engineering-from-scratch/readme"
+        },
         "avatar": {
           "path": "avatars/2026-W30/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
-          "sha256": "fbdd06f0a45b919103d284591ec2c2756713857cc0226f36bde7f0a306a9fc8e",
+          "sha256": "1814f102d41409e3ceca3fd2773ba99af77a0ab9135fdf2cbdf30af4ead47ca5",
           "width": 460,
           "height": 460
         },
@@ -859,80 +946,100 @@
         "trending_signal": 63.09
       },
       "summary": {
-        "one_line": "当你需要把外部工具和数据接入支持 MCP 的模型应用，worldmonitor 可以接手，同时用统一协议建立工具调用连接",
+        "one_line": "把全球新闻、地缘信号、金融与基础设施数据汇入同一套地图和态势仪表盘",
         "highlights": [
-          "为模型应用提供标准化工具接口",
-          "连接外部数据源和可调用工具",
-          "把工具能力暴露给兼容 MCP 的客户端"
+          "聚合多类新闻源并生成摘要简报",
+          "在三维地球和平面地图叠加态势图层",
+          "关联军事、经济、灾害与升级信号"
         ],
-        "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+        "audience": "需要持续观察国际新闻、市场、能源、灾害或基础设施变化，并希望自建统一看板的研究与分析人员",
         "capabilities": [
-          "为模型应用提供标准化工具接口",
-          "连接外部数据源和可调用工具",
-          "把工具能力暴露给兼容 MCP 的客户端"
+          "汇总新闻源并生成 AI 简报",
+          "切换三维地球与 WebGL 平面地图",
+          "关联跨数据流的异常与升级信号",
+          "查看交易所、商品和加密资产雷达",
+          "通过 MCP、REST、CLI 或 SDK 查询数据"
         ],
-        "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
-        "core_summary": "当你需要把外部工具和数据接入支持 MCP 的模型应用，worldmonitor 可以接手，同时用统一协议建立工具调用连接",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
-        "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "metadata_only",
+        "core_title": "跨来源的全球态势看板",
+        "core_summary": "系统把新闻、地图图层、市场与基础设施数据放进统一界面，并通过跨流关联找出同时出现的军事、经济、灾害和升级信号。",
+        "prerequisites": "本地开发需安装依赖并运行 npm run dev；基础应用无需环境变量，特定数据源可能需要凭证。",
+        "limitations": "部分数据源需要凭证；MCP 的 tools/call 需要 X-WorldMonitor-Key 或 OAuth，公开接口并非全部免认证。",
+        "license_label": "AGPL-3.0-only",
+        "license_restrictions": "Separate commercial or trademark permission needed",
+        "readme_sha": "d23e028c9e02d3631177d940006e70bada3f2c74",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
             ],
             [
-              "deterministic_draft"
+              "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
             ],
             [
-              "deterministic_draft"
+              "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
             ],
             [
-              "deterministic_draft"
+              "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
             ],
             [
-              "deterministic_draft"
+              "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+            ],
+            [
+              "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+            ],
+            [
+              "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
-          "license_restrictions": []
+          "prerequisites": [
+            "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+          ],
+          "limitations": [
+            "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+          ],
+          "license_label": [
+            "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+          ],
+          "license_restrictions": [
+            "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+          ]
         }
       },
       "avatar_path": "avatars/2026-W30/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
       "publication_evidence": {
         "full_name": "koala73/worldmonitor",
         "license_spdx_id": "NOASSERTION",
-        "readme": null,
+        "readme": {
+          "sha": "d23e028c9e02d3631177d940006e70bada3f2c74",
+          "source_url": "https://api.github.com/repos/koala73/worldmonitor/readme"
+        },
         "avatar": {
           "path": "avatars/2026-W30/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
-          "sha256": "1178670cba6ce6fc1640933d492b675df3b82fd84c7c0d68b6a2e4a6f5f1e0e5",
+          "sha256": "020a898862a29cafb4a70f81587c58230afa61547ab14d1be12eba6af8094956",
           "width": 460,
           "height": 460
         },
         "warnings": []
       },
+      "license_spdx": "AGPL-3.0-only",
       "assets": {
         "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.06.koala73--worldmonitor.png",
         "format": "png",
@@ -999,64 +1106,78 @@
         "trending_signal": 35.62
       },
       "summary": {
-        "one_line": "如果工作流里要统一接入并路由多个 AI 模型服务，可以交给 OmniRoute，同时把模型选择和供应商配置集中管理",
+        "one_line": "给编码工具提供统一模型端点，并按配额、成本、延迟和故障情况自动切换供应商",
         "highlights": [
-          "用统一入口连接不同模型服务",
-          "按配置把请求路由到目标模型",
-          "集中管理模型供应商和调用方式"
+          "用统一兼容接口连接多个模型供应商",
+          "在额度耗尽或调用失败时自动回退",
+          "按任务配置路由策略与上下文压缩"
         ],
-        "audience": "需要接入多个模型供应商或维护统一调用层的 AI 开发者",
+        "audience": "需要为 Codex、Claude Code、Cursor 等工具统一管理模型账号、额度、成本和故障回退的开发者",
         "capabilities": [
-          "用统一入口连接不同模型服务",
-          "按配置把请求路由到目标模型",
-          "集中管理模型供应商和调用方式"
+          "把不同供应商接到统一兼容端点",
+          "按配额、成本或延迟自动选择模型",
+          "在供应商失败时切换到后备目标",
+          "压缩提示词、工具输出和历史上下文",
+          "通过 MCP、A2A 和远程 CLI 管理网关"
         ],
-        "core_title": "统一接入并路由多个 AI 模型服务",
-        "core_summary": "如果工作流里要统一接入并路由多个 AI 模型服务，可以交给 OmniRoute，同时把模型选择和供应商配置集中管理",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "配额感知的模型路由链",
+        "core_summary": "每个组合可串联多个模型目标，并为步骤选择路由策略；系统持续参考健康、配额、成本和延迟，失败或额度不足时转向下一目标。",
+        "prerequisites": "需要 Node ≥22.22.2；安装并启动后，连接可用供应商，再把编码工具指向本地兼容端点。",
+        "limitations": "免费额度会随供应商调整而变化；远程访问令牌分为不同作用域，涉及进程启动的接口仅限本机回环。",
+        "license_label": "MIT",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "metadata_only",
+        "readme_sha": "00394b5fc0671dcf8ae168e86071cfb268438c33",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
             ],
             [
-              "deterministic_draft"
+              "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
             ],
             [
-              "deterministic_draft"
+              "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
             ],
             [
-              "deterministic_draft"
+              "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
             ],
             [
-              "deterministic_draft"
+              "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
+            ],
+            [
+              "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
+            ],
+            [
+              "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
+          ],
+          "limitations": [
+            "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -1064,10 +1185,13 @@
       "publication_evidence": {
         "full_name": "diegosouzapw/OmniRoute",
         "license_spdx_id": "MIT",
-        "readme": null,
+        "readme": {
+          "sha": "00394b5fc0671dcf8ae168e86071cfb268438c33",
+          "source_url": "https://api.github.com/repos/diegosouzapw/OmniRoute/readme"
+        },
         "avatar": {
           "path": "avatars/2026-W30/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
-          "sha256": "6711b870e3d791a7d1a46ea15d0a5b263e12af0f61aede5032d8d5b86dd9c521",
+          "sha256": "6d871cb62c7c54edf4cb091efe3bab15fb8e9fc0f59fb6f2426bc1063761b340",
           "width": 460,
           "height": 460
         },
@@ -1167,64 +1291,78 @@
             "trending_signal": 27.89
           },
           "summary": {
-            "one_line": "公开信息不足，暂不能准确说明 skills 的具体用途",
+            "one_line": "把软件工程方法拆成可组合的 Agent 技能，帮助编码助手先对齐需求，再测试、调试与审查改动",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "用追问流程澄清需求与项目术语",
+              "以测试驱动和诊断循环建立反馈",
+              "把规格、工单、实现与审查串成流程"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "希望保留开发流程控制权，并让编码 Agent 按工程规范完成需求、调试和审查的开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "追问需求并补齐决策分支",
+              "建立项目术语表与架构决策记录",
+              "把对话整理成规格和可阻塞工单",
+              "按测试驱动循环实现功能或修复缺陷",
+              "审查改动是否符合规范与原始规格"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "公开信息不足，暂不能准确说明 skills 的具体用途",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "可组合的工程技能链",
+            "core_summary": "每项技能只负责一段工程流程，可由用户手动调用或由 Agent 按任务自动选用；组合后覆盖需求澄清、规格拆解、实现、调试和审查。",
+            "prerequisites": "需选择 Claude Code 插件或 skills.sh 其一，并在每个仓库运行 /setup-matt-pocock-skills。",
+            "limitations": "两种安装方式同时使用会重复安装全部技能；Claude Code 插件提供的是托管只读副本。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "eb26335f5ad16adc027ddac412c255f952099f08",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "limitations": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1232,10 +1370,13 @@
           "publication_evidence": {
             "full_name": "mattpocock/skills",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "eb26335f5ad16adc027ddac412c255f952099f08",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
-              "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
               "width": 373,
               "height": 373
             },
@@ -1300,64 +1441,78 @@
             "trending_signal": 50.0
           },
           "summary": {
-            "one_line": "想要检查代码变更并整理审查意见，可以用 code-review-graph；它能帮助团队发现问题和统一修改建议",
+            "one_line": "把代码库解析成持久结构图，让 AI 审查改动时只读取相关函数、依赖文件和测试",
             "highlights": [
-              "逐项检查提交中的代码变更",
-              "标出潜在缺陷和需要确认的实现",
-              "把审查意见整理成可跟进的建议"
+              "用 Tree-sitter 建立函数与依赖关系图",
+              "沿调用链计算改动影响范围",
+              "通过 MCP 向编码助手提供精简上下文"
             ],
-            "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+            "audience": "需要审查大型仓库、排查跨文件影响，或在合并请求中自动标记风险与测试缺口的研发团队",
             "capabilities": [
-              "逐项检查提交中的代码变更",
-              "标出潜在缺陷和需要确认的实现",
-              "把审查意见整理成可跟进的建议"
+              "解析代码并建立函数、类和导入关系图",
+              "增量更新发生变化的文件",
+              "追踪改动涉及的调用方、依赖和测试",
+              "在合并请求中发布风险审查评论",
+              "导出交互图、GraphML 或代码库 Wiki"
             ],
-            "core_title": "检查代码变更并整理审查意见",
-            "core_summary": "想要检查代码变更并整理审查意见，可以用 code-review-graph；它能帮助团队发现问题和统一修改建议",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "用代码图裁剪审查上下文",
+            "core_summary": "项目把语法树存成节点和调用、继承、测试等边，再从变更位置向外追踪影响范围，把最相关的文件和结构摘要交给 AI。",
+            "prerequisites": "需要 Python 3.10+；安装并配置 MCP 后需重启编辑器或工具，再为仓库构建代码图。",
+            "limitations": "小型单文件改动中，图上下文可能比直接读文件更大；搜索排序与部分语言的执行流检测仍需改进。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "readme_sha": "94fe725fc20930c1a31a4667dcb764806013eb02",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
+                ],
+                [
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
+                ],
+                [
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
+              ],
+              "limitations": [
+                "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1365,10 +1520,13 @@
           "publication_evidence": {
             "full_name": "tirth8205/code-review-graph",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "94fe725fc20930c1a31a4667dcb764806013eb02",
+              "source_url": "https://api.github.com/repos/tirth8205/code-review-graph/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
-              "sha256": "8d9a1aae8cc3ab4827dd1149c1eb15e10523138d89a21f6666438f23f29d2f3b",
+              "sha256": "e4ec211724f39785b798a6ddbeb1f804af20b65fcbede4802ff584cdbc57f8b9",
               "width": 351,
               "height": 351
             },
@@ -1439,64 +1597,78 @@
             "trending_signal": 23.98
           },
           "summary": {
-            "one_line": "主要任务是集中运行和管理多个编程 Agent；orca 还能让开发任务可以并行推进",
+            "one_line": "在隔离的 Git worktree 中并行运行多个编程 Agent，并从桌面或手机统一跟进结果",
             "highlights": [
-              "在同一界面启动多个编程 Agent",
-              "把任务拆给不同 Agent 并行执行",
-              "集中查看各个 Agent 的执行状态"
+              "把同一任务分发到多个隔离 worktree",
+              "在差异视图中批注并回传修改意见",
+              "从手机接收完成通知并继续对话"
             ],
-            "audience": "需要统一管理多个编程 Agent 和并行任务的研发团队",
+            "audience": "需要并行比较多个 Agent 方案、远程运行开发任务，或集中审查 AI 代码改动的工程师",
             "capabilities": [
-              "在同一界面启动多个编程 Agent",
-              "把任务拆给不同 Agent 并行执行",
-              "集中查看各个 Agent 的执行状态"
+              "并排运行任意终端型编程 Agent",
+              "把同一提示分发到多个隔离 worktree",
+              "批注差异行并把意见发回 Agent",
+              "从手机监控任务并发送后续要求",
+              "通过 SSH 在远程主机运行 Agent"
             ],
-            "core_title": "集中运行和管理多个编程 Agent",
-            "core_summary": "主要任务是集中运行和管理多个编程 Agent；orca 还能让开发任务可以并行推进",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "隔离工作树里的并行 Agent",
+            "core_summary": "每个 Agent 在独立 Git worktree 中处理同一任务，用户可比较结果、选择方案并合并；桌面端集中管理终端和差异，移动端负责提醒与跟进。",
+            "prerequisites": "需安装桌面应用，并准备能在终端运行的编程 Agent；移动端需要与桌面应用配对。",
+            "limitations": "会收集匿名使用数据，但隐私文档提供退出方式；移动端主要用于监控和控制桌面端 Agent。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "readme_sha": "b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
+                ],
+                [
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
+                ],
+                [
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
+              ],
+              "limitations": [
+                "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1504,10 +1676,13 @@
           "publication_evidence": {
             "full_name": "stablyai/orca",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4",
+              "source_url": "https://api.github.com/repos/stablyai/orca/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
-              "sha256": "bfcd55184ce82541489eda90019aace6d2730f9dda13237619ca5026aa5e4d68",
+              "sha256": "74c9f9ca37e1d708720845638e4947b594c011bd6eb473475d8b04512c5f221e",
               "width": 460,
               "height": 460
             },
@@ -1573,75 +1748,94 @@
             "trending_signal": 100.0
           },
           "summary": {
-            "one_line": "用 ai-agent-book 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+            "one_line": "从 LLM、上下文和工具的组合原理出发，用章节正文与配套实验讲清 AI Agent 的工程实现",
             "highlights": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "串讲上下文、记忆、工具与多 Agent 协作",
+              "提供按章组织的代码实验和复现说明",
+              "支持在线阅读及多语言离线电子书"
             ],
-            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "audience": "想系统理解 Agent 原理，并通过代码练习上下文工程、RAG、工具调用、评估与多 Agent 的学习者",
             "capabilities": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "阅读从基础到多 Agent 协作的章节",
+              "运行按章配套的代码实验",
+              "下载 PDF 或 EPUB 离线阅读",
+              "按脚本编译多语言电子书",
+              "克隆外部仓库补齐进阶实验"
             ],
-            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
-            "core_summary": "用 ai-agent-book 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
-            "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "core_title": "正文与实验同步推进",
+            "core_summary": "全书围绕“Agent = LLM + 上下文 + 工具”展开，每章先解释设计原理，再链接对应代码与复现路径，适合边读边运行实验。",
+            "prerequisites": "部分实验需自行申请模型 API Key；自行编译 PDF 需 pandoc、xelatex、ElegantBook 与相关字体。",
+            "limitations": "部分外部仓库未内置；部分实验需 GPU、指定提交或 SO-100 机械臂，社区翻译可能滞后于中文原版。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "部分子项目可能包含各自的许可证信息，请以子项目中的说明为准。",
+            "readme_sha": "a21c589ee3d56e6454e1ec8f1568225aa0842dcf",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+                ],
+                [
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+                ],
+                [
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
-              "license_restrictions": []
+              "prerequisites": [
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+              ],
+              "limitations": [
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+              ]
             }
           },
           "avatar_path": "avatars/2026-W30/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
           "publication_evidence": {
             "full_name": "bojieli/ai-agent-book",
             "license_spdx_id": "Apache-2.0",
-            "readme": null,
+            "readme": {
+              "sha": "a21c589ee3d56e6454e1ec8f1568225aa0842dcf",
+              "source_url": "https://api.github.com/repos/bojieli/ai-agent-book/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
-              "sha256": "7bf420640b189ca4d86a807b446904a1f444ace877062e3da27674c0fa4d733d",
+              "sha256": "a015f4da8a29824e9e8a77ad8f14074ad399278f2852b123dae5cb8179da7adb",
               "width": 460,
               "height": 460
             },
@@ -1714,64 +1908,78 @@
             "trending_signal": 28.91
           },
           "summary": {
-            "one_line": "这类任务可以交给 ai-engineering-from-scratch：把外部工具和数据接入支持 MCP 的模型应用，并用统一协议建立工具调用连接",
+            "one_line": "从数学基础一路学到 Agent、部署与安全，每课都要求亲手实现并留下可复用工具",
             "highlights": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "先用原始数学实现算法，再使用常用库",
+              "按阶段覆盖模型、协议、Agent 与部署",
+              "每课产出提示词、技能、Agent 或 MCP 服务"
             ],
-            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "audience": "已经会写代码，想从底层原理补齐 AI 工程能力，并积累可运行作品和日常工具的学习者",
             "capabilities": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "推导并编码机器学习与深度学习算法",
+              "从零实现注意力、模型和 Agent 循环",
+              "运行测试并比较手写实现与常用框架",
+              "按知识水平生成个性化学习路径",
+              "安装课程产出的提示词与 Agent 技能"
             ],
-            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
-            "core_summary": "这类任务可以交给 ai-engineering-from-scratch：把外部工具和数据接入支持 MCP 的模型应用，并用统一协议建立工具调用连接",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "每课都交付可复用产物",
+            "core_summary": "课程采用“理解问题、推导概念、从零实现、调用框架、交付工具”的固定循环，让学习结果沉淀为提示词、技能、Agent 或 MCP 服务。",
+            "prerequisites": "需要具备任意语言的编程能力，掌握 Python 会更方便；课程强调理解原理，而非只会调用 API。",
+            "limitations": "课程要求亲自推导、编码并运行测试，不提供复制粘贴式部署或手把手教学；完整路径投入较长。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "readme_sha": "f358b97874c6a7f835ceac18421c233427637fb3",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
+                ],
+                [
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
+                ],
+                [
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
+              ],
+              "limitations": [
+                "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1779,10 +1987,13 @@
           "publication_evidence": {
             "full_name": "rohitg00/ai-engineering-from-scratch",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "f358b97874c6a7f835ceac18421c233427637fb3",
+              "source_url": "https://api.github.com/repos/rohitg00/ai-engineering-from-scratch/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
-              "sha256": "fbdd06f0a45b919103d284591ec2c2756713857cc0226f36bde7f0a306a9fc8e",
+              "sha256": "1814f102d41409e3ceca3fd2773ba99af77a0ab9135fdf2cbdf30af4ead47ca5",
               "width": 460,
               "height": 460
             },
@@ -1847,80 +2058,100 @@
             "trending_signal": 63.09
           },
           "summary": {
-            "one_line": "当你需要把外部工具和数据接入支持 MCP 的模型应用，worldmonitor 可以接手，同时用统一协议建立工具调用连接",
+            "one_line": "把全球新闻、地缘信号、金融与基础设施数据汇入同一套地图和态势仪表盘",
             "highlights": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "聚合多类新闻源并生成摘要简报",
+              "在三维地球和平面地图叠加态势图层",
+              "关联军事、经济、灾害与升级信号"
             ],
-            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "audience": "需要持续观察国际新闻、市场、能源、灾害或基础设施变化，并希望自建统一看板的研究与分析人员",
             "capabilities": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "汇总新闻源并生成 AI 简报",
+              "切换三维地球与 WebGL 平面地图",
+              "关联跨数据流的异常与升级信号",
+              "查看交易所、商品和加密资产雷达",
+              "通过 MCP、REST、CLI 或 SDK 查询数据"
             ],
-            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
-            "core_summary": "当你需要把外部工具和数据接入支持 MCP 的模型应用，worldmonitor 可以接手，同时用统一协议建立工具调用连接",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
-            "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "core_title": "跨来源的全球态势看板",
+            "core_summary": "系统把新闻、地图图层、市场与基础设施数据放进统一界面，并通过跨流关联找出同时出现的军事、经济、灾害和升级信号。",
+            "prerequisites": "本地开发需安装依赖并运行 npm run dev；基础应用无需环境变量，特定数据源可能需要凭证。",
+            "limitations": "部分数据源需要凭证；MCP 的 tools/call 需要 X-WorldMonitor-Key 或 OAuth，公开接口并非全部免认证。",
+            "license_label": "AGPL-3.0-only",
+            "license_restrictions": "Separate commercial or trademark permission needed",
+            "readme_sha": "d23e028c9e02d3631177d940006e70bada3f2c74",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+                ],
+                [
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+                ],
+                [
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
-              "license_restrictions": []
+              "prerequisites": [
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+              ],
+              "limitations": [
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+              ],
+              "license_label": [
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+              ],
+              "license_restrictions": [
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+              ]
             }
           },
           "avatar_path": "avatars/2026-W30/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
           "publication_evidence": {
             "full_name": "koala73/worldmonitor",
             "license_spdx_id": "NOASSERTION",
-            "readme": null,
+            "readme": {
+              "sha": "d23e028c9e02d3631177d940006e70bada3f2c74",
+              "source_url": "https://api.github.com/repos/koala73/worldmonitor/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
-              "sha256": "1178670cba6ce6fc1640933d492b675df3b82fd84c7c0d68b6a2e4a6f5f1e0e5",
+              "sha256": "020a898862a29cafb4a70f81587c58230afa61547ab14d1be12eba6af8094956",
               "width": 460,
               "height": 460
             },
             "warnings": []
           },
+          "license_spdx": "AGPL-3.0-only",
           "assets": {
             "poster": "reports/weekly/assets/2026-W30/2026-W30.comprehensive.06.koala73--worldmonitor.png",
             "format": "png",
@@ -1987,64 +2218,78 @@
             "trending_signal": 35.62
           },
           "summary": {
-            "one_line": "如果工作流里要统一接入并路由多个 AI 模型服务，可以交给 OmniRoute，同时把模型选择和供应商配置集中管理",
+            "one_line": "给编码工具提供统一模型端点，并按配额、成本、延迟和故障情况自动切换供应商",
             "highlights": [
-              "用统一入口连接不同模型服务",
-              "按配置把请求路由到目标模型",
-              "集中管理模型供应商和调用方式"
+              "用统一兼容接口连接多个模型供应商",
+              "在额度耗尽或调用失败时自动回退",
+              "按任务配置路由策略与上下文压缩"
             ],
-            "audience": "需要接入多个模型供应商或维护统一调用层的 AI 开发者",
+            "audience": "需要为 Codex、Claude Code、Cursor 等工具统一管理模型账号、额度、成本和故障回退的开发者",
             "capabilities": [
-              "用统一入口连接不同模型服务",
-              "按配置把请求路由到目标模型",
-              "集中管理模型供应商和调用方式"
+              "把不同供应商接到统一兼容端点",
+              "按配额、成本或延迟自动选择模型",
+              "在供应商失败时切换到后备目标",
+              "压缩提示词、工具输出和历史上下文",
+              "通过 MCP、A2A 和远程 CLI 管理网关"
             ],
-            "core_title": "统一接入并路由多个 AI 模型服务",
-            "core_summary": "如果工作流里要统一接入并路由多个 AI 模型服务，可以交给 OmniRoute，同时把模型选择和供应商配置集中管理",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "配额感知的模型路由链",
+            "core_summary": "每个组合可串联多个模型目标，并为步骤选择路由策略；系统持续参考健康、配额、成本和延迟，失败或额度不足时转向下一目标。",
+            "prerequisites": "需要 Node ≥22.22.2；安装并启动后，连接可用供应商，再把编码工具指向本地兼容端点。",
+            "limitations": "免费额度会随供应商调整而变化；远程访问令牌分为不同作用域，涉及进程启动的接口仅限本机回环。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "readme_sha": "00394b5fc0671dcf8ae168e86071cfb268438c33",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
+                ],
+                [
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
+                ],
+                [
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
+              ],
+              "limitations": [
+                "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -2052,10 +2297,13 @@
           "publication_evidence": {
             "full_name": "diegosouzapw/OmniRoute",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "00394b5fc0671dcf8ae168e86071cfb268438c33",
+              "source_url": "https://api.github.com/repos/diegosouzapw/OmniRoute/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
-              "sha256": "6711b870e3d791a7d1a46ea15d0a5b263e12af0f61aede5032d8d5b86dd9c521",
+              "sha256": "6d871cb62c7c54edf4cb091efe3bab15fb8e9fc0f59fb6f2426bc1063761b340",
               "width": 460,
               "height": 460
             },
@@ -2169,75 +2417,94 @@
             "trending_signal": 100.0
           },
           "summary": {
-            "one_line": "ai-agent-book 可以把外部工具和数据接入支持 MCP 的模型应用，同时用统一协议建立工具调用连接",
+            "one_line": "从原理到工程实践系统学习 AI Agent，并用配套实验亲手实现关键机制",
             "highlights": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "围绕 LLM、上下文和工具讲解 Agent",
+              "从记忆、评估延伸到多 Agent 协作",
+              "正文、配图与配套实验一并开放"
             ],
-            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "audience": "想系统理解 Agent 原理，并通过代码实验学习上下文、工具、评估和协作机制的读者",
             "capabilities": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "阅读从基础到工程实践的章节正文",
+              "运行各章配套项目验证关键概念",
+              "学习记忆、知识库与 RAG 的实现",
+              "练习 Coding Agent、评估与后训练",
+              "探索多模态交互和多 Agent 协作"
             ],
-            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
-            "core_summary": "ai-agent-book 可以把外部工具和数据接入支持 MCP 的模型应用，同时用统一协议建立工具调用连接",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
-            "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "core_title": "正文与实验同步推进",
+            "core_summary": "章节先解释 Agent 的组成与工程方法，再用按章项目覆盖上下文、记忆、工具、评估、训练、多模态和协作，让读者把概念落到可运行代码。",
+            "prerequisites": "离线阅读无需环境；自行编译 PDF 需安装 pandoc、xelatex、ElegantBook 和相关字体。",
+            "limitations": "社区翻译可能滞后于中文原版；部分评测、训练和机器人项目未内置，需另行克隆，部分实验还依赖真实硬件。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "部分子项目可能包含各自的许可证信息，请以子项目中的说明为准。",
+            "readme_sha": "a21c589ee3d56e6454e1ec8f1568225aa0842dcf",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+                ],
+                [
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+                ],
+                [
+                  "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
-              "license_restrictions": []
+              "prerequisites": [
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+              ],
+              "limitations": [
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:a21c589ee3d56e6454e1ec8f1568225aa0842dcf"
+              ]
             }
           },
           "avatar_path": "avatars/2026-W30/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
           "publication_evidence": {
             "full_name": "bojieli/ai-agent-book",
             "license_spdx_id": "Apache-2.0",
-            "readme": null,
+            "readme": {
+              "sha": "a21c589ee3d56e6454e1ec8f1568225aa0842dcf",
+              "source_url": "https://api.github.com/repos/bojieli/ai-agent-book/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-6ca4c8460400825f6600dfef-86cbcb537f82fe384480edac.png",
-              "sha256": "7bf420640b189ca4d86a807b446904a1f444ace877062e3da27674c0fa4d733d",
+              "sha256": "a015f4da8a29824e9e8a77ad8f14074ad399278f2852b123dae5cb8179da7adb",
               "width": 460,
               "height": 460
             },
@@ -2308,64 +2575,78 @@
             "trending_signal": 23.98
           },
           "summary": {
-            "one_line": "想要集中运行和管理多个编程 Agent，可以用 orca；它能让开发任务可以并行推进",
+            "one_line": "把多个编程 Agent 放进隔离工作区并行执行，在一处比较结果、审查改动和继续追问",
             "highlights": [
-              "在同一界面启动多个编程 Agent",
-              "把任务拆给不同 Agent 并行执行",
-              "集中查看各个 Agent 的执行状态"
+              "让多个 Agent 在独立 worktree 中并行",
+              "从手机查看进度并发送后续指令",
+              "直接在差异行批注并反馈给 Agent"
             ],
-            "audience": "需要统一管理多个编程 Agent 和并行任务的研发团队",
+            "audience": "需要同时推进多个编码方案，并集中处理任务分派、差异审查和远程跟进的开发者",
             "capabilities": [
-              "在同一界面启动多个编程 Agent",
-              "把任务拆给不同 Agent 并行执行",
-              "集中查看各个 Agent 的执行状态"
+              "并行启动多个编程 Agent",
+              "比较不同 Agent 的实现结果",
+              "从任务创建独立 Git worktree",
+              "批注代码差异并回传修改意见",
+              "通过手机监控任务并继续对话"
             ],
-            "core_title": "集中运行和管理多个编程 Agent",
-            "core_summary": "想要集中运行和管理多个编程 Agent，可以用 orca；它能让开发任务可以并行推进",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "隔离工作区并行试解",
+            "core_summary": "同一提示可分发给多个 Agent，每个 Agent 在独立 Git worktree 中工作；完成后集中比较结果、选择方案并合并，减少并行试验互相覆盖代码。",
+            "prerequisites": "桌面端支持 macOS、Windows 和 Linux；需已有可在终端运行的编程 Agent。",
+            "limitations": "手机端是桌面应用的配套端，需要与桌面端配对后才能监控和干预 Agent。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "readme_sha": "b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
+                ],
+                [
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
+                ],
+                [
+                  "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
+              ],
+              "limitations": [
+                "github.readme:b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -2373,10 +2654,13 @@
           "publication_evidence": {
             "full_name": "stablyai/orca",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "b0ef0741e4b3c8d80df7ab8ae48ec0027789a1b4",
+              "source_url": "https://api.github.com/repos/stablyai/orca/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
-              "sha256": "bfcd55184ce82541489eda90019aace6d2730f9dda13237619ca5026aa5e4d68",
+              "sha256": "74c9f9ca37e1d708720845638e4947b594c011bd6eb473475d8b04512c5f221e",
               "width": 460,
               "height": 460
             },
@@ -2441,64 +2725,78 @@
             "trending_signal": 50.0
           },
           "summary": {
-            "one_line": "主要任务是检查代码变更并整理审查意见；code-review-graph 还能帮助团队发现问题和统一修改建议",
+            "one_line": "把代码库解析成持续更新的结构图，让 AI 审查改动时只读取相关文件和依赖链",
             "highlights": [
-              "逐项检查提交中的代码变更",
-              "标出潜在缺陷和需要确认的实现",
-              "把审查意见整理成可跟进的建议"
+              "用 Tree-sitter 建立函数与调用关系图",
+              "追踪改动可能影响的调用方和测试",
+              "通过 MCP 提供精简的审查上下文"
             ],
-            "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+            "audience": "维护大型或多语言代码库，希望减少 AI 重复读库并辅助评审合并请求的开发者",
             "capabilities": [
-              "逐项检查提交中的代码变更",
-              "标出潜在缺陷和需要确认的实现",
-              "把审查意见整理成可跟进的建议"
+              "构建函数、类、导入和调用关系图",
+              "定位代码改动的影响范围",
+              "增量更新发生变化的文件",
+              "生成风险分级的合并请求审查",
+              "导出架构图、Wiki 和图数据"
             ],
-            "core_title": "检查代码变更并整理审查意见",
-            "core_summary": "主要任务是检查代码变更并整理审查意见；code-review-graph 还能帮助团队发现问题和统一修改建议",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "按影响范围提供上下文",
+            "core_summary": "它把抽象语法树存成代码关系图，变更发生后沿调用、依赖和测试边追踪影响范围，再把必要文件交给 AI，而不是反复扫描整个仓库。",
+            "prerequisites": "需要 Python 3.10+；推荐安装 uv，未安装时会回退到 code-review-graph 命令。",
+            "limitations": "小仓库、单文件小改动或一次性问题不适合；影响分析偏保守，可能标出误报，部分语言的流程识别仍需改进。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "readme_sha": "94fe725fc20930c1a31a4667dcb764806013eb02",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
+                ],
+                [
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
+                ],
+                [
+                  "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
+              ],
+              "limitations": [
+                "github.readme:94fe725fc20930c1a31a4667dcb764806013eb02"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -2506,10 +2804,13 @@
           "publication_evidence": {
             "full_name": "tirth8205/code-review-graph",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "94fe725fc20930c1a31a4667dcb764806013eb02",
+              "source_url": "https://api.github.com/repos/tirth8205/code-review-graph/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-152ccb68ccbba8b54ea91f1a-9738fcd5fbb64207062e5c1b.png",
-              "sha256": "8d9a1aae8cc3ab4827dd1149c1eb15e10523138d89a21f6666438f23f29d2f3b",
+              "sha256": "e4ec211724f39785b798a6ddbeb1f804af20b65fcbede4802ff584cdbc57f8b9",
               "width": 351,
               "height": 351
             },
@@ -2574,80 +2875,100 @@
             "trending_signal": 63.09
           },
           "summary": {
-            "one_line": "用 worldmonitor 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+            "one_line": "把全球新闻、地缘事件、市场与基础设施信号汇入地图和看板，便于集中研判态势",
             "highlights": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "聚合新闻并生成简报",
+              "在地球与平面地图叠加多类信号",
+              "关联军事、经济、灾害和升级迹象"
             ],
-            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "audience": "需要持续观察国际新闻、地缘风险、金融市场或关键基础设施变化的研究与分析人员",
             "capabilities": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "汇总多类别新闻源并生成简报",
+              "切换地球和平面地图查看事件",
+              "关联不同数据流中的共同信号",
+              "追踪市场、能源、航空和基础设施",
+              "通过 MCP、REST、CLI 或 SDK 查询"
             ],
-            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
-            "core_summary": "用 worldmonitor 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
-            "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "core_title": "跨数据流关联态势",
+            "core_summary": "项目把新闻、军事、经济、灾害、金融和基础设施数据放进统一界面，并在地图与指标间寻找信号交汇，帮助分析者从分散事件看到潜在关联。",
+            "prerequisites": "基础应用可无环境变量运行；完成 npm install 后启动，特定数据源仍可能需要凭据。",
+            "limitations": "公开 MCP 可列出工具，但实际调用需要 X-WorldMonitor-Key 或 OAuth；数据依赖多个外部提供方。",
+            "license_label": "AGPL-3.0-only",
+            "license_restrictions": "Private-source proprietary use or official branding rights",
+            "readme_sha": "d23e028c9e02d3631177d940006e70bada3f2c74",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+                ],
+                [
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+                ],
+                [
+                  "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
-              "license_restrictions": []
+              "prerequisites": [
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+              ],
+              "limitations": [
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+              ],
+              "license_label": [
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+              ],
+              "license_restrictions": [
+                "github.readme:d23e028c9e02d3631177d940006e70bada3f2c74"
+              ]
             }
           },
           "avatar_path": "avatars/2026-W30/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
           "publication_evidence": {
             "full_name": "koala73/worldmonitor",
             "license_spdx_id": "NOASSERTION",
-            "readme": null,
+            "readme": {
+              "sha": "d23e028c9e02d3631177d940006e70bada3f2c74",
+              "source_url": "https://api.github.com/repos/koala73/worldmonitor/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-29d76f6bbb7d6829986a682a-b5d5d0923c409c54c4d2ac2e.png",
-              "sha256": "1178670cba6ce6fc1640933d492b675df3b82fd84c7c0d68b6a2e4a6f5f1e0e5",
+              "sha256": "020a898862a29cafb4a70f81587c58230afa61547ab14d1be12eba6af8094956",
               "width": 460,
               "height": 460
             },
             "warnings": []
           },
+          "license_spdx": "AGPL-3.0-only",
           "assets": {
             "poster": "reports/weekly/assets/2026-W30/2026-W30.ai.04.koala73--worldmonitor.png",
             "format": "png",
@@ -2714,64 +3035,78 @@
             "trending_signal": 35.62
           },
           "summary": {
-            "one_line": "这类任务可以交给 OmniRoute：统一接入并路由多个 AI 模型服务，并把模型选择和供应商配置集中管理",
+            "one_line": "用一个兼容接口连接多家模型服务，并按配额、成本、延迟或任务类型自动切换路线",
             "highlights": [
-              "用统一入口连接不同模型服务",
-              "按配置把请求路由到目标模型",
-              "集中管理模型供应商和调用方式"
+              "把多家模型供应商收进统一端点",
+              "配额耗尽或调用失败时自动后备",
+              "按请求配置路由与上下文压缩"
             ],
-            "audience": "需要接入多个模型供应商或维护统一调用层的 AI 开发者",
+            "audience": "需要让编程工具共用多家模型、管理配额和故障切换，或在本地维护 AI 网关的开发者",
             "capabilities": [
-              "用统一入口连接不同模型服务",
-              "按配置把请求路由到目标模型",
-              "集中管理模型供应商和调用方式"
+              "接入不同供应商和模型账户",
+              "按配额、成本或延迟选择模型",
+              "在供应商失败时切换后备路线",
+              "为编程 CLI 写入网关配置",
+              "压缩提示和工具输出以缩短上下文"
             ],
-            "core_title": "统一接入并路由多个 AI 模型服务",
-            "core_summary": "这类任务可以交给 OmniRoute：统一接入并路由多个 AI 模型服务，并把模型选择和供应商配置集中管理",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "可组合的模型路由链",
+            "core_summary": "Combo 把多个模型排成可切换的路由链，可按优先级、轮询、成本、配额或上下文选择目标；当前节点失败或额度不足时继续尝试后备节点。",
+            "prerequisites": "全局安装需要 Node ≥22.22.2；也可通过 Docker、桌面端、PWA 或 Termux 运行。",
+            "limitations": "远程令牌可限制读写管理范围，但启动进程的路由仍只允许本机回环访问；记忆功能默认关闭。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "readme_sha": "00394b5fc0671dcf8ae168e86071cfb268438c33",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
+                ],
+                [
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
+                ],
+                [
+                  "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
+              ],
+              "limitations": [
+                "github.readme:00394b5fc0671dcf8ae168e86071cfb268438c33"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -2779,10 +3114,13 @@
           "publication_evidence": {
             "full_name": "diegosouzapw/OmniRoute",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "00394b5fc0671dcf8ae168e86071cfb268438c33",
+              "source_url": "https://api.github.com/repos/diegosouzapw/OmniRoute/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
-              "sha256": "6711b870e3d791a7d1a46ea15d0a5b263e12af0f61aede5032d8d5b86dd9c521",
+              "sha256": "6d871cb62c7c54edf4cb091efe3bab15fb8e9fc0f59fb6f2426bc1063761b340",
               "width": 460,
               "height": 460
             },
@@ -2855,64 +3193,78 @@
             "trending_signal": 28.91
           },
           "summary": {
-            "one_line": "当你需要把外部工具和数据接入支持 MCP 的模型应用，ai-engineering-from-scratch 可以接手，同时用统一协议建立工具调用连接",
+            "one_line": "沿着数学、模型、LLM 和 Agent 的课程路径手写实现，并把每课成果沉淀成可复用工具",
             "highlights": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "先手写算法，再用常见框架实现",
+              "课程从数学基础延伸到自主系统",
+              "每课产出提示词、技能或 Agent"
             ],
-            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "audience": "会写代码，想理解 AI 内部机制，并通过连续项目建立模型、Agent 和工程实践能力的学习者",
             "capabilities": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "从数学推导并实现机器学习算法",
+              "手写注意力、Transformer 和小型模型",
+              "构建 RAG、工具调用与 MCP 服务",
+              "练习 Agent 循环、记忆和多 Agent 协作",
+              "完成端到端 AI 工程综合项目"
             ],
-            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
-            "core_summary": "当你需要把外部工具和数据接入支持 MCP 的模型应用，ai-engineering-from-scratch 可以接手，同时用统一协议建立工具调用连接",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "每课都留下可复用成果",
+            "core_summary": "课程采用“理解问题、推导概念、手写实现、调用框架、交付成果”的循环；学习结束后不仅保留代码，还会得到提示词、技能、Agent 或 MCP 服务。",
+            "prerequisites": "需要具备任意语言的编程能力，Python 基础会更有帮助；目标应是理解 AI 原理而不只是调用 API。",
+            "limitations": "课程强调从数学和手写实现开始，不提供复制粘贴式速成；跳过基础阶段可能导致上层内容难以衔接。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "readme_sha": "f358b97874c6a7f835ceac18421c233427637fb3",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
+                ],
+                [
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
+                ],
+                [
+                  "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
+              ],
+              "limitations": [
+                "github.readme:f358b97874c6a7f835ceac18421c233427637fb3"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -2920,10 +3272,13 @@
           "publication_evidence": {
             "full_name": "rohitg00/ai-engineering-from-scratch",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "f358b97874c6a7f835ceac18421c233427637fb3",
+              "source_url": "https://api.github.com/repos/rohitg00/ai-engineering-from-scratch/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
-              "sha256": "fbdd06f0a45b919103d284591ec2c2756713857cc0226f36bde7f0a306a9fc8e",
+              "sha256": "1814f102d41409e3ceca3fd2773ba99af77a0ab9135fdf2cbdf30af4ead47ca5",
               "width": 460,
               "height": 460
             },
@@ -2975,64 +3330,78 @@
             "trending_signal": 31.55
           },
           "summary": {
-            "one_line": "要解释 pi 的用途，还需要补充可核验的 README 信息",
+            "one_line": "用同一套组件搭建可扩展的编码 Agent，包括模型接入、工具循环、状态管理和终端界面",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "统一调用多家 LLM 服务",
+              "提供带工具调用和状态管理的运行时",
+              "组合成交互式编码 Agent CLI"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "希望定制编码 Agent，或复用模型接口、Agent 运行时和终端界面组件的工具开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "统一调用不同模型供应商",
+              "运行带工具调用的 Agent 循环",
+              "保存和更新 Agent 状态",
+              "构建差分渲染的终端界面",
+              "使用交互式编码 Agent CLI"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "要解释 pi 的用途，还需要补充可核验的 README 信息",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "拆分式 Agent Harness",
+            "core_summary": "项目把模型供应商接口、Agent 运行时、编码 CLI 和终端 UI 拆成独立包，既能直接使用编码 Agent，也能按需复用组件组装自己的 Agent 工作流。",
+            "prerequisites": "从源码开发需使用 npm 安装依赖；依赖 LLM 的测试还需要相应 API Key。",
+            "limitations": "Pi 不内置文件系统、进程、网络或凭据权限限制，默认继承启动用户的权限；需要更强边界时应使用容器或沙箱。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "83a1ff8bad75eb3aade848b09ac8b1978d4264e1",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
+                ],
+                [
+                  "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
+                ],
+                [
+                  "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
+              ],
+              "limitations": [
+                "github.readme:83a1ff8bad75eb3aade848b09ac8b1978d4264e1"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -3040,10 +3409,13 @@
           "publication_evidence": {
             "full_name": "earendil-works/pi",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "83a1ff8bad75eb3aade848b09ac8b1978d4264e1",
+              "source_url": "https://api.github.com/repos/earendil-works/pi/readme"
+            },
             "avatar": {
               "path": "avatars/2026-W30/repo-0c558be2bc3b8ea3bf401725-ba201aaa67a9dd86a655e9be.png",
-              "sha256": "d8cac75f477b6147227e298f682cdf04cb828ba4a78c648890862101ffd8d4c0",
+              "sha256": "cdfcd2c2cc150fad954fce42b70d2f65e1edbc76c6b604fff6583cddcc4b9cf0",
               "width": 460,
               "height": 460
             },
