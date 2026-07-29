@@ -1,5 +1,32 @@
 # Project Log
 
+## 2026-07-29 — 提高周报 Codex 生成韧性并恢复 W003 正式链路
+
+### 目的
+
+检查“日报持续更新、周报看似未更新”的原因，修复本机周报严格链路在 Top 7 双榜编辑阶段连续超时的问题，并恢复计划任务与本地仓库的可核验状态。
+
+### 现场情况与变更
+
+- 远端与 Pages 已存在 `2026-W30 / W003`，但它由 Actions 确定性兜底生成；本机 2026-07-26 08:45 周报任务及其重试均在 240 秒 Codex 编辑超时后触发回退，随后被 `--require-codex` 严格校验正确拒绝。
+- 本地 `main` 长期停在 2026-07-19、落后远端 11 个自动报告提交，因此本地 `reports/weekly/` 只显示到 `2026-W29`；本次先以 fast-forward 同步到远端最新状态，没有覆盖用户改动。
+- `editorial` 配置新增 `timeout_seconds_by_period`。日报保持 240 秒，周报单榜预算提高到 480 秒；严格门禁、确定性兜底语义和 CI 行为不变。
+- 报告渲染现在把 `period` 传给编辑配置，配置加载会拒绝未知周期、非映射覆盖、非整数和非正超时值。
+- 实际 Windows 任务仍是旧配置：`RunOnlyIfNetworkAvailable=True`，日报缺少登录补跑触发器；本次交付会用仓库当前注册脚本重新注册并复核。
+
+### 文件与模块
+
+- 周期化编辑配置：`src/github_hotspots/config.py`、`config/hotspots.yaml`。
+- 报告渲染：`src/github_hotspots/report.py`。
+- 回归测试：`tests/test_config.py`。
+- 文档：`README.md`、`docs/LOCAL_CODEX_API.md`。
+
+### 验证与已知限制
+
+- 配置回归覆盖默认 240 秒、日报 240 秒、周报 480 秒，以及非法周期/类型/数值拒绝。
+- W003 将使用冻结的 2026-07-26 排名和数值事实重绘，不在工作日重新采集并伪装成周日数据；接受前逐字段比较仓库、排名、Star/Fork、增量来源和 URL。
+- 本机 Codex、GitHub 网络或 Windows 用户会话完全不可用时，Actions 仍只能提供明确标记的 deterministic 连续性兜底；正式本地报告仍要求 `used_backend=codex-cli` 且 `fallback_used=false`。
+
 ## 2026-07-19 — 新增日报/周报手动检查与补更入口
 
 ### 目的

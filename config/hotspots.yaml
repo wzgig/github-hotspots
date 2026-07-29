@@ -16,6 +16,8 @@ editorial:
   backend: deterministic
   fallback: deterministic
   timeout_seconds: 240
+  timeout_seconds_by_period:
+    weekly: 480
   allow_in_ci: false
   prompt_path: prompts/repository_summary_zh.md
   schema_path: schemas/repository_summary.schema.json

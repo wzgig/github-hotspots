@@ -212,7 +212,7 @@ reports/weekly/assets/YYYY-Www/
 - `filters`：最低 Star、描述要求及语言/Owner/仓库黑名单。
 - `ranking.weights`：六项排名权重，合计必须为 1.0。
 - `outputs`：快照和报告目录。
-- `editorial`：确定性文案或本地 `codex-cli` Prompt 4.1 / Schema 4.0 证据编辑后端、超时、提示词和 Schema；默认 `deterministic`，CI 不启用本地 Codex。
+- `editorial`：确定性文案或本地 `codex-cli` Prompt 4.1 / Schema 4.0 证据编辑后端、超时、提示词和 Schema；支持用 `timeout_seconds_by_period` 为日报和周报分别设置超时。当前日报保持 240 秒，Top 7 双榜周报使用 480 秒，CI 仍不启用本地 Codex。
 - `posters`：确定性海报开关与 3:4 尺寸；本次升级约定为 `1200×1600`。
 - `publication`：首发日期、`publish` 根目录与标题/正文长度门禁；2026-07-12 对应 `D001`、`W001`。
 

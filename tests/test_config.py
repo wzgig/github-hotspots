@@ -48,6 +48,9 @@ def test_project_configuration_loads_with_expected_cadence() -> None:
     editorial = settings.editorial_settings()
     assert editorial.backend == "deterministic"
     assert editorial.fallback == "deterministic"
+    assert editorial.timeout_seconds == 240
+    assert settings.editorial_settings(period="daily").timeout_seconds == 240
+    assert settings.editorial_settings(period="weekly").timeout_seconds == 480
     assert editorial.reasoning_effort_override == "xhigh"
     assert editorial.prompt_path.name == "repository_summary_zh.md"
     posters = settings.poster_settings()
@@ -91,6 +94,41 @@ def test_configuration_requires_mapping_codex_cli_options(tmp_path: Path) -> Non
     editorial["codex_cli"] = "codex"
 
     with pytest.raises(ConfigurationError, match=r"editorial\.codex_cli must be a mapping"):
+        load_settings(_write_config(tmp_path, document))
+
+
+def test_configuration_requires_mapping_editorial_timeout_overrides(tmp_path: Path) -> None:
+    document = _config_document()
+    editorial = document["editorial"]
+    assert isinstance(editorial, dict)
+    editorial["timeout_seconds_by_period"] = 480
+
+    with pytest.raises(
+        ConfigurationError,
+        match=r"editorial\.timeout_seconds_by_period must be a mapping",
+    ):
+        load_settings(_write_config(tmp_path, document))
+
+
+@pytest.mark.parametrize(
+    ("overrides", "message"),
+    [
+        ({"monthly": 480}, "contains unsupported periods: monthly"),
+        ({"weekly": 0}, r"editorial\.timeout_seconds_by_period\.weekly must be positive"),
+        ({"weekly": "slow"}, r"editorial\.timeout_seconds_by_period\.weekly must be an integer"),
+    ],
+)
+def test_configuration_validates_editorial_timeout_overrides(
+    tmp_path: Path,
+    overrides: dict[str, object],
+    message: str,
+) -> None:
+    document = _config_document()
+    editorial = document["editorial"]
+    assert isinstance(editorial, dict)
+    editorial["timeout_seconds_by_period"] = overrides
+
+    with pytest.raises(ConfigurationError, match=message):
         load_settings(_write_config(tmp_path, document))
 
 

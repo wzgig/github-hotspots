@@ -148,14 +148,43 @@ class Settings:
             keywords=_string_tuple(raw.get("keywords", ())),
         )
 
-    def editorial_settings(self, backend_override: str | None = None) -> EditorialSettings:
+    def editorial_settings(
+        self,
+        backend_override: str | None = None,
+        *,
+        period: str | None = None,
+    ) -> EditorialSettings:
         """Return safe settings for deterministic or local Codex editing."""
 
         raw = _mapping(self.editorial, "editorial")
         codex = _mapping(raw.get("codex_cli", {}), "editorial.codex_cli")
         backend = str(backend_override or raw.get("backend", "deterministic")).strip()
         fallback = str(raw.get("fallback", "deterministic")).strip()
-        timeout_seconds = int(raw.get("timeout_seconds", 120))
+        timeout_seconds = _positive_integer(
+            raw.get("timeout_seconds", 120),
+            "editorial.timeout_seconds",
+        )
+        timeout_overrides = _mapping(
+            raw.get("timeout_seconds_by_period", {}),
+            "editorial.timeout_seconds_by_period",
+        )
+        unsupported_periods = set(timeout_overrides) - {"daily", "weekly"}
+        if unsupported_periods:
+            unsupported = ", ".join(sorted(str(item) for item in unsupported_periods))
+            raise ConfigurationError(
+                f"editorial.timeout_seconds_by_period contains unsupported periods: {unsupported}"
+            )
+        parsed_timeouts = {
+            str(key): _positive_integer(
+                value,
+                f"editorial.timeout_seconds_by_period.{key}",
+            )
+            for key, value in timeout_overrides.items()
+        }
+        if period is not None:
+            if period not in {"daily", "weekly"}:
+                raise ConfigurationError(f"Unsupported editorial period: {period}")
+            timeout_seconds = parsed_timeouts.get(period, timeout_seconds)
         executable = str(codex.get("executable", "codex")).strip()
         reasoning = codex.get("reasoning_effort_override")
         reasoning_effort = str(reasoning).strip() if reasoning is not None else None
@@ -164,8 +193,6 @@ class Settings:
             raise ConfigurationError(f"Unsupported editorial backend: {backend}")
         if fallback != "deterministic":
             raise ConfigurationError("editorial.fallback must be deterministic")
-        if timeout_seconds < 1:
-            raise ConfigurationError("editorial.timeout_seconds must be positive")
         if not executable:
             raise ConfigurationError("editorial.codex_cli.executable must not be empty")
         if reasoning_effort not in {None, "none", "minimal", "low", "medium", "high", "xhigh"}:
@@ -353,6 +380,18 @@ def _boolean(value: object, path: str) -> bool:
     if not isinstance(value, bool):
         raise ConfigurationError(f"{path} must be a boolean")
     return value
+
+
+def _positive_integer(value: object, path: str) -> int:
+    if isinstance(value, bool):
+        raise ConfigurationError(f"{path} must be an integer")
+    try:
+        parsed = int(value)
+    except (TypeError, ValueError) as exc:
+        raise ConfigurationError(f"{path} must be an integer") from exc
+    if parsed < 1:
+        raise ConfigurationError(f"{path} must be positive")
+    return parsed
 
 
 def _date_value(value: object, path: str) -> date:

@@ -219,7 +219,7 @@ def _prepare_editorial_items(
         period=period,
         period_start=run_date - timedelta(days=settings.run(period).lookback_days),
         period_end=run_date,
-        settings=settings.editorial_settings(backend_override),
+        settings=settings.editorial_settings(backend_override, period=period),
         repository_evidence=repository_evidence,
     )
     return _prepared_items(rankings, editorial.summaries), editorial

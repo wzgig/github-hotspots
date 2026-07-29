@@ -156,6 +156,8 @@ editorial:
   backend: deterministic  # deterministic | codex-cli
   fallback: deterministic
   timeout_seconds: 240
+  timeout_seconds_by_period:
+    weekly: 480
   allow_in_ci: false
   prompt_path: prompts/repository_summary_zh.md
   schema_path: schemas/repository_summary.schema.json
@@ -163,6 +165,8 @@ editorial:
     executable: codex
     reasoning_effort_override: xhigh
 ```
+
+`timeout_seconds` 是默认单榜编辑时限；`timeout_seconds_by_period` 可按周期覆盖。周报每榜包含 7 个项目，当前使用 480 秒，避免沿用日报 240 秒预算时在第二个榜单发生可恢复但会被严格门禁拒绝的超时回退。
 
 本地完整采集可显式启用 Codex：
 
