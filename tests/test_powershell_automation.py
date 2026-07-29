@@ -392,6 +392,11 @@ def test_task_registration_has_logon_catchup_without_network_launch_gate() -> No
     assert "-Trigger $dailyTriggers" in source
     assert "-StartWhenAvailable" in source
     assert "-RunOnlyIfNetworkAvailable" not in source
+    assert "function Assert-HotspotsTask" in source
+    assert "-ErrorAction Stop | Out-Null" in source
+    assert "$task.Settings.RunOnlyIfNetworkAvailable" in source
+    assert 'ExpectedTriggerTypes @("MSFT_TaskDailyTrigger", "MSFT_TaskLogonTrigger")' in source
+    assert 'ExpectedTriggerTypes @("MSFT_TaskWeeklyTrigger")' in source
 
 
 @requires_windows_powershell

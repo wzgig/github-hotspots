@@ -80,6 +80,43 @@ function New-HotspotsAction {
         -WorkingDirectory $RepoRoot
 }
 
+function Assert-HotspotsTask {
+    param(
+        [Parameter(Mandatory = $true)][string]$TaskName,
+        [Parameter(Mandatory = $true)][ValidateSet("daily", "weekly")][string]$Period,
+        [Parameter(Mandatory = $true)][string[]]$ExpectedTriggerTypes
+    )
+
+    $task = Get-ScheduledTask -TaskName $TaskName -ErrorAction Stop
+    $actions = @($task.Actions)
+    $triggerTypes = @($task.Triggers | ForEach-Object { $_.CimClass.CimClassName })
+    $missingTriggerTypes = @($ExpectedTriggerTypes | Where-Object { $_ -notin $triggerTypes })
+    if (
+        -not $task.Settings.Enabled -or
+        $task.Settings.RunOnlyIfNetworkAvailable -or
+        $actions.Count -ne 1 -or
+        $actions[0].Execute -ne $PowerShell -or
+        $actions[0].WorkingDirectory -ne $RepoRoot -or
+        -not $actions[0].Arguments.Contains(('"{0}"' -f $Runner)) -or
+        -not $actions[0].Arguments.Contains("-Period $Period") -or
+        $triggerTypes.Count -ne $ExpectedTriggerTypes.Count -or
+        $missingTriggerTypes.Count -gt 0
+    ) {
+        throw (
+            "Scheduled task '$TaskName' did not match the required definition after registration. " +
+            "Run this script from an elevated PowerShell session if the existing task is protected."
+        )
+    }
+    return [pscustomobject]@{
+        TaskName = $task.TaskName
+        State = $task.State
+        RunAs = $task.Principal.UserId
+        Enabled = $task.Settings.Enabled
+        RunOnlyIfNetworkAvailable = $task.Settings.RunOnlyIfNetworkAvailable
+        TriggerTypes = $triggerTypes -join ","
+    }
+}
+
 $dailyTriggers = @(
     New-ScheduledTaskTrigger -Daily -At $dailyTime
     New-ScheduledTaskTrigger -AtLogOn -User $CurrentUser
@@ -99,10 +136,18 @@ $weeklyTask = New-ScheduledTask `
     -Description "Generate and push the Sunday GitHub Hotspots weekly bundle with the current user's local Codex CLI."
 
 if ($PSCmdlet.ShouldProcess($DailyTaskName, "Register scheduled task at $DailyAt every day")) {
-    Register-ScheduledTask -TaskName $DailyTaskName -InputObject $dailyTask -Force | Out-Null
+    Register-ScheduledTask `
+        -TaskName $DailyTaskName `
+        -InputObject $dailyTask `
+        -Force `
+        -ErrorAction Stop | Out-Null
 }
 if ($PSCmdlet.ShouldProcess($WeeklyTaskName, "Register scheduled task at $WeeklyAt every Sunday")) {
-    Register-ScheduledTask -TaskName $WeeklyTaskName -InputObject $weeklyTask -Force | Out-Null
+    Register-ScheduledTask `
+        -TaskName $WeeklyTaskName `
+        -InputObject $weeklyTask `
+        -Force `
+        -ErrorAction Stop | Out-Null
 }
 
 if ($WhatIfPreference) {
@@ -111,5 +156,11 @@ if ($WhatIfPreference) {
     return
 }
 
-Get-ScheduledTask -TaskName $DailyTaskName, $WeeklyTaskName |
-    Select-Object TaskName, State, @{Name = "RunAs"; Expression = { $_.Principal.UserId } }
+Assert-HotspotsTask `
+    -TaskName $DailyTaskName `
+    -Period "daily" `
+    -ExpectedTriggerTypes @("MSFT_TaskDailyTrigger", "MSFT_TaskLogonTrigger")
+Assert-HotspotsTask `
+    -TaskName $WeeklyTaskName `
+    -Period "weekly" `
+    -ExpectedTriggerTypes @("MSFT_TaskWeeklyTrigger")

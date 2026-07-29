@@ -12,18 +12,19 @@
 - 本地 `main` 长期停在 2026-07-19、落后远端 11 个自动报告提交，因此本地 `reports/weekly/` 只显示到 `2026-W29`；本次先以 fast-forward 同步到远端最新状态，没有覆盖用户改动。
 - `editorial` 配置新增 `timeout_seconds_by_period`。日报保持 240 秒，周报单榜预算提高到 480 秒；严格门禁、确定性兜底语义和 CI 行为不变。
 - 报告渲染现在把 `period` 传给编辑配置，配置加载会拒绝未知周期、非映射覆盖、非整数和非正超时值。
-- 实际 Windows 任务仍是旧配置：`RunOnlyIfNetworkAvailable=True`，日报缺少登录补跑触发器；本次交付会用仓库当前注册脚本重新注册并复核。
+- 实际 Windows 任务仍是旧配置：`RunOnlyIfNetworkAvailable=True`，日报缺少登录补跑触发器。当前非管理员会话覆盖受保护旧任务时返回 `Access is denied`；注册脚本现对写入显式 `-ErrorAction Stop`，并在注册后审计 Enabled、网络门槛、动作参数与触发器类型，避免旧定义被误报为成功。实际覆盖需在管理员 PowerShell 中一次性重跑。
 
 ### 文件与模块
 
 - 周期化编辑配置：`src/github_hotspots/config.py`、`config/hotspots.yaml`。
 - 报告渲染：`src/github_hotspots/report.py`。
-- 回归测试：`tests/test_config.py`。
+- 回归测试：`tests/test_config.py`、`tests/test_powershell_automation.py`。
 - 文档：`README.md`、`docs/LOCAL_CODEX_API.md`。
 
 ### 验证与已知限制
 
 - 配置回归覆盖默认 240 秒、日报 240 秒、周报 480 秒，以及非法周期/类型/数值拒绝。
+- 计划任务注册回归覆盖显式失败、注册后定义审计、日报登录补跑和无网络启动门槛；当前会话因 Windows 任务 ACL 无法完成实装，需管理员会话执行 `scripts/automation/register_tasks.ps1`。
 - W003 将使用冻结的 2026-07-26 排名和数值事实重绘，不在工作日重新采集并伪装成周日数据；接受前逐字段比较仓库、排名、Star/Fork、增量来源和 URL。
 - 本机 Codex、GitHub 网络或 Windows 用户会话完全不可用时，Actions 仍只能提供明确标记的 deterministic 连续性兜底；正式本地报告仍要求 `used_backend=codex-cli` 且 `fallback_used=false`。
 
