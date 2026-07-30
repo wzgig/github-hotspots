@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "e012767b88ac848a9357dbcb3589a81e2b0ad364ad8dbbb2768e05899293beee",
+  "checklist_sha256": "4e3007230ab28be703dcad3896c9867e433f72cff65e6783353d23d1548d5384",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-07-31",
+  "generated_at": "2026-07-31T07:34:07.138945+08:00",
+  "issue": {
+    "number": 20,
+    "code": "D020",
+    "stem": "D020-2026-07-31",
+    "label": "第20期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-07-31.json",
+    "report_sha256": "b7a08c68b7f98c0c7dc8341a098459516c5c4dea36e2fcaf2b7e07fd6594644a",
+    "poster_manifest": "reports/daily/assets/2026-07-31/manifest.json",
+    "poster_manifest_sha256": "631a18b8511b17300c729c4ed369335c04ee2c0fba0e36bcd6203a792333abb7",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D020-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "af4c8933977dce7a0a749aa718fb65c0c9d3c91b85e7709677c51a52643c23a3",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 345,
+      "caption_sha256": "b47d8abdc0c5cd5625731a4ff8834574db7575967b1ca62446e87b216e30e58d",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "1dba68cfb346b0342c178cb0bf45eb179a9e4f85d655dc24a92f9ef0e1cc5556",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.cover.png",
+          "sha256": "cc6037be79e3098cbc75c0f2617e845229397690b62ebf04e27d235e28bcbf59",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.01.huggingface--speech-to-speech.png",
+          "sha256": "78f4a70022f5b1d9bd17dfba5edbb843d644dc988c7ee3f0ddf68dd50d963047",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "huggingface/speech-to-speech",
+          "publication_path": "images/02-rank-01-huggingface-speech-to-speech.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.02.different-ai--openwork.png",
+          "sha256": "48d57a36243eb9f34d5b2efc4e6e76f05e9e990f19acb05b83968a9161e5ffde",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "different-ai/openwork",
+          "publication_path": "images/03-rank-02-different-ai-openwork.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.03.affaan-m--ecc.png",
+          "sha256": "34744f94d92a12da5af7e829bb9f1e38b2fb007b4dc2bc7b44b97c0edfe22f06",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "affaan-m/ECC",
+          "publication_path": "images/04-rank-03-affaan-m-ecc.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D020-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "7d368d4dc89b592f9a01a11b9cf89b7fd028f43ce9642c318b4674c3f2d42c2a",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 337,
+      "caption_sha256": "aba934e864f7bb7b8ff8b66d32312b041f6910774a2df2fe9859b94cb6bc83f7",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "602106f45efa5015f9e4d8120cd8ecee105537833d4c1013a8895f495d15d0c3",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-07-31/2026-07-31.ai.cover.png",
+          "sha256": "5e55a361323a3e3d2e01857d6b09f13ab5e61afe8bbcfaf250a23abd5d906d63",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-31/2026-07-31.ai.01.huggingface--speech-to-speech.png",
+          "sha256": "d2e14dedf93f8f1f30a6179247ccad6b8897d2ea87254e705c0828e348317d0c",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "huggingface/speech-to-speech",
+          "publication_path": "images/02-rank-01-huggingface-speech-to-speech.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-31/2026-07-31.ai.02.affaan-m--ecc.png",
+          "sha256": "91b066403db990c667522cd7500aa30a63abe809f04dc89c7d02dd032bf03a11",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "affaan-m/ECC",
+          "publication_path": "images/03-rank-02-affaan-m-ecc.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-07-31/2026-07-31.ai.03.nousresearch--hermes-agent.png",
+          "sha256": "9fe75a8a540670ad085bad4cf7ee6f473dad5d4d27db53246b1d22e15865e250",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/04-rank-03-nousresearch-hermes-agent.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-07-31",
+    "revision": "e012767b88ac",
+    "image_policy": "repository-source-reference"
+  }
+}

@@ -1,0 +1,1460 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-07-31",
+  "window_start": "2026-07-30",
+  "window_end": "2026-07-31",
+  "generated_at": "2026-07-31T07:31:11+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-30 至 2026-07-31",
+  "publication": {
+    "issue_number": 20,
+    "issue_code": "D020",
+    "issue_label": "第20期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-07-31",
+    "manifest": "reports/daily/assets/2026-07-31/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "huggingface/speech-to-speech",
+            "path": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.01.huggingface--speech-to-speech.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "different-ai/openwork",
+            "path": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.02.different-ai--openwork.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.03.affaan-m--ecc.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-31/2026-07-31.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "huggingface/speech-to-speech",
+            "path": "reports/daily/assets/2026-07-31/2026-07-31.ai.01.huggingface--speech-to-speech.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-07-31/2026-07-31.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-31/2026-07-31.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 20,
+      "issue_code": "D020",
+      "issue_label": "第20期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 839428333,
+      "full_name": "huggingface/speech-to-speech",
+      "owner": "huggingface",
+      "name": "speech-to-speech",
+      "html_url": "https://github.com/huggingface/speech-to-speech",
+      "description": "Build local voice agents with open-source models",
+      "language": "Python",
+      "stars": 8738,
+      "forks": 1086,
+      "open_issues": 125,
+      "watchers": 96,
+      "topics": [
+        "ai",
+        "assistant",
+        "language-model",
+        "machine-learning",
+        "python",
+        "speech",
+        "speech-synthesis",
+        "speech-to-text",
+        "speech-translation"
+      ],
+      "created_at": "2024-08-07T15:32:09Z",
+      "updated_at": "2026-07-30T23:30:54Z",
+      "pushed_at": "2026-07-30T16:41:20Z",
+      "daily_stars": 627,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 95.37,
+      "star_delta": 906,
+      "fork_delta": 87,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 98.53,
+        "total_stars": 10.29,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "把语音检测、转写、大模型回复和语音合成串成可替换的实时语音智能体管线",
+        "highlights": [
+          "四段组件分别运行，并通过队列传递数据",
+          "语音识别、大模型与语音合成后端均可替换",
+          "兼容 OpenAI Realtime 协议与多种传输模式"
+        ],
+        "audience": "适合开发语音助手、机器人对话后端或自定义实时语音客户端的团队",
+        "capabilities": [
+          "检测说话边界并处理轮次切换",
+          "实时转写语音并返回部分文本",
+          "流式生成回复、工具调用和合成音频",
+          "替换语音识别、大模型和语音合成后端",
+          "通过本地、Realtime、WebSocket 或 TCP 模式运行"
+        ],
+        "core_title": "四段可替换的语音管线",
+        "core_summary": "语音先经过活动检测和转写，再交给大模型生成文本与工具调用，最后合成为音频流；每一段都能按设备、语言和部署方式更换后端。",
+        "prerequisites": "需要 Python 3.10+；不同后端还需匹配 CUDA、Apple Silicon 或额外依赖",
+        "limitations": "TCP 模式不含打断处理、实时转写事件和工具调用事件；LLM 代理自身不做认证或限流",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "1943b5e6c78034df17504ff7bc94aa115b698c6a",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+          ],
+          "highlights": [
+            [
+              "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+            ],
+            [
+              "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+            ],
+            [
+              "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+            ]
+          ],
+          "audience": [
+            "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+          ],
+          "capabilities": [
+            [
+              "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+            ],
+            [
+              "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+            ],
+            [
+              "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+            ],
+            [
+              "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+            ],
+            [
+              "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+            ]
+          ],
+          "core_title": [
+            "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+          ],
+          "core_summary": [
+            "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+          ],
+          "prerequisites": [
+            "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+          ],
+          "limitations": [
+            "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-31/repo-44ebd7c67c13e7a115ed1731-4b39468ad005967cc13902e2.png",
+      "publication_evidence": {
+        "full_name": "huggingface/speech-to-speech",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "1943b5e6c78034df17504ff7bc94aa115b698c6a",
+          "source_url": "https://api.github.com/repos/huggingface/speech-to-speech/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-31/repo-44ebd7c67c13e7a115ed1731-4b39468ad005967cc13902e2.png",
+          "sha256": "a44c810008cb617ee04db8c6eafa5f59dcbe4480753c5a76c74209e04799f912",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.01.huggingface--speech-to-speech.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1133911335,
+      "full_name": "different-ai/openwork",
+      "owner": "different-ai",
+      "name": "openwork",
+      "html_url": "https://github.com/different-ai/openwork",
+      "description": "The open-source alternative to Claude Cowork (powered by opencode)",
+      "language": "TypeScript",
+      "stars": 18687,
+      "forks": 1904,
+      "open_issues": 411,
+      "watchers": 75,
+      "topics": [],
+      "created_at": "2026-01-14T01:39:31Z",
+      "updated_at": "2026-07-30T23:30:20Z",
+      "pushed_at": "2026-07-30T19:30:46Z",
+      "daily_stars": 916,
+      "weekly_stars": null,
+      "trending_rank_daily": 4,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 90.83,
+      "star_delta": 823,
+      "fork_delta": 50,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.53,
+        "relative_growth": 97.06,
+        "fork_growth": 92.65,
+        "total_stars": 14.71,
+        "activity": 100.0,
+        "trending_signal": 43.07
+      },
+      "summary": {
+        "one_line": "把技能、插件、MCP 与办公服务集中起来，让多个智能体和团队复用同一套 AI 工作流",
+        "highlights": [
+          "用一个 MCP 接入已分配的技能与服务",
+          "在不同智能体、成员和设备间复用能力",
+          "集中发布能力并管理团队访问权限"
+        ],
+        "audience": "适合需要跨智能体共享工作流，或统一管理团队模型、插件与办公服务连接的组织",
+        "capabilities": [
+          "搜索当前用户可调用的能力",
+          "执行已分配的技能、插件和服务",
+          "跨兼容智能体复用同一套工作流",
+          "发布技能与插件并分配给成员或团队",
+          "管理模型访问、桌面策略和应用版本"
+        ],
+        "core_title": "一个 MCP 连接多套智能体",
+        "core_summary": "客户端只需接入 OpenWork MCP，就能搜索和执行组织分配的能力；团队可在管理端发布技能、配置连接，并按组织、团队或个人控制访问。",
+        "prerequisites": "需要兼容 MCP 的智能体客户端；接入后需通过浏览器登录并选择组织",
+        "limitations": "桌面应用不是必需；从现有智能体使用时，客户端需要兼容 MCP",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": "923d6c796a58b083d9d7e0fa5b28e87c15e14f67",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+          ],
+          "highlights": [
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ],
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ],
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ]
+          ],
+          "audience": [
+            "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+          ],
+          "capabilities": [
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ],
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ],
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ],
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ],
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ]
+          ],
+          "core_title": [
+            "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+          ],
+          "core_summary": [
+            "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+          ],
+          "prerequisites": [
+            "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+          ],
+          "limitations": [
+            "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+          ],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-31/repo-21c529742d6480950c647932-27357355d55bcdc84a28695c.png",
+      "publication_evidence": {
+        "full_name": "different-ai/openwork",
+        "license_spdx_id": "NOASSERTION",
+        "readme": {
+          "sha": "923d6c796a58b083d9d7e0fa5b28e87c15e14f67",
+          "source_url": "https://api.github.com/repos/different-ai/openwork/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-31/repo-21c529742d6480950c647932-27357355d55bcdc84a28695c.png",
+          "sha256": "9bdeeaffd4494507fea054dbc385696ec41b5efa9fdd91157a19c501a3a240c8",
+          "width": 420,
+          "height": 420
+        },
+        "warnings": []
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.02.different-ai--openwork.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 236194,
+      "forks": 35926,
+      "open_issues": 105,
+      "watchers": 1222,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-07-30T23:30:39Z",
+      "pushed_at": "2026-07-29T18:11:01Z",
+      "daily_stars": 810,
+      "weekly_stars": null,
+      "trending_rank_daily": 14,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 88.96,
+      "star_delta": 659,
+      "fork_delta": 60,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.06,
+        "relative_growth": 89.71,
+        "fork_growth": 94.12,
+        "total_stars": 92.65,
+        "activity": 71.65,
+        "trending_signal": 25.6
+      },
+      "summary": {
+        "one_line": "把计划、测试、实现、复审、验证与记忆固化进编码智能体，减少每次靠提示词重建流程",
+        "highlights": [
+          "以门控流程推进计划、测试与最终验证",
+          "用独立上下文代理处理规划、审查和修复",
+          "把会话经验沉淀为摘要、记忆和可复用技能"
+        ],
+        "audience": "适合希望统一编码智能体工作方式，并加强测试、审查、安全扫描和会话交接的研发团队",
+        "capabilities": [
+          "规划功能并生成可确认的实施方案",
+          "用测试先行流程保留验证证据",
+          "在新上下文中审查代码与回归风险",
+          "扫描智能体配置、权限与提示注入风险",
+          "跨多种智能体环境同步技能和记忆"
+        ],
+        "core_title": "让编码智能体按工程闭环工作",
+        "core_summary": "ECC 把规划、测试先行、实现、独立审查、最终验证和经验沉淀连成固定流程，再用技能、代理、规则与 hooks 分别承载按需能力、隔离任务和自动检查。",
+        "prerequisites": "需先准备 Claude Code、Codex 或其他受支持的智能体环境，并选择对应安装方式",
+        "limitations": "同一智能体不能叠加安装方式；Codex 尚无 Claude 式 hooks 执行能力；记忆内容仍需人工核验",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "de7cc559100d2af25f1b17d77a59590b13cc3aa8",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+          ],
+          "highlights": [
+            [
+              "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+            ],
+            [
+              "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+            ],
+            [
+              "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+            ]
+          ],
+          "audience": [
+            "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+          ],
+          "capabilities": [
+            [
+              "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+            ],
+            [
+              "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+            ],
+            [
+              "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+            ],
+            [
+              "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+            ],
+            [
+              "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+            ]
+          ],
+          "core_title": [
+            "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+          ],
+          "core_summary": [
+            "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+          ],
+          "prerequisites": [
+            "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+          ],
+          "limitations": [
+            "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-07-31/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "de7cc559100d2af25f1b17d77a59590b13cc3aa8",
+          "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-07-31/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+          "width": 165,
+          "height": 165
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.03.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "huggingface/speech-to-speech",
+            "path": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.01.huggingface--speech-to-speech.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "different-ai/openwork",
+            "path": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.02.different-ai--openwork.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.03.affaan-m--ecc.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 839428333,
+          "full_name": "huggingface/speech-to-speech",
+          "owner": "huggingface",
+          "name": "speech-to-speech",
+          "html_url": "https://github.com/huggingface/speech-to-speech",
+          "description": "Build local voice agents with open-source models",
+          "language": "Python",
+          "stars": 8738,
+          "forks": 1086,
+          "open_issues": 125,
+          "watchers": 96,
+          "topics": [
+            "ai",
+            "assistant",
+            "language-model",
+            "machine-learning",
+            "python",
+            "speech",
+            "speech-synthesis",
+            "speech-to-text",
+            "speech-translation"
+          ],
+          "created_at": "2024-08-07T15:32:09Z",
+          "updated_at": "2026-07-30T23:30:54Z",
+          "pushed_at": "2026-07-30T16:41:20Z",
+          "daily_stars": 627,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.37,
+          "star_delta": 906,
+          "fork_delta": 87,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 98.53,
+            "total_stars": 10.29,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把语音检测、转写、大模型回复和语音合成串成可替换的实时语音智能体管线",
+            "highlights": [
+              "四段组件分别运行，并通过队列传递数据",
+              "语音识别、大模型与语音合成后端均可替换",
+              "兼容 OpenAI Realtime 协议与多种传输模式"
+            ],
+            "audience": "适合开发语音助手、机器人对话后端或自定义实时语音客户端的团队",
+            "capabilities": [
+              "检测说话边界并处理轮次切换",
+              "实时转写语音并返回部分文本",
+              "流式生成回复、工具调用和合成音频",
+              "替换语音识别、大模型和语音合成后端",
+              "通过本地、Realtime、WebSocket 或 TCP 模式运行"
+            ],
+            "core_title": "四段可替换的语音管线",
+            "core_summary": "语音先经过活动检测和转写，再交给大模型生成文本与工具调用，最后合成为音频流；每一段都能按设备、语言和部署方式更换后端。",
+            "prerequisites": "需要 Python 3.10+；不同后端还需匹配 CUDA、Apple Silicon 或额外依赖",
+            "limitations": "TCP 模式不含打断处理、实时转写事件和工具调用事件；LLM 代理自身不做认证或限流",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "1943b5e6c78034df17504ff7bc94aa115b698c6a",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+              ],
+              "highlights": [
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ],
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ],
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ]
+              ],
+              "audience": [
+                "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ],
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ],
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ],
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ],
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ]
+              ],
+              "core_title": [
+                "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+              ],
+              "core_summary": [
+                "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+              ],
+              "prerequisites": [
+                "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+              ],
+              "limitations": [
+                "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-31/repo-44ebd7c67c13e7a115ed1731-4b39468ad005967cc13902e2.png",
+          "publication_evidence": {
+            "full_name": "huggingface/speech-to-speech",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "1943b5e6c78034df17504ff7bc94aa115b698c6a",
+              "source_url": "https://api.github.com/repos/huggingface/speech-to-speech/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-31/repo-44ebd7c67c13e7a115ed1731-4b39468ad005967cc13902e2.png",
+              "sha256": "a44c810008cb617ee04db8c6eafa5f59dcbe4480753c5a76c74209e04799f912",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.01.huggingface--speech-to-speech.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1133911335,
+          "full_name": "different-ai/openwork",
+          "owner": "different-ai",
+          "name": "openwork",
+          "html_url": "https://github.com/different-ai/openwork",
+          "description": "The open-source alternative to Claude Cowork (powered by opencode)",
+          "language": "TypeScript",
+          "stars": 18687,
+          "forks": 1904,
+          "open_issues": 411,
+          "watchers": 75,
+          "topics": [],
+          "created_at": "2026-01-14T01:39:31Z",
+          "updated_at": "2026-07-30T23:30:20Z",
+          "pushed_at": "2026-07-30T19:30:46Z",
+          "daily_stars": 916,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 90.83,
+          "star_delta": 823,
+          "fork_delta": 50,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.53,
+            "relative_growth": 97.06,
+            "fork_growth": 92.65,
+            "total_stars": 14.71,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "把技能、插件、MCP 与办公服务集中起来，让多个智能体和团队复用同一套 AI 工作流",
+            "highlights": [
+              "用一个 MCP 接入已分配的技能与服务",
+              "在不同智能体、成员和设备间复用能力",
+              "集中发布能力并管理团队访问权限"
+            ],
+            "audience": "适合需要跨智能体共享工作流，或统一管理团队模型、插件与办公服务连接的组织",
+            "capabilities": [
+              "搜索当前用户可调用的能力",
+              "执行已分配的技能、插件和服务",
+              "跨兼容智能体复用同一套工作流",
+              "发布技能与插件并分配给成员或团队",
+              "管理模型访问、桌面策略和应用版本"
+            ],
+            "core_title": "一个 MCP 连接多套智能体",
+            "core_summary": "客户端只需接入 OpenWork MCP，就能搜索和执行组织分配的能力；团队可在管理端发布技能、配置连接，并按组织、团队或个人控制访问。",
+            "prerequisites": "需要兼容 MCP 的智能体客户端；接入后需通过浏览器登录并选择组织",
+            "limitations": "桌面应用不是必需；从现有智能体使用时，客户端需要兼容 MCP",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": "923d6c796a58b083d9d7e0fa5b28e87c15e14f67",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+              ],
+              "highlights": [
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ],
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ],
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ]
+              ],
+              "audience": [
+                "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ],
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ],
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ],
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ],
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ]
+              ],
+              "core_title": [
+                "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+              ],
+              "core_summary": [
+                "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+              ],
+              "prerequisites": [
+                "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+              ],
+              "limitations": [
+                "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+              ],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-31/repo-21c529742d6480950c647932-27357355d55bcdc84a28695c.png",
+          "publication_evidence": {
+            "full_name": "different-ai/openwork",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "923d6c796a58b083d9d7e0fa5b28e87c15e14f67",
+              "source_url": "https://api.github.com/repos/different-ai/openwork/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-31/repo-21c529742d6480950c647932-27357355d55bcdc84a28695c.png",
+              "sha256": "9bdeeaffd4494507fea054dbc385696ec41b5efa9fdd91157a19c501a3a240c8",
+              "width": 420,
+              "height": 420
+            },
+            "warnings": []
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.02.different-ai--openwork.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 236194,
+          "forks": 35926,
+          "open_issues": 105,
+          "watchers": 1222,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-07-30T23:30:39Z",
+          "pushed_at": "2026-07-29T18:11:01Z",
+          "daily_stars": 810,
+          "weekly_stars": null,
+          "trending_rank_daily": 14,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.96,
+          "star_delta": 659,
+          "fork_delta": 60,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.06,
+            "relative_growth": 89.71,
+            "fork_growth": 94.12,
+            "total_stars": 92.65,
+            "activity": 71.65,
+            "trending_signal": 25.6
+          },
+          "summary": {
+            "one_line": "把计划、测试、实现、复审、验证与记忆固化进编码智能体，减少每次靠提示词重建流程",
+            "highlights": [
+              "以门控流程推进计划、测试与最终验证",
+              "用独立上下文代理处理规划、审查和修复",
+              "把会话经验沉淀为摘要、记忆和可复用技能"
+            ],
+            "audience": "适合希望统一编码智能体工作方式，并加强测试、审查、安全扫描和会话交接的研发团队",
+            "capabilities": [
+              "规划功能并生成可确认的实施方案",
+              "用测试先行流程保留验证证据",
+              "在新上下文中审查代码与回归风险",
+              "扫描智能体配置、权限与提示注入风险",
+              "跨多种智能体环境同步技能和记忆"
+            ],
+            "core_title": "让编码智能体按工程闭环工作",
+            "core_summary": "ECC 把规划、测试先行、实现、独立审查、最终验证和经验沉淀连成固定流程，再用技能、代理、规则与 hooks 分别承载按需能力、隔离任务和自动检查。",
+            "prerequisites": "需先准备 Claude Code、Codex 或其他受支持的智能体环境，并选择对应安装方式",
+            "limitations": "同一智能体不能叠加安装方式；Codex 尚无 Claude 式 hooks 执行能力；记忆内容仍需人工核验",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "de7cc559100d2af25f1b17d77a59590b13cc3aa8",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+              ],
+              "highlights": [
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ],
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ],
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ]
+              ],
+              "audience": [
+                "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ],
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ],
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ],
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ],
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ]
+              ],
+              "core_title": [
+                "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+              ],
+              "core_summary": [
+                "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+              ],
+              "prerequisites": [
+                "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+              ],
+              "limitations": [
+                "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-31/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "de7cc559100d2af25f1b17d77a59590b13cc3aa8",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-31/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-31/2026-07-31.comprehensive.03.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-07-31/2026-07-31.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "huggingface/speech-to-speech",
+            "path": "reports/daily/assets/2026-07-31/2026-07-31.ai.01.huggingface--speech-to-speech.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-07-31/2026-07-31.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-07-31/2026-07-31.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 839428333,
+          "full_name": "huggingface/speech-to-speech",
+          "owner": "huggingface",
+          "name": "speech-to-speech",
+          "html_url": "https://github.com/huggingface/speech-to-speech",
+          "description": "Build local voice agents with open-source models",
+          "language": "Python",
+          "stars": 8738,
+          "forks": 1086,
+          "open_issues": 125,
+          "watchers": 96,
+          "topics": [
+            "ai",
+            "assistant",
+            "language-model",
+            "machine-learning",
+            "python",
+            "speech",
+            "speech-synthesis",
+            "speech-to-text",
+            "speech-translation"
+          ],
+          "created_at": "2024-08-07T15:32:09Z",
+          "updated_at": "2026-07-30T23:30:54Z",
+          "pushed_at": "2026-07-30T16:41:20Z",
+          "daily_stars": 627,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 94.78,
+          "star_delta": 906,
+          "fork_delta": 87,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 95.65,
+            "total_stars": 4.35,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把语音检测、转写、模型回复和语音合成串成可替换的实时语音 Agent 管线",
+            "highlights": [
+              "通过兼容 OpenAI Realtime 的接口接入应用",
+              "按设备和语言替换转写、模型与语音后端",
+              "可在本机、远程服务器或原始音频连接中运行"
+            ],
+            "audience": "适合开发语音助手、机器人对话后端或需要自选模型与部署位置的团队",
+            "capabilities": [
+              "检测说话边界并处理对话轮次",
+              "实时转写语音并返回部分文本",
+              "流式生成模型回复和工具调用",
+              "合成语音并持续传回客户端",
+              "切换本地模型、托管接口或自建服务"
+            ],
+            "core_title": "四段式可替换语音管线",
+            "core_summary": "它把 VAD、STT、LLM、TTS 分线程串联，用队列传递语音、文本和回复；每段都能更换后端，便于按硬件、语言和部署方式组合。",
+            "prerequisites": "需要 Python 3.10+；使用默认远程模型时需配置对应接口密钥，本地模型则需自行启动兼容服务。",
+            "limitations": "TCP 模式不含打断、实时转写事件和工具调用事件；LLM 代理自身不做认证与限流，只应在可信网络或网关后启用。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "1943b5e6c78034df17504ff7bc94aa115b698c6a",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+              ],
+              "highlights": [
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ],
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ],
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ]
+              ],
+              "audience": [
+                "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ],
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ],
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ],
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ],
+                [
+                  "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+                ]
+              ],
+              "core_title": [
+                "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+              ],
+              "core_summary": [
+                "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+              ],
+              "prerequisites": [
+                "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+              ],
+              "limitations": [
+                "github.readme:1943b5e6c78034df17504ff7bc94aa115b698c6a"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-31/repo-44ebd7c67c13e7a115ed1731-4b39468ad005967cc13902e2.png",
+          "publication_evidence": {
+            "full_name": "huggingface/speech-to-speech",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "1943b5e6c78034df17504ff7bc94aa115b698c6a",
+              "source_url": "https://api.github.com/repos/huggingface/speech-to-speech/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-31/repo-44ebd7c67c13e7a115ed1731-4b39468ad005967cc13902e2.png",
+              "sha256": "a44c810008cb617ee04db8c6eafa5f59dcbe4480753c5a76c74209e04799f912",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-31/2026-07-31.ai.01.huggingface--speech-to-speech.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 236194,
+          "forks": 35926,
+          "open_issues": 105,
+          "watchers": 1222,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-07-30T23:30:39Z",
+          "pushed_at": "2026-07-29T18:11:01Z",
+          "daily_stars": 810,
+          "weekly_stars": null,
+          "trending_rank_daily": 14,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 86.7,
+          "star_delta": 659,
+          "fork_delta": 60,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.65,
+            "relative_growth": 82.61,
+            "fork_growth": 91.3,
+            "total_stars": 95.65,
+            "activity": 71.65,
+            "trending_signal": 25.6
+          },
+          "summary": {
+            "one_line": "把规划、测试、实现、复核和记忆固化为可复用的编程 Agent 工作体系",
+            "highlights": [
+              "按任务加载技能，避免把完整目录塞进上下文",
+              "用专用 Agent 分开规划、实现、审查与修复",
+              "通过钩子、规则和安全扫描约束执行过程"
+            ],
+            "audience": "适合希望统一 AI 编程流程，并在 Claude Code、Codex 等工具间复用规范的团队",
+            "capabilities": [
+              "规划功能并生成可审阅的实施方案",
+              "按测试先行流程推进代码修改",
+              "调用独立审查角色检查回归与风险",
+              "保存会话摘要并沉淀可复用技能",
+              "扫描提示词、钩子、权限和密钥配置"
+            ],
+            "core_title": "分层装配 Agent 工作体系",
+            "core_summary": "ECC 将技能、专用 Agent、规则、钩子和记忆分开管理：任务需要时加载流程，独立角色负责审查，外部钩子执行确定性检查。",
+            "prerequisites": "Claude Code 插件要求 CLI v2.1.0+；Codex 同步前需先运行一次，让本地配置文件存在。",
+            "limitations": "同一工具不要叠加安装方式，否则会重复技能、命令或钩子；Codex 市场插件当前可能无法完整复制技能。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "de7cc559100d2af25f1b17d77a59590b13cc3aa8",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+              ],
+              "highlights": [
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ],
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ],
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ]
+              ],
+              "audience": [
+                "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ],
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ],
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ],
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ],
+                [
+                  "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+                ]
+              ],
+              "core_title": [
+                "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+              ],
+              "core_summary": [
+                "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+              ],
+              "prerequisites": [
+                "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+              ],
+              "limitations": [
+                "github.readme:de7cc559100d2af25f1b17d77a59590b13cc3aa8"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-31/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "de7cc559100d2af25f1b17d77a59590b13cc3aa8",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-31/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-31/2026-07-31.ai.02.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 222868,
+          "forks": 42824,
+          "open_issues": 25933,
+          "watchers": 222868,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-07-30T23:30:56Z",
+          "pushed_at": "2026-07-30T23:23:19Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 82.83,
+          "star_delta": 545,
+          "fork_delta": 197,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 86.96,
+            "relative_growth": 73.91,
+            "fork_growth": 100.0,
+            "total_stars": 91.3,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "让 AI Agent 跨终端和聊天平台执行任务，并从会话经验中积累记忆与技能",
+            "highlights": [
+              "从复杂任务中创建技能，并在后续使用中改进",
+              "跨会话搜索历史对话并整理可调用记忆",
+              "在隔离子 Agent 间拆分并行工作流"
+            ],
+            "audience": "适合需要长期运行个人 Agent、跨设备继续对话或安排周期任务的个人与团队",
+            "capabilities": [
+              "切换不同模型提供商而无需改代码",
+              "连接终端和多个消息平台继续对话",
+              "安排定时报告、备份和审计任务",
+              "搜索过往会话并生成上下文摘要",
+              "启动隔离子 Agent 并行处理任务"
+            ],
+            "core_title": "会积累经验的跨端 Agent",
+            "core_summary": "Hermes 把会话记忆、技能创建、历史搜索和用户模型连成学习循环，再通过统一网关把同一段工作延续到终端与聊天平台。",
+            "prerequisites": "快速安装支持 Linux、macOS、WSL2、Termux 与原生 Windows；安装后需选择模型提供商并配置工具。",
+            "limitations": "Termux 的完整依赖包含不兼容的语音组件，需使用精简安装项；记忆和自动任务仍需用户配置模型、工具与平台权限。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "highlights": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "audience": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "core_title": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "core_summary": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "prerequisites": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "limitations": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-07-31/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-07-31/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-07-31/2026-07-31.ai.03.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
