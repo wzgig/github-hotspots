@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "64a3da4c755aebc31dac235bc9fa2636b11b75dc4a035edaf51d7889b1d9f184",
+  "checklist_sha256": "3084c2f42f71356d5935fd4e5cd458ec0685dfbc156e81431b117299337ab5da",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-08-01",
+  "generated_at": "2026-08-01T07:32:40.811129+08:00",
+  "issue": {
+    "number": 21,
+    "code": "D021",
+    "stem": "D021-2026-08-01",
+    "label": "第21期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-08-01.json",
+    "report_sha256": "7ce5b4f3a7c92e333a66c40f4a6923fecd639720dec84bac84a0b004f2aa415f",
+    "poster_manifest": "reports/daily/assets/2026-08-01/manifest.json",
+    "poster_manifest_sha256": "a961713975f49312b3cb8e73b029eebfb2ad3b42e096183cbd3596e9ca720139",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D021-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "989164a6c00a6b38665ff464452078c545b06475e7e391b2d0aff4c4b64fbb99",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 381,
+      "caption_sha256": "16e75e3bf8a048324ba47835535f2e89abc37203b6dbb5cf811526678db08087",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "65b691eafb152e5c699f8a2681acb24ff3542784eda67f86adf840023054be63",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.cover.png",
+          "sha256": "4261e4ab3c2a673407f9b8b5609f13fc868925eeb5da384958e6fa483ff6a676",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.01.different-ai--openwork.png",
+          "sha256": "35306905e91b962db2f6fc5cf7eaa058627dc59e5bf105145898f52d0a87ab0f",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "different-ai/openwork",
+          "publication_path": "images/02-rank-01-different-ai-openwork.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.02.nousresearch--hermes-agent.png",
+          "sha256": "76da8bb6bc68461381269349b9c17daa68f2727b1f848104355f46c4e7d0fd73",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/03-rank-02-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.03.mvanhorn--last30days-skill.png",
+          "sha256": "0be668ed5581a1437bfc270b0e8da88689c4d1f6400223f86151ca5dc3e0007d",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "mvanhorn/last30days-skill",
+          "publication_path": "images/04-rank-03-mvanhorn-last30days-skill.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D021-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "c090fddcb17c2e25c738d46ae51286bd3ed2e7a20b8128804c0c379255bb83a4",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 368,
+      "caption_sha256": "91a197d0338ec5b63b4d31fa52143fdf4b431bc94c42b2020cabbfe7340083e5",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "e7d740ba1a43105f220ea558f65700dcb18c406d5d2dd2809244aad7fff7ff9d",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-01/2026-08-01.ai.cover.png",
+          "sha256": "236775ba67c0f379f9dd538cf0d8b3c3e9dad22da515f3ca77d977da2feac19d",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-01/2026-08-01.ai.01.nousresearch--hermes-agent.png",
+          "sha256": "645fbc21128b554f632278a260d6cbc9b29aa479734944ff0b8704fe4fff8234",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/02-rank-01-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-01/2026-08-01.ai.02.mvanhorn--last30days-skill.png",
+          "sha256": "f15f4fed9bad5a37b6c6e76420d64e95292d3095cdba57870cb846d8ea9e3eed",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "mvanhorn/last30days-skill",
+          "publication_path": "images/03-rank-02-mvanhorn-last30days-skill.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-01/2026-08-01.ai.03.microsoft--ai-for-beginners.png",
+          "sha256": "8ea53ec7feaf5697431898bc97236bd30b84e844a57ba282ffc8715090e14c67",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "microsoft/AI-For-Beginners",
+          "publication_path": "images/04-rank-03-microsoft-ai-for-beginners.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-08-01",
+    "revision": "64a3da4c755a",
+    "image_policy": "repository-source-reference"
+  }
+}

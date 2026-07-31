@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-08-01",
+  "window": {
+    "start": "2026-07-31",
+    "end": "2026-08-01"
+  },
+  "source_report": "reports/daily/2026-08-01.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-08-01",
+  "manifest": "reports/daily/assets/2026-08-01/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "different-ai/openwork",
+          "path": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.01.different-ai--openwork.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.02.nousresearch--hermes-agent.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "mvanhorn/last30days-skill",
+          "path": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.03.mvanhorn--last30days-skill.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-01/2026-08-01.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/daily/assets/2026-08-01/2026-08-01.ai.01.nousresearch--hermes-agent.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "mvanhorn/last30days-skill",
+          "path": "reports/daily/assets/2026-08-01/2026-08-01.ai.02.mvanhorn--last30days-skill.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "microsoft/AI-For-Beginners",
+          "path": "reports/daily/assets/2026-08-01/2026-08-01.ai.03.microsoft--ai-for-beginners.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 21,
+    "issue_code": "D021",
+    "issue_label": "第21期",
+    "status": "official"
+  }
+}

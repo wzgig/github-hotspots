@@ -1,0 +1,1438 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-01",
+  "window_start": "2026-07-31",
+  "window_end": "2026-08-01",
+  "generated_at": "2026-08-01T07:31:11+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-31 至 2026-08-01",
+  "publication": {
+    "issue_number": 21,
+    "issue_code": "D021",
+    "issue_label": "第21期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "2 个上榜项目未获取到 Owner 头像，海报已使用身份占位图",
+    "3 个上榜项目未获取到 README，相关文案将使用受控回退"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-01",
+    "manifest": "reports/daily/assets/2026-08-01/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "different-ai/openwork",
+            "path": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.01.different-ai--openwork.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mvanhorn/last30days-skill",
+            "path": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.03.mvanhorn--last30days-skill.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-01/2026-08-01.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-01/2026-08-01.ai.01.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "mvanhorn/last30days-skill",
+            "path": "reports/daily/assets/2026-08-01/2026-08-01.ai.02.mvanhorn--last30days-skill.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "microsoft/AI-For-Beginners",
+            "path": "reports/daily/assets/2026-08-01/2026-08-01.ai.03.microsoft--ai-for-beginners.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 21,
+      "issue_code": "D021",
+      "issue_label": "第21期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1133911335,
+      "full_name": "different-ai/openwork",
+      "owner": "different-ai",
+      "name": "openwork",
+      "html_url": "https://github.com/different-ai/openwork",
+      "description": "The open-source alternative to Claude Cowork (powered by opencode)",
+      "language": "TypeScript",
+      "stars": 19474,
+      "forks": 2003,
+      "open_issues": 432,
+      "watchers": 76,
+      "topics": [],
+      "created_at": "2026-01-14T01:39:31Z",
+      "updated_at": "2026-07-31T23:28:26Z",
+      "pushed_at": "2026-07-31T22:29:53Z",
+      "daily_stars": 796,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 91.98,
+      "star_delta": 787,
+      "fork_delta": 99,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.53,
+        "relative_growth": 94.12,
+        "fork_growth": 97.06,
+        "total_stars": 20.59,
+        "activity": 100.0,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "把技能、插件和服务集中共享，让团队在不同 AI Agent 中复用同一套工作流",
+        "highlights": [
+          "通过 MCP 在兼容 Agent 中查找并执行能力",
+          "向团队或指定成员分发技能与插件",
+          "集中管理模型供应商、访问权限和桌面策略"
+        ],
+        "audience": "需要跨多种 AI Agent 复用工作流，或统一管理团队能力与连接的个人、团队和组织管理员",
+        "capabilities": [
+          "复用已分配的技能、插件和 MCP 连接",
+          "接入 Google Workspace 与 Microsoft 365 能力",
+          "搜索当前账号可以使用的能力",
+          "执行找到的能力完成具体任务",
+          "按组织、团队或个人分配技能和插件"
+        ],
+        "core_title": "一套能力跨 Agent 复用",
+        "core_summary": "OpenWork MCP 是连接层：兼容 Agent 通过它搜索和执行已分配能力，团队则在管理界面发布技能、配置服务连接并控制成员访问。",
+        "prerequisites": "需使用兼容 MCP 的 Agent；接入后通过浏览器登录并选择 OpenWork 组织",
+        "limitations": "从现有 Agent 使用时仍需在浏览器完成登录和组织选择；桌面应用可选，并非必要组件。",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": "923d6c796a58b083d9d7e0fa5b28e87c15e14f67",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+          ],
+          "highlights": [
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ],
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ],
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ]
+          ],
+          "audience": [
+            "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+          ],
+          "capabilities": [
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ],
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ],
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ],
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ],
+            [
+              "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+            ]
+          ],
+          "core_title": [
+            "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+          ],
+          "core_summary": [
+            "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+          ],
+          "prerequisites": [
+            "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+          ],
+          "limitations": [
+            "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+          ],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-01/repo-21c529742d6480950c647932-27357355d55bcdc84a28695c.png",
+      "publication_evidence": {
+        "full_name": "different-ai/openwork",
+        "license_spdx_id": "NOASSERTION",
+        "readme": {
+          "sha": "923d6c796a58b083d9d7e0fa5b28e87c15e14f67",
+          "source_url": "https://api.github.com/repos/different-ai/openwork/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-01/repo-21c529742d6480950c647932-27357355d55bcdc84a28695c.png",
+          "sha256": "9bdeeaffd4494507fea054dbc385696ec41b5efa9fdd91157a19c501a3a240c8",
+          "width": 420,
+          "height": 420
+        },
+        "warnings": []
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.01.different-ai--openwork.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1024554267,
+      "full_name": "NousResearch/hermes-agent",
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "html_url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": 223400,
+      "forks": 43001,
+      "open_issues": 26289,
+      "watchers": 223400,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "clawdbot",
+        "codex",
+        "hermes",
+        "hermes-agent",
+        "llm",
+        "moltbot",
+        "nous-research",
+        "openai",
+        "openclaw"
+      ],
+      "created_at": "2025-07-22T22:22:28Z",
+      "updated_at": "2026-07-31T23:29:49Z",
+      "pushed_at": "2026-07-31T22:27:44Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 88.02,
+      "star_delta": 532,
+      "fork_delta": 177,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 92.65,
+        "relative_growth": 86.76,
+        "fork_growth": 98.53,
+        "total_stars": 89.71,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
+        "highlights": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+        "capabilities": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "core_title": "搭建能够连续执行多步任务的 AI Agent",
+        "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-01/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+      "publication_evidence": {
+        "full_name": "NousResearch/hermes-agent",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-01/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": [
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          }
+        ]
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.02.nousresearch--hermes-agent.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1140843380,
+      "full_name": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "html_url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python",
+      "stars": 56206,
+      "forks": 4883,
+      "open_issues": 80,
+      "watchers": 207,
+      "topics": [
+        "ai-prompts",
+        "ai-skill",
+        "bluesky",
+        "claude",
+        "claude-code",
+        "clawhub",
+        "deep-research",
+        "hackernews",
+        "instagram",
+        "openclaw",
+        "polymarket",
+        "recency",
+        "reddit",
+        "research",
+        "social-media",
+        "tiktok",
+        "trends",
+        "twitter",
+        "web-search",
+        "youtube"
+      ],
+      "created_at": "2026-01-23T20:37:37Z",
+      "updated_at": "2026-07-31T23:28:09Z",
+      "pushed_at": "2026-07-31T02:24:01Z",
+      "daily_stars": 660,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 86.51,
+      "star_delta": 684,
+      "fork_delta": 97,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.59,
+        "relative_growth": 91.18,
+        "fork_growth": 95.59,
+        "total_stars": 25.0,
+        "activity": 71.65,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "要解释 last30days-skill 的用途，还需要补充可核验的 README 信息",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "要解释 last30days-skill 的用途，还需要补充可核验的 README 信息",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "mvanhorn/last30days-skill",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.03.mvanhorn--last30days-skill.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "different-ai/openwork",
+            "path": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.01.different-ai--openwork.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mvanhorn/last30days-skill",
+            "path": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.03.mvanhorn--last30days-skill.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1133911335,
+          "full_name": "different-ai/openwork",
+          "owner": "different-ai",
+          "name": "openwork",
+          "html_url": "https://github.com/different-ai/openwork",
+          "description": "The open-source alternative to Claude Cowork (powered by opencode)",
+          "language": "TypeScript",
+          "stars": 19474,
+          "forks": 2003,
+          "open_issues": 432,
+          "watchers": 76,
+          "topics": [],
+          "created_at": "2026-01-14T01:39:31Z",
+          "updated_at": "2026-07-31T23:28:26Z",
+          "pushed_at": "2026-07-31T22:29:53Z",
+          "daily_stars": 796,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.98,
+          "star_delta": 787,
+          "fork_delta": 99,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.53,
+            "relative_growth": 94.12,
+            "fork_growth": 97.06,
+            "total_stars": 20.59,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把技能、插件和服务集中共享，让团队在不同 AI Agent 中复用同一套工作流",
+            "highlights": [
+              "通过 MCP 在兼容 Agent 中查找并执行能力",
+              "向团队或指定成员分发技能与插件",
+              "集中管理模型供应商、访问权限和桌面策略"
+            ],
+            "audience": "需要跨多种 AI Agent 复用工作流，或统一管理团队能力与连接的个人、团队和组织管理员",
+            "capabilities": [
+              "复用已分配的技能、插件和 MCP 连接",
+              "接入 Google Workspace 与 Microsoft 365 能力",
+              "搜索当前账号可以使用的能力",
+              "执行找到的能力完成具体任务",
+              "按组织、团队或个人分配技能和插件"
+            ],
+            "core_title": "一套能力跨 Agent 复用",
+            "core_summary": "OpenWork MCP 是连接层：兼容 Agent 通过它搜索和执行已分配能力，团队则在管理界面发布技能、配置服务连接并控制成员访问。",
+            "prerequisites": "需使用兼容 MCP 的 Agent；接入后通过浏览器登录并选择 OpenWork 组织",
+            "limitations": "从现有 Agent 使用时仍需在浏览器完成登录和组织选择；桌面应用可选，并非必要组件。",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": "923d6c796a58b083d9d7e0fa5b28e87c15e14f67",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+              ],
+              "highlights": [
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ],
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ],
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ]
+              ],
+              "audience": [
+                "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ],
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ],
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ],
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ],
+                [
+                  "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+                ]
+              ],
+              "core_title": [
+                "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+              ],
+              "core_summary": [
+                "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+              ],
+              "prerequisites": [
+                "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+              ],
+              "limitations": [
+                "github.readme:923d6c796a58b083d9d7e0fa5b28e87c15e14f67"
+              ],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-01/repo-21c529742d6480950c647932-27357355d55bcdc84a28695c.png",
+          "publication_evidence": {
+            "full_name": "different-ai/openwork",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "923d6c796a58b083d9d7e0fa5b28e87c15e14f67",
+              "source_url": "https://api.github.com/repos/different-ai/openwork/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-01/repo-21c529742d6480950c647932-27357355d55bcdc84a28695c.png",
+              "sha256": "9bdeeaffd4494507fea054dbc385696ec41b5efa9fdd91157a19c501a3a240c8",
+              "width": 420,
+              "height": 420
+            },
+            "warnings": []
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.01.different-ai--openwork.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 223400,
+          "forks": 43001,
+          "open_issues": 26289,
+          "watchers": 223400,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-07-31T23:29:49Z",
+          "pushed_at": "2026-07-31T22:27:44Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.02,
+          "star_delta": 532,
+          "fork_delta": 177,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.65,
+            "relative_growth": 86.76,
+            "fork_growth": 98.53,
+            "total_stars": 89.71,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-01/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-01/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": [
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              }
+            ]
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.02.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1140843380,
+          "full_name": "mvanhorn/last30days-skill",
+          "owner": "mvanhorn",
+          "name": "last30days-skill",
+          "html_url": "https://github.com/mvanhorn/last30days-skill",
+          "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+          "language": "Python",
+          "stars": 56206,
+          "forks": 4883,
+          "open_issues": 80,
+          "watchers": 207,
+          "topics": [
+            "ai-prompts",
+            "ai-skill",
+            "bluesky",
+            "claude",
+            "claude-code",
+            "clawhub",
+            "deep-research",
+            "hackernews",
+            "instagram",
+            "openclaw",
+            "polymarket",
+            "recency",
+            "reddit",
+            "research",
+            "social-media",
+            "tiktok",
+            "trends",
+            "twitter",
+            "web-search",
+            "youtube"
+          ],
+          "created_at": "2026-01-23T20:37:37Z",
+          "updated_at": "2026-07-31T23:28:09Z",
+          "pushed_at": "2026-07-31T02:24:01Z",
+          "daily_stars": 660,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 86.51,
+          "star_delta": 684,
+          "fork_delta": 97,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.59,
+            "relative_growth": 91.18,
+            "fork_growth": 95.59,
+            "total_stars": 25.0,
+            "activity": 71.65,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "要解释 last30days-skill 的用途，还需要补充可核验的 README 信息",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "要解释 last30days-skill 的用途，还需要补充可核验的 README 信息",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "mvanhorn/last30days-skill",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-01/2026-08-01.comprehensive.03.mvanhorn--last30days-skill.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-01/2026-08-01.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-01/2026-08-01.ai.01.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "mvanhorn/last30days-skill",
+            "path": "reports/daily/assets/2026-08-01/2026-08-01.ai.02.mvanhorn--last30days-skill.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "microsoft/AI-For-Beginners",
+            "path": "reports/daily/assets/2026-08-01/2026-08-01.ai.03.microsoft--ai-for-beginners.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 223400,
+          "forks": 43001,
+          "open_issues": 26289,
+          "watchers": 223400,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-07-31T23:29:49Z",
+          "pushed_at": "2026-07-31T22:27:44Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 85.36,
+          "star_delta": 532,
+          "fork_delta": 177,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 89.29,
+            "relative_growth": 82.14,
+            "fork_growth": 96.43,
+            "total_stars": 92.86,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "hermes-agent 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "hermes-agent 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-01/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-01/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": [
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              }
+            ]
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-01/2026-08-01.ai.01.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1140843380,
+          "full_name": "mvanhorn/last30days-skill",
+          "owner": "mvanhorn",
+          "name": "last30days-skill",
+          "html_url": "https://github.com/mvanhorn/last30days-skill",
+          "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+          "language": "Python",
+          "stars": 56206,
+          "forks": 4883,
+          "open_issues": 80,
+          "watchers": 207,
+          "topics": [
+            "ai-prompts",
+            "ai-skill",
+            "bluesky",
+            "claude",
+            "claude-code",
+            "clawhub",
+            "deep-research",
+            "hackernews",
+            "instagram",
+            "openclaw",
+            "polymarket",
+            "recency",
+            "reddit",
+            "research",
+            "social-media",
+            "tiktok",
+            "trends",
+            "twitter",
+            "web-search",
+            "youtube"
+          ],
+          "created_at": "2026-01-23T20:37:37Z",
+          "updated_at": "2026-07-31T23:28:09Z",
+          "pushed_at": "2026-07-31T02:24:01Z",
+          "daily_stars": 660,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 85.2,
+          "star_delta": 684,
+          "fork_delta": 97,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.43,
+            "relative_growth": 85.71,
+            "fork_growth": 92.86,
+            "total_stars": 17.86,
+            "activity": 71.65,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "last30days-skill 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "last30days-skill 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "mvanhorn/last30days-skill",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-01/2026-08-01.ai.02.mvanhorn--last30days-skill.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 344190478,
+          "full_name": "microsoft/AI-For-Beginners",
+          "owner": "microsoft",
+          "name": "AI-For-Beginners",
+          "html_url": "https://github.com/microsoft/AI-For-Beginners",
+          "description": "12 Weeks, 24 Lessons, AI for All!",
+          "language": "Jupyter Notebook",
+          "stars": 55283,
+          "forks": 11143,
+          "open_issues": 10,
+          "watchers": 588,
+          "topics": [
+            "ai",
+            "artificial-intelligence",
+            "cnn",
+            "computer-vision",
+            "deep-learning",
+            "gan",
+            "machine-learning",
+            "microsoft-for-beginners",
+            "nlp",
+            "rnn"
+          ],
+          "created_at": "2021-03-03T16:27:36Z",
+          "updated_at": "2026-07-31T23:28:27Z",
+          "pushed_at": "2026-07-21T11:11:48Z",
+          "daily_stars": 1592,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 82.19,
+          "star_delta": 1429,
+          "fork_delta": 200,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 96.43,
+            "fork_growth": 100.0,
+            "total_stars": 14.29,
+            "activity": 2.56,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 AI-For-Beginners 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 AI-For-Beginners 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "microsoft/AI-For-Beginners",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-01/2026-08-01.ai.03.microsoft--ai-for-beginners.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
