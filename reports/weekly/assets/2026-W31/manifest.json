@@ -1,0 +1,113 @@
+{
+  "schema_version": 2,
+  "period": "weekly",
+  "run_date": "2026-08-02",
+  "window": {
+    "start": "2026-07-26",
+    "end": "2026-08-02"
+  },
+  "source_report": "reports/weekly/2026-W31.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/weekly/assets/2026-W31",
+  "manifest": "reports/weekly/assets/2026-W31/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 7,
+      "cover": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "block/buzz",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.01.block--buzz.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "permissionlesstech/bitchat",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.02.permissionlesstech--bitchat.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "mattpocock/skills",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.03.mattpocock--skills.png"
+        },
+        {
+          "rank": 4,
+          "full_name": "diegosouzapw/OmniRoute",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.04.diegosouzapw--omniroute.png"
+        },
+        {
+          "rank": 5,
+          "full_name": "alibaba/open-code-review",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.05.alibaba--open-code-review.png"
+        },
+        {
+          "rank": 6,
+          "full_name": "citrolabs/ego-lite",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.06.citrolabs--ego-lite.png"
+        },
+        {
+          "rank": 7,
+          "full_name": "1jehuang/jcode",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.07.1jehuang--jcode.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 7,
+      "cover": "reports/weekly/assets/2026-W31/2026-W31.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "diegosouzapw/OmniRoute",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.ai.01.diegosouzapw--omniroute.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "alibaba/open-code-review",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.ai.02.alibaba--open-code-review.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "citrolabs/ego-lite",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.ai.03.citrolabs--ego-lite.png"
+        },
+        {
+          "rank": 4,
+          "full_name": "1jehuang/jcode",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.ai.04.1jehuang--jcode.png"
+        },
+        {
+          "rank": 5,
+          "full_name": "obra/superpowers",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.ai.05.obra--superpowers.png"
+        },
+        {
+          "rank": 6,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.ai.06.nousresearch--hermes-agent.png"
+        },
+        {
+          "rank": 7,
+          "full_name": "affaan-m/ECC",
+          "path": "reports/weekly/assets/2026-W31/2026-W31.ai.07.affaan-m--ecc.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 4,
+    "issue_code": "W004",
+    "issue_label": "第4期",
+    "status": "official"
+  }
+}

@@ -1,0 +1,2968 @@
+{
+  "schema_version": 3,
+  "period": "weekly",
+  "run_date": "2026-08-02",
+  "window_start": "2026-07-26",
+  "window_end": "2026-08-02",
+  "generated_at": "2026-08-02T13:41:49+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-07-26 至 2026-08-02",
+  "publication": {
+    "issue_number": 4,
+    "issue_code": "W004",
+    "issue_label": "第4期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/weekly/assets/2026-W31",
+    "manifest": "reports/weekly/assets/2026-W31/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "block/buzz",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.01.block--buzz.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "permissionlesstech/bitchat",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.02.permissionlesstech--bitchat.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.03.mattpocock--skills.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.04.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.05.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.06.citrolabs--ego-lite.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "1jehuang/jcode",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.07.1jehuang--jcode.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W31/2026-W31.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.01.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.02.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.03.citrolabs--ego-lite.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "1jehuang/jcode",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.04.1jehuang--jcode.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.05.obra--superpowers.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.06.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.07.affaan-m--ecc.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 4,
+      "issue_code": "W004",
+      "issue_label": "第4期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1174789082,
+      "full_name": "block/buzz",
+      "owner": "block",
+      "name": "buzz",
+      "html_url": "https://github.com/block/buzz",
+      "description": "A hive mind communication platform",
+      "language": "Rust",
+      "stars": 20584,
+      "forks": 2172,
+      "open_issues": 1522,
+      "watchers": 97,
+      "topics": [],
+      "created_at": "2026-03-06T21:00:56Z",
+      "updated_at": "2026-08-02T05:38:56Z",
+      "pushed_at": "2026-08-02T05:41:39Z",
+      "daily_stars": null,
+      "weekly_stars": 9003,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 2,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 94.9,
+      "star_delta": 8615,
+      "fork_delta": 1215,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 99.06,
+        "relative_growth": 100.0,
+        "fork_growth": 99.06,
+        "total_stars": 46.23,
+        "activity": 100.0,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "公开信息不足，暂不能准确说明 buzz 的具体用途",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "公开信息不足，暂不能准确说明 buzz 的具体用途",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W31/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+      "publication_evidence": {
+        "full_name": "block/buzz",
+        "license_spdx_id": "Apache-2.0",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W31/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+          "sha256": "8c446a4ae4a81b015d5b28adf6ef1c06d1e03b8cb961aaff5058b9a12f7ad1af",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.01.block--buzz.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1013830656,
+      "full_name": "permissionlesstech/bitchat",
+      "owner": "permissionlesstech",
+      "name": "bitchat",
+      "html_url": "https://github.com/permissionlesstech/bitchat",
+      "description": "bluetooth mesh chat, IRC vibes",
+      "language": "Swift",
+      "stars": 34004,
+      "forks": 5423,
+      "open_issues": 99,
+      "watchers": 304,
+      "topics": [
+        "bluetooth",
+        "bluetooth-le",
+        "decentralized",
+        "e2e-encryption",
+        "ios",
+        "macos",
+        "mesh-network",
+        "messaging",
+        "nostr",
+        "swift"
+      ],
+      "created_at": "2025-07-04T14:34:38Z",
+      "updated_at": "2026-08-02T05:34:55Z",
+      "pushed_at": "2026-08-01T15:41:08Z",
+      "daily_stars": null,
+      "weekly_stars": 5737,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 1,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 93.65,
+      "star_delta": 5270,
+      "fork_delta": 1126,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.17,
+        "relative_growth": 92.45,
+        "fork_growth": 98.11,
+        "total_stars": 48.11,
+        "activity": 93.55,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "bitchat 的用途证据不足，需要先查看仓库 README",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "bitchat 的用途证据不足，需要先查看仓库 README",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W31/repo-d5d526d64848ecec66a59d05-19bf1f83c9aed98227eac1d5.png",
+      "publication_evidence": {
+        "full_name": "permissionlesstech/bitchat",
+        "license_spdx_id": "Unlicense",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W31/repo-d5d526d64848ecec66a59d05-19bf1f83c9aed98227eac1d5.png",
+          "sha256": "6c88a869b9c2b85f5f9eff3212ebf4249a8822687e3fc7fe5699161da5592aad",
+          "width": 420,
+          "height": 420
+        },
+        "warnings": []
+      },
+      "license_spdx": "Unlicense",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.02.permissionlesstech--bitchat.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 199159,
+      "forks": 17165,
+      "open_issues": 262,
+      "watchers": 199159,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-08-02T05:41:13Z",
+      "pushed_at": "2026-07-31T17:06:59Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 91.57,
+      "star_delta": 10615,
+      "fork_delta": 968,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 90.57,
+        "fork_growth": 97.17,
+        "total_stars": 87.74,
+        "activity": 93.55,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "目前无法从公开字段确认 skills 能完成哪些任务",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "目前无法从公开字段确认 skills 能完成哪些任务",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W31/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W31/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.03.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1157102282,
+      "full_name": "diegosouzapw/OmniRoute",
+      "owner": "diegosouzapw",
+      "name": "OmniRoute",
+      "html_url": "https://github.com/diegosouzapw/OmniRoute",
+      "description": "Never stop coding. Free MIT AI gateway: one endpoint, 290+ providers (90+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+      "language": "TypeScript",
+      "stars": 37213,
+      "forks": 4820,
+      "open_issues": 528,
+      "watchers": 211,
+      "topics": [
+        "a2a",
+        "ai-agents",
+        "ai-gateway",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "cline",
+        "codex",
+        "copilot",
+        "cursor",
+        "deepseek",
+        "free-ai",
+        "gemini",
+        "kimi",
+        "llm-gateway",
+        "mcp",
+        "openai",
+        "openai-proxy",
+        "qwen",
+        "token-saver"
+      ],
+      "created_at": "2026-02-13T12:38:31Z",
+      "updated_at": "2026-08-02T05:33:04Z",
+      "pushed_at": "2026-08-02T05:32:26Z",
+      "daily_stars": null,
+      "weekly_stars": 7259,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 14,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 4,
+      "score": 91.51,
+      "star_delta": 7015,
+      "fork_delta": 885,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.11,
+        "relative_growth": 95.28,
+        "fork_growth": 96.23,
+        "total_stars": 50.0,
+        "activity": 100.0,
+        "trending_signal": 25.6
+      },
+      "summary": {
+        "one_line": "用 OmniRoute 可以统一接入并路由多个 AI 模型服务，还会把模型选择和供应商配置集中管理",
+        "highlights": [
+          "用统一入口连接不同模型服务",
+          "按配置把请求路由到目标模型",
+          "集中管理模型供应商和调用方式"
+        ],
+        "audience": "需要接入多个模型供应商或维护统一调用层的 AI 开发者",
+        "capabilities": [
+          "用统一入口连接不同模型服务",
+          "按配置把请求路由到目标模型",
+          "集中管理模型供应商和调用方式"
+        ],
+        "core_title": "统一接入并路由多个 AI 模型服务",
+        "core_summary": "用 OmniRoute 可以统一接入并路由多个 AI 模型服务，还会把模型选择和供应商配置集中管理",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W31/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+      "publication_evidence": {
+        "full_name": "diegosouzapw/OmniRoute",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W31/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "sha256": "6711b870e3d791a7d1a46ea15d0a5b263e12af0f61aede5032d8d5b86dd9c521",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.04.diegosouzapw--omniroute.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1241960226,
+      "full_name": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "html_url": "https://github.com/alibaba/open-code-review",
+      "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": 17572,
+      "forks": 1193,
+      "open_issues": 74,
+      "watchers": 58,
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "created_at": "2026-05-18T02:16:36Z",
+      "updated_at": "2026-08-02T05:41:16Z",
+      "pushed_at": "2026-08-01T10:09:51Z",
+      "daily_stars": null,
+      "weekly_stars": 4708,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 5,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 5,
+      "score": 88.7,
+      "star_delta": 4592,
+      "fork_delta": 306,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.34,
+        "relative_growth": 94.34,
+        "fork_growth": 91.51,
+        "total_stars": 44.34,
+        "activity": 93.55,
+        "trending_signal": 38.69
+      },
+      "summary": {
+        "one_line": "这类任务可以交给 open-code-review：检查代码变更并整理审查意见，并帮助团队发现问题和统一修改建议",
+        "highlights": [
+          "逐项检查提交中的代码变更",
+          "标出潜在缺陷和需要确认的实现",
+          "把审查意见整理成可跟进的建议"
+        ],
+        "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+        "capabilities": [
+          "逐项检查提交中的代码变更",
+          "标出潜在缺陷和需要确认的实现",
+          "把审查意见整理成可跟进的建议"
+        ],
+        "core_title": "检查代码变更并整理审查意见",
+        "core_summary": "这类任务可以交给 open-code-review：检查代码变更并整理审查意见，并帮助团队发现问题和统一修改建议",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W31/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+      "publication_evidence": {
+        "full_name": "alibaba/open-code-review",
+        "license_spdx_id": "Apache-2.0",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W31/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+          "sha256": "a2c85e1294f54a6273fe91abf294668d66bc22e30ee7bd41f13a0cf64039b5b2",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.05.alibaba--open-code-review.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1212503250,
+      "full_name": "citrolabs/ego-lite",
+      "owner": "citrolabs",
+      "name": "ego-lite",
+      "html_url": "https://github.com/citrolabs/ego-lite",
+      "description": "The fastest browser for AI agents to run browser automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+      "language": "JavaScript",
+      "stars": 7437,
+      "forks": 371,
+      "open_issues": 58,
+      "watchers": 20,
+      "topics": [
+        "agent-skills",
+        "ai-agent",
+        "automation",
+        "browser",
+        "browser-automation",
+        "claude-code",
+        "codex",
+        "hermes-agent",
+        "skills",
+        "skills-sh"
+      ],
+      "created_at": "2026-04-16T12:51:09Z",
+      "updated_at": "2026-08-02T05:35:15Z",
+      "pushed_at": "2026-07-30T12:32:42Z",
+      "daily_stars": null,
+      "weekly_stars": 4090,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 3,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 6,
+      "score": 87.67,
+      "star_delta": 3829,
+      "fork_delta": 195,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 93.4,
+        "relative_growth": 98.11,
+        "fork_growth": 87.26,
+        "total_stars": 38.68,
+        "activity": 81.87,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "当你需要把重复的开发操作整理成自动化流程，ego-lite 可以接手，同时减少手动执行和重复配置",
+        "highlights": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "audience": "需要减少重复操作并统一研发流程的软件团队",
+        "capabilities": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "core_title": "把重复的开发操作整理成自动化流程",
+        "core_summary": "当你需要把重复的开发操作整理成自动化流程，ego-lite 可以接手，同时减少手动执行和重复配置",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W31/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+      "publication_evidence": {
+        "full_name": "citrolabs/ego-lite",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W31/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+          "sha256": "79de0bd08dd1947fb345697bd1003816231bd21b994b339758ed4df028537e81",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.06.citrolabs--ego-lite.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1128204614,
+      "full_name": "1jehuang/jcode",
+      "owner": "1jehuang",
+      "name": "jcode",
+      "html_url": "https://github.com/1jehuang/jcode",
+      "description": "The most RAM efficient harness",
+      "language": "Rust",
+      "stars": 14998,
+      "forks": 1664,
+      "open_issues": 183,
+      "watchers": 78,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-coding-agent",
+        "claude",
+        "cli",
+        "coding-agent",
+        "llm",
+        "mcp",
+        "openai",
+        "rust",
+        "terminal",
+        "tui"
+      ],
+      "created_at": "2026-01-05T09:43:36Z",
+      "updated_at": "2026-08-02T05:39:30Z",
+      "pushed_at": "2026-08-02T04:59:48Z",
+      "daily_stars": null,
+      "weekly_stars": 3548,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 8,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 7,
+      "score": 87.48,
+      "star_delta": 3506,
+      "fork_delta": 396,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 91.51,
+        "relative_growth": 93.4,
+        "fork_growth": 93.4,
+        "total_stars": 42.45,
+        "activity": 100.0,
+        "trending_signal": 31.55
+      },
+      "summary": {
+        "one_line": "如果工作流里要把外部工具和数据接入支持 MCP 的模型应用，可以交给 jcode，同时用统一协议建立工具调用连接",
+        "highlights": [
+          "为模型应用提供标准化工具接口",
+          "连接外部数据源和可调用工具",
+          "把工具能力暴露给兼容 MCP 的客户端"
+        ],
+        "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+        "capabilities": [
+          "为模型应用提供标准化工具接口",
+          "连接外部数据源和可调用工具",
+          "把工具能力暴露给兼容 MCP 的客户端"
+        ],
+        "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+        "core_summary": "如果工作流里要把外部工具和数据接入支持 MCP 的模型应用，可以交给 jcode，同时用统一协议建立工具调用连接",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W31/repo-f9d109b36990e5221e33d34b-b6d7ba2e6c191f04e75099a6.png",
+      "publication_evidence": {
+        "full_name": "1jehuang/jcode",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W31/repo-f9d109b36990e5221e33d34b-b6d7ba2e6c191f04e75099a6.png",
+          "sha256": "0622ac379368b9428b8683e85b5692dc4bd906ebf69bfd8aea9ac1c68091a7f4",
+          "width": 420,
+          "height": 420
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.07.1jehuang--jcode.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "block/buzz",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.01.block--buzz.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "permissionlesstech/bitchat",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.02.permissionlesstech--bitchat.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.03.mattpocock--skills.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.04.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.05.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.06.citrolabs--ego-lite.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "1jehuang/jcode",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.07.1jehuang--jcode.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1174789082,
+          "full_name": "block/buzz",
+          "owner": "block",
+          "name": "buzz",
+          "html_url": "https://github.com/block/buzz",
+          "description": "A hive mind communication platform",
+          "language": "Rust",
+          "stars": 20584,
+          "forks": 2172,
+          "open_issues": 1522,
+          "watchers": 97,
+          "topics": [],
+          "created_at": "2026-03-06T21:00:56Z",
+          "updated_at": "2026-08-02T05:38:56Z",
+          "pushed_at": "2026-08-02T05:41:39Z",
+          "daily_stars": null,
+          "weekly_stars": 9003,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 2,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 94.9,
+          "star_delta": 8615,
+          "fork_delta": 1215,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 99.06,
+            "relative_growth": 100.0,
+            "fork_growth": 99.06,
+            "total_stars": 46.23,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 buzz 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 buzz 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+          "publication_evidence": {
+            "full_name": "block/buzz",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-1605113f2702fa8259043680-e0bd6a7b408e2bb1522b468f.png",
+              "sha256": "8c446a4ae4a81b015d5b28adf6ef1c06d1e03b8cb961aaff5058b9a12f7ad1af",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.01.block--buzz.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1013830656,
+          "full_name": "permissionlesstech/bitchat",
+          "owner": "permissionlesstech",
+          "name": "bitchat",
+          "html_url": "https://github.com/permissionlesstech/bitchat",
+          "description": "bluetooth mesh chat, IRC vibes",
+          "language": "Swift",
+          "stars": 34004,
+          "forks": 5423,
+          "open_issues": 99,
+          "watchers": 304,
+          "topics": [
+            "bluetooth",
+            "bluetooth-le",
+            "decentralized",
+            "e2e-encryption",
+            "ios",
+            "macos",
+            "mesh-network",
+            "messaging",
+            "nostr",
+            "swift"
+          ],
+          "created_at": "2025-07-04T14:34:38Z",
+          "updated_at": "2026-08-02T05:34:55Z",
+          "pushed_at": "2026-08-01T15:41:08Z",
+          "daily_stars": null,
+          "weekly_stars": 5737,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 1,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 93.65,
+          "star_delta": 5270,
+          "fork_delta": 1126,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.17,
+            "relative_growth": 92.45,
+            "fork_growth": 98.11,
+            "total_stars": 48.11,
+            "activity": 93.55,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "bitchat 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "bitchat 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-d5d526d64848ecec66a59d05-19bf1f83c9aed98227eac1d5.png",
+          "publication_evidence": {
+            "full_name": "permissionlesstech/bitchat",
+            "license_spdx_id": "Unlicense",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-d5d526d64848ecec66a59d05-19bf1f83c9aed98227eac1d5.png",
+              "sha256": "6c88a869b9c2b85f5f9eff3212ebf4249a8822687e3fc7fe5699161da5592aad",
+              "width": 420,
+              "height": 420
+            },
+            "warnings": []
+          },
+          "license_spdx": "Unlicense",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.02.permissionlesstech--bitchat.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 199159,
+          "forks": 17165,
+          "open_issues": 262,
+          "watchers": 199159,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-08-02T05:41:13Z",
+          "pushed_at": "2026-07-31T17:06:59Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 91.57,
+          "star_delta": 10615,
+          "fork_delta": 968,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 90.57,
+            "fork_growth": 97.17,
+            "total_stars": 87.74,
+            "activity": 93.55,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 skills 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 skills 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.03.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1157102282,
+          "full_name": "diegosouzapw/OmniRoute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "html_url": "https://github.com/diegosouzapw/OmniRoute",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 290+ providers (90+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+          "language": "TypeScript",
+          "stars": 37213,
+          "forks": 4820,
+          "open_issues": 528,
+          "watchers": 211,
+          "topics": [
+            "a2a",
+            "ai-agents",
+            "ai-gateway",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "cline",
+            "codex",
+            "copilot",
+            "cursor",
+            "deepseek",
+            "free-ai",
+            "gemini",
+            "kimi",
+            "llm-gateway",
+            "mcp",
+            "openai",
+            "openai-proxy",
+            "qwen",
+            "token-saver"
+          ],
+          "created_at": "2026-02-13T12:38:31Z",
+          "updated_at": "2026-08-02T05:33:04Z",
+          "pushed_at": "2026-08-02T05:32:26Z",
+          "daily_stars": null,
+          "weekly_stars": 7259,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 14,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 91.51,
+          "star_delta": 7015,
+          "fork_delta": 885,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.11,
+            "relative_growth": 95.28,
+            "fork_growth": 96.23,
+            "total_stars": 50.0,
+            "activity": 100.0,
+            "trending_signal": 25.6
+          },
+          "summary": {
+            "one_line": "用 OmniRoute 可以统一接入并路由多个 AI 模型服务，还会把模型选择和供应商配置集中管理",
+            "highlights": [
+              "用统一入口连接不同模型服务",
+              "按配置把请求路由到目标模型",
+              "集中管理模型供应商和调用方式"
+            ],
+            "audience": "需要接入多个模型供应商或维护统一调用层的 AI 开发者",
+            "capabilities": [
+              "用统一入口连接不同模型服务",
+              "按配置把请求路由到目标模型",
+              "集中管理模型供应商和调用方式"
+            ],
+            "core_title": "统一接入并路由多个 AI 模型服务",
+            "core_summary": "用 OmniRoute 可以统一接入并路由多个 AI 模型服务，还会把模型选择和供应商配置集中管理",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "publication_evidence": {
+            "full_name": "diegosouzapw/OmniRoute",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+              "sha256": "6711b870e3d791a7d1a46ea15d0a5b263e12af0f61aede5032d8d5b86dd9c521",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.04.diegosouzapw--omniroute.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1241960226,
+          "full_name": "alibaba/open-code-review",
+          "owner": "alibaba",
+          "name": "open-code-review",
+          "html_url": "https://github.com/alibaba/open-code-review",
+          "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "language": "Go",
+          "stars": 17572,
+          "forks": 1193,
+          "open_issues": 74,
+          "watchers": 58,
+          "topics": [
+            "agent",
+            "agent-skills",
+            "code-review",
+            "code-review-assistant",
+            "harness",
+            "repository-level-context"
+          ],
+          "created_at": "2026-05-18T02:16:36Z",
+          "updated_at": "2026-08-02T05:41:16Z",
+          "pushed_at": "2026-08-01T10:09:51Z",
+          "daily_stars": null,
+          "weekly_stars": 4708,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 5,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 88.7,
+          "star_delta": 4592,
+          "fork_delta": 306,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.34,
+            "relative_growth": 94.34,
+            "fork_growth": 91.51,
+            "total_stars": 44.34,
+            "activity": 93.55,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "这类任务可以交给 open-code-review：检查代码变更并整理审查意见，并帮助团队发现问题和统一修改建议",
+            "highlights": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+            "capabilities": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "core_title": "检查代码变更并整理审查意见",
+            "core_summary": "这类任务可以交给 open-code-review：检查代码变更并整理审查意见，并帮助团队发现问题和统一修改建议",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+          "publication_evidence": {
+            "full_name": "alibaba/open-code-review",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+              "sha256": "a2c85e1294f54a6273fe91abf294668d66bc22e30ee7bd41f13a0cf64039b5b2",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.05.alibaba--open-code-review.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1212503250,
+          "full_name": "citrolabs/ego-lite",
+          "owner": "citrolabs",
+          "name": "ego-lite",
+          "html_url": "https://github.com/citrolabs/ego-lite",
+          "description": "The fastest browser for AI agents to run browser automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+          "language": "JavaScript",
+          "stars": 7437,
+          "forks": 371,
+          "open_issues": 58,
+          "watchers": 20,
+          "topics": [
+            "agent-skills",
+            "ai-agent",
+            "automation",
+            "browser",
+            "browser-automation",
+            "claude-code",
+            "codex",
+            "hermes-agent",
+            "skills",
+            "skills-sh"
+          ],
+          "created_at": "2026-04-16T12:51:09Z",
+          "updated_at": "2026-08-02T05:35:15Z",
+          "pushed_at": "2026-07-30T12:32:42Z",
+          "daily_stars": null,
+          "weekly_stars": 4090,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 3,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 87.67,
+          "star_delta": 3829,
+          "fork_delta": 195,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.4,
+            "relative_growth": 98.11,
+            "fork_growth": 87.26,
+            "total_stars": 38.68,
+            "activity": 81.87,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "当你需要把重复的开发操作整理成自动化流程，ego-lite 可以接手，同时减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "当你需要把重复的开发操作整理成自动化流程，ego-lite 可以接手，同时减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+          "publication_evidence": {
+            "full_name": "citrolabs/ego-lite",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+              "sha256": "79de0bd08dd1947fb345697bd1003816231bd21b994b339758ed4df028537e81",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.06.citrolabs--ego-lite.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1128204614,
+          "full_name": "1jehuang/jcode",
+          "owner": "1jehuang",
+          "name": "jcode",
+          "html_url": "https://github.com/1jehuang/jcode",
+          "description": "The most RAM efficient harness",
+          "language": "Rust",
+          "stars": 14998,
+          "forks": 1664,
+          "open_issues": 183,
+          "watchers": 78,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-coding-agent",
+            "claude",
+            "cli",
+            "coding-agent",
+            "llm",
+            "mcp",
+            "openai",
+            "rust",
+            "terminal",
+            "tui"
+          ],
+          "created_at": "2026-01-05T09:43:36Z",
+          "updated_at": "2026-08-02T05:39:30Z",
+          "pushed_at": "2026-08-02T04:59:48Z",
+          "daily_stars": null,
+          "weekly_stars": 3548,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 8,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 87.48,
+          "star_delta": 3506,
+          "fork_delta": 396,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 91.51,
+            "relative_growth": 93.4,
+            "fork_growth": 93.4,
+            "total_stars": 42.45,
+            "activity": 100.0,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "如果工作流里要把外部工具和数据接入支持 MCP 的模型应用，可以交给 jcode，同时用统一协议建立工具调用连接",
+            "highlights": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "capabilities": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+            "core_summary": "如果工作流里要把外部工具和数据接入支持 MCP 的模型应用，可以交给 jcode，同时用统一协议建立工具调用连接",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-f9d109b36990e5221e33d34b-b6d7ba2e6c191f04e75099a6.png",
+          "publication_evidence": {
+            "full_name": "1jehuang/jcode",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-f9d109b36990e5221e33d34b-b6d7ba2e6c191f04e75099a6.png",
+              "sha256": "0622ac379368b9428b8683e85b5692dc4bd906ebf69bfd8aea9ac1c68091a7f4",
+              "width": 420,
+              "height": 420
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.comprehensive.07.1jehuang--jcode.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W31/2026-W31.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "diegosouzapw/OmniRoute",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.01.diegosouzapw--omniroute.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.02.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "citrolabs/ego-lite",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.03.citrolabs--ego-lite.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "1jehuang/jcode",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.04.1jehuang--jcode.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.05.obra--superpowers.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.06.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W31/2026-W31.ai.07.affaan-m--ecc.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1157102282,
+          "full_name": "diegosouzapw/OmniRoute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "html_url": "https://github.com/diegosouzapw/OmniRoute",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 290+ providers (90+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+          "language": "TypeScript",
+          "stars": 37213,
+          "forks": 4820,
+          "open_issues": 528,
+          "watchers": 211,
+          "topics": [
+            "a2a",
+            "ai-agents",
+            "ai-gateway",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "cline",
+            "codex",
+            "copilot",
+            "cursor",
+            "deepseek",
+            "free-ai",
+            "gemini",
+            "kimi",
+            "llm-gateway",
+            "mcp",
+            "openai",
+            "openai-proxy",
+            "qwen",
+            "token-saver"
+          ],
+          "created_at": "2026-02-13T12:38:31Z",
+          "updated_at": "2026-08-02T05:33:04Z",
+          "pushed_at": "2026-08-02T05:32:26Z",
+          "daily_stars": null,
+          "weekly_stars": 7259,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 14,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.53,
+          "star_delta": 7015,
+          "fork_delta": 885,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 97.5,
+            "fork_growth": 97.5,
+            "total_stars": 40.0,
+            "activity": 100.0,
+            "trending_signal": 25.6
+          },
+          "summary": {
+            "one_line": "OmniRoute 可以统一接入并路由多个 AI 模型服务，同时把模型选择和供应商配置集中管理",
+            "highlights": [
+              "用统一入口连接不同模型服务",
+              "按配置把请求路由到目标模型",
+              "集中管理模型供应商和调用方式"
+            ],
+            "audience": "需要接入多个模型供应商或维护统一调用层的 AI 开发者",
+            "capabilities": [
+              "用统一入口连接不同模型服务",
+              "按配置把请求路由到目标模型",
+              "集中管理模型供应商和调用方式"
+            ],
+            "core_title": "统一接入并路由多个 AI 模型服务",
+            "core_summary": "OmniRoute 可以统一接入并路由多个 AI 模型服务，同时把模型选择和供应商配置集中管理",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+          "publication_evidence": {
+            "full_name": "diegosouzapw/OmniRoute",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-34396698721d6099e9a8e830-89a70473fd3f429e0660126f.png",
+              "sha256": "6711b870e3d791a7d1a46ea15d0a5b263e12af0f61aede5032d8d5b86dd9c521",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.ai.01.diegosouzapw--omniroute.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1241960226,
+          "full_name": "alibaba/open-code-review",
+          "owner": "alibaba",
+          "name": "open-code-review",
+          "html_url": "https://github.com/alibaba/open-code-review",
+          "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "language": "Go",
+          "stars": 17572,
+          "forks": 1193,
+          "open_issues": 74,
+          "watchers": 58,
+          "topics": [
+            "agent",
+            "agent-skills",
+            "code-review",
+            "code-review-assistant",
+            "harness",
+            "repository-level-context"
+          ],
+          "created_at": "2026-05-18T02:16:36Z",
+          "updated_at": "2026-08-02T05:41:16Z",
+          "pushed_at": "2026-08-01T10:09:51Z",
+          "daily_stars": null,
+          "weekly_stars": 4708,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 5,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.66,
+          "star_delta": 4592,
+          "fork_delta": 306,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.5,
+            "relative_growth": 95.0,
+            "fork_growth": 87.5,
+            "total_stars": 37.5,
+            "activity": 93.55,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "想要检查代码变更并整理审查意见，可以用 open-code-review；它能帮助团队发现问题和统一修改建议",
+            "highlights": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+            "capabilities": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "core_title": "检查代码变更并整理审查意见",
+            "core_summary": "想要检查代码变更并整理审查意见，可以用 open-code-review；它能帮助团队发现问题和统一修改建议",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+          "publication_evidence": {
+            "full_name": "alibaba/open-code-review",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+              "sha256": "a2c85e1294f54a6273fe91abf294668d66bc22e30ee7bd41f13a0cf64039b5b2",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.ai.02.alibaba--open-code-review.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1212503250,
+          "full_name": "citrolabs/ego-lite",
+          "owner": "citrolabs",
+          "name": "ego-lite",
+          "html_url": "https://github.com/citrolabs/ego-lite",
+          "description": "The fastest browser for AI agents to run browser automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+          "language": "JavaScript",
+          "stars": 7437,
+          "forks": 371,
+          "open_issues": 58,
+          "watchers": 20,
+          "topics": [
+            "agent-skills",
+            "ai-agent",
+            "automation",
+            "browser",
+            "browser-automation",
+            "claude-code",
+            "codex",
+            "hermes-agent",
+            "skills",
+            "skills-sh"
+          ],
+          "created_at": "2026-04-16T12:51:09Z",
+          "updated_at": "2026-08-02T05:35:15Z",
+          "pushed_at": "2026-07-30T12:32:42Z",
+          "daily_stars": null,
+          "weekly_stars": 4090,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 3,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 87.44,
+          "star_delta": 3829,
+          "fork_delta": 195,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.0,
+            "relative_growth": 100.0,
+            "fork_growth": 77.5,
+            "total_stars": 30.0,
+            "activity": 81.87,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "主要任务是把重复的开发操作整理成自动化流程；ego-lite 还能减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "主要任务是把重复的开发操作整理成自动化流程；ego-lite 还能减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+          "publication_evidence": {
+            "full_name": "citrolabs/ego-lite",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-5cf3ced4120e5cf529411de4-4c84515d8d432ac7d50b8971.png",
+              "sha256": "79de0bd08dd1947fb345697bd1003816231bd21b994b339758ed4df028537e81",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.ai.03.citrolabs--ego-lite.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1128204614,
+          "full_name": "1jehuang/jcode",
+          "owner": "1jehuang",
+          "name": "jcode",
+          "html_url": "https://github.com/1jehuang/jcode",
+          "description": "The most RAM efficient harness",
+          "language": "Rust",
+          "stars": 14998,
+          "forks": 1664,
+          "open_issues": 183,
+          "watchers": 78,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-coding-agent",
+            "claude",
+            "cli",
+            "coding-agent",
+            "llm",
+            "mcp",
+            "openai",
+            "rust",
+            "terminal",
+            "tui"
+          ],
+          "created_at": "2026-01-05T09:43:36Z",
+          "updated_at": "2026-08-02T05:39:30Z",
+          "pushed_at": "2026-08-02T04:59:48Z",
+          "daily_stars": null,
+          "weekly_stars": 3548,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 8,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 86.08,
+          "star_delta": 3506,
+          "fork_delta": 396,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 90.0,
+            "relative_growth": 92.5,
+            "fork_growth": 92.5,
+            "total_stars": 35.0,
+            "activity": 100.0,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "用 jcode 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+            "highlights": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "capabilities": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+            "core_summary": "用 jcode 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-f9d109b36990e5221e33d34b-b6d7ba2e6c191f04e75099a6.png",
+          "publication_evidence": {
+            "full_name": "1jehuang/jcode",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-f9d109b36990e5221e33d34b-b6d7ba2e6c191f04e75099a6.png",
+              "sha256": "0622ac379368b9428b8683e85b5692dc4bd906ebf69bfd8aea9ac1c68091a7f4",
+              "width": 420,
+              "height": 420
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.ai.04.1jehuang--jcode.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 264852,
+          "forks": 23648,
+          "open_issues": 317,
+          "watchers": 264852,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-08-02T05:38:21Z",
+          "pushed_at": "2026-07-31T17:52:07Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 84.48,
+          "star_delta": 3650,
+          "fork_delta": 338,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.5,
+            "relative_growth": 75.0,
+            "fork_growth": 90.0,
+            "total_stars": 97.5,
+            "activity": 93.55,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "这类任务可以交给 superpowers：给编程 Agent 提供可复用的软件开发技能，并让需求、编码和验证按固定流程推进",
+            "highlights": [
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
+            ],
+            "audience": "希望让编程 Agent 按固定方法完成研发任务的开发者",
+            "capabilities": [
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
+            ],
+            "core_title": "给编程 Agent 提供可复用的软件开发技能",
+            "core_summary": "这类任务可以交给 superpowers：给编程 Agent 提供可复用的软件开发技能，并让需求、编码和验证按固定流程推进",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+              "sha256": "1df5657cda192b0e8d047947d1dcc4170545b1c2852ee58262e69fa7f8f6b5bc",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.ai.05.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 223923,
+          "forks": 43237,
+          "open_issues": 26596,
+          "watchers": 223923,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-08-02T05:40:00Z",
+          "pushed_at": "2026-08-02T04:41:05Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 82.62,
+          "star_delta": 3359,
+          "fork_delta": 1240,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 85.0,
+            "relative_growth": 77.5,
+            "fork_growth": 100.0,
+            "total_stars": 92.5,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "当你需要搭建能够连续执行多步任务的 AI Agent，hermes-agent 可以接手，同时把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "当你需要搭建能够连续执行多步任务的 AI Agent，hermes-agent 可以接手，同时把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.ai.06.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 236864,
+          "forks": 36014,
+          "open_issues": 117,
+          "watchers": 236864,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-08-02T05:39:05Z",
+          "pushed_at": "2026-07-29T18:11:01Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 82.19,
+          "star_delta": 3467,
+          "fork_delta": 432,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 87.5,
+            "relative_growth": 80.0,
+            "fork_growth": 95.0,
+            "total_stars": 95.0,
+            "activity": 81.87,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "如果工作流里要把重复的开发操作整理成自动化流程，可以交给 ECC，同时减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "如果工作流里要把重复的开发操作整理成自动化流程，可以交给 ECC，同时减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W31/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W31/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "b96c9ae9f895df5d8bf215e1783f3cdc401e818b22cb82c16937fefc71d4e2e4",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W31/2026-W31.ai.07.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
