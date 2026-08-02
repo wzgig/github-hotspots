@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "2c94cb725a1161f73a769e04f3a8e6f8acf027435c40c54fd6a6cabc2584f336",
+  "checklist_sha256": "a5e12eb8f54bfb6505dac3e92988175a586aa76b98d1b9f80f04eae900d892c7",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-08-02",
+  "generated_at": "2026-08-02T10:05:47.410558+08:00",
+  "issue": {
+    "number": 22,
+    "code": "D022",
+    "stem": "D022-2026-08-02",
+    "label": "第22期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-08-02.json",
+    "report_sha256": "6a5afca28a0bfb362b69d89c67240e4144719e34a353b5344eb553c0c7f5322e",
+    "poster_manifest": "reports/daily/assets/2026-08-02/manifest.json",
+    "poster_manifest_sha256": "3f97cfe066bf428b0405fc6b25c79412a7612c1930d3abaede05f857bf9c9632",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D022-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "48c7a544bec1281b44eed12f613fd6cd8924eed237fdeddcdb1c27ee67460ec9",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 360,
+      "caption_sha256": "b79cb60d87cdd40741b9269929583960e3ba32105b2f52b4ad05d5425ee31c16",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "4b16535beb62bf0d0df37184b482e98a5e615a5f55de6dbb1f6d5a1cbcd903f9",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-02/2026-08-02.comprehensive.cover.png",
+          "sha256": "e8cdc5bd736b2a0c00d8978004c3e29e34d8442924171f4c7704f60f7aee2b13",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-02/2026-08-02.comprehensive.01.nousresearch--hermes-agent.png",
+          "sha256": "e03b2fc22882b8d0f471bf5df3919c6f4da956505f02d2da7b3254b0424ae620",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/02-rank-01-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-02/2026-08-02.comprehensive.02.microsoft--ai-for-beginners.png",
+          "sha256": "aa0800ee27f7d75d37caa8a1d3d940e2d0c0cd3ab62995d068d12a83f2413280",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "microsoft/AI-For-Beginners",
+          "publication_path": "images/03-rank-02-microsoft-ai-for-beginners.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-02/2026-08-02.comprehensive.03.anomalyco--opencode.png",
+          "sha256": "e043c7f60fd187cdb7c3b204137829be8cc2a27d0d997cddcd7e392869b0eef7",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "anomalyco/opencode",
+          "publication_path": "images/04-rank-03-anomalyco-opencode.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D022-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "0bf30b1b0464855544d5f79fddb2e82209ed6aa14de2f48da2309266c0831541",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 407,
+      "caption_sha256": "36601d4ff94e1b19f2b16b94055455e73419cebf39b2d0a84e89f90fd5605710",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "ba950b46e589700074c52a733dbfb69b7123b83932526ec495195d890ebcf3ab",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-02/2026-08-02.ai.cover.png",
+          "sha256": "24930202311830d4c966f8a7dabc7b816493939913f2a011ed14cb3cdccbbda5",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-02/2026-08-02.ai.01.nousresearch--hermes-agent.png",
+          "sha256": "5087e1498091ff1518f5a5ac21303f3bd4ddf6f751091636705084671d22f146",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/02-rank-01-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-02/2026-08-02.ai.02.microsoft--ai-for-beginners.png",
+          "sha256": "8e88c345181c8a20bc56827fc7cb94b6bd800d4cf93f362506aed32f706f567d",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "microsoft/AI-For-Beginners",
+          "publication_path": "images/03-rank-02-microsoft-ai-for-beginners.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-02/2026-08-02.ai.03.microsoft--generative-ai-for-beginners.png",
+          "sha256": "b61ddae76c6df5c3e70a42d5586acc695b76c4874e156e37fde916bece2ab3c7",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "microsoft/generative-ai-for-beginners",
+          "publication_path": "images/04-rank-03-microsoft-generative-ai-for-beginners.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-08-02",
+    "revision": "2c94cb725a11",
+    "image_policy": "repository-source-reference"
+  }
+}
