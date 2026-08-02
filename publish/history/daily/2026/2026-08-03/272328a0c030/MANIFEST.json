@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "272328a0c030d62739f6dfb058ee1fb482ee9e4ec6eab76c703155299a8bcc35",
+  "checklist_sha256": "9b37dcb6061598188b94928c627c5e7e0db694e04e91c198994d4f9e20e8f359",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-08-03",
+  "generated_at": "2026-08-03T07:32:21.205677+08:00",
+  "issue": {
+    "number": 23,
+    "code": "D023",
+    "stem": "D023-2026-08-03",
+    "label": "第23期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-08-03.json",
+    "report_sha256": "11ccaee31e3820eddb8d87989180cea93584c596abf9f2b262c20701f4eb3e07",
+    "poster_manifest": "reports/daily/assets/2026-08-03/manifest.json",
+    "poster_manifest_sha256": "bcb1a27876178f118b15c8b1f9a2e5a9e8a9c56d8356e48eb6147e260a872dee",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D023-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "637d6887064b2490b37b8a286c4d8a54f9bcf35682b503b5a4828da55487277b",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 374,
+      "caption_sha256": "bb5894f2c1af569b2263ec55b90e85a6d8a5a814da5abb5a3766a9d4e739c084",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "5661c94cdf0b1873ba97091472af899ce7316b1a399e73f3468c6f7e4689789b",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-03/2026-08-03.comprehensive.cover.png",
+          "sha256": "33f684d182883c3a1ad9282c502f8a97738ada5b67da2542503e263c2f12f941",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-03/2026-08-03.comprehensive.01.microsoft--ai-for-beginners.png",
+          "sha256": "06c6fdc83d1c7e215bf0d9f330de5f33375ad6d933d7b0c5fda3babb14d9ffac",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "microsoft/AI-For-Beginners",
+          "publication_path": "images/02-rank-01-microsoft-ai-for-beginners.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-03/2026-08-03.comprehensive.02.nousresearch--hermes-agent.png",
+          "sha256": "aef0b7951a68fa2f1db69775c8628c8be3da45980528324b504aba93c0ad4949",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/03-rank-02-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-03/2026-08-03.comprehensive.03.zhaoxuya520--reverse-skill.png",
+          "sha256": "8bb2c4a3c52b2d9c90b878ffdf226bc85f251bade7e9372becb9c5ab2879d93d",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "zhaoxuya520/reverse-skill",
+          "publication_path": "images/04-rank-03-zhaoxuya520-reverse-skill.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D023-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "ef5db5dceaf77f13cf24ca6fb55c8ba6f2ba77e10151be8f4d1f915d9fb032ac",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 369,
+      "caption_sha256": "29511fb4db571b6a9e79748bf22291dbc2225d3ca6135cc723762f7667bdeae8",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "4a011850e161366ef73a6a2b18a1f64c297b80f0af859603e6166e9273b5172b",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-03/2026-08-03.ai.cover.png",
+          "sha256": "53f4af0d1d6beec2bfd7c6b661f9b8c03a536a2c614b67d1ac0f51defa99457c",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-03/2026-08-03.ai.01.microsoft--ai-for-beginners.png",
+          "sha256": "8616b20e64a70425e793323cb0af9b927bbfd0a221b5f5a29b1637ca69dd9628",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "microsoft/AI-For-Beginners",
+          "publication_path": "images/02-rank-01-microsoft-ai-for-beginners.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-03/2026-08-03.ai.02.zhaoxuya520--reverse-skill.png",
+          "sha256": "7daec0faef9a151fca1054ecf539f3cde6088fc91598d16035cf396bbd7b2fb6",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "zhaoxuya520/reverse-skill",
+          "publication_path": "images/03-rank-02-zhaoxuya520-reverse-skill.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-03/2026-08-03.ai.03.nousresearch--hermes-agent.png",
+          "sha256": "c1c653b73c34cb388aa10776c37cd4a054eee6ebf1e8ee804dbace5c054f49cc",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/04-rank-03-nousresearch-hermes-agent.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-08-03",
+    "revision": "272328a0c030",
+    "image_policy": "repository-source-reference"
+  }
+}
