@@ -1,0 +1,1448 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-05",
+  "window_start": "2026-08-04",
+  "window_end": "2026-08-05",
+  "generated_at": "2026-08-05T07:31:12+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-04 至 2026-08-05",
+  "publication": {
+    "issue_number": 25,
+    "issue_code": "D025",
+    "issue_label": "第25期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-05",
+    "manifest": "reports/daily/assets/2026-08-05/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "firecrawl/pdf-inspector",
+            "path": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.01.firecrawl--pdf-inspector.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "zhaoxuya520/reverse-skill",
+            "path": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.02.zhaoxuya520--reverse-skill.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.03.mattpocock--skills.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-05/2026-08-05.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "zhaoxuya520/reverse-skill",
+            "path": "reports/daily/assets/2026-08-05/2026-08-05.ai.01.zhaoxuya520--reverse-skill.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "TencentCloud/TencentDB-Agent-Memory",
+            "path": "reports/daily/assets/2026-08-05/2026-08-05.ai.02.tencentcloud--tencentdb-agent-memory.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "esengine/DeepSeek-Reasonix",
+            "path": "reports/daily/assets/2026-08-05/2026-08-05.ai.03.esengine--deepseek-reasonix.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 25,
+      "issue_code": "D025",
+      "issue_label": "第25期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1151702019,
+      "full_name": "firecrawl/pdf-inspector",
+      "owner": "firecrawl",
+      "name": "pdf-inspector",
+      "html_url": "https://github.com/firecrawl/pdf-inspector",
+      "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+      "language": "Rust",
+      "stars": 9943,
+      "forks": 654,
+      "open_issues": 71,
+      "watchers": 26,
+      "topics": [
+        "markdown",
+        "nodejs",
+        "ocr-routing",
+        "pdf",
+        "pdf-classification",
+        "pdf-extraction",
+        "pdf-parser",
+        "python",
+        "rust",
+        "text-extraction"
+      ],
+      "created_at": "2026-02-06T19:44:47Z",
+      "updated_at": "2026-08-04T23:29:03Z",
+      "pushed_at": "2026-08-04T23:22:25Z",
+      "daily_stars": 2524,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 91.87,
+      "star_delta": 1845,
+      "fork_delta": 116,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.61,
+        "relative_growth": 100.0,
+        "fork_growth": 94.44,
+        "total_stars": 12.5,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "先判断 PDF 是否需要 OCR，再把原生文本、表格和版面转成结构化 Markdown",
+        "highlights": [
+          "区分文本型、扫描型、图像型和混合型 PDF",
+          "按页面标记是否需要转入 OCR 流程",
+          "保留阅读顺序、表格和多栏版面结构"
+        ],
+        "audience": "需要在文档处理流程中筛选 OCR 任务，或提取报告、论文、发票等原生文本 PDF 的开发者",
+        "capabilities": [
+          "检测 PDF 类型并返回置信度",
+          "提取带坐标和字体信息的文本",
+          "还原多栏内容的顺序与从右到左文本",
+          "识别表格并转换为 Markdown",
+          "通过 Rust、Python、Node.js、浏览器或命令行调用"
+        ],
+        "core_title": "按页分流 OCR 的 PDF 解析",
+        "core_summary": "它先检查页面内容流，判断哪些页已有文本、哪些页需要 OCR；可直接解析的部分再经过版面、表格和 Markdown 流程，避免所有文档都走 OCR。",
+        "prerequisites": "按使用方式准备 Rust、Python、Node.js 或浏览器环境；Python 源码安装需 maturin。",
+        "limitations": "不执行 OCR；扫描件、图像型 PDF 或编码异常页面需要交给外部 OCR 流程。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "a30034a8f467b5ce29d8125d74c5abcfef44c846",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+          ],
+          "highlights": [
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ],
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ],
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ]
+          ],
+          "audience": [
+            "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+          ],
+          "capabilities": [
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ],
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ],
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ],
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ],
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ]
+          ],
+          "core_title": [
+            "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+          ],
+          "core_summary": [
+            "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+          ],
+          "prerequisites": [
+            "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+          ],
+          "limitations": [
+            "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-05/repo-c825ee9d58b96347f00fa156-fdf2800b65e3922669c3a0d8.png",
+      "publication_evidence": {
+        "full_name": "firecrawl/pdf-inspector",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "a30034a8f467b5ce29d8125d74c5abcfef44c846",
+          "source_url": "https://api.github.com/repos/firecrawl/pdf-inspector/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-05/repo-c825ee9d58b96347f00fa156-fdf2800b65e3922669c3a0d8.png",
+          "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.01.firecrawl--pdf-inspector.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1237819660,
+      "full_name": "zhaoxuya520/reverse-skill",
+      "owner": "zhaoxuya520",
+      "name": "reverse-skill",
+      "html_url": "https://github.com/zhaoxuya520/reverse-skill",
+      "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+      "language": "PowerShell",
+      "stars": 17799,
+      "forks": 2446,
+      "open_issues": 15,
+      "watchers": 70,
+      "topics": [],
+      "created_at": "2026-05-13T14:37:57Z",
+      "updated_at": "2026-08-04T23:30:10Z",
+      "pushed_at": "2026-08-04T02:46:28Z",
+      "daily_stars": 2310,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 90.88,
+      "star_delta": 2136,
+      "fork_delta": 235,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 98.61,
+        "fork_growth": 100.0,
+        "total_stars": 16.67,
+        "activity": 71.65,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "把逆向、安全研究和授权测试任务路由到对应方法、工具与留证流程",
+        "highlights": [
+          "按 APK、二进制、前端加密等场景选择技能",
+          "检查本机工具并按平台刷新工具索引",
+          "用时间线和证据链整理发现与报告"
+        ],
+        "audience": "使用代码 AI 客户端处理授权逆向、安全研究、CTF 或渗透测试，并需要统一工作流程的人员",
+        "capabilities": [
+          "判断任务类型并匹配对应技能目录",
+          "初始化包含授权范围和网络配置的案例",
+          "检查并索引本机可用工具",
+          "编排 APK、二进制、恶意软件等分析流程",
+          "记录时间线、证据、发现和报告"
+        ],
+        "core_title": "先过授权范围再路由工具",
+        "core_summary": "任务先经过全局规则和案例初始化，确认授权范围与网络配置后，再进入场景技能、工具和脚本；过程持续记录时间线与证据链，减少临时猜命令。",
+        "prerequisites": "需 Java/JDK、Node.js 22.12+、Python 3.x，以及 Claude Code、Codex CLI、Cursor 等代码 AI 客户端。",
+        "limitations": "在授权范围和网络配置就绪前不得对目标执行操作；集成工具仍受各自许可证约束。",
+        "license_label": "MIT",
+        "license_restrictions": "**CTF-Sandbox-Orchestrator/**: **GNU GPLv3**",
+        "readme_sha": "78bd600b6cf6193709aa9dbf11cbe1246bccb8cc",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+          ],
+          "highlights": [
+            [
+              "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+            ],
+            [
+              "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+            ],
+            [
+              "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+            ]
+          ],
+          "audience": [
+            "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+          ],
+          "capabilities": [
+            [
+              "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+            ],
+            [
+              "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+            ],
+            [
+              "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+            ],
+            [
+              "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+            ],
+            [
+              "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+            ]
+          ],
+          "core_title": [
+            "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+          ],
+          "core_summary": [
+            "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+          ],
+          "prerequisites": [
+            "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+          ],
+          "limitations": [
+            "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-08-05/repo-f4dc3559b402536575568945-c5507509488cf2425afdb0d1.png",
+      "publication_evidence": {
+        "full_name": "zhaoxuya520/reverse-skill",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "78bd600b6cf6193709aa9dbf11cbe1246bccb8cc",
+          "source_url": "https://api.github.com/repos/zhaoxuya520/reverse-skill/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-05/repo-f4dc3559b402536575568945-c5507509488cf2425afdb0d1.png",
+          "sha256": "8373011a6e43c0f50d7423187fc6ab3628b4f5b961b2950ccdae7e27dec9aa41",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.02.zhaoxuya520--reverse-skill.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 203209,
+      "forks": 17540,
+      "open_issues": 280,
+      "watchers": 203209,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-08-04T23:30:02Z",
+      "pushed_at": "2026-08-04T19:25:42Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 90.48,
+      "star_delta": 1746,
+      "fork_delta": 180,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.22,
+        "relative_growth": 88.89,
+        "fork_growth": 97.22,
+        "total_stars": 87.5,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "给代码 AI 加上一组可组合的工程技能，用于澄清需求、测试、调试和控制代码复杂度",
+        "highlights": [
+          "先用追问流程对齐需求和设计选择",
+          "以测试驱动和诊断循环提供运行反馈",
+          "把规格、工单、实现与代码审查串成流程"
+        ],
+        "audience": "希望保留工程决策控制权，并让 Claude Code、Codex 等代理按可检查流程完成开发任务的团队和个人",
+        "capabilities": [
+          "追问需求并补齐未决分支",
+          "建立项目术语、上下文和架构决策记录",
+          "把对话整理成规格和可阻塞工单",
+          "按红绿重构循环实现与测试代码",
+          "诊断缺陷并从复现推进到回归测试"
+        ],
+        "core_title": "小技能组合成工程闭环",
+        "core_summary": "每项技能聚焦一个工程环节，可由用户调用或由模型按任务匹配；需求澄清、领域建模、规格拆分、测试实现和代码审查可以按需组合，而非由单套流程接管项目。",
+        "prerequisites": "需使用 Claude Code 插件或 skills.sh 安装；每个仓库首次使用前运行 /setup-matt-pocock-skills。",
+        "limitations": "两种安装方式不要同时使用，否则每项技能会重复；Claude Code 插件为托管只读包，skills.sh 版本可自行编辑。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "eb26335f5ad16adc027ddac412c255f952099f08",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "highlights": [
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ]
+          ],
+          "audience": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "capabilities": [
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ],
+            [
+              "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+            ]
+          ],
+          "core_title": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "core_summary": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "prerequisites": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "limitations": [
+            "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-05/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "eb26335f5ad16adc027ddac412c255f952099f08",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-05/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.03.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "firecrawl/pdf-inspector",
+            "path": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.01.firecrawl--pdf-inspector.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "zhaoxuya520/reverse-skill",
+            "path": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.02.zhaoxuya520--reverse-skill.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.03.mattpocock--skills.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1151702019,
+          "full_name": "firecrawl/pdf-inspector",
+          "owner": "firecrawl",
+          "name": "pdf-inspector",
+          "html_url": "https://github.com/firecrawl/pdf-inspector",
+          "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+          "language": "Rust",
+          "stars": 9943,
+          "forks": 654,
+          "open_issues": 71,
+          "watchers": 26,
+          "topics": [
+            "markdown",
+            "nodejs",
+            "ocr-routing",
+            "pdf",
+            "pdf-classification",
+            "pdf-extraction",
+            "pdf-parser",
+            "python",
+            "rust",
+            "text-extraction"
+          ],
+          "created_at": "2026-02-06T19:44:47Z",
+          "updated_at": "2026-08-04T23:29:03Z",
+          "pushed_at": "2026-08-04T23:22:25Z",
+          "daily_stars": 2524,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.87,
+          "star_delta": 1845,
+          "fork_delta": 116,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.61,
+            "relative_growth": 100.0,
+            "fork_growth": 94.44,
+            "total_stars": 12.5,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "先判断 PDF 是否需要 OCR，再把原生文本、表格和版面转成结构化 Markdown",
+            "highlights": [
+              "区分文本型、扫描型、图像型和混合型 PDF",
+              "按页面标记是否需要转入 OCR 流程",
+              "保留阅读顺序、表格和多栏版面结构"
+            ],
+            "audience": "需要在文档处理流程中筛选 OCR 任务，或提取报告、论文、发票等原生文本 PDF 的开发者",
+            "capabilities": [
+              "检测 PDF 类型并返回置信度",
+              "提取带坐标和字体信息的文本",
+              "还原多栏内容的顺序与从右到左文本",
+              "识别表格并转换为 Markdown",
+              "通过 Rust、Python、Node.js、浏览器或命令行调用"
+            ],
+            "core_title": "按页分流 OCR 的 PDF 解析",
+            "core_summary": "它先检查页面内容流，判断哪些页已有文本、哪些页需要 OCR；可直接解析的部分再经过版面、表格和 Markdown 流程，避免所有文档都走 OCR。",
+            "prerequisites": "按使用方式准备 Rust、Python、Node.js 或浏览器环境；Python 源码安装需 maturin。",
+            "limitations": "不执行 OCR；扫描件、图像型 PDF 或编码异常页面需要交给外部 OCR 流程。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "a30034a8f467b5ce29d8125d74c5abcfef44c846",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+              ],
+              "highlights": [
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ],
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ],
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ]
+              ],
+              "audience": [
+                "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ],
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ],
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ],
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ],
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ]
+              ],
+              "core_title": [
+                "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+              ],
+              "core_summary": [
+                "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+              ],
+              "prerequisites": [
+                "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+              ],
+              "limitations": [
+                "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-05/repo-c825ee9d58b96347f00fa156-fdf2800b65e3922669c3a0d8.png",
+          "publication_evidence": {
+            "full_name": "firecrawl/pdf-inspector",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "a30034a8f467b5ce29d8125d74c5abcfef44c846",
+              "source_url": "https://api.github.com/repos/firecrawl/pdf-inspector/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-05/repo-c825ee9d58b96347f00fa156-fdf2800b65e3922669c3a0d8.png",
+              "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.01.firecrawl--pdf-inspector.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1237819660,
+          "full_name": "zhaoxuya520/reverse-skill",
+          "owner": "zhaoxuya520",
+          "name": "reverse-skill",
+          "html_url": "https://github.com/zhaoxuya520/reverse-skill",
+          "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+          "language": "PowerShell",
+          "stars": 17799,
+          "forks": 2446,
+          "open_issues": 15,
+          "watchers": 70,
+          "topics": [],
+          "created_at": "2026-05-13T14:37:57Z",
+          "updated_at": "2026-08-04T23:30:10Z",
+          "pushed_at": "2026-08-04T02:46:28Z",
+          "daily_stars": 2310,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 90.88,
+          "star_delta": 2136,
+          "fork_delta": 235,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 98.61,
+            "fork_growth": 100.0,
+            "total_stars": 16.67,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把逆向、安全研究和授权测试任务路由到对应方法、工具与留证流程",
+            "highlights": [
+              "按 APK、二进制、前端加密等场景选择技能",
+              "检查本机工具并按平台刷新工具索引",
+              "用时间线和证据链整理发现与报告"
+            ],
+            "audience": "使用代码 AI 客户端处理授权逆向、安全研究、CTF 或渗透测试，并需要统一工作流程的人员",
+            "capabilities": [
+              "判断任务类型并匹配对应技能目录",
+              "初始化包含授权范围和网络配置的案例",
+              "检查并索引本机可用工具",
+              "编排 APK、二进制、恶意软件等分析流程",
+              "记录时间线、证据、发现和报告"
+            ],
+            "core_title": "先过授权范围再路由工具",
+            "core_summary": "任务先经过全局规则和案例初始化，确认授权范围与网络配置后，再进入场景技能、工具和脚本；过程持续记录时间线与证据链，减少临时猜命令。",
+            "prerequisites": "需 Java/JDK、Node.js 22.12+、Python 3.x，以及 Claude Code、Codex CLI、Cursor 等代码 AI 客户端。",
+            "limitations": "在授权范围和网络配置就绪前不得对目标执行操作；集成工具仍受各自许可证约束。",
+            "license_label": "MIT",
+            "license_restrictions": "**CTF-Sandbox-Orchestrator/**: **GNU GPLv3**",
+            "readme_sha": "78bd600b6cf6193709aa9dbf11cbe1246bccb8cc",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ],
+              "highlights": [
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ],
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ],
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ]
+              ],
+              "audience": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ],
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ],
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ],
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ],
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ]
+              ],
+              "core_title": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ],
+              "core_summary": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ],
+              "prerequisites": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ],
+              "limitations": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-08-05/repo-f4dc3559b402536575568945-c5507509488cf2425afdb0d1.png",
+          "publication_evidence": {
+            "full_name": "zhaoxuya520/reverse-skill",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "78bd600b6cf6193709aa9dbf11cbe1246bccb8cc",
+              "source_url": "https://api.github.com/repos/zhaoxuya520/reverse-skill/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-05/repo-f4dc3559b402536575568945-c5507509488cf2425afdb0d1.png",
+              "sha256": "8373011a6e43c0f50d7423187fc6ab3628b4f5b961b2950ccdae7e27dec9aa41",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.02.zhaoxuya520--reverse-skill.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 203209,
+          "forks": 17540,
+          "open_issues": 280,
+          "watchers": 203209,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-08-04T23:30:02Z",
+          "pushed_at": "2026-08-04T19:25:42Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 90.48,
+          "star_delta": 1746,
+          "fork_delta": 180,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.22,
+            "relative_growth": 88.89,
+            "fork_growth": 97.22,
+            "total_stars": 87.5,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "给代码 AI 加上一组可组合的工程技能，用于澄清需求、测试、调试和控制代码复杂度",
+            "highlights": [
+              "先用追问流程对齐需求和设计选择",
+              "以测试驱动和诊断循环提供运行反馈",
+              "把规格、工单、实现与代码审查串成流程"
+            ],
+            "audience": "希望保留工程决策控制权，并让 Claude Code、Codex 等代理按可检查流程完成开发任务的团队和个人",
+            "capabilities": [
+              "追问需求并补齐未决分支",
+              "建立项目术语、上下文和架构决策记录",
+              "把对话整理成规格和可阻塞工单",
+              "按红绿重构循环实现与测试代码",
+              "诊断缺陷并从复现推进到回归测试"
+            ],
+            "core_title": "小技能组合成工程闭环",
+            "core_summary": "每项技能聚焦一个工程环节，可由用户调用或由模型按任务匹配；需求澄清、领域建模、规格拆分、测试实现和代码审查可以按需组合，而非由单套流程接管项目。",
+            "prerequisites": "需使用 Claude Code 插件或 skills.sh 安装；每个仓库首次使用前运行 /setup-matt-pocock-skills。",
+            "limitations": "两种安装方式不要同时使用，否则每项技能会重复；Claude Code 插件为托管只读包，skills.sh 版本可自行编辑。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "eb26335f5ad16adc027ddac412c255f952099f08",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "highlights": [
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ]
+              ],
+              "audience": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ],
+                [
+                  "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+                ]
+              ],
+              "core_title": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "core_summary": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "prerequisites": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "limitations": [
+                "github.readme:eb26335f5ad16adc027ddac412c255f952099f08"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-05/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "eb26335f5ad16adc027ddac412c255f952099f08",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-05/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.03.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-05/2026-08-05.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "zhaoxuya520/reverse-skill",
+            "path": "reports/daily/assets/2026-08-05/2026-08-05.ai.01.zhaoxuya520--reverse-skill.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "TencentCloud/TencentDB-Agent-Memory",
+            "path": "reports/daily/assets/2026-08-05/2026-08-05.ai.02.tencentcloud--tencentdb-agent-memory.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "esengine/DeepSeek-Reasonix",
+            "path": "reports/daily/assets/2026-08-05/2026-08-05.ai.03.esengine--deepseek-reasonix.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1237819660,
+          "full_name": "zhaoxuya520/reverse-skill",
+          "owner": "zhaoxuya520",
+          "name": "reverse-skill",
+          "html_url": "https://github.com/zhaoxuya520/reverse-skill",
+          "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+          "language": "PowerShell",
+          "stars": 17799,
+          "forks": 2446,
+          "open_issues": 15,
+          "watchers": 70,
+          "topics": [],
+          "created_at": "2026-05-13T14:37:57Z",
+          "updated_at": "2026-08-04T23:30:10Z",
+          "pushed_at": "2026-08-04T02:46:28Z",
+          "daily_stars": 2310,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.35,
+          "star_delta": 2136,
+          "fork_delta": 235,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 20.69,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "为代码 AI 分派逆向与授权安全任务，检查本地工具后按场景执行可复用流程",
+            "highlights": [
+              "先核对授权范围和网络条件，再接触目标",
+              "按 APK、二进制、前端加密等场景分派技能",
+              "串联时间线、证据、发现与报告"
+            ],
+            "audience": "需要让代码 AI 协助逆向分析、授权渗透、CTF 或安全研究，并希望流程可复查的使用者",
+            "capabilities": [
+              "识别任务类型并选择对应分析方法",
+              "检查本机可用工具并刷新工具索引",
+              "初始化案件目录、范围、时间线和工作项",
+              "调用场景技能、脚本或 MCP 工具",
+              "整理证据链、发现路径和分析报告"
+            ],
+            "core_title": "先过范围门，再路由工具",
+            "core_summary": "任务先经过全局规则和范围检查，确认授权与网络条件后，再由主路由选择场景技能和工具；过程同步记录时间线、证据链与发现，减少临时猜命令和重复踩坑。",
+            "prerequisites": "需准备 Java / JDK、Node.js 22.12+、Python 3.x，以及一个代码 AI 客户端。",
+            "limitations": "必须先确认授权范围和网络配置；范围未就绪前不得对目标执行操作。",
+            "license_label": "MIT",
+            "license_restrictions": "This repo only invokes it via CLI or MCP and does not include its source code",
+            "readme_sha": "78bd600b6cf6193709aa9dbf11cbe1246bccb8cc",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ],
+              "highlights": [
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ],
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ],
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ]
+              ],
+              "audience": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ],
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ],
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ],
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ],
+                [
+                  "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+                ]
+              ],
+              "core_title": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ],
+              "core_summary": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ],
+              "prerequisites": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ],
+              "limitations": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id",
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ],
+              "license_restrictions": [
+                "github.readme:78bd600b6cf6193709aa9dbf11cbe1246bccb8cc"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-08-05/repo-f4dc3559b402536575568945-c5507509488cf2425afdb0d1.png",
+          "publication_evidence": {
+            "full_name": "zhaoxuya520/reverse-skill",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "78bd600b6cf6193709aa9dbf11cbe1246bccb8cc",
+              "source_url": "https://api.github.com/repos/zhaoxuya520/reverse-skill/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-05/repo-f4dc3559b402536575568945-c5507509488cf2425afdb0d1.png",
+              "sha256": "8373011a6e43c0f50d7423187fc6ab3628b4f5b961b2950ccdae7e27dec9aa41",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-05/2026-08-05.ai.01.zhaoxuya520--reverse-skill.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1203558071,
+          "full_name": "TencentCloud/TencentDB-Agent-Memory",
+          "owner": "TencentCloud",
+          "name": "TencentDB-Agent-Memory",
+          "html_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+          "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+          "language": "TypeScript",
+          "stars": 13517,
+          "forks": 1271,
+          "open_issues": 503,
+          "watchers": 51,
+          "topics": [
+            "agent",
+            "ai-agent",
+            "embedding",
+            "llm",
+            "local-first",
+            "long-term-memory",
+            "memory",
+            "openclaw-plugin",
+            "vector-search"
+          ],
+          "created_at": "2026-04-07T06:34:26Z",
+          "updated_at": "2026-08-04T23:29:45Z",
+          "pushed_at": "2026-08-03T12:49:18Z",
+          "daily_stars": 1138,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 87.89,
+          "star_delta": 1480,
+          "fork_delta": 132,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.55,
+            "relative_growth": 96.55,
+            "fork_growth": 93.1,
+            "total_stars": 17.24,
+            "activity": 51.34,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把对话、文档和代码沉淀为团队记忆资产，让不同 Agent 接续已有经验工作",
+            "highlights": [
+              "从对话和任务中提取记忆与可复用技能",
+              "把文档和代码整理成知识页与调用关系图",
+              "按成员、角色和 Agent 控制共享范围"
+            ],
+            "audience": "适合需要跨会话复用项目背景、共享团队工作方法，或为多个 Agent 分配不同知识资产的团队",
+            "capabilities": [
+              "提取对话中的事实、偏好和决策",
+              "沉淀带版本与验证规则的工作技能",
+              "生成带链接关系的文档知识页",
+              "索引代码符号、调用关系和影响路径",
+              "审核、共享并绑定各类记忆资产"
+            ],
+            "core_title": "给 Agent 团队装载经验",
+            "core_summary": "系统把对话、流程、文档和代码整理成 Chat Memory、Skill、Wiki 与 CodeGraph，再通过权限和固定绑定分配给不同 Agent，使新会话能从已有背景和方法继续推进。",
+            "prerequisites": "安装时需复制 .env.example，并填写记忆组和代理组的 LLM 参数。",
+            "limitations": "Wiki 和 CodeGraph 异步构建；代码图优先支持公开 HTTPS 仓库，私有仓库、自动记忆路由和更多框架迁移仍在完善。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "39d45a164ce2fe4e4e54de2bef732e4307452fbb",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "highlights": [
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ],
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ],
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ]
+              ],
+              "audience": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ],
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ],
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ],
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ],
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ]
+              ],
+              "core_title": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "core_summary": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "prerequisites": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "limitations": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "license_label": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-05/repo-7b9648c3c194c2f6986fc7d9-a8d555392c2ce01999f093bf.png",
+          "publication_evidence": {
+            "full_name": "TencentCloud/TencentDB-Agent-Memory",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "39d45a164ce2fe4e4e54de2bef732e4307452fbb",
+              "source_url": "https://api.github.com/repos/TencentCloud/TencentDB-Agent-Memory/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-05/repo-7b9648c3c194c2f6986fc7d9-a8d555392c2ce01999f093bf.png",
+              "sha256": "222090589c7f9de18dc9b3b7643063d0ba78f1c11b18359cbef1707bda9302ea",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-05/2026-08-05.ai.02.tencentcloud--tencentdb-agent-memory.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1216785679,
+          "full_name": "esengine/DeepSeek-Reasonix",
+          "owner": "esengine",
+          "name": "DeepSeek-Reasonix",
+          "html_url": "https://github.com/esengine/DeepSeek-Reasonix",
+          "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+          "language": "Go",
+          "stars": 30746,
+          "forks": 1980,
+          "open_issues": 757,
+          "watchers": 80,
+          "topics": [
+            "agent",
+            "agent-framework",
+            "ai-agent",
+            "ai-coding",
+            "cli",
+            "coding-agent",
+            "deepseek",
+            "developer-tools",
+            "ink",
+            "llm",
+            "prompt-caching",
+            "r1",
+            "terminal",
+            "tool-use",
+            "tui",
+            "typescript"
+          ],
+          "created_at": "2026-04-21T08:27:02Z",
+          "updated_at": "2026-08-04T23:25:38Z",
+          "pushed_at": "2026-08-04T21:55:01Z",
+          "daily_stars": 924,
+          "weekly_stars": null,
+          "trending_rank_daily": 17,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 81.2,
+          "star_delta": 863,
+          "fork_delta": 62,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 86.21,
+            "relative_growth": 86.21,
+            "fork_growth": 82.76,
+            "total_stars": 27.59,
+            "activity": 100.0,
+            "trending_signal": 23.98
+          },
+          "summary": {
+            "one_line": "在终端、桌面或编辑器中运行 AI 编程任务，并用稳定上下文减少长会话的重复消耗",
+            "highlights": [
+              "通过配置切换模型、工具和插件",
+              "让执行模型与规划模型分开协作",
+              "裁剪旧工具输出并压缩会话上下文"
+            ],
+            "audience": "适合希望在终端持续处理代码任务，或把同一本地编程 Agent 接入桌面端和 VS Code 的开发者",
+            "capabilities": [
+              "配置兼容接口的模型服务",
+              "组合规划模型与执行模型",
+              "通过 JSON-RPC 子进程接入外部工具",
+              "在终端运行交互或单次编码任务",
+              "从检查点恢复并管理长会话上下文"
+            ],
+            "core_title": "围绕缓存维护长会话",
+            "core_summary": "Reasonix 用稳定的环境摘要和分离的模型会话保持前缀缓存，并在上下文变旧时裁剪工具输出、压缩摘要；模型、工具和插件都由配置声明，便于替换和组合。",
+            "prerequisites": "需先配置模型服务商和模型；VS Code 扩展还需安装本地 CLI，并启动 reasonix acp 后端。",
+            "limitations": "VS Code 扩展不内置 CLI；桌面端与扩展依赖同一本地 Reasonix 引擎。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "237f28466a09cebcc65cd6cd7b331e176295b9dc",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+              ],
+              "highlights": [
+                [
+                  "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+                ],
+                [
+                  "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+                ],
+                [
+                  "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+                ]
+              ],
+              "audience": [
+                "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+                ],
+                [
+                  "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+                ],
+                [
+                  "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+                ],
+                [
+                  "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+                ],
+                [
+                  "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+                ]
+              ],
+              "core_title": [
+                "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+              ],
+              "core_summary": [
+                "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+              ],
+              "prerequisites": [
+                "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+              ],
+              "limitations": [
+                "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id",
+                "github.readme:237f28466a09cebcc65cd6cd7b331e176295b9dc"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-05/repo-774164437b893d8e612d66b3-d126bc848de8332c2c1be129.png",
+          "publication_evidence": {
+            "full_name": "esengine/DeepSeek-Reasonix",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "237f28466a09cebcc65cd6cd7b331e176295b9dc",
+              "source_url": "https://api.github.com/repos/esengine/DeepSeek-Reasonix/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-05/repo-774164437b893d8e612d66b3-d126bc848de8332c2c1be129.png",
+              "sha256": "afa9ca71a576f48857489e6c1657892001055f00010fdccfd31d1e7ce6c15c41",
+              "width": 422,
+              "height": 422
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-05/2026-08-05.ai.03.esengine--deepseek-reasonix.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}

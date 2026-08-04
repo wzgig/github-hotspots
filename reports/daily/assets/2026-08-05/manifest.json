@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-08-05",
+  "window": {
+    "start": "2026-08-04",
+    "end": "2026-08-05"
+  },
+  "source_report": "reports/daily/2026-08-05.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-08-05",
+  "manifest": "reports/daily/assets/2026-08-05/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "firecrawl/pdf-inspector",
+          "path": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.01.firecrawl--pdf-inspector.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "zhaoxuya520/reverse-skill",
+          "path": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.02.zhaoxuya520--reverse-skill.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "mattpocock/skills",
+          "path": "reports/daily/assets/2026-08-05/2026-08-05.comprehensive.03.mattpocock--skills.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-05/2026-08-05.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "zhaoxuya520/reverse-skill",
+          "path": "reports/daily/assets/2026-08-05/2026-08-05.ai.01.zhaoxuya520--reverse-skill.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "TencentCloud/TencentDB-Agent-Memory",
+          "path": "reports/daily/assets/2026-08-05/2026-08-05.ai.02.tencentcloud--tencentdb-agent-memory.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "esengine/DeepSeek-Reasonix",
+          "path": "reports/daily/assets/2026-08-05/2026-08-05.ai.03.esengine--deepseek-reasonix.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 25,
+    "issue_code": "D025",
+    "issue_label": "第25期",
+    "status": "official"
+  }
+}
