@@ -49,6 +49,31 @@ def _run_powershell(script: str) -> subprocess.CompletedProcess[str]:
     )
 
 
+def _start_lock_holder(path: Path, hold_milliseconds: int) -> subprocess.Popen[str]:
+    assert POWERSHELL is not None
+    path.parent.mkdir(parents=True, exist_ok=True)
+    script = (
+        f"$stream = [System.IO.File]::Open({_ps_quote(path)}, "
+        "[System.IO.FileMode]::OpenOrCreate, [System.IO.FileAccess]::ReadWrite, "
+        "[System.IO.FileShare]::None); "
+        "[Console]::Out.WriteLine('LOCKED'); [Console]::Out.Flush(); "
+        f"Start-Sleep -Milliseconds {hold_milliseconds}; $stream.Dispose()"
+    )
+    process = subprocess.Popen(
+        [POWERSHELL, "-NoLogo", "-NoProfile", "-NonInteractive", "-Command", script],
+        cwd=ROOT,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        creationflags=subprocess.CREATE_NO_WINDOW,
+    )
+    assert process.stdout is not None
+    assert process.stdout.readline().strip() == "LOCKED"
+    return process
+
+
 def _load_functions(state_root: Path, *, period: str = "daily") -> str:
     return (
         "$ErrorActionPreference = 'Stop'; "
@@ -110,6 +135,63 @@ def _write_publish_bundle(root: Path) -> None:
         ],
     }
     (root / "MANIFEST.json").write_text(json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
+
+
+@requires_windows_powershell
+def test_shared_lock_waits_until_the_owner_finishes(tmp_path: Path) -> None:
+    state_root = tmp_path / "state"
+    holder = _start_lock_holder(state_root / "run.lock", 600)
+    script = (
+        _load_functions(state_root)
+        + "$stream = Enter-SharedRunLock -Path $LockPath -WaitSeconds 2 "
+        "-PollMilliseconds 50; "
+        "$acquired = $null -ne $stream; if ($stream) { $stream.Dispose() }; "
+        "[pscustomobject]@{ Acquired = $acquired } | ConvertTo-Json -Compress"
+    )
+
+    result = _run_powershell(script)
+    holder.communicate(timeout=5)
+
+    assert result.returncode == 0, result.stderr
+    assert _last_json(result.stdout) == {"Acquired": True}
+    assert "shared lock busy; waiting up to 2 seconds" in result.stdout
+    assert "acquired shared lock after waiting" in result.stdout
+
+
+@requires_windows_powershell
+def test_shared_lock_timeout_preserves_exit_75_signal(tmp_path: Path) -> None:
+    state_root = tmp_path / "state"
+    holder = _start_lock_holder(state_root / "run.lock", 1600)
+    result = subprocess.run(
+        [
+            POWERSHELL,
+            "-NoLogo",
+            "-NoProfile",
+            "-NonInteractive",
+            "-File",
+            str(RUNNER),
+            "-Period",
+            "daily",
+            "-StateRoot",
+            str(state_root),
+            "-LockWaitSeconds",
+            "1",
+            "-LockPollMilliseconds",
+            "50",
+            "-SkipPagesWait",
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=False,
+        creationflags=subprocess.CREATE_NO_WINDOW,
+    )
+    holder.communicate(timeout=5)
+
+    assert result.returncode == 75, result.stderr
+    assert "timed out after 1 seconds waiting for the shared lock" in result.stdout
 
 
 @requires_windows_powershell
@@ -434,6 +516,12 @@ def test_manual_launcher_calls_safe_powershell_entrypoint_and_preserves_exit_cod
     assert "-ExecutionPolicy RemoteSigned" in source
     assert 'set "EXIT_CODE=%ERRORLEVEL%"' in source
     assert "pause" in source.lower()
+
+
+def test_manual_runner_disables_scheduled_lock_waiting() -> None:
+    source = MANUAL_RUNNER.read_text(encoding="utf-8")
+
+    assert '"-LockWaitSeconds", "0"' in source
 
 
 @requires_windows_powershell

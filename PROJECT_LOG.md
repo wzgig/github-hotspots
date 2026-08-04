@@ -1,5 +1,32 @@
 # Project Log
 
+## 2026-08-04 — 修复日报/周报同刻补跑导致的周报丢失
+
+### 目的
+
+查明 2026-08-02 日报正常更新而周报没有由本机正式链路更新的原因，消除延迟任务同刻启动时的共享锁竞态，并将 W004 恢复为冻结事实上的正式 Codex 周报。
+
+### 现场情况与变更
+
+- 两个受保护的 Windows 计划任务仍残留旧定义 `RunOnlyIfNetworkAvailable=True`。8 月 2 日网络门槛解除后，日报与周报在 `10:02:51` 同时补启动；日报取得 `%LOCALAPPDATA%\GitHubHotspots\run.lock` 并完成，周报只记录 `another scheduled run owns the shared lock` 后以退出码 75 结束。
+- `run_scheduled.ps1` 新增共享锁有界等待：计划任务默认最多等待 1200 秒、每 5 秒重试，并只记录首次争用、最终取得或超时，避免日志轮询刷屏。等待超时仍保留退出码 75，供任务调度器重试。
+- `run_manual_update.ps1` 显式传入零秒等待，保证双击检查入口在已有后台任务时立即给出可见的 BUSY 提示，不会让窗口无反馈地等待。
+- PowerShell 回归测试使用真实跨进程独占文件锁，分别覆盖“持有者释放后成功取得”和“超过等待预算仍超时”；静态断言覆盖手动入口的零等待参数。
+- 运维文档同步说明计划任务与手动入口的不同锁等待语义。
+
+### 文件与模块
+
+- 自动化：`scripts/automation/run_scheduled.ps1`、`scripts/automation/run_manual_update.ps1`。
+- 回归测试：`tests/test_powershell_automation.py`。
+- 文档：`docs/AUTOMATION.md`、`PROJECT_LOG.md`。
+- 正式恢复产物：`reports/weekly/2026-W31*`、`reports/weekly/assets/2026-W31/`、`publish/history/weekly/2026/2026-W31/` 及历史索引。
+
+### 验证与已知限制
+
+- W004 恢复时只重绘已有 2026-08-02 冻结排名与数字事实；接受前逐字段比较双榜 `full_name`、排名、Star/Fork、增量、来源、URL 与分数，并要求双榜各 7 项、16 张 PNG、`used_backend=codex-cli`、`fallback_used=false`。
+- 运行完整 pytest、Ruff、PowerShell 语法、Node、YAML、严格报告/history、路径白名单、敏感信息和 Pages 门禁；最终结果与线上运行编号在提交推送后核验。
+- 代码层等待可修复本次“同刻补跑后周报被直接丢弃”的故障；受保护任务的旧网络门槛仍需管理员 PowerShell 成功执行 `scripts/automation/register_tasks.ps1` 后读取实际定义确认，当前非管理员会话不能宣称已完成系统级覆盖。
+
 ## 2026-07-29 — 提高周报 Codex 生成韧性并恢复 W003 正式链路
 
 ### 目的

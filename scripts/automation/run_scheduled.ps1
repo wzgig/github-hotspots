@@ -9,6 +9,12 @@ param(
 
     [string]$StateRoot = (Join-Path $env:LOCALAPPDATA "GitHubHotspots"),
 
+    [ValidateRange(0, 3600)]
+    [int]$LockWaitSeconds = 1200,
+
+    [ValidateRange(10, 60000)]
+    [int]$LockPollMilliseconds = 5000,
+
     [switch]$SkipPagesWait,
 
     [switch]$LoadFunctionsOnly
@@ -40,6 +46,57 @@ function Write-RunLog {
     $line = "{0} {1}" -f ([DateTimeOffset]::Now.ToString("o")), $Message
     Add-Content -LiteralPath $LogPath -Value $line -Encoding utf8
     Write-Host $line
+}
+
+function Enter-SharedRunLock {
+    param(
+        [Parameter(Mandatory = $true)][string]$Path,
+        [Parameter(Mandatory = $true)][ValidateRange(0, 3600)][int]$WaitSeconds,
+        [Parameter(Mandatory = $true)][ValidateRange(10, 60000)][int]$PollMilliseconds
+    )
+
+    $stopwatch = [System.Diagnostics.Stopwatch]::StartNew()
+    $contentionLogged = $false
+    while ($true) {
+        try {
+            $stream = [System.IO.File]::Open(
+                $Path,
+                [System.IO.FileMode]::OpenOrCreate,
+                [System.IO.FileAccess]::ReadWrite,
+                [System.IO.FileShare]::None
+            )
+            if ($contentionLogged) {
+                Write-RunLog (
+                    "acquired shared lock after waiting {0:N1} seconds" -f
+                    $stopwatch.Elapsed.TotalSeconds
+                )
+            }
+            return $stream
+        }
+        catch [System.IO.IOException] {
+            if ($WaitSeconds -eq 0) {
+                Write-RunLog "another local report run owns the shared lock; no wait requested"
+                return $null
+            }
+            if (-not $contentionLogged) {
+                Write-RunLog (
+                    "shared lock busy; waiting up to $WaitSeconds seconds " +
+                    "with ${PollMilliseconds}ms polling"
+                )
+                $contentionLogged = $true
+            }
+            $remainingMilliseconds = ([int64]$WaitSeconds * 1000) - $stopwatch.ElapsedMilliseconds
+            if ($remainingMilliseconds -le 0) {
+                Write-RunLog "timed out after $WaitSeconds seconds waiting for the shared lock"
+                return $null
+            }
+            $sleepMilliseconds = [int][System.Math]::Min(
+                [int64]$PollMilliseconds,
+                $remainingMilliseconds
+            )
+            Start-Sleep -Milliseconds $sleepMilliseconds
+        }
+    }
 }
 
 function Assert-StateChild {
@@ -1175,16 +1232,11 @@ if ($LoadFunctionsOnly) {
 }
 
 try {
-    try {
-        $LockStream = [System.IO.File]::Open(
-            $LockPath,
-            [System.IO.FileMode]::OpenOrCreate,
-            [System.IO.FileAccess]::ReadWrite,
-            [System.IO.FileShare]::None
-        )
-    }
-    catch [System.IO.IOException] {
-        Write-RunLog "another scheduled run owns the shared lock"
+    $LockStream = Enter-SharedRunLock `
+        -Path $LockPath `
+        -WaitSeconds $LockWaitSeconds `
+        -PollMilliseconds $LockPollMilliseconds
+    if (-not $LockStream) {
         exit 75
     }
 

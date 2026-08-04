@@ -66,7 +66,8 @@ function Invoke-ManualPeriodUpdate {
         "-ExecutionPolicy", "RemoteSigned",
         "-File", $Runner,
         "-Period", $Period,
-        "-RunDate", $RunDate
+        "-RunDate", $RunDate,
+        "-LockWaitSeconds", "0"
     )
     if ($SkipPagesWait) {
         $arguments += "-SkipPagesWait"

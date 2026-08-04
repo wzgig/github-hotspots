@@ -17,8 +17,9 @@ The automation has two independent layers:
 GitHub Actions cron can be delayed, so it is a continuity fallback rather than the
 publication clock. The daily task also has a current-user logon trigger: if the scheduled
 time was missed, the next sign-in runs the same idempotent transaction. The two local tasks
-share one lock. If the daily task is still running when the Sunday task starts, Task Scheduler
-retries instead of running both writers.
+share one lock. If delayed daily and weekly tasks start together, the second scheduled runner
+waits up to 20 minutes for the first transaction instead of discarding the report immediately;
+only an exhausted wait returns exit `75` for Task Scheduler retry handling.
 
 A normal local-user push triggers `pages.yml` through its `push` event. A push made with the
 workflow `GITHUB_TOKEN` does not recursively trigger another workflow, so a successful daily
@@ -61,9 +62,10 @@ so a moving remote-tracking ref cannot bypass the path gate.
 
 `scripts/automation/run_scheduled.ps1` performs one transaction:
 
-1. Acquire `%LOCALAPPDATA%\GitHubHotspots\run.lock` with exclusive file access. Once the lock
-   is held, remove automation-named worktrees older than six hours and path manifests older
-   than one day, with every deletion constrained below the state root.
+1. Acquire `%LOCALAPPDATA%\GitHubHotspots\run.lock` with exclusive file access. Scheduled runs
+   wait up to 20 minutes with five-second polling and record contention, acquisition, or timeout
+   in the run log. Once the lock is held, remove automation-named worktrees older than six hours
+   and path manifests older than one day, with every deletion constrained below the state root.
 2. Resolve the run date in `China Standard Time`. A delayed weekly task outside Sunday is
    skipped rather than labelled as a false Sunday snapshot.
 3. Verify `git`, the project virtual environment, and the installed Codex CLI without
@@ -230,8 +232,8 @@ strict, idempotent transaction as the scheduled tasks.
 - A missing due bundle is generated, verified, committed, and pushed immediately.
 - On Monday through Saturday, the launcher reports the latest and next scheduled Sunday but
   does not label current cumulative GitHub counts as a historical Sunday snapshot.
-- If another local run owns the shared lock, the launcher exits visibly and can be run again
-  after that transaction finishes.
+- The visible manual launcher passes a zero-second lock wait so it remains responsive: if another
+  local run owns the lock, it exits visibly and can be run again after that transaction finishes.
 
 The command window pauses before closing so a double-click user can read the result. Detailed
 runner logs remain under `%LOCALAPPDATA%\GitHubHotspots\logs\` and keep the same credential
@@ -272,7 +274,7 @@ not the authoritative unattended-run log.
 | Failure | Result |
 | --- | --- |
 | Daily or weekly task is missing | Re-run `register_tasks.ps1`, verify both tasks are `Ready`, then use an explicit reviewed recovery run for any missing current-date report |
-| Lock already held | Exit `75`; Task Scheduler retries |
+| Lock already held | Scheduled runner waits up to 20 minutes; timeout exits `75` for Task Scheduler retry. The manual launcher returns `75` immediately and visibly |
 | Tests, lint, source collection, or report render fails | No commit and no push |
 | Codex unavailable, times out, or falls back | Strict gate fails; no local commit; Actions may generate the deterministic fallback |
 | Remote is force-pushed or contains code/config/prompt/workflow/doc changes after trusted `HEAD` | Abort before executing the remote worktree; manually review and update the local checkout |
