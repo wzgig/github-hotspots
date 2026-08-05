@@ -1,5 +1,31 @@
 # Project Log
 
+## 2026-08-05 — 为手动 CMD 增加每日周报完整性检测
+
+### 目的
+
+扩展根目录 `CHECK_AND_UPDATE_REPORTS.cmd`，使其不再只在周日关注周报，而是每次运行都同时检查当日日报和最近一期应到周报，并继续禁止工作日使用当前累计数据伪造历史周报。
+
+### 变更
+
+- `run_manual_update.ps1` 的计划现在每天包含两项：当日日报正常检查/补更，以及最近周日周报检查。周日周报允许按正式 Codex 流程补更；周一至周六周报自动使用只检查模式。
+- `run_scheduled.ps1` 新增 `-CheckOnly`。该模式跳过 Codex CLI 生成前置检查；完整正式报告与 history 仍会被验证、复用和同步，只有 history 缺失时可安全修复。若报告缺失、损坏或仅为 deterministic 兜底，则在 pytest/采集/生成前以退出码 76 停止。
+- CMD 窗口标题和成功提示明确显示 Daily and Weekly，工作日发现缺失周报时输出对应周日及“禁止自动历史生成”的可见提示。
+- README、自动化手册和运维说明同步新的每日双周期检查语义。
+
+### 文件与模块
+
+- 手动入口：`CHECK_AND_UPDATE_REPORTS.cmd`。
+- 自动化：`scripts/automation/run_manual_update.ps1`、`scripts/automation/run_scheduled.ps1`。
+- 回归测试：`tests/test_powershell_automation.py`。
+- 文档：`README.md`、`docs/AUTOMATION.md`、`docs/OPERATIONS.md`、`PROJECT_LOG.md`。
+
+### 验证与限制
+
+- PowerShell 回归覆盖周日“日报 + 可生成周报”、工作日“日报 + 只检查最近周报”、下一周日期计算、只检查模式对缺失报告禁止生成、CMD 标题及参数传递。
+- 完整 pytest、Ruff、PowerShell/Node/YAML、`git diff --check`、敏感信息、提交推送和 Pages 结果在交付前核验。
+- 工作日检测到缺失或降级周报时只报告问题，不自动重建历史排名；正式历史恢复仍需使用冻结事实或经过审阅的事故恢复流程。
+
 ## 2026-08-04 — 修复日报/周报同刻补跑导致的周报丢失
 
 ### 目的

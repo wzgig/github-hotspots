@@ -482,7 +482,7 @@ def test_task_registration_has_logon_catchup_without_network_launch_gate() -> No
 
 
 @requires_windows_powershell
-def test_manual_update_plan_runs_weekly_only_on_sunday(tmp_path: Path) -> None:
+def test_manual_update_plan_checks_weekly_every_day_without_backdating(tmp_path: Path) -> None:
     state_root = tmp_path / "state"
     script = (
         f". {_ps_quote(MANUAL_RUNNER)} -LoadFunctionsOnly; "
@@ -497,16 +497,41 @@ def test_manual_update_plan_runs_weekly_only_on_sunday(tmp_path: Path) -> None:
 
     assert result.returncode == 0, result.stderr
     payload = _last_json(result.stdout)
-    assert [(item["Period"], item["ShouldRun"], item["RunDate"]) for item in payload["Sunday"]] == [
-        ("daily", True, "2026-07-19"),
-        ("weekly", True, "2026-07-19"),
-    ]
-    assert [(item["Period"], item["ShouldRun"], item["RunDate"]) for item in payload["Monday"]] == [
-        ("daily", True, "2026-07-20"),
+    assert [(item["Period"], item["CheckOnly"], item["RunDate"]) for item in payload["Sunday"]] == [
+        ("daily", False, "2026-07-19"),
         ("weekly", False, "2026-07-19"),
     ]
+    assert [(item["Period"], item["CheckOnly"], item["RunDate"]) for item in payload["Monday"]] == [
+        ("daily", False, "2026-07-20"),
+        ("weekly", True, "2026-07-19"),
+    ]
+    assert payload["Monday"][1]["Status"] == "verify_only"
     assert payload["Monday"][1]["NextDueDate"] == "2026-07-26"
     assert not state_root.exists()
+
+
+@requires_windows_powershell
+def test_check_only_mode_never_generates_a_missing_report(tmp_path: Path) -> None:
+    state_root = tmp_path / "state"
+    script = (
+        _load_functions(state_root) + "[pscustomobject]@{ "
+        "NormalMissing = Test-ReportGenerationAllowed -ReportAlreadyValid $false; "
+        "CheckMissing = Test-ReportGenerationAllowed -CheckOnly -ReportAlreadyValid $false; "
+        "CheckValid = Test-ReportGenerationAllowed -CheckOnly -ReportAlreadyValid $true "
+        "} | ConvertTo-Json -Compress"
+    )
+
+    result = _run_powershell(script)
+
+    assert result.returncode == 0, result.stderr
+    assert _last_json(result.stdout) == {
+        "NormalMissing": True,
+        "CheckMissing": False,
+        "CheckValid": True,
+    }
+    source = RUNNER.read_text(encoding="utf-8")
+    assert "exit 76" in source
+    assert source.index("check-only mode found no complete Codex") < source.index('-Label "pytest"')
 
 
 def test_manual_launcher_calls_safe_powershell_entrypoint_and_preserves_exit_code() -> None:
@@ -515,6 +540,7 @@ def test_manual_launcher_calls_safe_powershell_entrypoint_and_preserves_exit_cod
     assert "%~dp0scripts\\automation\\run_manual_update.ps1" in source
     assert "-ExecutionPolicy RemoteSigned" in source
     assert 'set "EXIT_CODE=%ERRORLEVEL%"' in source
+    assert "Check Daily and Weekly Reports" in source
     assert "pause" in source.lower()
 
 
@@ -522,6 +548,7 @@ def test_manual_runner_disables_scheduled_lock_waiting() -> None:
     source = MANUAL_RUNNER.read_text(encoding="utf-8")
 
     assert '"-LockWaitSeconds", "0"' in source
+    assert '$arguments += "-CheckOnly"' in source
 
 
 @requires_windows_powershell

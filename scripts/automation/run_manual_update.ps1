@@ -33,16 +33,16 @@ function Get-ManualUpdatePlan {
     @(
         [pscustomobject]@{
             Period = "daily"
-            ShouldRun = $true
+            CheckOnly = $false
             RunDate = $today
             Status = "due"
             NextDueDate = $today
         }
         [pscustomobject]@{
             Period = "weekly"
-            ShouldRun = $weeklyDue
+            CheckOnly = -not $weeklyDue
             RunDate = if ($weeklyDue) { $today } else { $latestSunday }
-            Status = if ($weeklyDue) { "due" } else { "not_due" }
+            Status = if ($weeklyDue) { "due" } else { "verify_only" }
             NextDueDate = if ($weeklyDue) { $today } else { $nextSunday }
         }
     )
@@ -56,7 +56,9 @@ function Invoke-ManualPeriodUpdate {
 
         [Parameter(Mandatory = $true)]
         [ValidatePattern("^\d{4}-\d{2}-\d{2}$")]
-        [string]$RunDate
+        [string]$RunDate,
+
+        [switch]$CheckOnly
     )
 
     $arguments = @(
@@ -69,6 +71,9 @@ function Invoke-ManualPeriodUpdate {
         "-RunDate", $RunDate,
         "-LockWaitSeconds", "0"
     )
+    if ($CheckOnly) {
+        $arguments += "-CheckOnly"
+    }
     if ($SkipPagesWait) {
         $arguments += "-SkipPagesWait"
     }
@@ -103,27 +108,33 @@ $failures = @()
 
 Write-Host "GitHub Hotspots manual report check"
 Write-Host "China time: $($chinaNow.ToString('yyyy-MM-dd HH:mm:ss zzz'))"
-Write-Host "Existing complete remote bundles are verified and reused; missing due bundles are generated and pushed."
+Write-Host "The current daily report and latest scheduled weekly report are both checked."
+Write-Host "Missing reports are generated only on their truthful due date; historical checks never backdate current data."
 
 foreach ($item in $plan) {
-    if (-not $item.ShouldRun) {
-        Write-Host ((
-                "[SKIP] Weekly report is not due today. Latest scheduled Sunday: {0}; " +
-                "next due Sunday: {1}. Historical weekly facts are not fabricated automatically."
-            ) -f $item.RunDate, $item.NextDueDate)
-        continue
-    }
-
     Write-Host ""
-    Write-Host "[CHECK] $($item.Period) report for $($item.RunDate)"
-    $exitCode = Invoke-ManualPeriodUpdate -Period $item.Period -RunDate $item.RunDate
+    $checkLabel = if ($item.CheckOnly) { "VERIFY" } else { "CHECK" }
+    Write-Host "[$checkLabel] $($item.Period) report for $($item.RunDate)"
+    $exitCode = Invoke-ManualPeriodUpdate `
+        -Period $item.Period `
+        -RunDate $item.RunDate `
+        -CheckOnly:$item.CheckOnly
     if ($exitCode -eq 0) {
         Write-Host "[OK] $($item.period) report is complete and synchronized."
+        if ($item.Period -eq "weekly" -and $item.CheckOnly) {
+            Write-Host "[NEXT] Next weekly generation date: $($item.NextDueDate)."
+        }
         continue
     }
 
     if ($exitCode -eq 75) {
         Write-Host "[BUSY] Another local report run owns the shared lock. Run this launcher again after it finishes."
+    }
+    elseif ($exitCode -eq 76) {
+        Write-Host ((
+                "[MISSING] No complete Codex weekly report was found for {0}. " +
+                "Automatic historical generation is disabled; use the reviewed recovery workflow."
+            ) -f $item.RunDate)
     }
     else {
         Write-Host "[FAILED] $($item.period) report check returned exit code $exitCode."
@@ -138,4 +149,4 @@ if ($failures.Count -gt 0) {
 }
 
 Write-Host ""
-Write-Host "All reports due at this time are complete and synchronized."
+Write-Host "The current daily report and latest scheduled weekly report are complete and synchronized."

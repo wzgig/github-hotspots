@@ -225,13 +225,14 @@ For a visible, double-clickable recovery entrypoint, run the root-level
 strict, idempotent transaction as the scheduled tasks.
 
 - The daily bundle is checked for the current China Standard Time date on every run.
-- The weekly bundle is also checked and generated when the current China Standard Time date
-  is Sunday.
+- The latest scheduled Sunday weekly bundle is checked on every run. On Sunday it may be
+  generated when missing; Monday through Saturday use `-CheckOnly` and never start Codex
+  generation for the historical date.
 - A complete remote Codex report plus matching publication history is reused without a new
   report commit; the local publication workspace and Pages status are still synchronized.
-- A missing due bundle is generated, verified, committed, and pushed immediately.
-- On Monday through Saturday, the launcher reports the latest and next scheduled Sunday but
-  does not label current cumulative GitHub counts as a historical Sunday snapshot.
+- A missing bundle is generated, verified, committed, and pushed immediately only when the
+  requested date is truthfully due. A weekday weekly check with no complete Codex bundle exits
+  `76`, reports the missing Sunday, and requires the reviewed historical recovery workflow.
 - The visible manual launcher passes a zero-second lock wait so it remains responsive: if another
   local run owns the lock, it exits visibly and can be run again after that transaction finishes.
 
@@ -275,6 +276,7 @@ not the authoritative unattended-run log.
 | --- | --- |
 | Daily or weekly task is missing | Re-run `register_tasks.ps1`, verify both tasks are `Ready`, then use an explicit reviewed recovery run for any missing current-date report |
 | Lock already held | Scheduled runner waits up to 20 minutes; timeout exits `75` for Task Scheduler retry. The manual launcher returns `75` immediately and visibly |
+| Weekday manual check finds the latest weekly Codex bundle missing or downgraded | Exit `76`, identify the missing Sunday, and refuse automatic historical generation |
 | Tests, lint, source collection, or report render fails | No commit and no push |
 | Codex unavailable, times out, or falls back | Strict gate fails; no local commit; Actions may generate the deterministic fallback |
 | Remote is force-pushed or contains code/config/prompt/workflow/doc changes after trusted `HEAD` | Abort before executing the remote worktree; manually review and update the local checkout |

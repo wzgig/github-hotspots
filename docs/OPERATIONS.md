@@ -264,13 +264,13 @@ gh run view <run-id> --log-failed
 | --- | --- | --- |
 | 本地日榜主链路 | Windows Task Scheduler | 每天 07:30 在独立 worktree 中调用当前用户的 Codex CLI；当前用户登录时执行幂等缺失补跑 |
 | 本地周榜主链路 | Windows Task Scheduler | 每周日 08:45 生成周报 |
-| 本地手动检查补更 | 根目录 `CHECK_AND_UPDATE_REPORTS.cmd` | 每次检查当日日报；周日同时检查周报。完整则幂等复用，缺失则立即生成、提交、推送并核验 Pages |
+| 本地手动检查补更 | 根目录 `CHECK_AND_UPDATE_REPORTS.cmd` | 每次检查当日日报和最近一期应到周报；周日缺失可补更，工作日只验证并拒绝自动倒填历史 |
 | Actions 兜底 | `daily.yml` / `weekly.yml` | 09:17 / 周日 10:27；报告与 history 都完整时跳过，只有 history 缺失时只修复 history |
 | 按需刷新 | Actions `workflow_dispatch` 或本地 CLI | 人工触发完整采集、排名和内容生成 |
 
 在 GitHub 网页手动触发时，进入仓库 **Actions**，选择 **Daily GitHub Hotspots** 或 **Weekly GitHub Hotspots**，再选择 **Run workflow**。手动运行仍须执行工作流中的测试、采集和提交门禁，不能跳过事实校验。
 
-在本机需要立即检查和补更时，双击根目录 `CHECK_AND_UPDATE_REPORTS.cmd`。它不是另一套生成逻辑，而是依次调用本地严格 runner：远端已有当期完整 Codex 报告和 history 时不重复生成或提交，缺失时在本次运行中完成生成、推送和 Pages 核验。周报只在北京时间周日自动补更；周一至周六不会把当前累计数据伪装成上周日快照。
+在本机需要立即检查和补更时，双击根目录 `CHECK_AND_UPDATE_REPORTS.cmd`。它不是另一套生成逻辑，而是依次调用本地严格 runner：先检查当日日报，再检查最近一期应到周报。远端已有完整 Codex 报告和 history 时不重复生成或提交，只同步本地发布工作台并核验 Pages；北京时间周日发现当期缺失时完成生成、推送和 Pages 核验。周一至周六通过 `-CheckOnly` 验证最近周日，缺失或仅有 deterministic 兜底时返回退出码 76，绝不把当前累计数据伪装成历史周报。
 
 当前不默认启用小时级 schedule 或“实时”提交，原因如下：
 

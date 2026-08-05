@@ -15,6 +15,8 @@ param(
     [ValidateRange(10, 60000)]
     [int]$LockPollMilliseconds = 5000,
 
+    [switch]$CheckOnly,
+
     [switch]$SkipPagesWait,
 
     [switch]$LoadFunctionsOnly
@@ -97,6 +99,15 @@ function Enter-SharedRunLock {
             Start-Sleep -Milliseconds $sleepMilliseconds
         }
     }
+}
+
+function Test-ReportGenerationAllowed {
+    param(
+        [switch]$CheckOnly,
+        [Parameter(Mandatory = $true)][bool]$ReportAlreadyValid
+    )
+
+    return -not $CheckOnly -or $ReportAlreadyValid
 }
 
 function Assert-StateChild {
@@ -1267,13 +1278,18 @@ try {
             throw "Required automation file is missing: $requiredPath"
         }
     }
-    if (-not (Get-Command codex -ErrorAction SilentlyContinue)) {
-        throw "The installed Codex CLI is not available for the current user."
+    if ($CheckOnly) {
+        Write-RunLog "check-only mode enabled; Codex generation is disabled"
     }
-    Invoke-Logged `
-        -Label "Codex CLI preflight" `
-        -FilePath "codex" `
-        -ArgumentList @("--version") | Out-Null
+    else {
+        if (-not (Get-Command codex -ErrorAction SilentlyContinue)) {
+            throw "The installed Codex CLI is not available for the current user."
+        }
+        Invoke-Logged `
+            -Label "Codex CLI preflight" `
+            -FilePath "codex" `
+            -ArgumentList @("--version") | Out-Null
+    }
     Update-VerifiedOriginMain `
         -Python $Python `
         -Label "fetch and validate origin main" `
@@ -1297,6 +1313,15 @@ try {
         -Python $Python `
         -TargetPeriod $Period `
         -TargetDate $RunDate
+    if (-not (Test-ReportGenerationAllowed `
+        -CheckOnly:$CheckOnly `
+        -ReportAlreadyValid $reportAlreadyValid)) {
+        Write-RunLog (
+            "check-only mode found no complete Codex $Period report for $RunDate; " +
+            "refusing historical generation"
+        )
+        exit 76
+    }
     $historyAlreadyValid = $false
     if ($reportAlreadyValid) {
         $historyAlreadyValid = Test-PublicationHistory `
