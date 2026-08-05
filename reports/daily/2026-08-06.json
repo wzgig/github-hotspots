@@ -1,0 +1,1467 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-06",
+  "window_start": "2026-08-05",
+  "window_end": "2026-08-06",
+  "generated_at": "2026-08-06T07:31:21+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-05 至 2026-08-06",
+  "publication": {
+    "issue_number": 26,
+    "issue_code": "D026",
+    "issue_label": "第26期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-06",
+    "manifest": "reports/daily/assets/2026-08-06/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "firecrawl/pdf-inspector",
+            "path": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.02.firecrawl--pdf-inspector.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.03.obra--superpowers.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-06/2026-08-06.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "TencentCloud/TencentDB-Agent-Memory",
+            "path": "reports/daily/assets/2026-08-06/2026-08-06.ai.01.tencentcloud--tencentdb-agent-memory.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-08-06/2026-08-06.ai.02.obra--superpowers.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "esengine/DeepSeek-Reasonix",
+            "path": "reports/daily/assets/2026-08-06/2026-08-06.ai.03.esengine--deepseek-reasonix.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 26,
+      "issue_code": "D026",
+      "issue_label": "第26期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 204906,
+      "forks": 17684,
+      "open_issues": 282,
+      "watchers": 204906,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-08-05T23:29:26Z",
+      "pushed_at": "2026-08-05T18:10:19Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 91.96,
+      "star_delta": 1697,
+      "fork_delta": 144,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 89.86,
+        "fork_growth": 98.55,
+        "total_stars": 82.61,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "把软件工程方法拆成可组合技能，帮助编程 Agent 澄清需求、测试代码和改进设计",
+        "highlights": [
+          "先通过追问对齐需求并沉淀项目术语",
+          "用测试驱动和分阶段诊断建立反馈循环",
+          "扫描代码结构并找出可深化的模块边界"
+        ],
+        "audience": "需要约束 Claude Code、Codex 等编程 Agent 工作方式，并希望保留流程控制权的开发者",
+        "capabilities": [
+          "追问需求并在动手前对齐变更目标",
+          "建立共享术语并更新 CONTEXT.md 与 ADR",
+          "按红绿重构循环实现功能或修复缺陷",
+          "分阶段诊断难复现的缺陷与性能退化",
+          "扫描代码库并生成架构改进候选报告"
+        ],
+        "core_title": "小技能组合成工程流程",
+        "core_summary": "每项技能聚焦一个工程环节，可由用户主动调用或由 Agent 按任务触发；它们把需求澄清、设计、测试、诊断和评审串成可调整的工作流。",
+        "prerequisites": "先选择插件或可编辑文件方式安装，并在每个仓库运行一次 /setup-matt-pocock-skills。",
+        "limitations": "插件方式安装的是托管只读合集；文件方式需自行拉取更新。两种方式同时安装会让每项技能重复出现。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "3b6952dfe0f306c2b58447e5b1124af9d8b49cc4",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+          ],
+          "highlights": [
+            [
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+            ],
+            [
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+            ],
+            [
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+            ]
+          ],
+          "audience": [
+            "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+          ],
+          "capabilities": [
+            [
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+            ],
+            [
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+            ],
+            [
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+            ],
+            [
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+            ],
+            [
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+            ]
+          ],
+          "core_title": [
+            "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+          ],
+          "core_summary": [
+            "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+          ],
+          "prerequisites": [
+            "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+          ],
+          "limitations": [
+            "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-06/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "3b6952dfe0f306c2b58447e5b1124af9d8b49cc4",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-06/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.01.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1151702019,
+      "full_name": "firecrawl/pdf-inspector",
+      "owner": "firecrawl",
+      "name": "pdf-inspector",
+      "html_url": "https://github.com/firecrawl/pdf-inspector",
+      "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+      "language": "Rust",
+      "stars": 11401,
+      "forks": 758,
+      "open_issues": 80,
+      "watchers": 27,
+      "topics": [
+        "markdown",
+        "nodejs",
+        "ocr-routing",
+        "pdf",
+        "pdf-classification",
+        "pdf-extraction",
+        "pdf-parser",
+        "python",
+        "rust",
+        "text-extraction"
+      ],
+      "created_at": "2026-02-06T19:44:47Z",
+      "updated_at": "2026-08-05T23:30:40Z",
+      "pushed_at": "2026-08-05T22:41:44Z",
+      "daily_stars": 1583,
+      "weekly_stars": null,
+      "trending_rank_daily": 5,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 90.77,
+      "star_delta": 1458,
+      "fork_delta": 104,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.1,
+        "relative_growth": 98.55,
+        "fork_growth": 97.1,
+        "total_stars": 17.39,
+        "activity": 100.0,
+        "trending_signal": 38.69
+      },
+      "summary": {
+        "one_line": "先判断 PDF 是文本型还是扫描件，再把可提取内容按阅读顺序转成结构化 Markdown",
+        "highlights": [
+          "按页面识别哪些内容需要转交 OCR",
+          "保留坐标与字体信息恢复多栏阅读顺序",
+          "识别标题、列表、代码块和跨页表格"
+        ],
+        "audience": "需要在本地处理报告、论文、发票或法律文档，并为 OCR 流程做分流的开发者",
+        "capabilities": [
+          "分类文本型、扫描型、图像型和混合型 PDF",
+          "标出缺少文本并需要 OCR 的具体页面",
+          "提取带坐标、字体和阅读顺序的文本",
+          "把标题、列表、链接和代码转换为 Markdown",
+          "结合绘图矩形与文本对齐识别表格"
+        ],
+        "core_title": "先分类，再按页分流 OCR",
+        "core_summary": "检测器抽样查看页面内容流，返回文档类型、置信度和待 OCR 页面；文本型页面直接进入本地提取与版面分析，避免整份文档一律送去 OCR。",
+        "prerequisites": "按调用环境安装对应组件：Python 需 maturin，Node.js 与浏览器使用各自 npm 包，Rust 使用 cargo。",
+        "limitations": "项目本身不执行 OCR，也不依赖机器学习模型或外部服务；扫描页和编码损坏内容需要调用方转交 OCR。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "a30034a8f467b5ce29d8125d74c5abcfef44c846",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+          ],
+          "highlights": [
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ],
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ],
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ]
+          ],
+          "audience": [
+            "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+          ],
+          "capabilities": [
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ],
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ],
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ],
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ],
+            [
+              "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+            ]
+          ],
+          "core_title": [
+            "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+          ],
+          "core_summary": [
+            "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+          ],
+          "prerequisites": [
+            "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+          ],
+          "limitations": [
+            "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-06/repo-c825ee9d58b96347f00fa156-fdf2800b65e3922669c3a0d8.png",
+      "publication_evidence": {
+        "full_name": "firecrawl/pdf-inspector",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "a30034a8f467b5ce29d8125d74c5abcfef44c846",
+          "source_url": "https://api.github.com/repos/firecrawl/pdf-inspector/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-06/repo-c825ee9d58b96347f00fa156-fdf2800b65e3922669c3a0d8.png",
+          "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.02.firecrawl--pdf-inspector.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1073224795,
+      "full_name": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "html_url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "stars": 267279,
+      "forks": 23878,
+      "open_issues": 325,
+      "watchers": 267279,
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "created_at": "2025-10-09T19:45:18Z",
+      "updated_at": "2026-08-05T23:31:02Z",
+      "pushed_at": "2026-08-05T22:34:54Z",
+      "daily_stars": 931,
+      "weekly_stars": null,
+      "trending_rank_daily": 8,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 90.42,
+      "star_delta": 831,
+      "fork_delta": 52,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.65,
+        "relative_growth": 86.96,
+        "fork_growth": 91.3,
+        "total_stars": 89.86,
+        "activity": 100.0,
+        "trending_signal": 31.55
+      },
+      "summary": {
+        "one_line": "让编程 Agent 先澄清设计，再按计划、测试和双阶段审查推进软件开发任务",
+        "highlights": [
+          "把对话整理成可分段确认的设计方案",
+          "把实现计划拆成带路径和验证步骤的小任务",
+          "为每项任务安排规格审查与代码质量审查"
+        ],
+        "audience": "希望编程 Agent 遵循明确研发流程，而不是收到需求后立即写代码的个人或团队",
+        "capabilities": [
+          "追问目标并把讨论整理成设计文档",
+          "创建隔离工作区并检查测试基线",
+          "拆分带文件路径和验证步骤的实现计划",
+          "按红绿重构循环逐项完成开发任务",
+          "完成测试后提供合并或保留分支选项"
+        ],
+        "core_title": "从需求确认到分支收尾",
+        "core_summary": "技能会在编码前触发需求讨论和设计确认，随后生成计划，由子 Agent 分项实现并接受规格、质量两轮审查，最后验证测试并让用户决定如何处理分支。",
+        "prerequisites": "需按所用编程 Agent 分别安装；同时使用多个 Agent 时，每个运行环境都要单独安装。",
+        "limitations": "设计需要用户确认后才会生成实现计划，执行计划前也需用户明确开始；不同编程 Agent 的更新方式可能不同。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "2757b2efb76793a9420256ea45399edc355bead4",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+          ],
+          "highlights": [
+            [
+              "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+            ],
+            [
+              "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+            ],
+            [
+              "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+            ]
+          ],
+          "audience": [
+            "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+          ],
+          "capabilities": [
+            [
+              "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+            ],
+            [
+              "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+            ],
+            [
+              "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+            ],
+            [
+              "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+            ],
+            [
+              "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+            ]
+          ],
+          "core_title": [
+            "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+          ],
+          "core_summary": [
+            "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+          ],
+          "prerequisites": [
+            "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+          ],
+          "limitations": [
+            "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-06/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+      "publication_evidence": {
+        "full_name": "obra/superpowers",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "2757b2efb76793a9420256ea45399edc355bead4",
+          "source_url": "https://api.github.com/repos/obra/superpowers/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-06/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "sha256": "d38b9c9b368fcb5bf36b16f443d783cc9588fa66f5b399ed5e966b50ab857937",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.03.obra--superpowers.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "firecrawl/pdf-inspector",
+            "path": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.02.firecrawl--pdf-inspector.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.03.obra--superpowers.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 204906,
+          "forks": 17684,
+          "open_issues": 282,
+          "watchers": 204906,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-08-05T23:29:26Z",
+          "pushed_at": "2026-08-05T18:10:19Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.96,
+          "star_delta": 1697,
+          "fork_delta": 144,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 89.86,
+            "fork_growth": 98.55,
+            "total_stars": 82.61,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "把软件工程方法拆成可组合技能，帮助编程 Agent 澄清需求、测试代码和改进设计",
+            "highlights": [
+              "先通过追问对齐需求并沉淀项目术语",
+              "用测试驱动和分阶段诊断建立反馈循环",
+              "扫描代码结构并找出可深化的模块边界"
+            ],
+            "audience": "需要约束 Claude Code、Codex 等编程 Agent 工作方式，并希望保留流程控制权的开发者",
+            "capabilities": [
+              "追问需求并在动手前对齐变更目标",
+              "建立共享术语并更新 CONTEXT.md 与 ADR",
+              "按红绿重构循环实现功能或修复缺陷",
+              "分阶段诊断难复现的缺陷与性能退化",
+              "扫描代码库并生成架构改进候选报告"
+            ],
+            "core_title": "小技能组合成工程流程",
+            "core_summary": "每项技能聚焦一个工程环节，可由用户主动调用或由 Agent 按任务触发；它们把需求澄清、设计、测试、诊断和评审串成可调整的工作流。",
+            "prerequisites": "先选择插件或可编辑文件方式安装，并在每个仓库运行一次 /setup-matt-pocock-skills。",
+            "limitations": "插件方式安装的是托管只读合集；文件方式需自行拉取更新。两种方式同时安装会让每项技能重复出现。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "3b6952dfe0f306c2b58447e5b1124af9d8b49cc4",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+              ],
+              "highlights": [
+                [
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+                ],
+                [
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+                ],
+                [
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+                ]
+              ],
+              "audience": [
+                "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+                ],
+                [
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+                ],
+                [
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+                ],
+                [
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+                ],
+                [
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+                ]
+              ],
+              "core_title": [
+                "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+              ],
+              "core_summary": [
+                "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+              ],
+              "prerequisites": [
+                "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+              ],
+              "limitations": [
+                "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-06/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "3b6952dfe0f306c2b58447e5b1124af9d8b49cc4",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-06/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.01.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1151702019,
+          "full_name": "firecrawl/pdf-inspector",
+          "owner": "firecrawl",
+          "name": "pdf-inspector",
+          "html_url": "https://github.com/firecrawl/pdf-inspector",
+          "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+          "language": "Rust",
+          "stars": 11401,
+          "forks": 758,
+          "open_issues": 80,
+          "watchers": 27,
+          "topics": [
+            "markdown",
+            "nodejs",
+            "ocr-routing",
+            "pdf",
+            "pdf-classification",
+            "pdf-extraction",
+            "pdf-parser",
+            "python",
+            "rust",
+            "text-extraction"
+          ],
+          "created_at": "2026-02-06T19:44:47Z",
+          "updated_at": "2026-08-05T23:30:40Z",
+          "pushed_at": "2026-08-05T22:41:44Z",
+          "daily_stars": 1583,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 90.77,
+          "star_delta": 1458,
+          "fork_delta": 104,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.1,
+            "relative_growth": 98.55,
+            "fork_growth": 97.1,
+            "total_stars": 17.39,
+            "activity": 100.0,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "先判断 PDF 是文本型还是扫描件，再把可提取内容按阅读顺序转成结构化 Markdown",
+            "highlights": [
+              "按页面识别哪些内容需要转交 OCR",
+              "保留坐标与字体信息恢复多栏阅读顺序",
+              "识别标题、列表、代码块和跨页表格"
+            ],
+            "audience": "需要在本地处理报告、论文、发票或法律文档，并为 OCR 流程做分流的开发者",
+            "capabilities": [
+              "分类文本型、扫描型、图像型和混合型 PDF",
+              "标出缺少文本并需要 OCR 的具体页面",
+              "提取带坐标、字体和阅读顺序的文本",
+              "把标题、列表、链接和代码转换为 Markdown",
+              "结合绘图矩形与文本对齐识别表格"
+            ],
+            "core_title": "先分类，再按页分流 OCR",
+            "core_summary": "检测器抽样查看页面内容流，返回文档类型、置信度和待 OCR 页面；文本型页面直接进入本地提取与版面分析，避免整份文档一律送去 OCR。",
+            "prerequisites": "按调用环境安装对应组件：Python 需 maturin，Node.js 与浏览器使用各自 npm 包，Rust 使用 cargo。",
+            "limitations": "项目本身不执行 OCR，也不依赖机器学习模型或外部服务；扫描页和编码损坏内容需要调用方转交 OCR。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "a30034a8f467b5ce29d8125d74c5abcfef44c846",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+              ],
+              "highlights": [
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ],
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ],
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ]
+              ],
+              "audience": [
+                "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ],
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ],
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ],
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ],
+                [
+                  "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+                ]
+              ],
+              "core_title": [
+                "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+              ],
+              "core_summary": [
+                "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+              ],
+              "prerequisites": [
+                "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+              ],
+              "limitations": [
+                "github.readme:a30034a8f467b5ce29d8125d74c5abcfef44c846"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-06/repo-c825ee9d58b96347f00fa156-fdf2800b65e3922669c3a0d8.png",
+          "publication_evidence": {
+            "full_name": "firecrawl/pdf-inspector",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "a30034a8f467b5ce29d8125d74c5abcfef44c846",
+              "source_url": "https://api.github.com/repos/firecrawl/pdf-inspector/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-06/repo-c825ee9d58b96347f00fa156-fdf2800b65e3922669c3a0d8.png",
+              "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.02.firecrawl--pdf-inspector.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 267279,
+          "forks": 23878,
+          "open_issues": 325,
+          "watchers": 267279,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-08-05T23:31:02Z",
+          "pushed_at": "2026-08-05T22:34:54Z",
+          "daily_stars": 931,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 90.42,
+          "star_delta": 831,
+          "fork_delta": 52,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.65,
+            "relative_growth": 86.96,
+            "fork_growth": 91.3,
+            "total_stars": 89.86,
+            "activity": 100.0,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "让编程 Agent 先澄清设计，再按计划、测试和双阶段审查推进软件开发任务",
+            "highlights": [
+              "把对话整理成可分段确认的设计方案",
+              "把实现计划拆成带路径和验证步骤的小任务",
+              "为每项任务安排规格审查与代码质量审查"
+            ],
+            "audience": "希望编程 Agent 遵循明确研发流程，而不是收到需求后立即写代码的个人或团队",
+            "capabilities": [
+              "追问目标并把讨论整理成设计文档",
+              "创建隔离工作区并检查测试基线",
+              "拆分带文件路径和验证步骤的实现计划",
+              "按红绿重构循环逐项完成开发任务",
+              "完成测试后提供合并或保留分支选项"
+            ],
+            "core_title": "从需求确认到分支收尾",
+            "core_summary": "技能会在编码前触发需求讨论和设计确认，随后生成计划，由子 Agent 分项实现并接受规格、质量两轮审查，最后验证测试并让用户决定如何处理分支。",
+            "prerequisites": "需按所用编程 Agent 分别安装；同时使用多个 Agent 时，每个运行环境都要单独安装。",
+            "limitations": "设计需要用户确认后才会生成实现计划，执行计划前也需用户明确开始；不同编程 Agent 的更新方式可能不同。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "2757b2efb76793a9420256ea45399edc355bead4",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ],
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ],
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ]
+              ],
+              "audience": [
+                "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ],
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ],
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ],
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ],
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+              ],
+              "core_summary": [
+                "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+              ],
+              "prerequisites": [
+                "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+              ],
+              "limitations": [
+                "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-06/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "2757b2efb76793a9420256ea45399edc355bead4",
+              "source_url": "https://api.github.com/repos/obra/superpowers/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-06/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+              "sha256": "d38b9c9b368fcb5bf36b16f443d783cc9588fa66f5b399ed5e966b50ab857937",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-06/2026-08-06.comprehensive.03.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-06/2026-08-06.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "TencentCloud/TencentDB-Agent-Memory",
+            "path": "reports/daily/assets/2026-08-06/2026-08-06.ai.01.tencentcloud--tencentdb-agent-memory.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-08-06/2026-08-06.ai.02.obra--superpowers.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "esengine/DeepSeek-Reasonix",
+            "path": "reports/daily/assets/2026-08-06/2026-08-06.ai.03.esengine--deepseek-reasonix.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1203558071,
+          "full_name": "TencentCloud/TencentDB-Agent-Memory",
+          "owner": "TencentCloud",
+          "name": "TencentDB-Agent-Memory",
+          "html_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+          "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+          "language": "TypeScript",
+          "stars": 15018,
+          "forks": 1366,
+          "open_issues": 518,
+          "watchers": 56,
+          "topics": [
+            "agent",
+            "ai-agent",
+            "embedding",
+            "llm",
+            "local-first",
+            "long-term-memory",
+            "memory",
+            "openclaw-plugin",
+            "vector-search"
+          ],
+          "created_at": "2026-04-07T06:34:26Z",
+          "updated_at": "2026-08-05T23:30:35Z",
+          "pushed_at": "2026-08-05T08:04:09Z",
+          "daily_stars": 1891,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 89.66,
+          "star_delta": 1501,
+          "fork_delta": 95,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 96.55,
+            "fork_growth": 96.55,
+            "total_stars": 20.69,
+            "activity": 71.65,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把对话、文档和代码沉淀成团队可复用的 Agent 记忆资产",
+            "highlights": [
+              "从对话中提取 Chat Memory 和 Skill",
+              "把文档整理成带链接图的 Wiki",
+              "为代码建立调用关系和影响路径图"
+            ],
+            "audience": "需要让多个 Agent 共享项目知识、经验和权限边界的团队",
+            "capabilities": [
+              "提取对话中的事实、偏好和决策",
+              "从任务中整理可复用 Skill",
+              "把文档生成结构化 Wiki 页面",
+              "索引代码符号、调用关系和影响路径",
+              "按成员、角色或 Agent 分配资产"
+            ],
+            "core_title": "让 Agent 团队继承共同经验",
+            "core_summary": "它把对话、Skill、Wiki 和 CodeGraph 统一成可管理资产，再按团队、权限和 Agent 绑定关系按需调用。",
+            "prerequisites": "需启动 memory-core、memory-hub 和 proxy，并在 .env 填入两组 LLM 参数。",
+            "limitations": "Wiki 和 CodeGraph 需要异步处理；CodeGraph 目前优先支持公开 HTTPS 仓库，私有仓库和 SSH 支持仍在完善；资产绑定仍需人工操作。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "39d45a164ce2fe4e4e54de2bef732e4307452fbb",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "highlights": [
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ],
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ],
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ]
+              ],
+              "audience": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ],
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ],
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ],
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ],
+                [
+                  "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+                ]
+              ],
+              "core_title": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "core_summary": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "prerequisites": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "limitations": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "license_label": [
+                "github.readme:39d45a164ce2fe4e4e54de2bef732e4307452fbb"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-06/repo-7b9648c3c194c2f6986fc7d9-a8d555392c2ce01999f093bf.png",
+          "publication_evidence": {
+            "full_name": "TencentCloud/TencentDB-Agent-Memory",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "39d45a164ce2fe4e4e54de2bef732e4307452fbb",
+              "source_url": "https://api.github.com/repos/TencentCloud/TencentDB-Agent-Memory/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-06/repo-7b9648c3c194c2f6986fc7d9-a8d555392c2ce01999f093bf.png",
+              "sha256": "222090589c7f9de18dc9b3b7643063d0ba78f1c11b18359cbef1707bda9302ea",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-06/2026-08-06.ai.01.tencentcloud--tencentdb-agent-memory.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 267279,
+          "forks": 23878,
+          "open_issues": 325,
+          "watchers": 267279,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-08-05T23:31:02Z",
+          "pushed_at": "2026-08-05T22:34:54Z",
+          "daily_stars": 931,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.51,
+          "star_delta": 831,
+          "fork_delta": 52,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.55,
+            "relative_growth": 79.31,
+            "fork_growth": 89.66,
+            "total_stars": 96.55,
+            "activity": 100.0,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "让编程 Agent 先澄清需求，再按计划、测试和复盘流程完成开发",
+            "highlights": [
+              "用提问把粗略想法整理成设计",
+              "把设计拆成可执行的实现计划",
+              "让子 Agent 分任务开发并接受两阶段审查"
+            ],
+            "audience": "希望让编程 Agent 按固定研发方法推进项目的开发者",
+            "capabilities": [
+              "通过提问澄清需求和设计选项",
+              "保存设计并拆分实施任务",
+              "创建隔离工作区并检查测试基线",
+              "按 RED-GREEN-REFACTOR 编码",
+              "审查任务是否符合规格和代码质量"
+            ],
+            "core_title": "把编码 Agent 变成流程化协作者",
+            "core_summary": "它用可组合技能串起头脑风暴、设计确认、计划拆解、子 Agent 开发、测试驱动和代码审查，技能会按任务自动触发。",
+            "prerequisites": "需在所使用的 coding agent 中单独安装 Superpowers；不同 harness 需要分别安装。",
+            "limitations": "设计需先获得用户确认；部分执行流程保留人工检查点；项目通常不接受新增技能贡献，技能改动还需兼容支持的 coding agent。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "2757b2efb76793a9420256ea45399edc355bead4",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ],
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ],
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ]
+              ],
+              "audience": [
+                "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ],
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ],
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ],
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ],
+                [
+                  "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+              ],
+              "core_summary": [
+                "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+              ],
+              "prerequisites": [
+                "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+              ],
+              "limitations": [
+                "github.readme:2757b2efb76793a9420256ea45399edc355bead4"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-06/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "2757b2efb76793a9420256ea45399edc355bead4",
+              "source_url": "https://api.github.com/repos/obra/superpowers/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-06/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+              "sha256": "d38b9c9b368fcb5bf36b16f443d783cc9588fa66f5b399ed5e966b50ab857937",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-06/2026-08-06.ai.02.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1216785679,
+          "full_name": "esengine/DeepSeek-Reasonix",
+          "owner": "esengine",
+          "name": "DeepSeek-Reasonix",
+          "html_url": "https://github.com/esengine/DeepSeek-Reasonix",
+          "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+          "language": "Go",
+          "stars": 31560,
+          "forks": 2027,
+          "open_issues": 799,
+          "watchers": 85,
+          "topics": [
+            "agent",
+            "agent-framework",
+            "ai-agent",
+            "ai-coding",
+            "cli",
+            "coding-agent",
+            "deepseek",
+            "developer-tools",
+            "ink",
+            "llm",
+            "prompt-caching",
+            "r1",
+            "terminal",
+            "tool-use",
+            "tui",
+            "typescript"
+          ],
+          "created_at": "2026-04-21T08:27:02Z",
+          "updated_at": "2026-08-05T23:29:11Z",
+          "pushed_at": "2026-08-05T21:54:41Z",
+          "daily_stars": 747,
+          "weekly_stars": null,
+          "trending_rank_daily": 6,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 86.26,
+          "star_delta": 814,
+          "fork_delta": 47,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.1,
+            "relative_growth": 89.66,
+            "fork_growth": 86.21,
+            "total_stars": 27.59,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "在终端、桌面端或 VS Code 里运行可配置、可扩展的 DeepSeek 编程 Agent",
+            "highlights": [
+              "用 reasonix.toml 配置模型和工具",
+              "通过 MCP 与扩展协议接入插件",
+              "围绕前缀缓存维护长会话上下文"
+            ],
+            "audience": "想在本地终端或编辑器中使用可配置 coding agent 的开发者",
+            "capabilities": [
+              "在 reasonix.toml 中配置 Provider 和工具",
+              "接入 OpenAI 兼容的模型端点",
+              "通过 MCP 服务扩展工具和资源",
+              "用 CLI、TUI、桌面端或 VS Code 工作",
+              "裁剪过期工具输出并维护会话上下文"
+            ],
+            "core_title": "围绕前缀缓存设计的本地 Agent",
+            "core_summary": "Reasonix 是单一静态 Go 二进制，通过配置驱动模型、工具和插件，并在长会话中保持稳定前缀、裁剪过期输出。",
+            "prerequisites": "CLI 使用前需安装二进制并运行 reasonix setup 配置 Provider 和模型；VS Code 扩展需先完成 CLI 安装。",
+            "limitations": "VS Code 扩展不内置 CLI，而是启动本地 reasonix acp 后端；不同入口的安装方式不同，部分插件能力依赖对应宿主环境。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "6943d32c4718cae3056e4fd9d5b93ed40f43c68e",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+              ],
+              "highlights": [
+                [
+                  "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+                ],
+                [
+                  "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+                ],
+                [
+                  "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+                ]
+              ],
+              "audience": [
+                "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+                ],
+                [
+                  "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+                ],
+                [
+                  "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+                ],
+                [
+                  "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+                ],
+                [
+                  "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+                ]
+              ],
+              "core_title": [
+                "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+              ],
+              "core_summary": [
+                "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+              ],
+              "prerequisites": [
+                "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+              ],
+              "limitations": [
+                "github.readme:6943d32c4718cae3056e4fd9d5b93ed40f43c68e"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-06/repo-774164437b893d8e612d66b3-d126bc848de8332c2c1be129.png",
+          "publication_evidence": {
+            "full_name": "esengine/DeepSeek-Reasonix",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "6943d32c4718cae3056e4fd9d5b93ed40f43c68e",
+              "source_url": "https://api.github.com/repos/esengine/DeepSeek-Reasonix/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-06/repo-774164437b893d8e612d66b3-d126bc848de8332c2c1be129.png",
+              "sha256": "afa9ca71a576f48857489e6c1657892001055f00010fdccfd31d1e7ce6c15c41",
+              "width": 422,
+              "height": 422
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-06/2026-08-06.ai.03.esengine--deepseek-reasonix.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
