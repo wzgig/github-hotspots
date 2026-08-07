@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "a1679e644291aa61e4a47fa7e0b35e8ed4c7016e44862fbd79af04ea45cb4d34",
+  "checklist_sha256": "15f93edfaf23b856d37d377e58d345136901e5d6d20461fe6b2ca10dfe682a7f",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-08-08",
+  "generated_at": "2026-08-08T07:33:58.163534+08:00",
+  "issue": {
+    "number": 28,
+    "code": "D028",
+    "stem": "D028-2026-08-08",
+    "label": "第28期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-08-08.json",
+    "report_sha256": "b1c1df55499a87bf3108ba852f65e696d7846866ae7df6cd7a8eab7d590dd25d",
+    "poster_manifest": "reports/daily/assets/2026-08-08/manifest.json",
+    "poster_manifest_sha256": "2b061b79ae0fdc6e70865489793400c44b305d264a3712f069adb39d7cc45a8f",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D028-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "53771f55942f8a111cf55b059a68b022868fda20e2636a01ca3290685b6cde85",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 335,
+      "caption_sha256": "ae5c5152ec5faecd138ab0cc1bb82f6467878f5baf16d7f2be05f46a4bc32dc3",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "128aebc214088b79277bf624e1e4dd26bb277885f799d73cf89d70202d7995b2",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-08/2026-08-08.comprehensive.cover.png",
+          "sha256": "02a91c953a9921378e6335270debd73836bb9cbc6a1e18498996f97500cac8b0",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-08/2026-08-08.comprehensive.01.mattpocock--skills.png",
+          "sha256": "e749e9f0b0d01e9ba3710bb866ee728a94d267130077e2816d81936aa3d2919a",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "mattpocock/skills",
+          "publication_path": "images/02-rank-01-mattpocock-skills.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-08/2026-08-08.comprehensive.02.obra--superpowers.png",
+          "sha256": "d0a0a5c2fe8b1d7f98207fee69f5540a68538f2ca6a169a6128c837439f8e67c",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "obra/superpowers",
+          "publication_path": "images/03-rank-02-obra-superpowers.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-08/2026-08-08.comprehensive.03.addyosmani--agent-skills.png",
+          "sha256": "85e7d029bc109cf4fb6a1af0a781b453816878ce5d86c494cc4124437cb5d279",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "addyosmani/agent-skills",
+          "publication_path": "images/04-rank-03-addyosmani-agent-skills.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D028-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "ebc2a53cc2097a2e5c7c350e27f9637eb3df150f3f54fb05e1ca66e487cde4cb",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 353,
+      "caption_sha256": "e50da4d29fd63278b5c1eaf3d0b514bafb4ffbe0ff0cef42917bd11b00438941",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "65780e8b8f20eb3c2af90b0f2cf6a54f363d51049b8e296b6c0a5f2005f7c5c9",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-08/2026-08-08.ai.cover.png",
+          "sha256": "87315f0c37032fe2d4710ec5b16d26b98b9fabab6844e7786b34651aa301bb38",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-08/2026-08-08.ai.01.addyosmani--agent-skills.png",
+          "sha256": "237d85bb8c716c74b64ce5d6efc501e0fb19d2e4b7b25ed6e153f154fb4d9f6d",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "addyosmani/agent-skills",
+          "publication_path": "images/02-rank-01-addyosmani-agent-skills.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-08/2026-08-08.ai.02.obra--superpowers.png",
+          "sha256": "f587b5ea2f2cef5721614e75cfd8e423254793fc1437e39cc308b6b51763d0b9",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "obra/superpowers",
+          "publication_path": "images/03-rank-02-obra-superpowers.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-08/2026-08-08.ai.03.nousresearch--hermes-agent.png",
+          "sha256": "f1859fb5ab3b80c9a54cc7efd129f83aa5ed2a775257086b0b41ffcfcc8c99ae",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/04-rank-03-nousresearch-hermes-agent.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-08-08",
+    "revision": "a1679e644291",
+    "image_policy": "repository-source-reference"
+  }
+}
