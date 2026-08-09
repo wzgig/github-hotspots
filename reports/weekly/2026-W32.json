@@ -1,0 +1,2941 @@
+{
+  "schema_version": 3,
+  "period": "weekly",
+  "run_date": "2026-08-09",
+  "window_start": "2026-08-02",
+  "window_end": "2026-08-09",
+  "generated_at": "2026-08-09T11:58:53+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-02 至 2026-08-09",
+  "publication": {
+    "issue_number": 5,
+    "issue_code": "W005",
+    "issue_label": "第5期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "AI 专题榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/weekly/assets/2026-W32",
+    "manifest": "reports/weekly/assets/2026-W32/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "zhaoxuya520/reverse-skill",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.01.zhaoxuya520--reverse-skill.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "TencentCloud/TencentDB-Agent-Memory",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.02.tencentcloud--tencentdb-agent-memory.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.03.mattpocock--skills.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.04.obra--superpowers.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "virgiliojr94/book-to-skill",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.05.virgiliojr94--book-to-skill.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.06.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.07.firecrawl--firecrawl.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W32/2026-W32.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "zhaoxuya520/reverse-skill",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.01.zhaoxuya520--reverse-skill.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "TencentCloud/TencentDB-Agent-Memory",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.02.tencentcloud--tencentdb-agent-memory.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.03.obra--superpowers.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "microsoft/AI-For-Beginners",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.04.microsoft--ai-for-beginners.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.05.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "lyogavin/airllm",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.06.lyogavin--airllm.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.07.firecrawl--firecrawl.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 5,
+      "issue_code": "W005",
+      "issue_label": "第5期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1237819660,
+      "full_name": "zhaoxuya520/reverse-skill",
+      "owner": "zhaoxuya520",
+      "name": "reverse-skill",
+      "html_url": "https://github.com/zhaoxuya520/reverse-skill",
+      "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+      "language": "PowerShell",
+      "stars": 21628,
+      "forks": 2957,
+      "open_issues": 10,
+      "watchers": 81,
+      "topics": [],
+      "created_at": "2026-05-13T14:37:57Z",
+      "updated_at": "2026-08-09T03:58:41Z",
+      "pushed_at": "2026-08-08T15:44:19Z",
+      "daily_stars": null,
+      "weekly_stars": 9635,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 1,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 96.1,
+      "star_delta": 9677,
+      "fork_delta": 1148,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 99.06,
+        "relative_growth": 100.0,
+        "fork_growth": 99.06,
+        "total_stars": 46.23,
+        "activity": 93.55,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "公开信息不足，暂不能准确说明 reverse-skill 的具体用途",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "公开信息不足，暂不能准确说明 reverse-skill 的具体用途",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W32/repo-f4dc3559b402536575568945-c5507509488cf2425afdb0d1.png",
+      "publication_evidence": {
+        "full_name": "zhaoxuya520/reverse-skill",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W32/repo-f4dc3559b402536575568945-c5507509488cf2425afdb0d1.png",
+          "sha256": "7656aea161c3e11273f92866c6a39ac756f03130b09450312515a9ac483837e8",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.01.zhaoxuya520--reverse-skill.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1203558071,
+      "full_name": "TencentCloud/TencentDB-Agent-Memory",
+      "owner": "TencentCloud",
+      "name": "TencentDB-Agent-Memory",
+      "html_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+      "language": "TypeScript",
+      "stars": 18301,
+      "forks": 1646,
+      "open_issues": 573,
+      "watchers": 65,
+      "topics": [
+        "agent",
+        "ai-agent",
+        "embedding",
+        "llm",
+        "local-first",
+        "long-term-memory",
+        "memory",
+        "openclaw-plugin",
+        "vector-search"
+      ],
+      "created_at": "2026-04-07T06:34:26Z",
+      "updated_at": "2026-08-09T03:56:51Z",
+      "pushed_at": "2026-08-06T12:07:09Z",
+      "daily_stars": null,
+      "weekly_stars": 8046,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 2,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 91.95,
+      "star_delta": 7988,
+      "fork_delta": 656,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.11,
+        "relative_growth": 99.06,
+        "fork_growth": 96.23,
+        "total_stars": 42.45,
+        "activity": 81.87,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 TencentDB-Agent-Memory；它能把模型能力接入可重复的任务流程",
+        "highlights": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+        "capabilities": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "core_title": "搭建能够连续执行多步任务的 AI Agent",
+        "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 TencentDB-Agent-Memory；它能把模型能力接入可重复的任务流程",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W32/repo-7b9648c3c194c2f6986fc7d9-a8d555392c2ce01999f093bf.png",
+      "publication_evidence": {
+        "full_name": "TencentCloud/TencentDB-Agent-Memory",
+        "license_spdx_id": "NOASSERTION",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W32/repo-7b9648c3c194c2f6986fc7d9-a8d555392c2ce01999f093bf.png",
+          "sha256": "796f1056c3cb8e535620facc3f5a5f7ba3b50b2663c7bc41581e0e86eaad7529",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.02.tencentcloud--tencentdb-agent-memory.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 210171,
+      "forks": 18161,
+      "open_issues": 310,
+      "watchers": 210171,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-08-09T03:58:45Z",
+      "pushed_at": "2026-08-07T15:50:46Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 91.54,
+      "star_delta": 11012,
+      "fork_delta": 996,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 93.4,
+        "fork_growth": 98.11,
+        "total_stars": 85.85,
+        "activity": 87.52,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "目前无法从公开字段确认 skills 能完成哪些任务",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "目前无法从公开字段确认 skills 能完成哪些任务",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W32/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W32/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.03.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1073224795,
+      "full_name": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "html_url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "stars": 269375,
+      "forks": 24069,
+      "open_issues": 324,
+      "watchers": 269375,
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "created_at": "2025-10-09T19:45:18Z",
+      "updated_at": "2026-08-09T03:57:53Z",
+      "pushed_at": "2026-08-08T01:45:49Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 4,
+      "score": 87.99,
+      "star_delta": 4523,
+      "fork_delta": 421,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.34,
+        "relative_growth": 87.74,
+        "fork_growth": 93.4,
+        "total_stars": 91.51,
+        "activity": 93.55,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "用 superpowers 可以给编程 Agent 提供可复用的软件开发技能，还会让需求、编码和验证按固定流程推进",
+        "highlights": [
+          "把常用开发方法封装成可复用技能",
+          "按规划、实现和验证步骤组织任务",
+          "在不同项目中复用同一套开发流程"
+        ],
+        "audience": "希望让编程 Agent 按固定方法完成研发任务的开发者",
+        "capabilities": [
+          "把常用开发方法封装成可复用技能",
+          "按规划、实现和验证步骤组织任务",
+          "在不同项目中复用同一套开发流程"
+        ],
+        "core_title": "给编程 Agent 提供可复用的软件开发技能",
+        "core_summary": "用 superpowers 可以给编程 Agent 提供可复用的软件开发技能，还会让需求、编码和验证按固定流程推进",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W32/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+      "publication_evidence": {
+        "full_name": "obra/superpowers",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W32/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "sha256": "1df5657cda192b0e8d047947d1dcc4170545b1c2852ee58262e69fa7f8f6b5bc",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.04.obra--superpowers.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1226123343,
+      "full_name": "virgiliojr94/book-to-skill",
+      "owner": "virgiliojr94",
+      "name": "book-to-skill",
+      "html_url": "https://github.com/virgiliojr94/book-to-skill",
+      "description": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
+      "language": "Python",
+      "stars": 18983,
+      "forks": 2042,
+      "open_issues": 22,
+      "watchers": 106,
+      "topics": [],
+      "created_at": "2026-05-01T02:09:39Z",
+      "updated_at": "2026-08-09T03:57:57Z",
+      "pushed_at": "2026-08-07T15:34:15Z",
+      "daily_stars": null,
+      "weekly_stars": 4071,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 7,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 5,
+      "score": 87.68,
+      "star_delta": 4021,
+      "fork_delta": 428,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 92.45,
+        "relative_growth": 97.17,
+        "fork_growth": 94.34,
+        "total_stars": 43.4,
+        "activity": 87.52,
+        "trending_signal": 33.33
+      },
+      "summary": {
+        "one_line": "book-to-skill 暂无足够功能证据，不应直接进入发布稿",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "book-to-skill 暂无足够功能证据，不应直接进入发布稿",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W32/repo-905acd465054e11dc4961a11-35b1702c2cbd92bd1e0b4080.png",
+      "publication_evidence": {
+        "full_name": "virgiliojr94/book-to-skill",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W32/repo-905acd465054e11dc4961a11-35b1702c2cbd92bd1e0b4080.png",
+          "sha256": "85bfe83937dd1590a1c90c1bfbd09d149bb7c8fb3e69fa172a7b5378f65691a9",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.05.virgiliojr94--book-to-skill.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1024554267,
+      "full_name": "NousResearch/hermes-agent",
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "html_url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": 227581,
+      "forks": 44621,
+      "open_issues": 29790,
+      "watchers": 227581,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "clawdbot",
+        "codex",
+        "hermes",
+        "hermes-agent",
+        "llm",
+        "moltbot",
+        "nous-research",
+        "openai",
+        "openclaw"
+      ],
+      "created_at": "2025-07-22T22:22:28Z",
+      "updated_at": "2026-08-09T03:58:25Z",
+      "pushed_at": "2026-08-09T03:54:47Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 6,
+      "score": 87.5,
+      "star_delta": 3658,
+      "fork_delta": 1384,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 91.51,
+        "relative_growth": 86.79,
+        "fork_growth": 100.0,
+        "total_stars": 87.74,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "当你需要搭建能够连续执行多步任务的 AI Agent，hermes-agent 可以接手，同时把模型能力接入可重复的任务流程",
+        "highlights": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+        "capabilities": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "core_title": "搭建能够连续执行多步任务的 AI Agent",
+        "core_summary": "当你需要搭建能够连续执行多步任务的 AI Agent，hermes-agent 可以接手，同时把模型能力接入可重复的任务流程",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W32/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+      "publication_evidence": {
+        "full_name": "NousResearch/hermes-agent",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W32/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.06.nousresearch--hermes-agent.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 787076358,
+      "full_name": "firecrawl/firecrawl",
+      "owner": "firecrawl",
+      "name": "firecrawl",
+      "html_url": "https://github.com/firecrawl/firecrawl",
+      "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
+      "language": "TypeScript",
+      "stars": 163488,
+      "forks": 9193,
+      "open_issues": 498,
+      "watchers": 163488,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-crawler",
+        "ai-scraping",
+        "ai-search",
+        "crawler",
+        "data-extraction",
+        "html-to-markdown",
+        "llm",
+        "markdown",
+        "scraper",
+        "scraping",
+        "web-crawler",
+        "web-data",
+        "web-data-extraction",
+        "web-scraper",
+        "web-scraping",
+        "web-search",
+        "webscraping"
+      ],
+      "created_at": "2024-04-15T21:02:29Z",
+      "updated_at": "2026-08-09T03:57:31Z",
+      "pushed_at": "2026-08-08T22:39:01Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 7,
+      "score": 86.75,
+      "star_delta": 4311,
+      "fork_delta": 151,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 93.4,
+        "relative_growth": 90.57,
+        "fork_growth": 83.96,
+        "total_stars": 70.75,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "如果工作流里要搜索、抓取并整理网页内容，可以交给 firecrawl，同时把网页数据交给程序或 AI 工作流继续处理",
+        "highlights": [
+          "通过接口搜索并抓取公开网页",
+          "从页面中提取正文和结构化内容",
+          "把网页整理成更易处理的文本数据"
+        ],
+        "audience": "需要为 AI 应用、搜索或数据流程接入网页内容的开发者",
+        "capabilities": [
+          "通过接口搜索并抓取公开网页",
+          "从页面中提取正文和结构化内容",
+          "把网页整理成更易处理的文本数据"
+        ],
+        "core_title": "搜索、抓取并整理网页内容",
+        "core_summary": "如果工作流里要搜索、抓取并整理网页内容，可以交给 firecrawl，同时把网页数据交给程序或 AI 工作流继续处理",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W32/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+      "publication_evidence": {
+        "full_name": "firecrawl/firecrawl",
+        "license_spdx_id": "AGPL-3.0",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W32/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "sha256": "5ef56f2686cd2671d1dcba064798210c41508392c22add330c0614d6532e172c",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "AGPL-3.0",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.07.firecrawl--firecrawl.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "zhaoxuya520/reverse-skill",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.01.zhaoxuya520--reverse-skill.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "TencentCloud/TencentDB-Agent-Memory",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.02.tencentcloud--tencentdb-agent-memory.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.03.mattpocock--skills.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.04.obra--superpowers.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "virgiliojr94/book-to-skill",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.05.virgiliojr94--book-to-skill.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.06.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.07.firecrawl--firecrawl.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1237819660,
+          "full_name": "zhaoxuya520/reverse-skill",
+          "owner": "zhaoxuya520",
+          "name": "reverse-skill",
+          "html_url": "https://github.com/zhaoxuya520/reverse-skill",
+          "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+          "language": "PowerShell",
+          "stars": 21628,
+          "forks": 2957,
+          "open_issues": 10,
+          "watchers": 81,
+          "topics": [],
+          "created_at": "2026-05-13T14:37:57Z",
+          "updated_at": "2026-08-09T03:58:41Z",
+          "pushed_at": "2026-08-08T15:44:19Z",
+          "daily_stars": null,
+          "weekly_stars": 9635,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 1,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 96.1,
+          "star_delta": 9677,
+          "fork_delta": 1148,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 99.06,
+            "relative_growth": 100.0,
+            "fork_growth": 99.06,
+            "total_stars": 46.23,
+            "activity": 93.55,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 reverse-skill 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 reverse-skill 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-f4dc3559b402536575568945-c5507509488cf2425afdb0d1.png",
+          "publication_evidence": {
+            "full_name": "zhaoxuya520/reverse-skill",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-f4dc3559b402536575568945-c5507509488cf2425afdb0d1.png",
+              "sha256": "7656aea161c3e11273f92866c6a39ac756f03130b09450312515a9ac483837e8",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.01.zhaoxuya520--reverse-skill.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1203558071,
+          "full_name": "TencentCloud/TencentDB-Agent-Memory",
+          "owner": "TencentCloud",
+          "name": "TencentDB-Agent-Memory",
+          "html_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+          "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+          "language": "TypeScript",
+          "stars": 18301,
+          "forks": 1646,
+          "open_issues": 573,
+          "watchers": 65,
+          "topics": [
+            "agent",
+            "ai-agent",
+            "embedding",
+            "llm",
+            "local-first",
+            "long-term-memory",
+            "memory",
+            "openclaw-plugin",
+            "vector-search"
+          ],
+          "created_at": "2026-04-07T06:34:26Z",
+          "updated_at": "2026-08-09T03:56:51Z",
+          "pushed_at": "2026-08-06T12:07:09Z",
+          "daily_stars": null,
+          "weekly_stars": 8046,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 2,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 91.95,
+          "star_delta": 7988,
+          "fork_delta": 656,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.11,
+            "relative_growth": 99.06,
+            "fork_growth": 96.23,
+            "total_stars": 42.45,
+            "activity": 81.87,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 TencentDB-Agent-Memory；它能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 TencentDB-Agent-Memory；它能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-7b9648c3c194c2f6986fc7d9-a8d555392c2ce01999f093bf.png",
+          "publication_evidence": {
+            "full_name": "TencentCloud/TencentDB-Agent-Memory",
+            "license_spdx_id": "NOASSERTION",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-7b9648c3c194c2f6986fc7d9-a8d555392c2ce01999f093bf.png",
+              "sha256": "796f1056c3cb8e535620facc3f5a5f7ba3b50b2663c7bc41581e0e86eaad7529",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.02.tencentcloud--tencentdb-agent-memory.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 210171,
+          "forks": 18161,
+          "open_issues": 310,
+          "watchers": 210171,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-08-09T03:58:45Z",
+          "pushed_at": "2026-08-07T15:50:46Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 91.54,
+          "star_delta": 11012,
+          "fork_delta": 996,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 93.4,
+            "fork_growth": 98.11,
+            "total_stars": 85.85,
+            "activity": 87.52,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 skills 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 skills 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.03.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 269375,
+          "forks": 24069,
+          "open_issues": 324,
+          "watchers": 269375,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-08-09T03:57:53Z",
+          "pushed_at": "2026-08-08T01:45:49Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 87.99,
+          "star_delta": 4523,
+          "fork_delta": 421,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.34,
+            "relative_growth": 87.74,
+            "fork_growth": 93.4,
+            "total_stars": 91.51,
+            "activity": 93.55,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "用 superpowers 可以给编程 Agent 提供可复用的软件开发技能，还会让需求、编码和验证按固定流程推进",
+            "highlights": [
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
+            ],
+            "audience": "希望让编程 Agent 按固定方法完成研发任务的开发者",
+            "capabilities": [
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
+            ],
+            "core_title": "给编程 Agent 提供可复用的软件开发技能",
+            "core_summary": "用 superpowers 可以给编程 Agent 提供可复用的软件开发技能，还会让需求、编码和验证按固定流程推进",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+              "sha256": "1df5657cda192b0e8d047947d1dcc4170545b1c2852ee58262e69fa7f8f6b5bc",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.04.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1226123343,
+          "full_name": "virgiliojr94/book-to-skill",
+          "owner": "virgiliojr94",
+          "name": "book-to-skill",
+          "html_url": "https://github.com/virgiliojr94/book-to-skill",
+          "description": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
+          "language": "Python",
+          "stars": 18983,
+          "forks": 2042,
+          "open_issues": 22,
+          "watchers": 106,
+          "topics": [],
+          "created_at": "2026-05-01T02:09:39Z",
+          "updated_at": "2026-08-09T03:57:57Z",
+          "pushed_at": "2026-08-07T15:34:15Z",
+          "daily_stars": null,
+          "weekly_stars": 4071,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 7,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 87.68,
+          "star_delta": 4021,
+          "fork_delta": 428,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.45,
+            "relative_growth": 97.17,
+            "fork_growth": 94.34,
+            "total_stars": 43.4,
+            "activity": 87.52,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "book-to-skill 暂无足够功能证据，不应直接进入发布稿",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "book-to-skill 暂无足够功能证据，不应直接进入发布稿",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-905acd465054e11dc4961a11-35b1702c2cbd92bd1e0b4080.png",
+          "publication_evidence": {
+            "full_name": "virgiliojr94/book-to-skill",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-905acd465054e11dc4961a11-35b1702c2cbd92bd1e0b4080.png",
+              "sha256": "85bfe83937dd1590a1c90c1bfbd09d149bb7c8fb3e69fa172a7b5378f65691a9",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.05.virgiliojr94--book-to-skill.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 227581,
+          "forks": 44621,
+          "open_issues": 29790,
+          "watchers": 227581,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-08-09T03:58:25Z",
+          "pushed_at": "2026-08-09T03:54:47Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 87.5,
+          "star_delta": 3658,
+          "fork_delta": 1384,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 91.51,
+            "relative_growth": 86.79,
+            "fork_growth": 100.0,
+            "total_stars": 87.74,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "当你需要搭建能够连续执行多步任务的 AI Agent，hermes-agent 可以接手，同时把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "当你需要搭建能够连续执行多步任务的 AI Agent，hermes-agent 可以接手，同时把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.06.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 787076358,
+          "full_name": "firecrawl/firecrawl",
+          "owner": "firecrawl",
+          "name": "firecrawl",
+          "html_url": "https://github.com/firecrawl/firecrawl",
+          "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
+          "language": "TypeScript",
+          "stars": 163488,
+          "forks": 9193,
+          "open_issues": 498,
+          "watchers": 163488,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "ai-crawler",
+            "ai-scraping",
+            "ai-search",
+            "crawler",
+            "data-extraction",
+            "html-to-markdown",
+            "llm",
+            "markdown",
+            "scraper",
+            "scraping",
+            "web-crawler",
+            "web-data",
+            "web-data-extraction",
+            "web-scraper",
+            "web-scraping",
+            "web-search",
+            "webscraping"
+          ],
+          "created_at": "2024-04-15T21:02:29Z",
+          "updated_at": "2026-08-09T03:57:31Z",
+          "pushed_at": "2026-08-08T22:39:01Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 86.75,
+          "star_delta": 4311,
+          "fork_delta": 151,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.4,
+            "relative_growth": 90.57,
+            "fork_growth": 83.96,
+            "total_stars": 70.75,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "如果工作流里要搜索、抓取并整理网页内容，可以交给 firecrawl，同时把网页数据交给程序或 AI 工作流继续处理",
+            "highlights": [
+              "通过接口搜索并抓取公开网页",
+              "从页面中提取正文和结构化内容",
+              "把网页整理成更易处理的文本数据"
+            ],
+            "audience": "需要为 AI 应用、搜索或数据流程接入网页内容的开发者",
+            "capabilities": [
+              "通过接口搜索并抓取公开网页",
+              "从页面中提取正文和结构化内容",
+              "把网页整理成更易处理的文本数据"
+            ],
+            "core_title": "搜索、抓取并整理网页内容",
+            "core_summary": "如果工作流里要搜索、抓取并整理网页内容，可以交给 firecrawl，同时把网页数据交给程序或 AI 工作流继续处理",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "publication_evidence": {
+            "full_name": "firecrawl/firecrawl",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+              "sha256": "5ef56f2686cd2671d1dcba064798210c41508392c22add330c0614d6532e172c",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.comprehensive.07.firecrawl--firecrawl.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W32/2026-W32.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "zhaoxuya520/reverse-skill",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.01.zhaoxuya520--reverse-skill.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "TencentCloud/TencentDB-Agent-Memory",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.02.tencentcloud--tencentdb-agent-memory.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.03.obra--superpowers.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "microsoft/AI-For-Beginners",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.04.microsoft--ai-for-beginners.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.05.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "lyogavin/airllm",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.06.lyogavin--airllm.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/weekly/assets/2026-W32/2026-W32.ai.07.firecrawl--firecrawl.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1237819660,
+          "full_name": "zhaoxuya520/reverse-skill",
+          "owner": "zhaoxuya520",
+          "name": "reverse-skill",
+          "html_url": "https://github.com/zhaoxuya520/reverse-skill",
+          "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+          "language": "PowerShell",
+          "stars": 21628,
+          "forks": 2957,
+          "open_issues": 10,
+          "watchers": 81,
+          "topics": [],
+          "created_at": "2026-05-13T14:37:57Z",
+          "updated_at": "2026-08-09T03:58:41Z",
+          "pushed_at": "2026-08-08T15:44:19Z",
+          "daily_stars": null,
+          "weekly_stars": 9635,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 1,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 96.23,
+          "star_delta": 9677,
+          "fork_delta": 1148,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 97.5,
+            "total_stars": 42.5,
+            "activity": 93.55,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 reverse-skill 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 reverse-skill 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-f4dc3559b402536575568945-c5507509488cf2425afdb0d1.png",
+          "publication_evidence": {
+            "full_name": "zhaoxuya520/reverse-skill",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-f4dc3559b402536575568945-c5507509488cf2425afdb0d1.png",
+              "sha256": "7656aea161c3e11273f92866c6a39ac756f03130b09450312515a9ac483837e8",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.ai.01.zhaoxuya520--reverse-skill.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1203558071,
+          "full_name": "TencentCloud/TencentDB-Agent-Memory",
+          "owner": "TencentCloud",
+          "name": "TencentDB-Agent-Memory",
+          "html_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+          "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+          "language": "TypeScript",
+          "stars": 18301,
+          "forks": 1646,
+          "open_issues": 573,
+          "watchers": 65,
+          "topics": [
+            "agent",
+            "ai-agent",
+            "embedding",
+            "llm",
+            "local-first",
+            "long-term-memory",
+            "memory",
+            "openclaw-plugin",
+            "vector-search"
+          ],
+          "created_at": "2026-04-07T06:34:26Z",
+          "updated_at": "2026-08-09T03:56:51Z",
+          "pushed_at": "2026-08-06T12:07:09Z",
+          "daily_stars": null,
+          "weekly_stars": 8046,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 2,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 90.84,
+          "star_delta": 7988,
+          "fork_delta": 656,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.5,
+            "relative_growth": 97.5,
+            "fork_growth": 92.5,
+            "total_stars": 40.0,
+            "activity": 81.87,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 TencentDB-Agent-Memory；它能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 TencentDB-Agent-Memory；它能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-7b9648c3c194c2f6986fc7d9-a8d555392c2ce01999f093bf.png",
+          "publication_evidence": {
+            "full_name": "TencentCloud/TencentDB-Agent-Memory",
+            "license_spdx_id": "NOASSERTION",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-7b9648c3c194c2f6986fc7d9-a8d555392c2ce01999f093bf.png",
+              "sha256": "796f1056c3cb8e535620facc3f5a5f7ba3b50b2663c7bc41581e0e86eaad7529",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.ai.02.tencentcloud--tencentdb-agent-memory.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 269375,
+          "forks": 24069,
+          "open_issues": 324,
+          "watchers": 269375,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-08-09T03:57:53Z",
+          "pushed_at": "2026-08-08T01:45:49Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 83.48,
+          "star_delta": 4523,
+          "fork_delta": 421,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 87.5,
+            "relative_growth": 82.5,
+            "fork_growth": 90.0,
+            "total_stars": 97.5,
+            "activity": 93.55,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "主要任务是给编程 Agent 提供可复用的软件开发技能；superpowers 还能让需求、编码和验证按固定流程推进",
+            "highlights": [
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
+            ],
+            "audience": "希望让编程 Agent 按固定方法完成研发任务的开发者",
+            "capabilities": [
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
+            ],
+            "core_title": "给编程 Agent 提供可复用的软件开发技能",
+            "core_summary": "主要任务是给编程 Agent 提供可复用的软件开发技能；superpowers 还能让需求、编码和验证按固定流程推进",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+              "sha256": "1df5657cda192b0e8d047947d1dcc4170545b1c2852ee58262e69fa7f8f6b5bc",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.ai.03.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 344190478,
+          "full_name": "microsoft/AI-For-Beginners",
+          "owner": "microsoft",
+          "name": "AI-For-Beginners",
+          "html_url": "https://github.com/microsoft/AI-For-Beginners",
+          "description": "12 Weeks, 24 Lessons, AI for All!",
+          "language": "Jupyter Notebook",
+          "stars": 63671,
+          "forks": 12331,
+          "open_issues": 26,
+          "watchers": 624,
+          "topics": [
+            "ai",
+            "artificial-intelligence",
+            "cnn",
+            "computer-vision",
+            "deep-learning",
+            "gan",
+            "machine-learning",
+            "microsoft-for-beginners",
+            "nlp",
+            "rnn"
+          ],
+          "created_at": "2021-03-03T16:27:36Z",
+          "updated_at": "2026-08-09T03:56:55Z",
+          "pushed_at": "2026-07-21T11:11:48Z",
+          "daily_stars": null,
+          "weekly_stars": 7469,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 4,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 82.47,
+          "star_delta": 5960,
+          "fork_delta": 928,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.0,
+            "relative_growth": 90.0,
+            "fork_growth": 95.0,
+            "total_stars": 50.0,
+            "activity": 28.18,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "在补充 README 证据前，AI-For-Beginners 需要人工核对用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "在补充 README 证据前，AI-For-Beginners 需要人工核对用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-faccbcf82fa14892f31ae215-d7e412ff184e94138e917b65.png",
+          "publication_evidence": {
+            "full_name": "microsoft/AI-For-Beginners",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-faccbcf82fa14892f31ae215-d7e412ff184e94138e917b65.png",
+              "sha256": "4357d8974cae42a49a9927c394b43dcaf5263858be88444e564af4d3324abe89",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.ai.04.microsoft--ai-for-beginners.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 227581,
+          "forks": 44621,
+          "open_issues": 29790,
+          "watchers": 227581,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-08-09T03:58:25Z",
+          "pushed_at": "2026-08-09T03:54:47Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 81.88,
+          "star_delta": 3658,
+          "fork_delta": 1384,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 82.5,
+            "relative_growth": 80.0,
+            "fork_growth": 100.0,
+            "total_stars": 92.5,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "这类任务可以交给 hermes-agent：搭建能够连续执行多步任务的 AI Agent，并把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "这类任务可以交给 hermes-agent：搭建能够连续执行多步任务的 AI Agent，并把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.ai.05.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 652712035,
+          "full_name": "lyogavin/airllm",
+          "owner": "lyogavin",
+          "name": "airllm",
+          "html_url": "https://github.com/lyogavin/airllm",
+          "description": "AirLLM 70B inference with single 4GB GPU",
+          "language": "Jupyter Notebook",
+          "stars": 30186,
+          "forks": 3211,
+          "open_issues": 133,
+          "watchers": 271,
+          "topics": [
+            "chinese-llm",
+            "chinese-nlp",
+            "finetune",
+            "generative-ai",
+            "instruct-gpt",
+            "instruction-set",
+            "llama",
+            "llm",
+            "lora",
+            "open-models",
+            "open-source",
+            "open-source-models",
+            "qlora"
+          ],
+          "created_at": "2023-06-12T16:28:41Z",
+          "updated_at": "2026-08-09T03:58:05Z",
+          "pushed_at": "2026-08-08T06:54:20Z",
+          "daily_stars": null,
+          "weekly_stars": 5711,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 3,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 81.48,
+          "star_delta": 5711,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 92.5,
+            "relative_growth": 95.0,
+            "fork_growth": 21.25,
+            "total_stars": 45.0,
+            "activity": 93.55,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "这次只能确认 airllm 的仓库身份，具体功能仍待核对",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "这次只能确认 airllm 的仓库身份，具体功能仍待核对",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-1e73b5eaa3faad65cc2e75f3-2a0faf5a449be9c075adfd20.png",
+          "publication_evidence": {
+            "full_name": "lyogavin/airllm",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-1e73b5eaa3faad65cc2e75f3-2a0faf5a449be9c075adfd20.png",
+              "sha256": "f217b2ea6280d1c522ebfe12b56367937104231b17ab4068857dd7b44fb187dc",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.ai.06.lyogavin--airllm.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 787076358,
+          "full_name": "firecrawl/firecrawl",
+          "owner": "firecrawl",
+          "name": "firecrawl",
+          "html_url": "https://github.com/firecrawl/firecrawl",
+          "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
+          "language": "TypeScript",
+          "stars": 163488,
+          "forks": 9193,
+          "open_issues": 498,
+          "watchers": 163488,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "ai-crawler",
+            "ai-scraping",
+            "ai-search",
+            "crawler",
+            "data-extraction",
+            "html-to-markdown",
+            "llm",
+            "markdown",
+            "scraper",
+            "scraping",
+            "web-crawler",
+            "web-data",
+            "web-data-extraction",
+            "web-scraper",
+            "web-scraping",
+            "web-search",
+            "webscraping"
+          ],
+          "created_at": "2024-04-15T21:02:29Z",
+          "updated_at": "2026-08-09T03:57:31Z",
+          "pushed_at": "2026-08-08T22:39:01Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 80.38,
+          "star_delta": 4311,
+          "fork_delta": 151,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 85.0,
+            "relative_growth": 85.0,
+            "fork_growth": 70.0,
+            "total_stars": 77.5,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "如果工作流里要搜索、抓取并整理网页内容，可以交给 firecrawl，同时把网页数据交给程序或 AI 工作流继续处理",
+            "highlights": [
+              "通过接口搜索并抓取公开网页",
+              "从页面中提取正文和结构化内容",
+              "把网页整理成更易处理的文本数据"
+            ],
+            "audience": "需要为 AI 应用、搜索或数据流程接入网页内容的开发者",
+            "capabilities": [
+              "通过接口搜索并抓取公开网页",
+              "从页面中提取正文和结构化内容",
+              "把网页整理成更易处理的文本数据"
+            ],
+            "core_title": "搜索、抓取并整理网页内容",
+            "core_summary": "如果工作流里要搜索、抓取并整理网页内容，可以交给 firecrawl，同时把网页数据交给程序或 AI 工作流继续处理",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W32/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "publication_evidence": {
+            "full_name": "firecrawl/firecrawl",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W32/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+              "sha256": "5ef56f2686cd2671d1dcba064798210c41508392c22add330c0614d6532e172c",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W32/2026-W32.ai.07.firecrawl--firecrawl.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
