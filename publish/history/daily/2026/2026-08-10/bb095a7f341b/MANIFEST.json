@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "bb095a7f341ba62c6058d420fe53399c3bf3427179ab1a03b7fa95d49592d364",
+  "checklist_sha256": "446793b9519a81fd41021c3bd1a044d6580155ceb590039b2e9a283fa19c44a2",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-08-10",
+  "generated_at": "2026-08-10T12:11:48.857825+08:00",
+  "issue": {
+    "number": 30,
+    "code": "D030",
+    "stem": "D030-2026-08-10",
+    "label": "第30期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-08-10.json",
+    "report_sha256": "590265d6f63257cad4cf6c6f75ca926753958b3ae1a5da05e631fc072a10056a",
+    "poster_manifest": "reports/daily/assets/2026-08-10/manifest.json",
+    "poster_manifest_sha256": "0f231e8b2ca11b0411c1d5e786fad92b5972c212e29dde9697a16726e792ce5b",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D030-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "dede9c19b9e23bd5f6d1a2ee107fa48dc64c688707057d0c103b94de22d9fba5",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 346,
+      "caption_sha256": "cd1e8bf71d137a046cd5265594ab431ea9765f5353e6a857851fd52f049d0970",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "157071cab5097a73bcedb98aa46239cf9a5745a49ef7cdf409350a9c2b28dc0a",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-10/2026-08-10.comprehensive.cover.png",
+          "sha256": "5ceaf4ed5950bb377e3c98f9ddc0bf1fa0b980d8bceb55d1485e6135397786ad",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-10/2026-08-10.comprehensive.01.primeintellect-ai--prime-agent.png",
+          "sha256": "b48c54f3377d23bdb4409eb8147e912ae9d5e38f917d63d406cac6f6100d9b8b",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "PrimeIntellect-ai/prime-agent",
+          "publication_path": "images/02-rank-01-primeintellect-ai-prime-agent.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-10/2026-08-10.comprehensive.02.comfy-org--comfyui.png",
+          "sha256": "785bbd947a7da0719eb85c7e8425812ac4cb231312906a50ed03a323616aed14",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "Comfy-Org/ComfyUI",
+          "publication_path": "images/03-rank-02-comfy-org-comfyui.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-10/2026-08-10.comprehensive.03.msitarzewski--agency-agents.png",
+          "sha256": "9d3fea67d244a8e3588ee49aacc53391aede4548123f6e47a6ca0ac785f6b0b6",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "msitarzewski/agency-agents",
+          "publication_path": "images/04-rank-03-msitarzewski-agency-agents.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D030-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "595303971bfaf50261edc1a19195566d832bc1262220214b64d60228e1d30adb",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 316,
+      "caption_sha256": "f6b9abfc40ff9e7bac0d966b0481961caaa99ca8024a4a826e55cedb81a47a99",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "cde2611faf7662db03c718ab505efaa2125f1f65d79913e0618e715c2007737a",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-10/2026-08-10.ai.cover.png",
+          "sha256": "df284e88f3afa80876e6fe8bc4931f5fecd8697c4872a01fbd5435258e838e7d",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-10/2026-08-10.ai.01.msitarzewski--agency-agents.png",
+          "sha256": "06adc7663bc5f5bd4f5b2e6dc4e3d39da8697c636fb88c3b727a828126d642d6",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "msitarzewski/agency-agents",
+          "publication_path": "images/02-rank-01-msitarzewski-agency-agents.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-10/2026-08-10.ai.02.comfy-org--comfyui.png",
+          "sha256": "e4606b228ac0fdaf437ccf8fd39665f131033c02f5e8677483dadc18cbc02821",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "Comfy-Org/ComfyUI",
+          "publication_path": "images/03-rank-02-comfy-org-comfyui.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-10/2026-08-10.ai.03.firecrawl--firecrawl.png",
+          "sha256": "8286c044b5f7dd7792b9f28c1b486cd4fbfbb0ba09da7e47bb0a2f0c7b33e338",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "firecrawl/firecrawl",
+          "publication_path": "images/04-rank-03-firecrawl-firecrawl.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-08-10",
+    "revision": "bb095a7f341b",
+    "image_policy": "repository-source-reference"
+  }
+}
