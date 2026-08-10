@@ -1,0 +1,1492 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-11",
+  "window_start": "2026-08-10",
+  "window_end": "2026-08-11",
+  "generated_at": "2026-08-11T07:31:21+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-10 至 2026-08-11",
+  "publication": {
+    "issue_number": 31,
+    "issue_code": "D031",
+    "issue_label": "第31期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "AI 专题榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-11",
+    "manifest": "reports/daily/assets/2026-08-11/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "PrimeIntellect-ai/prime-agent",
+            "path": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.01.primeintellect-ai--prime-agent.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.02.firecrawl--firecrawl.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "Comfy-Org/ComfyUI",
+            "path": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.03.comfy-org--comfyui.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-11/2026-08-11.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/daily/assets/2026-08-11/2026-08-11.ai.01.firecrawl--firecrawl.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "semantica-agi/semantica",
+            "path": "reports/daily/assets/2026-08-11/2026-08-11.ai.02.semantica-agi--semantica.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "msitarzewski/agency-agents",
+            "path": "reports/daily/assets/2026-08-11/2026-08-11.ai.03.msitarzewski--agency-agents.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 31,
+      "issue_code": "D031",
+      "issue_label": "第31期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1232493406,
+      "full_name": "PrimeIntellect-ai/prime-agent",
+      "owner": "PrimeIntellect-ai",
+      "name": "prime-agent",
+      "html_url": "https://github.com/PrimeIntellect-ai/prime-agent",
+      "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+      "language": "TypeScript",
+      "stars": 13018,
+      "forks": 1322,
+      "open_issues": 474,
+      "watchers": 63,
+      "topics": [],
+      "created_at": "2026-05-08T01:42:41Z",
+      "updated_at": "2026-08-10T23:30:50Z",
+      "pushed_at": "2026-08-10T23:25:42Z",
+      "daily_stars": 2655,
+      "weekly_stars": null,
+      "trending_rank_daily": 6,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 92.08,
+      "star_delta": 1426,
+      "fork_delta": 139,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 98.53,
+        "fork_growth": 98.53,
+        "total_stars": 14.71,
+        "activity": 100.0,
+        "trending_signal": 35.62
+      },
+      "summary": {
+        "one_line": "让编码与研究任务持续推进的自我改进型 agent",
+        "highlights": [
+          "在持久 Python 环境里编排工具与上下文",
+          "调用子 agent 并行或后台处理任务",
+          "用 /refine 沉淀可回滚的工作经验"
+        ],
+        "audience": "需要让编码、研究或评测任务跨聊天窗口持续推进的人",
+        "capabilities": [
+          "在持久 REPL 中运行 Python 与命令",
+          "调用子 agent 并行或后台处理",
+          "把重复流程封装成可导入技能",
+          "让会话断开后任务继续运行",
+          "用目标、心跳和计划维持长期任务"
+        ],
+        "core_title": "把一次对话变成持续工作的任务环境",
+        "core_summary": "它用持久 Python 控制环境承载工具、子 agent 和上下文，再用 Continual Harness 保存提示、记忆与技能，让工作模式能在会话间延续。",
+        "prerequisites": "需要在 macOS 或 Linux 安装，并在首次启动运行 /login 选择订阅或 API-key provider。",
+        "limitations": "会以当前用户权限执行模型生成的 Python 和项目命令，不是安全沙箱；应审查改动，并在外部受限环境运行不可信代码。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+          ],
+          "highlights": [
+            [
+              "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+            ],
+            [
+              "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+            ],
+            [
+              "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+            ]
+          ],
+          "audience": [
+            "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+          ],
+          "capabilities": [
+            [
+              "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+            ],
+            [
+              "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+            ],
+            [
+              "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+            ],
+            [
+              "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+            ],
+            [
+              "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+            ]
+          ],
+          "core_title": [
+            "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+          ],
+          "core_summary": [
+            "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+          ],
+          "prerequisites": [
+            "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+          ],
+          "limitations": [
+            "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-11/repo-a8b9520659686624b02302b3-b859c06212b32ce30ebdc186.png",
+      "publication_evidence": {
+        "full_name": "PrimeIntellect-ai/prime-agent",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b",
+          "source_url": "https://api.github.com/repos/PrimeIntellect-ai/prime-agent/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-11/repo-a8b9520659686624b02302b3-b859c06212b32ce30ebdc186.png",
+          "sha256": "72283a6efe515f2a86a295b70ee4993c1ae633f77cb07cf99ebd985ea8e8eb24",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.01.primeintellect-ai--prime-agent.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 787076358,
+      "full_name": "firecrawl/firecrawl",
+      "owner": "firecrawl",
+      "name": "firecrawl",
+      "html_url": "https://github.com/firecrawl/firecrawl",
+      "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
+      "language": "TypeScript",
+      "stars": 165032,
+      "forks": 9285,
+      "open_issues": 497,
+      "watchers": 165032,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-crawler",
+        "ai-scraping",
+        "ai-search",
+        "crawler",
+        "data-extraction",
+        "html-to-markdown",
+        "llm",
+        "markdown",
+        "scraper",
+        "scraping",
+        "web-crawler",
+        "web-data",
+        "web-data-extraction",
+        "web-scraper",
+        "web-scraping",
+        "web-search",
+        "webscraping"
+      ],
+      "created_at": "2024-04-15T21:02:29Z",
+      "updated_at": "2026-08-10T23:30:16Z",
+      "pushed_at": "2026-08-10T22:13:55Z",
+      "daily_stars": 815,
+      "weekly_stars": null,
+      "trending_rank_daily": 10,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 90.27,
+      "star_delta": 736,
+      "fork_delta": 40,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.59,
+        "relative_growth": 91.18,
+        "fork_growth": 91.18,
+        "total_stars": 73.53,
+        "activity": 100.0,
+        "trending_signal": 28.91
+      },
+      "summary": {
+        "one_line": "把网页搜索、抓取和交互结果变成 AI 可用数据",
+        "highlights": [
+          "搜索网页并返回结果页正文",
+          "把网址转成 Markdown 或结构化数据",
+          "操作页面后再提取目标信息"
+        ],
+        "audience": "为 AI agent、搜索产品或数据流程接入网页内容的开发者",
+        "capabilities": [
+          "搜索网页并获取结果正文",
+          "抓取网址并输出 Markdown",
+          "抽取结构化 JSON 或截图",
+          "点击、滚动后再提取内容",
+          "批量抓取网站和多条网址"
+        ],
+        "core_title": "先找到网页，再交付可用数据",
+        "core_summary": "Search、Scrape、Interact 分别负责找页面、转格式和操作页面；Agent、Crawl、Map、Batch Scrape 覆盖更复杂的采集流程。",
+        "prerequisites": "先注册托管服务并获取 API key；也可安装 Python 或 Node.js SDK。",
+        "limitations": "抓取者需遵守网站政策、隐私政策和使用条款；默认遵守 robots.txt。",
+        "license_label": "AGPL-3.0",
+        "license_restrictions": "",
+        "readme_sha": "764cd5503977c57e607eb7b627155b7631c1b7c6",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+          ],
+          "highlights": [
+            [
+              "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+            ],
+            [
+              "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+            ],
+            [
+              "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+            ]
+          ],
+          "audience": [
+            "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+          ],
+          "capabilities": [
+            [
+              "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+            ],
+            [
+              "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+            ],
+            [
+              "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+            ],
+            [
+              "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+            ],
+            [
+              "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+            ]
+          ],
+          "core_title": [
+            "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+          ],
+          "core_summary": [
+            "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+          ],
+          "prerequisites": [
+            "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+          ],
+          "limitations": [
+            "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-11/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+      "publication_evidence": {
+        "full_name": "firecrawl/firecrawl",
+        "license_spdx_id": "AGPL-3.0",
+        "readme": {
+          "sha": "764cd5503977c57e607eb7b627155b7631c1b7c6",
+          "source_url": "https://api.github.com/repos/firecrawl/firecrawl/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-11/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "AGPL-3.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.02.firecrawl--firecrawl.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 589831718,
+      "full_name": "Comfy-Org/ComfyUI",
+      "owner": "Comfy-Org",
+      "name": "ComfyUI",
+      "html_url": "https://github.com/Comfy-Org/ComfyUI",
+      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+      "language": "Python",
+      "stars": 126291,
+      "forks": 14898,
+      "open_issues": 4508,
+      "watchers": 126291,
+      "topics": [
+        "ai",
+        "comfy",
+        "comfyui",
+        "python",
+        "pytorch",
+        "stable-diffusion"
+      ],
+      "created_at": "2023-01-17T03:15:56Z",
+      "updated_at": "2026-08-10T23:30:28Z",
+      "pushed_at": "2026-08-10T21:05:22Z",
+      "daily_stars": 921,
+      "weekly_stars": null,
+      "trending_rank_daily": 15,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 88.09,
+      "star_delta": 610,
+      "fork_delta": 47,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.12,
+        "relative_growth": 89.71,
+        "fork_growth": 94.12,
+        "total_stars": 48.53,
+        "activity": 100.0,
+        "trending_signal": 25.0
+      },
+      "summary": {
+        "one_line": "用节点图搭建并复用图像、视频、音频与 3D 创作流程",
+        "highlights": [
+          "拖拽节点组合多媒体生成流程",
+          "保存 JSON 工作流并复用模板",
+          "通过 API 把流程接入应用"
+        ],
+        "audience": "需要精细控制模型、参数和输出的视觉创作者与内容团队",
+        "capabilities": [
+          "搭建图像、视频、音频和 3D 流程",
+          "加载模型、VAE、LoRA 与 ControlNet",
+          "执行局部重算并管理显存",
+          "保存或恢复完整工作流与种子",
+          "用自定义节点扩展能力"
+        ],
+        "core_title": "把创作过程拆成可复用节点图",
+        "core_summary": "节点图把模型、参数和处理步骤连成工作流；支持子图、模板、JSON 保存与局部重算，便于反复调整和接入应用。",
+        "prerequisites": "可在 Windows、Linux、macOS 运行；手动安装需准备 Python、PyTorch、依赖和模型文件。",
+        "limitations": "Python 3.14 可能让部分自定义节点出问题；master 分支提交可能很不稳定并破坏许多自定义节点。",
+        "license_label": "GPL-3.0",
+        "license_restrictions": "",
+        "readme_sha": "1721cefa52e71f0b299ffc09dcd26f83538dc70c",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+          ],
+          "highlights": [
+            [
+              "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+            ],
+            [
+              "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+            ],
+            [
+              "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+            ]
+          ],
+          "audience": [
+            "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+          ],
+          "capabilities": [
+            [
+              "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+            ],
+            [
+              "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+            ],
+            [
+              "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+            ],
+            [
+              "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+            ],
+            [
+              "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+            ]
+          ],
+          "core_title": [
+            "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+          ],
+          "core_summary": [
+            "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+          ],
+          "prerequisites": [
+            "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+          ],
+          "limitations": [
+            "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-11/repo-53c16fc7c5624952c766f1d9-28a5bb41a9a90560d4909493.png",
+      "publication_evidence": {
+        "full_name": "Comfy-Org/ComfyUI",
+        "license_spdx_id": "GPL-3.0",
+        "readme": {
+          "sha": "1721cefa52e71f0b299ffc09dcd26f83538dc70c",
+          "source_url": "https://api.github.com/repos/Comfy-Org/ComfyUI/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-11/repo-53c16fc7c5624952c766f1d9-28a5bb41a9a90560d4909493.png",
+          "sha256": "332683e5eca497eab51dea27121c80e0d53ff56b4738e00d92143d59a04b72b3",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "GPL-3.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.03.comfy-org--comfyui.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "PrimeIntellect-ai/prime-agent",
+            "path": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.01.primeintellect-ai--prime-agent.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.02.firecrawl--firecrawl.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "Comfy-Org/ComfyUI",
+            "path": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.03.comfy-org--comfyui.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1232493406,
+          "full_name": "PrimeIntellect-ai/prime-agent",
+          "owner": "PrimeIntellect-ai",
+          "name": "prime-agent",
+          "html_url": "https://github.com/PrimeIntellect-ai/prime-agent",
+          "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+          "language": "TypeScript",
+          "stars": 13018,
+          "forks": 1322,
+          "open_issues": 474,
+          "watchers": 63,
+          "topics": [],
+          "created_at": "2026-05-08T01:42:41Z",
+          "updated_at": "2026-08-10T23:30:50Z",
+          "pushed_at": "2026-08-10T23:25:42Z",
+          "daily_stars": 2655,
+          "weekly_stars": null,
+          "trending_rank_daily": 6,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.08,
+          "star_delta": 1426,
+          "fork_delta": 139,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 98.53,
+            "fork_growth": 98.53,
+            "total_stars": 14.71,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "让编码与研究任务持续推进的自我改进型 agent",
+            "highlights": [
+              "在持久 Python 环境里编排工具与上下文",
+              "调用子 agent 并行或后台处理任务",
+              "用 /refine 沉淀可回滚的工作经验"
+            ],
+            "audience": "需要让编码、研究或评测任务跨聊天窗口持续推进的人",
+            "capabilities": [
+              "在持久 REPL 中运行 Python 与命令",
+              "调用子 agent 并行或后台处理",
+              "把重复流程封装成可导入技能",
+              "让会话断开后任务继续运行",
+              "用目标、心跳和计划维持长期任务"
+            ],
+            "core_title": "把一次对话变成持续工作的任务环境",
+            "core_summary": "它用持久 Python 控制环境承载工具、子 agent 和上下文，再用 Continual Harness 保存提示、记忆与技能，让工作模式能在会话间延续。",
+            "prerequisites": "需要在 macOS 或 Linux 安装，并在首次启动运行 /login 选择订阅或 API-key provider。",
+            "limitations": "会以当前用户权限执行模型生成的 Python 和项目命令，不是安全沙箱；应审查改动，并在外部受限环境运行不可信代码。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+              ],
+              "highlights": [
+                [
+                  "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+                ],
+                [
+                  "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+                ],
+                [
+                  "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+                ]
+              ],
+              "audience": [
+                "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+                ],
+                [
+                  "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+                ],
+                [
+                  "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+                ],
+                [
+                  "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+                ],
+                [
+                  "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+                ]
+              ],
+              "core_title": [
+                "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+              ],
+              "core_summary": [
+                "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+              ],
+              "prerequisites": [
+                "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+              ],
+              "limitations": [
+                "github.readme:b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-11/repo-a8b9520659686624b02302b3-b859c06212b32ce30ebdc186.png",
+          "publication_evidence": {
+            "full_name": "PrimeIntellect-ai/prime-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "b5646bd6cb5d3cae79c76ef784316bc4f3eaac5b",
+              "source_url": "https://api.github.com/repos/PrimeIntellect-ai/prime-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-11/repo-a8b9520659686624b02302b3-b859c06212b32ce30ebdc186.png",
+              "sha256": "72283a6efe515f2a86a295b70ee4993c1ae633f77cb07cf99ebd985ea8e8eb24",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.01.primeintellect-ai--prime-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 787076358,
+          "full_name": "firecrawl/firecrawl",
+          "owner": "firecrawl",
+          "name": "firecrawl",
+          "html_url": "https://github.com/firecrawl/firecrawl",
+          "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
+          "language": "TypeScript",
+          "stars": 165032,
+          "forks": 9285,
+          "open_issues": 497,
+          "watchers": 165032,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "ai-crawler",
+            "ai-scraping",
+            "ai-search",
+            "crawler",
+            "data-extraction",
+            "html-to-markdown",
+            "llm",
+            "markdown",
+            "scraper",
+            "scraping",
+            "web-crawler",
+            "web-data",
+            "web-data-extraction",
+            "web-scraper",
+            "web-scraping",
+            "web-search",
+            "webscraping"
+          ],
+          "created_at": "2024-04-15T21:02:29Z",
+          "updated_at": "2026-08-10T23:30:16Z",
+          "pushed_at": "2026-08-10T22:13:55Z",
+          "daily_stars": 815,
+          "weekly_stars": null,
+          "trending_rank_daily": 10,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 90.27,
+          "star_delta": 736,
+          "fork_delta": 40,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.59,
+            "relative_growth": 91.18,
+            "fork_growth": 91.18,
+            "total_stars": 73.53,
+            "activity": 100.0,
+            "trending_signal": 28.91
+          },
+          "summary": {
+            "one_line": "把网页搜索、抓取和交互结果变成 AI 可用数据",
+            "highlights": [
+              "搜索网页并返回结果页正文",
+              "把网址转成 Markdown 或结构化数据",
+              "操作页面后再提取目标信息"
+            ],
+            "audience": "为 AI agent、搜索产品或数据流程接入网页内容的开发者",
+            "capabilities": [
+              "搜索网页并获取结果正文",
+              "抓取网址并输出 Markdown",
+              "抽取结构化 JSON 或截图",
+              "点击、滚动后再提取内容",
+              "批量抓取网站和多条网址"
+            ],
+            "core_title": "先找到网页，再交付可用数据",
+            "core_summary": "Search、Scrape、Interact 分别负责找页面、转格式和操作页面；Agent、Crawl、Map、Batch Scrape 覆盖更复杂的采集流程。",
+            "prerequisites": "先注册托管服务并获取 API key；也可安装 Python 或 Node.js SDK。",
+            "limitations": "抓取者需遵守网站政策、隐私政策和使用条款；默认遵守 robots.txt。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "",
+            "readme_sha": "764cd5503977c57e607eb7b627155b7631c1b7c6",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+              ],
+              "highlights": [
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ],
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ],
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ]
+              ],
+              "audience": [
+                "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ],
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ],
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ],
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ],
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ]
+              ],
+              "core_title": [
+                "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+              ],
+              "core_summary": [
+                "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+              ],
+              "prerequisites": [
+                "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+              ],
+              "limitations": [
+                "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-11/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "publication_evidence": {
+            "full_name": "firecrawl/firecrawl",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "764cd5503977c57e607eb7b627155b7631c1b7c6",
+              "source_url": "https://api.github.com/repos/firecrawl/firecrawl/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-11/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+              "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.02.firecrawl--firecrawl.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 589831718,
+          "full_name": "Comfy-Org/ComfyUI",
+          "owner": "Comfy-Org",
+          "name": "ComfyUI",
+          "html_url": "https://github.com/Comfy-Org/ComfyUI",
+          "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+          "language": "Python",
+          "stars": 126291,
+          "forks": 14898,
+          "open_issues": 4508,
+          "watchers": 126291,
+          "topics": [
+            "ai",
+            "comfy",
+            "comfyui",
+            "python",
+            "pytorch",
+            "stable-diffusion"
+          ],
+          "created_at": "2023-01-17T03:15:56Z",
+          "updated_at": "2026-08-10T23:30:28Z",
+          "pushed_at": "2026-08-10T21:05:22Z",
+          "daily_stars": 921,
+          "weekly_stars": null,
+          "trending_rank_daily": 15,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.09,
+          "star_delta": 610,
+          "fork_delta": 47,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.12,
+            "relative_growth": 89.71,
+            "fork_growth": 94.12,
+            "total_stars": 48.53,
+            "activity": 100.0,
+            "trending_signal": 25.0
+          },
+          "summary": {
+            "one_line": "用节点图搭建并复用图像、视频、音频与 3D 创作流程",
+            "highlights": [
+              "拖拽节点组合多媒体生成流程",
+              "保存 JSON 工作流并复用模板",
+              "通过 API 把流程接入应用"
+            ],
+            "audience": "需要精细控制模型、参数和输出的视觉创作者与内容团队",
+            "capabilities": [
+              "搭建图像、视频、音频和 3D 流程",
+              "加载模型、VAE、LoRA 与 ControlNet",
+              "执行局部重算并管理显存",
+              "保存或恢复完整工作流与种子",
+              "用自定义节点扩展能力"
+            ],
+            "core_title": "把创作过程拆成可复用节点图",
+            "core_summary": "节点图把模型、参数和处理步骤连成工作流；支持子图、模板、JSON 保存与局部重算，便于反复调整和接入应用。",
+            "prerequisites": "可在 Windows、Linux、macOS 运行；手动安装需准备 Python、PyTorch、依赖和模型文件。",
+            "limitations": "Python 3.14 可能让部分自定义节点出问题；master 分支提交可能很不稳定并破坏许多自定义节点。",
+            "license_label": "GPL-3.0",
+            "license_restrictions": "",
+            "readme_sha": "1721cefa52e71f0b299ffc09dcd26f83538dc70c",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+              ],
+              "highlights": [
+                [
+                  "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+                ],
+                [
+                  "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+                ],
+                [
+                  "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+                ]
+              ],
+              "audience": [
+                "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+                ],
+                [
+                  "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+                ],
+                [
+                  "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+                ],
+                [
+                  "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+                ],
+                [
+                  "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+                ]
+              ],
+              "core_title": [
+                "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+              ],
+              "core_summary": [
+                "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+              ],
+              "prerequisites": [
+                "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+              ],
+              "limitations": [
+                "github.readme:1721cefa52e71f0b299ffc09dcd26f83538dc70c"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-11/repo-53c16fc7c5624952c766f1d9-28a5bb41a9a90560d4909493.png",
+          "publication_evidence": {
+            "full_name": "Comfy-Org/ComfyUI",
+            "license_spdx_id": "GPL-3.0",
+            "readme": {
+              "sha": "1721cefa52e71f0b299ffc09dcd26f83538dc70c",
+              "source_url": "https://api.github.com/repos/Comfy-Org/ComfyUI/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-11/repo-53c16fc7c5624952c766f1d9-28a5bb41a9a90560d4909493.png",
+              "sha256": "332683e5eca497eab51dea27121c80e0d53ff56b4738e00d92143d59a04b72b3",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "GPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-11/2026-08-11.comprehensive.03.comfy-org--comfyui.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-11/2026-08-11.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/daily/assets/2026-08-11/2026-08-11.ai.01.firecrawl--firecrawl.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "semantica-agi/semantica",
+            "path": "reports/daily/assets/2026-08-11/2026-08-11.ai.02.semantica-agi--semantica.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "msitarzewski/agency-agents",
+            "path": "reports/daily/assets/2026-08-11/2026-08-11.ai.03.msitarzewski--agency-agents.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 787076358,
+          "full_name": "firecrawl/firecrawl",
+          "owner": "firecrawl",
+          "name": "firecrawl",
+          "html_url": "https://github.com/firecrawl/firecrawl",
+          "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
+          "language": "TypeScript",
+          "stars": 165032,
+          "forks": 9285,
+          "open_issues": 497,
+          "watchers": 165032,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "ai-crawler",
+            "ai-scraping",
+            "ai-search",
+            "crawler",
+            "data-extraction",
+            "html-to-markdown",
+            "llm",
+            "markdown",
+            "scraper",
+            "scraping",
+            "web-crawler",
+            "web-data",
+            "web-data-extraction",
+            "web-scraper",
+            "web-scraping",
+            "web-search",
+            "webscraping"
+          ],
+          "created_at": "2024-04-15T21:02:29Z",
+          "updated_at": "2026-08-10T23:30:16Z",
+          "pushed_at": "2026-08-10T22:13:55Z",
+          "daily_stars": 815,
+          "weekly_stars": null,
+          "trending_rank_daily": 10,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 86.82,
+          "star_delta": 736,
+          "fork_delta": 40,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.59,
+            "relative_growth": 85.19,
+            "fork_growth": 85.19,
+            "total_stars": 70.37,
+            "activity": 100.0,
+            "trending_signal": 28.91
+          },
+          "summary": {
+            "one_line": "把网址或搜索请求变成可供 AI 使用的 Markdown、结构化数据与页面截图",
+            "highlights": [
+              "搜索网页并返回结果页面全文",
+              "抓取单页、整站或一批网址",
+              "抓取前执行点击、滚动、输入与等待"
+            ],
+            "audience": "需要为 AI 代理、搜索应用或数据管道接入实时网页内容的开发者",
+            "capabilities": [
+              "搜索网页并取得结果全文",
+              "转换页面为 Markdown 或结构化数据",
+              "遍历整站并抓取其中页面",
+              "发现站点内的全部网址",
+              "按提示操作页面后提取内容"
+            ],
+            "core_title": "网页内容获取与交互接口",
+            "core_summary": "它把搜索、单页抓取、整站遍历和页面交互放进同一套接口，并将结果整理为 Markdown、结构化数据或截图，便于程序和 AI 代理继续使用。",
+            "prerequisites": "使用托管接口需注册并取得 API Key；本地运行需按贡献或自托管指南部署。",
+            "limitations": "云端版本包含额外功能；抓取时由使用者负责遵守网站政策、隐私政策和使用条款，默认遵循 robots.txt。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "The SDKs and some UI components are licensed under the MIT License.",
+            "readme_sha": "764cd5503977c57e607eb7b627155b7631c1b7c6",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+              ],
+              "highlights": [
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ],
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ],
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ]
+              ],
+              "audience": [
+                "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ],
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ],
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ],
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ],
+                [
+                  "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+                ]
+              ],
+              "core_title": [
+                "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+              ],
+              "core_summary": [
+                "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+              ],
+              "prerequisites": [
+                "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+              ],
+              "limitations": [
+                "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:764cd5503977c57e607eb7b627155b7631c1b7c6"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-08-11/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "publication_evidence": {
+            "full_name": "firecrawl/firecrawl",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "764cd5503977c57e607eb7b627155b7631c1b7c6",
+              "source_url": "https://api.github.com/repos/firecrawl/firecrawl/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-11/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+              "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-11/2026-08-11.ai.01.firecrawl--firecrawl.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1008304614,
+          "full_name": "semantica-agi/semantica",
+          "owner": "semantica-agi",
+          "name": "semantica",
+          "html_url": "https://github.com/semantica-agi/semantica",
+          "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+          "language": "Python",
+          "stars": 4057,
+          "forks": 481,
+          "open_issues": 53,
+          "watchers": 31,
+          "topics": [
+            "agent-memory",
+            "ai",
+            "ai-governance",
+            "ai-infrastructure",
+            "artificial-intelligence",
+            "context-engineering",
+            "context-graphs",
+            "data-engineering",
+            "decision-intelligence",
+            "developer-tools",
+            "explainable-ai",
+            "generative-ai",
+            "graph-rag",
+            "knowledge-graph",
+            "llm",
+            "ontology",
+            "provenance",
+            "python",
+            "reasoning",
+            "semantic-search"
+          ],
+          "created_at": "2025-06-25T10:41:00Z",
+          "updated_at": "2026-08-10T23:30:34Z",
+          "pushed_at": "2026-08-10T15:48:02Z",
+          "daily_stars": 967,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 84.02,
+          "star_delta": 967,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 11.11,
+            "total_stars": 14.81,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "为需要审计 AI 决策的团队，把分散数据建成可查询的上下文图，并保留来源与因果链",
+            "highlights": [
+              "记录决策、原因和后续影响",
+              "从多源数据构建知识图谱",
+              "为每条事实保留可导出的来源链"
+            ],
+            "audience": "需要追查 AI 决策依据的算法平台、数据平台、合规风控与知识工程团队",
+            "capabilities": [
+              "接入文件、网页、数据库和数据平台",
+              "抽取实体、关系、事件和三元组",
+              "检测冲突并合并重复实体",
+              "执行可解释的规则与图推理",
+              "导出 RDF、OWL、Parquet 等格式"
+            ],
+            "core_title": "可追溯的决策上下文图",
+            "core_summary": "每次决策都作为图节点保存，并连接证据、原因和影响；再用规则推理、溯源与时间快照回答“为何如此”，便于查询和审计。",
+            "prerequisites": "先通过 pip 安装核心包；图数据库、向量库、数据平台和可视化能力需安装对应可选依赖。",
+            "limitations": "当前 ReteEngine 的条件匹配器较简单，接入合规关卡前需用实际规则集核验输出；部署时还应配置持久化存储与密钥。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "745c54e4fd354972e37bbfca889e73ab0c42903b",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+              ],
+              "highlights": [
+                [
+                  "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+                ],
+                [
+                  "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+                ],
+                [
+                  "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+                ]
+              ],
+              "audience": [
+                "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+                ],
+                [
+                  "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+                ],
+                [
+                  "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+                ],
+                [
+                  "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+                ],
+                [
+                  "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+                ]
+              ],
+              "core_title": [
+                "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+              ],
+              "core_summary": [
+                "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+              ],
+              "prerequisites": [
+                "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+              ],
+              "limitations": [
+                "github.readme:745c54e4fd354972e37bbfca889e73ab0c42903b"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-11/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+          "publication_evidence": {
+            "full_name": "semantica-agi/semantica",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "745c54e4fd354972e37bbfca889e73ab0c42903b",
+              "source_url": "https://api.github.com/repos/semantica-agi/semantica/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-11/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+              "sha256": "591feabeac4b93a168ab04386fc03f03f572ed48bed8e4029d4f0c49c42d8d47",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-11/2026-08-11.ai.02.semantica-agi--semantica.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1075372545,
+          "full_name": "msitarzewski/agency-agents",
+          "owner": "msitarzewski",
+          "name": "agency-agents",
+          "html_url": "https://github.com/msitarzewski/agency-agents",
+          "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+          "language": "Shell",
+          "stars": 141774,
+          "forks": 23132,
+          "open_issues": 111,
+          "watchers": 1056,
+          "topics": [],
+          "created_at": "2025-10-13T12:12:29Z",
+          "updated_at": "2026-08-10T23:29:49Z",
+          "pushed_at": "2026-08-06T13:29:47Z",
+          "daily_stars": 1352,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 83.01,
+          "star_delta": 788,
+          "fork_delta": 117,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.3,
+            "relative_growth": 88.89,
+            "fork_growth": 96.3,
+            "total_stars": 48.15,
+            "activity": 18.89,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把不同岗位的代理模板装进多种 AI 编程工具，按角色分工完成开发、设计、营销与审查任务",
+            "highlights": [
+              "按专业岗位选择代理角色",
+              "转换并安装到多种编码工具",
+              "只安装所需团队或单个代理"
+            ],
+            "audience": "想在编码助手中调用专业角色，或为跨职能项目组装代理团队的个人与团队",
+            "capabilities": [
+              "浏览并挑选专业代理",
+              "转换为各工具所需格式",
+              "交互式选择工具和团队",
+              "按部门或代理名定向安装",
+              "复制修改角色流程与交付物"
+            ],
+            "core_title": "跨工具安装专业代理团队",
+            "core_summary": "每个代理文件包含角色、任务流程、交付物和衡量标准；转换脚本生成不同工具格式，安装脚本可自动检测并按团队部署。",
+            "prerequisites": "脚本方式需先克隆仓库并在支持 Shell 的环境运行；部分工具需先执行转换脚本生成集成文件。",
+            "limitations": "OpenCode 运行时目前只注册约 119 个代理并静默丢弃其余代理，需按部门安装子集；不同工具的安装目录和格式不同。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "2da0a33d755cbe932d640d8be50bc36eae866475",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+                ],
+                [
+                  "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+                ],
+                [
+                  "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+                ]
+              ],
+              "audience": [
+                "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+                ],
+                [
+                  "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+                ],
+                [
+                  "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+                ],
+                [
+                  "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+                ],
+                [
+                  "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+              ],
+              "core_summary": [
+                "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+              ],
+              "prerequisites": [
+                "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+              ],
+              "limitations": [
+                "github.readme:2da0a33d755cbe932d640d8be50bc36eae866475"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-11/repo-65e281143ae0892ee8e3d795-c89b340a275b724d2d94dddd.png",
+          "publication_evidence": {
+            "full_name": "msitarzewski/agency-agents",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "2da0a33d755cbe932d640d8be50bc36eae866475",
+              "source_url": "https://api.github.com/repos/msitarzewski/agency-agents/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-11/repo-65e281143ae0892ee8e3d795-c89b340a275b724d2d94dddd.png",
+              "sha256": "f0ccc065f51d325ab9e26aac4dd8b2cc1c66b5d7e029c3ae2d50011eea018261",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-11/2026-08-11.ai.03.msitarzewski--agency-agents.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
