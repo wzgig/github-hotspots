@@ -27,6 +27,17 @@ PUBLISH_HISTORY_SCHEMA_VERSION = 1
 PUBLISH_BUNDLE_GENERATOR_NAME = "github-hotspots-publish-bundle"
 PUBLISH_BUNDLE_GENERATOR_VERSION = "1.1"
 BOARD_KEYS = ("comprehensive", "ai")
+PROTECTED_REPORT_FACT_FIELDS = (
+    "full_name",
+    "rank",
+    "stars",
+    "forks",
+    "star_delta",
+    "fork_delta",
+    "delta_source",
+    "html_url",
+    "score",
+)
 MAX_JSON_BYTES = 8 * 1024 * 1024
 MAX_TEXT_SCAN_BYTES = 8 * 1024 * 1024
 MAX_PNG_BYTES = 32 * 1024 * 1024
@@ -109,6 +120,57 @@ def report_stem(period: str, run_date: str | date) -> str:
         iso_year, iso_week, _ = selected.isocalendar()
         return f"{iso_year}-W{iso_week:02d}"
     raise AutomationValidationError("invalid_period", "period must be daily or weekly")
+
+
+def protected_report_fingerprint(
+    root: str | Path,
+    period: str,
+    run_date: str | date,
+) -> str:
+    """Fingerprint ranking facts that a frozen-report rerender must not change."""
+
+    repository_root = Path(root).resolve()
+    selected = parse_run_date(run_date)
+    stem = report_stem(period, selected)
+    report_path = repository_root / "reports" / period / f"{stem}.json"
+    payload = _load_json_object(report_path, "report_invalid")
+    if payload.get("period") != period or payload.get("run_date") != selected.isoformat():
+        raise AutomationValidationError("report_identity", "report period or date does not match")
+
+    boards = _require_mapping(payload.get("boards"), "report_boards")
+    protected = {
+        "repositories": _protected_repository_facts(
+            payload.get("repositories"),
+            "report_repositories",
+        ),
+        "boards": {
+            key: _protected_repository_facts(
+                _require_mapping(boards.get(key), "report_board").get("repositories"),
+                f"report_{key}_repositories",
+            )
+            for key in BOARD_KEYS
+        },
+    }
+    canonical = json.dumps(
+        protected,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(canonical).hexdigest()
+
+
+def _protected_repository_facts(value: Any, category: str) -> list[dict[str, Any]]:
+    if not isinstance(value, list):
+        raise AutomationValidationError(category, "report repositories must be a list")
+    facts: list[dict[str, Any]] = []
+    for item in value:
+        if not isinstance(item, dict) or any(
+            field not in item for field in PROTECTED_REPORT_FACT_FIELDS
+        ):
+            raise AutomationValidationError(category, "protected report facts are incomplete")
+        facts.append({field: item[field] for field in PROTECTED_REPORT_FACT_FIELDS})
+    return facts
 
 
 def validate_report_bundle(
@@ -1244,6 +1306,14 @@ def _build_parser() -> argparse.ArgumentParser:
     stem.add_argument("--period", choices=sorted(_PERIODS), required=True)
     stem.add_argument("--date", required=True)
 
+    facts = subparsers.add_parser(
+        "facts-fingerprint",
+        help="fingerprint ranking facts protected during frozen-report rerendering",
+    )
+    facts.add_argument("--root", default=".")
+    facts.add_argument("--period", choices=sorted(_PERIODS), required=True)
+    facts.add_argument("--date", required=True)
+
     validate_paths = subparsers.add_parser(
         "validate-paths", help="reject changes outside the generated allowlist"
     )
@@ -1283,6 +1353,9 @@ def main(argv: list[str] | None = None) -> int:
             return 0
         if args.command == "stem":
             print(report_stem(args.period, args.date))
+            return 0
+        if args.command == "facts-fingerprint":
+            print(protected_report_fingerprint(args.root, args.period, args.date))
             return 0
         if args.command == "verify-history":
             issue_root = validate_publication_history(

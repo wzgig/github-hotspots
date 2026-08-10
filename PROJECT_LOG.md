@@ -1,5 +1,35 @@
 # Project Log
 
+## 2026-08-10 — 修复延迟周报空成功并支持冻结兜底自动升级
+
+### 目的与验收边界
+
+解决“周报任务显示成功但没有正式更新、双击 `CHECK_AND_UPDATE_REPORTS.cmd` 也只报错”的问题。优化后的执行规格是：每天检查当日日报和最近一期应到周报；正式 Codex 周报存在时幂等复用；工作日若已有结构完整的 deterministic 周日兜底，则只基于冻结事实执行 Codex 重绘；若历史报告完全缺失或损坏，必须返回 76，禁止用当前累计数据伪造周日排名。
+
+### 根因与变更
+
+- Windows 日报和周报任务仍是受保护的旧定义，均为 `RunOnlyIfNetworkAvailable=True`。2026-08-09 周报任务延迟到 2026-08-10 12:07 才启动；旧 runner 发现当天不是周日后直接 `return`，任务结果为 0，形成“成功但无更新”的假象。
+- Actions 已发布 `2026-08-09 / W005`，双榜与 16 张 PNG 结构完整，但两榜 `used_backend=deterministic`，因此不能视为正式 Codex 周报。旧 `-CheckOnly` 把这种可安全重绘的冻结兜底和完全缺失混为一类，统一退出 76。
+- `run_scheduled.ps1` 新增 `-UpgradeFallback`、延迟周报日期解析和四态决策：`reuse`、`rerender`、`generate`、`unavailable`。非周日延迟启动自动定位最近周日，并强制进入“只检查 + 冻结兜底升级”模式；没有安全冻结报告时仍退出 76。
+- 新增标准库 `facts-fingerprint` 门禁。Codex 重绘前后比较综合榜、AI 榜及兼容根列表的 `full_name/rank/stars/forks/star_delta/fork_delta/delta_source/html_url/score`，任何变化都中止提交；重绘后仍要求 `verify --require-codex`、`verify-history`、路径白名单和敏感信息扫描。
+- `run_manual_update.ps1` 每天为周报传入 `-UpgradeFallback`，工作日允许升级已有冻结兜底并保留真实退出码 75/76；根目录 CMD 增加明确的检查/修复标题和“未重采历史”的 76 提示。
+- `register_tasks.ps1` 的新周报动作显式携带 `-UpgradeFallback`。当前非管理员会话再次注册受保护任务仍返回 `Access is denied`；代码已能容忍旧任务延迟启动，但彻底移除 Windows 网络启动门槛仍需管理员 PowerShell 执行注册脚本。
+
+### 文件与模块
+
+- 手动入口：`CHECK_AND_UPDATE_REPORTS.cmd`。
+- 自动化：`scripts/automation/run_scheduled.ps1`、`run_manual_update.ps1`、`register_tasks.ps1`。
+- 严格事实门禁：`src/github_hotspots/automation.py`。
+- 回归测试：`tests/test_automation.py`、`tests/test_powershell_automation.py`。
+- 文档：`README.md`、`docs/AUTOMATION.md`、`docs/OPERATIONS.md`、`PROJECT_LOG.md`。
+
+### 验证与已知限制
+
+- 回归覆盖延迟周报自动定位最近周日、严格/冻结/缺失决策矩阵、工作日冻结升级参数、任务注册参数、真实退出码传播，以及受保护事实指纹只响应排名数字变化而忽略文案变化。
+- `pytest` 274 项全部通过，总覆盖率 81%；`ruff check .`、`ruff format --check .`、PowerShell 语法、`node --check site/app.js`、三个 workflow YAML 解析和 `git diff --check` 全部通过。
+- 对当前 W005 的只读现场决策验证得到 `strict=false`、`frozen=true`、`action=rerender`，受保护事实指纹为 `013dd61ae894d078844798c74f62fe7c404071264c0dfbf29ed5596f3747b689`；现有 deterministic history 本身验证通过。W005 正式恢复在自动化修复推送后使用同一严格 runner 单独生成报告提交并核验 Pages。
+- 受 Windows 任务 ACL 限制，当前会话不能修改已注册任务的 `RunOnlyIfNetworkAvailable=True`。管理员完成注册前，网络门槛仍可能造成延迟，但延迟后的周报不再空成功，也不会伪造历史数据。
+
 ## 2026-08-05 — 为手动 CMD 增加每日周报完整性检测
 
 ### 目的

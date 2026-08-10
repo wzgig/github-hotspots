@@ -74,6 +74,9 @@ function New-HotspotsAction {
         "-File", ('"{0}"' -f $Runner),
         "-Period", $Period
     ) -join " "
+    if ($Period -eq "weekly") {
+        $arguments += " -UpgradeFallback"
+    }
     return New-ScheduledTaskAction `
         -Execute $PowerShell `
         -Argument $arguments `
@@ -99,6 +102,7 @@ function Assert-HotspotsTask {
         $actions[0].WorkingDirectory -ne $RepoRoot -or
         -not $actions[0].Arguments.Contains(('"{0}"' -f $Runner)) -or
         -not $actions[0].Arguments.Contains("-Period $Period") -or
+        ($Period -eq "weekly" -and -not $actions[0].Arguments.Contains("-UpgradeFallback")) -or
         $triggerTypes.Count -ne $ExpectedTriggerTypes.Count -or
         $missingTriggerTypes.Count -gt 0
     ) {
@@ -113,6 +117,7 @@ function Assert-HotspotsTask {
         RunAs = $task.Principal.UserId
         Enabled = $task.Settings.Enabled
         RunOnlyIfNetworkAvailable = $task.Settings.RunOnlyIfNetworkAvailable
+        UpgradeFallback = $Period -eq "weekly"
         TriggerTypes = $triggerTypes -join ","
     }
 }

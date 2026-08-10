@@ -479,10 +479,12 @@ def test_task_registration_has_logon_catchup_without_network_launch_gate() -> No
     assert "$task.Settings.RunOnlyIfNetworkAvailable" in source
     assert 'ExpectedTriggerTypes @("MSFT_TaskDailyTrigger", "MSFT_TaskLogonTrigger")' in source
     assert 'ExpectedTriggerTypes @("MSFT_TaskWeeklyTrigger")' in source
+    assert '$arguments += " -UpgradeFallback"' in source
+    assert 'Contains("-UpgradeFallback")' in source
 
 
 @requires_windows_powershell
-def test_manual_update_plan_checks_weekly_every_day_without_backdating(tmp_path: Path) -> None:
+def test_manual_update_plan_checks_and_upgrades_weekly_without_backdating(tmp_path: Path) -> None:
     state_root = tmp_path / "state"
     script = (
         f". {_ps_quote(MANUAL_RUNNER)} -LoadFunctionsOnly; "
@@ -497,27 +499,34 @@ def test_manual_update_plan_checks_weekly_every_day_without_backdating(tmp_path:
 
     assert result.returncode == 0, result.stderr
     payload = _last_json(result.stdout)
-    assert [(item["Period"], item["CheckOnly"], item["RunDate"]) for item in payload["Sunday"]] == [
-        ("daily", False, "2026-07-19"),
-        ("weekly", False, "2026-07-19"),
+    assert [
+        (item["Period"], item["CheckOnly"], item["UpgradeFallback"], item["RunDate"])
+        for item in payload["Sunday"]
+    ] == [
+        ("daily", False, False, "2026-07-19"),
+        ("weekly", False, True, "2026-07-19"),
     ]
-    assert [(item["Period"], item["CheckOnly"], item["RunDate"]) for item in payload["Monday"]] == [
-        ("daily", False, "2026-07-20"),
-        ("weekly", True, "2026-07-19"),
+    assert [
+        (item["Period"], item["CheckOnly"], item["UpgradeFallback"], item["RunDate"])
+        for item in payload["Monday"]
+    ] == [
+        ("daily", False, False, "2026-07-20"),
+        ("weekly", True, True, "2026-07-19"),
     ]
-    assert payload["Monday"][1]["Status"] == "verify_only"
+    assert payload["Monday"][1]["Status"] == "verify_or_upgrade"
     assert payload["Monday"][1]["NextDueDate"] == "2026-07-26"
     assert not state_root.exists()
 
 
 @requires_windows_powershell
-def test_check_only_mode_never_generates_a_missing_report(tmp_path: Path) -> None:
+def test_report_action_matrix_only_rerenders_a_valid_frozen_fallback(tmp_path: Path) -> None:
     state_root = tmp_path / "state"
     script = (
         _load_functions(state_root) + "[pscustomobject]@{ "
-        "NormalMissing = Test-ReportGenerationAllowed -ReportAlreadyValid $false; "
-        "CheckMissing = Test-ReportGenerationAllowed -CheckOnly -ReportAlreadyValid $false; "
-        "CheckValid = Test-ReportGenerationAllowed -CheckOnly -ReportAlreadyValid $true "
+        "Strict = Resolve-ReportAction -StrictBundleValid $true -FallbackBundleValid $true -CheckOnly -UpgradeFallback; "
+        "Upgrade = Resolve-ReportAction -StrictBundleValid $false -FallbackBundleValid $true -CheckOnly -UpgradeFallback; "
+        "Unavailable = Resolve-ReportAction -StrictBundleValid $false -FallbackBundleValid $false -CheckOnly -UpgradeFallback; "
+        "Generate = Resolve-ReportAction -StrictBundleValid $false -FallbackBundleValid $false "
         "} | ConvertTo-Json -Compress"
     )
 
@@ -525,13 +534,35 @@ def test_check_only_mode_never_generates_a_missing_report(tmp_path: Path) -> Non
 
     assert result.returncode == 0, result.stderr
     assert _last_json(result.stdout) == {
-        "NormalMissing": True,
-        "CheckMissing": False,
-        "CheckValid": True,
+        "Strict": "reuse",
+        "Upgrade": "rerender",
+        "Unavailable": "unavailable",
+        "Generate": "generate",
     }
     source = RUNNER.read_text(encoding="utf-8")
     assert "exit 76" in source
-    assert source.index("check-only mode found no complete Codex") < source.index('-Label "pytest"')
+    assert source.index("check-only mode found neither") < source.index('-Label "pytest"')
+
+
+@requires_windows_powershell
+def test_delayed_weekly_task_targets_latest_sunday_without_collection(tmp_path: Path) -> None:
+    state_root = tmp_path / "state"
+    script = (
+        _load_functions(state_root, period="weekly")
+        + "$context = Resolve-ScheduledRunContext -TargetPeriod weekly "
+        "-ChinaNow ([DateTimeOffset]'2026-08-10T12:07:00+08:00'); "
+        "$context | ConvertTo-Json -Compress"
+    )
+
+    result = _run_powershell(script)
+
+    assert result.returncode == 0, result.stderr
+    assert _last_json(result.stdout) == {
+        "RunDate": "2026-08-09",
+        "CheckOnly": True,
+        "UpgradeFallback": True,
+        "DelayedWeekly": True,
+    }
 
 
 def test_manual_launcher_calls_safe_powershell_entrypoint_and_preserves_exit_code() -> None:
@@ -540,7 +571,8 @@ def test_manual_launcher_calls_safe_powershell_entrypoint_and_preserves_exit_cod
     assert "%~dp0scripts\\automation\\run_manual_update.ps1" in source
     assert "-ExecutionPolicy RemoteSigned" in source
     assert 'set "EXIT_CODE=%ERRORLEVEL%"' in source
-    assert "Check Daily and Weekly Reports" in source
+    assert "Check and Repair Daily and Weekly Reports" in source
+    assert 'if "%EXIT_CODE%"=="76"' in source
     assert "pause" in source.lower()
 
 
@@ -549,6 +581,8 @@ def test_manual_runner_disables_scheduled_lock_waiting() -> None:
 
     assert '"-LockWaitSeconds", "0"' in source
     assert '$arguments += "-CheckOnly"' in source
+    assert '$arguments += "-UpgradeFallback"' in source
+    assert "exit ([int]$failureCodes[0])" in source
 
 
 @requires_windows_powershell

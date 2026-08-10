@@ -34,6 +34,7 @@ function Get-ManualUpdatePlan {
         [pscustomobject]@{
             Period = "daily"
             CheckOnly = $false
+            UpgradeFallback = $false
             RunDate = $today
             Status = "due"
             NextDueDate = $today
@@ -41,8 +42,9 @@ function Get-ManualUpdatePlan {
         [pscustomobject]@{
             Period = "weekly"
             CheckOnly = -not $weeklyDue
+            UpgradeFallback = $true
             RunDate = if ($weeklyDue) { $today } else { $latestSunday }
-            Status = if ($weeklyDue) { "due" } else { "verify_only" }
+            Status = if ($weeklyDue) { "due" } else { "verify_or_upgrade" }
             NextDueDate = if ($weeklyDue) { $today } else { $nextSunday }
         }
     )
@@ -58,7 +60,9 @@ function Invoke-ManualPeriodUpdate {
         [ValidatePattern("^\d{4}-\d{2}-\d{2}$")]
         [string]$RunDate,
 
-        [switch]$CheckOnly
+        [switch]$CheckOnly,
+
+        [switch]$UpgradeFallback
     )
 
     $arguments = @(
@@ -73,6 +77,9 @@ function Invoke-ManualPeriodUpdate {
     )
     if ($CheckOnly) {
         $arguments += "-CheckOnly"
+    }
+    if ($UpgradeFallback) {
+        $arguments += "-UpgradeFallback"
     }
     if ($SkipPagesWait) {
         $arguments += "-SkipPagesWait"
@@ -105,20 +112,22 @@ $chinaTimeZone = [System.TimeZoneInfo]::FindSystemTimeZoneById("China Standard T
 $chinaNow = [System.TimeZoneInfo]::ConvertTime([DateTimeOffset]::UtcNow, $chinaTimeZone)
 $plan = @(Get-ManualUpdatePlan -ChinaNow $chinaNow)
 $failures = @()
+$failureCodes = @()
 
 Write-Host "GitHub Hotspots manual report check"
 Write-Host "China time: $($chinaNow.ToString('yyyy-MM-dd HH:mm:ss zzz'))"
 Write-Host "The current daily report and latest scheduled weekly report are both checked."
-Write-Host "Missing reports are generated only on their truthful due date; historical checks never backdate current data."
+Write-Host "Missing reports are generated only on their truthful due date; frozen weekly fallbacks may be upgraded without recollecting history."
 
 foreach ($item in $plan) {
     Write-Host ""
-    $checkLabel = if ($item.CheckOnly) { "VERIFY" } else { "CHECK" }
+    $checkLabel = if ($item.UpgradeFallback -and $item.CheckOnly) { "VERIFY/UPGRADE" } elseif ($item.CheckOnly) { "VERIFY" } else { "CHECK" }
     Write-Host "[$checkLabel] $($item.Period) report for $($item.RunDate)"
     $exitCode = Invoke-ManualPeriodUpdate `
         -Period $item.Period `
         -RunDate $item.RunDate `
-        -CheckOnly:$item.CheckOnly
+        -CheckOnly:$item.CheckOnly `
+        -UpgradeFallback:$item.UpgradeFallback
     if ($exitCode -eq 0) {
         Write-Host "[OK] $($item.period) report is complete and synchronized."
         if ($item.Period -eq "weekly" -and $item.CheckOnly) {
@@ -132,20 +141,21 @@ foreach ($item in $plan) {
     }
     elseif ($exitCode -eq 76) {
         Write-Host ((
-                "[MISSING] No complete Codex weekly report was found for {0}. " +
-                "Automatic historical generation is disabled; use the reviewed recovery workflow."
+                "[MISSING] No complete frozen weekly report was found for {0}. " +
+                "Automatic historical collection is disabled; use the reviewed recovery workflow."
             ) -f $item.RunDate)
     }
     else {
         Write-Host "[FAILED] $($item.period) report check returned exit code $exitCode."
     }
     $failures += $item.Period
+    $failureCodes += $exitCode
 }
 
 if ($failures.Count -gt 0) {
     Write-Host ""
     Write-Host "Manual check did not complete for: $($failures -join ', ')"
-    exit 1
+    exit ([int]$failureCodes[0])
 }
 
 Write-Host ""

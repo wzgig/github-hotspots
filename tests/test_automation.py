@@ -13,6 +13,7 @@ from github_hotspots import automation as automation_module
 from github_hotspots.automation import (
     AutomationValidationError,
     main,
+    protected_report_fingerprint,
     report_stem,
     scan_generated_files,
     validate_generated_paths,
@@ -232,6 +233,44 @@ def _build_history(root: Path) -> Path:
 def test_report_stem_uses_iso_week() -> None:
     assert report_stem("daily", date(2026, 7, 12)) == "2026-07-12"
     assert report_stem("weekly", "2026-07-12") == "2026-W28"
+
+
+def test_protected_report_fingerprint_tracks_only_frozen_ranking_facts(tmp_path: Path) -> None:
+    repository = {
+        "full_name": "acme/tool",
+        "rank": 1,
+        "stars": 1200,
+        "forks": 80,
+        "star_delta": 125,
+        "fork_delta": 4,
+        "delta_source": "snapshot",
+        "html_url": "https://github.com/acme/tool",
+        "score": 0.875,
+        "summary": {"one_line": "Original copy"},
+    }
+    payload = {
+        "period": "weekly",
+        "run_date": "2026-07-12",
+        "repositories": [dict(repository)],
+        "boards": {
+            "comprehensive": {"repositories": [dict(repository)]},
+            "ai": {"repositories": [dict(repository)]},
+        },
+    }
+    report_path = tmp_path / "reports" / "weekly" / "2026-W28.json"
+    report_path.parent.mkdir(parents=True)
+    report_path.write_text(json.dumps(payload), encoding="utf-8")
+
+    original = protected_report_fingerprint(tmp_path, "weekly", "2026-07-12")
+    payload["boards"]["ai"]["repositories"][0]["summary"]["one_line"] = "Codex copy"
+    report_path.write_text(json.dumps(payload), encoding="utf-8")
+
+    assert protected_report_fingerprint(tmp_path, "weekly", "2026-07-12") == original
+
+    payload["boards"]["ai"]["repositories"][0]["score"] = 0.9
+    report_path.write_text(json.dumps(payload), encoding="utf-8")
+
+    assert protected_report_fingerprint(tmp_path, "weekly", "2026-07-12") != original
 
 
 def test_validate_report_bundle_accepts_complete_codex_bundle(tmp_path: Path) -> None:

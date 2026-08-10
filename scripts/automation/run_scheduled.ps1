@@ -17,6 +17,8 @@ param(
 
     [switch]$CheckOnly,
 
+    [switch]$UpgradeFallback,
+
     [switch]$SkipPagesWait,
 
     [switch]$LoadFunctionsOnly
@@ -101,13 +103,70 @@ function Enter-SharedRunLock {
     }
 }
 
-function Test-ReportGenerationAllowed {
+function Resolve-ScheduledRunContext {
     param(
+        [Parameter(Mandatory = $true)]
+        [ValidateSet("daily", "weekly")]
+        [string]$TargetPeriod,
+
+        [string]$RequestedRunDate,
+
+        [Parameter(Mandatory = $true)]
+        [DateTimeOffset]$ChinaNow,
+
         [switch]$CheckOnly,
-        [Parameter(Mandatory = $true)][bool]$ReportAlreadyValid
+
+        [switch]$UpgradeFallback
     )
 
-    return -not $CheckOnly -or $ReportAlreadyValid
+    if ($RequestedRunDate) {
+        return [pscustomobject]@{
+            RunDate = $RequestedRunDate
+            CheckOnly = [bool]$CheckOnly
+            UpgradeFallback = [bool]$UpgradeFallback
+            DelayedWeekly = $false
+        }
+    }
+
+    if (
+        $TargetPeriod -eq "daily" -or
+        $ChinaNow.DayOfWeek -eq [System.DayOfWeek]::Sunday
+    ) {
+        return [pscustomobject]@{
+            RunDate = $ChinaNow.ToString("yyyy-MM-dd")
+            CheckOnly = [bool]$CheckOnly
+            UpgradeFallback = [bool]$UpgradeFallback
+            DelayedWeekly = $false
+        }
+    }
+
+    $latestSunday = $ChinaNow.Date.AddDays(-[int]$ChinaNow.DayOfWeek)
+    return [pscustomobject]@{
+        RunDate = $latestSunday.ToString("yyyy-MM-dd")
+        CheckOnly = $true
+        UpgradeFallback = $true
+        DelayedWeekly = $true
+    }
+}
+
+function Resolve-ReportAction {
+    param(
+        [Parameter(Mandatory = $true)][bool]$StrictBundleValid,
+        [Parameter(Mandatory = $true)][bool]$FallbackBundleValid,
+        [switch]$CheckOnly,
+        [switch]$UpgradeFallback
+    )
+
+    if ($StrictBundleValid) {
+        return "reuse"
+    }
+    if ($UpgradeFallback -and $FallbackBundleValid) {
+        return "rerender"
+    }
+    if ($CheckOnly) {
+        return "unavailable"
+    }
+    return "generate"
 }
 
 function Assert-StateChild {
@@ -189,6 +248,35 @@ function Invoke-Captured {
     return $output
 }
 
+function Test-ReportBundle {
+    param(
+        [Parameter(Mandatory = $true)][string]$Root,
+        [Parameter(Mandatory = $true)][string]$Python,
+        [Parameter(Mandatory = $true)][string]$TargetPeriod,
+        [Parameter(Mandatory = $true)][string]$TargetDate,
+        [switch]$RequireCodex
+    )
+
+    $arguments = @(
+        "-S", $AutomationScript, "verify",
+        "--root", $Root,
+        "--period", $TargetPeriod,
+        "--date", $TargetDate,
+        "--quiet"
+    )
+    if ($RequireCodex) {
+        $arguments += "--require-codex"
+    }
+    $verificationLabel = if ($RequireCodex) { "strict Codex bundle" } else { "frozen bundle" }
+    $exitCode = Invoke-Logged `
+        -Label "verify $verificationLabel with trusted validator" `
+        -FilePath $Python `
+        -ArgumentList $arguments `
+        -WorkingDirectory $RepoRoot `
+        -AllowFailure
+    return $exitCode -eq 0
+}
+
 function Test-Bundle {
     param(
         [Parameter(Mandatory = $true)][string]$Root,
@@ -197,20 +285,36 @@ function Test-Bundle {
         [Parameter(Mandatory = $true)][string]$TargetDate
     )
 
-    $exitCode = Invoke-Logged `
-        -Label "verify bundle with trusted validator" `
+    return Test-ReportBundle `
+        -Root $Root `
+        -Python $Python `
+        -TargetPeriod $TargetPeriod `
+        -TargetDate $TargetDate `
+        -RequireCodex
+}
+
+function Get-ProtectedFactsFingerprint {
+    param(
+        [Parameter(Mandatory = $true)][string]$Root,
+        [Parameter(Mandatory = $true)][string]$Python,
+        [Parameter(Mandatory = $true)][string]$TargetPeriod,
+        [Parameter(Mandatory = $true)][string]$TargetDate
+    )
+
+    $fingerprint = ((Invoke-Captured `
+        -Label "fingerprint protected ranking facts" `
         -FilePath $Python `
         -ArgumentList @(
-            "-S", $AutomationScript, "verify",
+            "-S", $AutomationScript, "facts-fingerprint",
             "--root", $Root,
             "--period", $TargetPeriod,
-            "--date", $TargetDate,
-            "--require-codex",
-            "--quiet"
+            "--date", $TargetDate
         ) `
-        -WorkingDirectory $RepoRoot `
-        -AllowFailure
-    return $exitCode -eq 0
+        -WorkingDirectory $RepoRoot) -join "").Trim()
+    if ($fingerprint -notmatch "^[0-9a-f]{64}$") {
+        throw "Protected ranking facts fingerprint is invalid."
+    }
+    return $fingerprint
 }
 
 function Test-PublicationHistory {
@@ -1253,12 +1357,20 @@ try {
 
     $chinaTimeZone = [System.TimeZoneInfo]::FindSystemTimeZoneById("China Standard Time")
     $chinaNow = [System.TimeZoneInfo]::ConvertTime([DateTimeOffset]::UtcNow, $chinaTimeZone)
-    if (-not $RunDate) {
-        if ($Period -eq "weekly" -and $chinaNow.DayOfWeek -ne [System.DayOfWeek]::Sunday) {
-            Write-RunLog "weekly task started outside Sunday; refusing inaccurate backfill"
-            return
-        }
-        $RunDate = $chinaNow.ToString("yyyy-MM-dd")
+    $runContext = Resolve-ScheduledRunContext `
+        -TargetPeriod $Period `
+        -RequestedRunDate $RunDate `
+        -ChinaNow $chinaNow `
+        -CheckOnly:$CheckOnly `
+        -UpgradeFallback:$UpgradeFallback
+    $RunDate = $runContext.RunDate
+    $CheckOnly = $runContext.CheckOnly
+    $UpgradeFallback = $runContext.UpgradeFallback
+    if ($runContext.DelayedWeekly) {
+        Write-RunLog (
+            "weekly task started outside Sunday; targeting latest due Sunday $RunDate " +
+            "for frozen-report recovery without recollection"
+        )
     }
     [void][DateTime]::ParseExact(
         $RunDate,
@@ -1279,16 +1391,10 @@ try {
         }
     }
     if ($CheckOnly) {
-        Write-RunLog "check-only mode enabled; Codex generation is disabled"
+        Write-RunLog "check-only mode enabled; new data collection is disabled"
     }
-    else {
-        if (-not (Get-Command codex -ErrorAction SilentlyContinue)) {
-            throw "The installed Codex CLI is not available for the current user."
-        }
-        Invoke-Logged `
-            -Label "Codex CLI preflight" `
-            -FilePath "codex" `
-            -ArgumentList @("--version") | Out-Null
+    if ($UpgradeFallback) {
+        Write-RunLog "frozen fallback upgrade is enabled"
     }
     Update-VerifiedOriginMain `
         -Python $Python `
@@ -1313,12 +1419,27 @@ try {
         -Python $Python `
         -TargetPeriod $Period `
         -TargetDate $RunDate
-    if (-not (Test-ReportGenerationAllowed `
+    $fallbackBundleValid = $false
+    if (-not $reportAlreadyValid -and $UpgradeFallback) {
+        $fallbackBundleValid = Test-ReportBundle `
+            -Root $WorktreePath `
+            -Python $Python `
+            -TargetPeriod $Period `
+            -TargetDate $RunDate
+    }
+    $reportAction = Resolve-ReportAction `
+        -StrictBundleValid $reportAlreadyValid `
+        -FallbackBundleValid $fallbackBundleValid `
         -CheckOnly:$CheckOnly `
-        -ReportAlreadyValid $reportAlreadyValid)) {
+        -UpgradeFallback:$UpgradeFallback
+    Write-RunLog (
+        "report decision action=$reportAction strict=$reportAlreadyValid " +
+        "frozen=$fallbackBundleValid"
+    )
+    if ($reportAction -eq "unavailable") {
         Write-RunLog (
-            "check-only mode found no complete Codex $Period report for $RunDate; " +
-            "refusing historical generation"
+            "check-only mode found neither a complete Codex $Period report nor a safe " +
+            "frozen fallback for $RunDate; refusing historical data collection"
         )
         exit 76
     }
@@ -1346,10 +1467,17 @@ try {
         return
     }
 
-    if ($reportAlreadyValid) {
+    if ($reportAction -eq "reuse") {
         Write-RunLog "valid Codex report exists but publication history needs repair; skipping regeneration"
     }
     else {
+        if (-not (Get-Command codex -ErrorAction SilentlyContinue)) {
+            throw "The installed Codex CLI is not available for the current user."
+        }
+        Invoke-Logged `
+            -Label "Codex CLI preflight" `
+            -FilePath "codex" `
+            -ArgumentList @("--version") | Out-Null
         Invoke-Logged `
             -Label "pytest" `
             -FilePath $Python `
@@ -1366,16 +1494,53 @@ try {
             -ArgumentList @("-m", "ruff", "format", "--check", ".") `
             -WorkingDirectory $WorktreePath | Out-Null
 
-        Invoke-Logged `
-            -Label "generate $Period report with local Codex" `
-            -FilePath $Python `
-            -ArgumentList @(
-                "-m", "github_hotspots.cli", "run",
-                "--period", $Period,
-                "--date", $RunDate,
-                "--editorial-backend", "codex-cli"
-            ) `
-            -WorkingDirectory $WorktreePath | Out-Null
+        if ($reportAction -eq "rerender") {
+            $stem = ((Invoke-Captured `
+                -Label "calculate frozen report stem" `
+                -FilePath $Python `
+                -ArgumentList @(
+                    "-S", $AutomationScript, "stem",
+                    "--period", $Period,
+                    "--date", $RunDate
+                ) `
+                -WorkingDirectory $RepoRoot) -join "").Trim()
+            $beforeFingerprint = Get-ProtectedFactsFingerprint `
+                -Root $WorktreePath `
+                -Python $Python `
+                -TargetPeriod $Period `
+                -TargetDate $RunDate
+            Invoke-Logged `
+                -Label "upgrade frozen $Period report with local Codex" `
+                -FilePath $Python `
+                -ArgumentList @(
+                    "-m", "github_hotspots.cli", "rerender",
+                    "reports/$Period/$stem.json",
+                    "--refresh-evidence",
+                    "--editorial-backend", "codex-cli"
+                ) `
+                -WorkingDirectory $WorktreePath | Out-Null
+            $afterFingerprint = Get-ProtectedFactsFingerprint `
+                -Root $WorktreePath `
+                -Python $Python `
+                -TargetPeriod $Period `
+                -TargetDate $RunDate
+            if ($beforeFingerprint -ne $afterFingerprint) {
+                throw "Frozen ranking facts changed during Codex rerender."
+            }
+            Write-RunLog "protected ranking facts unchanged fingerprint=$afterFingerprint"
+        }
+        else {
+            Invoke-Logged `
+                -Label "generate $Period report with local Codex" `
+                -FilePath $Python `
+                -ArgumentList @(
+                    "-m", "github_hotspots.cli", "run",
+                    "--period", $Period,
+                    "--date", $RunDate,
+                    "--editorial-backend", "codex-cli"
+                ) `
+                -WorkingDirectory $WorktreePath | Out-Null
+        }
 
         if (-not (Test-Bundle -Root $WorktreePath -Python $Python -TargetPeriod $Period -TargetDate $RunDate)) {
             throw "Strict post-run bundle verification failed."

@@ -66,10 +66,11 @@ so a moving remote-tracking ref cannot bypass the path gate.
    wait up to 20 minutes with five-second polling and record contention, acquisition, or timeout
    in the run log. Once the lock is held, remove automation-named worktrees older than six hours
    and path manifests older than one day, with every deletion constrained below the state root.
-2. Resolve the run date in `China Standard Time`. A delayed weekly task outside Sunday is
-   skipped rather than labelled as a false Sunday snapshot.
-3. Verify `git`, the project virtual environment, and the installed Codex CLI without
-   reading credentials or configuration.
+2. Resolve the run date in `China Standard Time`. A delayed weekly task outside Sunday targets
+   the latest due Sunday in check-only fallback-upgrade mode; it never collects new data under
+   the historical date.
+3. Verify `git` and the project virtual environment. Verify the installed Codex CLI only when
+   new due-date generation or a frozen fallback rerender is actually required.
 4. Fetch `origin/main`, record local `HEAD` as the trusted commit, require ancestor continuity,
    and validate the complete `trusted..remote` diff with the report-only remote path gate.
 5. Create a detached temporary worktree at the exact verified remote SHA below
@@ -78,8 +79,13 @@ so a moving remote-tracking ref cannot bypass the path gate.
    both boards using Codex without fallback, also verify its indexed `publish/history` revision.
    Skip only when both are complete; if only history is missing, rebuild history without
    calling Codex or replacing the report.
-7. Run pytest, Ruff lint, and Ruff format checks in the isolated worktree.
-8. Run the daily or weekly pipeline with `--editorial-backend codex-cli`.
+7. If strict Codex content is missing, distinguish a structurally valid frozen fallback from a
+   missing/corrupt report. A permitted fallback upgrade runs `rerender --refresh-evidence
+   --editorial-backend codex-cli`; it does not run collection or ranking. Before and after the
+   rerender, compare a SHA-256 fingerprint of both boards' protected `full_name`, `rank`, `stars`,
+   `forks`, `star_delta`, `fork_delta`, `delta_source`, `html_url`, and `score` fields.
+8. Run pytest, Ruff lint, and Ruff format checks in the isolated worktree, then either rerender
+   the frozen report or run the due-date pipeline with `--editorial-backend codex-cli`.
 9. Strictly validate Prompt 4.1 / Schema 4.0, both non-empty boards, current publication issue
    metadata, renderer 4.0, `signal-broadsheet-v1`, Markdown copies, ranked identities, and each
    PNG chunk, CRC, dimension, IDAT, and IEND.
@@ -226,12 +232,14 @@ strict, idempotent transaction as the scheduled tasks.
 
 - The daily bundle is checked for the current China Standard Time date on every run.
 - The latest scheduled Sunday weekly bundle is checked on every run. On Sunday it may be
-  generated when missing; Monday through Saturday use `-CheckOnly` and never start Codex
-  generation for the historical date.
+  generated when missing; Monday through Saturday use `-CheckOnly -UpgradeFallback`. This mode
+  may invoke Codex only to rerender an already complete frozen report and never starts source
+  collection or ranking for the historical date.
 - A complete remote Codex report plus matching publication history is reused without a new
   report commit; the local publication workspace and Pages status are still synchronized.
 - A missing bundle is generated, verified, committed, and pushed immediately only when the
-  requested date is truthfully due. A weekday weekly check with no complete Codex bundle exits
+  requested date is truthfully due. On a weekday, a structurally complete deterministic fallback
+  is upgraded with frozen facts; if no safe frozen bundle exists, the launcher preserves exit
   `76`, reports the missing Sunday, and requires the reviewed historical recovery workflow.
 - The visible manual launcher passes a zero-second lock wait so it remains responsive: if another
   local run owns the lock, it exits visibly and can be run again after that transaction finishes.
@@ -276,7 +284,8 @@ not the authoritative unattended-run log.
 | --- | --- |
 | Daily or weekly task is missing | Re-run `register_tasks.ps1`, verify both tasks are `Ready`, then use an explicit reviewed recovery run for any missing current-date report |
 | Lock already held | Scheduled runner waits up to 20 minutes; timeout exits `75` for Task Scheduler retry. The manual launcher returns `75` immediately and visibly |
-| Weekday manual check finds the latest weekly Codex bundle missing or downgraded | Exit `76`, identify the missing Sunday, and refuse automatic historical generation |
+| Weekday manual check finds a complete deterministic weekly fallback | Rerender it with Codex, fingerprint protected facts before/after, then require the strict Codex and history gates |
+| Weekday manual check finds the latest weekly bundle missing, corrupt, or unsafe to rerender | Exit `76`, identify the missing Sunday, and refuse automatic historical collection |
 | Tests, lint, source collection, or report render fails | No commit and no push |
 | Codex unavailable, times out, or falls back | Strict gate fails; no local commit; Actions may generate the deterministic fallback |
 | Remote is force-pushed or contains code/config/prompt/workflow/doc changes after trusted `HEAD` | Abort before executing the remote worktree; manually review and update the local checkout |
@@ -288,7 +297,7 @@ not the authoritative unattended-run log.
 | Non-fast-forward with a valid remote Codex report | Remote wins; no duplicate commit and no force push |
 | Non-fast-forward without a valid remote report | Clean rebase only; conflict fails and retries from a fresh worktree |
 | Pages deployment fails or times out | Content commit remains; task reports failure for operator follow-up |
-| Machine misses Sunday and starts on Monday | No inaccurate weekly backfill; use the Actions fallback or an explicit reviewed manual run |
+| Machine misses Sunday and starts on Monday | Target the latest Sunday and upgrade an existing complete frozen fallback; if none exists, exit `76` without collecting Monday data under Sunday |
 
 Do not backdate a report merely to fill a gap. GitHub counters and Trending describe the
 query time, so a later collection cannot truthfully reconstruct a missed earlier snapshot.
