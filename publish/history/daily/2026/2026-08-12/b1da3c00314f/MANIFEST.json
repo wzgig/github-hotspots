@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "b1da3c00314f013b4029893b85d5f9385d906008fd2ed506d7fcd77b790abc61",
+  "checklist_sha256": "432b5279f7647f0d7120ebc03010f2f05b5fafaf4ad14f3c50edeefd9c5cb191",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-08-12",
+  "generated_at": "2026-08-12T07:33:52.564660+08:00",
+  "issue": {
+    "number": 32,
+    "code": "D032",
+    "stem": "D032-2026-08-12",
+    "label": "第32期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-08-12.json",
+    "report_sha256": "7a98bbd2c2756f3d28e35bb01887a847d749ddc703530a64d1c07fb21852cebf",
+    "poster_manifest": "reports/daily/assets/2026-08-12/manifest.json",
+    "poster_manifest_sha256": "46bbcf6c6156c1558e45aea7059039bb43ac8f8ff71ac44e6fa596bcfbd0e037",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D032-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "2afb6e5675ad59cbd076a6c96ac063c896acd378c0b8f9e5cfffb2f60b373f76",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 363,
+      "caption_sha256": "f80922b525a5f5a3701820161219952a04e4b0278ada1502dc419a92281c8431",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "074e49156d064f586cc8c1bbd3f17854bb9ffbd6f833cae6b7bbaf8726766998",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-12/2026-08-12.comprehensive.cover.png",
+          "sha256": "72f4dad2ce85b2768b5d99669baadbf789ceb8cc90d5bb9606552cfca4f9c5c9",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-12/2026-08-12.comprehensive.01.primeintellect-ai--prime-agent.png",
+          "sha256": "dde22e06c88898f50767620426c185f17243607d701879ab5212992cdd599ede",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "PrimeIntellect-ai/prime-agent",
+          "publication_path": "images/02-rank-01-primeintellect-ai-prime-agent.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-12/2026-08-12.comprehensive.02.semantica-agi--semantica.png",
+          "sha256": "9dde80cfc6df4e7130d7f3bafa5f99b57a65b0de896cc684aec130d0751e7afc",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "semantica-agi/semantica",
+          "publication_path": "images/03-rank-02-semantica-agi-semantica.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-12/2026-08-12.comprehensive.03.msitarzewski--agency-agents.png",
+          "sha256": "ced7dcb4afa68d4ee0177d12d843edfd388d75380a361163441faf648fbc6bb9",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "msitarzewski/agency-agents",
+          "publication_path": "images/04-rank-03-msitarzewski-agency-agents.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D032-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "f2b28a4139375513f7370ac8f76aeb80e4324ec3d0fdea33a3e578f0c24e247c",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 336,
+      "caption_sha256": "03850355cdc6bcde6d61606152c5ec33fc7e6fbf6eeb547f0276429105054510",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "1686fe5462d399477654515e1c407e60583b50ae7e7a28166154708b50f4159f",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-12/2026-08-12.ai.cover.png",
+          "sha256": "83fd8cd91eee03a6a02507d6c5cb1710f63ac8f5ced6bc51f8a9305c80c6026c",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-12/2026-08-12.ai.01.msitarzewski--agency-agents.png",
+          "sha256": "ec82092a9dc7952d1724bf87ee7084aabae84a2c46e99a00cfbcf310cddf5dc5",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "msitarzewski/agency-agents",
+          "publication_path": "images/02-rank-01-msitarzewski-agency-agents.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-12/2026-08-12.ai.02.semantica-agi--semantica.png",
+          "sha256": "c9eaf1d9a70180918a1b25a132bcc8a35e620f87ce815dfdae02622e344e50ee",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "semantica-agi/semantica",
+          "publication_path": "images/03-rank-02-semantica-agi-semantica.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-12/2026-08-12.ai.03.firecrawl--firecrawl.png",
+          "sha256": "afc647cd983dfa99a45a55ea8aa1e10488f08c4cc8e96515d28cf75639b1b85b",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "firecrawl/firecrawl",
+          "publication_path": "images/04-rank-03-firecrawl-firecrawl.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-08-12",
+    "revision": "b1da3c00314f",
+    "image_policy": "repository-source-reference"
+  }
+}
