@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "7609801d8edb1d2d977429ba3550b05a5ed175bbf38afb60f4f0c55a446f8054",
+  "checklist_sha256": "9e327aa8372c0a086376313d5a66ef16dcadc6dd409b5622a3a3263ae93c44d6",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-08-13",
+  "generated_at": "2026-08-13T07:33:50.227154+08:00",
+  "issue": {
+    "number": 33,
+    "code": "D033",
+    "stem": "D033-2026-08-13",
+    "label": "第33期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-08-13.json",
+    "report_sha256": "d655a3745a8d50d9273a838e8762343b1d01bbcfd6fb97123f772ac2985bf175",
+    "poster_manifest": "reports/daily/assets/2026-08-13/manifest.json",
+    "poster_manifest_sha256": "589ed4f20481deb66feab399f657862e96b1ca6b8f94aa58973cc0c7f278e4e2",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D033-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "9fe3a3ce70e1b0e3f00e5a5e8320207b2fd3309a53f2d3afaf55e9a76266272b",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 323,
+      "caption_sha256": "e7f7941f5ab14c4ba3e838537b97522a3ceab1a045acb718353de2bd9f906674",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "0f940ca4e080b1ce33e473f0139a18d83b4b98b37a814c9bb9ad836ef13e418a",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.cover.png",
+          "sha256": "f14585bb4ce26a28823e43d021ce8dc828a61b08549b5af65deba1b4c966b0d6",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.01.semantica-agi--semantica.png",
+          "sha256": "e6b37b6bbad7cf2587f7f51362ea91d0504bc0d0f2849a19f04d2f4e246920bb",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "semantica-agi/semantica",
+          "publication_path": "images/02-rank-01-semantica-agi-semantica.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.02.stablyai--orca.png",
+          "sha256": "adf98c1247a1c6dbc57946b2bc946c8824696656a189da68108589acece78511",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "stablyai/orca",
+          "publication_path": "images/03-rank-02-stablyai-orca.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.03.cathrynlavery--diagram-design.png",
+          "sha256": "e9a434b5fdd746ca65488373b94b679d8da04c541142506fbef32b742a1cf010",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "cathrynlavery/diagram-design",
+          "publication_path": "images/04-rank-03-cathrynlavery-diagram-design.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D033-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "a46f64d5705d140d50ff16ba568aaf2968d4aded0344b30ede0ef2046a6a4cf1",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 324,
+      "caption_sha256": "743fd2dc83aa46d7e3ae3586af60a3208a6f7ace55e5ffbc0172a7d73fdba28c",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "7829e2a0063bb1230187210b2c7112051e3d99c559773c56a8212c79b3391894",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-13/2026-08-13.ai.cover.png",
+          "sha256": "fb11668ebbfaf9ffc15eaf8b29fa7712577b4af03902ad98fc72fcf65ecd381c",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-13/2026-08-13.ai.01.semantica-agi--semantica.png",
+          "sha256": "a08c0040f3f5fe105317603475ead64fc5151975a961774520d94f7918b2e1c0",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "semantica-agi/semantica",
+          "publication_path": "images/02-rank-01-semantica-agi-semantica.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-13/2026-08-13.ai.02.stablyai--orca.png",
+          "sha256": "43329f73bc3b3a9ce0d399e2b1fb0f9e6d11ada9bac0a0071c1f9aa4f31c07e6",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "stablyai/orca",
+          "publication_path": "images/03-rank-02-stablyai-orca.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-13/2026-08-13.ai.03.nousresearch--hermes-agent.png",
+          "sha256": "64eb95d7f1cf20c182f7a56eac6f09a3c7fa4e94bd9effd680b55255bcf1ff5f",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/04-rank-03-nousresearch-hermes-agent.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-08-13",
+    "revision": "7609801d8edb",
+    "image_policy": "repository-source-reference"
+  }
+}

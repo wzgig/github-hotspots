@@ -1,0 +1,1528 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-13",
+  "window_start": "2026-08-12",
+  "window_end": "2026-08-13",
+  "generated_at": "2026-08-13T07:31:19+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-12 至 2026-08-13",
+  "publication": {
+    "issue_number": 33,
+    "issue_code": "D033",
+    "issue_label": "第33期",
+    "status": "official"
+  },
+  "data_quality": "中高：快照与 Trending 混合",
+  "warnings": [
+    "综合主榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-13",
+    "manifest": "reports/daily/assets/2026-08-13/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "semantica-agi/semantica",
+            "path": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.01.semantica-agi--semantica.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "stablyai/orca",
+            "path": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.02.stablyai--orca.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "cathrynlavery/diagram-design",
+            "path": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.03.cathrynlavery--diagram-design.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-13/2026-08-13.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "semantica-agi/semantica",
+            "path": "reports/daily/assets/2026-08-13/2026-08-13.ai.01.semantica-agi--semantica.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "stablyai/orca",
+            "path": "reports/daily/assets/2026-08-13/2026-08-13.ai.02.stablyai--orca.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-13/2026-08-13.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 33,
+      "issue_code": "D033",
+      "issue_label": "第33期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1008304614,
+      "full_name": "semantica-agi/semantica",
+      "owner": "semantica-agi",
+      "name": "semantica",
+      "html_url": "https://github.com/semantica-agi/semantica",
+      "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+      "language": "Python",
+      "stars": 5679,
+      "forks": 622,
+      "open_issues": 67,
+      "watchers": 36,
+      "topics": [
+        "agent-memory",
+        "ai",
+        "ai-governance",
+        "ai-infrastructure",
+        "artificial-intelligence",
+        "context-engineering",
+        "context-graphs",
+        "data-engineering",
+        "decision-intelligence",
+        "developer-tools",
+        "explainable-ai",
+        "generative-ai",
+        "graph-rag",
+        "knowledge-graph",
+        "llm",
+        "ontology",
+        "provenance",
+        "python",
+        "reasoning",
+        "semantic-search"
+      ],
+      "created_at": "2025-06-25T10:41:00Z",
+      "updated_at": "2026-08-12T23:27:30Z",
+      "pushed_at": "2026-08-12T19:16:58Z",
+      "daily_stars": 834,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 90.65,
+      "star_delta": 840,
+      "fork_delta": 96,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.89,
+        "relative_growth": 98.63,
+        "fork_growth": 97.26,
+        "total_stars": 15.07,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "把企业数据整理成可追溯的知识图谱，为 AI 决策补上依据与审计链",
+        "highlights": [
+          "把多源数据接入并构建知识图谱",
+          "记录决策、因果关系和来源",
+          "用规则推理并导出审计轨迹"
+        ],
+        "audience": "需要让 AI Agent 使用可查询、可解释上下文的 AI 平台、数据与合规团队",
+        "capabilities": [
+          "导入文件、网页、数据库和企业数据平台",
+          "抽取实体、关系和事件并构建知识图谱",
+          "记录决策并追溯因果链与来源",
+          "检测冲突并合并重复实体",
+          "用规则推理并导出审计轨迹"
+        ],
+        "core_title": "让 AI 决策留下完整来路",
+        "core_summary": "Semantica 把实体、事实、决策和因果关系放进可查询图谱，再用来源记录、规则推理和审计导出解释结果。",
+        "prerequisites": "需要先安装 semantica Python 包；连接 Databricks、Snowflake 等数据源需安装对应扩展。",
+        "limitations": "ReteEngine 的条件匹配器较简单，接入合规流程前仍需用实际规则集核对 match_patterns() 输出。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "fbc207813d9adc352546351a77ef95a9b6e5a41d",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+          ],
+          "highlights": [
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ],
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ],
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ]
+          ],
+          "audience": [
+            "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+          ],
+          "capabilities": [
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ],
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ],
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ],
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ],
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ]
+          ],
+          "core_title": [
+            "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+          ],
+          "core_summary": [
+            "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+          ],
+          "prerequisites": [
+            "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+          ],
+          "limitations": [
+            "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-13/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+      "publication_evidence": {
+        "full_name": "semantica-agi/semantica",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "fbc207813d9adc352546351a77ef95a9b6e5a41d",
+          "source_url": "https://api.github.com/repos/semantica-agi/semantica/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-13/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+          "sha256": "591feabeac4b93a168ab04386fc03f03f572ed48bed8e4029d4f0c49c42d8d47",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.01.semantica-agi--semantica.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1183888342,
+      "full_name": "stablyai/orca",
+      "owner": "stablyai",
+      "name": "orca",
+      "html_url": "https://github.com/stablyai/orca",
+      "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
+      "language": "TypeScript",
+      "stars": 43817,
+      "forks": 3053,
+      "open_issues": 3669,
+      "watchers": 98,
+      "topics": [
+        "ade",
+        "agent-ide",
+        "ai-agents",
+        "claude-code",
+        "cli",
+        "codex",
+        "cursor-agent",
+        "devtools",
+        "ghostty",
+        "ide",
+        "mobile-app",
+        "opencode",
+        "orchestration",
+        "parallel-agents",
+        "pi",
+        "terminal",
+        "worktrees",
+        "yc-backed"
+      ],
+      "created_at": "2026-03-17T03:28:57Z",
+      "updated_at": "2026-08-12T23:29:16Z",
+      "pushed_at": "2026-08-12T23:26:37Z",
+      "daily_stars": 1215,
+      "weekly_stars": null,
+      "trending_rank_daily": 4,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 90.3,
+      "star_delta": 1092,
+      "fork_delta": 74,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.26,
+        "relative_growth": 94.52,
+        "fork_growth": 94.52,
+        "total_stars": 23.29,
+        "activity": 100.0,
+        "trending_signal": 43.07
+      },
+      "summary": {
+        "one_line": "把多个编程 Agent 放进同一工作台，隔离执行、统一查看并继续跟进",
+        "highlights": [
+          "并排运行多个编程 Agent",
+          "为任务创建隔离 Git worktree",
+          "从手机监控并跟进 Agent"
+        ],
+        "audience": "需要并行开发、比较多个 Agent 结果并远程跟进任务的个人开发者和团队",
+        "capabilities": [
+          "并排运行 Codex、Claude Code、OpenCode 或 Pi",
+          "为多个 Agent 创建隔离 Git worktree",
+          "从手机监控状态并发送后续指令",
+          "拆分终端窗口并保留滚动记录",
+          "标注 diff 并把修改意见发回 Agent"
+        ],
+        "core_title": "并行 Agent 的统一工作台",
+        "core_summary": "Orca 让多个命令行 Agent 各自在独立 worktree 中运行，集中显示执行状态，还能从终端、手机和代码 diff 继续推进任务。",
+        "prerequisites": "需要安装 Orca 桌面端；手机伴侣需要与桌面应用配对。",
+        "limitations": "手机端依赖桌面端配对；匿名使用数据的收集范围和退出方式需按隐私与遥测文档配置。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "b679cb95c3d497461e6860970f3137ab719cc80f",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+          ],
+          "highlights": [
+            [
+              "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+            ],
+            [
+              "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+            ],
+            [
+              "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+            ]
+          ],
+          "audience": [
+            "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+          ],
+          "capabilities": [
+            [
+              "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+            ],
+            [
+              "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+            ],
+            [
+              "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+            ],
+            [
+              "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+            ],
+            [
+              "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+            ]
+          ],
+          "core_title": [
+            "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+          ],
+          "core_summary": [
+            "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+          ],
+          "prerequisites": [
+            "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+          ],
+          "limitations": [
+            "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-13/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+      "publication_evidence": {
+        "full_name": "stablyai/orca",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "b679cb95c3d497461e6860970f3137ab719cc80f",
+          "source_url": "https://api.github.com/repos/stablyai/orca/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-13/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+          "sha256": "74c9f9ca37e1d708720845638e4947b594c011bd6eb473475d8b04512c5f221e",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.02.stablyai--orca.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1212769188,
+      "full_name": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "html_url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+      "language": "HTML",
+      "stars": 10192,
+      "forks": 666,
+      "open_issues": 7,
+      "watchers": 39,
+      "topics": [],
+      "created_at": "2026-04-16T18:01:16Z",
+      "updated_at": "2026-08-12T23:31:00Z",
+      "pushed_at": "2026-08-12T22:31:55Z",
+      "daily_stars": 2951,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 87.6,
+      "star_delta": 2951,
+      "fork_delta": 0,
+      "delta_source": "trending",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 17.12,
+        "total_stars": 17.81,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "把架构、流程和数据关系转成带品牌样式的可交付图表",
+        "highlights": [
+          "生成架构图、流程图和时序图",
+          "读取网站样式并套用品牌配色与字体",
+          "把 draw.io 或 Mermaid 重绘成目标格式"
+        ],
+        "audience": "用 Claude Code、Codex 或 Pi 制作技术文档、演示和内容配图的人",
+        "capabilities": [
+          "生成架构图、流程图和时序图",
+          "选择浅色、深色或编辑风格变体",
+          "读取网站并提取颜色与字体",
+          "把 draw.io 或 Mermaid 重绘为指定尺寸和细节",
+          "导出 SVG 或 PNG 用于 Figma、演示和社交卡片"
+        ],
+        "core_title": "从源图到品牌化交付图",
+        "core_summary": "它先按图表类型生成或重绘内容，再根据目标尺寸、细节和受众调整布局，并把网站配色与字体应用到整套图表。",
+        "prerequisites": "需要 Claude Code、Codex 或 Pi 等兼容 Agent Skills 的工具；导出 PNG 需安装 Playwright 与 Chromium。",
+        "limitations": "Mermaid 导入只解析文本，不渲染 JavaScript、浏览器或网络内容；导入结果会提供被合并、折叠或删除内容的说明。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "181c55dfa03cd99b75ce19d69b9c1426665a1677",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+          ],
+          "highlights": [
+            [
+              "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+            ],
+            [
+              "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+            ],
+            [
+              "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+            ]
+          ],
+          "audience": [
+            "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+          ],
+          "capabilities": [
+            [
+              "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+            ],
+            [
+              "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+            ],
+            [
+              "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+            ],
+            [
+              "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+            ],
+            [
+              "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+            ]
+          ],
+          "core_title": [
+            "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+          ],
+          "core_summary": [
+            "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+          ],
+          "prerequisites": [
+            "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+          ],
+          "limitations": [
+            "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-13/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+      "publication_evidence": {
+        "full_name": "cathrynlavery/diagram-design",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "181c55dfa03cd99b75ce19d69b9c1426665a1677",
+          "source_url": "https://api.github.com/repos/cathrynlavery/diagram-design/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-13/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+          "sha256": "953cad69949c87fb0d09dd4df8a331949626db100bf68670291c7bd87e27cc32",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.03.cathrynlavery--diagram-design.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "semantica-agi/semantica",
+            "path": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.01.semantica-agi--semantica.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "stablyai/orca",
+            "path": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.02.stablyai--orca.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "cathrynlavery/diagram-design",
+            "path": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.03.cathrynlavery--diagram-design.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1008304614,
+          "full_name": "semantica-agi/semantica",
+          "owner": "semantica-agi",
+          "name": "semantica",
+          "html_url": "https://github.com/semantica-agi/semantica",
+          "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+          "language": "Python",
+          "stars": 5679,
+          "forks": 622,
+          "open_issues": 67,
+          "watchers": 36,
+          "topics": [
+            "agent-memory",
+            "ai",
+            "ai-governance",
+            "ai-infrastructure",
+            "artificial-intelligence",
+            "context-engineering",
+            "context-graphs",
+            "data-engineering",
+            "decision-intelligence",
+            "developer-tools",
+            "explainable-ai",
+            "generative-ai",
+            "graph-rag",
+            "knowledge-graph",
+            "llm",
+            "ontology",
+            "provenance",
+            "python",
+            "reasoning",
+            "semantic-search"
+          ],
+          "created_at": "2025-06-25T10:41:00Z",
+          "updated_at": "2026-08-12T23:27:30Z",
+          "pushed_at": "2026-08-12T19:16:58Z",
+          "daily_stars": 834,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 90.65,
+          "star_delta": 840,
+          "fork_delta": 96,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.89,
+            "relative_growth": 98.63,
+            "fork_growth": 97.26,
+            "total_stars": 15.07,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把企业数据整理成可追溯的知识图谱，为 AI 决策补上依据与审计链",
+            "highlights": [
+              "把多源数据接入并构建知识图谱",
+              "记录决策、因果关系和来源",
+              "用规则推理并导出审计轨迹"
+            ],
+            "audience": "需要让 AI Agent 使用可查询、可解释上下文的 AI 平台、数据与合规团队",
+            "capabilities": [
+              "导入文件、网页、数据库和企业数据平台",
+              "抽取实体、关系和事件并构建知识图谱",
+              "记录决策并追溯因果链与来源",
+              "检测冲突并合并重复实体",
+              "用规则推理并导出审计轨迹"
+            ],
+            "core_title": "让 AI 决策留下完整来路",
+            "core_summary": "Semantica 把实体、事实、决策和因果关系放进可查询图谱，再用来源记录、规则推理和审计导出解释结果。",
+            "prerequisites": "需要先安装 semantica Python 包；连接 Databricks、Snowflake 等数据源需安装对应扩展。",
+            "limitations": "ReteEngine 的条件匹配器较简单，接入合规流程前仍需用实际规则集核对 match_patterns() 输出。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "fbc207813d9adc352546351a77ef95a9b6e5a41d",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "highlights": [
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ]
+              ],
+              "audience": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ]
+              ],
+              "core_title": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "core_summary": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "prerequisites": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "limitations": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-13/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+          "publication_evidence": {
+            "full_name": "semantica-agi/semantica",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "fbc207813d9adc352546351a77ef95a9b6e5a41d",
+              "source_url": "https://api.github.com/repos/semantica-agi/semantica/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-13/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+              "sha256": "591feabeac4b93a168ab04386fc03f03f572ed48bed8e4029d4f0c49c42d8d47",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.01.semantica-agi--semantica.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1183888342,
+          "full_name": "stablyai/orca",
+          "owner": "stablyai",
+          "name": "orca",
+          "html_url": "https://github.com/stablyai/orca",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
+          "language": "TypeScript",
+          "stars": 43817,
+          "forks": 3053,
+          "open_issues": 3669,
+          "watchers": 98,
+          "topics": [
+            "ade",
+            "agent-ide",
+            "ai-agents",
+            "claude-code",
+            "cli",
+            "codex",
+            "cursor-agent",
+            "devtools",
+            "ghostty",
+            "ide",
+            "mobile-app",
+            "opencode",
+            "orchestration",
+            "parallel-agents",
+            "pi",
+            "terminal",
+            "worktrees",
+            "yc-backed"
+          ],
+          "created_at": "2026-03-17T03:28:57Z",
+          "updated_at": "2026-08-12T23:29:16Z",
+          "pushed_at": "2026-08-12T23:26:37Z",
+          "daily_stars": 1215,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 90.3,
+          "star_delta": 1092,
+          "fork_delta": 74,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.26,
+            "relative_growth": 94.52,
+            "fork_growth": 94.52,
+            "total_stars": 23.29,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "把多个编程 Agent 放进同一工作台，隔离执行、统一查看并继续跟进",
+            "highlights": [
+              "并排运行多个编程 Agent",
+              "为任务创建隔离 Git worktree",
+              "从手机监控并跟进 Agent"
+            ],
+            "audience": "需要并行开发、比较多个 Agent 结果并远程跟进任务的个人开发者和团队",
+            "capabilities": [
+              "并排运行 Codex、Claude Code、OpenCode 或 Pi",
+              "为多个 Agent 创建隔离 Git worktree",
+              "从手机监控状态并发送后续指令",
+              "拆分终端窗口并保留滚动记录",
+              "标注 diff 并把修改意见发回 Agent"
+            ],
+            "core_title": "并行 Agent 的统一工作台",
+            "core_summary": "Orca 让多个命令行 Agent 各自在独立 worktree 中运行，集中显示执行状态，还能从终端、手机和代码 diff 继续推进任务。",
+            "prerequisites": "需要安装 Orca 桌面端；手机伴侣需要与桌面应用配对。",
+            "limitations": "手机端依赖桌面端配对；匿名使用数据的收集范围和退出方式需按隐私与遥测文档配置。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "b679cb95c3d497461e6860970f3137ab719cc80f",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+              ],
+              "highlights": [
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ],
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ],
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ]
+              ],
+              "audience": [
+                "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ],
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ],
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ],
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ],
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ]
+              ],
+              "core_title": [
+                "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+              ],
+              "core_summary": [
+                "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+              ],
+              "prerequisites": [
+                "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+              ],
+              "limitations": [
+                "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-13/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+          "publication_evidence": {
+            "full_name": "stablyai/orca",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "b679cb95c3d497461e6860970f3137ab719cc80f",
+              "source_url": "https://api.github.com/repos/stablyai/orca/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-13/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+              "sha256": "74c9f9ca37e1d708720845638e4947b594c011bd6eb473475d8b04512c5f221e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.02.stablyai--orca.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1212769188,
+          "full_name": "cathrynlavery/diagram-design",
+          "owner": "cathrynlavery",
+          "name": "diagram-design",
+          "html_url": "https://github.com/cathrynlavery/diagram-design",
+          "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+          "language": "HTML",
+          "stars": 10192,
+          "forks": 666,
+          "open_issues": 7,
+          "watchers": 39,
+          "topics": [],
+          "created_at": "2026-04-16T18:01:16Z",
+          "updated_at": "2026-08-12T23:31:00Z",
+          "pushed_at": "2026-08-12T22:31:55Z",
+          "daily_stars": 2951,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 87.6,
+          "star_delta": 2951,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 17.12,
+            "total_stars": 17.81,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把架构、流程和数据关系转成带品牌样式的可交付图表",
+            "highlights": [
+              "生成架构图、流程图和时序图",
+              "读取网站样式并套用品牌配色与字体",
+              "把 draw.io 或 Mermaid 重绘成目标格式"
+            ],
+            "audience": "用 Claude Code、Codex 或 Pi 制作技术文档、演示和内容配图的人",
+            "capabilities": [
+              "生成架构图、流程图和时序图",
+              "选择浅色、深色或编辑风格变体",
+              "读取网站并提取颜色与字体",
+              "把 draw.io 或 Mermaid 重绘为指定尺寸和细节",
+              "导出 SVG 或 PNG 用于 Figma、演示和社交卡片"
+            ],
+            "core_title": "从源图到品牌化交付图",
+            "core_summary": "它先按图表类型生成或重绘内容，再根据目标尺寸、细节和受众调整布局，并把网站配色与字体应用到整套图表。",
+            "prerequisites": "需要 Claude Code、Codex 或 Pi 等兼容 Agent Skills 的工具；导出 PNG 需安装 Playwright 与 Chromium。",
+            "limitations": "Mermaid 导入只解析文本，不渲染 JavaScript、浏览器或网络内容；导入结果会提供被合并、折叠或删除内容的说明。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "181c55dfa03cd99b75ce19d69b9c1426665a1677",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+              ],
+              "highlights": [
+                [
+                  "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+                ],
+                [
+                  "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+                ],
+                [
+                  "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+                ]
+              ],
+              "audience": [
+                "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+                ],
+                [
+                  "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+                ],
+                [
+                  "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+                ],
+                [
+                  "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+                ],
+                [
+                  "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+                ]
+              ],
+              "core_title": [
+                "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+              ],
+              "core_summary": [
+                "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+              ],
+              "prerequisites": [
+                "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+              ],
+              "limitations": [
+                "github.readme:181c55dfa03cd99b75ce19d69b9c1426665a1677"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-13/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+          "publication_evidence": {
+            "full_name": "cathrynlavery/diagram-design",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "181c55dfa03cd99b75ce19d69b9c1426665a1677",
+              "source_url": "https://api.github.com/repos/cathrynlavery/diagram-design/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-13/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+              "sha256": "953cad69949c87fb0d09dd4df8a331949626db100bf68670291c7bd87e27cc32",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-13/2026-08-13.comprehensive.03.cathrynlavery--diagram-design.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-13/2026-08-13.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "semantica-agi/semantica",
+            "path": "reports/daily/assets/2026-08-13/2026-08-13.ai.01.semantica-agi--semantica.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "stablyai/orca",
+            "path": "reports/daily/assets/2026-08-13/2026-08-13.ai.02.stablyai--orca.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-13/2026-08-13.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1008304614,
+          "full_name": "semantica-agi/semantica",
+          "owner": "semantica-agi",
+          "name": "semantica",
+          "html_url": "https://github.com/semantica-agi/semantica",
+          "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+          "language": "Python",
+          "stars": 5679,
+          "forks": 622,
+          "open_issues": 67,
+          "watchers": 36,
+          "topics": [
+            "agent-memory",
+            "ai",
+            "ai-governance",
+            "ai-infrastructure",
+            "artificial-intelligence",
+            "context-engineering",
+            "context-graphs",
+            "data-engineering",
+            "decision-intelligence",
+            "developer-tools",
+            "explainable-ai",
+            "generative-ai",
+            "graph-rag",
+            "knowledge-graph",
+            "llm",
+            "ontology",
+            "provenance",
+            "python",
+            "reasoning",
+            "semantic-search"
+          ],
+          "created_at": "2025-06-25T10:41:00Z",
+          "updated_at": "2026-08-12T23:27:30Z",
+          "pushed_at": "2026-08-12T19:16:58Z",
+          "daily_stars": 834,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 89.05,
+          "star_delta": 840,
+          "fork_delta": 96,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.1,
+            "relative_growth": 100.0,
+            "fork_growth": 93.1,
+            "total_stars": 13.79,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把企业数据整理成可追溯知识图谱，帮助 AI 解释决策依据",
+            "highlights": [
+              "把多源数据转成可查询的上下文图谱",
+              "为每条事实记录来源和决策因果链",
+              "用规则推理、冲突检测和去重补齐知识库"
+            ],
+            "audience": "需要为 AI 决策建立结构化上下文、审计记录和可解释流程的团队",
+            "capabilities": [
+              "接入文件、网页、数据库和数据平台",
+              "抽取实体、关系、事件与三元组",
+              "构建知识图谱并合并重复实体",
+              "记录决策因果链和来源血缘",
+              "用规则推理并导出审计记录"
+            ],
+            "core_title": "让 AI 决策留下可追溯依据",
+            "core_summary": "Semantica 把数据接入、知识图谱、规则推理、决策记录和来源追踪串成一条流程，方便回查 AI 为什么得到某个结果。",
+            "prerequisites": "先安装 semantica；接入 Databricks、Snowflake 等后端需安装对应依赖。",
+            "limitations": "ReteEngine 的条件匹配器较简单，接入合规闸门前需用实际规则集验证输出。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "fbc207813d9adc352546351a77ef95a9b6e5a41d",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "highlights": [
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ]
+              ],
+              "audience": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ]
+              ],
+              "core_title": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "core_summary": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "prerequisites": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "limitations": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-13/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+          "publication_evidence": {
+            "full_name": "semantica-agi/semantica",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "fbc207813d9adc352546351a77ef95a9b6e5a41d",
+              "source_url": "https://api.github.com/repos/semantica-agi/semantica/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-13/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+              "sha256": "591feabeac4b93a168ab04386fc03f03f572ed48bed8e4029d4f0c49c42d8d47",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-13/2026-08-13.ai.01.semantica-agi--semantica.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1183888342,
+          "full_name": "stablyai/orca",
+          "owner": "stablyai",
+          "name": "orca",
+          "html_url": "https://github.com/stablyai/orca",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
+          "language": "TypeScript",
+          "stars": 43817,
+          "forks": 3053,
+          "open_issues": 3669,
+          "watchers": 98,
+          "topics": [
+            "ade",
+            "agent-ide",
+            "ai-agents",
+            "claude-code",
+            "cli",
+            "codex",
+            "cursor-agent",
+            "devtools",
+            "ghostty",
+            "ide",
+            "mobile-app",
+            "opencode",
+            "orchestration",
+            "parallel-agents",
+            "pi",
+            "terminal",
+            "worktrees",
+            "yc-backed"
+          ],
+          "created_at": "2026-03-17T03:28:57Z",
+          "updated_at": "2026-08-12T23:29:16Z",
+          "pushed_at": "2026-08-12T23:26:37Z",
+          "daily_stars": 1215,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.36,
+          "star_delta": 1092,
+          "fork_delta": 74,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.55,
+            "relative_growth": 89.66,
+            "fork_growth": 89.66,
+            "total_stars": 20.69,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "把多个 CLI 编程 Agent 放进同一工作台，隔离执行并比较不同方案",
+            "highlights": [
+              "让多个 Agent 在独立 worktree 中并行改代码",
+              "从手机监控 Agent 状态并继续下达任务",
+              "在终端、浏览器和代码差异间连续完成审阅"
+            ],
+            "audience": "需要并行试验多个编程 Agent、远程协作和集中审阅代码的开发者",
+            "capabilities": [
+              "在独立 worktree 中启动多个 Agent",
+              "并行比较不同 Agent 的改动结果",
+              "从手机监控并跟进 Agent 任务",
+              "点击网页元素生成设计上下文",
+              "批注差异并回传 Agent 修改"
+            ],
+            "core_title": "把多个编程 Agent 放进同一工作台",
+            "core_summary": "Orca 用隔离 worktree、终端分屏、移动端控制和差异批注把多个 CLI Agent 串到同一工作流里，便于并行尝试后比较合并。",
+            "prerequisites": "需要安装桌面版；支持 macOS、Windows、Linux，移动端需与桌面应用配对。",
+            "limitations": "移动端是桌面应用的伴侣；使用远程 SSH worktree 仍需准备可运行 Agent、文件编辑和终端的远程环境。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "b679cb95c3d497461e6860970f3137ab719cc80f",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+              ],
+              "highlights": [
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ],
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ],
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ]
+              ],
+              "audience": [
+                "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ],
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ],
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ],
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ],
+                [
+                  "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+                ]
+              ],
+              "core_title": [
+                "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+              ],
+              "core_summary": [
+                "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+              ],
+              "prerequisites": [
+                "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+              ],
+              "limitations": [
+                "github.readme:b679cb95c3d497461e6860970f3137ab719cc80f"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-13/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+          "publication_evidence": {
+            "full_name": "stablyai/orca",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "b679cb95c3d497461e6860970f3137ab719cc80f",
+              "source_url": "https://api.github.com/repos/stablyai/orca/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-13/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+              "sha256": "74c9f9ca37e1d708720845638e4947b594c011bd6eb473475d8b04512c5f221e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-13/2026-08-13.ai.02.stablyai--orca.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 229555,
+          "forks": 45316,
+          "open_issues": 31489,
+          "watchers": 229555,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "nous-research",
+            "openai"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-08-12T23:30:27Z",
+          "pushed_at": "2026-08-12T23:29:55Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 82.76,
+          "star_delta": 542,
+          "fork_delta": 182,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 86.21,
+            "relative_growth": 75.86,
+            "fork_growth": 100.0,
+            "total_stars": 89.66,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "让一个 AI Agent 记住上下文、持续学习，并从终端或聊天平台完成任务",
+            "highlights": [
+              "让 Agent 从经验创建并改进技能",
+              "跨会话搜索记忆并逐步形成用户画像",
+              "通过消息平台、定时任务和远程环境持续工作"
+            ],
+            "audience": "想把 AI Agent 部署到云端，并让它长期执行个人或团队任务的开发者",
+            "capabilities": [
+              "在终端中进行连续对话和工具调用",
+              "从经验创建并改进可复用技能",
+              "搜索历史会话并维护持久记忆",
+              "通过 Telegram、Discord 等平台交互",
+              "用定时任务自动发送报告和执行工作"
+            ],
+            "core_title": "让 Agent 在使用中持续积累能力",
+            "core_summary": "Hermes Agent 把技能创建、记忆检索、用户建模和定时任务接入同一循环，还能通过消息平台连接远程运行环境。",
+            "prerequisites": "需要 Linux、macOS、WSL2、Termux 或原生 Windows 环境，并配置模型提供商及相关工具。",
+            "limitations": "模型、网页搜索、图像生成、语音等能力取决于所选提供商和对应工具配置，不能仅凭 Agent 本体获得。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "highlights": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "audience": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "core_title": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "core_summary": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "prerequisites": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "limitations": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-13/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-13/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-13/2026-08-13.ai.03.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
