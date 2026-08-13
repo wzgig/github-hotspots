@@ -1,0 +1,1498 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-14",
+  "window_start": "2026-08-13",
+  "window_end": "2026-08-14",
+  "generated_at": "2026-08-14T07:31:18+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-13 至 2026-08-14",
+  "publication": {
+    "issue_number": 34,
+    "issue_code": "D034",
+    "issue_label": "第34期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-14",
+    "manifest": "reports/daily/assets/2026-08-14/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "cathrynlavery/diagram-design",
+            "path": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.01.cathrynlavery--diagram-design.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "semantica-agi/semantica",
+            "path": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.02.semantica-agi--semantica.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "github/spec-kit",
+            "path": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.03.github--spec-kit.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-14/2026-08-14.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "semantica-agi/semantica",
+            "path": "reports/daily/assets/2026-08-14/2026-08-14.ai.01.semantica-agi--semantica.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "github/spec-kit",
+            "path": "reports/daily/assets/2026-08-14/2026-08-14.ai.02.github--spec-kit.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "macro-inc/macro",
+            "path": "reports/daily/assets/2026-08-14/2026-08-14.ai.03.macro-inc--macro.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 34,
+      "issue_code": "D034",
+      "issue_label": "第34期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1212769188,
+      "full_name": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "html_url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+      "language": "HTML",
+      "stars": 14336,
+      "forks": 858,
+      "open_issues": 7,
+      "watchers": 58,
+      "topics": [],
+      "created_at": "2026-04-16T18:01:16Z",
+      "updated_at": "2026-08-13T23:30:55Z",
+      "pushed_at": "2026-08-13T21:09:38Z",
+      "daily_stars": 4504,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 96.65,
+      "star_delta": 4144,
+      "fork_delta": 192,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 98.86,
+        "total_stars": 35.23,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "让编码智能体按内容选择图表类型，生成可直接打开和导出的编辑型图表",
+        "highlights": [
+          "从需求中选择合适的图表与语义模式",
+          "读取网站配色和字体，统一图表品牌风格",
+          "重绘 draw.io 与 Mermaid，并按用途裁剪细节"
+        ],
+        "audience": "适合用 Claude Code、Codex 或 Pi 制作架构图、流程图、演示图和文章配图的人",
+        "capabilities": [
+          "生成自包含的 HTML 与内联 SVG 图表",
+          "套用网站的颜色、字体和语义样式",
+          "检查文字与背景的可读性对比度",
+          "重绘 draw.io 或 Mermaid 图表源文件",
+          "导出适合网页、幻灯片或设计软件的图像"
+        ],
+        "core_title": "先理解行为，再选择图形",
+        "core_summary": "遇到队列、策略追踪或信任边界等复杂内容时，它先匹配语义模式，再挑接近的图表类型；静态输出默认无脚本，需要时才加入受控动效。",
+        "prerequisites": "需在 Claude Code、Codex 或 Pi 中安装；导出 PNG 另需 Playwright 与 Chromium。",
+        "limitations": "不适合列表、简单前后对比或单个方框；首次在品牌项目中使用默认样式时会暂停并要求用户确认。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "aa2794d57c260465c54c9f54859c6346311a02b8",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+          ],
+          "highlights": [
+            [
+              "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+            ],
+            [
+              "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+            ],
+            [
+              "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+            ]
+          ],
+          "audience": [
+            "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+          ],
+          "capabilities": [
+            [
+              "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+            ],
+            [
+              "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+            ],
+            [
+              "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+            ],
+            [
+              "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+            ],
+            [
+              "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+            ]
+          ],
+          "core_title": [
+            "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+          ],
+          "core_summary": [
+            "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+          ],
+          "prerequisites": [
+            "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+          ],
+          "limitations": [
+            "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-14/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+      "publication_evidence": {
+        "full_name": "cathrynlavery/diagram-design",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "aa2794d57c260465c54c9f54859c6346311a02b8",
+          "source_url": "https://api.github.com/repos/cathrynlavery/diagram-design/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-14/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+          "sha256": "953cad69949c87fb0d09dd4df8a331949626db100bf68670291c7bd87e27cc32",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.01.cathrynlavery--diagram-design.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1008304614,
+      "full_name": "semantica-agi/semantica",
+      "owner": "semantica-agi",
+      "name": "semantica",
+      "html_url": "https://github.com/semantica-agi/semantica",
+      "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+      "language": "Python",
+      "stars": 6599,
+      "forks": 696,
+      "open_issues": 67,
+      "watchers": 42,
+      "topics": [
+        "agent-memory",
+        "ai",
+        "ai-governance",
+        "ai-infrastructure",
+        "artificial-intelligence",
+        "context-engineering",
+        "context-graphs",
+        "data-engineering",
+        "decision-intelligence",
+        "developer-tools",
+        "explainable-ai",
+        "generative-ai",
+        "graph-rag",
+        "knowledge-graph",
+        "llm",
+        "ontology",
+        "provenance",
+        "python",
+        "reasoning",
+        "semantic-search"
+      ],
+      "created_at": "2025-06-25T10:41:00Z",
+      "updated_at": "2026-08-13T23:27:17Z",
+      "pushed_at": "2026-08-13T17:37:36Z",
+      "daily_stars": 727,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 92.42,
+      "star_delta": 920,
+      "fork_delta": 74,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.73,
+        "relative_growth": 96.59,
+        "fork_growth": 95.45,
+        "total_stars": 30.68,
+        "activity": 100.0,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "把分散数据整理成可查询的上下文图谱，并留下 AI 决策的因果链与来源记录",
+        "highlights": [
+          "把实体、关系、事实和决策放进同一张图",
+          "追踪每项事实来源并导出审计记录",
+          "用规则和图查询给出可解释的推理路径"
+        ],
+        "audience": "适合构建受监管 AI 系统的平台、数据、风控与审计团队，尤其需要自托管和追责链路的场景",
+        "capabilities": [
+          "接入文件、网页、数据库与数据平台",
+          "抽取实体、关系、事件并构建知识图谱",
+          "记录决策原因、结果及上下游影响",
+          "检测冲突事实并合并重复实体",
+          "导出图谱、来源链和审计材料"
+        ],
+        "core_title": "让每次决策都有来龙去脉",
+        "core_summary": "它把决策保存为可查询的图节点，连接证据、前因和后果，再用来源追踪与规则引擎回答“为何这样决定”，方便复查历史、查找先例和导出审计链。",
+        "prerequisites": "先用 pip 安装；图数据库、数据平台、智能体集成与可视化功能需按用途安装对应可选依赖。",
+        "limitations": "当前 Rete 条件匹配器较简单，接入合规关卡前应针对实际规则核验输出；企业部署还需配置密钥和持久化存储。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "fbc207813d9adc352546351a77ef95a9b6e5a41d",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+          ],
+          "highlights": [
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ],
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ],
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ]
+          ],
+          "audience": [
+            "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+          ],
+          "capabilities": [
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ],
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ],
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ],
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ],
+            [
+              "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+            ]
+          ],
+          "core_title": [
+            "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+          ],
+          "core_summary": [
+            "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+          ],
+          "prerequisites": [
+            "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+          ],
+          "limitations": [
+            "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-14/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+      "publication_evidence": {
+        "full_name": "semantica-agi/semantica",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "fbc207813d9adc352546351a77ef95a9b6e5a41d",
+          "source_url": "https://api.github.com/repos/semantica-agi/semantica/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-14/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+          "sha256": "591feabeac4b93a168ab04386fc03f03f572ed48bed8e4029d4f0c49c42d8d47",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.02.semantica-agi--semantica.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1042367133,
+      "full_name": "github/spec-kit",
+      "owner": "github",
+      "name": "spec-kit",
+      "html_url": "https://github.com/github/spec-kit",
+      "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+      "language": "Python",
+      "stars": 127413,
+      "forks": 11388,
+      "open_issues": 316,
+      "watchers": 127413,
+      "topics": [
+        "ai",
+        "copilot",
+        "development",
+        "engineering",
+        "prd",
+        "spec",
+        "spec-driven"
+      ],
+      "created_at": "2025-08-21T22:54:31Z",
+      "updated_at": "2026-08-13T23:22:35Z",
+      "pushed_at": "2026-08-13T21:56:12Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 90.45,
+      "star_delta": 971,
+      "fork_delta": 85,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.86,
+        "relative_growth": 92.05,
+        "fork_growth": 97.73,
+        "total_stars": 56.82,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "在 AI 编码前先把原则、需求、方案和任务写清楚，再按这些规格推进实现",
+        "highlights": [
+          "先建立项目原则，再约束后续开发决策",
+          "把需求逐步细化为技术方案和可执行任务",
+          "用扩展、预设和套件调整团队工作流"
+        ],
+        "audience": "适合希望让 AI 编码过程可规划、可复查的产品与研发团队，也适用于新项目和既有项目迭代",
+        "capabilities": [
+          "创建项目开发原则与质量约束",
+          "把产品想法整理成需求规格",
+          "生成结合技术栈的实施方案",
+          "拆分可执行任务并交给智能体实现",
+          "检查规格、方案和任务是否一致"
+        ],
+        "core_title": "规格不再只是前置文档",
+        "core_summary": "它把规格变成贯穿开发的工作主线：先定义目标与原则，再形成方案和任务，最后由编码智能体执行；中途还能澄清缺口、检查一致性并补充遗留工作。",
+        "prerequisites": "支持 Linux、macOS 和 Windows；需 AI 编码智能体、Python 3.11+、Git，并建议使用 uv 或 pipx。",
+        "limitations": "社区扩展由各自作者独立维护，安装前需自行审查源码；直接执行升级命令不会再次询问确认。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "3452eb4a3f679f37260bd91a2694e06d72def724",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+          ],
+          "highlights": [
+            [
+              "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+            ],
+            [
+              "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+            ],
+            [
+              "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+            ]
+          ],
+          "audience": [
+            "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+          ],
+          "capabilities": [
+            [
+              "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+            ],
+            [
+              "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+            ],
+            [
+              "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+            ],
+            [
+              "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+            ],
+            [
+              "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+            ]
+          ],
+          "core_title": [
+            "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+          ],
+          "core_summary": [
+            "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+          ],
+          "prerequisites": [
+            "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+          ],
+          "limitations": [
+            "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-14/repo-ea503c1a7b766c3502c824f5-2fc54e58647e3a65bea4d7a3.png",
+      "publication_evidence": {
+        "full_name": "github/spec-kit",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "3452eb4a3f679f37260bd91a2694e06d72def724",
+          "source_url": "https://api.github.com/repos/github/spec-kit/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-14/repo-ea503c1a7b766c3502c824f5-2fc54e58647e3a65bea4d7a3.png",
+          "sha256": "2694a51a9a532356600828d75c2ffd7334cfdd4f08af777b04e1480e94caf074",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.03.github--spec-kit.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "cathrynlavery/diagram-design",
+            "path": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.01.cathrynlavery--diagram-design.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "semantica-agi/semantica",
+            "path": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.02.semantica-agi--semantica.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "github/spec-kit",
+            "path": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.03.github--spec-kit.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1212769188,
+          "full_name": "cathrynlavery/diagram-design",
+          "owner": "cathrynlavery",
+          "name": "diagram-design",
+          "html_url": "https://github.com/cathrynlavery/diagram-design",
+          "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+          "language": "HTML",
+          "stars": 14336,
+          "forks": 858,
+          "open_issues": 7,
+          "watchers": 58,
+          "topics": [],
+          "created_at": "2026-04-16T18:01:16Z",
+          "updated_at": "2026-08-13T23:30:55Z",
+          "pushed_at": "2026-08-13T21:09:38Z",
+          "daily_stars": 4504,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 96.65,
+          "star_delta": 4144,
+          "fork_delta": 192,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 98.86,
+            "total_stars": 35.23,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "让编码智能体按内容选择图表类型，生成可直接打开和导出的编辑型图表",
+            "highlights": [
+              "从需求中选择合适的图表与语义模式",
+              "读取网站配色和字体，统一图表品牌风格",
+              "重绘 draw.io 与 Mermaid，并按用途裁剪细节"
+            ],
+            "audience": "适合用 Claude Code、Codex 或 Pi 制作架构图、流程图、演示图和文章配图的人",
+            "capabilities": [
+              "生成自包含的 HTML 与内联 SVG 图表",
+              "套用网站的颜色、字体和语义样式",
+              "检查文字与背景的可读性对比度",
+              "重绘 draw.io 或 Mermaid 图表源文件",
+              "导出适合网页、幻灯片或设计软件的图像"
+            ],
+            "core_title": "先理解行为，再选择图形",
+            "core_summary": "遇到队列、策略追踪或信任边界等复杂内容时，它先匹配语义模式，再挑接近的图表类型；静态输出默认无脚本，需要时才加入受控动效。",
+            "prerequisites": "需在 Claude Code、Codex 或 Pi 中安装；导出 PNG 另需 Playwright 与 Chromium。",
+            "limitations": "不适合列表、简单前后对比或单个方框；首次在品牌项目中使用默认样式时会暂停并要求用户确认。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "aa2794d57c260465c54c9f54859c6346311a02b8",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+              ],
+              "highlights": [
+                [
+                  "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+                ],
+                [
+                  "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+                ],
+                [
+                  "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+                ]
+              ],
+              "audience": [
+                "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+                ],
+                [
+                  "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+                ],
+                [
+                  "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+                ],
+                [
+                  "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+                ],
+                [
+                  "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+                ]
+              ],
+              "core_title": [
+                "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+              ],
+              "core_summary": [
+                "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+              ],
+              "prerequisites": [
+                "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+              ],
+              "limitations": [
+                "github.readme:aa2794d57c260465c54c9f54859c6346311a02b8"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-14/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+          "publication_evidence": {
+            "full_name": "cathrynlavery/diagram-design",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "aa2794d57c260465c54c9f54859c6346311a02b8",
+              "source_url": "https://api.github.com/repos/cathrynlavery/diagram-design/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-14/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+              "sha256": "953cad69949c87fb0d09dd4df8a331949626db100bf68670291c7bd87e27cc32",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.01.cathrynlavery--diagram-design.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1008304614,
+          "full_name": "semantica-agi/semantica",
+          "owner": "semantica-agi",
+          "name": "semantica",
+          "html_url": "https://github.com/semantica-agi/semantica",
+          "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+          "language": "Python",
+          "stars": 6599,
+          "forks": 696,
+          "open_issues": 67,
+          "watchers": 42,
+          "topics": [
+            "agent-memory",
+            "ai",
+            "ai-governance",
+            "ai-infrastructure",
+            "artificial-intelligence",
+            "context-engineering",
+            "context-graphs",
+            "data-engineering",
+            "decision-intelligence",
+            "developer-tools",
+            "explainable-ai",
+            "generative-ai",
+            "graph-rag",
+            "knowledge-graph",
+            "llm",
+            "ontology",
+            "provenance",
+            "python",
+            "reasoning",
+            "semantic-search"
+          ],
+          "created_at": "2025-06-25T10:41:00Z",
+          "updated_at": "2026-08-13T23:27:17Z",
+          "pushed_at": "2026-08-13T17:37:36Z",
+          "daily_stars": 727,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 92.42,
+          "star_delta": 920,
+          "fork_delta": 74,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.73,
+            "relative_growth": 96.59,
+            "fork_growth": 95.45,
+            "total_stars": 30.68,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把分散数据整理成可查询的上下文图谱，并留下 AI 决策的因果链与来源记录",
+            "highlights": [
+              "把实体、关系、事实和决策放进同一张图",
+              "追踪每项事实来源并导出审计记录",
+              "用规则和图查询给出可解释的推理路径"
+            ],
+            "audience": "适合构建受监管 AI 系统的平台、数据、风控与审计团队，尤其需要自托管和追责链路的场景",
+            "capabilities": [
+              "接入文件、网页、数据库与数据平台",
+              "抽取实体、关系、事件并构建知识图谱",
+              "记录决策原因、结果及上下游影响",
+              "检测冲突事实并合并重复实体",
+              "导出图谱、来源链和审计材料"
+            ],
+            "core_title": "让每次决策都有来龙去脉",
+            "core_summary": "它把决策保存为可查询的图节点，连接证据、前因和后果，再用来源追踪与规则引擎回答“为何这样决定”，方便复查历史、查找先例和导出审计链。",
+            "prerequisites": "先用 pip 安装；图数据库、数据平台、智能体集成与可视化功能需按用途安装对应可选依赖。",
+            "limitations": "当前 Rete 条件匹配器较简单，接入合规关卡前应针对实际规则核验输出；企业部署还需配置密钥和持久化存储。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "fbc207813d9adc352546351a77ef95a9b6e5a41d",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "highlights": [
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ]
+              ],
+              "audience": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ]
+              ],
+              "core_title": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "core_summary": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "prerequisites": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "limitations": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-14/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+          "publication_evidence": {
+            "full_name": "semantica-agi/semantica",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "fbc207813d9adc352546351a77ef95a9b6e5a41d",
+              "source_url": "https://api.github.com/repos/semantica-agi/semantica/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-14/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+              "sha256": "591feabeac4b93a168ab04386fc03f03f572ed48bed8e4029d4f0c49c42d8d47",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.02.semantica-agi--semantica.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1042367133,
+          "full_name": "github/spec-kit",
+          "owner": "github",
+          "name": "spec-kit",
+          "html_url": "https://github.com/github/spec-kit",
+          "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+          "language": "Python",
+          "stars": 127413,
+          "forks": 11388,
+          "open_issues": 316,
+          "watchers": 127413,
+          "topics": [
+            "ai",
+            "copilot",
+            "development",
+            "engineering",
+            "prd",
+            "spec",
+            "spec-driven"
+          ],
+          "created_at": "2025-08-21T22:54:31Z",
+          "updated_at": "2026-08-13T23:22:35Z",
+          "pushed_at": "2026-08-13T21:56:12Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 90.45,
+          "star_delta": 971,
+          "fork_delta": 85,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.86,
+            "relative_growth": 92.05,
+            "fork_growth": 97.73,
+            "total_stars": 56.82,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "在 AI 编码前先把原则、需求、方案和任务写清楚，再按这些规格推进实现",
+            "highlights": [
+              "先建立项目原则，再约束后续开发决策",
+              "把需求逐步细化为技术方案和可执行任务",
+              "用扩展、预设和套件调整团队工作流"
+            ],
+            "audience": "适合希望让 AI 编码过程可规划、可复查的产品与研发团队，也适用于新项目和既有项目迭代",
+            "capabilities": [
+              "创建项目开发原则与质量约束",
+              "把产品想法整理成需求规格",
+              "生成结合技术栈的实施方案",
+              "拆分可执行任务并交给智能体实现",
+              "检查规格、方案和任务是否一致"
+            ],
+            "core_title": "规格不再只是前置文档",
+            "core_summary": "它把规格变成贯穿开发的工作主线：先定义目标与原则，再形成方案和任务，最后由编码智能体执行；中途还能澄清缺口、检查一致性并补充遗留工作。",
+            "prerequisites": "支持 Linux、macOS 和 Windows；需 AI 编码智能体、Python 3.11+、Git，并建议使用 uv 或 pipx。",
+            "limitations": "社区扩展由各自作者独立维护，安装前需自行审查源码；直接执行升级命令不会再次询问确认。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "3452eb4a3f679f37260bd91a2694e06d72def724",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+              ],
+              "highlights": [
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ],
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ],
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ]
+              ],
+              "audience": [
+                "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ],
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ],
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ],
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ],
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ]
+              ],
+              "core_title": [
+                "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+              ],
+              "core_summary": [
+                "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+              ],
+              "prerequisites": [
+                "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+              ],
+              "limitations": [
+                "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-14/repo-ea503c1a7b766c3502c824f5-2fc54e58647e3a65bea4d7a3.png",
+          "publication_evidence": {
+            "full_name": "github/spec-kit",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "3452eb4a3f679f37260bd91a2694e06d72def724",
+              "source_url": "https://api.github.com/repos/github/spec-kit/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-14/repo-ea503c1a7b766c3502c824f5-2fc54e58647e3a65bea4d7a3.png",
+              "sha256": "2694a51a9a532356600828d75c2ffd7334cfdd4f08af777b04e1480e94caf074",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-14/2026-08-14.comprehensive.03.github--spec-kit.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-14/2026-08-14.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "semantica-agi/semantica",
+            "path": "reports/daily/assets/2026-08-14/2026-08-14.ai.01.semantica-agi--semantica.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "github/spec-kit",
+            "path": "reports/daily/assets/2026-08-14/2026-08-14.ai.02.github--spec-kit.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "macro-inc/macro",
+            "path": "reports/daily/assets/2026-08-14/2026-08-14.ai.03.macro-inc--macro.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1008304614,
+          "full_name": "semantica-agi/semantica",
+          "owner": "semantica-agi",
+          "name": "semantica",
+          "html_url": "https://github.com/semantica-agi/semantica",
+          "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+          "language": "Python",
+          "stars": 6599,
+          "forks": 696,
+          "open_issues": 67,
+          "watchers": 42,
+          "topics": [
+            "agent-memory",
+            "ai",
+            "ai-governance",
+            "ai-infrastructure",
+            "artificial-intelligence",
+            "context-engineering",
+            "context-graphs",
+            "data-engineering",
+            "decision-intelligence",
+            "developer-tools",
+            "explainable-ai",
+            "generative-ai",
+            "graph-rag",
+            "knowledge-graph",
+            "llm",
+            "ontology",
+            "provenance",
+            "python",
+            "reasoning",
+            "semantic-search"
+          ],
+          "created_at": "2025-06-25T10:41:00Z",
+          "updated_at": "2026-08-13T23:27:17Z",
+          "pushed_at": "2026-08-13T17:37:36Z",
+          "daily_stars": 727,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.87,
+          "star_delta": 920,
+          "fork_delta": 74,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.44,
+            "relative_growth": 94.87,
+            "fork_growth": 94.87,
+            "total_stars": 30.77,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把企业数据整理成可追溯的知识图谱，帮助 AI 记录、解释并审计决策",
+            "highlights": [
+              "从文件、数据库和企业数据平台导入信息",
+              "为事实和决策保留来源与因果链",
+              "用规则和图查询解释 AI 的判断过程"
+            ],
+            "audience": "需要为金融、医疗、法律等高风险 AI 场景建立可审计上下文的团队",
+            "capabilities": [
+              "导入文件、网页、数据库和企业数据",
+              "抽取实体、关系与事件构建知识图谱",
+              "记录可查询的决策及其因果关系",
+              "运行可解释的规则、Datalog 或 SPARQL 推理",
+              "检测冲突并合并重复实体，保留来源"
+            ],
+            "core_title": "让 AI 决策留下可追溯证据",
+            "core_summary": "它把实体、关系、事实和决策放进上下文图谱，再用来源、规则与因果链解释结果。",
+            "prerequisites": "通过 pip 安装 semantica；企业数据连接器需按需安装对应 extras。",
+            "limitations": "ReteEngine 的条件匹配器较简单，接入合规流程前需用实际规则集核对输出。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "fbc207813d9adc352546351a77ef95a9b6e5a41d",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "highlights": [
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ]
+              ],
+              "audience": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ],
+                [
+                  "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+                ]
+              ],
+              "core_title": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "core_summary": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "prerequisites": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "limitations": [
+                "github.readme:fbc207813d9adc352546351a77ef95a9b6e5a41d"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-14/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+          "publication_evidence": {
+            "full_name": "semantica-agi/semantica",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "fbc207813d9adc352546351a77ef95a9b6e5a41d",
+              "source_url": "https://api.github.com/repos/semantica-agi/semantica/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-14/repo-5e0449f3d53329cd2c7e1856-9883bab2f9d6c2903ae27bda.png",
+              "sha256": "591feabeac4b93a168ab04386fc03f03f572ed48bed8e4029d4f0c49c42d8d47",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-14/2026-08-14.ai.01.semantica-agi--semantica.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1042367133,
+          "full_name": "github/spec-kit",
+          "owner": "github",
+          "name": "spec-kit",
+          "html_url": "https://github.com/github/spec-kit",
+          "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+          "language": "Python",
+          "stars": 127413,
+          "forks": 11388,
+          "open_issues": 316,
+          "watchers": 127413,
+          "topics": [
+            "ai",
+            "copilot",
+            "development",
+            "engineering",
+            "prd",
+            "spec",
+            "spec-driven"
+          ],
+          "created_at": "2025-08-21T22:54:31Z",
+          "updated_at": "2026-08-13T23:22:35Z",
+          "pushed_at": "2026-08-13T21:56:12Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.49,
+          "star_delta": 971,
+          "fork_delta": 85,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 84.62,
+            "fork_growth": 97.44,
+            "total_stars": 56.41,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "把需求先写成可执行规范，再让 AI 编程代理按计划拆解并实现功能",
+            "highlights": [
+              "先建立项目原则和开发约束",
+              "把需求写成用户故事与功能规范",
+              "根据技术栈生成实施计划和任务清单"
+            ],
+            "audience": "希望让 AI 编程代理按统一流程开发新功能或改造现有项目的团队",
+            "capabilities": [
+              "初始化项目并接入 AI 编程代理",
+              "建立项目原则和开发指导",
+              "从需求生成规范与用户故事",
+              "按技术栈生成实施计划",
+              "把计划拆成任务并执行实现"
+            ],
+            "core_title": "把 AI 编程从聊天变成流程",
+            "core_summary": "Spec Kit 依次管理原则、规范、技术计划和任务，再交给 AI 编程代理执行与校验。",
+            "prerequisites": "需要支持的 AI 编程代理、uv 或 pipx、Python 3.11+ 和 Git。",
+            "limitations": "社区扩展和预设由各自作者独立维护，安装前需审阅源码并自行判断是否使用。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "3452eb4a3f679f37260bd91a2694e06d72def724",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+              ],
+              "highlights": [
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ],
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ],
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ]
+              ],
+              "audience": [
+                "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ],
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ],
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ],
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ],
+                [
+                  "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+                ]
+              ],
+              "core_title": [
+                "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+              ],
+              "core_summary": [
+                "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+              ],
+              "prerequisites": [
+                "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+              ],
+              "limitations": [
+                "github.readme:3452eb4a3f679f37260bd91a2694e06d72def724"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-14/repo-ea503c1a7b766c3502c824f5-2fc54e58647e3a65bea4d7a3.png",
+          "publication_evidence": {
+            "full_name": "github/spec-kit",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "3452eb4a3f679f37260bd91a2694e06d72def724",
+              "source_url": "https://api.github.com/repos/github/spec-kit/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-14/repo-ea503c1a7b766c3502c824f5-2fc54e58647e3a65bea4d7a3.png",
+              "sha256": "2694a51a9a532356600828d75c2ffd7334cfdd4f08af777b04e1480e94caf074",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-14/2026-08-14.ai.02.github--spec-kit.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1092407718,
+          "full_name": "macro-inc/macro",
+          "owner": "macro-inc",
+          "name": "macro",
+          "html_url": "https://github.com/macro-inc/macro",
+          "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+          "language": "Rust",
+          "stars": 2580,
+          "forks": 276,
+          "open_issues": 51,
+          "watchers": 44,
+          "topics": [
+            "agent",
+            "ai",
+            "ai-agents",
+            "all-in-one",
+            "crm",
+            "crm-system",
+            "email",
+            "linear",
+            "mcp",
+            "messaging",
+            "notes",
+            "notion",
+            "office",
+            "rust",
+            "slack",
+            "slack-alternative",
+            "startup",
+            "startup-tools",
+            "typescript",
+            "workspace"
+          ],
+          "created_at": "2025-11-08T15:18:27Z",
+          "updated_at": "2026-08-13T23:25:27Z",
+          "pushed_at": "2026-08-13T23:17:44Z",
+          "daily_stars": 1180,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.84,
+          "star_delta": 842,
+          "fork_delta": 55,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.87,
+            "relative_growth": 100.0,
+            "fork_growth": 87.18,
+            "total_stars": 20.51,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "把邮件、聊天、文档、任务和 CRM 串成共享上下文的团队工作台",
+            "highlights": [
+              "把邮件、消息和任务放进统一收件箱",
+              "用双向 @链接串起沟通与工作对象",
+              "让智能代理读取团队级记忆并执行操作"
+            ],
+            "audience": "想减少工具切换、统一团队沟通与客户信息的小型团队和创业公司",
+            "capabilities": [
+              "统一管理多个邮箱和团队消息",
+              "从邮件、聊天或文档直接创建任务",
+              "协作编辑可 @链接的 Markdown 文档",
+              "把公司、联系人和交易放进关联 CRM",
+              "让代理搜索记忆并代办工作区操作"
+            ],
+            "core_title": "把团队工作串成一张上下文网络",
+            "core_summary": "邮件、消息、文档、任务和 CRM 共享同一后端，并通过双向 @链接互相跳转。",
+            "prerequisites": "托管版需现代浏览器并连接 Gmail 或 Google Workspace；本地运行需按指南配置。",
+            "limitations": "Android 应用仍在开发中；完整本地运行需要按仓库的 Running locally 指南配置。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "",
+            "readme_sha": "5c1f46495934b6a72e5e7479d059d8a7986491f0",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+              ],
+              "highlights": [
+                [
+                  "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+                ],
+                [
+                  "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+                ],
+                [
+                  "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+                ]
+              ],
+              "audience": [
+                "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+                ],
+                [
+                  "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+                ],
+                [
+                  "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+                ],
+                [
+                  "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+                ],
+                [
+                  "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+                ]
+              ],
+              "core_title": [
+                "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+              ],
+              "core_summary": [
+                "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+              ],
+              "prerequisites": [
+                "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+              ],
+              "limitations": [
+                "github.readme:5c1f46495934b6a72e5e7479d059d8a7986491f0"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-14/repo-5f558d6b60335f405f9b73bc-ec67b6f1db3c9f64601aaea3.png",
+          "publication_evidence": {
+            "full_name": "macro-inc/macro",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "5c1f46495934b6a72e5e7479d059d8a7986491f0",
+              "source_url": "https://api.github.com/repos/macro-inc/macro/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-14/repo-5f558d6b60335f405f9b73bc-ec67b6f1db3c9f64601aaea3.png",
+              "sha256": "5faddc10f1de527748ac514beeade58b815a2bb6d6de31b5b15b7f6ce8a60713",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-14/2026-08-14.ai.03.macro-inc--macro.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
