@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "46790ee80351c62a051c354c7b4ed06550ed28c8cdbb99c70facebbe8b675a7f",
+  "checklist_sha256": "90b12328d5d3a108d8b49da769d1579fa81377d076011298a9b9fb33e92811fd",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-08-15",
+  "generated_at": "2026-08-15T10:36:44.770046+08:00",
+  "issue": {
+    "number": 35,
+    "code": "D035",
+    "stem": "D035-2026-08-15",
+    "label": "第35期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-08-15.json",
+    "report_sha256": "0b7d2b17e3b0d9470ebcb7291cfeb2bff92d859a4c2365f53b6dea3449a23e57",
+    "poster_manifest": "reports/daily/assets/2026-08-15/manifest.json",
+    "poster_manifest_sha256": "1a0c9916ccd919281a0f2b6beaca1536d58ec85497e9753990ca7bdc985eb224",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D035-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "8f110911d5b5fc9090b8202f9005b2d5422eab43be10ed1c22c26b4860ce5465",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 351,
+      "caption_sha256": "5454f81a2658feae5f6a590f0eb60be2d8d6d0a3989c723ecc4129fab26240fb",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "ff482ca42678f68aaf3fa745d4e108c857236430f0d3fd74a55c2a59a5b09671",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-15/2026-08-15.comprehensive.cover.png",
+          "sha256": "3c4470f7cbba2b4601b187f4cf69f78b2b2404c78d73d065ebfbc4ac1ddac3a5",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-15/2026-08-15.comprehensive.01.cathrynlavery--diagram-design.png",
+          "sha256": "0ad07b7dbef61aafbf4e1be9d9797747a836fada71c7a1470077fdb6d8593319",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "cathrynlavery/diagram-design",
+          "publication_path": "images/02-rank-01-cathrynlavery-diagram-design.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-15/2026-08-15.comprehensive.02.github--spec-kit.png",
+          "sha256": "74965856b13142df20a0ffcaf113a3ca85fc4bc6b652e8a1566f21b945fdd715",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "github/spec-kit",
+          "publication_path": "images/03-rank-02-github-spec-kit.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-15/2026-08-15.comprehensive.03.semantica-agi--semantica.png",
+          "sha256": "60855343d84dabdeaa2c77f0fbae7f1d7b12184885dbdd85b15fb526662776b7",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "semantica-agi/semantica",
+          "publication_path": "images/04-rank-03-semantica-agi-semantica.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D035-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "80afedb945affe53d9e83e23c4cd3b29463b6fc1ba5943dd06929d4f5fbaed1c",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 328,
+      "caption_sha256": "59d1478a371b5cc3e3bb0ffb3438d644ec2da5d06212b2cb62b904507f58cd0c",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "9d4fd60abda176815dd1da75e9ac0042b1a15787b306b68fe252703712ad9d1b",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-15/2026-08-15.ai.cover.png",
+          "sha256": "4ad378171706bc2ae854a662aa7272f1342e9969fcfd5639e34d101b3c8ac3e2",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-15/2026-08-15.ai.01.github--spec-kit.png",
+          "sha256": "0f97ad9c29464cd879a95a07ab4b1bf5dc911286a65e1382194cdebb45e0876c",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "github/spec-kit",
+          "publication_path": "images/02-rank-01-github-spec-kit.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-15/2026-08-15.ai.02.semantica-agi--semantica.png",
+          "sha256": "c8d45ea187164d19798be56bedb0737d328c159d04532ba91006ab8d8d76c14b",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "semantica-agi/semantica",
+          "publication_path": "images/03-rank-02-semantica-agi-semantica.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-15/2026-08-15.ai.03.cactus-compute--needle.png",
+          "sha256": "4b04e9b03210b8b8b6f6ef40c232c8eb7859e111226e0aba9a93787ef08be8aa",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "cactus-compute/needle",
+          "publication_path": "images/04-rank-03-cactus-compute-needle.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-08-15",
+    "revision": "46790ee80351",
+    "image_policy": "repository-source-reference"
+  }
+}
