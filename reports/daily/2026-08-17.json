@@ -4,7 +4,7 @@
   "run_date": "2026-08-17",
   "window_start": "2026-08-16",
   "window_end": "2026-08-17",
-  "generated_at": "2026-08-17T10:35:16+08:00",
+  "generated_at": "2026-08-17T14:09:30+08:00",
   "timezone": "Asia/Shanghai",
   "window_label": "2026-08-16 至 2026-08-17",
   "publication": {
@@ -22,16 +22,16 @@
       "comprehensive": {
         "prompt_version": "4.1",
         "schema_version": "4.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       },
       "ai": {
         "prompt_version": "4.1",
         "schema_version": "4.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       }
@@ -79,13 +79,13 @@
           },
           {
             "rank": 2,
-            "full_name": "cactus-compute/needle",
-            "path": "reports/daily/assets/2026-08-17/2026-08-17.ai.02.cactus-compute--needle.png"
+            "full_name": "ToolJet/ToolJet",
+            "path": "reports/daily/assets/2026-08-17/2026-08-17.ai.02.tooljet--tooljet.png"
           },
           {
             "rank": 3,
-            "full_name": "NousResearch/hermes-agent",
-            "path": "reports/daily/assets/2026-08-17/2026-08-17.ai.03.nousresearch--hermes-agent.png"
+            "full_name": "cactus-compute/needle",
+            "path": "reports/daily/assets/2026-08-17/2026-08-17.ai.03.cactus-compute--needle.png"
           }
         ]
       }
@@ -106,10 +106,10 @@
       "html_url": "https://github.com/public-apis/public-apis",
       "description": "A collective list of free APIs",
       "language": "Python",
-      "stars": 461912,
-      "forks": 51024,
-      "open_issues": 1678,
-      "watchers": 461912,
+      "stars": 462217,
+      "forks": 51051,
+      "open_issues": 1679,
+      "watchers": 462217,
       "topics": [
         "api",
         "apis",
@@ -126,8 +126,8 @@
         "software"
       ],
       "created_at": "2016-03-20T23:49:42Z",
-      "updated_at": "2026-08-17T02:34:31Z",
-      "pushed_at": "2026-08-16T19:26:55Z",
+      "updated_at": "2026-08-17T06:09:11Z",
+      "pushed_at": "2026-08-17T03:47:56Z",
       "daily_stars": 1588,
       "weekly_stars": null,
       "trending_rank_daily": 5,
@@ -137,77 +137,91 @@
         "github_api"
       ],
       "rank": 1,
-      "score": 96.02,
-      "star_delta": 1700,
-      "fork_delta": 171,
+      "score": 96.06,
+      "star_delta": 2005,
+      "fork_delta": 198,
       "delta_source": "snapshot",
       "component_percentiles": {
         "star_growth": 100.0,
-        "relative_growth": 95.45,
+        "relative_growth": 95.65,
         "fork_growth": 100.0,
         "total_stars": 100.0,
         "activity": 100.0,
         "trending_signal": 38.69
       },
       "summary": {
-        "one_line": "公开信息不足，暂不能准确说明 public-apis 的具体用途",
+        "one_line": "按领域整理公开 API，帮你为应用寻找可调用的数据与服务接口",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "按主题汇总不同领域的公开 API",
+          "为每个接口标注认证与跨域信息",
+          "持续由社区人工维护和补充清单"
         ],
-        "audience": "公开信息不足，需人工确认后再发布",
+        "audience": "需要为原型、网站或工具寻找外部数据接口的开发者",
         "capabilities": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "按领域查找天气、金融、地图等 API",
+          "查看接口是否需要 apiKey 或 OAuth",
+          "核对接口是否支持 HTTPS 和 CORS",
+          "从条目描述判断可提供的数据或服务",
+          "通过贡献指南补充或修正 API 条目"
         ],
-        "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "公开信息不足，暂不能准确说明 public-apis 的具体用途",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "把找 API 变成按领域查清单",
+        "core_summary": "仓库将公开 API 按动物、金融、地图、开发等领域分组，并为条目列出描述、认证、HTTPS 与 CORS，便于先筛选再接入。",
+        "prerequisites": "具体认证方式随 API 条目而异，需按列表准备 apiKey、OAuth 或免认证访问。",
+        "limitations": "清单由社区人工维护；每个接口的认证、HTTPS、CORS 和实际可用性仍需逐条核对。",
+        "license_label": "MIT",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "needs_review",
+        "readme_sha": "7009f3b54fe2d48842505380653452f5a73a516d",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
             ],
             [
-              "deterministic_draft"
+              "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
             ],
             [
-              "deterministic_draft"
+              "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
             ],
             [
-              "deterministic_draft"
+              "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
             ],
             [
-              "deterministic_draft"
+              "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
+            ],
+            [
+              "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
+            ],
+            [
+              "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
+          ],
+          "limitations": [
+            "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -215,7 +229,10 @@
       "publication_evidence": {
         "full_name": "public-apis/public-apis",
         "license_spdx_id": "MIT",
-        "readme": null,
+        "readme": {
+          "sha": "7009f3b54fe2d48842505380653452f5a73a516d",
+          "source_url": "https://api.github.com/repos/public-apis/public-apis/readme"
+        },
         "avatar": {
           "path": "avatars/2026-08-17/repo-fa7dc4680dc18bbd3a691939-7f220dae2a51b04ffadea98c.png",
           "sha256": "165aa7840a7fd70aae0755473bd92d5773f5d17f1234408a87cac73fb3f27a8a",
@@ -240,13 +257,13 @@
       "html_url": "https://github.com/mattpocock/skills",
       "description": "Skills for Real Engineers. Straight from my .agents directory.",
       "language": "Shell",
-      "stars": 219379,
-      "forks": 18890,
+      "stars": 219543,
+      "forks": 18904,
       "open_issues": 357,
-      "watchers": 219379,
+      "watchers": 219543,
       "topics": [],
       "created_at": "2026-02-03T11:15:53Z",
-      "updated_at": "2026-08-17T02:34:43Z",
+      "updated_at": "2026-08-17T06:08:53Z",
       "pushed_at": "2026-08-16T21:03:27Z",
       "daily_stars": null,
       "weekly_stars": null,
@@ -256,77 +273,91 @@
         "github_api"
       ],
       "rank": 2,
-      "score": 91.74,
-      "star_delta": 965,
-      "fork_delta": 76,
+      "score": 91.88,
+      "star_delta": 1129,
+      "fork_delta": 90,
       "delta_source": "snapshot",
       "component_percentiles": {
-        "star_growth": 98.48,
-        "relative_growth": 92.42,
-        "fork_growth": 96.97,
-        "total_stars": 86.36,
+        "star_growth": 98.55,
+        "relative_growth": 92.75,
+        "fork_growth": 97.1,
+        "total_stars": 86.96,
         "activity": 100.0,
         "trending_signal": 0.0
       },
       "summary": {
-        "one_line": "skills 的用途证据不足，需要先查看仓库 README",
+        "one_line": "把软件工程方法拆成可组合技能，让编码 Agent 按步骤协作、测试和改进代码",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "用提问澄清需求和项目术语",
+          "用测试与调试流程缩短反馈回路",
+          "用架构检查减少代码库持续变乱"
         ],
-        "audience": "公开信息不足，需人工确认后再发布",
+        "audience": "希望让 Claude Code、Codex 等编码 Agent 遵循工程流程的开发者",
         "capabilities": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "通过提问澄清需求和目标",
+          "建立项目共享术语与决策文档",
+          "按红绿重构流程推动测试开发",
+          "分阶段诊断并修复代码问题",
+          "扫描代码库寻找架构改进机会"
         ],
-        "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "skills 的用途证据不足，需要先查看仓库 README",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "把工程习惯封装成可调用技能",
+        "core_summary": "技能按用户调用与模型调用拆分，分别负责组织流程和复用工程纪律；文件保持小巧、可组合并能改写成自己的工作流。",
+        "prerequisites": "安装 Claude Code 插件或使用 npx skills@latest add mattpocock/skills，再在每个仓库运行 /setup-m将?",
+        "limitations": "Claude Code 插件以只读方式管理并自动更新；可编辑安装会把文件复制进项目，不能同时安装两种方式，否则技能会重复。",
+        "license_label": "MIT",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "needs_review",
+        "readme_sha": "3b6952dfe0f306c2b58447e5b1124af9d8b49cc4",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
             ],
             [
-              "deterministic_draft"
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
             ],
             [
-              "deterministic_draft"
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
             ],
             [
-              "deterministic_draft"
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
             ],
             [
-              "deterministic_draft"
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+            ],
+            [
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+            ],
+            [
+              "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+          ],
+          "limitations": [
+            "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -334,10 +365,13 @@
       "publication_evidence": {
         "full_name": "mattpocock/skills",
         "license_spdx_id": "MIT",
-        "readme": null,
+        "readme": {
+          "sha": "3b6952dfe0f306c2b58447e5b1124af9d8b49cc4",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
         "avatar": {
           "path": "avatars/2026-08-17/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
-          "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
           "width": 373,
           "height": 373
         },
@@ -359,9 +393,9 @@
       "html_url": "https://github.com/unslothai/unsloth",
       "description": "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
       "language": "Python",
-      "stars": 72670,
-      "forks": 6552,
-      "open_issues": 1270,
+      "stars": 72798,
+      "forks": 6560,
+      "open_issues": 1266,
       "watchers": 374,
       "topics": [
         "agent",
@@ -386,8 +420,8 @@
         "unsloth"
       ],
       "created_at": "2023-11-29T16:50:09Z",
-      "updated_at": "2026-08-17T02:34:58Z",
-      "pushed_at": "2026-08-17T02:34:23Z",
+      "updated_at": "2026-08-17T06:08:33Z",
+      "pushed_at": "2026-08-17T06:00:33Z",
       "daily_stars": 572,
       "weekly_stars": null,
       "trending_rank_daily": 3,
@@ -397,77 +431,91 @@
         "github_api"
       ],
       "rank": 3,
-      "score": 89.54,
-      "star_delta": 607,
-      "fork_delta": 57,
+      "score": 89.89,
+      "star_delta": 735,
+      "fork_delta": 65,
       "delta_source": "snapshot",
       "component_percentiles": {
-        "star_growth": 95.45,
-        "relative_growth": 93.94,
-        "fork_growth": 93.94,
-        "total_stars": 22.73,
+        "star_growth": 95.65,
+        "relative_growth": 94.2,
+        "fork_growth": 94.2,
+        "total_stars": 26.09,
         "activity": 100.0,
         "trending_signal": 50.0
       },
       "summary": {
-        "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；unsloth 还能把模型能力接入可重复的任务流程",
+        "one_line": "在本地运行、训练和部署多类 AI 模型，并通过界面或 API 接入工作流",
         "highlights": [
-          "把复杂任务拆成连续的执行步骤",
-          "让 Agent 围绕目标推进任务流程",
-          "为工具调用和工作流扩展提供基础"
+          "本地运行语言、图像和音频模型",
+          "用较少显存训练和微调模型",
+          "把本地模型接入 Agent 与工具调用"
         ],
-        "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+        "audience": "想在本机运行或训练大模型，并连接编码 Agent 的开发者",
         "capabilities": [
-          "把复杂任务拆成连续的执行步骤",
-          "让 Agent 围绕目标推进任务流程",
-          "为工具调用和工作流扩展提供基础"
+          "在本地运行 LLM、扩散和音频模型",
+          "通过 LoRA、QLoRA 等方式微调模型",
+          "把模型接入 Claude Code、Codex 和 MCP",
+          "从 PDF、CSV、DOCX 构建训练数据集",
+          "导出模型并提供 OpenAI 兼容 API"
         ],
-        "core_title": "搭建能够连续执行多步任务的 AI Agent",
-        "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；unsloth 还能把模型能力接入可重复的任务流程",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "从本地模型到 Agent 工作流",
+        "core_summary": "Unsloth 用桌面应用、Web UI 和代码版覆盖模型运行、训练、导出与部署，还能把本地模型作为 Claude Code、Codex 等 Agent 的子模型。",
+        "prerequisites": "桌面版无需额外设置；代码版需按系统安装 Python 3.13、uv，并准备对应的 PyTorch 或硬件环境。",
+        "limitations": "公开访问时，持有链接和 API key 的人可运行服务器工具与代码；默认仅本机访问，开放网络前需保护密钥并确认网络边界。",
+        "license_label": "Apache-2.0",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "metadata_only",
+        "readme_sha": "e21c60f238da397deaad63f64349bfc6cf63f417",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
             ],
             [
-              "deterministic_draft"
+              "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
             ],
             [
-              "deterministic_draft"
+              "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
             ],
             [
-              "deterministic_draft"
+              "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
             ],
             [
-              "deterministic_draft"
+              "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+            ],
+            [
+              "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+            ],
+            [
+              "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+          ],
+          "limitations": [
+            "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -475,10 +523,13 @@
       "publication_evidence": {
         "full_name": "unslothai/unsloth",
         "license_spdx_id": "Apache-2.0",
-        "readme": null,
+        "readme": {
+          "sha": "e21c60f238da397deaad63f64349bfc6cf63f417",
+          "source_url": "https://api.github.com/repos/unslothai/unsloth/readme"
+        },
         "avatar": {
           "path": "avatars/2026-08-17/repo-5ba4a50d51e918329bce3075-28a0bc46b9516382cd36429c.png",
-          "sha256": "ea337655d7a81e932119739f2513c1e81d2572f51fff241f905ebe68b177cf74",
+          "sha256": "217d85091d7ad0a9953b54d6e1149f568124fcd5af437ae9605fbd94c25f291c",
           "width": 460,
           "height": 460
         },
@@ -528,10 +579,10 @@
           "html_url": "https://github.com/public-apis/public-apis",
           "description": "A collective list of free APIs",
           "language": "Python",
-          "stars": 461912,
-          "forks": 51024,
-          "open_issues": 1678,
-          "watchers": 461912,
+          "stars": 462217,
+          "forks": 51051,
+          "open_issues": 1679,
+          "watchers": 462217,
           "topics": [
             "api",
             "apis",
@@ -548,8 +599,8 @@
             "software"
           ],
           "created_at": "2016-03-20T23:49:42Z",
-          "updated_at": "2026-08-17T02:34:31Z",
-          "pushed_at": "2026-08-16T19:26:55Z",
+          "updated_at": "2026-08-17T06:09:11Z",
+          "pushed_at": "2026-08-17T03:47:56Z",
           "daily_stars": 1588,
           "weekly_stars": null,
           "trending_rank_daily": 5,
@@ -559,77 +610,91 @@
             "github_api"
           ],
           "rank": 1,
-          "score": 96.02,
-          "star_delta": 1700,
-          "fork_delta": 171,
+          "score": 96.06,
+          "star_delta": 2005,
+          "fork_delta": 198,
           "delta_source": "snapshot",
           "component_percentiles": {
             "star_growth": 100.0,
-            "relative_growth": 95.45,
+            "relative_growth": 95.65,
             "fork_growth": 100.0,
             "total_stars": 100.0,
             "activity": 100.0,
             "trending_signal": 38.69
           },
           "summary": {
-            "one_line": "公开信息不足，暂不能准确说明 public-apis 的具体用途",
+            "one_line": "按领域整理公开 API，帮你为应用寻找可调用的数据与服务接口",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "按主题汇总不同领域的公开 API",
+              "为每个接口标注认证与跨域信息",
+              "持续由社区人工维护和补充清单"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "需要为原型、网站或工具寻找外部数据接口的开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "按领域查找天气、金融、地图等 API",
+              "查看接口是否需要 apiKey 或 OAuth",
+              "核对接口是否支持 HTTPS 和 CORS",
+              "从条目描述判断可提供的数据或服务",
+              "通过贡献指南补充或修正 API 条目"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "公开信息不足，暂不能准确说明 public-apis 的具体用途",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "把找 API 变成按领域查清单",
+            "core_summary": "仓库将公开 API 按动物、金融、地图、开发等领域分组，并为条目列出描述、认证、HTTPS 与 CORS，便于先筛选再接入。",
+            "prerequisites": "具体认证方式随 API 条目而异，需按列表准备 apiKey、OAuth 或免认证访问。",
+            "limitations": "清单由社区人工维护；每个接口的认证、HTTPS、CORS 和实际可用性仍需逐条核对。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "7009f3b54fe2d48842505380653452f5a73a516d",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
+                ],
+                [
+                  "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
+                ],
+                [
+                  "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
+              ],
+              "limitations": [
+                "github.readme:7009f3b54fe2d48842505380653452f5a73a516d"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -637,7 +702,10 @@
           "publication_evidence": {
             "full_name": "public-apis/public-apis",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "7009f3b54fe2d48842505380653452f5a73a516d",
+              "source_url": "https://api.github.com/repos/public-apis/public-apis/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-17/repo-fa7dc4680dc18bbd3a691939-7f220dae2a51b04ffadea98c.png",
               "sha256": "165aa7840a7fd70aae0755473bd92d5773f5d17f1234408a87cac73fb3f27a8a",
@@ -662,13 +730,13 @@
           "html_url": "https://github.com/mattpocock/skills",
           "description": "Skills for Real Engineers. Straight from my .agents directory.",
           "language": "Shell",
-          "stars": 219379,
-          "forks": 18890,
+          "stars": 219543,
+          "forks": 18904,
           "open_issues": 357,
-          "watchers": 219379,
+          "watchers": 219543,
           "topics": [],
           "created_at": "2026-02-03T11:15:53Z",
-          "updated_at": "2026-08-17T02:34:43Z",
+          "updated_at": "2026-08-17T06:08:53Z",
           "pushed_at": "2026-08-16T21:03:27Z",
           "daily_stars": null,
           "weekly_stars": null,
@@ -678,77 +746,91 @@
             "github_api"
           ],
           "rank": 2,
-          "score": 91.74,
-          "star_delta": 965,
-          "fork_delta": 76,
+          "score": 91.88,
+          "star_delta": 1129,
+          "fork_delta": 90,
           "delta_source": "snapshot",
           "component_percentiles": {
-            "star_growth": 98.48,
-            "relative_growth": 92.42,
-            "fork_growth": 96.97,
-            "total_stars": 86.36,
+            "star_growth": 98.55,
+            "relative_growth": 92.75,
+            "fork_growth": 97.1,
+            "total_stars": 86.96,
             "activity": 100.0,
             "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "skills 的用途证据不足，需要先查看仓库 README",
+            "one_line": "把软件工程方法拆成可组合技能，让编码 Agent 按步骤协作、测试和改进代码",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "用提问澄清需求和项目术语",
+              "用测试与调试流程缩短反馈回路",
+              "用架构检查减少代码库持续变乱"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "希望让 Claude Code、Codex 等编码 Agent 遵循工程流程的开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "通过提问澄清需求和目标",
+              "建立项目共享术语与决策文档",
+              "按红绿重构流程推动测试开发",
+              "分阶段诊断并修复代码问题",
+              "扫描代码库寻找架构改进机会"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "skills 的用途证据不足，需要先查看仓库 README",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "把工程习惯封装成可调用技能",
+            "core_summary": "技能按用户调用与模型调用拆分，分别负责组织流程和复用工程纪律；文件保持小巧、可组合并能改写成自己的工作流。",
+            "prerequisites": "安装 Claude Code 插件或使用 npx skills@latest add mattpocock/skills，再在每个仓库运行 /setup-m将?",
+            "limitations": "Claude Code 插件以只读方式管理并自动更新；可编辑安装会把文件复制进项目，不能同时安装两种方式，否则技能会重复。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "3b6952dfe0f306c2b58447e5b1124af9d8b49cc4",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+                ],
+                [
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+                ],
+                [
+                  "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+              ],
+              "limitations": [
+                "github.readme:3b6952dfe0f306c2b58447e5b1124af9d8b49cc4"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -756,10 +838,13 @@
           "publication_evidence": {
             "full_name": "mattpocock/skills",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "3b6952dfe0f306c2b58447e5b1124af9d8b49cc4",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-17/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
-              "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
               "width": 373,
               "height": 373
             },
@@ -781,9 +866,9 @@
           "html_url": "https://github.com/unslothai/unsloth",
           "description": "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
           "language": "Python",
-          "stars": 72670,
-          "forks": 6552,
-          "open_issues": 1270,
+          "stars": 72798,
+          "forks": 6560,
+          "open_issues": 1266,
           "watchers": 374,
           "topics": [
             "agent",
@@ -808,8 +893,8 @@
             "unsloth"
           ],
           "created_at": "2023-11-29T16:50:09Z",
-          "updated_at": "2026-08-17T02:34:58Z",
-          "pushed_at": "2026-08-17T02:34:23Z",
+          "updated_at": "2026-08-17T06:08:33Z",
+          "pushed_at": "2026-08-17T06:00:33Z",
           "daily_stars": 572,
           "weekly_stars": null,
           "trending_rank_daily": 3,
@@ -819,77 +904,91 @@
             "github_api"
           ],
           "rank": 3,
-          "score": 89.54,
-          "star_delta": 607,
-          "fork_delta": 57,
+          "score": 89.89,
+          "star_delta": 735,
+          "fork_delta": 65,
           "delta_source": "snapshot",
           "component_percentiles": {
-            "star_growth": 95.45,
-            "relative_growth": 93.94,
-            "fork_growth": 93.94,
-            "total_stars": 22.73,
+            "star_growth": 95.65,
+            "relative_growth": 94.2,
+            "fork_growth": 94.2,
+            "total_stars": 26.09,
             "activity": 100.0,
             "trending_signal": 50.0
           },
           "summary": {
-            "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；unsloth 还能把模型能力接入可重复的任务流程",
+            "one_line": "在本地运行、训练和部署多类 AI 模型，并通过界面或 API 接入工作流",
             "highlights": [
-              "把复杂任务拆成连续的执行步骤",
-              "让 Agent 围绕目标推进任务流程",
-              "为工具调用和工作流扩展提供基础"
+              "本地运行语言、图像和音频模型",
+              "用较少显存训练和微调模型",
+              "把本地模型接入 Agent 与工具调用"
             ],
-            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "audience": "想在本机运行或训练大模型，并连接编码 Agent 的开发者",
             "capabilities": [
-              "把复杂任务拆成连续的执行步骤",
-              "让 Agent 围绕目标推进任务流程",
-              "为工具调用和工作流扩展提供基础"
+              "在本地运行 LLM、扩散和音频模型",
+              "通过 LoRA、QLoRA 等方式微调模型",
+              "把模型接入 Claude Code、Codex 和 MCP",
+              "从 PDF、CSV、DOCX 构建训练数据集",
+              "导出模型并提供 OpenAI 兼容 API"
             ],
-            "core_title": "搭建能够连续执行多步任务的 AI Agent",
-            "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；unsloth 还能把模型能力接入可重复的任务流程",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "从本地模型到 Agent 工作流",
+            "core_summary": "Unsloth 用桌面应用、Web UI 和代码版覆盖模型运行、训练、导出与部署，还能把本地模型作为 Claude Code、Codex 等 Agent 的子模型。",
+            "prerequisites": "桌面版无需额外设置；代码版需按系统安装 Python 3.13、uv，并准备对应的 PyTorch 或硬件环境。",
+            "limitations": "公开访问时，持有链接和 API key 的人可运行服务器工具与代码；默认仅本机访问，开放网络前需保护密钥并确认网络边界。",
+            "license_label": "Apache-2.0",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "readme_sha": "e21c60f238da397deaad63f64349bfc6cf63f417",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+                ],
+                [
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+                ],
+                [
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+              ],
+              "limitations": [
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -897,10 +996,13 @@
           "publication_evidence": {
             "full_name": "unslothai/unsloth",
             "license_spdx_id": "Apache-2.0",
-            "readme": null,
+            "readme": {
+              "sha": "e21c60f238da397deaad63f64349bfc6cf63f417",
+              "source_url": "https://api.github.com/repos/unslothai/unsloth/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-17/repo-5ba4a50d51e918329bce3075-28a0bc46b9516382cd36429c.png",
-              "sha256": "ea337655d7a81e932119739f2513c1e81d2572f51fff241f905ebe68b177cf74",
+              "sha256": "217d85091d7ad0a9953b54d6e1149f568124fcd5af437ae9605fbd94c25f291c",
               "width": 460,
               "height": 460
             },
@@ -931,13 +1033,13 @@
           },
           {
             "rank": 2,
-            "full_name": "cactus-compute/needle",
-            "path": "reports/daily/assets/2026-08-17/2026-08-17.ai.02.cactus-compute--needle.png"
+            "full_name": "ToolJet/ToolJet",
+            "path": "reports/daily/assets/2026-08-17/2026-08-17.ai.02.tooljet--tooljet.png"
           },
           {
             "rank": 3,
-            "full_name": "NousResearch/hermes-agent",
-            "path": "reports/daily/assets/2026-08-17/2026-08-17.ai.03.nousresearch--hermes-agent.png"
+            "full_name": "cactus-compute/needle",
+            "path": "reports/daily/assets/2026-08-17/2026-08-17.ai.03.cactus-compute--needle.png"
           }
         ]
       },
@@ -950,9 +1052,9 @@
           "html_url": "https://github.com/unslothai/unsloth",
           "description": "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
           "language": "Python",
-          "stars": 72670,
-          "forks": 6552,
-          "open_issues": 1270,
+          "stars": 72798,
+          "forks": 6560,
+          "open_issues": 1266,
           "watchers": 374,
           "topics": [
             "agent",
@@ -977,8 +1079,8 @@
             "unsloth"
           ],
           "created_at": "2023-11-29T16:50:09Z",
-          "updated_at": "2026-08-17T02:34:58Z",
-          "pushed_at": "2026-08-17T02:34:23Z",
+          "updated_at": "2026-08-17T06:08:33Z",
+          "pushed_at": "2026-08-17T06:00:33Z",
           "daily_stars": 572,
           "weekly_stars": null,
           "trending_rank_daily": 3,
@@ -988,96 +1090,274 @@
             "github_api"
           ],
           "rank": 1,
-          "score": 91.14,
-          "star_delta": 607,
-          "fork_delta": 57,
+          "score": 91.46,
+          "star_delta": 735,
+          "fork_delta": 65,
           "delta_source": "snapshot",
           "component_percentiles": {
             "star_growth": 100.0,
-            "relative_growth": 90.91,
-            "fork_growth": 95.45,
-            "total_stars": 18.18,
+            "relative_growth": 91.67,
+            "fork_growth": 95.83,
+            "total_stars": 20.83,
             "activity": 100.0,
             "trending_signal": 50.0
           },
           "summary": {
-            "one_line": "unsloth 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
+            "one_line": "把大模型、图像与音频模型留在本机运行、训练和部署，并接入代理或应用工作流。",
             "highlights": [
-              "把复杂任务拆成连续的执行步骤",
-              "让 Agent 围绕目标推进任务流程",
-              "为工具调用和工作流扩展提供基础"
+              "桌面、网页和代码三种使用形态",
+              "本地模型可接入代理、工具调用与代码执行",
+              "覆盖训练、数据构建、导出和远程访问"
             ],
-            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "audience": "需要在自己的设备上训练或运行模型，并把模型接入编码代理、检索或内部应用的开发者。",
             "capabilities": [
-              "把复杂任务拆成连续的执行步骤",
-              "让 Agent 围绕目标推进任务流程",
-              "为工具调用和工作流扩展提供基础"
+              "在本机运行和训练多类 AI 模型",
+              "把本地模型接入 Codex 等代理",
+              "从 PDF、CSV、DOCX 构建数据集",
+              "导出 GGUF、FP8 等部署格式",
+              "通过兼容 OpenAI 的 API 提供模型"
             ],
-            "core_title": "搭建能够连续执行多步任务的 AI Agent",
-            "core_summary": "unsloth 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
-            "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "core_title": "本地模型接入现有代理",
+            "core_summary": "Unsloth Start 先加载本地模型，再用一条命令连接 Codex、Claude Code 等代理；也可让代理保留当前模型，把 Unsloth 作为本地子代理。",
+            "prerequisites": "桌面版可直接安装；代码版需按系统安装 Python 3.13、uv，并选择受支持的计算后端。",
+            "limitations": "公开访问时，持有链接和 API Key 的人可在本机运行代码；暴露服务前应保管密钥并考虑关闭工具。",
+            "license_label": "Apache 2.0 and AGPL-3.0",
+            "license_restrictions": "certain optional components, such as the Unsloth Studio UI",
+            "readme_sha": "e21c60f238da397deaad63f64349bfc6cf63f417",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+                ],
+                [
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+                ],
+                [
+                  "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
-              "license_restrictions": []
+              "prerequisites": [
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+              ],
+              "limitations": [
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+              ],
+              "license_label": [
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+              ],
+              "license_restrictions": [
+                "github.readme:e21c60f238da397deaad63f64349bfc6cf63f417"
+              ]
             }
           },
           "avatar_path": "avatars/2026-08-17/repo-5ba4a50d51e918329bce3075-28a0bc46b9516382cd36429c.png",
           "publication_evidence": {
             "full_name": "unslothai/unsloth",
             "license_spdx_id": "Apache-2.0",
-            "readme": null,
+            "readme": {
+              "sha": "e21c60f238da397deaad63f64349bfc6cf63f417",
+              "source_url": "https://api.github.com/repos/unslothai/unsloth/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-17/repo-5ba4a50d51e918329bce3075-28a0bc46b9516382cd36429c.png",
-              "sha256": "ea337655d7a81e932119739f2513c1e81d2572f51fff241f905ebe68b177cf74",
+              "sha256": "217d85091d7ad0a9953b54d6e1149f568124fcd5af437ae9605fbd94c25f291c",
               "width": 460,
               "height": 460
             },
             "warnings": []
           },
-          "license_spdx": "Apache-2.0",
+          "license_spdx": "Apache 2.0 and AGPL-3.0",
           "assets": {
             "poster": "reports/daily/assets/2026-08-17/2026-08-17.ai.01.unslothai--unsloth.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 352933140,
+          "full_name": "ToolJet/ToolJet",
+          "owner": "ToolJet",
+          "name": "ToolJet",
+          "html_url": "https://github.com/ToolJet/ToolJet",
+          "description": "ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents 🚀",
+          "language": "JavaScript",
+          "stars": 40214,
+          "forks": 5338,
+          "open_issues": 1134,
+          "watchers": 203,
+          "topics": [
+            "ai-app-builder",
+            "docker",
+            "hacktoberfest",
+            "internal-applications",
+            "internal-project",
+            "internal-tool",
+            "internal-tools",
+            "javascript",
+            "kubernetes",
+            "low-code",
+            "low-code-development-platform",
+            "low-code-framework",
+            "no-code",
+            "nodejs",
+            "reactjs",
+            "self-hosted",
+            "typescript",
+            "web-development-tools",
+            "workflow-automation"
+          ],
+          "created_at": "2021-03-30T08:51:34Z",
+          "updated_at": "2026-08-17T06:09:23Z",
+          "pushed_at": "2026-08-17T05:51:17Z",
+          "daily_stars": 452,
+          "weekly_stars": null,
+          "trending_rank_daily": 6,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 86.37,
+          "star_delta": 663,
+          "fork_delta": 42,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 91.67,
+            "relative_growth": 95.83,
+            "fork_growth": 87.5,
+            "total_stars": 16.67,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "把数据库、API 和 SaaS 数据拖进可视化界面，搭出内部工具、仪表盘与业务应用。",
+            "highlights": [
+              "可视化组件与多人编辑组合内部工具",
+              "数据源连接、查询和界面放在同一应用",
+              "社区版可自托管并扩展插件与连接器"
+            ],
+            "audience": "需要为运营、客服或管理团队快速制作数据后台、审批页面和内部业务应用的开发团队。",
+            "capabilities": [
+              "拖拽组件搭建多页面内部应用",
+              "连接数据库、API、云存储和 SaaS",
+              "在应用中运行 JavaScript 与 Python",
+              "用内置数据库保存业务数据",
+              "通过 Docker 或 Kubernetes 自托管"
+            ],
+            "core_title": "从数据源拖出内部应用",
+            "core_summary": "先连接数据库、API 或 SaaS，再用响应式组件组成表格、表单与图表；团队可共同编辑多页面应用，并用代码补足自定义逻辑。",
+            "prerequisites": "托管使用需创建 ToolJet Cloud 账户；自托管需准备 Docker、Kubernetes 或相应云环境。",
+            "limitations": "自然语言生成应用、AI 查询、AI 调试和 Agent Builder 属于 ToolJet AI 企业版，不在社区版能力内。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "Released under the GNU Affero General Public License v3.0.",
+            "readme_sha": "ef0f60704b78c40615da15f1a8e8eabd0cc04d39",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+                ],
+                [
+                  "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+                ],
+                [
+                  "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+                ]
+              ],
+              "audience": [
+                "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+                ],
+                [
+                  "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+                ],
+                [
+                  "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+                ],
+                [
+                  "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+                ],
+                [
+                  "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+              ],
+              "core_summary": [
+                "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+              ],
+              "prerequisites": [
+                "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+              ],
+              "limitations": [
+                "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:ef0f60704b78c40615da15f1a8e8eabd0cc04d39"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-08-17/repo-cbaae444f2741f8a5f830d97-a171522e6fa98defd2ee24a5.png",
+          "publication_evidence": {
+            "full_name": "ToolJet/ToolJet",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "ef0f60704b78c40615da15f1a8e8eabd0cc04d39",
+              "source_url": "https://api.github.com/repos/ToolJet/ToolJet/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-17/repo-cbaae444f2741f8a5f830d97-a171522e6fa98defd2ee24a5.png",
+              "sha256": "b1d7c67eb603519b9233d48e0ca8cb75f96ffaf37a4e3323083a1b8f07f6f13e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-17/2026-08-17.ai.02.tooljet--tooljet.png",
             "format": "png",
             "width": 1200,
             "height": 1600
@@ -1091,8 +1371,8 @@
           "html_url": "https://github.com/cactus-compute/needle",
           "description": "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
           "language": "Python",
-          "stars": 6653,
-          "forks": 435,
+          "stars": 6777,
+          "forks": 439,
           "open_issues": 27,
           "watchers": 41,
           "topics": [
@@ -1103,7 +1383,7 @@
             "on-device-ai"
           ],
           "created_at": "2026-02-24T04:50:47Z",
-          "updated_at": "2026-08-17T02:34:21Z",
+          "updated_at": "2026-08-17T06:08:41Z",
           "pushed_at": "2026-08-15T16:03:14Z",
           "daily_stars": 443,
           "weekly_stars": null,
@@ -1113,78 +1393,92 @@
             "trending_daily",
             "github_api"
           ],
-          "rank": 2,
-          "score": 85.19,
-          "star_delta": 574,
-          "fork_delta": 29,
+          "rank": 3,
+          "score": 85.29,
+          "star_delta": 698,
+          "fork_delta": 33,
           "delta_source": "snapshot",
           "component_percentiles": {
-            "star_growth": 95.45,
+            "star_growth": 95.83,
             "relative_growth": 100.0,
-            "fork_growth": 81.82,
-            "total_stars": 9.09,
+            "fork_growth": 79.17,
+            "total_stars": 12.5,
             "activity": 71.65,
             "trending_signal": 33.33
           },
           "summary": {
-            "one_line": "needle 的用途证据不足，需要先查看仓库 README",
+            "one_line": "让小型设备在本地选择并调用工具，把自然语言请求转换成受约束的结构化结果。",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "单个 14MB 引擎封装模型权重",
+              "工具调用以受语法约束的 JSON 返回",
+              "每次响应附带可设阈值的置信度"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "为手机、穿戴设备、智能家居或机器人开发离线工具调用和结构化抽取功能的开发者。",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "调用已声明的 Python 函数并回传结果",
+              "把自由文本抽取为 Pydantic 类型对象",
+              "用结构化语法约束工具名和参数输出",
+              "从大型工具目录筛出当前相关工具",
+              "通过 LoRA 微调并导出单个 .cact 模型"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "needle 的用途证据不足，需要先查看仓库 README",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "置信度门控的本地工具调用",
+            "core_summary": "它把工具描述编译为逐 token 约束的语法，以结构化数据返回调用；每次响应附带置信度，超过阈值自动执行，低于阈值转交处理。",
+            "prerequisites": "先安装 cactus-needle；首次会从 Hugging Face 获取推理引擎并缓存，隔离环境需按文档离线配置。",
+            "limitations": "长对话依靠 256-token 滑动窗口维持内存；低于置信度阈值的结果需要交由上层流程处理。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "377100a8f84b3056a400bfe87bb958be9343a73e",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
+                ],
+                [
+                  "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
+                ],
+                [
+                  "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
+              ],
+              "limitations": [
+                "github.readme:377100a8f84b3056a400bfe87bb958be9343a73e"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1192,10 +1486,13 @@
           "publication_evidence": {
             "full_name": "cactus-compute/needle",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "377100a8f84b3056a400bfe87bb958be9343a73e",
+              "source_url": "https://api.github.com/repos/cactus-compute/needle/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-17/repo-1df2eb8fa5414104cb2a1fae-5d059432710b50373ffc7958.png",
-              "sha256": "0cb1c3e88b51ebc09556c89d1c6e24c0b1bfdcdf9e6993f20def1bc524220207",
+              "sha256": "ad5e9a59022aa9e4b258f618b5f3d209f6326d359d2b5f0cac819d648d80c69a",
               "width": 460,
               "height": 460
             },
@@ -1203,140 +1500,7 @@
           },
           "license_spdx": "MIT",
           "assets": {
-            "poster": "reports/daily/assets/2026-08-17/2026-08-17.ai.02.cactus-compute--needle.png",
-            "format": "png",
-            "width": 1200,
-            "height": 1600
-          }
-        },
-        {
-          "repository_id": 1024554267,
-          "full_name": "NousResearch/hermes-agent",
-          "owner": "NousResearch",
-          "name": "hermes-agent",
-          "html_url": "https://github.com/NousResearch/hermes-agent",
-          "description": "The agent that grows with you",
-          "language": "Python",
-          "stars": 231566,
-          "forks": 46058,
-          "open_issues": 32500,
-          "watchers": 231566,
-          "topics": [
-            "ai",
-            "ai-agent",
-            "ai-agents",
-            "anthropic",
-            "chatgpt",
-            "claude",
-            "claude-code",
-            "codex",
-            "hermes",
-            "hermes-agent",
-            "llm",
-            "nous-research",
-            "openai"
-          ],
-          "created_at": "2025-07-22T22:22:28Z",
-          "updated_at": "2026-08-17T02:35:05Z",
-          "pushed_at": "2026-08-17T02:34:48Z",
-          "daily_stars": null,
-          "weekly_stars": null,
-          "trending_rank_daily": null,
-          "trending_rank_weekly": null,
-          "sources": [
-            "github_api"
-          ],
-          "rank": 3,
-          "score": 84.09,
-          "star_delta": 464,
-          "fork_delta": 158,
-          "delta_source": "snapshot",
-          "component_percentiles": {
-            "star_growth": 86.36,
-            "relative_growth": 81.82,
-            "fork_growth": 100.0,
-            "total_stars": 90.91,
-            "activity": 100.0,
-            "trending_signal": 0.0
-          },
-          "summary": {
-            "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
-            "highlights": [
-              "把复杂任务拆成连续的执行步骤",
-              "让 Agent 围绕目标推进任务流程",
-              "为工具调用和工作流扩展提供基础"
-            ],
-            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
-            "capabilities": [
-              "把复杂任务拆成连续的执行步骤",
-              "让 Agent 围绕目标推进任务流程",
-              "为工具调用和工作流扩展提供基础"
-            ],
-            "core_title": "搭建能够连续执行多步任务的 AI Agent",
-            "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
-            "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
-            "evidence_ids": {
-              "one_line": [
-                "deterministic_draft"
-              ],
-              "highlights": [
-                [
-                  "deterministic_draft"
-                ],
-                [
-                  "deterministic_draft"
-                ],
-                [
-                  "deterministic_draft"
-                ]
-              ],
-              "audience": [
-                "deterministic_draft"
-              ],
-              "capabilities": [
-                [
-                  "deterministic_draft"
-                ],
-                [
-                  "deterministic_draft"
-                ],
-                [
-                  "deterministic_draft"
-                ]
-              ],
-              "core_title": [
-                "deterministic_draft"
-              ],
-              "core_summary": [
-                "deterministic_draft"
-              ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
-              "license_restrictions": []
-            }
-          },
-          "avatar_path": "avatars/2026-08-17/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
-          "publication_evidence": {
-            "full_name": "NousResearch/hermes-agent",
-            "license_spdx_id": "MIT",
-            "readme": null,
-            "avatar": {
-              "path": "avatars/2026-08-17/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
-              "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
-              "width": 400,
-              "height": 400
-            },
-            "warnings": []
-          },
-          "license_spdx": "MIT",
-          "assets": {
-            "poster": "reports/daily/assets/2026-08-17/2026-08-17.ai.03.nousresearch--hermes-agent.png",
+            "poster": "reports/daily/assets/2026-08-17/2026-08-17.ai.03.cactus-compute--needle.png",
             "format": "png",
             "width": 1200,
             "height": 1600
