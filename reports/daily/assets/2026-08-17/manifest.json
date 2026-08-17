@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-08-17",
+  "window": {
+    "start": "2026-08-16",
+    "end": "2026-08-17"
+  },
+  "source_report": "reports/daily/2026-08-17.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-08-17",
+  "manifest": "reports/daily/assets/2026-08-17/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-17/2026-08-17.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "public-apis/public-apis",
+          "path": "reports/daily/assets/2026-08-17/2026-08-17.comprehensive.01.public-apis--public-apis.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "mattpocock/skills",
+          "path": "reports/daily/assets/2026-08-17/2026-08-17.comprehensive.02.mattpocock--skills.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "unslothai/unsloth",
+          "path": "reports/daily/assets/2026-08-17/2026-08-17.comprehensive.03.unslothai--unsloth.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-17/2026-08-17.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "unslothai/unsloth",
+          "path": "reports/daily/assets/2026-08-17/2026-08-17.ai.01.unslothai--unsloth.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "cactus-compute/needle",
+          "path": "reports/daily/assets/2026-08-17/2026-08-17.ai.02.cactus-compute--needle.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/daily/assets/2026-08-17/2026-08-17.ai.03.nousresearch--hermes-agent.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 37,
+    "issue_code": "D037",
+    "issue_label": "第37期",
+    "status": "official"
+  }
+}
