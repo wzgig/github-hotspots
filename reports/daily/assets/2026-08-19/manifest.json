@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-08-19",
+  "window": {
+    "start": "2026-08-18",
+    "end": "2026-08-19"
+  },
+  "source_report": "reports/daily/2026-08-19.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-08-19",
+  "manifest": "reports/daily/assets/2026-08-19/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-19/2026-08-19.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "path": "reports/daily/assets/2026-08-19/2026-08-19.comprehensive.01.harry0703--moneyprinterturbo.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "public-apis/public-apis",
+          "path": "reports/daily/assets/2026-08-19/2026-08-19.comprehensive.02.public-apis--public-apis.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "akitaonrails/ai-memory",
+          "path": "reports/daily/assets/2026-08-19/2026-08-19.comprehensive.03.akitaonrails--ai-memory.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-19/2026-08-19.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "path": "reports/daily/assets/2026-08-19/2026-08-19.ai.01.harry0703--moneyprinterturbo.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "akitaonrails/ai-memory",
+          "path": "reports/daily/assets/2026-08-19/2026-08-19.ai.02.akitaonrails--ai-memory.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "jundot/omlx",
+          "path": "reports/daily/assets/2026-08-19/2026-08-19.ai.03.jundot--omlx.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 39,
+    "issue_code": "D039",
+    "issue_label": "第39期",
+    "status": "official"
+  }
+}
