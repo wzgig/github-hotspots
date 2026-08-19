@@ -4,7 +4,7 @@
   "run_date": "2026-08-19",
   "window_start": "2026-08-18",
   "window_end": "2026-08-19",
-  "generated_at": "2026-08-19T10:34:51+08:00",
+  "generated_at": "2026-08-19T10:41:24+08:00",
   "timezone": "Asia/Shanghai",
   "window_label": "2026-08-18 至 2026-08-19",
   "publication": {
@@ -25,16 +25,16 @@
       "comprehensive": {
         "prompt_version": "4.1",
         "schema_version": "4.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       },
       "ai": {
         "prompt_version": "4.1",
         "schema_version": "4.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       }
@@ -109,8 +109,8 @@
       "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
       "language": "Python",
-      "stars": 108718,
-      "forks": 16506,
+      "stars": 108729,
+      "forks": 16507,
       "open_issues": 29,
       "watchers": 686,
       "topics": [
@@ -130,7 +130,7 @@
         "youtube-shorts"
       ],
       "created_at": "2024-03-11T02:57:34Z",
-      "updated_at": "2026-08-19T02:34:40Z",
+      "updated_at": "2026-08-19T02:40:24Z",
       "pushed_at": "2026-08-19T02:29:18Z",
       "daily_stars": 2304,
       "weekly_stars": null,
@@ -154,64 +154,78 @@
         "trending_signal": 100.0
       },
       "summary": {
-        "one_line": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
+        "one_line": "输入主题或关键词，自动完成脚本、素材、配音、字幕和高清短视频合成",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "从主题生成脚本并匹配视频素材",
+          "批量生成多个成片供用户挑选",
+          "生成后可自动上传至多个短视频平台"
         ],
-        "audience": "公开信息不足，需人工确认后再发布",
+        "audience": "适合需要批量制作短视频的内容创作者，以及希望通过 WebUI、API 或 CLI 接入视频工作流的团队",
         "capabilities": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "生成多语言视频脚本或使用自定义脚本",
+          "匹配本地素材或在线高清素材",
+          "合成语音并实时试听不同音色",
+          "调整字幕样式、片段时长和背景音乐",
+          "上传成片至 TikTok、Instagram 和 YouTube Shorts"
         ],
-        "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "从主题到发布的完整链路",
+        "core_summary": "工作流把脚本生成、素材检索、语音合成、字幕与音乐配置串成成片流程，并提供批量候选和跨平台上传，减少在多个工具间手动搬运内容。",
+        "prerequisites": "本地部署需要 Python 3.11 或更高版本；部分模型、语音、素材和发布服务需要对应 API Key",
+        "limitations": "Windows 项目路径应避免中文、特殊字符或空格；Whisper 首次使用需下载模型，自动发布需另行配置账号凭据",
+        "license_label": "MIT",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "needs_review",
+        "readme_sha": "947e4f1985d83616f14f6001d8cf2ea55c7aa805",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
             ],
             [
-              "deterministic_draft"
+              "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
             ],
             [
-              "deterministic_draft"
+              "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
             ],
             [
-              "deterministic_draft"
+              "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
             ],
             [
-              "deterministic_draft"
+              "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
+            ],
+            [
+              "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
+            ],
+            [
+              "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
+          ],
+          "limitations": [
+            "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -219,10 +233,13 @@
       "publication_evidence": {
         "full_name": "harry0703/MoneyPrinterTurbo",
         "license_spdx_id": "MIT",
-        "readme": null,
+        "readme": {
+          "sha": "947e4f1985d83616f14f6001d8cf2ea55c7aa805",
+          "source_url": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo/readme"
+        },
         "avatar": {
           "path": "avatars/2026-08-19/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
-          "sha256": "66a44d80e1e3bcd2fc1ea0953b833eea1e4f3d05e73af18b7401394e6015d5ee",
+          "sha256": "8f9ca021ffca2773fe9909bce688155f9d07586336ccc7c0e835fe1c4301b6b4",
           "width": 460,
           "height": 460
         },
@@ -244,10 +261,10 @@
       "html_url": "https://github.com/public-apis/public-apis",
       "description": "A collective list of free APIs",
       "language": "Python",
-      "stars": 464676,
-      "forks": 51329,
-      "open_issues": 1694,
-      "watchers": 464676,
+      "stars": 464686,
+      "forks": 51328,
+      "open_issues": 1695,
+      "watchers": 464686,
       "topics": [
         "api",
         "apis",
@@ -264,7 +281,7 @@
         "software"
       ],
       "created_at": "2016-03-20T23:49:42Z",
-      "updated_at": "2026-08-19T02:34:11Z",
+      "updated_at": "2026-08-19T02:41:13Z",
       "pushed_at": "2026-08-18T19:20:39Z",
       "daily_stars": 1005,
       "weekly_stars": null,
@@ -288,64 +305,78 @@
         "trending_signal": 35.62
       },
       "summary": {
-        "one_line": "public-apis 的用途证据不足，需要先查看仓库 README",
+        "one_line": "按领域整理公共 API，并标出认证、HTTPS 与 CORS 情况，方便为产品寻找数据接口",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "按动物、金融、天气等领域建立索引",
+          "逐项列出接口用途和认证方式",
+          "对照 HTTPS 与 CORS 状态筛选接口"
         ],
-        "audience": "公开信息不足，需人工确认后再发布",
+        "audience": "适合为原型、课程作业或产品功能寻找外部数据接口，并希望先比较接入条件的开发者",
         "capabilities": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "浏览不同业务领域的公共 API",
+          "查看每个接口提供的数据或任务",
+          "辨别接口是否要求 apiKey 或 OAuth",
+          "核对接口是否支持 HTTPS",
+          "筛选标明 CORS 状态的接口"
         ],
-        "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "public-apis 的用途证据不足，需要先查看仓库 README",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "把接口选择条件放在一张表里",
+        "core_summary": "每个分类用表格列出 API、用途、认证方式、HTTPS 和 CORS 状态，让读者先按领域缩小范围，再比较浏览器调用与凭据要求。",
+        "prerequisites": "调用前需按具体条目确认是否需要 apiKey 或 OAuth，并阅读对应接口文档",
+        "limitations": "列表由社区成员人工维护；不同接口的认证、HTTPS 和 CORS 状态各异，接入前仍需核对目标服务",
+        "license_label": "MIT",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "needs_review",
+        "readme_sha": "30c92bcc0913e1bc0ebb5dd966f8693147f83e05",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
             ],
             [
-              "deterministic_draft"
+              "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
             ],
             [
-              "deterministic_draft"
+              "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
             ],
             [
-              "deterministic_draft"
+              "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
             ],
             [
-              "deterministic_draft"
+              "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
+            ],
+            [
+              "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
+            ],
+            [
+              "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
+          ],
+          "limitations": [
+            "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -353,7 +384,10 @@
       "publication_evidence": {
         "full_name": "public-apis/public-apis",
         "license_spdx_id": "MIT",
-        "readme": null,
+        "readme": {
+          "sha": "30c92bcc0913e1bc0ebb5dd966f8693147f83e05",
+          "source_url": "https://api.github.com/repos/public-apis/public-apis/readme"
+        },
         "avatar": {
           "path": "avatars/2026-08-19/repo-fa7dc4680dc18bbd3a691939-7f220dae2a51b04ffadea98c.png",
           "sha256": "165aa7840a7fd70aae0755473bd92d5773f5d17f1234408a87cac73fb3f27a8a",
@@ -378,13 +412,13 @@
       "html_url": "https://github.com/akitaonrails/ai-memory",
       "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
       "language": "Rust",
-      "stars": 2784,
-      "forks": 240,
+      "stars": 2792,
+      "forks": 239,
       "open_issues": 6,
       "watchers": 31,
       "topics": [],
       "created_at": "2026-05-21T23:23:51Z",
-      "updated_at": "2026-08-19T02:30:53Z",
+      "updated_at": "2026-08-19T02:40:20Z",
       "pushed_at": "2026-08-18T17:19:58Z",
       "daily_stars": 648,
       "weekly_stars": null,
@@ -408,64 +442,78 @@
         "trending_signal": 50.0
       },
       "summary": {
-        "one_line": "目前无法从公开字段确认 ai-memory 能完成哪些任务",
+        "one_line": "为不同 AI 编程代理保存项目记忆，让中断后的任务能带着决策、失败尝试和待办继续",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "从代理生命周期事件整理项目维基",
+          "在不同编程代理之间传递任务交接",
+          "用 Markdown 和 Git 保存可追溯记忆"
         ],
-        "audience": "公开信息不足，需人工确认后再发布",
+        "audience": "适合频繁切换 Claude Code、Codex 等编程代理，或需要跨会话保留项目决策与上下文的开发者",
         "capabilities": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "捕获经过清理的提示与工具事件",
+          "汇总会话并生成下一次任务交接",
+          "检索历史决策、流程和失败尝试",
+          "切换代理时延续同一工作流",
+          "浏览和恢复 Git 版本化的记忆页面"
         ],
-        "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "目前无法从公开字段确认 ai-memory 能完成哪些任务",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "让不同编程代理接着做",
+        "core_summary": "生命周期钩子把会话观察整理为 Markdown 维基和限长交接包；下一个代理可读取进度、开放问题与后续步骤，不必重新解释项目背景。",
+        "prerequisites": "快速启动需要 Docker，以及支持列表中的代理 CLI 或其他可使用 MCP 的客户端",
+        "limitations": "生命周期捕获不是完整原生对话记录；Codex 无自动真实会话结束钩子，必要时需手动执行 finalize-session",
+        "license_label": "MIT",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "needs_review",
+        "readme_sha": "4b5c13a08dddc7f79bd0545c76cf9bd4a609c537",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
             ],
             [
-              "deterministic_draft"
+              "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
             ],
             [
-              "deterministic_draft"
+              "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
             ],
             [
-              "deterministic_draft"
+              "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
             ],
             [
-              "deterministic_draft"
+              "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
+            ],
+            [
+              "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
+            ],
+            [
+              "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
+          ],
+          "limitations": [
+            "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -473,10 +521,13 @@
       "publication_evidence": {
         "full_name": "akitaonrails/ai-memory",
         "license_spdx_id": "MIT",
-        "readme": null,
+        "readme": {
+          "sha": "4b5c13a08dddc7f79bd0545c76cf9bd4a609c537",
+          "source_url": "https://api.github.com/repos/akitaonrails/ai-memory/readme"
+        },
         "avatar": {
           "path": "avatars/2026-08-19/repo-099a05080dd8db13555c11ca-086ea58c9939a39ffbe96ed3.png",
-          "sha256": "f26161a78bc1fad5cd1f9b21a655ce5eac471cfa40defeb997826f5ae79afe4e",
+          "sha256": "28a3539b1cafb41435193d3e2c3b750dd96368d34f6c4bfa984e7d3b8afe4468",
           "width": 200,
           "height": 200
         },
@@ -526,8 +577,8 @@
           "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
           "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
           "language": "Python",
-          "stars": 108718,
-          "forks": 16506,
+          "stars": 108729,
+          "forks": 16507,
           "open_issues": 29,
           "watchers": 686,
           "topics": [
@@ -547,7 +598,7 @@
             "youtube-shorts"
           ],
           "created_at": "2024-03-11T02:57:34Z",
-          "updated_at": "2026-08-19T02:34:40Z",
+          "updated_at": "2026-08-19T02:40:24Z",
           "pushed_at": "2026-08-19T02:29:18Z",
           "daily_stars": 2304,
           "weekly_stars": null,
@@ -571,64 +622,78 @@
             "trending_signal": 100.0
           },
           "summary": {
-            "one_line": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
+            "one_line": "输入主题或关键词，自动完成脚本、素材、配音、字幕和高清短视频合成",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "从主题生成脚本并匹配视频素材",
+              "批量生成多个成片供用户挑选",
+              "生成后可自动上传至多个短视频平台"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "适合需要批量制作短视频的内容创作者，以及希望通过 WebUI、API 或 CLI 接入视频工作流的团队",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "生成多语言视频脚本或使用自定义脚本",
+              "匹配本地素材或在线高清素材",
+              "合成语音并实时试听不同音色",
+              "调整字幕样式、片段时长和背景音乐",
+              "上传成片至 TikTok、Instagram 和 YouTube Shorts"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "从主题到发布的完整链路",
+            "core_summary": "工作流把脚本生成、素材检索、语音合成、字幕与音乐配置串成成片流程，并提供批量候选和跨平台上传，减少在多个工具间手动搬运内容。",
+            "prerequisites": "本地部署需要 Python 3.11 或更高版本；部分模型、语音、素材和发布服务需要对应 API Key",
+            "limitations": "Windows 项目路径应避免中文、特殊字符或空格；Whisper 首次使用需下载模型，自动发布需另行配置账号凭据",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "947e4f1985d83616f14f6001d8cf2ea55c7aa805",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
+                ],
+                [
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
+                ],
+                [
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
+              ],
+              "limitations": [
+                "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -636,10 +701,13 @@
           "publication_evidence": {
             "full_name": "harry0703/MoneyPrinterTurbo",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "947e4f1985d83616f14f6001d8cf2ea55c7aa805",
+              "source_url": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-19/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
-              "sha256": "66a44d80e1e3bcd2fc1ea0953b833eea1e4f3d05e73af18b7401394e6015d5ee",
+              "sha256": "8f9ca021ffca2773fe9909bce688155f9d07586336ccc7c0e835fe1c4301b6b4",
               "width": 460,
               "height": 460
             },
@@ -661,10 +729,10 @@
           "html_url": "https://github.com/public-apis/public-apis",
           "description": "A collective list of free APIs",
           "language": "Python",
-          "stars": 464676,
-          "forks": 51329,
-          "open_issues": 1694,
-          "watchers": 464676,
+          "stars": 464686,
+          "forks": 51328,
+          "open_issues": 1695,
+          "watchers": 464686,
           "topics": [
             "api",
             "apis",
@@ -681,7 +749,7 @@
             "software"
           ],
           "created_at": "2016-03-20T23:49:42Z",
-          "updated_at": "2026-08-19T02:34:11Z",
+          "updated_at": "2026-08-19T02:41:13Z",
           "pushed_at": "2026-08-18T19:20:39Z",
           "daily_stars": 1005,
           "weekly_stars": null,
@@ -705,64 +773,78 @@
             "trending_signal": 35.62
           },
           "summary": {
-            "one_line": "public-apis 的用途证据不足，需要先查看仓库 README",
+            "one_line": "按领域整理公共 API，并标出认证、HTTPS 与 CORS 情况，方便为产品寻找数据接口",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "按动物、金融、天气等领域建立索引",
+              "逐项列出接口用途和认证方式",
+              "对照 HTTPS 与 CORS 状态筛选接口"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "适合为原型、课程作业或产品功能寻找外部数据接口，并希望先比较接入条件的开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "浏览不同业务领域的公共 API",
+              "查看每个接口提供的数据或任务",
+              "辨别接口是否要求 apiKey 或 OAuth",
+              "核对接口是否支持 HTTPS",
+              "筛选标明 CORS 状态的接口"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "public-apis 的用途证据不足，需要先查看仓库 README",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "把接口选择条件放在一张表里",
+            "core_summary": "每个分类用表格列出 API、用途、认证方式、HTTPS 和 CORS 状态，让读者先按领域缩小范围，再比较浏览器调用与凭据要求。",
+            "prerequisites": "调用前需按具体条目确认是否需要 apiKey 或 OAuth，并阅读对应接口文档",
+            "limitations": "列表由社区成员人工维护；不同接口的认证、HTTPS 和 CORS 状态各异，接入前仍需核对目标服务",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "30c92bcc0913e1bc0ebb5dd966f8693147f83e05",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
+                ],
+                [
+                  "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
+                ],
+                [
+                  "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
+              ],
+              "limitations": [
+                "github.readme:30c92bcc0913e1bc0ebb5dd966f8693147f83e05"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -770,7 +852,10 @@
           "publication_evidence": {
             "full_name": "public-apis/public-apis",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "30c92bcc0913e1bc0ebb5dd966f8693147f83e05",
+              "source_url": "https://api.github.com/repos/public-apis/public-apis/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-19/repo-fa7dc4680dc18bbd3a691939-7f220dae2a51b04ffadea98c.png",
               "sha256": "165aa7840a7fd70aae0755473bd92d5773f5d17f1234408a87cac73fb3f27a8a",
@@ -795,13 +880,13 @@
           "html_url": "https://github.com/akitaonrails/ai-memory",
           "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
           "language": "Rust",
-          "stars": 2784,
-          "forks": 240,
+          "stars": 2792,
+          "forks": 239,
           "open_issues": 6,
           "watchers": 31,
           "topics": [],
           "created_at": "2026-05-21T23:23:51Z",
-          "updated_at": "2026-08-19T02:30:53Z",
+          "updated_at": "2026-08-19T02:40:20Z",
           "pushed_at": "2026-08-18T17:19:58Z",
           "daily_stars": 648,
           "weekly_stars": null,
@@ -825,64 +910,78 @@
             "trending_signal": 50.0
           },
           "summary": {
-            "one_line": "目前无法从公开字段确认 ai-memory 能完成哪些任务",
+            "one_line": "为不同 AI 编程代理保存项目记忆，让中断后的任务能带着决策、失败尝试和待办继续",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "从代理生命周期事件整理项目维基",
+              "在不同编程代理之间传递任务交接",
+              "用 Markdown 和 Git 保存可追溯记忆"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "适合频繁切换 Claude Code、Codex 等编程代理，或需要跨会话保留项目决策与上下文的开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "捕获经过清理的提示与工具事件",
+              "汇总会话并生成下一次任务交接",
+              "检索历史决策、流程和失败尝试",
+              "切换代理时延续同一工作流",
+              "浏览和恢复 Git 版本化的记忆页面"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "目前无法从公开字段确认 ai-memory 能完成哪些任务",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "让不同编程代理接着做",
+            "core_summary": "生命周期钩子把会话观察整理为 Markdown 维基和限长交接包；下一个代理可读取进度、开放问题与后续步骤，不必重新解释项目背景。",
+            "prerequisites": "快速启动需要 Docker，以及支持列表中的代理 CLI 或其他可使用 MCP 的客户端",
+            "limitations": "生命周期捕获不是完整原生对话记录；Codex 无自动真实会话结束钩子，必要时需手动执行 finalize-session",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "4b5c13a08dddc7f79bd0545c76cf9bd4a609c537",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
+                ],
+                [
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
+                ],
+                [
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
+              ],
+              "limitations": [
+                "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -890,10 +989,13 @@
           "publication_evidence": {
             "full_name": "akitaonrails/ai-memory",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "4b5c13a08dddc7f79bd0545c76cf9bd4a609c537",
+              "source_url": "https://api.github.com/repos/akitaonrails/ai-memory/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-19/repo-099a05080dd8db13555c11ca-086ea58c9939a39ffbe96ed3.png",
-              "sha256": "f26161a78bc1fad5cd1f9b21a655ce5eac471cfa40defeb997826f5ae79afe4e",
+              "sha256": "28a3539b1cafb41435193d3e2c3b750dd96368d34f6c4bfa984e7d3b8afe4468",
               "width": 200,
               "height": 200
             },
@@ -943,8 +1045,8 @@
           "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
           "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
           "language": "Python",
-          "stars": 108718,
-          "forks": 16506,
+          "stars": 108729,
+          "forks": 16507,
           "open_issues": 29,
           "watchers": 686,
           "topics": [
@@ -964,7 +1066,7 @@
             "youtube-shorts"
           ],
           "created_at": "2024-03-11T02:57:34Z",
-          "updated_at": "2026-08-19T02:34:40Z",
+          "updated_at": "2026-08-19T02:40:24Z",
           "pushed_at": "2026-08-19T02:29:18Z",
           "daily_stars": 2304,
           "weekly_stars": null,
@@ -988,64 +1090,78 @@
             "trending_signal": 100.0
           },
           "summary": {
-            "one_line": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
+            "one_line": "输入主题或关键词，自动完成脚本、素材、配音、字幕、音乐与高清短视频合成",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "从主题一路合成可发布的高清短视频",
+              "同时提供 AI Agent、WebUI、API 与 CLI",
+              "可批量生成成片并接续跨平台发布"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "需要批量制作短视频，同时控制脚本、素材、配音、字幕和发布流程的内容创作者与自动化开发者。",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "生成或导入视频脚本",
+              "匹配本地或在线高清素材",
+              "合成语音并提供实时试听",
+              "调整字幕样式与背景音乐",
+              "发布成片到 TikTok、Instagram 和 YouTube Shorts"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "从主题到成片的自动工作流",
+            "core_summary": "它把脚本生成、素材检索、语音合成、字幕与配乐串成自动流程，并提供 WebUI、API、CLI 和 AI Agent 入口，适合从主题快速产出成片。",
+            "prerequisites": "本地部署需要 Python 3.11 或更高版本；也可使用 Windows 启动包、Docker 或 AI Agent。",
+            "limitations": "部分云端模型与语音服务需要对应平台凭据；首次使用 Whisper 会下载模型，Windows 项目路径应避开中文、特殊字符和空格。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "947e4f1985d83616f14f6001d8cf2ea55c7aa805",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
+                ],
+                [
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
+                ],
+                [
+                  "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
+              ],
+              "limitations": [
+                "github.readme:947e4f1985d83616f14f6001d8cf2ea55c7aa805"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1053,10 +1169,13 @@
           "publication_evidence": {
             "full_name": "harry0703/MoneyPrinterTurbo",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "947e4f1985d83616f14f6001d8cf2ea55c7aa805",
+              "source_url": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-19/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
-              "sha256": "66a44d80e1e3bcd2fc1ea0953b833eea1e4f3d05e73af18b7401394e6015d5ee",
+              "sha256": "8f9ca021ffca2773fe9909bce688155f9d07586336ccc7c0e835fe1c4301b6b4",
               "width": 460,
               "height": 460
             },
@@ -1078,13 +1197,13 @@
           "html_url": "https://github.com/akitaonrails/ai-memory",
           "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
           "language": "Rust",
-          "stars": 2784,
-          "forks": 240,
+          "stars": 2792,
+          "forks": 239,
           "open_issues": 6,
           "watchers": 31,
           "topics": [],
           "created_at": "2026-05-21T23:23:51Z",
-          "updated_at": "2026-08-19T02:30:53Z",
+          "updated_at": "2026-08-19T02:40:20Z",
           "pushed_at": "2026-08-18T17:19:58Z",
           "daily_stars": 648,
           "weekly_stars": null,
@@ -1108,64 +1227,78 @@
             "trending_signal": 50.0
           },
           "summary": {
-            "one_line": "ai-memory 的用途证据不足，需要先查看仓库 README",
+            "one_line": "让不同 AI 编码代理共享项目记忆，换工具后仍能接着未完成的工作",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "把会话观察编译成可追踪的 Markdown wiki",
+              "在不同编码代理之间递送任务交接",
+              "结合关键词、实体、关联页与可选向量检索"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "经常在 Claude Code、Codex 等编码代理间切换，并希望保留项目决策、失败尝试和待办线索的个人或团队。",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "捕获提示、工具调用和会话边界",
+              "编译可用 Git 追踪的 Markdown wiki",
+              "在不同编码代理间递送任务交接",
+              "检索决策、失败尝试与项目规则",
+              "隔离不同项目的记忆空间"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "ai-memory 的用途证据不足，需要先查看仓库 README",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "跨编码代理延续任务上下文",
+            "core_summary": "它用生命周期钩子收集经过清理的会话观察，在会话结束时编译成 Git 版本化的 Markdown wiki，再把有限的交接摘要送给下一个代理。",
+            "prerequisites": "需要 Docker 加支持矩阵中的代理 CLI，或其他能使用 MCP 的客户端。",
+            "limitations": "直接启动的捕获不是完整原生转录；Codex 没有自动的真实会话结束钩子，需手动运行 finalize-session；历史代码结论应回到当前代码核验。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "4b5c13a08dddc7f79bd0545c76cf9bd4a609c537",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
+                ],
+                [
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
+                ],
+                [
+                  "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
+              ],
+              "limitations": [
+                "github.readme:4b5c13a08dddc7f79bd0545c76cf9bd4a609c537"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1173,10 +1306,13 @@
           "publication_evidence": {
             "full_name": "akitaonrails/ai-memory",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "4b5c13a08dddc7f79bd0545c76cf9bd4a609c537",
+              "source_url": "https://api.github.com/repos/akitaonrails/ai-memory/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-19/repo-099a05080dd8db13555c11ca-086ea58c9939a39ffbe96ed3.png",
-              "sha256": "f26161a78bc1fad5cd1f9b21a655ce5eac471cfa40defeb997826f5ae79afe4e",
+              "sha256": "28a3539b1cafb41435193d3e2c3b750dd96368d34f6c4bfa984e7d3b8afe4468",
               "width": 200,
               "height": 200
             },
@@ -1198,7 +1334,7 @@
           "html_url": "https://github.com/jundot/omlx",
           "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
           "language": "Python",
-          "stars": 19443,
+          "stars": 19446,
           "forks": 1672,
           "open_issues": 937,
           "watchers": 101,
@@ -1211,7 +1347,7 @@
             "openai-api"
           ],
           "created_at": "2026-02-13T14:13:27Z",
-          "updated_at": "2026-08-19T02:33:25Z",
+          "updated_at": "2026-08-19T02:41:02Z",
           "pushed_at": "2026-08-18T16:29:07Z",
           "daily_stars": 370,
           "weekly_stars": null,
@@ -1235,64 +1371,78 @@
             "trending_signal": 28.91
           },
           "summary": {
-            "one_line": "目前无法从公开字段确认 omlx 能完成哪些任务",
+            "one_line": "把 Apple Silicon 上的本地模型变成可由 OpenAI 或 Anthropic 客户端调用的推理服务",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "内存与 SSD 分层保存可复用的 KV 缓存",
+              "连续批处理多个并发推理请求",
+              "用菜单栏和管理面板控制多模型服务"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "想在 Apple Silicon Mac 上托管本地模型，并接入编码代理、聊天工具或兼容 API 客户端的用户。",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "自动发现多类 MLX 模型",
+              "同时托管语言、视觉、嵌入与重排模型",
+              "按内存压力自动卸载闲置模型",
+              "缓存相同前缀以减少重复计算",
+              "提供 OpenAI 与 Anthropic 兼容接口"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "目前无法从公开字段确认 omlx 能完成哪些任务",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "冷热分层的 KV 缓存",
+            "core_summary": "它把常用 KV 缓存留在内存、冷数据转存 SSD，并用连续批处理承接并发请求；菜单栏和管理面板负责模型装卸、监控与参数调整。",
+            "prerequisites": "需要 macOS 15.0+、Python 3.11–3.13 和 Apple Silicon；安装原生自定义内核还需要完整 Xcode。",
+            "limitations": "工具调用取决于模型聊天模板是否支持 tools；部分模型的原生自定义内核需完整 Xcode，普通源码安装不会构建这些内核。",
+            "license_label": "Apache-2.0",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "adb526ed90056ae5eae5712eef96598f445cdb69",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
+                ],
+                [
+                  "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
+                ],
+                [
+                  "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
+              ],
+              "limitations": [
+                "github.readme:adb526ed90056ae5eae5712eef96598f445cdb69"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1300,10 +1450,13 @@
           "publication_evidence": {
             "full_name": "jundot/omlx",
             "license_spdx_id": "Apache-2.0",
-            "readme": null,
+            "readme": {
+              "sha": "adb526ed90056ae5eae5712eef96598f445cdb69",
+              "source_url": "https://api.github.com/repos/jundot/omlx/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-19/repo-04a5064f18de1e35e331de92-5ef7e9983b0b12ae26489673.png",
-              "sha256": "0d561a74e684287e98d99bf299684434de8e090a60f3eaddbf3e7f0dac98ee6d",
+              "sha256": "2fc89bbda9d8a5bfae9f940ab2c422271f88321de2dc32bb03a262a34d7d41e8",
               "width": 300,
               "height": 300
             },
