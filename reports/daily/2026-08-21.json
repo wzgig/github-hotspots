@@ -1,0 +1,1516 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-21",
+  "window_start": "2026-08-20",
+  "window_end": "2026-08-21",
+  "generated_at": "2026-08-21T07:31:21+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-20 至 2026-08-21",
+  "publication": {
+    "issue_number": 41,
+    "issue_code": "D041",
+    "issue_label": "第41期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-21",
+    "manifest": "reports/daily/assets/2026-08-21/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "santifer/career-ops",
+            "path": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.02.santifer--career-ops.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "path": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.03.harry0703--moneyprinterturbo.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-21/2026-08-21.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "path": "reports/daily/assets/2026-08-21/2026-08-21.ai.01.harry0703--moneyprinterturbo.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "santifer/career-ops",
+            "path": "reports/daily/assets/2026-08-21/2026-08-21.ai.02.santifer--career-ops.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-08-21/2026-08-21.ai.03.obra--superpowers.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 41,
+      "issue_code": "D041",
+      "issue_label": "第41期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 226368,
+      "forks": 19409,
+      "open_issues": 375,
+      "watchers": 226368,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-08-20T23:30:55Z",
+      "pushed_at": "2026-08-20T10:35:33Z",
+      "daily_stars": 2267,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 93.0,
+      "star_delta": 1804,
+      "fork_delta": 107,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 91.55,
+        "fork_growth": 98.59,
+        "total_stars": 90.14,
+        "activity": 71.65,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "把软件工程方法拆成可组合的 Agent 技能，帮助开发者澄清需求、测试代码、诊断缺陷和改进架构。",
+        "highlights": [
+          "先追问需求，再沉淀共享术语与关键决策",
+          "用红绿重构和分阶段诊断建立反馈闭环",
+          "扫描代码库的架构深化机会并生成报告"
+        ],
+        "audience": "希望保留开发控制权，并让编码 Agent 遵循需求澄清、测试、调试和架构实践的开发者。",
+        "capabilities": [
+          "追问需求，补齐变更前的关键决策",
+          "建立共享术语并更新 CONTEXT.md 与 ADR",
+          "按红绿重构循环实现功能或修复问题",
+          "分阶段定位缺陷并补上回归测试",
+          "扫描架构改进机会并输出可视化报告"
+        ],
+        "core_title": "可组合的工程实践技能",
+        "core_summary": "每项技能聚焦一个工程环节，可由用户主动调用或由模型按任务匹配；它们把需求访谈、领域建模、测试、调试和代码审查组织成可重复流程，同时允许按项目修改。",
+        "prerequisites": "通过 Claude Code 插件或 skills.sh 任选一种方式安装，再在每个仓库运行一次 /setup-matt-pocock-skills。",
+        "limitations": "两种安装方式不要同时使用，否则每项技能会重复；插件版为只读托管包，复制到项目的技能文件需自行更新。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "highlights": [
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ]
+          ],
+          "audience": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "capabilities": [
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ]
+          ],
+          "core_title": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "core_summary": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "prerequisites": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "limitations": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-21/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-21/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.01.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1201476594,
+      "full_name": "santifer/career-ops",
+      "owner": "santifer",
+      "name": "career-ops",
+      "html_url": "https://github.com/santifer/career-ops",
+      "description": "Open-source AI job search: scan job portals, evaluate listings with a structured A-F rubric into a 1.0-5.0 score, tailor your CV, track applications — runs locally in your AI coding CLI (Claude Code, Codex, OpenCode, Antigravity…)",
+      "language": "JavaScript",
+      "stars": 66631,
+      "forks": 12815,
+      "open_issues": 304,
+      "watchers": 256,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "anthropic",
+        "ats",
+        "automation",
+        "beginner-friendly",
+        "career",
+        "careerops",
+        "claude",
+        "claude-code",
+        "cli",
+        "first-timers-only",
+        "golang",
+        "good-first-issue",
+        "interview-prep",
+        "job-application",
+        "job-hunting",
+        "job-search",
+        "open-source",
+        "resume"
+      ],
+      "created_at": "2026-04-04T18:21:18Z",
+      "updated_at": "2026-08-20T23:31:01Z",
+      "pushed_at": "2026-08-20T21:41:30Z",
+      "daily_stars": 855,
+      "weekly_stars": null,
+      "trending_rank_daily": 6,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 86.64,
+      "star_delta": 495,
+      "fork_delta": 40,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.37,
+        "relative_growth": 84.51,
+        "fork_growth": 94.37,
+        "total_stars": 26.76,
+        "activity": 100.0,
+        "trending_signal": 35.62
+      },
+      "summary": {
+        "one_line": "把职位链接变成匹配评估、定制简历和申请记录，帮助求职者筛出更值得投入的机会。",
+        "highlights": [
+          "粘贴职位链接即可生成评估、简历和记录",
+          "按简历与职位描述判断匹配度和风险",
+          "由 AI 提供建议，提交前始终由本人决定"
+        ],
+        "audience": "使用 AI 编码命令行求职，希望集中筛选职位、定制材料并跟踪申请进度的候选人。",
+        "capabilities": [
+          "粘贴职位网址，生成评估、简历和跟踪记录",
+          "扫描招聘门户并汇总新职位",
+          "对照简历评估匹配度与岗位真实性",
+          "生成定制简历、求职信和申请邮件草稿",
+          "跟踪申请状态并分析拒绝与晋级模式"
+        ],
+        "core_title": "把职位链接变成决策包",
+        "core_summary": "系统读取职位链接或描述，对照个人简历和偏好评估匹配度、岗位风险与准备方向，再生成定制材料并写入统一跟踪表；AI 负责分析和起草，最终操作留给求职者。",
+        "prerequisites": "需安装 Node.js，并准备可用的 AI 编码命令行、个人简历、资料档案和目标岗位信息；生成 PDF 还需安装 Playwright Chromium。",
+        "limitations": "不会自动提交、发送或点击申请；所有 AI 生成内容都应在提交前核对，评估只是建议，也需遵守招聘平台条款。",
+        "license_label": "MIT",
+        "license_restrictions": "without warranty of any kind",
+        "readme_sha": "dd17fa2d9884edbb0892625fdd1c2262999b153e",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+          ],
+          "highlights": [
+            [
+              "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+            ],
+            [
+              "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+            ],
+            [
+              "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+            ]
+          ],
+          "audience": [
+            "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+          ],
+          "capabilities": [
+            [
+              "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+            ],
+            [
+              "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+            ],
+            [
+              "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+            ],
+            [
+              "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+            ],
+            [
+              "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+            ]
+          ],
+          "core_title": [
+            "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+          ],
+          "core_summary": [
+            "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+          ],
+          "prerequisites": [
+            "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+          ],
+          "limitations": [
+            "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-08-21/repo-cecaaf8382fe4e83b60d77cf-98fb2235b5161b0f6e57c265.png",
+      "publication_evidence": {
+        "full_name": "santifer/career-ops",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "dd17fa2d9884edbb0892625fdd1c2262999b153e",
+          "source_url": "https://api.github.com/repos/santifer/career-ops/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-21/repo-cecaaf8382fe4e83b60d77cf-98fb2235b5161b0f6e57c265.png",
+          "sha256": "088a020f7adbaeaf3aa4a7052990f5082053a6d7d5e84a90096d3dfbc29cee4f",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.02.santifer--career-ops.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 770153867,
+      "full_name": "harry0703/MoneyPrinterTurbo",
+      "owner": "harry0703",
+      "name": "MoneyPrinterTurbo",
+      "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+      "language": "Python",
+      "stars": 112892,
+      "forks": 17109,
+      "open_issues": 42,
+      "watchers": 112892,
+      "topics": [
+        "ai-video-generator",
+        "content-creation",
+        "ffmpeg",
+        "instagram-reels",
+        "llm",
+        "python",
+        "short-video",
+        "subtitles",
+        "text-to-speech",
+        "tiktok",
+        "video-automation",
+        "video-workflow",
+        "workflow-automation",
+        "youtube-shorts"
+      ],
+      "created_at": "2024-03-11T02:57:34Z",
+      "updated_at": "2026-08-20T23:26:21Z",
+      "pushed_at": "2026-08-20T02:36:40Z",
+      "daily_stars": 2774,
+      "weekly_stars": null,
+      "trending_rank_daily": 8,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 86.56,
+      "star_delta": 743,
+      "fork_delta": 123,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.18,
+        "relative_growth": 88.73,
+        "fork_growth": 100.0,
+        "total_stars": 29.58,
+        "activity": 71.65,
+        "trending_signal": 31.55
+      },
+      "summary": {
+        "one_line": "输入主题或关键词，自动完成脚本、素材、配音、字幕与配乐，合成高清短视频。",
+        "highlights": [
+          "同时提供 AI Agent、WebUI、API 和 CLI",
+          "批量生成多个版本，再挑选满意成片",
+          "生成完成后可上传至多个短视频平台"
+        ],
+        "audience": "需要批量制作解说类短视频，并希望自行选择模型、语音、素材来源和发布渠道的内容创作者。",
+        "capabilities": [
+          "生成视频脚本或接入自定义脚本",
+          "匹配本地素材或在线高清素材",
+          "合成配音、字幕和背景音乐",
+          "输出横屏或竖屏高清视频",
+          "批量生成并跨平台发布成片"
+        ],
+        "core_title": "串起短视频制作全流程",
+        "core_summary": "工作流从主题或关键词出发，依次生成脚本、提炼素材关键词、匹配画面、合成语音与字幕，再加入背景音乐输出成片；模型、语音、素材和发布服务均可按需要替换。",
+        "prerequisites": "本地部署需 Python 3.11 或更高版本；按所选模型、语音或发布服务配置对应 API Key。",
+        "limitations": "GPU 不是必需项，但本地转录、较重处理和批量生成更依赖显卡；在线模型、语音和发布功能可能需要外部服务凭据。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "2a4f649b84f69acdd0c2e1a4a2ecbadce474f602",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+          ],
+          "highlights": [
+            [
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+            ],
+            [
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+            ],
+            [
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+            ]
+          ],
+          "audience": [
+            "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+          ],
+          "capabilities": [
+            [
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+            ],
+            [
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+            ],
+            [
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+            ],
+            [
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+            ],
+            [
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+            ]
+          ],
+          "core_title": [
+            "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+          ],
+          "core_summary": [
+            "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+          ],
+          "prerequisites": [
+            "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+          ],
+          "limitations": [
+            "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-21/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+      "publication_evidence": {
+        "full_name": "harry0703/MoneyPrinterTurbo",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "2a4f649b84f69acdd0c2e1a4a2ecbadce474f602",
+          "source_url": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-21/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+          "sha256": "8f9ca021ffca2773fe9909bce688155f9d07586336ccc7c0e835fe1c4301b6b4",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.03.harry0703--moneyprinterturbo.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "santifer/career-ops",
+            "path": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.02.santifer--career-ops.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "path": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.03.harry0703--moneyprinterturbo.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 226368,
+          "forks": 19409,
+          "open_issues": 375,
+          "watchers": 226368,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-08-20T23:30:55Z",
+          "pushed_at": "2026-08-20T10:35:33Z",
+          "daily_stars": 2267,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 93.0,
+          "star_delta": 1804,
+          "fork_delta": 107,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 91.55,
+            "fork_growth": 98.59,
+            "total_stars": 90.14,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把软件工程方法拆成可组合的 Agent 技能，帮助开发者澄清需求、测试代码、诊断缺陷和改进架构。",
+            "highlights": [
+              "先追问需求，再沉淀共享术语与关键决策",
+              "用红绿重构和分阶段诊断建立反馈闭环",
+              "扫描代码库的架构深化机会并生成报告"
+            ],
+            "audience": "希望保留开发控制权，并让编码 Agent 遵循需求澄清、测试、调试和架构实践的开发者。",
+            "capabilities": [
+              "追问需求，补齐变更前的关键决策",
+              "建立共享术语并更新 CONTEXT.md 与 ADR",
+              "按红绿重构循环实现功能或修复问题",
+              "分阶段定位缺陷并补上回归测试",
+              "扫描架构改进机会并输出可视化报告"
+            ],
+            "core_title": "可组合的工程实践技能",
+            "core_summary": "每项技能聚焦一个工程环节，可由用户主动调用或由模型按任务匹配；它们把需求访谈、领域建模、测试、调试和代码审查组织成可重复流程，同时允许按项目修改。",
+            "prerequisites": "通过 Claude Code 插件或 skills.sh 任选一种方式安装，再在每个仓库运行一次 /setup-matt-pocock-skills。",
+            "limitations": "两种安装方式不要同时使用，否则每项技能会重复；插件版为只读托管包，复制到项目的技能文件需自行更新。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ]
+              ],
+              "audience": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "core_summary": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "prerequisites": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "limitations": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-21/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-21/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.01.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1201476594,
+          "full_name": "santifer/career-ops",
+          "owner": "santifer",
+          "name": "career-ops",
+          "html_url": "https://github.com/santifer/career-ops",
+          "description": "Open-source AI job search: scan job portals, evaluate listings with a structured A-F rubric into a 1.0-5.0 score, tailor your CV, track applications — runs locally in your AI coding CLI (Claude Code, Codex, OpenCode, Antigravity…)",
+          "language": "JavaScript",
+          "stars": 66631,
+          "forks": 12815,
+          "open_issues": 304,
+          "watchers": 256,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "anthropic",
+            "ats",
+            "automation",
+            "beginner-friendly",
+            "career",
+            "careerops",
+            "claude",
+            "claude-code",
+            "cli",
+            "first-timers-only",
+            "golang",
+            "good-first-issue",
+            "interview-prep",
+            "job-application",
+            "job-hunting",
+            "job-search",
+            "open-source",
+            "resume"
+          ],
+          "created_at": "2026-04-04T18:21:18Z",
+          "updated_at": "2026-08-20T23:31:01Z",
+          "pushed_at": "2026-08-20T21:41:30Z",
+          "daily_stars": 855,
+          "weekly_stars": null,
+          "trending_rank_daily": 6,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 86.64,
+          "star_delta": 495,
+          "fork_delta": 40,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.37,
+            "relative_growth": 84.51,
+            "fork_growth": 94.37,
+            "total_stars": 26.76,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "把职位链接变成匹配评估、定制简历和申请记录，帮助求职者筛出更值得投入的机会。",
+            "highlights": [
+              "粘贴职位链接即可生成评估、简历和记录",
+              "按简历与职位描述判断匹配度和风险",
+              "由 AI 提供建议，提交前始终由本人决定"
+            ],
+            "audience": "使用 AI 编码命令行求职，希望集中筛选职位、定制材料并跟踪申请进度的候选人。",
+            "capabilities": [
+              "粘贴职位网址，生成评估、简历和跟踪记录",
+              "扫描招聘门户并汇总新职位",
+              "对照简历评估匹配度与岗位真实性",
+              "生成定制简历、求职信和申请邮件草稿",
+              "跟踪申请状态并分析拒绝与晋级模式"
+            ],
+            "core_title": "把职位链接变成决策包",
+            "core_summary": "系统读取职位链接或描述，对照个人简历和偏好评估匹配度、岗位风险与准备方向，再生成定制材料并写入统一跟踪表；AI 负责分析和起草，最终操作留给求职者。",
+            "prerequisites": "需安装 Node.js，并准备可用的 AI 编码命令行、个人简历、资料档案和目标岗位信息；生成 PDF 还需安装 Playwright Chromium。",
+            "limitations": "不会自动提交、发送或点击申请；所有 AI 生成内容都应在提交前核对，评估只是建议，也需遵守招聘平台条款。",
+            "license_label": "MIT",
+            "license_restrictions": "without warranty of any kind",
+            "readme_sha": "dd17fa2d9884edbb0892625fdd1c2262999b153e",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ],
+              "highlights": [
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ],
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ],
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ]
+              ],
+              "audience": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ],
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ],
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ],
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ],
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ]
+              ],
+              "core_title": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ],
+              "core_summary": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ],
+              "prerequisites": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ],
+              "limitations": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-08-21/repo-cecaaf8382fe4e83b60d77cf-98fb2235b5161b0f6e57c265.png",
+          "publication_evidence": {
+            "full_name": "santifer/career-ops",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "dd17fa2d9884edbb0892625fdd1c2262999b153e",
+              "source_url": "https://api.github.com/repos/santifer/career-ops/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-21/repo-cecaaf8382fe4e83b60d77cf-98fb2235b5161b0f6e57c265.png",
+              "sha256": "088a020f7adbaeaf3aa4a7052990f5082053a6d7d5e84a90096d3dfbc29cee4f",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.02.santifer--career-ops.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 770153867,
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "owner": "harry0703",
+          "name": "MoneyPrinterTurbo",
+          "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
+          "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+          "language": "Python",
+          "stars": 112892,
+          "forks": 17109,
+          "open_issues": 42,
+          "watchers": 112892,
+          "topics": [
+            "ai-video-generator",
+            "content-creation",
+            "ffmpeg",
+            "instagram-reels",
+            "llm",
+            "python",
+            "short-video",
+            "subtitles",
+            "text-to-speech",
+            "tiktok",
+            "video-automation",
+            "video-workflow",
+            "workflow-automation",
+            "youtube-shorts"
+          ],
+          "created_at": "2024-03-11T02:57:34Z",
+          "updated_at": "2026-08-20T23:26:21Z",
+          "pushed_at": "2026-08-20T02:36:40Z",
+          "daily_stars": 2774,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 86.56,
+          "star_delta": 743,
+          "fork_delta": 123,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.18,
+            "relative_growth": 88.73,
+            "fork_growth": 100.0,
+            "total_stars": 29.58,
+            "activity": 71.65,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "输入主题或关键词，自动完成脚本、素材、配音、字幕与配乐，合成高清短视频。",
+            "highlights": [
+              "同时提供 AI Agent、WebUI、API 和 CLI",
+              "批量生成多个版本，再挑选满意成片",
+              "生成完成后可上传至多个短视频平台"
+            ],
+            "audience": "需要批量制作解说类短视频，并希望自行选择模型、语音、素材来源和发布渠道的内容创作者。",
+            "capabilities": [
+              "生成视频脚本或接入自定义脚本",
+              "匹配本地素材或在线高清素材",
+              "合成配音、字幕和背景音乐",
+              "输出横屏或竖屏高清视频",
+              "批量生成并跨平台发布成片"
+            ],
+            "core_title": "串起短视频制作全流程",
+            "core_summary": "工作流从主题或关键词出发，依次生成脚本、提炼素材关键词、匹配画面、合成语音与字幕，再加入背景音乐输出成片；模型、语音、素材和发布服务均可按需要替换。",
+            "prerequisites": "本地部署需 Python 3.11 或更高版本；按所选模型、语音或发布服务配置对应 API Key。",
+            "limitations": "GPU 不是必需项，但本地转录、较重处理和批量生成更依赖显卡；在线模型、语音和发布功能可能需要外部服务凭据。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "2a4f649b84f69acdd0c2e1a4a2ecbadce474f602",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ]
+              ],
+              "audience": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "core_summary": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "prerequisites": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "limitations": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-21/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+          "publication_evidence": {
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "2a4f649b84f69acdd0c2e1a4a2ecbadce474f602",
+              "source_url": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-21/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+              "sha256": "8f9ca021ffca2773fe9909bce688155f9d07586336ccc7c0e835fe1c4301b6b4",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.03.harry0703--moneyprinterturbo.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-21/2026-08-21.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "path": "reports/daily/assets/2026-08-21/2026-08-21.ai.01.harry0703--moneyprinterturbo.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "santifer/career-ops",
+            "path": "reports/daily/assets/2026-08-21/2026-08-21.ai.02.santifer--career-ops.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-08-21/2026-08-21.ai.03.obra--superpowers.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 770153867,
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "owner": "harry0703",
+          "name": "MoneyPrinterTurbo",
+          "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
+          "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+          "language": "Python",
+          "stars": 112892,
+          "forks": 17109,
+          "open_issues": 42,
+          "watchers": 112892,
+          "topics": [
+            "ai-video-generator",
+            "content-creation",
+            "ffmpeg",
+            "instagram-reels",
+            "llm",
+            "python",
+            "short-video",
+            "subtitles",
+            "text-to-speech",
+            "tiktok",
+            "video-automation",
+            "video-workflow",
+            "workflow-automation",
+            "youtube-shorts"
+          ],
+          "created_at": "2024-03-11T02:57:34Z",
+          "updated_at": "2026-08-20T23:26:21Z",
+          "pushed_at": "2026-08-20T02:36:40Z",
+          "daily_stars": 2774,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 89.23,
+          "star_delta": 743,
+          "fork_delta": 123,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 93.55,
+            "fork_growth": 100.0,
+            "total_stars": 35.48,
+            "activity": 71.65,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "输入一个主题或关键词，MoneyPrinterTurbo 会生成脚本、匹配素材并合成高清短视频",
+            "highlights": [
+              "串联脚本、素材、配音、字幕和音乐",
+              "批量生成多个版本，再挑选满意成片",
+              "通过网页、接口、命令行或 AI Agent 使用"
+            ],
+            "audience": "需要批量制作短视频，并希望减少脚本撰写、素材搜集和后期合成操作的内容创作者",
+            "capabilities": [
+              "根据主题自动生成或接收自定义脚本",
+              "匹配本地素材或在线高清素材",
+              "生成配音与可调整样式的字幕",
+              "批量合成多个视频版本供选择",
+              "自动上传到多个短视频平台"
+            ],
+            "core_title": "从主题到成片的自动化链路",
+            "core_summary": "它把脚本生成、素材检索、配音、字幕和背景音乐串成一条流程，并提供 WebUI、API、CLI 与 AI Agent 多种入口。",
+            "prerequisites": "本地部署需要 Python 3.11 或更高版本；云端模型、语音或发布服务可能需要对应 API Key。",
+            "limitations": "跨平台发布需配置 Upload-Post 账号与 API Key；Whisper 首次使用需下载模型。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "2a4f649b84f69acdd0c2e1a4a2ecbadce474f602",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ]
+              ],
+              "audience": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "core_summary": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "prerequisites": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "limitations": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-21/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+          "publication_evidence": {
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "2a4f649b84f69acdd0c2e1a4a2ecbadce474f602",
+              "source_url": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-21/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+              "sha256": "8f9ca021ffca2773fe9909bce688155f9d07586336ccc7c0e835fe1c4301b6b4",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-21/2026-08-21.ai.01.harry0703--moneyprinterturbo.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1201476594,
+          "full_name": "santifer/career-ops",
+          "owner": "santifer",
+          "name": "career-ops",
+          "html_url": "https://github.com/santifer/career-ops",
+          "description": "Open-source AI job search: scan job portals, evaluate listings with a structured A-F rubric into a 1.0-5.0 score, tailor your CV, track applications — runs locally in your AI coding CLI (Claude Code, Codex, OpenCode, Antigravity…)",
+          "language": "JavaScript",
+          "stars": 66631,
+          "forks": 12815,
+          "open_issues": 304,
+          "watchers": 256,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "anthropic",
+            "ats",
+            "automation",
+            "beginner-friendly",
+            "career",
+            "careerops",
+            "claude",
+            "claude-code",
+            "cli",
+            "first-timers-only",
+            "golang",
+            "good-first-issue",
+            "interview-prep",
+            "job-application",
+            "job-hunting",
+            "job-search",
+            "open-source",
+            "resume"
+          ],
+          "created_at": "2026-04-04T18:21:18Z",
+          "updated_at": "2026-08-20T23:31:01Z",
+          "pushed_at": "2026-08-20T21:41:30Z",
+          "daily_stars": 855,
+          "weekly_stars": null,
+          "trending_rank_daily": 6,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 87.75,
+          "star_delta": 495,
+          "fork_delta": 40,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.77,
+            "relative_growth": 83.87,
+            "fork_growth": 93.55,
+            "total_stars": 29.03,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "把职位网址或描述交给 career-ops，它会评估匹配度、生成定制简历并写入求职追踪记录",
+            "highlights": [
+              "用结构化规则筛选值得投入的岗位",
+              "按职位描述生成 ATS 定制简历",
+              "保留人工决策，不自动提交申请"
+            ],
+            "audience": "希望在本地 AI 编程命令行中筛选职位、定制申请材料并管理求职进度的求职者",
+            "capabilities": [
+              "扫描招聘门户并收集新职位",
+              "按结构化维度评估岗位匹配度",
+              "生成 ATS 定制 PDF 简历",
+              "研究公司并寻找合适联系人",
+              "追踪申请状态并检查数据完整性"
+            ],
+            "core_title": "把职位输入变成求职流水线",
+            "core_summary": "它把职位输入依次转成评估报告、ATS 简历 PDF 和追踪记录；AI 负责筛选与草拟，提交申请仍由你决定。",
+            "prerequisites": "需要 Node.js 与受支持的 AI 编程 CLI；生成 PDF 时还需安装 Playwright Chromium。",
+            "limitations": "不会自动发送、提交或点击申请；应人工核对生成内容，并遵守招聘门户的服务条款。",
+            "license_label": "MIT",
+            "license_restrictions": "\"as is\", without warranty of any kind.",
+            "readme_sha": "dd17fa2d9884edbb0892625fdd1c2262999b153e",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ],
+              "highlights": [
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ],
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ],
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ]
+              ],
+              "audience": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ],
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ],
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ],
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ],
+                [
+                  "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+                ]
+              ],
+              "core_title": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ],
+              "core_summary": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ],
+              "prerequisites": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ],
+              "limitations": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:dd17fa2d9884edbb0892625fdd1c2262999b153e"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-08-21/repo-cecaaf8382fe4e83b60d77cf-98fb2235b5161b0f6e57c265.png",
+          "publication_evidence": {
+            "full_name": "santifer/career-ops",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "dd17fa2d9884edbb0892625fdd1c2262999b153e",
+              "source_url": "https://api.github.com/repos/santifer/career-ops/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-21/repo-cecaaf8382fe4e83b60d77cf-98fb2235b5161b0f6e57c265.png",
+              "sha256": "088a020f7adbaeaf3aa4a7052990f5082053a6d7d5e84a90096d3dfbc29cee4f",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-21/2026-08-21.ai.02.santifer--career-ops.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 274918,
+          "forks": 24602,
+          "open_issues": 296,
+          "watchers": 1037,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-08-20T23:29:20Z",
+          "pushed_at": "2026-08-19T17:33:23Z",
+          "daily_stars": 749,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 84.8,
+          "star_delta": 343,
+          "fork_delta": 25,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.55,
+            "relative_growth": 74.19,
+            "fork_growth": 90.32,
+            "total_stars": 96.77,
+            "activity": 71.65,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "给编程 Agent 装上一套可组合技能，让需求澄清、规划、测试、审查和收尾按固定流程推进",
+            "highlights": [
+              "先通过对话澄清需求并确认设计",
+              "把设计拆成可执行的实现计划",
+              "用子 Agent 分工并进行两阶段审查"
+            ],
+            "audience": "希望编程 Agent 先确认需求、遵循测试流程并分阶段审查实现结果的开发者",
+            "capabilities": [
+              "启动编码前通过提问完善需求",
+              "将确认后的设计拆成小粒度任务",
+              "按测试先行流程实现与重构",
+              "派发子 Agent 执行并审查任务",
+              "在结束前验证测试并选择收尾方式"
+            ],
+            "core_title": "让编程 Agent 先设计再动手",
+            "core_summary": "它用可组合技能约束研发顺序：先澄清和确认设计，再规划任务、测试实现、分工审查，最后验证结果并处理开发分支。",
+            "prerequisites": "需要使用受支持的编程 Agent，并按对应插件、扩展或包管理方式单独安装。",
+            "limitations": "多个编程工具需要分别安装；可选视觉伴侣默认从网站加载标志并携带版本信息。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+              ],
+              "highlights": [
+                [
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+                ],
+                [
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+                ],
+                [
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+                ]
+              ],
+              "audience": [
+                "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+                ],
+                [
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+                ],
+                [
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+                ],
+                [
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+                ],
+                [
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+                ]
+              ],
+              "core_title": [
+                "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+              ],
+              "core_summary": [
+                "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+              ],
+              "prerequisites": [
+                "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+              ],
+              "limitations": [
+                "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-21/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645",
+              "source_url": "https://api.github.com/repos/obra/superpowers/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-21/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+              "sha256": "d38b9c9b368fcb5bf36b16f443d783cc9588fa66f5b399ed5e966b50ab857937",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-21/2026-08-21.ai.03.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}

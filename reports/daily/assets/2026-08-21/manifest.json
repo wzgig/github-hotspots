@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-08-21",
+  "window": {
+    "start": "2026-08-20",
+    "end": "2026-08-21"
+  },
+  "source_report": "reports/daily/2026-08-21.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-08-21",
+  "manifest": "reports/daily/assets/2026-08-21/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "mattpocock/skills",
+          "path": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.01.mattpocock--skills.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "santifer/career-ops",
+          "path": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.02.santifer--career-ops.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "path": "reports/daily/assets/2026-08-21/2026-08-21.comprehensive.03.harry0703--moneyprinterturbo.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-21/2026-08-21.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "path": "reports/daily/assets/2026-08-21/2026-08-21.ai.01.harry0703--moneyprinterturbo.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "santifer/career-ops",
+          "path": "reports/daily/assets/2026-08-21/2026-08-21.ai.02.santifer--career-ops.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "obra/superpowers",
+          "path": "reports/daily/assets/2026-08-21/2026-08-21.ai.03.obra--superpowers.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 41,
+    "issue_code": "D041",
+    "issue_label": "第41期",
+    "status": "official"
+  }
+}
