@@ -4,7 +4,7 @@
   "run_date": "2026-08-20",
   "window_start": "2026-08-19",
   "window_end": "2026-08-20",
-  "generated_at": "2026-08-20T10:31:55+08:00",
+  "generated_at": "2026-08-20T17:44:22+08:00",
   "timezone": "Asia/Shanghai",
   "window_label": "2026-08-19 至 2026-08-20",
   "publication": {
@@ -22,16 +22,16 @@
       "comprehensive": {
         "prompt_version": "4.1",
         "schema_version": "4.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       },
       "ai": {
         "prompt_version": "4.1",
         "schema_version": "4.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       }
@@ -62,8 +62,8 @@
           },
           {
             "rank": 3,
-            "full_name": "chaitanyagiri/munder-difflin",
-            "path": "reports/daily/assets/2026-08-20/2026-08-20.comprehensive.03.chaitanyagiri--munder-difflin.png"
+            "full_name": "volcengine/OpenViking",
+            "path": "reports/daily/assets/2026-08-20/2026-08-20.comprehensive.03.volcengine--openviking.png"
           }
         ]
       },
@@ -106,10 +106,10 @@
       "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
       "language": "Python",
-      "stars": 110949,
-      "forks": 16812,
-      "open_issues": 30,
-      "watchers": 703,
+      "stars": 112149,
+      "forks": 16986,
+      "open_issues": 32,
+      "watchers": 706,
       "topics": [
         "ai-video-generator",
         "content-creation",
@@ -127,8 +127,8 @@
         "youtube-shorts"
       ],
       "created_at": "2024-03-11T02:57:34Z",
-      "updated_at": "2026-08-20T02:31:07Z",
-      "pushed_at": "2026-08-20T02:15:10Z",
+      "updated_at": "2026-08-20T09:44:07Z",
+      "pushed_at": "2026-08-20T02:36:40Z",
       "daily_stars": 2221,
       "weekly_stars": null,
       "trending_rank_daily": 1,
@@ -138,77 +138,91 @@
         "github_api"
       ],
       "rank": 1,
-      "score": 95.7,
-      "star_delta": 2220,
-      "fork_delta": 305,
+      "score": 96.45,
+      "star_delta": 3420,
+      "fork_delta": 479,
       "delta_source": "snapshot",
       "component_percentiles": {
         "star_growth": 100.0,
-        "relative_growth": 98.44,
+        "relative_growth": 98.68,
         "fork_growth": 100.0,
-        "total_stars": 20.31,
+        "total_stars": 34.21,
         "activity": 100.0,
         "trending_signal": 100.0
       },
       "summary": {
-        "one_line": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
+        "one_line": "输入视频主题或关键词，自动完成脚本、素材、配音、字幕与音乐，输出高清短视频",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "从主题到高清短视频自动串起完整流程",
+          "同时提供 WebUI、API、CLI 与 AI Agent",
+          "支持竖屏、横屏与批量成片"
         ],
-        "audience": "公开信息不足，需人工确认后再发布",
+        "audience": "需要批量制作短视频，并希望通过网页、接口或命令行衔接内容流程的创作者与开发者",
         "capabilities": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "输入主题或关键词生成视频脚本",
+          "匹配本地或在线高清素材",
+          "合成配音、字幕和背景音乐",
+          "批量生成多个成片供选择",
+          "自动上传至 TikTok、Instagram 和 YouTube Shorts"
         ],
-        "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "把短视频制作串成自动流程",
+        "core_summary": "项目把脚本生成、素材检索、语音合成、字幕与音乐配置接成工作流，可从同一主题批量产出成片，再挑选结果或继续发布。",
+        "prerequisites": "本地部署需要 Python 3.11 或更高版本；部分模型、语音、素材及发布服务需要对应凭据。",
+        "limitations": "部分模型、语音和跨平台发布依赖第三方凭据；Whisper 首次使用需下载模型。",
+        "license_label": "MIT",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "needs_review",
+        "readme_sha": "2a4f649b84f69acdd0c2e1a4a2ecbadce474f602",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
             ],
             [
-              "deterministic_draft"
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
             ],
             [
-              "deterministic_draft"
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
             ],
             [
-              "deterministic_draft"
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
             ],
             [
-              "deterministic_draft"
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+            ],
+            [
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+            ],
+            [
+              "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+          ],
+          "limitations": [
+            "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -216,10 +230,13 @@
       "publication_evidence": {
         "full_name": "harry0703/MoneyPrinterTurbo",
         "license_spdx_id": "MIT",
-        "readme": null,
+        "readme": {
+          "sha": "2a4f649b84f69acdd0c2e1a4a2ecbadce474f602",
+          "source_url": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo/readme"
+        },
         "avatar": {
           "path": "avatars/2026-08-20/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
-          "sha256": "66a44d80e1e3bcd2fc1ea0953b833eea1e4f3d05e73af18b7401394e6015d5ee",
+          "sha256": "8f9ca021ffca2773fe9909bce688155f9d07586336ccc7c0e835fe1c4301b6b4",
           "width": 460,
           "height": 460
         },
@@ -241,10 +258,10 @@
       "html_url": "https://github.com/public-apis/public-apis",
       "description": "A collective list of free APIs",
       "language": "Python",
-      "stars": 466148,
-      "forks": 51437,
-      "open_issues": 1705,
-      "watchers": 466148,
+      "stars": 466566,
+      "forks": 51469,
+      "open_issues": 1707,
+      "watchers": 466566,
       "topics": [
         "api",
         "apis",
@@ -261,7 +278,7 @@
         "software"
       ],
       "created_at": "2016-03-20T23:49:42Z",
-      "updated_at": "2026-08-20T02:30:44Z",
+      "updated_at": "2026-08-20T09:43:15Z",
       "pushed_at": "2026-08-19T21:44:19Z",
       "daily_stars": null,
       "weekly_stars": null,
@@ -271,77 +288,89 @@
         "github_api"
       ],
       "rank": 2,
-      "score": 91.25,
-      "star_delta": 1462,
-      "fork_delta": 109,
+      "score": 91.58,
+      "star_delta": 1880,
+      "fork_delta": 141,
       "delta_source": "snapshot",
       "component_percentiles": {
-        "star_growth": 96.88,
-        "relative_growth": 90.62,
-        "fork_growth": 96.88,
+        "star_growth": 97.37,
+        "relative_growth": 90.79,
+        "fork_growth": 97.37,
         "total_stars": 100.0,
         "activity": 100.0,
         "trending_signal": 0.0
       },
       "summary": {
-        "one_line": "public-apis 的用途证据不足，需要先查看仓库 README",
+        "one_line": "按领域汇总公共 API，并标出认证、HTTPS 与 CORS 信息，方便为产品快速找接口",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "目录覆盖动物、金融、开发、天气等领域",
+          "每条列出用途、认证方式与连接支持",
+          "通过分类索引快速跳到目标 API"
         ],
-        "audience": "公开信息不足，需人工确认后再发布",
+        "audience": "为自己的产品寻找公共接口，并需要比较认证、HTTPS 与 CORS 条件的开发者",
         "capabilities": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "按业务领域浏览公共 API",
+          "查看接口用途说明",
+          "筛选是否需要 API Key 或 OAuth",
+          "核对 HTTPS 支持情况",
+          "核对 CORS 支持情况"
         ],
-        "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "public-apis 的用途证据不足，需要先查看仓库 README",
+        "core_title": "按领域查接口条件",
+        "core_summary": "它把公共 API 按领域编成索引，每条同时列出用途、认证方式、HTTPS 与 CORS，方便先缩小候选，再进入对应文档判断是否接入。",
         "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "limitations": "清单由社区成员人工维护。",
+        "license_label": "MIT",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "needs_review",
+        "readme_sha": "5353762809d43476ba132ab74dde4b3e13e5f706",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
             ],
             [
-              "deterministic_draft"
+              "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
             ],
             [
-              "deterministic_draft"
+              "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
             ],
             [
-              "deterministic_draft"
+              "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
             ],
             [
-              "deterministic_draft"
+              "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
+            ],
+            [
+              "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
+            ],
+            [
+              "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
           ],
           "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "limitations": [
+            "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -349,7 +378,10 @@
       "publication_evidence": {
         "full_name": "public-apis/public-apis",
         "license_spdx_id": "MIT",
-        "readme": null,
+        "readme": {
+          "sha": "5353762809d43476ba132ab74dde4b3e13e5f706",
+          "source_url": "https://api.github.com/repos/public-apis/public-apis/readme"
+        },
         "avatar": {
           "path": "avatars/2026-08-20/repo-fa7dc4680dc18bbd3a691939-7f220dae2a51b04ffadea98c.png",
           "sha256": "165aa7840a7fd70aae0755473bd92d5773f5d17f1234408a87cac73fb3f27a8a",
@@ -367,126 +399,146 @@
       }
     },
     {
-      "repository_id": 1255237198,
-      "full_name": "chaitanyagiri/munder-difflin",
-      "owner": "chaitanyagiri",
-      "name": "munder-difflin",
-      "html_url": "https://github.com/chaitanyagiri/munder-difflin",
-      "description": "local multi-agent harness",
-      "language": "TypeScript",
-      "stars": 2734,
-      "forks": 324,
-      "open_issues": 56,
-      "watchers": 17,
+      "repository_id": 1128123594,
+      "full_name": "volcengine/OpenViking",
+      "owner": "volcengine",
+      "name": "OpenViking",
+      "html_url": "https://github.com/volcengine/OpenViking",
+      "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
+      "language": "Python",
+      "stars": 30683,
+      "forks": 2369,
+      "open_issues": 470,
+      "watchers": 82,
       "topics": [
-        "agents",
-        "claude-code",
-        "free",
-        "harness",
-        "harness-engineering",
-        "memory"
+        "agent-memory",
+        "agent-plugins",
+        "agentic-rag",
+        "context-database",
+        "dsh-plugin",
+        "self-evolving"
       ],
-      "created_at": "2026-05-31T15:25:05Z",
-      "updated_at": "2026-08-20T02:30:02Z",
-      "pushed_at": "2026-08-19T20:54:46Z",
-      "daily_stars": 795,
+      "created_at": "2026-01-05T07:11:17Z",
+      "updated_at": "2026-08-20T09:43:23Z",
+      "pushed_at": "2026-08-20T09:42:28Z",
+      "daily_stars": 804,
       "weekly_stars": null,
-      "trending_rank_daily": 3,
+      "trending_rank_daily": 2,
       "trending_rank_weekly": null,
       "sources": [
         "trending_daily",
         "github_api"
       ],
       "rank": 3,
-      "score": 88.59,
-      "star_delta": 622,
-      "fork_delta": 77,
+      "score": 91.11,
+      "star_delta": 1194,
+      "fork_delta": 59,
       "delta_source": "snapshot",
       "component_percentiles": {
-        "star_growth": 92.19,
-        "relative_growth": 100.0,
-        "fork_growth": 95.31,
-        "total_stars": 9.38,
+        "star_growth": 96.05,
+        "relative_growth": 96.05,
+        "fork_growth": 92.11,
+        "total_stars": 30.26,
         "activity": 100.0,
-        "trending_signal": 50.0
+        "trending_signal": 63.09
       },
       "summary": {
-        "one_line": "目前无法从公开字段确认 munder-difflin 能完成哪些任务",
+        "one_line": "把智能体的记忆、资料和技能收进可浏览的虚拟文件系统，按任务深度取用上下文",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "用 viking:// URI 统一组织上下文",
+          "按目录递归检索并保留周边信息",
+          "记录检索轨迹，便于定位错误结果"
         ],
-        "audience": "公开信息不足，需人工确认后再发布",
+        "audience": "需要为编码助手或多轮智能体管理长期记忆、知识资料、技能，并排查检索过程的开发者",
         "capabilities": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "统一存放记忆、资料与技能",
+          "用 ls、tree 和 find 浏览上下文",
+          "按 L0、L1、L2 分层加载内容",
+          "追踪每次检索经过的目录路径",
+          "将会话偏好与经验沉淀为长期记忆"
         ],
-        "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "目前无法从公开字段确认 munder-difflin 能完成哪些任务",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
-        "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "needs_review",
+        "core_title": "像文件系统一样管理上下文",
+        "core_summary": "记忆、资料和技能都获得 viking:// 地址，并在写入时生成分层内容；智能体先定位目录，再按需深入读取，同时留下可检查的检索路径。",
+        "prerequisites": "本地安装需要 Python 3.10 或更高版本，并在初始化时配置模型或服务提供方。",
+        "limitations": "仅开源 VikingMem 论文所述核心能力的一个子集；OpenViking Helper 仍处于 Beta。",
+        "license_label": "AGPL-3.0",
+        "license_restrictions": "The OpenViking project uses different licenses for different components:",
+        "readme_sha": "405ee268d942980f61df0c6fcca7e98f394de5ea",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
             ],
             [
-              "deterministic_draft"
+              "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
             ],
             [
-              "deterministic_draft"
+              "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
             ],
             [
-              "deterministic_draft"
+              "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
             ],
             [
-              "deterministic_draft"
+              "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+            ],
+            [
+              "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+            ],
+            [
+              "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
-          "license_restrictions": []
+          "prerequisites": [
+            "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+          ],
+          "limitations": [
+            "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+          ]
         }
       },
-      "avatar_path": "avatars/2026-08-20/repo-a6dcd1175db4710fcfcd7034-75051aa4718630458972fd09.png",
+      "avatar_path": "avatars/2026-08-20/repo-54d219fb7eec9d0e35939bfe-e63cabd8196f170675a0f9e1.png",
       "publication_evidence": {
-        "full_name": "chaitanyagiri/munder-difflin",
-        "license_spdx_id": "NOASSERTION",
-        "readme": null,
+        "full_name": "volcengine/OpenViking",
+        "license_spdx_id": "AGPL-3.0",
+        "readme": {
+          "sha": "405ee268d942980f61df0c6fcca7e98f394de5ea",
+          "source_url": "https://api.github.com/repos/volcengine/OpenViking/readme"
+        },
         "avatar": {
-          "path": "avatars/2026-08-20/repo-a6dcd1175db4710fcfcd7034-75051aa4718630458972fd09.png",
-          "sha256": "23d93271296efad259567031d6fad88d2b1ff8705247e67320aa95329a24140b",
+          "path": "avatars/2026-08-20/repo-54d219fb7eec9d0e35939bfe-e63cabd8196f170675a0f9e1.png",
+          "sha256": "0c0e88b6b4ee9db0c5e708094e0fe59c50ffd3a333bdeadd952c7d5f56132a53",
           "width": 460,
           "height": 460
         },
         "warnings": []
       },
+      "license_spdx": "AGPL-3.0",
       "assets": {
-        "poster": "reports/daily/assets/2026-08-20/2026-08-20.comprehensive.03.chaitanyagiri--munder-difflin.png",
+        "poster": "reports/daily/assets/2026-08-20/2026-08-20.comprehensive.03.volcengine--openviking.png",
         "format": "png",
         "width": 1200,
         "height": 1600
@@ -514,8 +566,8 @@
           },
           {
             "rank": 3,
-            "full_name": "chaitanyagiri/munder-difflin",
-            "path": "reports/daily/assets/2026-08-20/2026-08-20.comprehensive.03.chaitanyagiri--munder-difflin.png"
+            "full_name": "volcengine/OpenViking",
+            "path": "reports/daily/assets/2026-08-20/2026-08-20.comprehensive.03.volcengine--openviking.png"
           }
         ]
       },
@@ -528,10 +580,10 @@
           "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
           "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
           "language": "Python",
-          "stars": 110949,
-          "forks": 16812,
-          "open_issues": 30,
-          "watchers": 703,
+          "stars": 112149,
+          "forks": 16986,
+          "open_issues": 32,
+          "watchers": 706,
           "topics": [
             "ai-video-generator",
             "content-creation",
@@ -549,8 +601,8 @@
             "youtube-shorts"
           ],
           "created_at": "2024-03-11T02:57:34Z",
-          "updated_at": "2026-08-20T02:31:07Z",
-          "pushed_at": "2026-08-20T02:15:10Z",
+          "updated_at": "2026-08-20T09:44:07Z",
+          "pushed_at": "2026-08-20T02:36:40Z",
           "daily_stars": 2221,
           "weekly_stars": null,
           "trending_rank_daily": 1,
@@ -560,77 +612,91 @@
             "github_api"
           ],
           "rank": 1,
-          "score": 95.7,
-          "star_delta": 2220,
-          "fork_delta": 305,
+          "score": 96.45,
+          "star_delta": 3420,
+          "fork_delta": 479,
           "delta_source": "snapshot",
           "component_percentiles": {
             "star_growth": 100.0,
-            "relative_growth": 98.44,
+            "relative_growth": 98.68,
             "fork_growth": 100.0,
-            "total_stars": 20.31,
+            "total_stars": 34.21,
             "activity": 100.0,
             "trending_signal": 100.0
           },
           "summary": {
-            "one_line": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
+            "one_line": "输入视频主题或关键词，自动完成脚本、素材、配音、字幕与音乐，输出高清短视频",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "从主题到高清短视频自动串起完整流程",
+              "同时提供 WebUI、API、CLI 与 AI Agent",
+              "支持竖屏、横屏与批量成片"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "需要批量制作短视频，并希望通过网页、接口或命令行衔接内容流程的创作者与开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "输入主题或关键词生成视频脚本",
+              "匹配本地或在线高清素材",
+              "合成配音、字幕和背景音乐",
+              "批量生成多个成片供选择",
+              "自动上传至 TikTok、Instagram 和 YouTube Shorts"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "把短视频制作串成自动流程",
+            "core_summary": "项目把脚本生成、素材检索、语音合成、字幕与音乐配置接成工作流，可从同一主题批量产出成片，再挑选结果或继续发布。",
+            "prerequisites": "本地部署需要 Python 3.11 或更高版本；部分模型、语音、素材及发布服务需要对应凭据。",
+            "limitations": "部分模型、语音和跨平台发布依赖第三方凭据；Whisper 首次使用需下载模型。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "2a4f649b84f69acdd0c2e1a4a2ecbadce474f602",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "limitations": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -638,10 +704,13 @@
           "publication_evidence": {
             "full_name": "harry0703/MoneyPrinterTurbo",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "2a4f649b84f69acdd0c2e1a4a2ecbadce474f602",
+              "source_url": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-20/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
-              "sha256": "66a44d80e1e3bcd2fc1ea0953b833eea1e4f3d05e73af18b7401394e6015d5ee",
+              "sha256": "8f9ca021ffca2773fe9909bce688155f9d07586336ccc7c0e835fe1c4301b6b4",
               "width": 460,
               "height": 460
             },
@@ -663,10 +732,10 @@
           "html_url": "https://github.com/public-apis/public-apis",
           "description": "A collective list of free APIs",
           "language": "Python",
-          "stars": 466148,
-          "forks": 51437,
-          "open_issues": 1705,
-          "watchers": 466148,
+          "stars": 466566,
+          "forks": 51469,
+          "open_issues": 1707,
+          "watchers": 466566,
           "topics": [
             "api",
             "apis",
@@ -683,7 +752,7 @@
             "software"
           ],
           "created_at": "2016-03-20T23:49:42Z",
-          "updated_at": "2026-08-20T02:30:44Z",
+          "updated_at": "2026-08-20T09:43:15Z",
           "pushed_at": "2026-08-19T21:44:19Z",
           "daily_stars": null,
           "weekly_stars": null,
@@ -693,77 +762,89 @@
             "github_api"
           ],
           "rank": 2,
-          "score": 91.25,
-          "star_delta": 1462,
-          "fork_delta": 109,
+          "score": 91.58,
+          "star_delta": 1880,
+          "fork_delta": 141,
           "delta_source": "snapshot",
           "component_percentiles": {
-            "star_growth": 96.88,
-            "relative_growth": 90.62,
-            "fork_growth": 96.88,
+            "star_growth": 97.37,
+            "relative_growth": 90.79,
+            "fork_growth": 97.37,
             "total_stars": 100.0,
             "activity": 100.0,
             "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "public-apis 的用途证据不足，需要先查看仓库 README",
+            "one_line": "按领域汇总公共 API，并标出认证、HTTPS 与 CORS 信息，方便为产品快速找接口",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "目录覆盖动物、金融、开发、天气等领域",
+              "每条列出用途、认证方式与连接支持",
+              "通过分类索引快速跳到目标 API"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "为自己的产品寻找公共接口，并需要比较认证、HTTPS 与 CORS 条件的开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "按业务领域浏览公共 API",
+              "查看接口用途说明",
+              "筛选是否需要 API Key 或 OAuth",
+              "核对 HTTPS 支持情况",
+              "核对 CORS 支持情况"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "public-apis 的用途证据不足，需要先查看仓库 README",
+            "core_title": "按领域查接口条件",
+            "core_summary": "它把公共 API 按领域编成索引，每条同时列出用途、认证方式、HTTPS 与 CORS，方便先缩小候选，再进入对应文档判断是否接入。",
             "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "limitations": "清单由社区成员人工维护。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "5353762809d43476ba132ab74dde4b3e13e5f706",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
+                ],
+                [
+                  "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
+                ],
+                [
+                  "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
               ],
               "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "limitations": [
+                "github.readme:5353762809d43476ba132ab74dde4b3e13e5f706"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -771,7 +852,10 @@
           "publication_evidence": {
             "full_name": "public-apis/public-apis",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "5353762809d43476ba132ab74dde4b3e13e5f706",
+              "source_url": "https://api.github.com/repos/public-apis/public-apis/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-20/repo-fa7dc4680dc18bbd3a691939-7f220dae2a51b04ffadea98c.png",
               "sha256": "165aa7840a7fd70aae0755473bd92d5773f5d17f1234408a87cac73fb3f27a8a",
@@ -789,126 +873,146 @@
           }
         },
         {
-          "repository_id": 1255237198,
-          "full_name": "chaitanyagiri/munder-difflin",
-          "owner": "chaitanyagiri",
-          "name": "munder-difflin",
-          "html_url": "https://github.com/chaitanyagiri/munder-difflin",
-          "description": "local multi-agent harness",
-          "language": "TypeScript",
-          "stars": 2734,
-          "forks": 324,
-          "open_issues": 56,
-          "watchers": 17,
+          "repository_id": 1128123594,
+          "full_name": "volcengine/OpenViking",
+          "owner": "volcengine",
+          "name": "OpenViking",
+          "html_url": "https://github.com/volcengine/OpenViking",
+          "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
+          "language": "Python",
+          "stars": 30683,
+          "forks": 2369,
+          "open_issues": 470,
+          "watchers": 82,
           "topics": [
-            "agents",
-            "claude-code",
-            "free",
-            "harness",
-            "harness-engineering",
-            "memory"
+            "agent-memory",
+            "agent-plugins",
+            "agentic-rag",
+            "context-database",
+            "dsh-plugin",
+            "self-evolving"
           ],
-          "created_at": "2026-05-31T15:25:05Z",
-          "updated_at": "2026-08-20T02:30:02Z",
-          "pushed_at": "2026-08-19T20:54:46Z",
-          "daily_stars": 795,
+          "created_at": "2026-01-05T07:11:17Z",
+          "updated_at": "2026-08-20T09:43:23Z",
+          "pushed_at": "2026-08-20T09:42:28Z",
+          "daily_stars": 804,
           "weekly_stars": null,
-          "trending_rank_daily": 3,
+          "trending_rank_daily": 2,
           "trending_rank_weekly": null,
           "sources": [
             "trending_daily",
             "github_api"
           ],
           "rank": 3,
-          "score": 88.59,
-          "star_delta": 622,
-          "fork_delta": 77,
+          "score": 91.11,
+          "star_delta": 1194,
+          "fork_delta": 59,
           "delta_source": "snapshot",
           "component_percentiles": {
-            "star_growth": 92.19,
-            "relative_growth": 100.0,
-            "fork_growth": 95.31,
-            "total_stars": 9.38,
+            "star_growth": 96.05,
+            "relative_growth": 96.05,
+            "fork_growth": 92.11,
+            "total_stars": 30.26,
             "activity": 100.0,
-            "trending_signal": 50.0
+            "trending_signal": 63.09
           },
           "summary": {
-            "one_line": "目前无法从公开字段确认 munder-difflin 能完成哪些任务",
+            "one_line": "把智能体的记忆、资料和技能收进可浏览的虚拟文件系统，按任务深度取用上下文",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "用 viking:// URI 统一组织上下文",
+              "按目录递归检索并保留周边信息",
+              "记录检索轨迹，便于定位错误结果"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "需要为编码助手或多轮智能体管理长期记忆、知识资料、技能，并排查检索过程的开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "统一存放记忆、资料与技能",
+              "用 ls、tree 和 find 浏览上下文",
+              "按 L0、L1、L2 分层加载内容",
+              "追踪每次检索经过的目录路径",
+              "将会话偏好与经验沉淀为长期记忆"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "目前无法从公开字段确认 munder-difflin 能完成哪些任务",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
-            "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "core_title": "像文件系统一样管理上下文",
+            "core_summary": "记忆、资料和技能都获得 viking:// 地址，并在写入时生成分层内容；智能体先定位目录，再按需深入读取，同时留下可检查的检索路径。",
+            "prerequisites": "本地安装需要 Python 3.10 或更高版本，并在初始化时配置模型或服务提供方。",
+            "limitations": "仅开源 VikingMem 论文所述核心能力的一个子集；OpenViking Helper 仍处于 Beta。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "The OpenViking project uses different licenses for different components:",
+            "readme_sha": "405ee268d942980f61df0c6fcca7e98f394de5ea",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+                ],
+                [
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+                ],
+                [
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
-              "license_restrictions": []
+              "prerequisites": [
+                "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+              ],
+              "limitations": [
+                "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+              ]
             }
           },
-          "avatar_path": "avatars/2026-08-20/repo-a6dcd1175db4710fcfcd7034-75051aa4718630458972fd09.png",
+          "avatar_path": "avatars/2026-08-20/repo-54d219fb7eec9d0e35939bfe-e63cabd8196f170675a0f9e1.png",
           "publication_evidence": {
-            "full_name": "chaitanyagiri/munder-difflin",
-            "license_spdx_id": "NOASSERTION",
-            "readme": null,
+            "full_name": "volcengine/OpenViking",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "405ee268d942980f61df0c6fcca7e98f394de5ea",
+              "source_url": "https://api.github.com/repos/volcengine/OpenViking/readme"
+            },
             "avatar": {
-              "path": "avatars/2026-08-20/repo-a6dcd1175db4710fcfcd7034-75051aa4718630458972fd09.png",
-              "sha256": "23d93271296efad259567031d6fad88d2b1ff8705247e67320aa95329a24140b",
+              "path": "avatars/2026-08-20/repo-54d219fb7eec9d0e35939bfe-e63cabd8196f170675a0f9e1.png",
+              "sha256": "0c0e88b6b4ee9db0c5e708094e0fe59c50ffd3a333bdeadd952c7d5f56132a53",
               "width": 460,
               "height": 460
             },
             "warnings": []
           },
+          "license_spdx": "AGPL-3.0",
           "assets": {
-            "poster": "reports/daily/assets/2026-08-20/2026-08-20.comprehensive.03.chaitanyagiri--munder-difflin.png",
+            "poster": "reports/daily/assets/2026-08-20/2026-08-20.comprehensive.03.volcengine--openviking.png",
             "format": "png",
             "width": 1200,
             "height": 1600
@@ -950,10 +1054,10 @@
           "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
           "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
           "language": "Python",
-          "stars": 110949,
-          "forks": 16812,
-          "open_issues": 30,
-          "watchers": 703,
+          "stars": 112149,
+          "forks": 16986,
+          "open_issues": 32,
+          "watchers": 706,
           "topics": [
             "ai-video-generator",
             "content-creation",
@@ -971,8 +1075,8 @@
             "youtube-shorts"
           ],
           "created_at": "2024-03-11T02:57:34Z",
-          "updated_at": "2026-08-20T02:31:07Z",
-          "pushed_at": "2026-08-20T02:15:10Z",
+          "updated_at": "2026-08-20T09:44:07Z",
+          "pushed_at": "2026-08-20T02:36:40Z",
           "daily_stars": 2221,
           "weekly_stars": null,
           "trending_rank_daily": 1,
@@ -982,77 +1086,91 @@
             "github_api"
           ],
           "rank": 1,
-          "score": 96.11,
-          "star_delta": 2220,
-          "fork_delta": 305,
+          "score": 96.56,
+          "star_delta": 3420,
+          "fork_delta": 479,
           "delta_source": "snapshot",
           "component_percentiles": {
             "star_growth": 100.0,
             "relative_growth": 100.0,
             "fork_growth": 100.0,
-            "total_stars": 22.22,
+            "total_stars": 31.25,
             "activity": 100.0,
             "trending_signal": 100.0
           },
           "summary": {
-            "one_line": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
+            "one_line": "输入主题或关键词，它会串起脚本、素材、配音、字幕和音乐，交付高清短视频",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "从主题自动完成短视频制作流程",
+              "同时提供 WebUI、API、CLI 和 AI Agent",
+              "生成多个版本后再挑选满意成片"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "需要批量制作短视频、调整字幕配音，或把成片发布到多个短视频平台的内容创作者与开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "输入主题或关键词生成视频脚本",
+              "匹配本地或在线高清素材",
+              "合成语音、字幕与背景音乐",
+              "批量生成多个视频供人工挑选",
+              "上传成片到多个短视频平台"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "把主题变成完整短视频",
+            "core_summary": "工作流先生成或接收脚本，再匹配画面素材，加入语音、字幕和背景音乐，最后合成横屏或竖屏成片；既能在界面操作，也能接入 API 和命令行。",
+            "prerequisites": "本地部署需要 Python 3.11 或更高版本；Windows 项目路径应避免中文、特殊字符和空格。",
+            "limitations": "批量生成后仍需人工挑选成片；部分云端服务和自动发布需要对应 API Key，首次使用 Whisper 还需下载模型。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "2a4f649b84f69acdd0c2e1a4a2ecbadce474f602",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+                ],
+                [
+                  "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "limitations": [
+                "github.readme:2a4f649b84f69acdd0c2e1a4a2ecbadce474f602"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1060,10 +1178,13 @@
           "publication_evidence": {
             "full_name": "harry0703/MoneyPrinterTurbo",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "2a4f649b84f69acdd0c2e1a4a2ecbadce474f602",
+              "source_url": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-20/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
-              "sha256": "66a44d80e1e3bcd2fc1ea0953b833eea1e4f3d05e73af18b7401394e6015d5ee",
+              "sha256": "8f9ca021ffca2773fe9909bce688155f9d07586336ccc7c0e835fe1c4301b6b4",
               "width": 460,
               "height": 460
             },
@@ -1085,9 +1206,9 @@
           "html_url": "https://github.com/volcengine/OpenViking",
           "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
           "language": "Python",
-          "stars": 30288,
-          "forks": 2340,
-          "open_issues": 459,
+          "stars": 30683,
+          "forks": 2369,
+          "open_issues": 470,
           "watchers": 82,
           "topics": [
             "agent-memory",
@@ -1098,8 +1219,8 @@
             "self-evolving"
           ],
           "created_at": "2026-01-05T07:11:17Z",
-          "updated_at": "2026-08-20T02:30:56Z",
-          "pushed_at": "2026-08-19T15:59:33Z",
+          "updated_at": "2026-08-20T09:43:23Z",
+          "pushed_at": "2026-08-20T09:42:28Z",
           "daily_stars": 804,
           "weekly_stars": null,
           "trending_rank_daily": 2,
@@ -1109,77 +1230,91 @@
             "github_api"
           ],
           "rank": 2,
-          "score": 86.62,
-          "star_delta": 799,
-          "fork_delta": 30,
+          "score": 90.66,
+          "star_delta": 1194,
+          "fork_delta": 59,
           "delta_source": "snapshot",
           "component_percentiles": {
-            "star_growth": 96.3,
-            "relative_growth": 96.3,
-            "fork_growth": 81.48,
-            "total_stars": 14.81,
-            "activity": 71.65,
+            "star_growth": 96.88,
+            "relative_growth": 93.75,
+            "fork_growth": 90.62,
+            "total_stars": 25.0,
+            "activity": 100.0,
             "trending_signal": 63.09
           },
           "summary": {
-            "one_line": "OpenViking 的用途证据不足，需要先查看仓库 README",
+            "one_line": "把智能体的记忆、资料和技能收进可浏览的虚拟文件系统，让检索过程可分层、可追踪",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "用文件路径统一管理多类上下文",
+              "按任务需要逐层加载内容细节",
+              "保留检索路径便于排查错误结果"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "需要为编码助手、聊天智能体或多智能体系统管理长期记忆、知识资料和技能上下文的开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "统一存放智能体记忆、资源和技能",
+              "按 L0、L1、L2 分层加载上下文",
+              "沿目录逐层检索并保留周边上下文",
+              "记录每次检索经过的目录路径",
+              "提交会话后提取偏好与经验"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "OpenViking 的用途证据不足，需要先查看仓库 README",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "像浏览文件一样管理上下文",
+            "core_summary": "记忆、资源和技能都映射到 viking:// 路径，写入时生成摘要、概览和详情三层内容；智能体先定位目录，再按需深入读取，并留下完整检索轨迹。",
+            "prerequisites": "需要 Python 3.10 或更高版本，并通过初始化向导配置模型提供方和连接信息。",
+            "limitations": "桌面助手仍处于 Beta，仅覆盖 macOS 和 Windows x64；开源版需自行部署和运维。",
+            "license_label": "AGPL-3.0",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "405ee268d942980f61df0c6fcca7e98f394de5ea",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+                ],
+                [
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+                ],
+                [
+                  "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+              ],
+              "limitations": [
+                "github.readme:405ee268d942980f61df0c6fcca7e98f394de5ea"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1187,10 +1322,13 @@
           "publication_evidence": {
             "full_name": "volcengine/OpenViking",
             "license_spdx_id": "AGPL-3.0",
-            "readme": null,
+            "readme": {
+              "sha": "405ee268d942980f61df0c6fcca7e98f394de5ea",
+              "source_url": "https://api.github.com/repos/volcengine/OpenViking/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-20/repo-54d219fb7eec9d0e35939bfe-e63cabd8196f170675a0f9e1.png",
-              "sha256": "9e8195f0bc9a53974419515c758b02fb4ac7dd34eaf3eec2fd245de358d8fd21",
+              "sha256": "0c0e88b6b4ee9db0c5e708094e0fe59c50ffd3a333bdeadd952c7d5f56132a53",
               "width": 460,
               "height": 460
             },
@@ -1212,10 +1350,10 @@
           "html_url": "https://github.com/NousResearch/hermes-agent",
           "description": "The agent that grows with you",
           "language": "Python",
-          "stars": 233092,
-          "forks": 46632,
-          "open_issues": 33639,
-          "watchers": 233092,
+          "stars": 233279,
+          "forks": 46691,
+          "open_issues": 33699,
+          "watchers": 233279,
           "topics": [
             "ai",
             "ai-agent",
@@ -1232,8 +1370,8 @@
             "openai"
           ],
           "created_at": "2025-07-22T22:22:28Z",
-          "updated_at": "2026-08-20T02:31:40Z",
-          "pushed_at": "2026-08-20T02:31:36Z",
+          "updated_at": "2026-08-20T09:42:32Z",
+          "pushed_at": "2026-08-20T09:42:59Z",
           "daily_stars": null,
           "weekly_stars": null,
           "trending_rank_daily": null,
@@ -1242,77 +1380,91 @@
             "github_api"
           ],
           "rank": 3,
-          "score": 82.23,
-          "star_delta": 492,
-          "fork_delta": 205,
+          "score": 85.78,
+          "star_delta": 679,
+          "fork_delta": 264,
           "delta_source": "snapshot",
           "component_percentiles": {
-            "star_growth": 85.19,
-            "relative_growth": 77.78,
-            "fork_growth": 96.3,
-            "total_stars": 88.89,
+            "star_growth": 90.62,
+            "relative_growth": 81.25,
+            "fork_growth": 96.88,
+            "total_stars": 90.62,
             "activity": 100.0,
             "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
+            "one_line": "让 AI 助手从任务经验中生成和改进技能，并跨终端与聊天平台持续执行自动化工作",
             "highlights": [
-              "把复杂任务拆成连续的执行步骤",
-              "让 Agent 围绕目标推进任务流程",
-              "为工具调用和工作流扩展提供基础"
+              "从复杂任务中沉淀并迭代技能",
+              "跨会话检索记忆并建立用户模型",
+              "把定时任务结果送到多个聊天平台"
             ],
-            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "audience": "需要让个人 AI 助手长期记忆偏好、定时执行任务，或在终端与聊天软件间连续工作的用户和开发者",
             "capabilities": [
-              "把复杂任务拆成连续的执行步骤",
-              "让 Agent 围绕目标推进任务流程",
-              "为工具调用和工作流扩展提供基础"
+              "从任务经验中创建并改进技能",
+              "搜索历史会话并汇总长期记忆",
+              "设置定时任务并投递执行结果",
+              "派生隔离子智能体并行处理任务",
+              "切换模型提供方而无需修改代码"
             ],
-            "core_title": "搭建能够连续执行多步任务的 AI Agent",
-            "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "让智能体从使用中持续学习",
+            "core_summary": "它把任务经验整理成技能，在后续使用中继续改进；同时搜索历史会话、维护用户模型，并通过定时任务与子智能体把长期工作拆开执行。",
+            "prerequisites": "需准备可用的模型提供方或自有端点；安装脚本会处理 Python 3.11、Node.js、ripgrep 和 ffmpeg 等依赖。",
+            "limitations": "不同模型与外部工具通常需要对应服务凭据；Termux 的完整依赖含不兼容语音组件，需使用专用安装项。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "readme_sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "limitations": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1320,10 +1472,13 @@
           "publication_evidence": {
             "full_name": "NousResearch/hermes-agent",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-20/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
-              "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
               "width": 400,
               "height": 400
             },
