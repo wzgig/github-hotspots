@@ -1,0 +1,1341 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-22",
+  "window_start": "2026-08-21",
+  "window_end": "2026-08-22",
+  "generated_at": "2026-08-22T10:29:57+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-21 至 2026-08-22",
+  "publication": {
+    "issue_number": 42,
+    "issue_code": "D042",
+    "issue_label": "第42期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-22",
+    "manifest": "reports/daily/assets/2026-08-22/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "AprilNEA/OpenLogi",
+            "path": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.02.aprilnea--openlogi.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "path": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.03.harry0703--moneyprinterturbo.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-22/2026-08-22.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "path": "reports/daily/assets/2026-08-22/2026-08-22.ai.01.harry0703--moneyprinterturbo.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "santifer/career-ops",
+            "path": "reports/daily/assets/2026-08-22/2026-08-22.ai.02.santifer--career-ops.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "modular/modular",
+            "path": "reports/daily/assets/2026-08-22/2026-08-22.ai.03.modular--modular.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 42,
+      "issue_code": "D042",
+      "issue_label": "第42期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 229654,
+      "forks": 19630,
+      "open_issues": 374,
+      "watchers": 229654,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-08-22T02:28:50Z",
+      "pushed_at": "2026-08-21T10:56:48Z",
+      "daily_stars": 3362,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 95.84,
+      "star_delta": 3286,
+      "fork_delta": 221,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 97.22,
+        "fork_growth": 100.0,
+        "total_stars": 84.72,
+        "activity": 71.65,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "公开信息不足，暂不能准确说明 skills 的具体用途",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "公开信息不足，暂不能准确说明 skills 的具体用途",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-22/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-22/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.01.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1248194723,
+      "full_name": "AprilNEA/OpenLogi",
+      "owner": "AprilNEA",
+      "name": "OpenLogi",
+      "html_url": "https://github.com/AprilNEA/OpenLogi",
+      "description": "⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
+      "language": "Rust",
+      "stars": 13004,
+      "forks": 352,
+      "open_issues": 239,
+      "watchers": 47,
+      "topics": [
+        "dpi",
+        "gpui",
+        "hid",
+        "hidpp",
+        "local-first",
+        "logitech",
+        "logitech-mouse",
+        "logitech-options",
+        "mouse-remapping",
+        "mx-master",
+        "privacy",
+        "rust",
+        "smartshift"
+      ],
+      "created_at": "2026-05-24T10:10:36Z",
+      "updated_at": "2026-08-22T02:29:41Z",
+      "pushed_at": "2026-08-21T20:42:44Z",
+      "daily_stars": 1380,
+      "weekly_stars": null,
+      "trending_rank_daily": 4,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 90.62,
+      "star_delta": 1197,
+      "fork_delta": 31,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.61,
+        "relative_growth": 98.61,
+        "fork_growth": 86.11,
+        "total_stars": 16.67,
+        "activity": 100.0,
+        "trending_signal": 43.07
+      },
+      "summary": {
+        "one_line": "OpenLogi 的用途证据不足，需要先查看仓库 README",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "OpenLogi 的用途证据不足，需要先查看仓库 README",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-22/repo-ce2a9bf7be68aff634cef85e-136acda8af972af11c2f64ef.png",
+      "publication_evidence": {
+        "full_name": "AprilNEA/OpenLogi",
+        "license_spdx_id": "Apache-2.0",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-22/repo-ce2a9bf7be68aff634cef85e-136acda8af972af11c2f64ef.png",
+          "sha256": "dea52e2def2390c51ebe59de4f8ee6b77a89bab525a79b2dbda069dd47bb0aec",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.02.aprilnea--openlogi.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 770153867,
+      "full_name": "harry0703/MoneyPrinterTurbo",
+      "owner": "harry0703",
+      "name": "MoneyPrinterTurbo",
+      "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+      "language": "Python",
+      "stars": 113985,
+      "forks": 17295,
+      "open_issues": 43,
+      "watchers": 709,
+      "topics": [
+        "ai-video-generator",
+        "content-creation",
+        "ffmpeg",
+        "instagram-reels",
+        "llm",
+        "python",
+        "short-video",
+        "subtitles",
+        "text-to-speech",
+        "tiktok",
+        "video-automation",
+        "video-workflow",
+        "workflow-automation",
+        "youtube-shorts"
+      ],
+      "created_at": "2024-03-11T02:57:34Z",
+      "updated_at": "2026-08-22T02:28:34Z",
+      "pushed_at": "2026-08-22T00:58:57Z",
+      "daily_stars": 1201,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 90.35,
+      "star_delta": 1093,
+      "fork_delta": 186,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.22,
+        "relative_growth": 90.28,
+        "fork_growth": 97.22,
+        "total_stars": 29.17,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "目前无法从公开字段确认 MoneyPrinterTurbo 能完成哪些任务",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "目前无法从公开字段确认 MoneyPrinterTurbo 能完成哪些任务",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-22/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+      "publication_evidence": {
+        "full_name": "harry0703/MoneyPrinterTurbo",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-22/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+          "sha256": "66a44d80e1e3bcd2fc1ea0953b833eea1e4f3d05e73af18b7401394e6015d5ee",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.03.harry0703--moneyprinterturbo.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "AprilNEA/OpenLogi",
+            "path": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.02.aprilnea--openlogi.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "path": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.03.harry0703--moneyprinterturbo.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 229654,
+          "forks": 19630,
+          "open_issues": 374,
+          "watchers": 229654,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-08-22T02:28:50Z",
+          "pushed_at": "2026-08-21T10:56:48Z",
+          "daily_stars": 3362,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.84,
+          "star_delta": 3286,
+          "fork_delta": 221,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 97.22,
+            "fork_growth": 100.0,
+            "total_stars": 84.72,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 skills 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 skills 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-22/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-22/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.01.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1248194723,
+          "full_name": "AprilNEA/OpenLogi",
+          "owner": "AprilNEA",
+          "name": "OpenLogi",
+          "html_url": "https://github.com/AprilNEA/OpenLogi",
+          "description": "⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
+          "language": "Rust",
+          "stars": 13004,
+          "forks": 352,
+          "open_issues": 239,
+          "watchers": 47,
+          "topics": [
+            "dpi",
+            "gpui",
+            "hid",
+            "hidpp",
+            "local-first",
+            "logitech",
+            "logitech-mouse",
+            "logitech-options",
+            "mouse-remapping",
+            "mx-master",
+            "privacy",
+            "rust",
+            "smartshift"
+          ],
+          "created_at": "2026-05-24T10:10:36Z",
+          "updated_at": "2026-08-22T02:29:41Z",
+          "pushed_at": "2026-08-21T20:42:44Z",
+          "daily_stars": 1380,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 90.62,
+          "star_delta": 1197,
+          "fork_delta": 31,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.61,
+            "relative_growth": 98.61,
+            "fork_growth": 86.11,
+            "total_stars": 16.67,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "OpenLogi 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "OpenLogi 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-22/repo-ce2a9bf7be68aff634cef85e-136acda8af972af11c2f64ef.png",
+          "publication_evidence": {
+            "full_name": "AprilNEA/OpenLogi",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-22/repo-ce2a9bf7be68aff634cef85e-136acda8af972af11c2f64ef.png",
+              "sha256": "dea52e2def2390c51ebe59de4f8ee6b77a89bab525a79b2dbda069dd47bb0aec",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.02.aprilnea--openlogi.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 770153867,
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "owner": "harry0703",
+          "name": "MoneyPrinterTurbo",
+          "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
+          "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+          "language": "Python",
+          "stars": 113985,
+          "forks": 17295,
+          "open_issues": 43,
+          "watchers": 709,
+          "topics": [
+            "ai-video-generator",
+            "content-creation",
+            "ffmpeg",
+            "instagram-reels",
+            "llm",
+            "python",
+            "short-video",
+            "subtitles",
+            "text-to-speech",
+            "tiktok",
+            "video-automation",
+            "video-workflow",
+            "workflow-automation",
+            "youtube-shorts"
+          ],
+          "created_at": "2024-03-11T02:57:34Z",
+          "updated_at": "2026-08-22T02:28:34Z",
+          "pushed_at": "2026-08-22T00:58:57Z",
+          "daily_stars": 1201,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 90.35,
+          "star_delta": 1093,
+          "fork_delta": 186,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.22,
+            "relative_growth": 90.28,
+            "fork_growth": 97.22,
+            "total_stars": 29.17,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 MoneyPrinterTurbo 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 MoneyPrinterTurbo 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-22/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+          "publication_evidence": {
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-22/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+              "sha256": "66a44d80e1e3bcd2fc1ea0953b833eea1e4f3d05e73af18b7401394e6015d5ee",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-22/2026-08-22.comprehensive.03.harry0703--moneyprinterturbo.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-22/2026-08-22.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "path": "reports/daily/assets/2026-08-22/2026-08-22.ai.01.harry0703--moneyprinterturbo.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "santifer/career-ops",
+            "path": "reports/daily/assets/2026-08-22/2026-08-22.ai.02.santifer--career-ops.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "modular/modular",
+            "path": "reports/daily/assets/2026-08-22/2026-08-22.ai.03.modular--modular.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 770153867,
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "owner": "harry0703",
+          "name": "MoneyPrinterTurbo",
+          "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
+          "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+          "language": "Python",
+          "stars": 113985,
+          "forks": 17295,
+          "open_issues": 43,
+          "watchers": 709,
+          "topics": [
+            "ai-video-generator",
+            "content-creation",
+            "ffmpeg",
+            "instagram-reels",
+            "llm",
+            "python",
+            "short-video",
+            "subtitles",
+            "text-to-speech",
+            "tiktok",
+            "video-automation",
+            "video-workflow",
+            "workflow-automation",
+            "youtube-shorts"
+          ],
+          "created_at": "2024-03-11T02:57:34Z",
+          "updated_at": "2026-08-22T02:28:34Z",
+          "pushed_at": "2026-08-22T00:58:57Z",
+          "daily_stars": 1201,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.2,
+          "star_delta": 1093,
+          "fork_delta": 186,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 88.89,
+            "fork_growth": 96.3,
+            "total_stars": 25.93,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-22/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+          "publication_evidence": {
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-22/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+              "sha256": "66a44d80e1e3bcd2fc1ea0953b833eea1e4f3d05e73af18b7401394e6015d5ee",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-22/2026-08-22.ai.01.harry0703--moneyprinterturbo.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1201476594,
+          "full_name": "santifer/career-ops",
+          "owner": "santifer",
+          "name": "career-ops",
+          "html_url": "https://github.com/santifer/career-ops",
+          "description": "Open-source AI job search: scan job portals, evaluate listings with a structured A-F rubric into a 1.0-5.0 score, tailor your CV, track applications — runs locally in your AI coding CLI (Claude Code, Codex, OpenCode, Antigravity…)",
+          "language": "JavaScript",
+          "stars": 67479,
+          "forks": 12872,
+          "open_issues": 277,
+          "watchers": 259,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "anthropic",
+            "ats",
+            "automation",
+            "beginner-friendly",
+            "career",
+            "careerops",
+            "claude",
+            "claude-code",
+            "cli",
+            "first-timers-only",
+            "golang",
+            "good-first-issue",
+            "interview-prep",
+            "job-application",
+            "job-hunting",
+            "job-search",
+            "open-source",
+            "resume"
+          ],
+          "created_at": "2026-04-04T18:21:18Z",
+          "updated_at": "2026-08-22T02:26:01Z",
+          "pushed_at": "2026-08-21T23:29:22Z",
+          "daily_stars": 921,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.43,
+          "star_delta": 848,
+          "fork_delta": 57,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.3,
+            "relative_growth": 92.59,
+            "fork_growth": 92.59,
+            "total_stars": 18.52,
+            "activity": 100.0,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "想要把重复的开发操作整理成自动化流程，可以用 career-ops；它能减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "想要把重复的开发操作整理成自动化流程，可以用 career-ops；它能减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-22/repo-cecaaf8382fe4e83b60d77cf-98fb2235b5161b0f6e57c265.png",
+          "publication_evidence": {
+            "full_name": "santifer/career-ops",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-22/repo-cecaaf8382fe4e83b60d77cf-98fb2235b5161b0f6e57c265.png",
+              "sha256": "53ec06f441915adf8b0ec8d37645cb0db79979de3920fe24de09dccdf3643e05",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-22/2026-08-22.ai.02.santifer--career-ops.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 634043200,
+          "full_name": "modular/modular",
+          "owner": "modular",
+          "name": "modular",
+          "html_url": "https://github.com/modular/modular",
+          "description": "The Modular Platform (includes MAX & Mojo)",
+          "language": "Mojo",
+          "stars": 28699,
+          "forks": 3054,
+          "open_issues": 1115,
+          "watchers": 272,
+          "topics": [
+            "ai",
+            "language",
+            "machine-learning",
+            "max",
+            "modular",
+            "mojo",
+            "programming-language"
+          ],
+          "created_at": "2023-04-28T22:17:24Z",
+          "updated_at": "2026-08-22T02:23:09Z",
+          "pushed_at": "2026-08-21T06:34:12Z",
+          "daily_stars": 913,
+          "weekly_stars": null,
+          "trending_rank_daily": 10,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 84.35,
+          "star_delta": 796,
+          "fork_delta": 55,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.59,
+            "relative_growth": 100.0,
+            "fork_growth": 88.89,
+            "total_stars": 11.11,
+            "activity": 71.65,
+            "trending_signal": 28.91
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 modular 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 modular 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-22/repo-e08abae8a17d9776dc170549-5daf2bc5bf1dba2e2b6db8e9.png",
+          "publication_evidence": {
+            "full_name": "modular/modular",
+            "license_spdx_id": "NOASSERTION",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-22/repo-e08abae8a17d9776dc170549-5daf2bc5bf1dba2e2b6db8e9.png",
+              "sha256": "f5e1fd747ab408c43cdd374260af689131aa0023b1bffef7cbc72ac3c9000f20",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-22/2026-08-22.ai.03.modular--modular.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
