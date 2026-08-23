@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "562dce1f55ff50f1885fe06dd2e4a0f3ca5a8fe9e3541833c02312a8b650a5b0",
+  "checklist_sha256": "8eb9c3583d5dd1fe10313c0cbd0748ee94c2dabb6952e1fa6717c34212f93107",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-08-24",
+  "generated_at": "2026-08-24T07:33:47.942258+08:00",
+  "issue": {
+    "number": 44,
+    "code": "D044",
+    "stem": "D044-2026-08-24",
+    "label": "第44期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-08-24.json",
+    "report_sha256": "ecfd5e059c95afc8059276dd834df9f657cf9fe381379229ca049fc199a780cc",
+    "poster_manifest": "reports/daily/assets/2026-08-24/manifest.json",
+    "poster_manifest_sha256": "19a4a26dadcf672529a158e478d8ce555b2257a454d6183db04febdded6bf198",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D044-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "007dd87183a23d35245c6027b3e87bc4f6176c7d18f0ecad0225f126efd66408",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 330,
+      "caption_sha256": "3f508f2fa3d0faaf9296bccb0e8680234c7c639664d93f0297d9937bfc54eca8",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "5b8b995d7440bad5c21c5020a906ceaa9878377811751f11c76629404dfb0ebd",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.cover.png",
+          "sha256": "c7eb744d32983fcc83f3c3d279ef29987b4058830f2ee582de34b247e4e2f3dd",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.01.openai--codex.png",
+          "sha256": "6234ab1d308e1722e40dccf04cc61df17bb73853424c0fecac5840705396d35d",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "openai/codex",
+          "publication_path": "images/02-rank-01-openai-codex.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.02.basecamp--omarchy.png",
+          "sha256": "30b03ffca1c32627769782b11983f16a39b227f6f7d2d798b5ebf7c181d1c286",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "basecamp/omarchy",
+          "publication_path": "images/03-rank-02-basecamp-omarchy.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.03.mattpocock--skills.png",
+          "sha256": "621ee6a9b3e51abe25168f13ebcac01fc06637265f5e295f1db3cb8167efda19",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "mattpocock/skills",
+          "publication_path": "images/04-rank-03-mattpocock-skills.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D044-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "2fefa978fc644ba64664cb1687692fa1725d1de211001128dcba9f3e09434278",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 333,
+      "caption_sha256": "effbec3e3f1fcd6e39199c1f540e6fab3f305436917b562a8804e04f4d4d3724",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "d1ea7a330fd891f2e389dbc15e74e45ec00a3ebba9f26310ddc4d48f530fe903",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-24/2026-08-24.ai.cover.png",
+          "sha256": "32617aeac1f411eeeea87a528369c6d4e3a83fea0dc1c1a7b7e3ab7f98d1bd15",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-24/2026-08-24.ai.01.nousresearch--hermes-agent.png",
+          "sha256": "82f07062b09f36e1318f960bf5d50a826d5427eeb8ad5517136ae8a858ae5060",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/02-rank-01-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-24/2026-08-24.ai.02.harry0703--moneyprinterturbo.png",
+          "sha256": "c08004c24bfe63c6bd5de40a6e2b686ffc53c0ff6ac4bed0601fd6b0f124fdef",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "publication_path": "images/03-rank-02-harry0703-moneyprinterturbo.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-24/2026-08-24.ai.03.comfy-org--comfyui.png",
+          "sha256": "6b28c41087ac03ab2873957725e775df6b16c960932748dcf872510eb0988ea9",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "Comfy-Org/ComfyUI",
+          "publication_path": "images/04-rank-03-comfy-org-comfyui.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-08-24",
+    "revision": "562dce1f55ff",
+    "image_policy": "repository-source-reference"
+  }
+}

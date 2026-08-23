@@ -1,0 +1,1420 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-24",
+  "window_start": "2026-08-23",
+  "window_end": "2026-08-24",
+  "generated_at": "2026-08-24T07:31:15+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-23 至 2026-08-24",
+  "publication": {
+    "issue_number": 44,
+    "issue_code": "D044",
+    "issue_label": "第44期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-24",
+    "manifest": "reports/daily/assets/2026-08-24/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "openai/codex",
+            "path": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.01.openai--codex.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "basecamp/omarchy",
+            "path": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.02.basecamp--omarchy.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.03.mattpocock--skills.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-24/2026-08-24.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-24/2026-08-24.ai.01.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "path": "reports/daily/assets/2026-08-24/2026-08-24.ai.02.harry0703--moneyprinterturbo.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "Comfy-Org/ComfyUI",
+            "path": "reports/daily/assets/2026-08-24/2026-08-24.ai.03.comfy-org--comfyui.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 44,
+      "issue_code": "D044",
+      "issue_label": "第44期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 965415649,
+      "full_name": "openai/codex",
+      "owner": "openai",
+      "name": "codex",
+      "html_url": "https://github.com/openai/codex",
+      "description": "Lightweight coding agent that runs in your terminal",
+      "language": "Rust",
+      "stars": 115115,
+      "forks": 17554,
+      "open_issues": 13566,
+      "watchers": 115115,
+      "topics": [],
+      "created_at": "2025-04-13T05:37:54Z",
+      "updated_at": "2026-08-23T23:30:27Z",
+      "pushed_at": "2026-08-23T23:28:27Z",
+      "daily_stars": 2729,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 96.47,
+      "star_delta": 1547,
+      "fork_delta": 175,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 95.59,
+        "fork_growth": 100.0,
+        "total_stars": 47.06,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "在电脑本地运行的终端编码代理，为需要命令行工作流的用户提供代码协作入口",
+        "highlights": [
+          "在本机终端启动编码代理",
+          "提供安装器、包管理器与二进制包",
+          "支持 ChatGPT 登录或 API Key 认证"
+        ],
+        "audience": "习惯在终端处理代码，并希望通过 ChatGPT 方案或 API Key 使用编码代理的开发者",
+        "capabilities": [
+          "运行本地编码代理进入终端会话",
+          "安装到 macOS、Linux 或 Windows",
+          "通过 npm 或 Homebrew 部署工具",
+          "登录 ChatGPT 账户开始使用",
+          "改用 API Key 完成认证"
+        ],
+        "core_title": "本机终端里的编码代理",
+        "core_summary": "它在电脑本地通过终端运行；若更偏好编辑器、桌面应用或云端代理，README 分别指向对应形态。",
+        "prerequisites": "需先在本机安装并运行 Codex CLI；使用时登录 ChatGPT，或另行配置 API Key。",
+        "limitations": "API Key 方式需要额外配置；README 列出的直接下载二进制仅覆盖 macOS 与 Linux。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "06b02fced7db972084bf0188cb03f60375b51c1c",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+          ],
+          "highlights": [
+            [
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+            ],
+            [
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+            ],
+            [
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+            ]
+          ],
+          "audience": [
+            "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+          ],
+          "capabilities": [
+            [
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+            ],
+            [
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+            ],
+            [
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+            ],
+            [
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+            ],
+            [
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+            ]
+          ],
+          "core_title": [
+            "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+          ],
+          "core_summary": [
+            "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+          ],
+          "prerequisites": [
+            "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+          ],
+          "limitations": [
+            "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-24/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+      "publication_evidence": {
+        "full_name": "openai/codex",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "06b02fced7db972084bf0188cb03f60375b51c1c",
+          "source_url": "https://api.github.com/repos/openai/codex/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-24/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+          "sha256": "947cc8abe444e5a9a1b34c2f8bc556939ffa4452097de8498e39fb860ee66761",
+          "width": 200,
+          "height": 200
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.01.openai--codex.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 994093166,
+      "full_name": "basecamp/omarchy",
+      "owner": "basecamp",
+      "name": "omarchy",
+      "html_url": "https://github.com/basecamp/omarchy",
+      "description": "Beautiful, Modern & Opinionated Linux",
+      "language": "Shell",
+      "stars": 29089,
+      "forks": 2958,
+      "open_issues": 1345,
+      "watchers": 151,
+      "topics": [],
+      "created_at": "2025-06-01T07:26:22Z",
+      "updated_at": "2026-08-23T23:25:22Z",
+      "pushed_at": "2026-08-23T22:31:50Z",
+      "daily_stars": 814,
+      "weekly_stars": null,
+      "trending_rank_daily": 4,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 88.19,
+      "star_delta": 725,
+      "fork_delta": 67,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.12,
+        "relative_growth": 94.12,
+        "fork_growth": 94.12,
+        "total_stars": 14.71,
+        "activity": 100.0,
+        "trending_signal": 43.07
+      },
+      "summary": {
+        "one_line": "提供一套强调外观、现代体验与明确取舍的 Linux 发行版，并用手册覆盖日常使用与配置",
+        "highlights": [
+          "用分章节手册讲解桌面基本操作",
+          "覆盖终端、编辑器、浏览器与开发工具",
+          "整理硬件、网络、主题与系统配置"
+        ],
+        "audience": "想从 Mac 或 Windows 转入 Linux，并需要导航、应用与系统配置手册的用户",
+        "capabilities": [
+          "查阅导航、顶栏与快捷键用法",
+          "配置主题、字体、背景和提示符",
+          "使用剪贴板、听写与文字提取功能",
+          "了解终端、Neovim 与开发工具",
+          "处理更新、快照、双启动与故障排查"
+        ],
+        "core_title": "发行版与完整使用手册",
+        "core_summary": "仓库既给出 Omarchy 的发行版定位，也把基础操作、应用、系统配置和故障排查整理为分章节手册。",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "c7e541a2d59ce796e48daa38bd9d74f2cc55705d",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+          ],
+          "highlights": [
+            [
+              "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+            ],
+            [
+              "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+            ],
+            [
+              "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+            ]
+          ],
+          "audience": [
+            "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+          ],
+          "capabilities": [
+            [
+              "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+            ],
+            [
+              "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+            ],
+            [
+              "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+            ],
+            [
+              "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+            ],
+            [
+              "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+            ]
+          ],
+          "core_title": [
+            "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+          ],
+          "core_summary": [
+            "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-24/repo-50530e6933de1cb3135bf2e6-c2050ef9b4ecf6b733c2af7b.png",
+      "publication_evidence": {
+        "full_name": "basecamp/omarchy",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "c7e541a2d59ce796e48daa38bd9d74f2cc55705d",
+          "source_url": "https://api.github.com/repos/basecamp/omarchy/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-24/repo-50530e6933de1cb3135bf2e6-c2050ef9b4ecf6b733c2af7b.png",
+          "sha256": "72a6b682f494f251d3c96be2dffb9f461ce80b90004c9232ffc366d4e25b8189",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.02.basecamp--omarchy.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 233801,
+      "forks": 19941,
+      "open_issues": 389,
+      "watchers": 1319,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-08-23T23:21:37Z",
+      "pushed_at": "2026-08-21T10:56:48Z",
+      "daily_stars": 2448,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 87.95,
+      "star_delta": 1518,
+      "fork_delta": 119,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.53,
+        "relative_growth": 91.18,
+        "fork_growth": 97.06,
+        "total_stars": 91.18,
+        "activity": 36.79,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "把软件工程方法拆成小型、可组合的代理技能，让用户按项目挑选、改写并串成工作流",
+        "highlights": [
+          "用追问流程减少人与代理的需求错位",
+          "把领域术语写入 CONTEXT.md 与 ADR",
+          "用测试、调试和代码审查形成反馈闭环"
+        ],
+        "audience": "使用 Claude Code、Codex 或其他编码代理，希望保留流程控制并规范需求、测试和架构工作的工程人员",
+        "capabilities": [
+          "先提问澄清需求并沉淀共享术语",
+          "把讨论整理成规格与可执行工单",
+          "按红绿重构循环推进测试驱动开发",
+          "用分阶段诊断流程定位复杂缺陷",
+          "扫描代码库并列出架构深化候选"
+        ],
+        "core_title": "小技能组合成工程流程",
+        "core_summary": "技能分为用户触发与模型触发两类：前者编排流程，后者提供可复用纪律，可按任务组合并改成项目自己的做法。",
+        "prerequisites": "安装后需在每个仓库运行一次 /setup-matt-pocock-skills，并选择问题跟踪器、标签和文档目录。",
+        "limitations": "Claude Code 插件是托管只读包；skills.sh 会复制可编辑文件，同时安装两种方式会产生重复技能。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "highlights": [
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ]
+          ],
+          "audience": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "capabilities": [
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ]
+          ],
+          "core_title": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "core_summary": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "prerequisites": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "limitations": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-24/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-24/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.03.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "openai/codex",
+            "path": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.01.openai--codex.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "basecamp/omarchy",
+            "path": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.02.basecamp--omarchy.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.03.mattpocock--skills.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 965415649,
+          "full_name": "openai/codex",
+          "owner": "openai",
+          "name": "codex",
+          "html_url": "https://github.com/openai/codex",
+          "description": "Lightweight coding agent that runs in your terminal",
+          "language": "Rust",
+          "stars": 115115,
+          "forks": 17554,
+          "open_issues": 13566,
+          "watchers": 115115,
+          "topics": [],
+          "created_at": "2025-04-13T05:37:54Z",
+          "updated_at": "2026-08-23T23:30:27Z",
+          "pushed_at": "2026-08-23T23:28:27Z",
+          "daily_stars": 2729,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 96.47,
+          "star_delta": 1547,
+          "fork_delta": 175,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 95.59,
+            "fork_growth": 100.0,
+            "total_stars": 47.06,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "在电脑本地运行的终端编码代理，为需要命令行工作流的用户提供代码协作入口",
+            "highlights": [
+              "在本机终端启动编码代理",
+              "提供安装器、包管理器与二进制包",
+              "支持 ChatGPT 登录或 API Key 认证"
+            ],
+            "audience": "习惯在终端处理代码，并希望通过 ChatGPT 方案或 API Key 使用编码代理的开发者",
+            "capabilities": [
+              "运行本地编码代理进入终端会话",
+              "安装到 macOS、Linux 或 Windows",
+              "通过 npm 或 Homebrew 部署工具",
+              "登录 ChatGPT 账户开始使用",
+              "改用 API Key 完成认证"
+            ],
+            "core_title": "本机终端里的编码代理",
+            "core_summary": "它在电脑本地通过终端运行；若更偏好编辑器、桌面应用或云端代理，README 分别指向对应形态。",
+            "prerequisites": "需先在本机安装并运行 Codex CLI；使用时登录 ChatGPT，或另行配置 API Key。",
+            "limitations": "API Key 方式需要额外配置；README 列出的直接下载二进制仅覆盖 macOS 与 Linux。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "06b02fced7db972084bf0188cb03f60375b51c1c",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+              ],
+              "highlights": [
+                [
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+                ],
+                [
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+                ],
+                [
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+                ]
+              ],
+              "audience": [
+                "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+                ],
+                [
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+                ],
+                [
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+                ],
+                [
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+                ],
+                [
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+                ]
+              ],
+              "core_title": [
+                "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+              ],
+              "core_summary": [
+                "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+              ],
+              "prerequisites": [
+                "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+              ],
+              "limitations": [
+                "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-24/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+          "publication_evidence": {
+            "full_name": "openai/codex",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "06b02fced7db972084bf0188cb03f60375b51c1c",
+              "source_url": "https://api.github.com/repos/openai/codex/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-24/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+              "sha256": "947cc8abe444e5a9a1b34c2f8bc556939ffa4452097de8498e39fb860ee66761",
+              "width": 200,
+              "height": 200
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.01.openai--codex.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 994093166,
+          "full_name": "basecamp/omarchy",
+          "owner": "basecamp",
+          "name": "omarchy",
+          "html_url": "https://github.com/basecamp/omarchy",
+          "description": "Beautiful, Modern & Opinionated Linux",
+          "language": "Shell",
+          "stars": 29089,
+          "forks": 2958,
+          "open_issues": 1345,
+          "watchers": 151,
+          "topics": [],
+          "created_at": "2025-06-01T07:26:22Z",
+          "updated_at": "2026-08-23T23:25:22Z",
+          "pushed_at": "2026-08-23T22:31:50Z",
+          "daily_stars": 814,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.19,
+          "star_delta": 725,
+          "fork_delta": 67,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.12,
+            "relative_growth": 94.12,
+            "fork_growth": 94.12,
+            "total_stars": 14.71,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "提供一套强调外观、现代体验与明确取舍的 Linux 发行版，并用手册覆盖日常使用与配置",
+            "highlights": [
+              "用分章节手册讲解桌面基本操作",
+              "覆盖终端、编辑器、浏览器与开发工具",
+              "整理硬件、网络、主题与系统配置"
+            ],
+            "audience": "想从 Mac 或 Windows 转入 Linux，并需要导航、应用与系统配置手册的用户",
+            "capabilities": [
+              "查阅导航、顶栏与快捷键用法",
+              "配置主题、字体、背景和提示符",
+              "使用剪贴板、听写与文字提取功能",
+              "了解终端、Neovim 与开发工具",
+              "处理更新、快照、双启动与故障排查"
+            ],
+            "core_title": "发行版与完整使用手册",
+            "core_summary": "仓库既给出 Omarchy 的发行版定位，也把基础操作、应用、系统配置和故障排查整理为分章节手册。",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "c7e541a2d59ce796e48daa38bd9d74f2cc55705d",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+              ],
+              "highlights": [
+                [
+                  "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+                ],
+                [
+                  "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+                ],
+                [
+                  "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+                ]
+              ],
+              "audience": [
+                "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+                ],
+                [
+                  "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+                ],
+                [
+                  "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+                ],
+                [
+                  "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+                ],
+                [
+                  "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+                ]
+              ],
+              "core_title": [
+                "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+              ],
+              "core_summary": [
+                "github.readme:c7e541a2d59ce796e48daa38bd9d74f2cc55705d"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-24/repo-50530e6933de1cb3135bf2e6-c2050ef9b4ecf6b733c2af7b.png",
+          "publication_evidence": {
+            "full_name": "basecamp/omarchy",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "c7e541a2d59ce796e48daa38bd9d74f2cc55705d",
+              "source_url": "https://api.github.com/repos/basecamp/omarchy/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-24/repo-50530e6933de1cb3135bf2e6-c2050ef9b4ecf6b733c2af7b.png",
+              "sha256": "72a6b682f494f251d3c96be2dffb9f461ce80b90004c9232ffc366d4e25b8189",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.02.basecamp--omarchy.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 233801,
+          "forks": 19941,
+          "open_issues": 389,
+          "watchers": 1319,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-08-23T23:21:37Z",
+          "pushed_at": "2026-08-21T10:56:48Z",
+          "daily_stars": 2448,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 87.95,
+          "star_delta": 1518,
+          "fork_delta": 119,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.53,
+            "relative_growth": 91.18,
+            "fork_growth": 97.06,
+            "total_stars": 91.18,
+            "activity": 36.79,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把软件工程方法拆成小型、可组合的代理技能，让用户按项目挑选、改写并串成工作流",
+            "highlights": [
+              "用追问流程减少人与代理的需求错位",
+              "把领域术语写入 CONTEXT.md 与 ADR",
+              "用测试、调试和代码审查形成反馈闭环"
+            ],
+            "audience": "使用 Claude Code、Codex 或其他编码代理，希望保留流程控制并规范需求、测试和架构工作的工程人员",
+            "capabilities": [
+              "先提问澄清需求并沉淀共享术语",
+              "把讨论整理成规格与可执行工单",
+              "按红绿重构循环推进测试驱动开发",
+              "用分阶段诊断流程定位复杂缺陷",
+              "扫描代码库并列出架构深化候选"
+            ],
+            "core_title": "小技能组合成工程流程",
+            "core_summary": "技能分为用户触发与模型触发两类：前者编排流程，后者提供可复用纪律，可按任务组合并改成项目自己的做法。",
+            "prerequisites": "安装后需在每个仓库运行一次 /setup-matt-pocock-skills，并选择问题跟踪器、标签和文档目录。",
+            "limitations": "Claude Code 插件是托管只读包；skills.sh 会复制可编辑文件，同时安装两种方式会产生重复技能。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ]
+              ],
+              "audience": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "core_summary": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "prerequisites": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "limitations": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-24/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-24/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-24/2026-08-24.comprehensive.03.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-24/2026-08-24.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-24/2026-08-24.ai.01.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "path": "reports/daily/assets/2026-08-24/2026-08-24.ai.02.harry0703--moneyprinterturbo.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "Comfy-Org/ComfyUI",
+            "path": "reports/daily/assets/2026-08-24/2026-08-24.ai.03.comfy-org--comfyui.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 234956,
+          "forks": 47332,
+          "open_issues": 35166,
+          "watchers": 234956,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "nous-research",
+            "openai"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-08-23T23:29:32Z",
+          "pushed_at": "2026-08-23T23:31:09Z",
+          "daily_stars": 519,
+          "weekly_stars": null,
+          "trending_rank_daily": 18,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.51,
+          "star_delta": 523,
+          "fork_delta": 157,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.67,
+            "relative_growth": 86.67,
+            "fork_growth": 100.0,
+            "total_stars": 93.33,
+            "activity": 100.0,
+            "trending_signal": 23.54
+          },
+          "summary": {
+            "one_line": "让 AI Agent 从任务经历中沉淀记忆与技能，并跨终端和聊天平台持续工作",
+            "highlights": [
+              "从复杂任务中创建技能，并在使用中改进",
+              "跨会话搜索记录，持续积累用户与任务上下文",
+              "调度定时任务，并把结果送到多个消息平台"
+            ],
+            "audience": "适合需要长期运行个人智能体、跨平台处理任务，或并行编排多个子任务的开发者",
+            "capabilities": [
+              "创建并持续改进任务技能",
+              "搜索历史会话并总结相关上下文",
+              "切换模型提供商而无需修改代码",
+              "派生隔离子智能体并行处理任务",
+              "用自然语言安排定时自动化任务"
+            ],
+            "core_title": "从经历中形成可复用技能",
+            "core_summary": "它把会话记忆、技能创建、使用中改进和跨会话检索连成学习闭环，让智能体不只执行当前指令，还能把复杂任务经验留给后续工作。",
+            "prerequisites": "需配置模型提供商；网页搜索、图像生成、语音等工具可能需要相应账号或 API Key",
+            "limitations": "Termux 的完整依赖包含不兼容的语音组件；消息平台使用前需配置并启动网关",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "highlights": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "audience": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "core_title": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "core_summary": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "prerequisites": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "limitations": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-24/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-24/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-24/2026-08-24.ai.01.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 770153867,
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "owner": "harry0703",
+          "name": "MoneyPrinterTurbo",
+          "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
+          "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+          "language": "Python",
+          "stars": 115278,
+          "forks": 17512,
+          "open_issues": 18,
+          "watchers": 115278,
+          "topics": [
+            "ai-video-generator",
+            "content-creation",
+            "ffmpeg",
+            "instagram-reels",
+            "llm",
+            "python",
+            "short-video",
+            "subtitles",
+            "text-to-speech",
+            "tiktok",
+            "video-automation",
+            "video-workflow",
+            "workflow-automation",
+            "youtube-shorts"
+          ],
+          "created_at": "2024-03-11T02:57:34Z",
+          "updated_at": "2026-08-23T23:30:48Z",
+          "pushed_at": "2026-08-23T10:12:05Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 87.83,
+          "star_delta": 571,
+          "fork_delta": 99,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 93.33,
+            "fork_growth": 96.67,
+            "total_stars": 46.67,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "输入视频主题或关键词，自动完成脚本、素材、配音、字幕与短视频合成",
+            "highlights": [
+              "从主题生成脚本，也允许直接使用自定义脚本",
+              "组合在线、本地或 AI 生成的画面素材",
+              "成片可自动上传到多个短视频平台"
+            ],
+            "audience": "适合需要批量制作解说类短视频，并希望通过网页、接口或命令行控制流程的内容团队与开发者",
+            "capabilities": [
+              "生成多语言视频脚本",
+              "匹配本地或在线高清素材",
+              "合成配音、字幕和背景音乐",
+              "批量生成多个候选视频",
+              "自动发布到短视频平台"
+            ],
+            "core_title": "把主题变成完整短视频",
+            "core_summary": "工作流从主题或关键词出发，依次生成脚本、提炼素材词、匹配或生成画面，再加入语音、字幕和音乐，最终输出可挑选或发布的成片。",
+            "prerequisites": "本地部署需要 Python 3.11 或更高版本，并配置所用模型、素材源或语音服务的凭据",
+            "limitations": "GPU 不是必需项，但本地转录和批量处理会更依赖硬件；AI Agent 生成方式目前支持 macOS 和 Windows",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "6099b70b3b693ad8e70d796e99726f68dde077b8",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+              ],
+              "highlights": [
+                [
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+                ],
+                [
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+                ],
+                [
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+                ]
+              ],
+              "audience": [
+                "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+                ],
+                [
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+                ],
+                [
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+                ],
+                [
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+                ],
+                [
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+                ]
+              ],
+              "core_title": [
+                "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+              ],
+              "core_summary": [
+                "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+              ],
+              "prerequisites": [
+                "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+              ],
+              "limitations": [
+                "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-24/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+          "publication_evidence": {
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "6099b70b3b693ad8e70d796e99726f68dde077b8",
+              "source_url": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-24/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+              "sha256": "8f9ca021ffca2773fe9909bce688155f9d07586336ccc7c0e835fe1c4301b6b4",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-24/2026-08-24.ai.02.harry0703--moneyprinterturbo.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 589831718,
+          "full_name": "Comfy-Org/ComfyUI",
+          "owner": "Comfy-Org",
+          "name": "ComfyUI",
+          "html_url": "https://github.com/Comfy-Org/ComfyUI",
+          "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+          "language": "Python",
+          "stars": 129360,
+          "forks": 15254,
+          "open_issues": 4674,
+          "watchers": 129360,
+          "topics": [
+            "ai",
+            "comfy",
+            "comfyui",
+            "python",
+            "pytorch",
+            "stable-diffusion"
+          ],
+          "created_at": "2023-01-17T03:15:56Z",
+          "updated_at": "2026-08-23T23:30:43Z",
+          "pushed_at": "2026-08-23T20:02:12Z",
+          "daily_stars": 179,
+          "weekly_stars": null,
+          "trending_rank_daily": 17,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 80.53,
+          "star_delta": 342,
+          "fork_delta": 33,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 83.33,
+            "relative_growth": 80.0,
+            "fork_growth": 90.0,
+            "total_stars": 53.33,
+            "activity": 100.0,
+            "trending_signal": 23.98
+          },
+          "summary": {
+            "one_line": "用可视化节点拼装图像、视频、音频与三维生成流程，并复用到应用接口",
+            "highlights": [
+              "用节点图精细控制模型、参数和处理顺序",
+              "只重跑发生变化及受影响的图节点",
+              "保存工作流，并从生成媒体中恢复参数与种子"
+            ],
+            "audience": "适合需要细调生成链路的视觉创作者，以及把可复用 AI 工作流接入应用的开发者",
+            "capabilities": [
+              "拖拽节点搭建多媒体生成流程",
+              "保存并复用子图和工作流模板",
+              "局部重跑发生变化的处理节点",
+              "加载多类模型组件与控制模块",
+              "通过本地 API 接入其他应用"
+            ],
+            "core_title": "节点图驱动的生成工作流",
+            "core_summary": "每个节点负责模型加载、条件控制或媒体处理，连线决定数据流向；修改局部后只执行变化节点及其依赖，复杂流程还能保存、复用或封装成简化界面。",
+            "prerequisites": "本地手动安装需准备 Python、PyTorch、项目依赖，并把模型文件放入对应目录",
+            "limitations": "稳定标签之外的提交可能不稳定并破坏自定义节点；部分 API 节点为付费可选项",
+            "license_label": "GPL-3.0",
+            "license_restrictions": "",
+            "readme_sha": "118206d1e96a302eb18ed73bd19f58033e9253c6",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+              ],
+              "highlights": [
+                [
+                  "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+                ],
+                [
+                  "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+                ],
+                [
+                  "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+                ]
+              ],
+              "audience": [
+                "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+                ],
+                [
+                  "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+                ],
+                [
+                  "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+                ],
+                [
+                  "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+                ],
+                [
+                  "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+                ]
+              ],
+              "core_title": [
+                "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+              ],
+              "core_summary": [
+                "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+              ],
+              "prerequisites": [
+                "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+              ],
+              "limitations": [
+                "github.readme:118206d1e96a302eb18ed73bd19f58033e9253c6"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-24/repo-53c16fc7c5624952c766f1d9-28a5bb41a9a90560d4909493.png",
+          "publication_evidence": {
+            "full_name": "Comfy-Org/ComfyUI",
+            "license_spdx_id": "GPL-3.0",
+            "readme": {
+              "sha": "118206d1e96a302eb18ed73bd19f58033e9253c6",
+              "source_url": "https://api.github.com/repos/Comfy-Org/ComfyUI/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-24/repo-53c16fc7c5624952c766f1d9-28a5bb41a9a90560d4909493.png",
+              "sha256": "332683e5eca497eab51dea27121c80e0d53ff56b4738e00d92143d59a04b72b3",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "GPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-24/2026-08-24.ai.03.comfy-org--comfyui.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
