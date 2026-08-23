@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "9c051978042b209d20a686acd9dfc04099eaac935b0b98b796901503b0e7f660",
+  "checklist_sha256": "22ef85f978a0ca4a138ebc60c00ea865af592a8fa991ee751b11ffd9c457875e",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-08-23",
+  "generated_at": "2026-08-23T18:43:24.352744+08:00",
+  "issue": {
+    "number": 43,
+    "code": "D043",
+    "stem": "D043-2026-08-23",
+    "label": "第43期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-08-23.json",
+    "report_sha256": "25a418af800398a8ebc55b27065d2a117df902570571cee9f4dfea7703dca7bb",
+    "poster_manifest": "reports/daily/assets/2026-08-23/manifest.json",
+    "poster_manifest_sha256": "fc2f2f7397ca8d06fdb4d76a54534426792cb3ee597f8856351ee426244cf8b7",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D043-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "806f3af613e3be01f0011307644a73ff6659997df191404869ea2f8edcbfeb1b",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 328,
+      "caption_sha256": "de0cb36244239d6805e5eaabcc0c8a54bd6e95a12d99cb4b1bf992f093fc8480",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "4a326e08b4aa147abbf0c6b7299e9febe1fa36ccae9a3b04142f42a421664c3f",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.cover.png",
+          "sha256": "ce18b12433d35598c4644e94d231eea287ab7ef9e27a8892170099d55075c3a0",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.01.mattpocock--skills.png",
+          "sha256": "bd6f78a4549597ba34c214d5d554992d6e25e650bf5b32668fafc2a0f2b8285e",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "mattpocock/skills",
+          "publication_path": "images/02-rank-01-mattpocock-skills.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.02.aprilnea--openlogi.png",
+          "sha256": "9cf00220ded0b1d48cc31273c666fd2f573a1bc512099b8166e8be0fa1d9ab79",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "AprilNEA/OpenLogi",
+          "publication_path": "images/03-rank-02-aprilnea-openlogi.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.03.openai--codex.png",
+          "sha256": "42a3b39fa91e38d1a810604c78507ac7bf105dba8a4072d1fa5309eb763fcf6c",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "openai/codex",
+          "publication_path": "images/04-rank-03-openai-codex.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D043-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "5f0cfa8887619dd91f98c8457357c3011757eb3600290ca8d7473cd5ceb0c258",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 345,
+      "caption_sha256": "1095a16a8e7c4b0252063e6b95e193ec014a0b7571fdc05f9938cf8e05a01031",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "6b59364ba4a557f251f325d3c0fbd6d42427795158bc6beeed929807df9c20ce",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-23/2026-08-23.ai.cover.png",
+          "sha256": "c04ca8005509729fcca7a17a1fd065bdc6dc5c4ab55aa8671271e1b30adeca32",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-23/2026-08-23.ai.01.harry0703--moneyprinterturbo.png",
+          "sha256": "4826f389f255800c76f6a5fbbcdb9a78a209de9a24034b422eefc390ec4117ce",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "publication_path": "images/02-rank-01-harry0703-moneyprinterturbo.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-23/2026-08-23.ai.02.nousresearch--hermes-agent.png",
+          "sha256": "3f79cdf9969f0919d86504bc23770b4af98068d230be8fd999ea51fbb793495e",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/03-rank-02-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-23/2026-08-23.ai.03.obra--superpowers.png",
+          "sha256": "fa4561f966315806bbbf313bab61b0ac706d6ada03223f71fcc564b1dbc93463",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "obra/superpowers",
+          "publication_path": "images/04-rank-03-obra-superpowers.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-08-23",
+    "revision": "9c051978042b",
+    "image_policy": "repository-source-reference"
+  }
+}

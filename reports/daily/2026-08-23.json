@@ -4,7 +4,7 @@
   "run_date": "2026-08-23",
   "window_start": "2026-08-22",
   "window_end": "2026-08-23",
-  "generated_at": "2026-08-23T10:38:51+08:00",
+  "generated_at": "2026-08-23T18:40:43+08:00",
   "timezone": "Asia/Shanghai",
   "window_label": "2026-08-22 至 2026-08-23",
   "publication": {
@@ -24,16 +24,16 @@
       "comprehensive": {
         "prompt_version": "4.1",
         "schema_version": "4.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       },
       "ai": {
         "prompt_version": "4.1",
         "schema_version": "4.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       }
@@ -138,64 +138,78 @@
         "trending_signal": 63.09
       },
       "summary": {
-        "one_line": "公开信息不足，暂不能准确说明 skills 的具体用途",
+        "one_line": "把软件工程方法整理成可组合的代理技能，帮助团队约束需求、测试、调试与代码设计流程",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "先通过追问对齐需求，减少代理误解",
+          "用共享术语文档统一人与代理的表达",
+          "把测试、调试和代码审查做成重复流程"
         ],
-        "audience": "公开信息不足，需人工确认后再发布",
+        "audience": "适合希望保留开发主导权，并用编码代理处理需求澄清、任务拆分、实现和审查的工程团队",
         "capabilities": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "追问需求细节并消除设计分歧",
+          "建立共享术语并更新上下文文档",
+          "按红绿重构循环推进测试开发",
+          "分阶段诊断缺陷和性能回退",
+          "扫描代码库并列出架构改进候选"
         ],
-        "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "公开信息不足，暂不能准确说明 skills 的具体用途",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "小而可组合的工程技能",
+        "core_summary": "每项技能封装一个工程环节，可由用户手动触发或由代理按任务调用；团队能按需组合、修改文件，而不是把整个开发过程交给固定框架。",
+        "prerequisites": "先选择插件或 skills.sh 其中一种安装方式，并在每个仓库运行一次 setup-matt-pocock-skills。",
+        "limitations": "插件方式安装的是托管只读集合；两种安装方式同时使用会产生重复技能，架构扫描也不会自动解开旧代码问题。",
+        "license_label": "MIT",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "needs_review",
+        "readme_sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
             ],
             [
-              "deterministic_draft"
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
             ],
             [
-              "deterministic_draft"
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
             ],
             [
-              "deterministic_draft"
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
             ],
             [
-              "deterministic_draft"
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "limitations": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -203,10 +217,13 @@
       "publication_evidence": {
         "full_name": "mattpocock/skills",
         "license_spdx_id": "MIT",
-        "readme": null,
+        "readme": {
+          "sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
         "avatar": {
           "path": "avatars/2026-08-23/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
-          "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
           "width": 373,
           "height": 373
         },
@@ -272,75 +289,94 @@
         "trending_signal": 30.1
       },
       "summary": {
-        "one_line": "OpenLogi 的用途证据不足，需要先查看仓库 README",
+        "one_line": "在本地管理罗技鼠标、键盘和摄像头，完成按键映射、设备参数与应用配置切换",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "用图形界面和命令行控制外设",
+          "把设备设置集中保存为 TOML 文件",
+          "按当前应用自动切换按键配置"
         ],
-        "audience": "公开信息不足，需人工确认后再发布",
+        "audience": "适合需要在 macOS、Linux 或 Windows 上本地配置罗技外设，并希望同步文本配置的用户",
         "capabilities": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "重映射鼠标与键盘按键动作",
+          "调整鼠标 DPI 与 SmartShift 滚轮",
+          "按应用焦点自动切换配置覆盖层",
+          "控制摄像头画面参数并保存配置",
+          "管理 Litra 灯光亮度与色温"
         ],
-        "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "OpenLogi 的用途证据不足，需要先查看仓库 README",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
-        "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "needs_review",
+        "core_title": "配置直接写入设备与文本",
+        "core_summary": "图形界面旁提供命令行，通用设置集中在 TOML 文件；摄像头参数可写入 UVC 硬件，鼠标和键盘则通过 HID++ 与系统输入钩子控制。",
+        "prerequisites": "安装前先退出 Logi Options+；macOS 需要 macOS 13 或更高版本，Linux 安装后需启用用户代理服务。",
+        "limitations": "项目仍在积极开发，功能和配置可能变化；应用配置在 Linux 仅支持 X11 或 XWayland，部分平台动作会失效。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "all rights reserved, and are not covered by the MIT/Apache licenses above",
+        "readme_sha": "b9e5772a9443974ebcc70f894743855025c15856",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
             ],
             [
-              "deterministic_draft"
+              "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
             ],
             [
-              "deterministic_draft"
+              "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
             ],
             [
-              "deterministic_draft"
+              "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
             ],
             [
-              "deterministic_draft"
+              "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
+            ],
+            [
+              "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
+            ],
+            [
+              "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
-          "license_restrictions": []
+          "prerequisites": [
+            "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
+          ],
+          "limitations": [
+            "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
+          ]
         }
       },
       "avatar_path": "avatars/2026-08-23/repo-ce2a9bf7be68aff634cef85e-136acda8af972af11c2f64ef.png",
       "publication_evidence": {
         "full_name": "AprilNEA/OpenLogi",
         "license_spdx_id": "Apache-2.0",
-        "readme": null,
+        "readme": {
+          "sha": "b9e5772a9443974ebcc70f894743855025c15856",
+          "source_url": "https://api.github.com/repos/AprilNEA/OpenLogi/readme"
+        },
         "avatar": {
           "path": "avatars/2026-08-23/repo-ce2a9bf7be68aff634cef85e-136acda8af972af11c2f64ef.png",
-          "sha256": "dea52e2def2390c51ebe59de4f8ee6b77a89bab525a79b2dbda069dd47bb0aec",
+          "sha256": "ba42e6912b53eda56cf5465dba77d4c3f400ed6069307dca20f12a72985c56c5",
           "width": 460,
           "height": 460
         },
@@ -392,64 +428,78 @@
         "trending_signal": 100.0
       },
       "summary": {
-        "one_line": "目前无法从公开字段确认 codex 能完成哪些任务",
+        "one_line": "把编码代理带进本地终端，让用户通过命令行在自己的电脑上启动和使用 Codex",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "直接在本地终端运行编码代理",
+          "提供脚本、包管理器和二进制安装方式",
+          "支持 ChatGPT 登录或 API Key 接入"
         ],
-        "audience": "公开信息不足，需人工确认后再发布",
+        "audience": "适合偏好终端工作流、希望在本地电脑运行编码代理，并能自行完成账户认证的开发者",
         "capabilities": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "通过 codex 命令启动终端代理",
+          "使用安装脚本部署命令行工具",
+          "通过 npm 或 Homebrew 完成安装",
+          "使用 ChatGPT 账户登录服务",
+          "改用 API Key 配置访问凭据"
         ],
-        "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "目前无法从公开字段确认 codex 能完成哪些任务",
-        "prerequisites": "",
-        "limitations": "",
-        "license_label": "",
+        "core_title": "本地终端里的编码代理",
+        "core_summary": "Codex CLI 在用户电脑本地运行，通过独立安装器、包管理器或发布二进制部署；启动后可选择 ChatGPT 登录，也可另行配置 API Key。",
+        "prerequisites": "先安装 Codex CLI，再准备可登录的 ChatGPT 账户；若使用 API Key，还需要完成额外配置。",
+        "limitations": "仓库介绍的是终端版；编辑器版、桌面应用和云端代理属于其他入口，发布包也需按操作系统与处理器选择。",
+        "license_label": "Apache-2.0",
         "license_restrictions": "",
-        "readme_sha": null,
-        "content_status": "needs_review",
+        "readme_sha": "06b02fced7db972084bf0188cb03f60375b51c1c",
+        "content_status": "readme_enriched",
         "evidence_ids": {
           "one_line": [
-            "deterministic_draft"
+            "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
           ],
           "highlights": [
             [
-              "deterministic_draft"
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
             ],
             [
-              "deterministic_draft"
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
             ],
             [
-              "deterministic_draft"
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
             ]
           ],
           "audience": [
-            "deterministic_draft"
+            "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
           ],
           "capabilities": [
             [
-              "deterministic_draft"
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
             ],
             [
-              "deterministic_draft"
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
             ],
             [
-              "deterministic_draft"
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+            ],
+            [
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+            ],
+            [
+              "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
             ]
           ],
           "core_title": [
-            "deterministic_draft"
+            "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
           ],
           "core_summary": [
-            "deterministic_draft"
+            "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
           ],
-          "prerequisites": [],
-          "limitations": [],
-          "license_label": [],
+          "prerequisites": [
+            "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+          ],
+          "limitations": [
+            "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
           "license_restrictions": []
         }
       },
@@ -457,10 +507,13 @@
       "publication_evidence": {
         "full_name": "openai/codex",
         "license_spdx_id": "Apache-2.0",
-        "readme": null,
+        "readme": {
+          "sha": "06b02fced7db972084bf0188cb03f60375b51c1c",
+          "source_url": "https://api.github.com/repos/openai/codex/readme"
+        },
         "avatar": {
           "path": "avatars/2026-08-23/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
-          "sha256": "66110939cf3f4e85fc1fd8ee99562257985a838d137e2fda1bf5096c05245311",
+          "sha256": "947cc8abe444e5a9a1b34c2f8bc556939ffa4452097de8498e39fb860ee66761",
           "width": 200,
           "height": 200
         },
@@ -540,64 +593,78 @@
             "trending_signal": 63.09
           },
           "summary": {
-            "one_line": "公开信息不足，暂不能准确说明 skills 的具体用途",
+            "one_line": "把软件工程方法整理成可组合的代理技能，帮助团队约束需求、测试、调试与代码设计流程",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "先通过追问对齐需求，减少代理误解",
+              "用共享术语文档统一人与代理的表达",
+              "把测试、调试和代码审查做成重复流程"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "适合希望保留开发主导权，并用编码代理处理需求澄清、任务拆分、实现和审查的工程团队",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "追问需求细节并消除设计分歧",
+              "建立共享术语并更新上下文文档",
+              "按红绿重构循环推进测试开发",
+              "分阶段诊断缺陷和性能回退",
+              "扫描代码库并列出架构改进候选"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "公开信息不足，暂不能准确说明 skills 的具体用途",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "小而可组合的工程技能",
+            "core_summary": "每项技能封装一个工程环节，可由用户手动触发或由代理按任务调用；团队能按需组合、修改文件，而不是把整个开发过程交给固定框架。",
+            "prerequisites": "先选择插件或 skills.sh 其中一种安装方式，并在每个仓库运行一次 setup-matt-pocock-skills。",
+            "limitations": "插件方式安装的是托管只读集合；两种安装方式同时使用会产生重复技能，架构扫描也不会自动解开旧代码问题。",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "limitations": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -605,10 +672,13 @@
           "publication_evidence": {
             "full_name": "mattpocock/skills",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-23/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
-              "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
               "width": 373,
               "height": 373
             },
@@ -674,75 +744,94 @@
             "trending_signal": 30.1
           },
           "summary": {
-            "one_line": "OpenLogi 的用途证据不足，需要先查看仓库 README",
+            "one_line": "在本地管理罗技鼠标、键盘和摄像头，完成按键映射、设备参数与应用配置切换",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "用图形界面和命令行控制外设",
+              "把设备设置集中保存为 TOML 文件",
+              "按当前应用自动切换按键配置"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "适合需要在 macOS、Linux 或 Windows 上本地配置罗技外设，并希望同步文本配置的用户",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "重映射鼠标与键盘按键动作",
+              "调整鼠标 DPI 与 SmartShift 滚轮",
+              "按应用焦点自动切换配置覆盖层",
+              "控制摄像头画面参数并保存配置",
+              "管理 Litra 灯光亮度与色温"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "OpenLogi 的用途证据不足，需要先查看仓库 README",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
-            "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "core_title": "配置直接写入设备与文本",
+            "core_summary": "图形界面旁提供命令行，通用设置集中在 TOML 文件；摄像头参数可写入 UVC 硬件，鼠标和键盘则通过 HID++ 与系统输入钩子控制。",
+            "prerequisites": "安装前先退出 Logi Options+；macOS 需要 macOS 13 或更高版本，Linux 安装后需启用用户代理服务。",
+            "limitations": "项目仍在积极开发，功能和配置可能变化；应用配置在 Linux 仅支持 X11 或 XWayland，部分平台动作会失效。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "all rights reserved, and are not covered by the MIT/Apache licenses above",
+            "readme_sha": "b9e5772a9443974ebcc70f894743855025c15856",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
+                ],
+                [
+                  "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
+                ],
+                [
+                  "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
-              "license_restrictions": []
+              "prerequisites": [
+                "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
+              ],
+              "limitations": [
+                "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:b9e5772a9443974ebcc70f894743855025c15856"
+              ]
             }
           },
           "avatar_path": "avatars/2026-08-23/repo-ce2a9bf7be68aff634cef85e-136acda8af972af11c2f64ef.png",
           "publication_evidence": {
             "full_name": "AprilNEA/OpenLogi",
             "license_spdx_id": "Apache-2.0",
-            "readme": null,
+            "readme": {
+              "sha": "b9e5772a9443974ebcc70f894743855025c15856",
+              "source_url": "https://api.github.com/repos/AprilNEA/OpenLogi/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-23/repo-ce2a9bf7be68aff634cef85e-136acda8af972af11c2f64ef.png",
-              "sha256": "dea52e2def2390c51ebe59de4f8ee6b77a89bab525a79b2dbda069dd47bb0aec",
+              "sha256": "ba42e6912b53eda56cf5465dba77d4c3f400ed6069307dca20f12a72985c56c5",
               "width": 460,
               "height": 460
             },
@@ -794,64 +883,78 @@
             "trending_signal": 100.0
           },
           "summary": {
-            "one_line": "目前无法从公开字段确认 codex 能完成哪些任务",
+            "one_line": "把编码代理带进本地终端，让用户通过命令行在自己的电脑上启动和使用 Codex",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "直接在本地终端运行编码代理",
+              "提供脚本、包管理器和二进制安装方式",
+              "支持 ChatGPT 登录或 API Key 接入"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "适合偏好终端工作流、希望在本地电脑运行编码代理，并能自行完成账户认证的开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "通过 codex 命令启动终端代理",
+              "使用安装脚本部署命令行工具",
+              "通过 npm 或 Homebrew 完成安装",
+              "使用 ChatGPT 账户登录服务",
+              "改用 API Key 配置访问凭据"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "目前无法从公开字段确认 codex 能完成哪些任务",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "本地终端里的编码代理",
+            "core_summary": "Codex CLI 在用户电脑本地运行，通过独立安装器、包管理器或发布二进制部署；启动后可选择 ChatGPT 登录，也可另行配置 API Key。",
+            "prerequisites": "先安装 Codex CLI，再准备可登录的 ChatGPT 账户；若使用 API Key，还需要完成额外配置。",
+            "limitations": "仓库介绍的是终端版；编辑器版、桌面应用和云端代理属于其他入口，发布包也需按操作系统与处理器选择。",
+            "license_label": "Apache-2.0",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "06b02fced7db972084bf0188cb03f60375b51c1c",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+                ],
+                [
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+                ],
+                [
+                  "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+              ],
+              "limitations": [
+                "github.readme:06b02fced7db972084bf0188cb03f60375b51c1c"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -859,10 +962,13 @@
           "publication_evidence": {
             "full_name": "openai/codex",
             "license_spdx_id": "Apache-2.0",
-            "readme": null,
+            "readme": {
+              "sha": "06b02fced7db972084bf0188cb03f60375b51c1c",
+              "source_url": "https://api.github.com/repos/openai/codex/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-23/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
-              "sha256": "66110939cf3f4e85fc1fd8ee99562257985a838d137e2fda1bf5096c05245311",
+              "sha256": "947cc8abe444e5a9a1b34c2f8bc556939ffa4452097de8498e39fb860ee66761",
               "width": 200,
               "height": 200
             },
@@ -956,64 +1062,78 @@
             "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
+            "one_line": "输入主题或关键词，自动串起脚本、素材、配音、字幕和音乐，输出高清短视频",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "从主题生成脚本并匹配或生成画面",
+              "组合配音、字幕与背景音乐完成成片",
+              "批量生成候选视频并发布到短视频平台"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "需要批量制作竖屏或横屏短视频，并希望减少脚本、找素材和后期操作的内容创作者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "生成多语言视频脚本或使用自定义脚本",
+              "匹配本地或在线高清素材",
+              "调用文生视频模型生成新画面",
+              "合成配音、字幕与背景音乐",
+              "批量出片并上传多个短视频平台"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "从主题到成片的自动化链路",
+            "core_summary": "它把脚本生成、素材检索或生成、语音合成、字幕和音乐串成同一流程，并提供 WebUI、API、CLI 与 Agent 入口，方便反复制作短视频。",
+            "prerequisites": "本地部署需要 Python 3.11 或更高版本；Windows 项目路径应避开中文、特殊字符和空格",
+            "limitations": "云端模型、语音和跨平台发布通常需要对应 API Key；Whisper 首次使用还需下载模型",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "needs_review",
+            "readme_sha": "6099b70b3b693ad8e70d796e99726f68dde077b8",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+                ],
+                [
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+                ],
+                [
+                  "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+              ],
+              "limitations": [
+                "github.readme:6099b70b3b693ad8e70d796e99726f68dde077b8"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1021,10 +1141,13 @@
           "publication_evidence": {
             "full_name": "harry0703/MoneyPrinterTurbo",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "6099b70b3b693ad8e70d796e99726f68dde077b8",
+              "source_url": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-23/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
-              "sha256": "66a44d80e1e3bcd2fc1ea0953b833eea1e4f3d05e73af18b7401394e6015d5ee",
+              "sha256": "8f9ca021ffca2773fe9909bce688155f9d07586336ccc7c0e835fe1c4301b6b4",
               "width": 460,
               "height": 460
             },
@@ -1089,64 +1212,78 @@
             "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 hermes-agent；它能把模型能力接入可重复的任务流程",
+            "one_line": "把长期使用中的经验沉淀为记忆和技能，让 AI Agent 跨会话继续执行与改进任务",
             "highlights": [
-              "把复杂任务拆成连续的执行步骤",
-              "让 Agent 围绕目标推进任务流程",
-              "为工具调用和工作流扩展提供基础"
+              "从复杂任务中创建技能，并在使用中改进",
+              "跨会话搜索历史对话并维护用户模型",
+              "通过消息平台远程调度定时与并行任务"
             ],
-            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "audience": "需要长期运行个人 Agent，并希望它记住历史、自动执行计划任务或从消息平台远程操作的用户",
             "capabilities": [
-              "把复杂任务拆成连续的执行步骤",
-              "让 Agent 围绕目标推进任务流程",
-              "为工具调用和工作流扩展提供基础"
+              "创建并持续改进可复用技能",
+              "搜索历史会话并总结相关上下文",
+              "安排定时任务并把结果送到消息平台",
+              "派生隔离子 Agent 并行处理工作流",
+              "切换模型与终端后端而无需改代码"
             ],
-            "core_title": "搭建能够连续执行多步任务的 AI Agent",
-            "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 hermes-agent；它能把模型能力接入可重复的任务流程",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "会从使用经验中生长的 Agent",
+            "core_summary": "它把会话记忆、用户模型和技能创建组成学习闭环：复杂任务完成后沉淀技能，后续使用时继续改进，并能从历史会话找回相关信息。",
+            "prerequisites": "需在 Linux、macOS、WSL2、Termux 或原生 Windows 环境安装，并按所选模型与工具服务完成配置",
+            "limitations": "Termux 的完整可选依赖包含不兼容的语音组件；若不使用 Nous Portal，部分模型和工具需分别准备密钥",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "readme_sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "limitations": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1154,10 +1291,13 @@
           "publication_evidence": {
             "full_name": "NousResearch/hermes-agent",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-23/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
-              "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
               "width": 400,
               "height": 400
             },
@@ -1218,64 +1358,78 @@
             "trending_signal": 43.07
           },
           "summary": {
-            "one_line": "主要任务是给编程 Agent 提供可复用的软件开发技能；superpowers 还能让需求、编码和验证按固定流程推进",
+            "one_line": "在编程 Agent 写代码前先澄清需求，再按计划、测试、审查和收尾流程推进开发",
             "highlights": [
-              "把常用开发方法封装成可复用技能",
-              "按规划、实现和验证步骤组织任务",
-              "在不同项目中复用同一套开发流程"
+              "先通过提问把模糊想法整理成可确认设计",
+              "把设计拆成带路径与验证步骤的实施计划",
+              "用子 Agent、测试驱动和代码审查逐项交付"
             ],
-            "audience": "希望让编程 Agent 按固定方法完成研发任务的开发者",
+            "audience": "希望编程 Agent 少凭猜测直接写代码，改为按设计、计划、测试和审查流程完成研发任务的开发者",
             "capabilities": [
-              "把常用开发方法封装成可复用技能",
-              "按规划、实现和验证步骤组织任务",
-              "在不同项目中复用同一套开发流程"
+              "澄清需求并分段确认设计",
+              "创建隔离工作区并验证测试基线",
+              "拆分可执行任务并写明验证步骤",
+              "派发子 Agent 实现并分阶段审查",
+              "完成测试后提供合并或保留选项"
             ],
-            "core_title": "给编程 Agent 提供可复用的软件开发技能",
-            "core_summary": "主要任务是给编程 Agent 提供可复用的软件开发技能；superpowers 还能让需求、编码和验证按固定流程推进",
-            "prerequisites": "",
-            "limitations": "",
-            "license_label": "",
+            "core_title": "让编程 Agent 先设计再动手",
+            "core_summary": "它用一组自动触发的技能约束开发顺序：先澄清和确认设计，再拆计划、隔离实现、测试驱动、逐项审查，最后验证并处理开发分支。",
+            "prerequisites": "需要在所用编程 Agent 中安装对应插件或扩展；使用多个运行环境时，要分别安装",
+            "limitations": "可选视觉伴侣默认会从网站加载标志并携带版本信息；可通过环境变量关闭遥测",
+            "license_label": "MIT",
             "license_restrictions": "",
-            "readme_sha": null,
-            "content_status": "metadata_only",
+            "readme_sha": "09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645",
+            "content_status": "readme_enriched",
             "evidence_ids": {
               "one_line": [
-                "deterministic_draft"
+                "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
               ],
               "highlights": [
                 [
-                  "deterministic_draft"
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
                 ]
               ],
               "audience": [
-                "deterministic_draft"
+                "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
               ],
               "capabilities": [
                 [
-                  "deterministic_draft"
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
                 ],
                 [
-                  "deterministic_draft"
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+                ],
+                [
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+                ],
+                [
+                  "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
                 ]
               ],
               "core_title": [
-                "deterministic_draft"
+                "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
               ],
               "core_summary": [
-                "deterministic_draft"
+                "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
               ],
-              "prerequisites": [],
-              "limitations": [],
-              "license_label": [],
+              "prerequisites": [
+                "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+              ],
+              "limitations": [
+                "github.readme:09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
               "license_restrictions": []
             }
           },
@@ -1283,10 +1437,13 @@
           "publication_evidence": {
             "full_name": "obra/superpowers",
             "license_spdx_id": "MIT",
-            "readme": null,
+            "readme": {
+              "sha": "09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645",
+              "source_url": "https://api.github.com/repos/obra/superpowers/readme"
+            },
             "avatar": {
               "path": "avatars/2026-08-23/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
-              "sha256": "1df5657cda192b0e8d047947d1dcc4170545b1c2852ee58262e69fa7f8f6b5bc",
+              "sha256": "d38b9c9b368fcb5bf36b16f443d783cc9588fa66f5b399ed5e966b50ab857937",
               "width": 460,
               "height": 460
             },
