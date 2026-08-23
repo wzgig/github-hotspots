@@ -1,0 +1,1306 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-23",
+  "window_start": "2026-08-22",
+  "window_end": "2026-08-23",
+  "generated_at": "2026-08-23T10:38:51+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-22 至 2026-08-23",
+  "publication": {
+    "issue_number": 43,
+    "issue_code": "D043",
+    "issue_label": "第43期",
+    "status": "official"
+  },
+  "data_quality": "中高：快照与 Trending 混合",
+  "warnings": [
+    "综合主榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-23",
+    "manifest": "reports/daily/assets/2026-08-23/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "AprilNEA/OpenLogi",
+            "path": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.02.aprilnea--openlogi.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "openai/codex",
+            "path": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.03.openai--codex.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-23/2026-08-23.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "path": "reports/daily/assets/2026-08-23/2026-08-23.ai.01.harry0703--moneyprinterturbo.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-23/2026-08-23.ai.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-08-23/2026-08-23.ai.03.obra--superpowers.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 43,
+      "issue_code": "D043",
+      "issue_label": "第43期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 232198,
+      "forks": 19815,
+      "open_issues": 385,
+      "watchers": 1312,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-08-23T02:36:41Z",
+      "pushed_at": "2026-08-21T10:56:48Z",
+      "daily_stars": 2683,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 92.02,
+      "star_delta": 2544,
+      "fork_delta": 185,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 97.01,
+        "fork_growth": 100.0,
+        "total_stars": 86.57,
+        "activity": 51.34,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "公开信息不足，暂不能准确说明 skills 的具体用途",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "公开信息不足，暂不能准确说明 skills 的具体用途",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-23/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-23/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.01.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1248194723,
+      "full_name": "AprilNEA/OpenLogi",
+      "owner": "AprilNEA",
+      "name": "OpenLogi",
+      "html_url": "https://github.com/AprilNEA/OpenLogi",
+      "description": "⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
+      "language": "Rust",
+      "stars": 14000,
+      "forks": 375,
+      "open_issues": 261,
+      "watchers": 52,
+      "topics": [
+        "dpi",
+        "gpui",
+        "hid",
+        "hidpp",
+        "local-first",
+        "logitech",
+        "logitech-mouse",
+        "logitech-options",
+        "mouse-remapping",
+        "mx-master",
+        "privacy",
+        "rust",
+        "smartshift"
+      ],
+      "created_at": "2026-05-24T10:10:36Z",
+      "updated_at": "2026-08-23T02:38:46Z",
+      "pushed_at": "2026-08-23T02:35:04Z",
+      "daily_stars": 959,
+      "weekly_stars": null,
+      "trending_rank_daily": 9,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 88.97,
+      "star_delta": 996,
+      "fork_delta": 23,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.01,
+        "relative_growth": 100.0,
+        "fork_growth": 83.58,
+        "total_stars": 11.94,
+        "activity": 100.0,
+        "trending_signal": 30.1
+      },
+      "summary": {
+        "one_line": "OpenLogi 的用途证据不足，需要先查看仓库 README",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "OpenLogi 的用途证据不足，需要先查看仓库 README",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-23/repo-ce2a9bf7be68aff634cef85e-136acda8af972af11c2f64ef.png",
+      "publication_evidence": {
+        "full_name": "AprilNEA/OpenLogi",
+        "license_spdx_id": "Apache-2.0",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-23/repo-ce2a9bf7be68aff634cef85e-136acda8af972af11c2f64ef.png",
+          "sha256": "dea52e2def2390c51ebe59de4f8ee6b77a89bab525a79b2dbda069dd47bb0aec",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.02.aprilnea--openlogi.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 965415649,
+      "full_name": "openai/codex",
+      "owner": "openai",
+      "name": "codex",
+      "html_url": "https://github.com/openai/codex",
+      "description": "Lightweight coding agent that runs in your terminal",
+      "language": "Rust",
+      "stars": 113568,
+      "forks": 17379,
+      "open_issues": 13497,
+      "watchers": 113568,
+      "topics": [],
+      "created_at": "2025-04-13T05:37:54Z",
+      "updated_at": "2026-08-23T02:38:28Z",
+      "pushed_at": "2026-08-23T01:31:37Z",
+      "daily_stars": 1544,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 86.79,
+      "star_delta": 1544,
+      "fork_delta": 0,
+      "delta_source": "trending",
+      "component_percentiles": {
+        "star_growth": 98.51,
+        "relative_growth": 95.52,
+        "fork_growth": 20.15,
+        "total_stars": 28.36,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "目前无法从公开字段确认 codex 能完成哪些任务",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "目前无法从公开字段确认 codex 能完成哪些任务",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-23/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+      "publication_evidence": {
+        "full_name": "openai/codex",
+        "license_spdx_id": "Apache-2.0",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-23/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+          "sha256": "66110939cf3f4e85fc1fd8ee99562257985a838d137e2fda1bf5096c05245311",
+          "width": 200,
+          "height": 200
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.03.openai--codex.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "AprilNEA/OpenLogi",
+            "path": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.02.aprilnea--openlogi.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "openai/codex",
+            "path": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.03.openai--codex.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 232198,
+          "forks": 19815,
+          "open_issues": 385,
+          "watchers": 1312,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-08-23T02:36:41Z",
+          "pushed_at": "2026-08-21T10:56:48Z",
+          "daily_stars": 2683,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.02,
+          "star_delta": 2544,
+          "fork_delta": 185,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 97.01,
+            "fork_growth": 100.0,
+            "total_stars": 86.57,
+            "activity": 51.34,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 skills 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 skills 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-23/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-23/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.01.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1248194723,
+          "full_name": "AprilNEA/OpenLogi",
+          "owner": "AprilNEA",
+          "name": "OpenLogi",
+          "html_url": "https://github.com/AprilNEA/OpenLogi",
+          "description": "⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
+          "language": "Rust",
+          "stars": 14000,
+          "forks": 375,
+          "open_issues": 261,
+          "watchers": 52,
+          "topics": [
+            "dpi",
+            "gpui",
+            "hid",
+            "hidpp",
+            "local-first",
+            "logitech",
+            "logitech-mouse",
+            "logitech-options",
+            "mouse-remapping",
+            "mx-master",
+            "privacy",
+            "rust",
+            "smartshift"
+          ],
+          "created_at": "2026-05-24T10:10:36Z",
+          "updated_at": "2026-08-23T02:38:46Z",
+          "pushed_at": "2026-08-23T02:35:04Z",
+          "daily_stars": 959,
+          "weekly_stars": null,
+          "trending_rank_daily": 9,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.97,
+          "star_delta": 996,
+          "fork_delta": 23,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.01,
+            "relative_growth": 100.0,
+            "fork_growth": 83.58,
+            "total_stars": 11.94,
+            "activity": 100.0,
+            "trending_signal": 30.1
+          },
+          "summary": {
+            "one_line": "OpenLogi 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "OpenLogi 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-23/repo-ce2a9bf7be68aff634cef85e-136acda8af972af11c2f64ef.png",
+          "publication_evidence": {
+            "full_name": "AprilNEA/OpenLogi",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-23/repo-ce2a9bf7be68aff634cef85e-136acda8af972af11c2f64ef.png",
+              "sha256": "dea52e2def2390c51ebe59de4f8ee6b77a89bab525a79b2dbda069dd47bb0aec",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.02.aprilnea--openlogi.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 965415649,
+          "full_name": "openai/codex",
+          "owner": "openai",
+          "name": "codex",
+          "html_url": "https://github.com/openai/codex",
+          "description": "Lightweight coding agent that runs in your terminal",
+          "language": "Rust",
+          "stars": 113568,
+          "forks": 17379,
+          "open_issues": 13497,
+          "watchers": 113568,
+          "topics": [],
+          "created_at": "2025-04-13T05:37:54Z",
+          "updated_at": "2026-08-23T02:38:28Z",
+          "pushed_at": "2026-08-23T01:31:37Z",
+          "daily_stars": 1544,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 86.79,
+          "star_delta": 1544,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 98.51,
+            "relative_growth": 95.52,
+            "fork_growth": 20.15,
+            "total_stars": 28.36,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 codex 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 codex 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-23/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+          "publication_evidence": {
+            "full_name": "openai/codex",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-23/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+              "sha256": "66110939cf3f4e85fc1fd8ee99562257985a838d137e2fda1bf5096c05245311",
+              "width": 200,
+              "height": 200
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-23/2026-08-23.comprehensive.03.openai--codex.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-23/2026-08-23.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "path": "reports/daily/assets/2026-08-23/2026-08-23.ai.01.harry0703--moneyprinterturbo.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-23/2026-08-23.ai.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "obra/superpowers",
+            "path": "reports/daily/assets/2026-08-23/2026-08-23.ai.03.obra--superpowers.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 770153867,
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "owner": "harry0703",
+          "name": "MoneyPrinterTurbo",
+          "html_url": "https://github.com/harry0703/MoneyPrinterTurbo",
+          "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+          "language": "Python",
+          "stars": 114684,
+          "forks": 17405,
+          "open_issues": 49,
+          "watchers": 114684,
+          "topics": [
+            "ai-video-generator",
+            "content-creation",
+            "ffmpeg",
+            "instagram-reels",
+            "llm",
+            "python",
+            "short-video",
+            "subtitles",
+            "text-to-speech",
+            "tiktok",
+            "video-automation",
+            "video-workflow",
+            "workflow-automation",
+            "youtube-shorts"
+          ],
+          "created_at": "2024-03-11T02:57:34Z",
+          "updated_at": "2026-08-23T02:35:56Z",
+          "pushed_at": "2026-08-22T14:29:05Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 88.73,
+          "star_delta": 699,
+          "fork_delta": 110,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 96.88,
+            "total_stars": 37.5,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 MoneyPrinterTurbo 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-23/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+          "publication_evidence": {
+            "full_name": "harry0703/MoneyPrinterTurbo",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-23/repo-72bea5f84ba338202c78e38b-cf2aa6469f1faf875bc4a6dd.png",
+              "sha256": "66a44d80e1e3bcd2fc1ea0953b833eea1e4f3d05e73af18b7401394e6015d5ee",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-23/2026-08-23.ai.01.harry0703--moneyprinterturbo.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 234419,
+          "forks": 47171,
+          "open_issues": 34832,
+          "watchers": 234419,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "nous-research",
+            "openai"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-08-23T02:38:34Z",
+          "pushed_at": "2026-08-23T02:30:13Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 87.03,
+          "star_delta": 406,
+          "fork_delta": 176,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.75,
+            "relative_growth": 78.12,
+            "fork_growth": 100.0,
+            "total_stars": 90.62,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 hermes-agent；它能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 hermes-agent；它能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-23/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-23/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-23/2026-08-23.ai.02.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 276218,
+          "forks": 24705,
+          "open_issues": 308,
+          "watchers": 1049,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-08-23T02:34:07Z",
+          "pushed_at": "2026-08-19T17:33:23Z",
+          "daily_stars": 592,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 85.99,
+          "star_delta": 535,
+          "fork_delta": 58,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.88,
+            "relative_growth": 87.5,
+            "fork_growth": 93.75,
+            "total_stars": 96.88,
+            "activity": 36.79,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "主要任务是给编程 Agent 提供可复用的软件开发技能；superpowers 还能让需求、编码和验证按固定流程推进",
+            "highlights": [
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
+            ],
+            "audience": "希望让编程 Agent 按固定方法完成研发任务的开发者",
+            "capabilities": [
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
+            ],
+            "core_title": "给编程 Agent 提供可复用的软件开发技能",
+            "core_summary": "主要任务是给编程 Agent 提供可复用的软件开发技能；superpowers 还能让需求、编码和验证按固定流程推进",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-23/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-23/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+              "sha256": "1df5657cda192b0e8d047947d1dcc4170545b1c2852ee58262e69fa7f8f6b5bc",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-23/2026-08-23.ai.03.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
