@@ -34,7 +34,7 @@ function Get-ManualUpdatePlan {
         [pscustomobject]@{
             Period = "daily"
             CheckOnly = $false
-            UpgradeFallback = $false
+            UpgradeFallback = $true
             RunDate = $today
             Status = "due"
             NextDueDate = $today
@@ -117,7 +117,7 @@ $failureCodes = @()
 Write-Host "GitHub Hotspots manual report check"
 Write-Host "China time: $($chinaNow.ToString('yyyy-MM-dd HH:mm:ss zzz'))"
 Write-Host "The current daily report and latest scheduled weekly report are both checked."
-Write-Host "Missing reports are generated only on their truthful due date; frozen weekly fallbacks may be upgraded without recollecting history."
+Write-Host "Missing reports are generated only on their truthful due date; frozen daily or weekly fallbacks may be upgraded without recollecting ranking facts."
 
 foreach ($item in $plan) {
     Write-Host ""
@@ -141,9 +141,9 @@ foreach ($item in $plan) {
     }
     elseif ($exitCode -eq 76) {
         Write-Host ((
-                "[MISSING] No complete frozen weekly report was found for {0}. " +
+                "[MISSING] No complete frozen {0} report was found for {1}. " +
                 "Automatic historical collection is disabled; use the reviewed recovery workflow."
-            ) -f $item.RunDate)
+            ) -f $item.Period, $item.RunDate)
     }
     else {
         Write-Host "[FAILED] $($item.period) report check returned exit code $exitCode."

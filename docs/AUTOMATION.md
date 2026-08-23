@@ -194,6 +194,8 @@ The registered settings are:
 
 - current Windows user, interactive logon, limited privileges;
 - daily schedule plus a current-user logon catch-up trigger;
+- both task actions enable frozen-fallback upgrade, so a delayed local run can promote an
+  already complete Actions fallback without recollecting or reranking facts;
 - wake from sleep when supported and start when available;
 - no Task Scheduler network launch gate; the runner starts, records a log, and lets fetch or
   source collection fail visibly when connectivity is unavailable;
@@ -230,7 +232,9 @@ For a visible, double-clickable recovery entrypoint, run the root-level
 `scripts/automation/run_manual_update.ps1`, which in turn reuses the same isolated,
 strict, idempotent transaction as the scheduled tasks.
 
-- The daily bundle is checked for the current China Standard Time date on every run.
+- The daily bundle is checked for the current China Standard Time date on every run. A complete
+  deterministic daily fallback is rerendered with frozen ranking facts instead of recollecting a
+  second same-day snapshot.
 - The latest scheduled Sunday weekly bundle is checked on every run. On Sunday it may be
   generated when missing; Monday through Saturday use `-CheckOnly -UpgradeFallback`. This mode
   may invoke Codex only to rerender an already complete frozen report and never starts source
@@ -284,6 +288,7 @@ not the authoritative unattended-run log.
 | --- | --- |
 | Daily or weekly task is missing | Re-run `register_tasks.ps1`, verify both tasks are `Ready`, then use an explicit reviewed recovery run for any missing current-date report |
 | Lock already held | Scheduled runner waits up to 20 minutes; timeout exits `75` for Task Scheduler retry. The manual launcher returns `75` immediately and visibly |
+| Current-day manual or delayed daily run finds a complete deterministic fallback | Rerender it with Codex, fingerprint protected facts before/after, then require the strict Codex and history gates |
 | Weekday manual check finds a complete deterministic weekly fallback | Rerender it with Codex, fingerprint protected facts before/after, then require the strict Codex and history gates |
 | Weekday manual check finds the latest weekly bundle missing, corrupt, or unsafe to rerender | Exit `76`, identify the missing Sunday, and refuse automatic historical collection |
 | Tests, lint, source collection, or report render fails | No commit and no push |

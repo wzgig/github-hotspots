@@ -308,7 +308,39 @@ def test_mcp_overrides_disable_every_cli_server(monkeypatch) -> None:
     assert overrides == ("mcp_servers.local_tools.enabled=false",)
     assert len(calls) == 2
     assert all(command[-3:] == ["mcp", "list", "--json"] for command in calls)
+    assert all("apps" in command for command in calls)
     assert overrides[0] in calls[1]
+
+
+def test_mcp_overrides_ignore_already_disabled_builtin_server(monkeypatch) -> None:
+    calls: list[list[str]] = []
+
+    def fake_run(command, **kwargs):
+        calls.append(command)
+        if "mcp_servers.codex_app.enabled=false" in command:
+            return SimpleNamespace(
+                returncode=1,
+                stdout="",
+                stderr="invalid transport in mcp_servers.codex_app",
+            )
+        local_tools_enabled = "mcp_servers.local_tools.enabled=false" not in command
+        payload = [
+            {"name": "codex_app", "enabled": False},
+            {"name": "local_tools", "enabled": local_tools_enabled},
+        ]
+        return SimpleNamespace(returncode=0, stdout=json.dumps(payload), stderr="")
+
+    monkeypatch.setattr("github_hotspots.editorial.subprocess.run", fake_run)
+
+    overrides = _verified_mcp_disable_overrides(
+        "codex",
+        reasoning_effort="xhigh",
+        timeout_seconds=10,
+    )
+
+    assert overrides == ("mcp_servers.local_tools.enabled=false",)
+    assert len(calls) == 2
+    assert all("mcp_servers.codex_app.enabled=false" not in command for command in calls)
 
 
 def test_mcp_isolation_failure_falls_back_for_the_batch(tmp_path: Path, monkeypatch) -> None:

@@ -74,9 +74,7 @@ function New-HotspotsAction {
         "-File", ('"{0}"' -f $Runner),
         "-Period", $Period
     ) -join " "
-    if ($Period -eq "weekly") {
-        $arguments += " -UpgradeFallback"
-    }
+    $arguments += " -UpgradeFallback"
     return New-ScheduledTaskAction `
         -Execute $PowerShell `
         -Argument $arguments `
@@ -102,7 +100,7 @@ function Assert-HotspotsTask {
         $actions[0].WorkingDirectory -ne $RepoRoot -or
         -not $actions[0].Arguments.Contains(('"{0}"' -f $Runner)) -or
         -not $actions[0].Arguments.Contains("-Period $Period") -or
-        ($Period -eq "weekly" -and -not $actions[0].Arguments.Contains("-UpgradeFallback")) -or
+        -not $actions[0].Arguments.Contains("-UpgradeFallback") -or
         $triggerTypes.Count -ne $ExpectedTriggerTypes.Count -or
         $missingTriggerTypes.Count -gt 0
     ) {
@@ -117,7 +115,7 @@ function Assert-HotspotsTask {
         RunAs = $task.Principal.UserId
         Enabled = $task.Settings.Enabled
         RunOnlyIfNetworkAvailable = $task.Settings.RunOnlyIfNetworkAvailable
-        UpgradeFallback = $Period -eq "weekly"
+        UpgradeFallback = $true
         TriggerTypes = $triggerTypes -join ","
     }
 }
@@ -132,7 +130,7 @@ $dailyTask = New-ScheduledTask `
     -Trigger $dailyTriggers `
     -Principal $principal `
     -Settings $settings `
-    -Description "Generate and push the daily GitHub Hotspots bundle at the scheduled time or after the next user logon."
+    -Description "Generate and push the daily GitHub Hotspots bundle, or safely upgrade a frozen fallback, at the scheduled time or after the next user logon."
 $weeklyTask = New-ScheduledTask `
     -Action (New-HotspotsAction -Period "weekly") `
     -Trigger (New-ScheduledTaskTrigger -Weekly -WeeksInterval 1 -DaysOfWeek Sunday -At $weeklyTime) `

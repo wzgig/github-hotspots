@@ -440,9 +440,10 @@ def _verified_mcp_disable_overrides(
         reasoning_effort=reasoning_effort,
         timeout_seconds=timeout_seconds,
     )
-    if not configured:
+    enabled_servers = tuple(name for name, enabled in sorted(configured.items()) if enabled)
+    if not enabled_servers:
         return ()
-    overrides = tuple(f"mcp_servers.{name}.enabled=false" for name in sorted(configured))
+    overrides = tuple(f"mcp_servers.{name}.enabled=false" for name in enabled_servers)
     verified = _mcp_server_states(
         executable,
         overrides=overrides,
@@ -462,6 +463,10 @@ def _mcp_server_states(
     timeout_seconds: int,
 ) -> dict[str, bool]:
     command = [executable]
+    # Audit the same text-only feature set used by the real editorial command.
+    # New Codex releases may expose feature-owned MCP entries that are not user config.
+    for feature in _TEXT_ONLY_DISABLED_FEATURES:
+        command.extend(["--disable", feature])
     if reasoning_effort:
         command.extend(["-c", f'model_reasoning_effort="{reasoning_effort}"'])
     for override in overrides:

@@ -1,5 +1,31 @@
 # Project Log
 
+## 2026-08-23 — 修复 Codex MCP 隔离回归并统一日报/周报冻结兜底升级
+
+### 目的与根因
+
+排查“日报、周报没有自动更新，手动 CMD 也无效”。当天计划任务先因本机 Git 代理 `127.0.0.1` 未监听而无法连接 GitHub；网络恢复后，正式本地编辑又从 2026-08-22 起持续回退为 deterministic。根因是 Codex CLI 0.124 新暴露了已禁用的内置 `codex_app` MCP，旧隔离逻辑仍尝试写入 `mcp_servers.codex_app.enabled=false`，CLI 将这个非用户配置条目解析为缺少 transport 的服务器并返回 `invalid transport`，最终被统一记录为 `mcp_isolation_failed`，严格门禁因此拒绝提交。
+
+### 变更
+
+- `src/github_hotspots/editorial.py` 的 MCP 隔离审计现在使用与正式文本编辑命令相同的 feature 禁用集，避免把 feature 所有的动态 MCP 当作用户服务器；只对当前启用的用户 MCP 生成 `enabled=false` 覆盖，随后仍二次枚举并要求全部关闭。
+- 新增回归测试，复现“已禁用内置 `codex_app` 一旦被写入覆盖就触发 invalid transport”的 Codex 0.124 行为，并验证实际本机隔离只关闭 `matlab`、`node_repl` 与 `openaiDeveloperDocs`。
+- 日报的计划任务与手动检查也统一携带 `-UpgradeFallback`。如果 Actions 已先发布结构完整的 deterministic 日报，本地任务基于冻结报告重绘并校验受保护事实指纹，不再在同一天晚些时候重新采集出不同排名；周报原有的历史防伪语义保持不变。
+- `README.md`、`docs/AUTOMATION.md` 与 `docs/OPERATIONS.md` 同步新的日报/周报恢复语义；`register_tasks.ps1` 的注册后审计要求两个任务动作都包含 `-UpgradeFallback`。
+
+### 文件与验证
+
+- 核心代码：`src/github_hotspots/editorial.py`。
+- Windows 自动化：`scripts/automation/run_manual_update.ps1`、`scripts/automation/register_tasks.ps1`。
+- 回归测试：`tests/test_editorial.py`、`tests/test_powershell_automation.py`。
+- 文档：`README.md`、`docs/AUTOMATION.md`、`docs/OPERATIONS.md`。
+- 定向验证已通过：Editorial 22 项、PowerShell 自动化 17 项；真实 Codex MCP 隔离返回三个可关闭的用户 MCP，未再包含 `codex_app`；两个 PowerShell 文件语法错误数均为 0。
+
+### 已知限制
+
+- 当前 Windows 计划任务仍是受保护的旧定义：`RunOnlyIfNetworkAvailable=True`，日报缺少登录补跑触发器，两个动作也未使用最新参数。代码推送后仍需管理员 PowerShell 成功执行 `scripts/automation/register_tasks.ps1` 并重新读取任务定义，才能宣称系统级自动启动修复完成。
+- 当本机 Git 代理未运行时，任务现在会按新定义正常启动、写日志并由 Task Scheduler 重试，但 GitHub 拉取仍可能失败；Actions 会继续提供明确标记的 deterministic 连续性兜底。
+
 ## 2026-08-10 — 修复延迟周报空成功并支持冻结兜底自动升级
 
 ### 目的与验收边界

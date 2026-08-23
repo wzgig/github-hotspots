@@ -480,7 +480,7 @@ def test_task_registration_has_logon_catchup_without_network_launch_gate() -> No
     assert 'ExpectedTriggerTypes @("MSFT_TaskDailyTrigger", "MSFT_TaskLogonTrigger")' in source
     assert 'ExpectedTriggerTypes @("MSFT_TaskWeeklyTrigger")' in source
     assert '$arguments += " -UpgradeFallback"' in source
-    assert 'Contains("-UpgradeFallback")' in source
+    assert '-not $actions[0].Arguments.Contains("-UpgradeFallback")' in source
 
 
 @requires_windows_powershell
@@ -503,14 +503,14 @@ def test_manual_update_plan_checks_and_upgrades_weekly_without_backdating(tmp_pa
         (item["Period"], item["CheckOnly"], item["UpgradeFallback"], item["RunDate"])
         for item in payload["Sunday"]
     ] == [
-        ("daily", False, False, "2026-07-19"),
+        ("daily", False, True, "2026-07-19"),
         ("weekly", False, True, "2026-07-19"),
     ]
     assert [
         (item["Period"], item["CheckOnly"], item["UpgradeFallback"], item["RunDate"])
         for item in payload["Monday"]
     ] == [
-        ("daily", False, False, "2026-07-20"),
+        ("daily", False, True, "2026-07-20"),
         ("weekly", True, True, "2026-07-19"),
     ]
     assert payload["Monday"][1]["Status"] == "verify_or_upgrade"
