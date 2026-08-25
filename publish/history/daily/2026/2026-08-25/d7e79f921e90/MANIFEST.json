@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "d7e79f921e9060dec11c991ca42270def7abb910379b4b5a545f595a897ddf36",
+  "checklist_sha256": "45e82c3db6442e0fc5dc721bbb799119d49551cf2d749d7b78a106509165a368",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-08-25",
+  "generated_at": "2026-08-25T10:32:37.383622+08:00",
+  "issue": {
+    "number": 45,
+    "code": "D045",
+    "stem": "D045-2026-08-25",
+    "label": "第45期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-08-25.json",
+    "report_sha256": "f16117b81a55d93c5d2787c1aae2adb9671ae0f00789450bea6ff46f318bbce6",
+    "poster_manifest": "reports/daily/assets/2026-08-25/manifest.json",
+    "poster_manifest_sha256": "2d27b05dbdcc91d8c9397a6a71fdcd5a08af4fef0195198aa3dd427de5677486",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D045-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "e376f2235eb31dae3702c356bccd035b009b1d375a9c269fde45e5f03826378b",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 362,
+      "caption_sha256": "b0517429267b11bb7dfbdb7f35e574c4f124f8fa34d4b9f534c577635d8e3bd2",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "a2f947d4b9d5cace74fd78f85bdd45ad5928b8c1b15bb256e4e04f234b92965c",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.cover.png",
+          "sha256": "e6c977a36ea784de56e5e2e8128dfcdc2ca96d9cf6bd61d96736940196ba095a",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.01.openai--codex.png",
+          "sha256": "e554d49221e9e468ebe38a84742038562744a693bfcc5da5430dd5b6c91af2f1",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "openai/codex",
+          "publication_path": "images/02-rank-01-openai-codex.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.02.alishahryar1--free-claude-code.png",
+          "sha256": "566cd21812f3a83f554204bc42097e5a3547a671ab63c769b49e99a679ea998e",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "Alishahryar1/free-claude-code",
+          "publication_path": "images/03-rank-02-alishahryar1-free-claude-code.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.03.freestylefly--awesome-gpt-image-2.png",
+          "sha256": "775ee1d1674e82b8e06d2f59152240ace3e4acabb1b1adeaa651513889cdf1bb",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "publication_path": "images/04-rank-03-freestylefly-awesome-gpt-image-2.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D045-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "47ad9a773bd91441bc5f915bc175fd109ed550c453ac2311c5ad0a04f3e922a0",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 391,
+      "caption_sha256": "8171b7bb9c900b286a9c0753732b358ea4d9e91d5b5d0b1c9b8c4a826e5844f9",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "6b2127f130ad126b70bc1197d9422444153350cec5aae030a012d958d6ff2867",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-25/2026-08-25.ai.cover.png",
+          "sha256": "66aca02d8c743b5afad3bf8a33da2af010e555762dce29a1fc6e72452ae6e911",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-25/2026-08-25.ai.01.nousresearch--hermes-agent.png",
+          "sha256": "6c91d61a024533044a3e2d5c0fc4338ca043056ef0dc4b33fc26f5d040f6a987",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/02-rank-01-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-25/2026-08-25.ai.02.freestylefly--awesome-gpt-image-2.png",
+          "sha256": "585c8e22b9160ddd784e6b9e7da57233d93ee285f36044937183d04772d555a6",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "publication_path": "images/03-rank-02-freestylefly-awesome-gpt-image-2.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-25/2026-08-25.ai.03.apache--maka.png",
+          "sha256": "d45b837b723c2bd6c935209d6fc8851058b2b83e9f4a94964e62338395b380fa",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "apache/maka",
+          "publication_path": "images/04-rank-03-apache-maka.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-08-25",
+    "revision": "d7e79f921e90",
+    "image_policy": "repository-source-reference"
+  }
+}

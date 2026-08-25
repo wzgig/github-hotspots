@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-08-25",
+  "window": {
+    "start": "2026-08-24",
+    "end": "2026-08-25"
+  },
+  "source_report": "reports/daily/2026-08-25.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-08-25",
+  "manifest": "reports/daily/assets/2026-08-25/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "openai/codex",
+          "path": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.01.openai--codex.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "Alishahryar1/free-claude-code",
+          "path": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.02.alishahryar1--free-claude-code.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "path": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.03.freestylefly--awesome-gpt-image-2.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-25/2026-08-25.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/daily/assets/2026-08-25/2026-08-25.ai.01.nousresearch--hermes-agent.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "path": "reports/daily/assets/2026-08-25/2026-08-25.ai.02.freestylefly--awesome-gpt-image-2.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "apache/maka",
+          "path": "reports/daily/assets/2026-08-25/2026-08-25.ai.03.apache--maka.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 45,
+    "issue_code": "D045",
+    "issue_label": "第45期",
+    "status": "official"
+  }
+}

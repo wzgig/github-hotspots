@@ -1,0 +1,1302 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-25",
+  "window_start": "2026-08-24",
+  "window_end": "2026-08-25",
+  "generated_at": "2026-08-25T10:32:33+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-24 至 2026-08-25",
+  "publication": {
+    "issue_number": 45,
+    "issue_code": "D045",
+    "issue_label": "第45期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-25",
+    "manifest": "reports/daily/assets/2026-08-25/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "openai/codex",
+            "path": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.01.openai--codex.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Alishahryar1/free-claude-code",
+            "path": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.02.alishahryar1--free-claude-code.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "path": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.03.freestylefly--awesome-gpt-image-2.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-25/2026-08-25.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-25/2026-08-25.ai.01.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "path": "reports/daily/assets/2026-08-25/2026-08-25.ai.02.freestylefly--awesome-gpt-image-2.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "apache/maka",
+            "path": "reports/daily/assets/2026-08-25/2026-08-25.ai.03.apache--maka.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 45,
+      "issue_code": "D045",
+      "issue_label": "第45期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 965415649,
+      "full_name": "openai/codex",
+      "owner": "openai",
+      "name": "codex",
+      "html_url": "https://github.com/openai/codex",
+      "description": "Lightweight coding agent that runs in your terminal",
+      "language": "Rust",
+      "stars": 117193,
+      "forks": 17869,
+      "open_issues": 13703,
+      "watchers": 117193,
+      "topics": [],
+      "created_at": "2025-04-13T05:37:54Z",
+      "updated_at": "2026-08-25T02:31:40Z",
+      "pushed_at": "2026-08-25T01:29:37Z",
+      "daily_stars": 1994,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 92.57,
+      "star_delta": 2078,
+      "fork_delta": 315,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.55,
+        "relative_growth": 92.75,
+        "fork_growth": 100.0,
+        "total_stars": 31.88,
+        "activity": 100.0,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "公开信息不足，暂不能准确说明 codex 的具体用途",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "公开信息不足，暂不能准确说明 codex 的具体用途",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-25/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+      "publication_evidence": {
+        "full_name": "openai/codex",
+        "license_spdx_id": "Apache-2.0",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-25/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+          "sha256": "66110939cf3f4e85fc1fd8ee99562257985a838d137e2fda1bf5096c05245311",
+          "width": 200,
+          "height": 200
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.01.openai--codex.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1144520675,
+      "full_name": "Alishahryar1/free-claude-code",
+      "owner": "Alishahryar1",
+      "name": "free-claude-code",
+      "html_url": "https://github.com/Alishahryar1/free-claude-code",
+      "description": "Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
+      "language": "Python",
+      "stars": 49075,
+      "forks": 8009,
+      "open_issues": 346,
+      "watchers": 321,
+      "topics": [],
+      "created_at": "2026-01-28T19:02:30Z",
+      "updated_at": "2026-08-25T02:32:24Z",
+      "pushed_at": "2026-08-24T21:33:07Z",
+      "daily_stars": 891,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 90.94,
+      "star_delta": 1145,
+      "fork_delta": 123,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.2,
+        "relative_growth": 91.3,
+        "fork_growth": 94.2,
+        "total_stars": 23.19,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "free-claude-code 的用途证据不足，需要先查看仓库 README",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "free-claude-code 的用途证据不足，需要先查看仓库 README",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-25/repo-cc418404c0b64cdf92b15ec8-f849baa1d75848ba928bc562.png",
+      "publication_evidence": {
+        "full_name": "Alishahryar1/free-claude-code",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-25/repo-cc418404c0b64cdf92b15ec8-f849baa1d75848ba928bc562.png",
+          "sha256": "77fb1a6a72c200377547ea47669af727efca72ee1141770f359c9604b6f89ff7",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.02.alishahryar1--free-claude-code.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1220744720,
+      "full_name": "freestylefly/awesome-gpt-image-2",
+      "owner": "freestylefly",
+      "name": "awesome-gpt-image-2",
+      "html_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+      "language": "JavaScript",
+      "stars": 15695,
+      "forks": 1656,
+      "open_issues": 12,
+      "watchers": 46,
+      "topics": [
+        "agents",
+        "ai-image-generation",
+        "chatgpt",
+        "dsh-plugin",
+        "gpt-image-2",
+        "image-prompts",
+        "prompt-as-code",
+        "prompt-engineering",
+        "skills",
+        "workflow-automation"
+      ],
+      "created_at": "2026-04-25T09:19:13Z",
+      "updated_at": "2026-08-25T02:32:17Z",
+      "pushed_at": "2026-08-24T10:55:30Z",
+      "daily_stars": 2449,
+      "weekly_stars": null,
+      "trending_rank_daily": 17,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 88.58,
+      "star_delta": 3023,
+      "fork_delta": 230,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 97.1,
+        "total_stars": 10.14,
+        "activity": 71.65,
+        "trending_signal": 23.98
+      },
+      "summary": {
+        "one_line": "主要任务是整理和复用提示词设计方法；awesome-gpt-image-2 还能帮助测试不同指令结构和模型表现",
+        "highlights": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+        "capabilities": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "core_title": "整理和复用提示词设计方法",
+        "core_summary": "主要任务是整理和复用提示词设计方法；awesome-gpt-image-2 还能帮助测试不同指令结构和模型表现",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-25/repo-018f3800293e8d2965c7fdca-df7576ad4e31d44d4e6b6ad9.png",
+      "publication_evidence": {
+        "full_name": "freestylefly/awesome-gpt-image-2",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-25/repo-018f3800293e8d2965c7fdca-df7576ad4e31d44d4e6b6ad9.png",
+          "sha256": "072f497b3f4c8c3bc367ffb960f2d7ef8cc54cf4805c5f97110d3f48d9837fb7",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.03.freestylefly--awesome-gpt-image-2.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "openai/codex",
+            "path": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.01.openai--codex.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "Alishahryar1/free-claude-code",
+            "path": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.02.alishahryar1--free-claude-code.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "path": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.03.freestylefly--awesome-gpt-image-2.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 965415649,
+          "full_name": "openai/codex",
+          "owner": "openai",
+          "name": "codex",
+          "html_url": "https://github.com/openai/codex",
+          "description": "Lightweight coding agent that runs in your terminal",
+          "language": "Rust",
+          "stars": 117193,
+          "forks": 17869,
+          "open_issues": 13703,
+          "watchers": 117193,
+          "topics": [],
+          "created_at": "2025-04-13T05:37:54Z",
+          "updated_at": "2026-08-25T02:31:40Z",
+          "pushed_at": "2026-08-25T01:29:37Z",
+          "daily_stars": 1994,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.57,
+          "star_delta": 2078,
+          "fork_delta": 315,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.55,
+            "relative_growth": 92.75,
+            "fork_growth": 100.0,
+            "total_stars": 31.88,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 codex 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 codex 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-25/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+          "publication_evidence": {
+            "full_name": "openai/codex",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-25/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+              "sha256": "66110939cf3f4e85fc1fd8ee99562257985a838d137e2fda1bf5096c05245311",
+              "width": 200,
+              "height": 200
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.01.openai--codex.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1144520675,
+          "full_name": "Alishahryar1/free-claude-code",
+          "owner": "Alishahryar1",
+          "name": "free-claude-code",
+          "html_url": "https://github.com/Alishahryar1/free-claude-code",
+          "description": "Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
+          "language": "Python",
+          "stars": 49075,
+          "forks": 8009,
+          "open_issues": 346,
+          "watchers": 321,
+          "topics": [],
+          "created_at": "2026-01-28T19:02:30Z",
+          "updated_at": "2026-08-25T02:32:24Z",
+          "pushed_at": "2026-08-24T21:33:07Z",
+          "daily_stars": 891,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 90.94,
+          "star_delta": 1145,
+          "fork_delta": 123,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.2,
+            "relative_growth": 91.3,
+            "fork_growth": 94.2,
+            "total_stars": 23.19,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "free-claude-code 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "free-claude-code 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-25/repo-cc418404c0b64cdf92b15ec8-f849baa1d75848ba928bc562.png",
+          "publication_evidence": {
+            "full_name": "Alishahryar1/free-claude-code",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-25/repo-cc418404c0b64cdf92b15ec8-f849baa1d75848ba928bc562.png",
+              "sha256": "77fb1a6a72c200377547ea47669af727efca72ee1141770f359c9604b6f89ff7",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.02.alishahryar1--free-claude-code.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1220744720,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "owner": "freestylefly",
+          "name": "awesome-gpt-image-2",
+          "html_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+          "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+          "language": "JavaScript",
+          "stars": 15695,
+          "forks": 1656,
+          "open_issues": 12,
+          "watchers": 46,
+          "topics": [
+            "agents",
+            "ai-image-generation",
+            "chatgpt",
+            "dsh-plugin",
+            "gpt-image-2",
+            "image-prompts",
+            "prompt-as-code",
+            "prompt-engineering",
+            "skills",
+            "workflow-automation"
+          ],
+          "created_at": "2026-04-25T09:19:13Z",
+          "updated_at": "2026-08-25T02:32:17Z",
+          "pushed_at": "2026-08-24T10:55:30Z",
+          "daily_stars": 2449,
+          "weekly_stars": null,
+          "trending_rank_daily": 17,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.58,
+          "star_delta": 3023,
+          "fork_delta": 230,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 97.1,
+            "total_stars": 10.14,
+            "activity": 71.65,
+            "trending_signal": 23.98
+          },
+          "summary": {
+            "one_line": "主要任务是整理和复用提示词设计方法；awesome-gpt-image-2 还能帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "主要任务是整理和复用提示词设计方法；awesome-gpt-image-2 还能帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-25/repo-018f3800293e8d2965c7fdca-df7576ad4e31d44d4e6b6ad9.png",
+          "publication_evidence": {
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-25/repo-018f3800293e8d2965c7fdca-df7576ad4e31d44d4e6b6ad9.png",
+              "sha256": "072f497b3f4c8c3bc367ffb960f2d7ef8cc54cf4805c5f97110d3f48d9837fb7",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-25/2026-08-25.comprehensive.03.freestylefly--awesome-gpt-image-2.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-25/2026-08-25.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-25/2026-08-25.ai.01.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "path": "reports/daily/assets/2026-08-25/2026-08-25.ai.02.freestylefly--awesome-gpt-image-2.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "apache/maka",
+            "path": "reports/daily/assets/2026-08-25/2026-08-25.ai.03.apache--maka.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 235864,
+          "forks": 47591,
+          "open_issues": 35495,
+          "watchers": 235864,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "nous-research",
+            "openai"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-08-25T02:29:08Z",
+          "pushed_at": "2026-08-25T02:20:57Z",
+          "daily_stars": 896,
+          "weekly_stars": null,
+          "trending_rank_daily": 6,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 90.12,
+          "star_delta": 908,
+          "fork_delta": 259,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.67,
+            "relative_growth": 76.67,
+            "fork_growth": 100.0,
+            "total_stars": 93.33,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "hermes-agent 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "hermes-agent 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-25/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-25/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-25/2026-08-25.ai.01.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1220744720,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "owner": "freestylefly",
+          "name": "awesome-gpt-image-2",
+          "html_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+          "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+          "language": "JavaScript",
+          "stars": 15695,
+          "forks": 1656,
+          "open_issues": 12,
+          "watchers": 46,
+          "topics": [
+            "agents",
+            "ai-image-generation",
+            "chatgpt",
+            "dsh-plugin",
+            "gpt-image-2",
+            "image-prompts",
+            "prompt-as-code",
+            "prompt-engineering",
+            "skills",
+            "workflow-automation"
+          ],
+          "created_at": "2026-04-25T09:19:13Z",
+          "updated_at": "2026-08-25T02:32:17Z",
+          "pushed_at": "2026-08-24T10:55:30Z",
+          "daily_stars": 2449,
+          "weekly_stars": null,
+          "trending_rank_daily": 17,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.36,
+          "star_delta": 3023,
+          "fork_delta": 230,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 96.67,
+            "total_stars": 6.67,
+            "activity": 71.65,
+            "trending_signal": 23.98
+          },
+          "summary": {
+            "one_line": "想要整理和复用提示词设计方法，可以用 awesome-gpt-image-2；它能帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "想要整理和复用提示词设计方法，可以用 awesome-gpt-image-2；它能帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-25/repo-018f3800293e8d2965c7fdca-df7576ad4e31d44d4e6b6ad9.png",
+          "publication_evidence": {
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-25/repo-018f3800293e8d2965c7fdca-df7576ad4e31d44d4e6b6ad9.png",
+              "sha256": "072f497b3f4c8c3bc367ffb960f2d7ef8cc54cf4805c5f97110d3f48d9837fb7",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-25/2026-08-25.ai.02.freestylefly--awesome-gpt-image-2.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1251460378,
+          "full_name": "apache/maka",
+          "owner": "apache",
+          "name": "maka",
+          "html_url": "https://github.com/apache/maka",
+          "description": "Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.",
+          "language": "TypeScript",
+          "stars": 2947,
+          "forks": 308,
+          "open_issues": 249,
+          "watchers": 12,
+          "topics": [
+            "agent-runtime",
+            "ai",
+            "ai-agent",
+            "apache",
+            "cli",
+            "desktop",
+            "electron",
+            "event-sourcing",
+            "incubator",
+            "llm",
+            "local-first",
+            "maka",
+            "tool-use",
+            "typescript"
+          ],
+          "created_at": "2026-05-27T15:46:05Z",
+          "updated_at": "2026-08-25T02:32:05Z",
+          "pushed_at": "2026-08-25T02:22:12Z",
+          "daily_stars": 411,
+          "weekly_stars": null,
+          "trending_rank_daily": 9,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 81.84,
+          "star_delta": 615,
+          "fork_delta": 40,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 86.67,
+            "relative_growth": 96.67,
+            "fork_growth": 76.67,
+            "total_stars": 0.0,
+            "activity": 100.0,
+            "trending_signal": 30.1
+          },
+          "summary": {
+            "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；maka 还能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；maka 还能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-25/repo-2c851c73c11b23fc4b2b0e01-40e660ced69509bdf060772f.png",
+          "publication_evidence": {
+            "full_name": "apache/maka",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-25/repo-2c851c73c11b23fc4b2b0e01-40e660ced69509bdf060772f.png",
+              "sha256": "9fd0a0b416755da4b9e04832d7fab96ac990a5b14a8969fd6193f4824bc0c606",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-25/2026-08-25.ai.03.apache--maka.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
