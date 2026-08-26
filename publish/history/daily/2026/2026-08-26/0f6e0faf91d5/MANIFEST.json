@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "0f6e0faf91d584161b62ae56ca409089c51a139493ca9e58344d9308f37e96cd",
+  "checklist_sha256": "8c73a24eb43bb28c6fa4d0aac1a0ecba6a9ec2d9acb66e764e2d006b525591bf",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-08-26",
+  "generated_at": "2026-08-26T10:39:01.079394+08:00",
+  "issue": {
+    "number": 46,
+    "code": "D046",
+    "stem": "D046-2026-08-26",
+    "label": "第46期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-08-26.json",
+    "report_sha256": "27eab4c7cc19d602379c267a5eb982164230a5ea11dbaafae05e0fa714d64828",
+    "poster_manifest": "reports/daily/assets/2026-08-26/manifest.json",
+    "poster_manifest_sha256": "9e55b9cb47e3c6e0444914051681562c41713c95e4c9fdd04d249a5007d18269",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D046-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "4a0c364be1a49044daeb798ef0daf17cae2b8a49ccd76c0ac7d380ed0e926c9c",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 385,
+      "caption_sha256": "ba3f35ce8c4a1b4001bc76d64df38a7db82d0b666d2637e02214f48212b33f97",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "4439eed300083580ff5c2aaad2b1efae7d8d065773e4335195a6c3ab622636a3",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.cover.png",
+          "sha256": "8a7fcf1bbe4475bbe5929e566039c29bfd61e47e29d877b76e9d8015455646a2",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.01.freestylefly--awesome-gpt-image-2.png",
+          "sha256": "712a6d70c1c30d81cd950f1229e36ed716a445580bc3485513bfe1e311e6bd80",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "publication_path": "images/02-rank-01-freestylefly-awesome-gpt-image-2.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.02.basecamp--omarchy.png",
+          "sha256": "ff8a910e6236e7772b26e2c3f7df5f39c5daeecde1b8bfb2485b606435c5aef5",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "basecamp/omarchy",
+          "publication_path": "images/03-rank-02-basecamp-omarchy.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.03.madslorentzen--ai-job-search.png",
+          "sha256": "df08f0f6cfc06ebe238396f8466fb94a14754287e72b257889d45c72b4653d0f",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "MadsLorentzen/ai-job-search",
+          "publication_path": "images/04-rank-03-madslorentzen-ai-job-search.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D046-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "47d00a207f5e064340a2024e173d58c551b353f557fb9e2545a6178745d035a8",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 396,
+      "caption_sha256": "b7bf9105a3b354d31435d84f2dcadd62ef3f5e9ebdad3406e54671634faa7f5a",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "e744e7456e7da057782b4feb9fcd664f59da1a97c20b9c0f03f77d89d350cf1b",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-26/2026-08-26.ai.cover.png",
+          "sha256": "6d0555be1b1bbb2a8663ffaaf24bd7c15d7424167cd7ca89163ef4befe984e0c",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-26/2026-08-26.ai.01.freestylefly--awesome-gpt-image-2.png",
+          "sha256": "d801e8a45522bbbaeba13b94140f8ce74a8965b6b6d0c2633c90dccceb7d3353",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "publication_path": "images/02-rank-01-freestylefly-awesome-gpt-image-2.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-26/2026-08-26.ai.02.madslorentzen--ai-job-search.png",
+          "sha256": "4bb8933ad193bae0152ccdd904f593a305df6d7976aeab4cf3a78612093320ed",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "MadsLorentzen/ai-job-search",
+          "publication_path": "images/03-rank-02-madslorentzen-ai-job-search.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-26/2026-08-26.ai.03.agricidaniel--claude-obsidian.png",
+          "sha256": "77cbc4ee458e7f7b18a6b282d3a29bf1ea99805f5ebb7315e199317cf9dcabdb",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "AgriciDaniel/claude-obsidian",
+          "publication_path": "images/04-rank-03-agricidaniel-claude-obsidian.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-08-26",
+    "revision": "0f6e0faf91d5",
+    "image_policy": "repository-source-reference"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-08-26",
+  "window": {
+    "start": "2026-08-25",
+    "end": "2026-08-26"
+  },
+  "source_report": "reports/daily/2026-08-26.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-08-26",
+  "manifest": "reports/daily/assets/2026-08-26/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "path": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.01.freestylefly--awesome-gpt-image-2.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "basecamp/omarchy",
+          "path": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.02.basecamp--omarchy.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "MadsLorentzen/ai-job-search",
+          "path": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.03.madslorentzen--ai-job-search.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-26/2026-08-26.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "path": "reports/daily/assets/2026-08-26/2026-08-26.ai.01.freestylefly--awesome-gpt-image-2.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "MadsLorentzen/ai-job-search",
+          "path": "reports/daily/assets/2026-08-26/2026-08-26.ai.02.madslorentzen--ai-job-search.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "AgriciDaniel/claude-obsidian",
+          "path": "reports/daily/assets/2026-08-26/2026-08-26.ai.03.agricidaniel--claude-obsidian.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 46,
+    "issue_code": "D046",
+    "issue_label": "第46期",
+    "status": "official"
+  }
+}

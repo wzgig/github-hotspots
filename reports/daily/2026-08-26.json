@@ -1,0 +1,1390 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-26",
+  "window_start": "2026-08-25",
+  "window_end": "2026-08-26",
+  "generated_at": "2026-08-26T10:37:31+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-25 至 2026-08-26",
+  "publication": {
+    "issue_number": 46,
+    "issue_code": "D046",
+    "issue_label": "第46期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "4 个上榜项目未获取到 Owner 头像，海报已使用身份占位图",
+    "4 个上榜项目未获取到 README，相关文案将使用受控回退"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-26",
+    "manifest": "reports/daily/assets/2026-08-26/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "path": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.01.freestylefly--awesome-gpt-image-2.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "basecamp/omarchy",
+            "path": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.02.basecamp--omarchy.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "MadsLorentzen/ai-job-search",
+            "path": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.03.madslorentzen--ai-job-search.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-26/2026-08-26.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "path": "reports/daily/assets/2026-08-26/2026-08-26.ai.01.freestylefly--awesome-gpt-image-2.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "MadsLorentzen/ai-job-search",
+            "path": "reports/daily/assets/2026-08-26/2026-08-26.ai.02.madslorentzen--ai-job-search.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "AgriciDaniel/claude-obsidian",
+            "path": "reports/daily/assets/2026-08-26/2026-08-26.ai.03.agricidaniel--claude-obsidian.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 46,
+      "issue_code": "D046",
+      "issue_label": "第46期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1220744720,
+      "full_name": "freestylefly/awesome-gpt-image-2",
+      "owner": "freestylefly",
+      "name": "awesome-gpt-image-2",
+      "html_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+      "language": "JavaScript",
+      "stars": 18328,
+      "forks": 1883,
+      "open_issues": 13,
+      "watchers": 63,
+      "topics": [
+        "agents",
+        "ai-image-generation",
+        "chatgpt",
+        "dsh-plugin",
+        "gpt-image-2",
+        "image-prompts",
+        "prompt-as-code",
+        "prompt-engineering",
+        "skills",
+        "workflow-automation"
+      ],
+      "created_at": "2026-04-25T09:19:13Z",
+      "updated_at": "2026-08-26T02:37:26Z",
+      "pushed_at": "2026-08-25T07:16:50Z",
+      "daily_stars": 1698,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 92.93,
+      "star_delta": 2633,
+      "fork_delta": 227,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 98.61,
+        "total_stars": 18.06,
+        "activity": 71.65,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "awesome-gpt-image-2 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+        "highlights": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+        "capabilities": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "core_title": "整理和复用提示词设计方法",
+        "core_summary": "awesome-gpt-image-2 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "freestylefly/awesome-gpt-image-2",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.01.freestylefly--awesome-gpt-image-2.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 994093166,
+      "full_name": "basecamp/omarchy",
+      "owner": "basecamp",
+      "name": "omarchy",
+      "html_url": "https://github.com/basecamp/omarchy",
+      "description": "Beautiful, Modern & Opinionated Linux",
+      "language": "Shell",
+      "stars": 31352,
+      "forks": 3182,
+      "open_issues": 1601,
+      "watchers": 166,
+      "topics": [],
+      "created_at": "2025-06-01T07:26:22Z",
+      "updated_at": "2026-08-26T02:36:06Z",
+      "pushed_at": "2026-08-25T20:52:35Z",
+      "daily_stars": 1083,
+      "weekly_stars": null,
+      "trending_rank_daily": 9,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 89.14,
+      "star_delta": 1113,
+      "fork_delta": 114,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.22,
+        "relative_growth": 93.06,
+        "fork_growth": 94.44,
+        "total_stars": 19.44,
+        "activity": 100.0,
+        "trending_signal": 30.1
+      },
+      "summary": {
+        "one_line": "omarchy 的用途证据不足，需要先查看仓库 README",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "omarchy 的用途证据不足，需要先查看仓库 README",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "basecamp/omarchy",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.02.basecamp--omarchy.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1185389803,
+      "full_name": "MadsLorentzen/ai-job-search",
+      "owner": "MadsLorentzen",
+      "name": "ai-job-search",
+      "html_url": "https://github.com/MadsLorentzen/ai-job-search",
+      "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+      "language": "Python",
+      "stars": 35399,
+      "forks": 12163,
+      "open_issues": 5,
+      "watchers": 140,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "career",
+        "claude-code",
+        "cover-letter",
+        "cv",
+        "interview-preparation",
+        "job-application",
+        "job-hunting",
+        "job-search",
+        "latex",
+        "resume"
+      ],
+      "created_at": "2026-03-18T14:33:04Z",
+      "updated_at": "2026-08-26T02:34:40Z",
+      "pushed_at": "2026-08-25T14:55:43Z",
+      "daily_stars": 1265,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 88.97,
+      "star_delta": 1254,
+      "fork_delta": 251,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.61,
+        "relative_growth": 94.44,
+        "fork_growth": 100.0,
+        "total_stars": 22.22,
+        "activity": 71.65,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；ai-job-search 还能把模型能力接入可重复的任务流程",
+        "highlights": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+        "capabilities": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "core_title": "搭建能够连续执行多步任务的 AI Agent",
+        "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；ai-job-search 还能把模型能力接入可重复的任务流程",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "MadsLorentzen/ai-job-search",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.03.madslorentzen--ai-job-search.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "path": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.01.freestylefly--awesome-gpt-image-2.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "basecamp/omarchy",
+            "path": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.02.basecamp--omarchy.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "MadsLorentzen/ai-job-search",
+            "path": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.03.madslorentzen--ai-job-search.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1220744720,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "owner": "freestylefly",
+          "name": "awesome-gpt-image-2",
+          "html_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+          "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+          "language": "JavaScript",
+          "stars": 18328,
+          "forks": 1883,
+          "open_issues": 13,
+          "watchers": 63,
+          "topics": [
+            "agents",
+            "ai-image-generation",
+            "chatgpt",
+            "dsh-plugin",
+            "gpt-image-2",
+            "image-prompts",
+            "prompt-as-code",
+            "prompt-engineering",
+            "skills",
+            "workflow-automation"
+          ],
+          "created_at": "2026-04-25T09:19:13Z",
+          "updated_at": "2026-08-26T02:37:26Z",
+          "pushed_at": "2026-08-25T07:16:50Z",
+          "daily_stars": 1698,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.93,
+          "star_delta": 2633,
+          "fork_delta": 227,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 98.61,
+            "total_stars": 18.06,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "awesome-gpt-image-2 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "awesome-gpt-image-2 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.01.freestylefly--awesome-gpt-image-2.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 994093166,
+          "full_name": "basecamp/omarchy",
+          "owner": "basecamp",
+          "name": "omarchy",
+          "html_url": "https://github.com/basecamp/omarchy",
+          "description": "Beautiful, Modern & Opinionated Linux",
+          "language": "Shell",
+          "stars": 31352,
+          "forks": 3182,
+          "open_issues": 1601,
+          "watchers": 166,
+          "topics": [],
+          "created_at": "2025-06-01T07:26:22Z",
+          "updated_at": "2026-08-26T02:36:06Z",
+          "pushed_at": "2026-08-25T20:52:35Z",
+          "daily_stars": 1083,
+          "weekly_stars": null,
+          "trending_rank_daily": 9,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.14,
+          "star_delta": 1113,
+          "fork_delta": 114,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.22,
+            "relative_growth": 93.06,
+            "fork_growth": 94.44,
+            "total_stars": 19.44,
+            "activity": 100.0,
+            "trending_signal": 30.1
+          },
+          "summary": {
+            "one_line": "omarchy 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "omarchy 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "basecamp/omarchy",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.02.basecamp--omarchy.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1185389803,
+          "full_name": "MadsLorentzen/ai-job-search",
+          "owner": "MadsLorentzen",
+          "name": "ai-job-search",
+          "html_url": "https://github.com/MadsLorentzen/ai-job-search",
+          "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+          "language": "Python",
+          "stars": 35399,
+          "forks": 12163,
+          "open_issues": 5,
+          "watchers": 140,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "career",
+            "claude-code",
+            "cover-letter",
+            "cv",
+            "interview-preparation",
+            "job-application",
+            "job-hunting",
+            "job-search",
+            "latex",
+            "resume"
+          ],
+          "created_at": "2026-03-18T14:33:04Z",
+          "updated_at": "2026-08-26T02:34:40Z",
+          "pushed_at": "2026-08-25T14:55:43Z",
+          "daily_stars": 1265,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.97,
+          "star_delta": 1254,
+          "fork_delta": 251,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.61,
+            "relative_growth": 94.44,
+            "fork_growth": 100.0,
+            "total_stars": 22.22,
+            "activity": 71.65,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；ai-job-search 还能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；ai-job-search 还能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "MadsLorentzen/ai-job-search",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-26/2026-08-26.comprehensive.03.madslorentzen--ai-job-search.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-26/2026-08-26.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "path": "reports/daily/assets/2026-08-26/2026-08-26.ai.01.freestylefly--awesome-gpt-image-2.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "MadsLorentzen/ai-job-search",
+            "path": "reports/daily/assets/2026-08-26/2026-08-26.ai.02.madslorentzen--ai-job-search.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "AgriciDaniel/claude-obsidian",
+            "path": "reports/daily/assets/2026-08-26/2026-08-26.ai.03.agricidaniel--claude-obsidian.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1220744720,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "owner": "freestylefly",
+          "name": "awesome-gpt-image-2",
+          "html_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+          "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+          "language": "JavaScript",
+          "stars": 18328,
+          "forks": 1883,
+          "open_issues": 13,
+          "watchers": 63,
+          "topics": [
+            "agents",
+            "ai-image-generation",
+            "chatgpt",
+            "dsh-plugin",
+            "gpt-image-2",
+            "image-prompts",
+            "prompt-as-code",
+            "prompt-engineering",
+            "skills",
+            "workflow-automation"
+          ],
+          "created_at": "2026-04-25T09:19:13Z",
+          "updated_at": "2026-08-26T02:37:26Z",
+          "pushed_at": "2026-08-25T07:16:50Z",
+          "daily_stars": 1698,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.34,
+          "star_delta": 2633,
+          "fork_delta": 227,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 96.55,
+            "total_stars": 10.34,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "awesome-gpt-image-2 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "awesome-gpt-image-2 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-26/2026-08-26.ai.01.freestylefly--awesome-gpt-image-2.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1185389803,
+          "full_name": "MadsLorentzen/ai-job-search",
+          "owner": "MadsLorentzen",
+          "name": "ai-job-search",
+          "html_url": "https://github.com/MadsLorentzen/ai-job-search",
+          "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+          "language": "Python",
+          "stars": 35399,
+          "forks": 12163,
+          "open_issues": 5,
+          "watchers": 140,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "career",
+            "claude-code",
+            "cover-letter",
+            "cv",
+            "interview-preparation",
+            "job-application",
+            "job-hunting",
+            "job-search",
+            "latex",
+            "resume"
+          ],
+          "created_at": "2026-03-18T14:33:04Z",
+          "updated_at": "2026-08-26T02:34:40Z",
+          "pushed_at": "2026-08-25T14:55:43Z",
+          "daily_stars": 1265,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 86.56,
+          "star_delta": 1254,
+          "fork_delta": 251,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.55,
+            "relative_growth": 89.66,
+            "fork_growth": 100.0,
+            "total_stars": 13.79,
+            "activity": 71.65,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 ai-job-search；它能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 ai-job-search；它能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "MadsLorentzen/ai-job-search",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-26/2026-08-26.ai.02.madslorentzen--ai-job-search.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1203670949,
+          "full_name": "AgriciDaniel/claude-obsidian",
+          "owner": "AgriciDaniel",
+          "name": "claude-obsidian",
+          "html_url": "https://github.com/AgriciDaniel/claude-obsidian",
+          "description": "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+          "language": "Python",
+          "stars": 12794,
+          "forks": 1382,
+          "open_issues": 135,
+          "watchers": 61,
+          "topics": [
+            "agent-skills",
+            "ai-note-taking",
+            "ai-second-brain",
+            "claude-code",
+            "claude-code-skill",
+            "claude-memory",
+            "claude-plugin",
+            "karpathy-llm-wiki",
+            "knowledge-graph",
+            "knowledge-management",
+            "note-taking",
+            "notion-alternative",
+            "obsidian",
+            "obsidian-ai",
+            "obsidian-plugin",
+            "obsidian-second-brain",
+            "open-source",
+            "personal-knowledge-management",
+            "pkm",
+            "second-brain"
+          ],
+          "created_at": "2026-04-07T08:59:37Z",
+          "updated_at": "2026-08-26T02:37:30Z",
+          "pushed_at": "2026-08-25T23:32:08Z",
+          "daily_stars": 813,
+          "weekly_stars": null,
+          "trending_rank_daily": 6,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 83.16,
+          "star_delta": 833,
+          "fork_delta": 41,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 89.66,
+            "relative_growth": 93.1,
+            "fork_growth": 75.86,
+            "total_stars": 6.9,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 claude-obsidian 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 claude-obsidian 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "AgriciDaniel/claude-obsidian",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-26/2026-08-26.ai.03.agricidaniel--claude-obsidian.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
