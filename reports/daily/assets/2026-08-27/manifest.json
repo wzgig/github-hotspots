@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-08-27",
+  "window": {
+    "start": "2026-08-26",
+    "end": "2026-08-27"
+  },
+  "source_report": "reports/daily/2026-08-27.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-08-27",
+  "manifest": "reports/daily/assets/2026-08-27/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "path": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.01.freestylefly--awesome-gpt-image-2.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "openai/codex",
+          "path": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.02.openai--codex.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.03.nousresearch--hermes-agent.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-27/2026-08-27.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "path": "reports/daily/assets/2026-08-27/2026-08-27.ai.01.freestylefly--awesome-gpt-image-2.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/daily/assets/2026-08-27/2026-08-27.ai.02.nousresearch--hermes-agent.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "AgriciDaniel/claude-obsidian",
+          "path": "reports/daily/assets/2026-08-27/2026-08-27.ai.03.agricidaniel--claude-obsidian.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 47,
+    "issue_code": "D047",
+    "issue_label": "第47期",
+    "status": "official"
+  }
+}

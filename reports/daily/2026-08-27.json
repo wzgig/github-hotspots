@@ -1,0 +1,1331 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-27",
+  "window_start": "2026-08-26",
+  "window_end": "2026-08-27",
+  "generated_at": "2026-08-27T19:13:37+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-26 至 2026-08-27",
+  "publication": {
+    "issue_number": 47,
+    "issue_code": "D047",
+    "issue_label": "第47期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-27",
+    "manifest": "reports/daily/assets/2026-08-27/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "path": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.01.freestylefly--awesome-gpt-image-2.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "openai/codex",
+            "path": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.02.openai--codex.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-27/2026-08-27.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "path": "reports/daily/assets/2026-08-27/2026-08-27.ai.01.freestylefly--awesome-gpt-image-2.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-27/2026-08-27.ai.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "AgriciDaniel/claude-obsidian",
+            "path": "reports/daily/assets/2026-08-27/2026-08-27.ai.03.agricidaniel--claude-obsidian.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 47,
+      "issue_code": "D047",
+      "issue_label": "第47期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1220744720,
+      "full_name": "freestylefly/awesome-gpt-image-2",
+      "owner": "freestylefly",
+      "name": "awesome-gpt-image-2",
+      "html_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+      "language": "JavaScript",
+      "stars": 22428,
+      "forks": 2239,
+      "open_issues": 13,
+      "watchers": 79,
+      "topics": [
+        "agents",
+        "ai-image-generation",
+        "chatgpt",
+        "dsh-plugin",
+        "gpt-image-2",
+        "image-prompts",
+        "prompt-as-code",
+        "prompt-engineering",
+        "skills",
+        "workflow-automation"
+      ],
+      "created_at": "2026-04-25T09:19:13Z",
+      "updated_at": "2026-08-27T11:13:26Z",
+      "pushed_at": "2026-08-26T08:54:32Z",
+      "daily_stars": 4050,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 91.79,
+      "star_delta": 4100,
+      "fork_delta": 356,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 100.0,
+        "total_stars": 29.41,
+        "activity": 71.65,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "awesome-gpt-image-2 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+        "highlights": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+        "capabilities": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "core_title": "整理和复用提示词设计方法",
+        "core_summary": "awesome-gpt-image-2 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-27/repo-018f3800293e8d2965c7fdca-df7576ad4e31d44d4e6b6ad9.png",
+      "publication_evidence": {
+        "full_name": "freestylefly/awesome-gpt-image-2",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-27/repo-018f3800293e8d2965c7fdca-df7576ad4e31d44d4e6b6ad9.png",
+          "sha256": "072f497b3f4c8c3bc367ffb960f2d7ef8cc54cf4805c5f97110d3f48d9837fb7",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.01.freestylefly--awesome-gpt-image-2.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 965415649,
+      "full_name": "openai/codex",
+      "owner": "openai",
+      "name": "codex",
+      "html_url": "https://github.com/openai/codex",
+      "description": "Lightweight coding agent that runs in your terminal",
+      "language": "Rust",
+      "stars": 119072,
+      "forks": 18167,
+      "open_issues": 14067,
+      "watchers": 119072,
+      "topics": [],
+      "created_at": "2025-04-13T05:37:54Z",
+      "updated_at": "2026-08-27T11:08:35Z",
+      "pushed_at": "2026-08-27T10:21:33Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 86.53,
+      "star_delta": 877,
+      "fork_delta": 156,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 92.94,
+        "relative_growth": 89.41,
+        "fork_growth": 97.65,
+        "total_stars": 48.24,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "codex 的用途证据不足，需要先查看仓库 README",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "codex 的用途证据不足，需要先查看仓库 README",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-27/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+      "publication_evidence": {
+        "full_name": "openai/codex",
+        "license_spdx_id": "Apache-2.0",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-27/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+          "sha256": "66110939cf3f4e85fc1fd8ee99562257985a838d137e2fda1bf5096c05245311",
+          "width": 200,
+          "height": 200
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.02.openai--codex.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1024554267,
+      "full_name": "NousResearch/hermes-agent",
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "html_url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": 237129,
+      "forks": 47993,
+      "open_issues": 36380,
+      "watchers": 237129,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "codex",
+        "hermes",
+        "hermes-agent",
+        "llm",
+        "nous-research",
+        "openai"
+      ],
+      "created_at": "2025-07-22T22:22:28Z",
+      "updated_at": "2026-08-27T11:09:09Z",
+      "pushed_at": "2026-08-27T11:10:34Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 86.35,
+      "star_delta": 671,
+      "fork_delta": 245,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 90.59,
+        "relative_growth": 82.35,
+        "fork_growth": 98.82,
+        "total_stars": 94.12,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
+        "highlights": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+        "capabilities": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "core_title": "搭建能够连续执行多步任务的 AI Agent",
+        "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-27/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+      "publication_evidence": {
+        "full_name": "NousResearch/hermes-agent",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-27/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.03.nousresearch--hermes-agent.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "path": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.01.freestylefly--awesome-gpt-image-2.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "openai/codex",
+            "path": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.02.openai--codex.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1220744720,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "owner": "freestylefly",
+          "name": "awesome-gpt-image-2",
+          "html_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+          "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+          "language": "JavaScript",
+          "stars": 22428,
+          "forks": 2239,
+          "open_issues": 13,
+          "watchers": 79,
+          "topics": [
+            "agents",
+            "ai-image-generation",
+            "chatgpt",
+            "dsh-plugin",
+            "gpt-image-2",
+            "image-prompts",
+            "prompt-as-code",
+            "prompt-engineering",
+            "skills",
+            "workflow-automation"
+          ],
+          "created_at": "2026-04-25T09:19:13Z",
+          "updated_at": "2026-08-27T11:13:26Z",
+          "pushed_at": "2026-08-26T08:54:32Z",
+          "daily_stars": 4050,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.79,
+          "star_delta": 4100,
+          "fork_delta": 356,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 29.41,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "awesome-gpt-image-2 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "awesome-gpt-image-2 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-27/repo-018f3800293e8d2965c7fdca-df7576ad4e31d44d4e6b6ad9.png",
+          "publication_evidence": {
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-27/repo-018f3800293e8d2965c7fdca-df7576ad4e31d44d4e6b6ad9.png",
+              "sha256": "072f497b3f4c8c3bc367ffb960f2d7ef8cc54cf4805c5f97110d3f48d9837fb7",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.01.freestylefly--awesome-gpt-image-2.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 965415649,
+          "full_name": "openai/codex",
+          "owner": "openai",
+          "name": "codex",
+          "html_url": "https://github.com/openai/codex",
+          "description": "Lightweight coding agent that runs in your terminal",
+          "language": "Rust",
+          "stars": 119072,
+          "forks": 18167,
+          "open_issues": 14067,
+          "watchers": 119072,
+          "topics": [],
+          "created_at": "2025-04-13T05:37:54Z",
+          "updated_at": "2026-08-27T11:08:35Z",
+          "pushed_at": "2026-08-27T10:21:33Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 86.53,
+          "star_delta": 877,
+          "fork_delta": 156,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.94,
+            "relative_growth": 89.41,
+            "fork_growth": 97.65,
+            "total_stars": 48.24,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "codex 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "codex 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-27/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+          "publication_evidence": {
+            "full_name": "openai/codex",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-27/repo-d9cc1fa8e2d7605ca162db59-55c141ad145ba856e26085e7.png",
+              "sha256": "66110939cf3f4e85fc1fd8ee99562257985a838d137e2fda1bf5096c05245311",
+              "width": 200,
+              "height": 200
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.02.openai--codex.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 237129,
+          "forks": 47993,
+          "open_issues": 36380,
+          "watchers": 237129,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "nous-research",
+            "openai"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-08-27T11:09:09Z",
+          "pushed_at": "2026-08-27T11:10:34Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 86.35,
+          "star_delta": 671,
+          "fork_delta": 245,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 90.59,
+            "relative_growth": 82.35,
+            "fork_growth": 98.82,
+            "total_stars": 94.12,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；hermes-agent 还能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-27/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-27/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-27/2026-08-27.comprehensive.03.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-27/2026-08-27.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "path": "reports/daily/assets/2026-08-27/2026-08-27.ai.01.freestylefly--awesome-gpt-image-2.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-27/2026-08-27.ai.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "AgriciDaniel/claude-obsidian",
+            "path": "reports/daily/assets/2026-08-27/2026-08-27.ai.03.agricidaniel--claude-obsidian.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1220744720,
+          "full_name": "freestylefly/awesome-gpt-image-2",
+          "owner": "freestylefly",
+          "name": "awesome-gpt-image-2",
+          "html_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+          "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+          "language": "JavaScript",
+          "stars": 22428,
+          "forks": 2239,
+          "open_issues": 13,
+          "watchers": 79,
+          "topics": [
+            "agents",
+            "ai-image-generation",
+            "chatgpt",
+            "dsh-plugin",
+            "gpt-image-2",
+            "image-prompts",
+            "prompt-as-code",
+            "prompt-engineering",
+            "skills",
+            "workflow-automation"
+          ],
+          "created_at": "2026-04-25T09:19:13Z",
+          "updated_at": "2026-08-27T11:13:26Z",
+          "pushed_at": "2026-08-26T08:54:32Z",
+          "daily_stars": 4050,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.4,
+          "star_delta": 4100,
+          "fork_delta": 356,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 21.62,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "awesome-gpt-image-2 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "awesome-gpt-image-2 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-27/repo-018f3800293e8d2965c7fdca-df7576ad4e31d44d4e6b6ad9.png",
+          "publication_evidence": {
+            "full_name": "freestylefly/awesome-gpt-image-2",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-27/repo-018f3800293e8d2965c7fdca-df7576ad4e31d44d4e6b6ad9.png",
+              "sha256": "072f497b3f4c8c3bc367ffb960f2d7ef8cc54cf4805c5f97110d3f48d9837fb7",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-27/2026-08-27.ai.01.freestylefly--awesome-gpt-image-2.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 237129,
+          "forks": 47993,
+          "open_issues": 36380,
+          "watchers": 237129,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "nous-research",
+            "openai"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-08-27T11:09:09Z",
+          "pushed_at": "2026-08-27T11:10:34Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 82.43,
+          "star_delta": 671,
+          "fork_delta": 245,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 86.49,
+            "relative_growth": 72.97,
+            "fork_growth": 97.3,
+            "total_stars": 97.3,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 hermes-agent；它能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 hermes-agent；它能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-27/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-27/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-27/2026-08-27.ai.02.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1203670949,
+          "full_name": "AgriciDaniel/claude-obsidian",
+          "owner": "AgriciDaniel",
+          "name": "claude-obsidian",
+          "html_url": "https://github.com/AgriciDaniel/claude-obsidian",
+          "description": "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+          "language": "Python",
+          "stars": 13701,
+          "forks": 1414,
+          "open_issues": 139,
+          "watchers": 63,
+          "topics": [
+            "agent-skills",
+            "ai-note-taking",
+            "ai-second-brain",
+            "claude-code",
+            "claude-code-skill",
+            "claude-memory",
+            "claude-plugin",
+            "karpathy-llm-wiki",
+            "knowledge-graph",
+            "knowledge-management",
+            "note-taking",
+            "notion-alternative",
+            "obsidian",
+            "obsidian-ai",
+            "obsidian-plugin",
+            "obsidian-second-brain",
+            "open-source",
+            "personal-knowledge-management",
+            "pkm",
+            "second-brain"
+          ],
+          "created_at": "2026-04-07T08:59:37Z",
+          "updated_at": "2026-08-27T11:10:33Z",
+          "pushed_at": "2026-08-26T11:43:21Z",
+          "daily_stars": 810,
+          "weekly_stars": null,
+          "trending_rank_daily": 13,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 80.77,
+          "star_delta": 907,
+          "fork_delta": 32,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 91.89,
+            "relative_growth": 94.59,
+            "fork_growth": 64.86,
+            "total_stars": 18.92,
+            "activity": 71.65,
+            "trending_signal": 26.26
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 claude-obsidian 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 claude-obsidian 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-27/repo-020a379ac82d0ebdf6f9f808-7a4363ee6a2c3f28a1e47f81.png",
+          "publication_evidence": {
+            "full_name": "AgriciDaniel/claude-obsidian",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-27/repo-020a379ac82d0ebdf6f9f808-7a4363ee6a2c3f28a1e47f81.png",
+              "sha256": "6c3a26bee84664bf9d9f060f4d018ea7ae3069b2c7405d103086b7fcfc5b2a9b",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-27/2026-08-27.ai.03.agricidaniel--claude-obsidian.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
