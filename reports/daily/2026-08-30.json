@@ -1,0 +1,1561 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-30",
+  "window_start": "2026-08-29",
+  "window_end": "2026-08-30",
+  "generated_at": "2026-08-30T07:31:24+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-29 至 2026-08-30",
+  "publication": {
+    "issue_number": 50,
+    "issue_code": "D050",
+    "issue_label": "第50期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-30",
+    "manifest": "reports/daily/assets/2026-08-30/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tt-a1i/archify",
+            "path": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.01.tt-a1i--archify.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "path": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.02.k-dense-ai--scientific-agent-skills.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "path": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.03.bilawalsidhu--gods-eye-view.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-30/2026-08-30.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "path": "reports/daily/assets/2026-08-30/2026-08-30.ai.01.k-dense-ai--scientific-agent-skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-30/2026-08-30.ai.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/daily/assets/2026-08-30/2026-08-30.ai.03.firecrawl--firecrawl.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 50,
+      "issue_code": "D050",
+      "issue_label": "第50期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1211139949,
+      "full_name": "tt-a1i/archify",
+      "owner": "tt-a1i",
+      "name": "archify",
+      "html_url": "https://github.com/tt-a1i/archify",
+      "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+      "language": "JavaScript",
+      "stars": 30979,
+      "forks": 1929,
+      "open_issues": 69,
+      "watchers": 119,
+      "topics": [
+        "agent-skills",
+        "architecture-as-code",
+        "architecture-diagram",
+        "claude-skill",
+        "code-visualization",
+        "codex",
+        "coding-agents",
+        "data-flow-diagram",
+        "deepseek-harness",
+        "developer-tools",
+        "diagram-as-code",
+        "diagrams",
+        "diagrams-as-code",
+        "dsh-plugin",
+        "mermaid-alternative",
+        "opencode",
+        "sequence-diagram",
+        "software-architecture",
+        "system-design",
+        "text-to-diagram"
+      ],
+      "created_at": "2026-04-15T05:27:37Z",
+      "updated_at": "2026-08-29T23:30:52Z",
+      "pushed_at": "2026-08-29T17:13:30Z",
+      "daily_stars": 3927,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 95.65,
+      "star_delta": 2370,
+      "fork_delta": 133,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 98.55,
+        "total_stars": 15.94,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "把代码库或系统描述变成交互式、可验证的架构图与流程图",
+        "highlights": [
+          "从代码库或描述生成交互式系统图",
+          "用验证后的快照对比架构变更",
+          "沿节点搜索、上下游和精确路径检查关系"
+        ],
+        "audience": "需要梳理系统、评审架构变更或制作技术演示的软件团队",
+        "capabilities": [
+          "输入代码库或系统描述，生成系统地图",
+          "选择架构、工作流、时序、数据流或生命周期图",
+          "对比验证前后的架构快照",
+          "搜索节点并追踪上下游关系与路径",
+          "导出自包含 HTML、PNG、SVG 和 WebM"
+        ],
+        "core_title": "让架构图先验证，再交付",
+        "core_summary": "Agent 先生成带类型的 JSON 中间表示，Archify 再执行结构、布局、路径和标签检查，通过后渲染成可分享文件。",
+        "prerequisites": "需要支持 Agent Skills 的 AI agent；本地命令行流程还需要 Node.js。",
+        "limitations": "不是通用绘图编辑器或 Mermaid 主题；架构变更对比不会推断影响、风险或合并安全。",
+        "license_label": "MIT",
+        "license_restrictions": "free to use, modify, and distribute.",
+        "readme_sha": "9edae19e987f493582e561bd9ab340b3e58939d3",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+          ],
+          "highlights": [
+            [
+              "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+            ],
+            [
+              "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+            ],
+            [
+              "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+            ]
+          ],
+          "audience": [
+            "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+          ],
+          "capabilities": [
+            [
+              "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+            ],
+            [
+              "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+            ],
+            [
+              "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+            ],
+            [
+              "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+            ],
+            [
+              "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+            ]
+          ],
+          "core_title": [
+            "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+          ],
+          "core_summary": [
+            "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+          ],
+          "prerequisites": [
+            "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+          ],
+          "limitations": [
+            "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-08-30/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+      "publication_evidence": {
+        "full_name": "tt-a1i/archify",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "9edae19e987f493582e561bd9ab340b3e58939d3",
+          "source_url": "https://api.github.com/repos/tt-a1i/archify/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-30/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+          "sha256": "cffad876f1f5e204f6d40e83e84578d1d99678857f79e0e6bd347059dad7004a",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.01.tt-a1i--archify.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1079456184,
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "owner": "K-Dense-AI",
+      "name": "scientific-agent-skills",
+      "html_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "language": "Python",
+      "stars": 37917,
+      "forks": 3572,
+      "open_issues": 15,
+      "watchers": 170,
+      "topics": [
+        "agent-skills",
+        "ai-scientist",
+        "bioinformatics",
+        "chemoinformatics",
+        "claude",
+        "claude-skills",
+        "claudecode",
+        "clinical-research",
+        "computational-biology",
+        "data-analysis",
+        "drug-discovery",
+        "genomics",
+        "materials-science",
+        "metabolomics",
+        "proteomics",
+        "scientific-computing",
+        "scientific-visualization"
+      ],
+      "created_at": "2025-10-19T20:54:15Z",
+      "updated_at": "2026-08-29T23:31:10Z",
+      "pushed_at": "2026-08-29T22:55:14Z",
+      "daily_stars": 1604,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 89.38,
+      "star_delta": 890,
+      "fork_delta": 58,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.65,
+        "relative_growth": 92.75,
+        "fork_growth": 95.65,
+        "total_stars": 18.84,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "给 AI agent 装上一套覆盖科研数据、分析工具与写作流程的技能库",
+        "highlights": [
+          "连接科学数据库和专业 Python 工具",
+          "覆盖基因组、药物发现与多组学分析",
+          "把检索、分析和报告串成可追溯流程"
+        ],
+        "audience": "需要让 AI agent 协助文献、数据分析或实验规划的科研人员与研发团队",
+        "capabilities": [
+          "检索科学数据库和全文研究资料",
+          "执行基因组、单细胞和多组学分析",
+          "开展分子性质预测、虚拟筛选和药物发现任务",
+          "生成统计分析和出版级科研图表",
+          "撰写带证据追踪的综述、报告和演示材料"
+        ],
+        "core_title": "把科研工具装进 AI agent",
+        "core_summary": "技能以 SKILL.md、代码示例和参考资料封装数据库、Python 包与研究流程，让 agent 能按领域调用并保留验证和来源边界。",
+        "prerequisites": "需要 Python 3.13+、uv，以及支持 Agent Skills 标准的 AI agent；Windows 需 WSL2。",
+        "limitations": "技能可能执行代码、安装包、联网或修改文件；不能替代诊断、治疗、认证或方法放行决定。",
+        "license_label": "MIT",
+        "license_restrictions": "These licenses may differ from the repository's MIT License.",
+        "readme_sha": "4e15094f3ae31b9b33ccef1c7abd7e587be68ea5",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+          ],
+          "highlights": [
+            [
+              "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+            ],
+            [
+              "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+            ],
+            [
+              "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+            ]
+          ],
+          "audience": [
+            "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+          ],
+          "capabilities": [
+            [
+              "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+            ],
+            [
+              "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+            ],
+            [
+              "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+            ],
+            [
+              "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+            ],
+            [
+              "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+            ]
+          ],
+          "core_title": [
+            "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+          ],
+          "core_summary": [
+            "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+          ],
+          "prerequisites": [
+            "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+          ],
+          "limitations": [
+            "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-08-30/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+      "publication_evidence": {
+        "full_name": "K-Dense-AI/scientific-agent-skills",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "4e15094f3ae31b9b33ccef1c7abd7e587be68ea5",
+          "source_url": "https://api.github.com/repos/K-Dense-AI/scientific-agent-skills/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-30/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+          "sha256": "ce0f5b344ea4969ca99815ee5550749d6cbe2a0cc281f7ce4bd9653538876c3a",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.02.k-dense-ai--scientific-agent-skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1277471539,
+      "full_name": "bilawalsidhu/gods-eye-view",
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "html_url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": 12587,
+      "forks": 2495,
+      "open_issues": 111,
+      "watchers": 280,
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "created_at": "2026-06-22T23:37:22Z",
+      "updated_at": "2026-08-29T23:30:11Z",
+      "pushed_at": "2026-08-28T00:46:30Z",
+      "daily_stars": 1870,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 87.78,
+      "star_delta": 1079,
+      "fork_delta": 177,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.55,
+        "relative_growth": 98.55,
+        "fork_growth": 100.0,
+        "total_stars": 10.14,
+        "activity": 51.34,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "在浏览器里把公开实时信号放进一颗可探索的三维地球",
+        "highlights": [
+          "查看飞机、船舶、卫星和地震等实时图层",
+          "锁定目标并查看轨迹、元数据与周边信号",
+          "用语音控制镜头、图层和地图标注"
+        ],
+        "audience": "适合做地理情报探索、数据可视化演示和公开信号研究的用户",
+        "capabilities": [
+          "在三维地球上查看公开实时数据",
+          "锁定目标并查看轨迹与详细元数据",
+          "把公共摄像头投影进三维城市并查看覆盖范围",
+          "用语音切换图层、移动镜头和绘制标注",
+          "录制镜头导览并分享当前视图"
+        ],
+        "core_title": "把公开信号变成可探索的地球",
+        "core_summary": "浏览器客户端把航班、船舶、卫星、地震、摄像头等公开源叠加到三维地球，并标注实时、延迟、模拟或不可用状态。",
+        "prerequisites": "需要 Node.js 24.14.x 或 26.x，并配置 Google Maps API key；语音功能另需 OpenAI key。",
+        "limitations": "数据可能延迟、不完整、模拟、推断或错误；不得用于导航、应急、医疗、投资等安全关键用途。",
+        "license_label": "MIT License",
+        "license_restrictions": "Bundled and live datasets carry their own terms",
+        "readme_sha": "ff82dab65ca52f6f8636c3108fbe49e50699c044",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+          ],
+          "highlights": [
+            [
+              "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+            ],
+            [
+              "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+            ],
+            [
+              "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+            ]
+          ],
+          "audience": [
+            "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+          ],
+          "capabilities": [
+            [
+              "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+            ],
+            [
+              "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+            ],
+            [
+              "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+            ],
+            [
+              "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+            ],
+            [
+              "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+            ]
+          ],
+          "core_title": [
+            "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+          ],
+          "core_summary": [
+            "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+          ],
+          "prerequisites": [
+            "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+          ],
+          "limitations": [
+            "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+          ],
+          "license_label": [
+            "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+          ],
+          "license_restrictions": [
+            "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-08-30/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+      "publication_evidence": {
+        "full_name": "bilawalsidhu/gods-eye-view",
+        "license_spdx_id": "NOASSERTION",
+        "readme": {
+          "sha": "ff82dab65ca52f6f8636c3108fbe49e50699c044",
+          "source_url": "https://api.github.com/repos/bilawalsidhu/gods-eye-view/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-08-30/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+          "sha256": "d0bad70376c9fb4449c9142b6bcee3b81bbe920f1d42c8890f6481212352bc74",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT License",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.03.bilawalsidhu--gods-eye-view.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tt-a1i/archify",
+            "path": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.01.tt-a1i--archify.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "path": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.02.k-dense-ai--scientific-agent-skills.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "path": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.03.bilawalsidhu--gods-eye-view.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1211139949,
+          "full_name": "tt-a1i/archify",
+          "owner": "tt-a1i",
+          "name": "archify",
+          "html_url": "https://github.com/tt-a1i/archify",
+          "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+          "language": "JavaScript",
+          "stars": 30979,
+          "forks": 1929,
+          "open_issues": 69,
+          "watchers": 119,
+          "topics": [
+            "agent-skills",
+            "architecture-as-code",
+            "architecture-diagram",
+            "claude-skill",
+            "code-visualization",
+            "codex",
+            "coding-agents",
+            "data-flow-diagram",
+            "deepseek-harness",
+            "developer-tools",
+            "diagram-as-code",
+            "diagrams",
+            "diagrams-as-code",
+            "dsh-plugin",
+            "mermaid-alternative",
+            "opencode",
+            "sequence-diagram",
+            "software-architecture",
+            "system-design",
+            "text-to-diagram"
+          ],
+          "created_at": "2026-04-15T05:27:37Z",
+          "updated_at": "2026-08-29T23:30:52Z",
+          "pushed_at": "2026-08-29T17:13:30Z",
+          "daily_stars": 3927,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.65,
+          "star_delta": 2370,
+          "fork_delta": 133,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 98.55,
+            "total_stars": 15.94,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把代码库或系统描述变成交互式、可验证的架构图与流程图",
+            "highlights": [
+              "从代码库或描述生成交互式系统图",
+              "用验证后的快照对比架构变更",
+              "沿节点搜索、上下游和精确路径检查关系"
+            ],
+            "audience": "需要梳理系统、评审架构变更或制作技术演示的软件团队",
+            "capabilities": [
+              "输入代码库或系统描述，生成系统地图",
+              "选择架构、工作流、时序、数据流或生命周期图",
+              "对比验证前后的架构快照",
+              "搜索节点并追踪上下游关系与路径",
+              "导出自包含 HTML、PNG、SVG 和 WebM"
+            ],
+            "core_title": "让架构图先验证，再交付",
+            "core_summary": "Agent 先生成带类型的 JSON 中间表示，Archify 再执行结构、布局、路径和标签检查，通过后渲染成可分享文件。",
+            "prerequisites": "需要支持 Agent Skills 的 AI agent；本地命令行流程还需要 Node.js。",
+            "limitations": "不是通用绘图编辑器或 Mermaid 主题；架构变更对比不会推断影响、风险或合并安全。",
+            "license_label": "MIT",
+            "license_restrictions": "free to use, modify, and distribute.",
+            "readme_sha": "9edae19e987f493582e561bd9ab340b3e58939d3",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+              ],
+              "highlights": [
+                [
+                  "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+                ],
+                [
+                  "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+                ],
+                [
+                  "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+                ]
+              ],
+              "audience": [
+                "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+                ],
+                [
+                  "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+                ],
+                [
+                  "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+                ],
+                [
+                  "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+                ],
+                [
+                  "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+                ]
+              ],
+              "core_title": [
+                "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+              ],
+              "core_summary": [
+                "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+              ],
+              "prerequisites": [
+                "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+              ],
+              "limitations": [
+                "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:9edae19e987f493582e561bd9ab340b3e58939d3"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-08-30/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+          "publication_evidence": {
+            "full_name": "tt-a1i/archify",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "9edae19e987f493582e561bd9ab340b3e58939d3",
+              "source_url": "https://api.github.com/repos/tt-a1i/archify/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-30/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+              "sha256": "cffad876f1f5e204f6d40e83e84578d1d99678857f79e0e6bd347059dad7004a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.01.tt-a1i--archify.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1079456184,
+          "full_name": "K-Dense-AI/scientific-agent-skills",
+          "owner": "K-Dense-AI",
+          "name": "scientific-agent-skills",
+          "html_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+          "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+          "language": "Python",
+          "stars": 37917,
+          "forks": 3572,
+          "open_issues": 15,
+          "watchers": 170,
+          "topics": [
+            "agent-skills",
+            "ai-scientist",
+            "bioinformatics",
+            "chemoinformatics",
+            "claude",
+            "claude-skills",
+            "claudecode",
+            "clinical-research",
+            "computational-biology",
+            "data-analysis",
+            "drug-discovery",
+            "genomics",
+            "materials-science",
+            "metabolomics",
+            "proteomics",
+            "scientific-computing",
+            "scientific-visualization"
+          ],
+          "created_at": "2025-10-19T20:54:15Z",
+          "updated_at": "2026-08-29T23:31:10Z",
+          "pushed_at": "2026-08-29T22:55:14Z",
+          "daily_stars": 1604,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.38,
+          "star_delta": 890,
+          "fork_delta": 58,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.65,
+            "relative_growth": 92.75,
+            "fork_growth": 95.65,
+            "total_stars": 18.84,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "给 AI agent 装上一套覆盖科研数据、分析工具与写作流程的技能库",
+            "highlights": [
+              "连接科学数据库和专业 Python 工具",
+              "覆盖基因组、药物发现与多组学分析",
+              "把检索、分析和报告串成可追溯流程"
+            ],
+            "audience": "需要让 AI agent 协助文献、数据分析或实验规划的科研人员与研发团队",
+            "capabilities": [
+              "检索科学数据库和全文研究资料",
+              "执行基因组、单细胞和多组学分析",
+              "开展分子性质预测、虚拟筛选和药物发现任务",
+              "生成统计分析和出版级科研图表",
+              "撰写带证据追踪的综述、报告和演示材料"
+            ],
+            "core_title": "把科研工具装进 AI agent",
+            "core_summary": "技能以 SKILL.md、代码示例和参考资料封装数据库、Python 包与研究流程，让 agent 能按领域调用并保留验证和来源边界。",
+            "prerequisites": "需要 Python 3.13+、uv，以及支持 Agent Skills 标准的 AI agent；Windows 需 WSL2。",
+            "limitations": "技能可能执行代码、安装包、联网或修改文件；不能替代诊断、治疗、认证或方法放行决定。",
+            "license_label": "MIT",
+            "license_restrictions": "These licenses may differ from the repository's MIT License.",
+            "readme_sha": "4e15094f3ae31b9b33ccef1c7abd7e587be68ea5",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+              ],
+              "highlights": [
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ],
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ],
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ]
+              ],
+              "audience": [
+                "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ],
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ],
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ],
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ],
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ]
+              ],
+              "core_title": [
+                "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+              ],
+              "core_summary": [
+                "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+              ],
+              "prerequisites": [
+                "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+              ],
+              "limitations": [
+                "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-08-30/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+          "publication_evidence": {
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "4e15094f3ae31b9b33ccef1c7abd7e587be68ea5",
+              "source_url": "https://api.github.com/repos/K-Dense-AI/scientific-agent-skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-30/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+              "sha256": "ce0f5b344ea4969ca99815ee5550749d6cbe2a0cc281f7ce4bd9653538876c3a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.02.k-dense-ai--scientific-agent-skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1277471539,
+          "full_name": "bilawalsidhu/gods-eye-view",
+          "owner": "bilawalsidhu",
+          "name": "gods-eye-view",
+          "html_url": "https://github.com/bilawalsidhu/gods-eye-view",
+          "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+          "language": "JavaScript",
+          "stars": 12587,
+          "forks": 2495,
+          "open_issues": 111,
+          "watchers": 280,
+          "topics": [
+            "3d-globe",
+            "cesium",
+            "flight-tracking",
+            "geospatial",
+            "geospatial-intelligence",
+            "gis",
+            "osint",
+            "photogrammetry",
+            "satellite-tracking",
+            "spatial-intelligence",
+            "webgl",
+            "worldview"
+          ],
+          "created_at": "2026-06-22T23:37:22Z",
+          "updated_at": "2026-08-29T23:30:11Z",
+          "pushed_at": "2026-08-28T00:46:30Z",
+          "daily_stars": 1870,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 87.78,
+          "star_delta": 1079,
+          "fork_delta": 177,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.55,
+            "relative_growth": 98.55,
+            "fork_growth": 100.0,
+            "total_stars": 10.14,
+            "activity": 51.34,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "在浏览器里把公开实时信号放进一颗可探索的三维地球",
+            "highlights": [
+              "查看飞机、船舶、卫星和地震等实时图层",
+              "锁定目标并查看轨迹、元数据与周边信号",
+              "用语音控制镜头、图层和地图标注"
+            ],
+            "audience": "适合做地理情报探索、数据可视化演示和公开信号研究的用户",
+            "capabilities": [
+              "在三维地球上查看公开实时数据",
+              "锁定目标并查看轨迹与详细元数据",
+              "把公共摄像头投影进三维城市并查看覆盖范围",
+              "用语音切换图层、移动镜头和绘制标注",
+              "录制镜头导览并分享当前视图"
+            ],
+            "core_title": "把公开信号变成可探索的地球",
+            "core_summary": "浏览器客户端把航班、船舶、卫星、地震、摄像头等公开源叠加到三维地球，并标注实时、延迟、模拟或不可用状态。",
+            "prerequisites": "需要 Node.js 24.14.x 或 26.x，并配置 Google Maps API key；语音功能另需 OpenAI key。",
+            "limitations": "数据可能延迟、不完整、模拟、推断或错误；不得用于导航、应急、医疗、投资等安全关键用途。",
+            "license_label": "MIT License",
+            "license_restrictions": "Bundled and live datasets carry their own terms",
+            "readme_sha": "ff82dab65ca52f6f8636c3108fbe49e50699c044",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+                ],
+                [
+                  "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+                ],
+                [
+                  "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+                ]
+              ],
+              "audience": [
+                "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+                ],
+                [
+                  "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+                ],
+                [
+                  "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+                ],
+                [
+                  "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+                ],
+                [
+                  "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+              ],
+              "core_summary": [
+                "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+              ],
+              "prerequisites": [
+                "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+              ],
+              "limitations": [
+                "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+              ],
+              "license_label": [
+                "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+              ],
+              "license_restrictions": [
+                "github.readme:ff82dab65ca52f6f8636c3108fbe49e50699c044"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-08-30/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+          "publication_evidence": {
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "ff82dab65ca52f6f8636c3108fbe49e50699c044",
+              "source_url": "https://api.github.com/repos/bilawalsidhu/gods-eye-view/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-30/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+              "sha256": "d0bad70376c9fb4449c9142b6bcee3b81bbe920f1d42c8890f6481212352bc74",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT License",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.03.bilawalsidhu--gods-eye-view.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-30/2026-08-30.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "path": "reports/daily/assets/2026-08-30/2026-08-30.ai.01.k-dense-ai--scientific-agent-skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-08-30/2026-08-30.ai.02.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/daily/assets/2026-08-30/2026-08-30.ai.03.firecrawl--firecrawl.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1079456184,
+          "full_name": "K-Dense-AI/scientific-agent-skills",
+          "owner": "K-Dense-AI",
+          "name": "scientific-agent-skills",
+          "html_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+          "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+          "language": "Python",
+          "stars": 37917,
+          "forks": 3572,
+          "open_issues": 15,
+          "watchers": 170,
+          "topics": [
+            "agent-skills",
+            "ai-scientist",
+            "bioinformatics",
+            "chemoinformatics",
+            "claude",
+            "claude-skills",
+            "claudecode",
+            "clinical-research",
+            "computational-biology",
+            "data-analysis",
+            "drug-discovery",
+            "genomics",
+            "materials-science",
+            "metabolomics",
+            "proteomics",
+            "scientific-computing",
+            "scientific-visualization"
+          ],
+          "created_at": "2025-10-19T20:54:15Z",
+          "updated_at": "2026-08-29T23:31:10Z",
+          "pushed_at": "2026-08-29T22:55:14Z",
+          "daily_stars": 1604,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.14,
+          "star_delta": 890,
+          "fork_delta": 58,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 96.43,
+            "fork_growth": 96.43,
+            "total_stars": 14.29,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "给科研 AI Agent 装上可复用技能，覆盖检索、分析、建模与报告工作流",
+            "highlights": [
+              "把科研任务拆成可调用的技能",
+              "连接科学数据库与 Python 工具",
+              "为多步研究流程提供文档与示例"
+            ],
+            "audience": "做生物、化学、医学或数据研究的团队，想让 AI Agent 执行多步科研流程",
+            "capabilities": [
+              "检索论文、监管文件与临床试验记录",
+              "查询生物、化学与临床数据库",
+              "分析组学、分子与时序数据",
+              "生成可追溯的研究报告与图表",
+              "编排实验、建模和实验室自动化流程"
+            ],
+            "core_title": "把科研流程变成 Agent 技能",
+            "core_summary": "每项技能包含文档、代码示例、使用场景和参考资料，让 Agent 能按步骤连接数据库、Python 包与研究工具。",
+            "prerequisites": "需要支持 Agent Skills 标准的客户端；仓库工具要求 Python 3.13+ 和 uv",
+            "limitations": "技能可执行代码、安装包并发起网络请求；安装前需逐项审阅 SKILL.md",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "4e15094f3ae31b9b33ccef1c7abd7e587be68ea5",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+              ],
+              "highlights": [
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ],
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ],
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ]
+              ],
+              "audience": [
+                "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ],
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ],
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ],
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ],
+                [
+                  "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+                ]
+              ],
+              "core_title": [
+                "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+              ],
+              "core_summary": [
+                "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+              ],
+              "prerequisites": [
+                "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+              ],
+              "limitations": [
+                "github.readme:4e15094f3ae31b9b33ccef1c7abd7e587be68ea5"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-30/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+          "publication_evidence": {
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "4e15094f3ae31b9b33ccef1c7abd7e587be68ea5",
+              "source_url": "https://api.github.com/repos/K-Dense-AI/scientific-agent-skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-30/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+              "sha256": "ce0f5b344ea4969ca99815ee5550749d6cbe2a0cc281f7ce4bd9653538876c3a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-30/2026-08-30.ai.01.k-dense-ai--scientific-agent-skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 238123,
+          "forks": 48425,
+          "open_issues": 37484,
+          "watchers": 238123,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "nous-research",
+            "openai"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-08-29T23:29:22Z",
+          "pushed_at": "2026-08-29T18:04:52Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 81.61,
+          "star_delta": 264,
+          "fork_delta": 88,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 85.71,
+            "relative_growth": 71.43,
+            "fork_growth": 100.0,
+            "total_stars": 89.29,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "让 AI Agent 持续执行任务、记住上下文，并从终端或聊天平台接收指令",
+            "highlights": [
+              "拆解并并行推进多步任务",
+              "跨会话搜索历史对话与记忆",
+              "按计划执行任务并投递结果"
+            ],
+            "audience": "需要搭建个人助理、自动化流程或远程 Agent 工作台的开发者",
+            "capabilities": [
+              "拆解并行推进多步任务",
+              "搜索历史对话与持久记忆",
+              "按计划执行任务并投递结果",
+              "通过 CLI、Telegram 等入口交互",
+              "切换模型并连接外部工具"
+            ],
+            "core_title": "让 Agent 在不同入口持续工作",
+            "core_summary": "Hermes 把终端界面、消息网关、记忆系统、定时调度和子 Agent 组合起来，支持本地、云端或远程环境运行。",
+            "prerequisites": "需要配置模型提供方；部分工具还需各自的 API key",
+            "limitations": "工具、消息平台和模型提供方需要分别配置，实际能力随目标运行环境而变化",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "highlights": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "audience": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "core_title": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "core_summary": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "prerequisites": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "limitations": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-30/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-30/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-30/2026-08-30.ai.02.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 787076358,
+          "full_name": "firecrawl/firecrawl",
+          "owner": "firecrawl",
+          "name": "firecrawl",
+          "html_url": "https://github.com/firecrawl/firecrawl",
+          "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
+          "language": "TypeScript",
+          "stars": 174057,
+          "forks": 9574,
+          "open_issues": 568,
+          "watchers": 174057,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "ai-crawler",
+            "ai-scraping",
+            "ai-search",
+            "crawler",
+            "data-extraction",
+            "html-to-markdown",
+            "llm",
+            "markdown",
+            "scraper",
+            "scraping",
+            "web-crawler",
+            "web-data",
+            "web-data-extraction",
+            "web-scraper",
+            "web-scraping",
+            "web-search",
+            "webscraping"
+          ],
+          "created_at": "2024-04-15T21:02:29Z",
+          "updated_at": "2026-08-29T23:20:10Z",
+          "pushed_at": "2026-08-29T06:22:08Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 79.84,
+          "star_delta": 307,
+          "fork_delta": 9,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.86,
+            "relative_growth": 82.14,
+            "fork_growth": 62.5,
+            "total_stars": 71.43,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "把网页 URL 或搜索需求转成 Markdown、结构化数据和可供 Agent 使用的上下文",
+            "highlights": [
+              "搜索网页并返回结果正文",
+              "抓取页面并输出多种格式",
+              "操作动态页面后再提取内容"
+            ],
+            "audience": "需要为 AI 应用、搜索系统或数据流程接入网页内容的开发者",
+            "capabilities": [
+              "搜索网页并返回结果正文",
+              "抓取 URL 并输出 Markdown、JSON 或截图",
+              "先点击、滚动页面再提取内容",
+              "发现整站 URL 并批量抓取页面",
+              "让 Agent 按自然语言寻找资料"
+            ],
+            "core_title": "把网页变成 Agent 可用数据",
+            "core_summary": "通过 Search、Scrape、Interact 等接口，Firecrawl 能搜索、操作和抓取网页，再输出 Markdown、结构化数据或截图。",
+            "prerequisites": "需要注册托管服务并配置 API key；也可按文档自托管",
+            "limitations": "抓取时需遵守网站政策、隐私政策与使用条款；默认遵守 robots.txt 指令",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "The SDKs and some UI components are licensed under the MIT License.",
+            "readme_sha": "6260269c0e9b88b735c4a78abed81b57d9e5b8e1",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+              ],
+              "highlights": [
+                [
+                  "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+                ],
+                [
+                  "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+                ],
+                [
+                  "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+                ]
+              ],
+              "audience": [
+                "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+                ],
+                [
+                  "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+                ],
+                [
+                  "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+                ],
+                [
+                  "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+                ],
+                [
+                  "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+                ]
+              ],
+              "core_title": [
+                "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+              ],
+              "core_summary": [
+                "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+              ],
+              "prerequisites": [
+                "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+              ],
+              "limitations": [
+                "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:6260269c0e9b88b735c4a78abed81b57d9e5b8e1"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-08-30/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "publication_evidence": {
+            "full_name": "firecrawl/firecrawl",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "6260269c0e9b88b735c4a78abed81b57d9e5b8e1",
+              "source_url": "https://api.github.com/repos/firecrawl/firecrawl/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-08-30/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+              "sha256": "4d7f54f242bd1b17ae3af2190b84930cc6f381c099ebf58a2df055b4a0ad8c85",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-30/2026-08-30.ai.03.firecrawl--firecrawl.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}

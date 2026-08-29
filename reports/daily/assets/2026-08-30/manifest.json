@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-08-30",
+  "window": {
+    "start": "2026-08-29",
+    "end": "2026-08-30"
+  },
+  "source_report": "reports/daily/2026-08-30.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-08-30",
+  "manifest": "reports/daily/assets/2026-08-30/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "tt-a1i/archify",
+          "path": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.01.tt-a1i--archify.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "K-Dense-AI/scientific-agent-skills",
+          "path": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.02.k-dense-ai--scientific-agent-skills.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "bilawalsidhu/gods-eye-view",
+          "path": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.03.bilawalsidhu--gods-eye-view.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-08-30/2026-08-30.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "K-Dense-AI/scientific-agent-skills",
+          "path": "reports/daily/assets/2026-08-30/2026-08-30.ai.01.k-dense-ai--scientific-agent-skills.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/daily/assets/2026-08-30/2026-08-30.ai.02.nousresearch--hermes-agent.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "firecrawl/firecrawl",
+          "path": "reports/daily/assets/2026-08-30/2026-08-30.ai.03.firecrawl--firecrawl.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 50,
+    "issue_code": "D050",
+    "issue_label": "第50期",
+    "status": "official"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "1f54330436fec6258e6a126a6473ec024f6138fe60f903df52069dfb186a2645",
+  "checklist_sha256": "c9998c1f9a4e9c7a7dc9b7ef1787fe406d15fbca46e200417c942c69bdba6166",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-08-30",
+  "generated_at": "2026-08-30T07:34:19.093550+08:00",
+  "issue": {
+    "number": 50,
+    "code": "D050",
+    "stem": "D050-2026-08-30",
+    "label": "第50期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-08-30.json",
+    "report_sha256": "b1dcf1d694322ffddfeeeb69fd358da903fed0a95279c844c9e3f0c5a55876de",
+    "poster_manifest": "reports/daily/assets/2026-08-30/manifest.json",
+    "poster_manifest_sha256": "190cc703ffa6f22f80db9930b270517af9f97874c4b33f11b3bdfbae9afff765",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D050-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "54786b46021e4b4e719f33063b635f01730938a0e89fe3472271a13e2e0fa132",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 328,
+      "caption_sha256": "de5acb26ab6a11c906a5787031e471d0c134579cb9a851b861ffab5773815a6e",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "dd9368f67cb88fde9fe7d7f16bbfcfd98d3d8bf7b48cde3c7040dca63dd70ed8",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.cover.png",
+          "sha256": "110942702b4b883d4ee14624a403c495dd607716811ca07d3a3f2f58f5406854",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.01.tt-a1i--archify.png",
+          "sha256": "693a3d61f5ec78f6ae8c31087db552a5833f2947f3d40685f48feb6cb12d895b",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "tt-a1i/archify",
+          "publication_path": "images/02-rank-01-tt-a1i-archify.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.02.k-dense-ai--scientific-agent-skills.png",
+          "sha256": "c7d92639a84ef62e0ec9f86149cbafe2eebdea2c529cea7108714d53a634881e",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "K-Dense-AI/scientific-agent-skills",
+          "publication_path": "images/03-rank-02-k-dense-ai-scientific-agent-skills.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-30/2026-08-30.comprehensive.03.bilawalsidhu--gods-eye-view.png",
+          "sha256": "dc9d74b3017f18a484e49f189da57f5a38ee34ef1428ca5d0e4e634299cdc84e",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "bilawalsidhu/gods-eye-view",
+          "publication_path": "images/04-rank-03-bilawalsidhu-gods-eye-view.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D050-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "fd25da61878363fd604ea824a1e3ff1a05d40cf137f95cb9667830e297842e94",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 360,
+      "caption_sha256": "0eefc8704609bd0a5d50b6de0686123ea0352d8bbc14b2c1a0692e964c9f9f99",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "b60f95915a058610854c37cea6ea31b3cc28e285a6b7dd9291b3fbf40216eff9",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-08-30/2026-08-30.ai.cover.png",
+          "sha256": "6d74cdedc6e80e133993b7b6beca83c2620033c21714fb40c248ab629e5be7e6",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-30/2026-08-30.ai.01.k-dense-ai--scientific-agent-skills.png",
+          "sha256": "bfb1df9c0135cf9d349b5bbfff41acc9f850625cf4f1c007a4acef5b5af9f055",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "K-Dense-AI/scientific-agent-skills",
+          "publication_path": "images/02-rank-01-k-dense-ai-scientific-agent-skills.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-30/2026-08-30.ai.02.nousresearch--hermes-agent.png",
+          "sha256": "716e2ca8203cd5443ab18af80032e5aa3b6f85b5c5a9fafc7e2bd33c7b68faa2",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/03-rank-02-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-08-30/2026-08-30.ai.03.firecrawl--firecrawl.png",
+          "sha256": "889984b630d3e94b6c89a3cb428f50554ebc66093c1fcb7ce923a05fb9b4d05b",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "firecrawl/firecrawl",
+          "publication_path": "images/04-rank-03-firecrawl-firecrawl.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-08-30",
+    "revision": "1f54330436fe",
+    "image_policy": "repository-source-reference"
+  }
+}
