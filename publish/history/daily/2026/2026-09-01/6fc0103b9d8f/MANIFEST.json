@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "6fc0103b9d8f18f6ca2a3a572074477f13d63cd9abdaa8df8730c05d0304fe34",
+  "checklist_sha256": "b791a577165ae89875384a123f142469da381c6ecfbf94ba959ab8fde9002885",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-09-01",
+  "generated_at": "2026-09-01T07:34:18.278199+08:00",
+  "issue": {
+    "number": 52,
+    "code": "D052",
+    "stem": "D052-2026-09-01",
+    "label": "第52期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-09-01.json",
+    "report_sha256": "685b635d06f1fee1e48995483f1e8ee3a17b8b621c7d907b0db3cfa0f5e5cc92",
+    "poster_manifest": "reports/daily/assets/2026-09-01/manifest.json",
+    "poster_manifest_sha256": "db0ab817579c418623d52167b2a315ef3e3c88f30b7b3aa3921852ef8bcee552",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D052-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "758d15abced09aa5f711c56f1e831810bbc334eaeffb24aea154b1ed95935fee",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 312,
+      "caption_sha256": "95d499f09d8b12ce1cf5494eacea2d4f1f52f9f03767f53f6b94735797d03ada",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "581cce3ffc5a99ba997bf11e01973ab0f100e4981f0fd922adc944e8ad46cb2e",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.cover.png",
+          "sha256": "cf9dcd61f23650a4191b4bd4e194593fc4c53fed9cc4ba55bd7c8fe594abb4d9",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.01.thu-maic--openmaic.png",
+          "sha256": "ef8bb4322559f104ca58c0a4bb883facb189ef801a68ef84967b5fb485c66016",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "THU-MAIC/OpenMAIC",
+          "publication_path": "images/02-rank-01-thu-maic-openmaic.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.02.tt-a1i--archify.png",
+          "sha256": "559102be483168a2afb9a5bc7552bf6f4e5eb0fbf0fe9b81aac4c0dcf109ea31",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "tt-a1i/archify",
+          "publication_path": "images/03-rank-02-tt-a1i-archify.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.03.deepseek-ai--deepseek-harness.png",
+          "sha256": "712ba91b07943e5d1407ba258f5feb1064c741c4aab50f863e015507d284bb58",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "publication_path": "images/04-rank-03-deepseek-ai-deepseek-harness.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D052-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "e0f7c34c2344937db73d0b7557c9445b870d225f30a724c9fc509a0a7f133415",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 365,
+      "caption_sha256": "a56a7cb3b6407bae2fad8da79ebfbd18a85d4871ccb5fb85366572119f731a9d",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "a1e304f889a0fbd2ccc150db49c596f26ec6b7ea098213a13e92d442ede7e611",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-09-01/2026-09-01.ai.cover.png",
+          "sha256": "e738e9f5b6bc126179ca2ff67b494ac2c857dbda4e5235debb26eaa2f6249619",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-01/2026-09-01.ai.01.deepseek-ai--deepseek-harness.png",
+          "sha256": "145a2989bb38a1aabc114c551846d0b93cabbf41898b9430629a72fc95b957b1",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "publication_path": "images/02-rank-01-deepseek-ai-deepseek-harness.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-01/2026-09-01.ai.02.k-dense-ai--scientific-agent-skills.png",
+          "sha256": "f27d6e9d88bab749c6d3464e5f5f7c26315fd42a7252418e78b3603b9c368363",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "K-Dense-AI/scientific-agent-skills",
+          "publication_path": "images/03-rank-02-k-dense-ai-scientific-agent-skills.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-01/2026-09-01.ai.03.affaan-m--ecc.png",
+          "sha256": "be8cd4f6056ed24562af0c63063aae3f3ed9233f8c27eee185f542ab8b9c6cd0",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "affaan-m/ECC",
+          "publication_path": "images/04-rank-03-affaan-m-ecc.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-09-01",
+    "revision": "6fc0103b9d8f",
+    "image_policy": "repository-source-reference"
+  }
+}

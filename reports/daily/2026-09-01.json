@@ -1,0 +1,1476 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-09-01",
+  "window_start": "2026-08-31",
+  "window_end": "2026-09-01",
+  "generated_at": "2026-09-01T07:31:31+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-31 至 2026-09-01",
+  "publication": {
+    "issue_number": 52,
+    "issue_code": "D052",
+    "issue_label": "第52期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-09-01",
+    "manifest": "reports/daily/assets/2026-09-01/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "THU-MAIC/OpenMAIC",
+            "path": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.01.thu-maic--openmaic.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "tt-a1i/archify",
+            "path": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.02.tt-a1i--archify.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.03.deepseek-ai--deepseek-harness.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-01/2026-09-01.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/daily/assets/2026-09-01/2026-09-01.ai.01.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "path": "reports/daily/assets/2026-09-01/2026-09-01.ai.02.k-dense-ai--scientific-agent-skills.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-01/2026-09-01.ai.03.affaan-m--ecc.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 52,
+      "issue_code": "D052",
+      "issue_label": "第52期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1178737655,
+      "full_name": "THU-MAIC/OpenMAIC",
+      "owner": "THU-MAIC",
+      "name": "OpenMAIC",
+      "html_url": "https://github.com/THU-MAIC/OpenMAIC",
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "language": "TypeScript",
+      "stars": 26906,
+      "forks": 4745,
+      "open_issues": 236,
+      "watchers": 141,
+      "topics": [],
+      "created_at": "2026-03-11T10:13:16Z",
+      "updated_at": "2026-08-31T23:31:14Z",
+      "pushed_at": "2026-08-31T22:04:19Z",
+      "daily_stars": 2819,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 94.86,
+      "star_delta": 1930,
+      "fork_delta": 167,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.63,
+        "relative_growth": 97.26,
+        "fork_growth": 98.63,
+        "total_stars": 24.66,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "把主题或资料变成可互动课堂，并让 AI 教师与同学陪你学习",
+        "highlights": [
+          "输入主题或资料，生成课程大纲与课堂页面",
+          "生成幻灯片、测验、模拟和项目式学习活动",
+          "让多名 AI 角色实时讲解、讨论并在白板演示"
+        ],
+        "audience": "想把学习资料变成互动课程的教师、培训者和自学者",
+        "capabilities": [
+          "根据主题或资料生成课程大纲",
+          "把大纲转成幻灯片、测验和互动场景",
+          "导入文档、音频和视频作为课程素材",
+          "让 AI 角色讲解、讨论并绘制白板",
+          "导出可编辑 PPTX 或互动 HTML 页面"
+        ],
+        "core_title": "把资料变成可互动课堂",
+        "core_summary": "输入主题或学习资料后，系统先生成课程结构，再组合幻灯片、测验、模拟和项目活动，交由多名 AI 角色带领学习。",
+        "prerequisites": "需要 Node.js >= 20、pnpm >= 10，并配置至少一个 LLM 提供商密钥。",
+        "limitations": "服务端持久化的公开 token 不提供保密或用户隔离，只适合 localhost 或可信网络的单用户部署。",
+        "license_label": "MIT",
+        "license_restrictions": "commercial use is permitted free of charge.",
+        "readme_sha": "496f1dd765bea493f35b2b8f8ce9420e6b492332",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+          ],
+          "highlights": [
+            [
+              "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+            ],
+            [
+              "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+            ],
+            [
+              "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+            ]
+          ],
+          "audience": [
+            "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+          ],
+          "capabilities": [
+            [
+              "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+            ],
+            [
+              "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+            ],
+            [
+              "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+            ],
+            [
+              "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+            ],
+            [
+              "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+            ]
+          ],
+          "core_title": [
+            "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+          ],
+          "core_summary": [
+            "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+          ],
+          "prerequisites": [
+            "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+          ],
+          "limitations": [
+            "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-09-01/repo-3504f6e79d3f662809911d8c-bdec7fa3b8cfb7f9f6517ef0.png",
+      "publication_evidence": {
+        "full_name": "THU-MAIC/OpenMAIC",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "496f1dd765bea493f35b2b8f8ce9420e6b492332",
+          "source_url": "https://api.github.com/repos/THU-MAIC/OpenMAIC/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-01/repo-3504f6e79d3f662809911d8c-bdec7fa3b8cfb7f9f6517ef0.png",
+          "sha256": "e0e039240312b84be628246b95874119ac0046a8966123c58eb571682173a396",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.01.thu-maic--openmaic.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1211139949,
+      "full_name": "tt-a1i/archify",
+      "owner": "tt-a1i",
+      "name": "archify",
+      "html_url": "https://github.com/tt-a1i/archify",
+      "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+      "language": "JavaScript",
+      "stars": 38558,
+      "forks": 2466,
+      "open_issues": 93,
+      "watchers": 132,
+      "topics": [
+        "agent-skills",
+        "architecture-as-code",
+        "architecture-diagram",
+        "claude-skill",
+        "code-visualization",
+        "codex",
+        "coding-agents",
+        "data-flow-diagram",
+        "deepseek-harness",
+        "developer-tools",
+        "diagram-as-code",
+        "diagrams",
+        "diagrams-as-code",
+        "dsh-plugin",
+        "mermaid-alternative",
+        "opencode",
+        "sequence-diagram",
+        "software-architecture",
+        "system-design",
+        "text-to-diagram"
+      ],
+      "created_at": "2026-04-15T05:27:37Z",
+      "updated_at": "2026-08-31T23:31:01Z",
+      "pushed_at": "2026-08-31T14:16:46Z",
+      "daily_stars": 3993,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 91.21,
+      "star_delta": 2614,
+      "fork_delta": 158,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 98.63,
+        "fork_growth": 97.26,
+        "total_stars": 28.77,
+        "activity": 71.65,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "把系统描述或代码库变成可验证、可交互的架构图",
+        "highlights": [
+          "从描述或代码库生成系统地图",
+          "用校验结果对比架构变更前后",
+          "导出可分享的 HTML、PNG、SVG 和 WebM"
+        ],
+        "audience": "需要讲清系统结构、评审架构变更或制作技术分享图的团队",
+        "capabilities": [
+          "把系统描述转成架构、流程或时序图",
+          "分析代码库并标注来源证据",
+          "校验节点、布局、路径和标签",
+          "对比变更前后并列出新增与移除事实",
+          "导出自包含 HTML、PNG、SVG 和 WebM"
+        ],
+        "core_title": "让架构图可验证、可追溯",
+        "core_summary": "代理先生成 typed JSON IR，再检查结构、布局和路径，最后输出自包含 HTML；交互只沿作者写入的节点与关系展开。",
+        "prerequisites": "需要 Node.js；可通过 npx skills add 安装，也可直接使用零依赖 CLI。",
+        "limitations": "不是通用绘图编辑器，也不支持自动 Mermaid 解析、托管分享或所见即所得编辑。",
+        "license_label": "MIT",
+        "license_restrictions": "free to use, modify, and distribute.",
+        "readme_sha": "94d05de679e5ce040d719a2a7e6541196e2e9a8e",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+          ],
+          "highlights": [
+            [
+              "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+            ],
+            [
+              "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+            ],
+            [
+              "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+            ]
+          ],
+          "audience": [
+            "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+          ],
+          "capabilities": [
+            [
+              "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+            ],
+            [
+              "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+            ],
+            [
+              "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+            ],
+            [
+              "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+            ],
+            [
+              "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+            ]
+          ],
+          "core_title": [
+            "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+          ],
+          "core_summary": [
+            "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+          ],
+          "prerequisites": [
+            "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+          ],
+          "limitations": [
+            "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-09-01/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+      "publication_evidence": {
+        "full_name": "tt-a1i/archify",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "94d05de679e5ce040d719a2a7e6541196e2e9a8e",
+          "source_url": "https://api.github.com/repos/tt-a1i/archify/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-01/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+          "sha256": "cffad876f1f5e204f6d40e83e84578d1d99678857f79e0e6bd347059dad7004a",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.02.tt-a1i--archify.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1333065091,
+      "full_name": "deepseek-ai/deepseek-harness",
+      "owner": "deepseek-ai",
+      "name": "deepseek-harness",
+      "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+      "description": "DeepSeek Harness: Everything is a Plugin.",
+      "language": "TypeScript",
+      "stars": 206425,
+      "forks": 23962,
+      "open_issues": 0,
+      "watchers": 206425,
+      "topics": [
+        "ai-agents",
+        "cordis",
+        "dsh",
+        "dsh-plugin"
+      ],
+      "created_at": "2026-08-13T11:56:32Z",
+      "updated_at": "2026-08-31T23:29:16Z",
+      "pushed_at": "2026-08-31T16:03:39Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 89.52,
+      "star_delta": 1075,
+      "fork_delta": 179,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.89,
+        "relative_growth": 86.3,
+        "fork_growth": 100.0,
+        "total_stars": 86.3,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "把 AI Agent 的能力拆成可插拔模块，便于本地运行和继续扩展",
+        "highlights": [
+          "通过插件架构组合不同能力",
+          "在本地启动 Web UI 运行 Harness",
+          "为插件开发提供文档与架构入口"
+        ],
+        "audience": "想开发可扩展 Agent、插件或本地 AI 工作台的工程师",
+        "capabilities": [
+          "通过插件方式扩展 Agent 能力",
+          "用 npx 启动本地 Web UI",
+          "从源码安装依赖并构建项目",
+          "按开发指南维护插件相关代码"
+        ],
+        "core_title": "插件化的 Agent Harness",
+        "core_summary": "DeepSeek Harness 以插件为基本扩展单元，基于 Cordis 组织运行能力；开发者可启动本地 Web UI，再按文档继续扩展。",
+        "prerequisites": "需要 Node.js；从源码运行还需 pnpm，并先执行 pnpm install 与 pnpm run build。",
+        "limitations": "当前处于 developer preview，可能出现兼容性破坏变更；运行前应先阅读 safety notice。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "9f89db3d4502dea4a0d181799164f304d4976740",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+          ],
+          "highlights": [
+            [
+              "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+            ],
+            [
+              "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+            ],
+            [
+              "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+            ]
+          ],
+          "audience": [
+            "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+          ],
+          "capabilities": [
+            [
+              "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+            ],
+            [
+              "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+            ],
+            [
+              "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+            ],
+            [
+              "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+            ]
+          ],
+          "core_title": [
+            "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+          ],
+          "core_summary": [
+            "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+          ],
+          "prerequisites": [
+            "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+          ],
+          "limitations": [
+            "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-01/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+      "publication_evidence": {
+        "full_name": "deepseek-ai/deepseek-harness",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "9f89db3d4502dea4a0d181799164f304d4976740",
+          "source_url": "https://api.github.com/repos/deepseek-ai/deepseek-harness/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-01/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "sha256": "933db40c3044f42cdce67ec0e1e70741b746419ba10b684683db1a956274e817",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.03.deepseek-ai--deepseek-harness.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "THU-MAIC/OpenMAIC",
+            "path": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.01.thu-maic--openmaic.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "tt-a1i/archify",
+            "path": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.02.tt-a1i--archify.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.03.deepseek-ai--deepseek-harness.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1178737655,
+          "full_name": "THU-MAIC/OpenMAIC",
+          "owner": "THU-MAIC",
+          "name": "OpenMAIC",
+          "html_url": "https://github.com/THU-MAIC/OpenMAIC",
+          "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+          "language": "TypeScript",
+          "stars": 26906,
+          "forks": 4745,
+          "open_issues": 236,
+          "watchers": 141,
+          "topics": [],
+          "created_at": "2026-03-11T10:13:16Z",
+          "updated_at": "2026-08-31T23:31:14Z",
+          "pushed_at": "2026-08-31T22:04:19Z",
+          "daily_stars": 2819,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 94.86,
+          "star_delta": 1930,
+          "fork_delta": 167,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.63,
+            "relative_growth": 97.26,
+            "fork_growth": 98.63,
+            "total_stars": 24.66,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把主题或资料变成可互动课堂，并让 AI 教师与同学陪你学习",
+            "highlights": [
+              "输入主题或资料，生成课程大纲与课堂页面",
+              "生成幻灯片、测验、模拟和项目式学习活动",
+              "让多名 AI 角色实时讲解、讨论并在白板演示"
+            ],
+            "audience": "想把学习资料变成互动课程的教师、培训者和自学者",
+            "capabilities": [
+              "根据主题或资料生成课程大纲",
+              "把大纲转成幻灯片、测验和互动场景",
+              "导入文档、音频和视频作为课程素材",
+              "让 AI 角色讲解、讨论并绘制白板",
+              "导出可编辑 PPTX 或互动 HTML 页面"
+            ],
+            "core_title": "把资料变成可互动课堂",
+            "core_summary": "输入主题或学习资料后，系统先生成课程结构，再组合幻灯片、测验、模拟和项目活动，交由多名 AI 角色带领学习。",
+            "prerequisites": "需要 Node.js >= 20、pnpm >= 10，并配置至少一个 LLM 提供商密钥。",
+            "limitations": "服务端持久化的公开 token 不提供保密或用户隔离，只适合 localhost 或可信网络的单用户部署。",
+            "license_label": "MIT",
+            "license_restrictions": "commercial use is permitted free of charge.",
+            "readme_sha": "496f1dd765bea493f35b2b8f8ce9420e6b492332",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+              ],
+              "highlights": [
+                [
+                  "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+                ],
+                [
+                  "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+                ],
+                [
+                  "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+                ]
+              ],
+              "audience": [
+                "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+                ],
+                [
+                  "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+                ],
+                [
+                  "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+                ],
+                [
+                  "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+                ],
+                [
+                  "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+                ]
+              ],
+              "core_title": [
+                "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+              ],
+              "core_summary": [
+                "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+              ],
+              "prerequisites": [
+                "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+              ],
+              "limitations": [
+                "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:496f1dd765bea493f35b2b8f8ce9420e6b492332"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-09-01/repo-3504f6e79d3f662809911d8c-bdec7fa3b8cfb7f9f6517ef0.png",
+          "publication_evidence": {
+            "full_name": "THU-MAIC/OpenMAIC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "496f1dd765bea493f35b2b8f8ce9420e6b492332",
+              "source_url": "https://api.github.com/repos/THU-MAIC/OpenMAIC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-01/repo-3504f6e79d3f662809911d8c-bdec7fa3b8cfb7f9f6517ef0.png",
+              "sha256": "e0e039240312b84be628246b95874119ac0046a8966123c58eb571682173a396",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.01.thu-maic--openmaic.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1211139949,
+          "full_name": "tt-a1i/archify",
+          "owner": "tt-a1i",
+          "name": "archify",
+          "html_url": "https://github.com/tt-a1i/archify",
+          "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+          "language": "JavaScript",
+          "stars": 38558,
+          "forks": 2466,
+          "open_issues": 93,
+          "watchers": 132,
+          "topics": [
+            "agent-skills",
+            "architecture-as-code",
+            "architecture-diagram",
+            "claude-skill",
+            "code-visualization",
+            "codex",
+            "coding-agents",
+            "data-flow-diagram",
+            "deepseek-harness",
+            "developer-tools",
+            "diagram-as-code",
+            "diagrams",
+            "diagrams-as-code",
+            "dsh-plugin",
+            "mermaid-alternative",
+            "opencode",
+            "sequence-diagram",
+            "software-architecture",
+            "system-design",
+            "text-to-diagram"
+          ],
+          "created_at": "2026-04-15T05:27:37Z",
+          "updated_at": "2026-08-31T23:31:01Z",
+          "pushed_at": "2026-08-31T14:16:46Z",
+          "daily_stars": 3993,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 91.21,
+          "star_delta": 2614,
+          "fork_delta": 158,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 98.63,
+            "fork_growth": 97.26,
+            "total_stars": 28.77,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把系统描述或代码库变成可验证、可交互的架构图",
+            "highlights": [
+              "从描述或代码库生成系统地图",
+              "用校验结果对比架构变更前后",
+              "导出可分享的 HTML、PNG、SVG 和 WebM"
+            ],
+            "audience": "需要讲清系统结构、评审架构变更或制作技术分享图的团队",
+            "capabilities": [
+              "把系统描述转成架构、流程或时序图",
+              "分析代码库并标注来源证据",
+              "校验节点、布局、路径和标签",
+              "对比变更前后并列出新增与移除事实",
+              "导出自包含 HTML、PNG、SVG 和 WebM"
+            ],
+            "core_title": "让架构图可验证、可追溯",
+            "core_summary": "代理先生成 typed JSON IR，再检查结构、布局和路径，最后输出自包含 HTML；交互只沿作者写入的节点与关系展开。",
+            "prerequisites": "需要 Node.js；可通过 npx skills add 安装，也可直接使用零依赖 CLI。",
+            "limitations": "不是通用绘图编辑器，也不支持自动 Mermaid 解析、托管分享或所见即所得编辑。",
+            "license_label": "MIT",
+            "license_restrictions": "free to use, modify, and distribute.",
+            "readme_sha": "94d05de679e5ce040d719a2a7e6541196e2e9a8e",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+              ],
+              "highlights": [
+                [
+                  "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+                ],
+                [
+                  "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+                ],
+                [
+                  "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+                ]
+              ],
+              "audience": [
+                "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+                ],
+                [
+                  "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+                ],
+                [
+                  "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+                ],
+                [
+                  "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+                ],
+                [
+                  "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+                ]
+              ],
+              "core_title": [
+                "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+              ],
+              "core_summary": [
+                "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+              ],
+              "prerequisites": [
+                "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+              ],
+              "limitations": [
+                "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:94d05de679e5ce040d719a2a7e6541196e2e9a8e"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-09-01/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+          "publication_evidence": {
+            "full_name": "tt-a1i/archify",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "94d05de679e5ce040d719a2a7e6541196e2e9a8e",
+              "source_url": "https://api.github.com/repos/tt-a1i/archify/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-01/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+              "sha256": "cffad876f1f5e204f6d40e83e84578d1d99678857f79e0e6bd347059dad7004a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.02.tt-a1i--archify.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1333065091,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "owner": "deepseek-ai",
+          "name": "deepseek-harness",
+          "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+          "description": "DeepSeek Harness: Everything is a Plugin.",
+          "language": "TypeScript",
+          "stars": 206425,
+          "forks": 23962,
+          "open_issues": 0,
+          "watchers": 206425,
+          "topics": [
+            "ai-agents",
+            "cordis",
+            "dsh",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-08-13T11:56:32Z",
+          "updated_at": "2026-08-31T23:29:16Z",
+          "pushed_at": "2026-08-31T16:03:39Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 89.52,
+          "star_delta": 1075,
+          "fork_delta": 179,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.89,
+            "relative_growth": 86.3,
+            "fork_growth": 100.0,
+            "total_stars": 86.3,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "把 AI Agent 的能力拆成可插拔模块，便于本地运行和继续扩展",
+            "highlights": [
+              "通过插件架构组合不同能力",
+              "在本地启动 Web UI 运行 Harness",
+              "为插件开发提供文档与架构入口"
+            ],
+            "audience": "想开发可扩展 Agent、插件或本地 AI 工作台的工程师",
+            "capabilities": [
+              "通过插件方式扩展 Agent 能力",
+              "用 npx 启动本地 Web UI",
+              "从源码安装依赖并构建项目",
+              "按开发指南维护插件相关代码"
+            ],
+            "core_title": "插件化的 Agent Harness",
+            "core_summary": "DeepSeek Harness 以插件为基本扩展单元，基于 Cordis 组织运行能力；开发者可启动本地 Web UI，再按文档继续扩展。",
+            "prerequisites": "需要 Node.js；从源码运行还需 pnpm，并先执行 pnpm install 与 pnpm run build。",
+            "limitations": "当前处于 developer preview，可能出现兼容性破坏变更；运行前应先阅读 safety notice。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "9f89db3d4502dea4a0d181799164f304d4976740",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+              ],
+              "highlights": [
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ],
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ],
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ]
+              ],
+              "audience": [
+                "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ],
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ],
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ],
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ]
+              ],
+              "core_title": [
+                "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+              ],
+              "core_summary": [
+                "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+              ],
+              "prerequisites": [
+                "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+              ],
+              "limitations": [
+                "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-01/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "publication_evidence": {
+            "full_name": "deepseek-ai/deepseek-harness",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "9f89db3d4502dea4a0d181799164f304d4976740",
+              "source_url": "https://api.github.com/repos/deepseek-ai/deepseek-harness/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-01/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+              "sha256": "933db40c3044f42cdce67ec0e1e70741b746419ba10b684683db1a956274e817",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-01/2026-09-01.comprehensive.03.deepseek-ai--deepseek-harness.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-01/2026-09-01.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/daily/assets/2026-09-01/2026-09-01.ai.01.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "path": "reports/daily/assets/2026-09-01/2026-09-01.ai.02.k-dense-ai--scientific-agent-skills.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-01/2026-09-01.ai.03.affaan-m--ecc.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1333065091,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "owner": "deepseek-ai",
+          "name": "deepseek-harness",
+          "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+          "description": "DeepSeek Harness: Everything is a Plugin.",
+          "language": "TypeScript",
+          "stars": 206425,
+          "forks": 23962,
+          "open_issues": 0,
+          "watchers": 206425,
+          "topics": [
+            "ai-agents",
+            "cordis",
+            "dsh",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-08-13T11:56:32Z",
+          "updated_at": "2026-08-31T23:29:16Z",
+          "pushed_at": "2026-08-31T16:03:39Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.21,
+          "star_delta": 1075,
+          "fork_delta": 179,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.55,
+            "relative_growth": 93.1,
+            "fork_growth": 100.0,
+            "total_stars": 86.21,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "用插件组合 AI Agent 的运行框架，可在本地启动网页界面并按需扩展组件",
+            "highlights": [
+              "采用“一切皆插件”的架构组织 Agent 组件",
+              "通过一条命令启动本地 Web UI",
+              "支持从 npm 运行或从源码构建"
+            ],
+            "audience": "想搭建可插拔 Agent 框架，并通过本地网页界面调试或使用的开发者",
+            "capabilities": [
+              "启动本地 Web UI 操作 Agent",
+              "通过插件架构组合功能组件",
+              "使用 npx 直接运行项目",
+              "从源码安装并构建项目产物",
+              "关闭启动时自动打开浏览器"
+            ],
+            "core_title": "一切皆插件的 Agent 框架",
+            "core_summary": "框架以 Cordis 为基础，把 Agent 能力拆成插件；开发者可按需组合组件，并通过本地 Web UI 启动和使用整套运行环境。",
+            "prerequisites": "通过 npm 运行需安装 Node.js；从源码运行还需使用 pnpm 安装和构建。",
+            "limitations": "项目处于开发者预览阶段，仍会快速迭代并出现破坏兼容性的变更；运行前需阅读安全说明。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "9f89db3d4502dea4a0d181799164f304d4976740",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+              ],
+              "highlights": [
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ],
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ],
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ]
+              ],
+              "audience": [
+                "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ],
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ],
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ],
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ],
+                [
+                  "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+                ]
+              ],
+              "core_title": [
+                "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+              ],
+              "core_summary": [
+                "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+              ],
+              "prerequisites": [
+                "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+              ],
+              "limitations": [
+                "github.readme:9f89db3d4502dea4a0d181799164f304d4976740"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-01/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "publication_evidence": {
+            "full_name": "deepseek-ai/deepseek-harness",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "9f89db3d4502dea4a0d181799164f304d4976740",
+              "source_url": "https://api.github.com/repos/deepseek-ai/deepseek-harness/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-01/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+              "sha256": "933db40c3044f42cdce67ec0e1e70741b746419ba10b684683db1a956274e817",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-01/2026-09-01.ai.01.deepseek-ai--deepseek-harness.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1079456184,
+          "full_name": "K-Dense-AI/scientific-agent-skills",
+          "owner": "K-Dense-AI",
+          "name": "scientific-agent-skills",
+          "html_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+          "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+          "language": "Python",
+          "stars": 40688,
+          "forks": 3768,
+          "open_issues": 25,
+          "watchers": 180,
+          "topics": [
+            "agent-skills",
+            "ai-scientist",
+            "bioinformatics",
+            "chemoinformatics",
+            "claude",
+            "claude-skills",
+            "claudecode",
+            "clinical-research",
+            "computational-biology",
+            "data-analysis",
+            "drug-discovery",
+            "genomics",
+            "materials-science",
+            "metabolomics",
+            "proteomics",
+            "scientific-computing",
+            "scientific-visualization"
+          ],
+          "created_at": "2025-10-19T20:54:15Z",
+          "updated_at": "2026-08-31T23:28:18Z",
+          "pushed_at": "2026-08-31T17:14:03Z",
+          "daily_stars": 1968,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.53,
+          "star_delta": 832,
+          "fork_delta": 61,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.1,
+            "relative_growth": 96.55,
+            "fork_growth": 93.1,
+            "total_stars": 17.24,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把科学数据库、Python 工具和研究流程封装成技能，让兼容的 AI Agent 执行多步科研任务",
+            "highlights": [
+              "连接科学数据库并保留来源信息",
+              "调用常用科研 Python 包完成分析",
+              "覆盖文献、组学、药物研发与可视化"
+            ],
+            "audience": "需要让 AI Agent 辅助文献检索、科学计算、数据分析或研究材料整理的科研人员与工程师",
+            "capabilities": [
+              "检索科学数据库并记录数据来源",
+              "编排跨工具的多步科研流程",
+              "分析组学、化学与临床研究数据",
+              "生成可追溯的研究文稿和图表",
+              "按主题选装所需科研技能"
+            ],
+            "core_title": "把科研方法装进 Agent",
+            "core_summary": "每项技能用 SKILL.md 提供流程说明、代码示例和参考材料，让 Agent 知道如何调用科研软件与数据库，并把多个步骤串成可复核的研究任务。",
+            "prerequisites": "需 Python 3.13+、uv、兼容 Agent Skills 的客户端，以及 macOS、Linux 或 Windows WSL2。",
+            "limitations": "技能可执行代码、安装包、联网和修改文件，安装前需人工审查；临床与监管输出仍需合格人员复核。",
+            "license_label": "MIT",
+            "license_restrictions": "These licenses may differ from the repository's MIT License.",
+            "readme_sha": "41b48dceab798b8f795a3efca6df7c34efa6900f",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+              ],
+              "highlights": [
+                [
+                  "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+                ],
+                [
+                  "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+                ],
+                [
+                  "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+                ]
+              ],
+              "audience": [
+                "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+                ],
+                [
+                  "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+                ],
+                [
+                  "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+                ],
+                [
+                  "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+                ],
+                [
+                  "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+                ]
+              ],
+              "core_title": [
+                "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+              ],
+              "core_summary": [
+                "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+              ],
+              "prerequisites": [
+                "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+              ],
+              "limitations": [
+                "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:41b48dceab798b8f795a3efca6df7c34efa6900f"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-09-01/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+          "publication_evidence": {
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "41b48dceab798b8f795a3efca6df7c34efa6900f",
+              "source_url": "https://api.github.com/repos/K-Dense-AI/scientific-agent-skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-01/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+              "sha256": "ce0f5b344ea4969ca99815ee5550749d6cbe2a0cc281f7ce4bd9653538876c3a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-01/2026-09-01.ai.02.k-dense-ai--scientific-agent-skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 245226,
+          "forks": 37046,
+          "open_issues": 123,
+          "watchers": 245226,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-08-31T23:28:06Z",
+          "pushed_at": "2026-08-31T22:18:39Z",
+          "daily_stars": 548,
+          "weekly_stars": null,
+          "trending_rank_daily": 10,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 84.03,
+          "star_delta": 377,
+          "fork_delta": 45,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 86.21,
+            "relative_growth": 79.31,
+            "fork_growth": 89.66,
+            "total_stars": 93.1,
+            "activity": 100.0,
+            "trending_signal": 28.91
+          },
+          "summary": {
+            "one_line": "把规划、测试、实现、审查和记忆串成 Agent 编程流程，减少每次提示里重复交代规范",
+            "highlights": [
+              "用门控流程串联计划、测试与验证",
+              "让独立上下文重新审查代码改动",
+              "把会话经验沉淀为记忆和可复用技能"
+            ],
+            "audience": "希望统一 AI 编程流程，并在多个 Agent 工具间复用技能、规则和记忆的软件团队",
+            "capabilities": [
+              "规划功能并生成可编辑实施方案",
+              "按测试驱动流程实现代码改动",
+              "调用独立审查者检查回归与盲点",
+              "保存会话摘要并检索长期记忆",
+              "扫描技能、钩子和配置中的风险"
+            ],
+            "core_title": "把 Agent 编程变成闭环",
+            "core_summary": "ECC 将计划、测试、实现、独立审查、最终验证和经验沉淀连接起来，并用技能、Agent、规则与钩子分别承担流程、分工、规范和自动检查。",
+            "prerequisites": "引导安装需 Node.js 18 或更高版本；Claude Code 插件路径还需 Git 和 Claude Code 2.1 或更高版本。",
+            "limitations": "不同工具的能力并不完全一致；同一工具只能选择一种安装路径，叠加安装会造成技能、命令或钩子重复。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "highlights": [
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ]
+              ],
+              "audience": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ]
+              ],
+              "core_title": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "core_summary": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "prerequisites": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "limitations": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-01/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-01/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-01/2026-09-01.ai.03.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
