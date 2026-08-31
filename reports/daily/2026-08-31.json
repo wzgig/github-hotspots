@@ -1,0 +1,1340 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-08-31",
+  "window_start": "2026-08-30",
+  "window_end": "2026-08-31",
+  "generated_at": "2026-08-31T15:03:40+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-30 至 2026-08-31",
+  "publication": {
+    "issue_number": 51,
+    "issue_code": "D051",
+    "issue_label": "第51期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-08-31",
+    "manifest": "reports/daily/assets/2026-08-31/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tt-a1i/archify",
+            "path": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.01.tt-a1i--archify.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "THU-MAIC/OpenMAIC",
+            "path": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.02.thu-maic--openmaic.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "path": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.03.k-dense-ai--scientific-agent-skills.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-31/2026-08-31.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "path": "reports/daily/assets/2026-08-31/2026-08-31.ai.01.k-dense-ai--scientific-agent-skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/daily/assets/2026-08-31/2026-08-31.ai.02.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "tashfeenahmed/freellmapi",
+            "path": "reports/daily/assets/2026-08-31/2026-08-31.ai.03.tashfeenahmed--freellmapi.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 51,
+      "issue_code": "D051",
+      "issue_label": "第51期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1211139949,
+      "full_name": "tt-a1i/archify",
+      "owner": "tt-a1i",
+      "name": "archify",
+      "html_url": "https://github.com/tt-a1i/archify",
+      "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+      "language": "JavaScript",
+      "stars": 35944,
+      "forks": 2308,
+      "open_issues": 78,
+      "watchers": 128,
+      "topics": [
+        "agent-skills",
+        "architecture-as-code",
+        "architecture-diagram",
+        "claude-skill",
+        "code-visualization",
+        "codex",
+        "coding-agents",
+        "data-flow-diagram",
+        "deepseek-harness",
+        "developer-tools",
+        "diagram-as-code",
+        "diagrams",
+        "diagrams-as-code",
+        "dsh-plugin",
+        "mermaid-alternative",
+        "opencode",
+        "sequence-diagram",
+        "software-architecture",
+        "system-design",
+        "text-to-diagram"
+      ],
+      "created_at": "2026-04-15T05:27:37Z",
+      "updated_at": "2026-08-31T07:03:18Z",
+      "pushed_at": "2026-08-31T04:41:21Z",
+      "daily_stars": 3722,
+      "weekly_stars": null,
+      "trending_rank_daily": 4,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 93.19,
+      "star_delta": 3677,
+      "fork_delta": 288,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 100.0,
+        "total_stars": 20.83,
+        "activity": 100.0,
+        "trending_signal": 43.07
+      },
+      "summary": {
+        "one_line": "archify 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+        "highlights": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "audience": "需要减少重复操作并统一研发流程的软件团队",
+        "capabilities": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "core_title": "把重复的开发操作整理成自动化流程",
+        "core_summary": "archify 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-31/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+      "publication_evidence": {
+        "full_name": "tt-a1i/archify",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-31/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+          "sha256": "7abb24fa59126abc3dda66a4d5fcd9ccc344babc62fc1fc6a5f5d2f8781e3301",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.01.tt-a1i--archify.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1178737655,
+      "full_name": "THU-MAIC/OpenMAIC",
+      "owner": "THU-MAIC",
+      "name": "OpenMAIC",
+      "html_url": "https://github.com/THU-MAIC/OpenMAIC",
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "language": "TypeScript",
+      "stars": 24976,
+      "forks": 4578,
+      "open_issues": 221,
+      "watchers": 129,
+      "topics": [],
+      "created_at": "2026-03-11T10:13:16Z",
+      "updated_at": "2026-08-31T07:03:18Z",
+      "pushed_at": "2026-08-30T09:16:58Z",
+      "daily_stars": 1370,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 91.96,
+      "star_delta": 2799,
+      "fork_delta": 277,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.61,
+        "relative_growth": 98.61,
+        "fork_growth": 98.61,
+        "total_stars": 18.06,
+        "activity": 71.65,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "OpenMAIC 的用途证据不足，需要先查看仓库 README",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "OpenMAIC 的用途证据不足，需要先查看仓库 README",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-31/repo-3504f6e79d3f662809911d8c-bdec7fa3b8cfb7f9f6517ef0.png",
+      "publication_evidence": {
+        "full_name": "THU-MAIC/OpenMAIC",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-31/repo-3504f6e79d3f662809911d8c-bdec7fa3b8cfb7f9f6517ef0.png",
+          "sha256": "6c48682c8bfc4c6ecbe7b5ed04cea33e59c94ebad2ce12570372c92d6586d97f",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.02.thu-maic--openmaic.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1079456184,
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "owner": "K-Dense-AI",
+      "name": "scientific-agent-skills",
+      "html_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "language": "Python",
+      "stars": 39856,
+      "forks": 3707,
+      "open_issues": 22,
+      "watchers": 179,
+      "topics": [
+        "agent-skills",
+        "ai-scientist",
+        "bioinformatics",
+        "chemoinformatics",
+        "claude",
+        "claude-skills",
+        "claudecode",
+        "clinical-research",
+        "computational-biology",
+        "data-analysis",
+        "drug-discovery",
+        "genomics",
+        "materials-science",
+        "metabolomics",
+        "proteomics",
+        "scientific-computing",
+        "scientific-visualization"
+      ],
+      "created_at": "2025-10-19T20:54:15Z",
+      "updated_at": "2026-08-31T07:03:26Z",
+      "pushed_at": "2026-08-29T22:55:14Z",
+      "daily_stars": 1114,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 88.93,
+      "star_delta": 1645,
+      "fork_delta": 112,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.22,
+        "relative_growth": 97.22,
+        "fork_growth": 94.44,
+        "total_stars": 22.22,
+        "activity": 71.65,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "目前无法从公开字段确认 scientific-agent-skills 能完成哪些任务",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "目前无法从公开字段确认 scientific-agent-skills 能完成哪些任务",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-08-31/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+      "publication_evidence": {
+        "full_name": "K-Dense-AI/scientific-agent-skills",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-08-31/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+          "sha256": "b6d9759f6cdf38537ff3bae4ae21aca860dd12075de4a4197bea3d218a8de55e",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.03.k-dense-ai--scientific-agent-skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tt-a1i/archify",
+            "path": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.01.tt-a1i--archify.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "THU-MAIC/OpenMAIC",
+            "path": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.02.thu-maic--openmaic.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "path": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.03.k-dense-ai--scientific-agent-skills.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1211139949,
+          "full_name": "tt-a1i/archify",
+          "owner": "tt-a1i",
+          "name": "archify",
+          "html_url": "https://github.com/tt-a1i/archify",
+          "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+          "language": "JavaScript",
+          "stars": 35944,
+          "forks": 2308,
+          "open_issues": 78,
+          "watchers": 128,
+          "topics": [
+            "agent-skills",
+            "architecture-as-code",
+            "architecture-diagram",
+            "claude-skill",
+            "code-visualization",
+            "codex",
+            "coding-agents",
+            "data-flow-diagram",
+            "deepseek-harness",
+            "developer-tools",
+            "diagram-as-code",
+            "diagrams",
+            "diagrams-as-code",
+            "dsh-plugin",
+            "mermaid-alternative",
+            "opencode",
+            "sequence-diagram",
+            "software-architecture",
+            "system-design",
+            "text-to-diagram"
+          ],
+          "created_at": "2026-04-15T05:27:37Z",
+          "updated_at": "2026-08-31T07:03:18Z",
+          "pushed_at": "2026-08-31T04:41:21Z",
+          "daily_stars": 3722,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 93.19,
+          "star_delta": 3677,
+          "fork_delta": 288,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 20.83,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "archify 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "archify 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-31/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+          "publication_evidence": {
+            "full_name": "tt-a1i/archify",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-31/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+              "sha256": "7abb24fa59126abc3dda66a4d5fcd9ccc344babc62fc1fc6a5f5d2f8781e3301",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.01.tt-a1i--archify.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1178737655,
+          "full_name": "THU-MAIC/OpenMAIC",
+          "owner": "THU-MAIC",
+          "name": "OpenMAIC",
+          "html_url": "https://github.com/THU-MAIC/OpenMAIC",
+          "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+          "language": "TypeScript",
+          "stars": 24976,
+          "forks": 4578,
+          "open_issues": 221,
+          "watchers": 129,
+          "topics": [],
+          "created_at": "2026-03-11T10:13:16Z",
+          "updated_at": "2026-08-31T07:03:18Z",
+          "pushed_at": "2026-08-30T09:16:58Z",
+          "daily_stars": 1370,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 91.96,
+          "star_delta": 2799,
+          "fork_delta": 277,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.61,
+            "relative_growth": 98.61,
+            "fork_growth": 98.61,
+            "total_stars": 18.06,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "OpenMAIC 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "OpenMAIC 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-31/repo-3504f6e79d3f662809911d8c-bdec7fa3b8cfb7f9f6517ef0.png",
+          "publication_evidence": {
+            "full_name": "THU-MAIC/OpenMAIC",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-31/repo-3504f6e79d3f662809911d8c-bdec7fa3b8cfb7f9f6517ef0.png",
+              "sha256": "6c48682c8bfc4c6ecbe7b5ed04cea33e59c94ebad2ce12570372c92d6586d97f",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.02.thu-maic--openmaic.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1079456184,
+          "full_name": "K-Dense-AI/scientific-agent-skills",
+          "owner": "K-Dense-AI",
+          "name": "scientific-agent-skills",
+          "html_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+          "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+          "language": "Python",
+          "stars": 39856,
+          "forks": 3707,
+          "open_issues": 22,
+          "watchers": 179,
+          "topics": [
+            "agent-skills",
+            "ai-scientist",
+            "bioinformatics",
+            "chemoinformatics",
+            "claude",
+            "claude-skills",
+            "claudecode",
+            "clinical-research",
+            "computational-biology",
+            "data-analysis",
+            "drug-discovery",
+            "genomics",
+            "materials-science",
+            "metabolomics",
+            "proteomics",
+            "scientific-computing",
+            "scientific-visualization"
+          ],
+          "created_at": "2025-10-19T20:54:15Z",
+          "updated_at": "2026-08-31T07:03:26Z",
+          "pushed_at": "2026-08-29T22:55:14Z",
+          "daily_stars": 1114,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.93,
+          "star_delta": 1645,
+          "fork_delta": 112,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.22,
+            "relative_growth": 97.22,
+            "fork_growth": 94.44,
+            "total_stars": 22.22,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 scientific-agent-skills 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 scientific-agent-skills 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-31/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+          "publication_evidence": {
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-31/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+              "sha256": "b6d9759f6cdf38537ff3bae4ae21aca860dd12075de4a4197bea3d218a8de55e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-31/2026-08-31.comprehensive.03.k-dense-ai--scientific-agent-skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-08-31/2026-08-31.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "path": "reports/daily/assets/2026-08-31/2026-08-31.ai.01.k-dense-ai--scientific-agent-skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/daily/assets/2026-08-31/2026-08-31.ai.02.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "tashfeenahmed/freellmapi",
+            "path": "reports/daily/assets/2026-08-31/2026-08-31.ai.03.tashfeenahmed--freellmapi.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1079456184,
+          "full_name": "K-Dense-AI/scientific-agent-skills",
+          "owner": "K-Dense-AI",
+          "name": "scientific-agent-skills",
+          "html_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+          "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+          "language": "Python",
+          "stars": 39856,
+          "forks": 3707,
+          "open_issues": 22,
+          "watchers": 179,
+          "topics": [
+            "agent-skills",
+            "ai-scientist",
+            "bioinformatics",
+            "chemoinformatics",
+            "claude",
+            "claude-skills",
+            "claudecode",
+            "clinical-research",
+            "computational-biology",
+            "data-analysis",
+            "drug-discovery",
+            "genomics",
+            "materials-science",
+            "metabolomics",
+            "proteomics",
+            "scientific-computing",
+            "scientific-visualization"
+          ],
+          "created_at": "2025-10-19T20:54:15Z",
+          "updated_at": "2026-08-31T07:03:26Z",
+          "pushed_at": "2026-08-29T22:55:14Z",
+          "daily_stars": 1114,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 90.14,
+          "star_delta": 1645,
+          "fork_delta": 112,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 92.86,
+            "total_stars": 10.71,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 scientific-agent-skills 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 scientific-agent-skills 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-31/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+          "publication_evidence": {
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-31/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+              "sha256": "b6d9759f6cdf38537ff3bae4ae21aca860dd12075de4a4197bea3d218a8de55e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-31/2026-08-31.ai.01.k-dense-ai--scientific-agent-skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1333065091,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "owner": "deepseek-ai",
+          "name": "deepseek-harness",
+          "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+          "description": "DeepSeek Harness: Everything is a Plugin.",
+          "language": "TypeScript",
+          "stars": 205350,
+          "forks": 23783,
+          "open_issues": 0,
+          "watchers": 205350,
+          "topics": [
+            "ai-agents",
+            "cordis",
+            "dsh",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-08-13T11:56:32Z",
+          "updated_at": "2026-08-31T07:03:24Z",
+          "pushed_at": "2026-08-30T13:52:13Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 87.7,
+          "star_delta": 1452,
+          "fork_delta": 219,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.43,
+            "relative_growth": 89.29,
+            "fork_growth": 100.0,
+            "total_stars": 89.29,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 deepseek-harness；它能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 deepseek-harness；它能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-31/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "publication_evidence": {
+            "full_name": "deepseek-ai/deepseek-harness",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-31/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+              "sha256": "006259ac07d66996f63589d24688c103745bd251193c94395bed2765c68c947c",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-31/2026-08-31.ai.02.deepseek-ai--deepseek-harness.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1217040185,
+          "full_name": "tashfeenahmed/freellmapi",
+          "owner": "tashfeenahmed",
+          "name": "freellmapi",
+          "html_url": "https://github.com/tashfeenahmed/freellmapi",
+          "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+          "language": "TypeScript",
+          "stars": 23025,
+          "forks": 3171,
+          "open_issues": 86,
+          "watchers": 110,
+          "topics": [],
+          "created_at": "2026-04-21T13:38:59Z",
+          "updated_at": "2026-08-31T07:03:30Z",
+          "pushed_at": "2026-08-30T18:17:31Z",
+          "daily_stars": 504,
+          "weekly_stars": null,
+          "trending_rank_daily": 17,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 85.31,
+          "star_delta": 692,
+          "fork_delta": 52,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.86,
+            "relative_growth": 96.43,
+            "fork_growth": 82.14,
+            "total_stars": 3.57,
+            "activity": 100.0,
+            "trending_signal": 23.98
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 freellmapi 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 freellmapi 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-08-31/repo-7e9a60d56a04f201ee054c74-9fb1000071e985e60f312104.png",
+          "publication_evidence": {
+            "full_name": "tashfeenahmed/freellmapi",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-08-31/repo-7e9a60d56a04f201ee054c74-9fb1000071e985e60f312104.png",
+              "sha256": "c0d0cc396f3b81ee973747ab64597b830272d6cdbfda485f61d88c8b77c01250",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-08-31/2026-08-31.ai.03.tashfeenahmed--freellmapi.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
