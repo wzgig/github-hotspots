@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "442cef6322b9aa6c62c85d9dfd1eebdd31e2fe16f593b1a4c42cf30125376b56",
+  "checklist_sha256": "3ed7a4438f26ddf303468eae1529ca0916c2f3556d8c99252d5733c2dc59be19",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-09-03",
+  "generated_at": "2026-09-03T13:51:35.889960+08:00",
+  "issue": {
+    "number": 54,
+    "code": "D054",
+    "stem": "D054-2026-09-03",
+    "label": "第54期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-09-03.json",
+    "report_sha256": "70786e40710467281200b48ac39d762783f46d7d0bbd46e34a213e160260dce7",
+    "poster_manifest": "reports/daily/assets/2026-09-03/manifest.json",
+    "poster_manifest_sha256": "84b75ed19a7bac7a4f1bb21d50a6d308a5eccf26133f81b8ea69dfcee61a56d2",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D054-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "828fd9c30841abe88e4bd62c78ce4be249cfab59ac7b30726e020f36e26647b6",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 391,
+      "caption_sha256": "c19b5ce6cd0fc16076db3b2f92555f01b0f5f271cc852cdd3e6e48c0c0f5b20e",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "95b3ecb74b8ddda8aca53f4f5d52464e4616e4a4c985af532f38dc57cd6f58a2",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-09-03/2026-09-03.comprehensive.cover.png",
+          "sha256": "7809bcaf3b1335d8371de69abe863fb510957e2743f95fe4fa53fa13b7cbb674",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-03/2026-09-03.comprehensive.01.deepseek-ai--deepseek-harness.png",
+          "sha256": "6447997c8283eb148380da7f022838bc49098b3d4aa51e9c9da948ea887ea390",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "publication_path": "images/02-rank-01-deepseek-ai-deepseek-harness.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-03/2026-09-03.comprehensive.02.nousresearch--hermes-agent.png",
+          "sha256": "bfb76054f0d529ed72daf8eb09fd8369dea8ffaec746945b5b58207cd5547f22",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/03-rank-02-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-03/2026-09-03.comprehensive.03.affaan-m--ecc.png",
+          "sha256": "5e7fdffe7671d7df2942dc38f91c42510181fc7ef9d5ff0aa46a4c3e3611a3b8",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "affaan-m/ECC",
+          "publication_path": "images/04-rank-03-affaan-m-ecc.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D054-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "555de52e3f3c564095331e67be8c7bd4339de5dfbc40dd39380eab8823914616",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 384,
+      "caption_sha256": "af9bc95b3e16985ec71fb483d33b3b2504c36452295ebaf05994d25f47715f0d",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "cd1a96820d6b9aa17f8faf8fe8a6f8c1b54869b6c55b696f37423dc007e9f241",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-09-03/2026-09-03.ai.cover.png",
+          "sha256": "df54a361ec65be2e61a1d568cec51bbc15b81d479e23a14ec7351dd89b06b756",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-03/2026-09-03.ai.01.deepseek-ai--deepseek-harness.png",
+          "sha256": "a3778802f1874663c7e6f234d5a7264c56151b161780a7d294f8f7689c8b0af5",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "publication_path": "images/02-rank-01-deepseek-ai-deepseek-harness.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-03/2026-09-03.ai.02.nousresearch--hermes-agent.png",
+          "sha256": "a4af26b4f3bd52d31d2673900865897f5fb7cc4fc1c02bb84c8a14a05964816b",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "NousResearch/hermes-agent",
+          "publication_path": "images/03-rank-02-nousresearch-hermes-agent.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-03/2026-09-03.ai.03.affaan-m--ecc.png",
+          "sha256": "40dba8515f3f44ae8ba2ec12c8b769cb980361e9acd4d87c742b09d04c6f2d97",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "affaan-m/ECC",
+          "publication_path": "images/04-rank-03-affaan-m-ecc.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-09-03",
+    "revision": "442cef6322b9",
+    "image_policy": "repository-source-reference"
+  }
+}
