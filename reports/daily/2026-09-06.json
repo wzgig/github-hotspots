@@ -1,0 +1,1467 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-09-06",
+  "window_start": "2026-09-05",
+  "window_end": "2026-09-06",
+  "generated_at": "2026-09-06T07:31:36+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-09-05 至 2026-09-06",
+  "publication": {
+    "issue_number": 57,
+    "issue_code": "D057",
+    "issue_label": "第57期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-09-06",
+    "manifest": "reports/daily/assets/2026-09-06/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.02.mattpocock--skills.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.03.dietrichgebert--ponytail.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-06/2026-09-06.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-06/2026-09-06.ai.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-09-06/2026-09-06.ai.02.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-09-06/2026-09-06.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 57,
+      "issue_code": "D057",
+      "issue_label": "第57期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 249847,
+      "forks": 37611,
+      "open_issues": 148,
+      "watchers": 249847,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-09-05T23:30:12Z",
+      "pushed_at": "2026-09-05T21:47:27Z",
+      "daily_stars": 1325,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 94.7,
+      "star_delta": 1139,
+      "fork_delta": 128,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.18,
+        "relative_growth": 91.55,
+        "fork_growth": 100.0,
+        "total_stars": 92.96,
+        "activity": 100.0,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "给 AI 编程代理补上一套计划、测试、复盘与记忆工作流",
+        "highlights": [
+          "先规划再编码，并保留可检查的过程证据",
+          "用测试、审查和验证环节减少盲改",
+          "把记忆、技能和安全扫描接入代理流程"
+        ],
+        "audience": "使用 Claude Code、Codex 等代理完成开发、审查和安全检查的个人与团队",
+        "capabilities": [
+          "规划功能并生成实施蓝图",
+          "按 RED→GREEN→REFACTOR 推进测试",
+          "从新上下文复查代码与回归风险",
+          "跨会话保存并检索项目记忆",
+          "扫描提示词、Hooks、MCP 与密钥配置"
+        ],
+        "core_title": "把代理变成可复盘的工程流程",
+        "core_summary": "ECC 将技能、代理、规则、Hooks 和记忆组合起来，让 AI 按计划、测试、实现、审查、验证的顺序推进任务。",
+        "prerequisites": "通用安装需要 Node.js 18 或更新版本；Claude 插件路径还需要 Git 和 Claude Code 2.1 或更新版本。",
+        "limitations": "不同宿主的能力并不完全一致；Codex Hooks 需要明确授权，GitHub Copilot 不提供 Hooks、代理委派或原生技能发现。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+          ],
+          "highlights": [
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ],
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ],
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ]
+          ],
+          "audience": [
+            "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+          ],
+          "capabilities": [
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ],
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ],
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ],
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ],
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ]
+          ],
+          "core_title": [
+            "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+          ],
+          "core_summary": [
+            "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+          ],
+          "prerequisites": [
+            "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+          ],
+          "limitations": [
+            "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-06/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+          "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-06/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+          "width": 165,
+          "height": 165
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.01.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 252544,
+      "forks": 21314,
+      "open_issues": 466,
+      "watchers": 1411,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-09-05T23:30:34Z",
+      "pushed_at": "2026-09-04T08:45:43Z",
+      "daily_stars": 2666,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 94.01,
+      "star_delta": 1781,
+      "fork_delta": 124,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 97.18,
+        "fork_growth": 97.18,
+        "total_stars": 94.37,
+        "activity": 51.34,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "把工程经验拆成可组合技能，帮助 AI 先对齐需求、再测试和交付",
+        "highlights": [
+          "用提问澄清需求并建立项目术语",
+          "用 TDD 和调试流程缩短反馈回路",
+          "用架构巡检、评审和工单拆解控制复杂度"
+        ],
+        "audience": "希望让 AI 编程代理遵循工程实践、减少返工的开发者和团队",
+        "capabilities": [
+          "通过提问明确需求和设计分歧",
+          "建立项目共享术语与决策文档",
+          "用 TDD 推进功能或缺陷修复",
+          "按阶段诊断问题并补回归测试",
+          "扫描架构并拆成可执行工单"
+        ],
+        "core_title": "把工程基本功做成可调用技能",
+        "core_summary": "这套技能把需求澄清、领域建模、TDD、调试、代码评审和架构设计拆成小模块，可按任务组合使用。",
+        "prerequisites": "先选择 Claude Code 插件或 skills.sh 文件安装方式，再运行 /setup-matt-pocock-skills 配置 issue 追踪器和",
+        "limitations": "插件是托管的只读集合，skills.sh 版本可编辑但需手动更新；两种安装方式不能同时使用。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "highlights": [
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ]
+          ],
+          "audience": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "capabilities": [
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ]
+          ],
+          "core_title": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "core_summary": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "prerequisites": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "limitations": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-06/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-06/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.02.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1266797999,
+      "full_name": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "html_url": "https://github.com/DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "language": "JavaScript",
+      "stars": 127893,
+      "forks": 6842,
+      "open_issues": 219,
+      "watchers": 317,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "cursor-rules",
+        "developer-tools",
+        "llm",
+        "prompt-engineering",
+        "yagni"
+      ],
+      "created_at": "2026-06-12T00:52:37Z",
+      "updated_at": "2026-09-05T23:30:50Z",
+      "pushed_at": "2026-09-04T12:35:29Z",
+      "daily_stars": 2813,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 88.62,
+      "star_delta": 1385,
+      "fork_delta": 65,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.59,
+        "relative_growth": 98.59,
+        "fork_growth": 95.77,
+        "total_stars": 47.89,
+        "activity": 51.34,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "让 AI 编程代理先复用、再少写，减少不必要的实现和过度设计",
+        "highlights": [
+          "先确认需求是否真的需要新增代码",
+          "优先复用现有代码、标准库和原生能力",
+          "省代码但不牺牲验证、安全与可访问性"
+        ],
+        "audience": "想控制 AI 生成代码规模、成本和复杂度的开发者与团队",
+        "capabilities": [
+          "审查当前 diff，列出可删除的过度设计",
+          "扫描整个仓库，寻找过度工程化位置",
+          "切换规则强度，控制代理的介入程度",
+          "把暂缓的 ponytail 快捷项收进债务清单",
+          "在支持的代理中注入持续规则与技能"
+        ],
+        "core_title": "用 YAGNI 阶梯约束代理",
+        "core_summary": "ponytail 让代理先判断是否需要新增代码，再依次尝试复用现有实现、标准库、原生能力和已安装依赖，最后才写最小可行方案。",
+        "prerequisites": "Claude Code 和 Codex 插件的生命周期 Hooks 需要 Node.js 在 PATH 中；没有 Node.js 时，技能仍可使用。",
+        "limitations": "命令需要支持技能的宿主；Cursor、Copilot 等指令适配器只加载规则，不提供命令切换或 Hooks。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "1f05a43af5737eb41ffb8bef921304c8b431f2d2",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+          ],
+          "highlights": [
+            [
+              "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+            ],
+            [
+              "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+            ],
+            [
+              "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+            ]
+          ],
+          "audience": [
+            "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+          ],
+          "capabilities": [
+            [
+              "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+            ],
+            [
+              "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+            ],
+            [
+              "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+            ],
+            [
+              "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+            ],
+            [
+              "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+            ]
+          ],
+          "core_title": [
+            "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+          ],
+          "core_summary": [
+            "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+          ],
+          "prerequisites": [
+            "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+          ],
+          "limitations": [
+            "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-06/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+      "publication_evidence": {
+        "full_name": "DietrichGebert/ponytail",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "1f05a43af5737eb41ffb8bef921304c8b431f2d2",
+          "source_url": "https://api.github.com/repos/DietrichGebert/ponytail/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-06/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+          "sha256": "59f0be72fcc6cbb753c5d95799621ca4bf58ae5c7b82a716e0ed17624dec0412",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.03.dietrichgebert--ponytail.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.02.mattpocock--skills.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.03.dietrichgebert--ponytail.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 249847,
+          "forks": 37611,
+          "open_issues": 148,
+          "watchers": 249847,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-05T23:30:12Z",
+          "pushed_at": "2026-09-05T21:47:27Z",
+          "daily_stars": 1325,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 94.7,
+          "star_delta": 1139,
+          "fork_delta": 128,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.18,
+            "relative_growth": 91.55,
+            "fork_growth": 100.0,
+            "total_stars": 92.96,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "给 AI 编程代理补上一套计划、测试、复盘与记忆工作流",
+            "highlights": [
+              "先规划再编码，并保留可检查的过程证据",
+              "用测试、审查和验证环节减少盲改",
+              "把记忆、技能和安全扫描接入代理流程"
+            ],
+            "audience": "使用 Claude Code、Codex 等代理完成开发、审查和安全检查的个人与团队",
+            "capabilities": [
+              "规划功能并生成实施蓝图",
+              "按 RED→GREEN→REFACTOR 推进测试",
+              "从新上下文复查代码与回归风险",
+              "跨会话保存并检索项目记忆",
+              "扫描提示词、Hooks、MCP 与密钥配置"
+            ],
+            "core_title": "把代理变成可复盘的工程流程",
+            "core_summary": "ECC 将技能、代理、规则、Hooks 和记忆组合起来，让 AI 按计划、测试、实现、审查、验证的顺序推进任务。",
+            "prerequisites": "通用安装需要 Node.js 18 或更新版本；Claude 插件路径还需要 Git 和 Claude Code 2.1 或更新版本。",
+            "limitations": "不同宿主的能力并不完全一致；Codex Hooks 需要明确授权，GitHub Copilot 不提供 Hooks、代理委派或原生技能发现。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "highlights": [
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ]
+              ],
+              "audience": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ]
+              ],
+              "core_title": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "core_summary": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "prerequisites": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "limitations": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-06/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-06/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.01.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 252544,
+          "forks": 21314,
+          "open_issues": 466,
+          "watchers": 1411,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-09-05T23:30:34Z",
+          "pushed_at": "2026-09-04T08:45:43Z",
+          "daily_stars": 2666,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 94.01,
+          "star_delta": 1781,
+          "fork_delta": 124,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 97.18,
+            "fork_growth": 97.18,
+            "total_stars": 94.37,
+            "activity": 51.34,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把工程经验拆成可组合技能，帮助 AI 先对齐需求、再测试和交付",
+            "highlights": [
+              "用提问澄清需求并建立项目术语",
+              "用 TDD 和调试流程缩短反馈回路",
+              "用架构巡检、评审和工单拆解控制复杂度"
+            ],
+            "audience": "希望让 AI 编程代理遵循工程实践、减少返工的开发者和团队",
+            "capabilities": [
+              "通过提问明确需求和设计分歧",
+              "建立项目共享术语与决策文档",
+              "用 TDD 推进功能或缺陷修复",
+              "按阶段诊断问题并补回归测试",
+              "扫描架构并拆成可执行工单"
+            ],
+            "core_title": "把工程基本功做成可调用技能",
+            "core_summary": "这套技能把需求澄清、领域建模、TDD、调试、代码评审和架构设计拆成小模块，可按任务组合使用。",
+            "prerequisites": "先选择 Claude Code 插件或 skills.sh 文件安装方式，再运行 /setup-matt-pocock-skills 配置 issue 追踪器和",
+            "limitations": "插件是托管的只读集合，skills.sh 版本可编辑但需手动更新；两种安装方式不能同时使用。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ]
+              ],
+              "audience": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "core_summary": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "prerequisites": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "limitations": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-06/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-06/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.02.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 127893,
+          "forks": 6842,
+          "open_issues": 219,
+          "watchers": 317,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-09-05T23:30:50Z",
+          "pushed_at": "2026-09-04T12:35:29Z",
+          "daily_stars": 2813,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.62,
+          "star_delta": 1385,
+          "fork_delta": 65,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.59,
+            "relative_growth": 98.59,
+            "fork_growth": 95.77,
+            "total_stars": 47.89,
+            "activity": 51.34,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "让 AI 编程代理先复用、再少写，减少不必要的实现和过度设计",
+            "highlights": [
+              "先确认需求是否真的需要新增代码",
+              "优先复用现有代码、标准库和原生能力",
+              "省代码但不牺牲验证、安全与可访问性"
+            ],
+            "audience": "想控制 AI 生成代码规模、成本和复杂度的开发者与团队",
+            "capabilities": [
+              "审查当前 diff，列出可删除的过度设计",
+              "扫描整个仓库，寻找过度工程化位置",
+              "切换规则强度，控制代理的介入程度",
+              "把暂缓的 ponytail 快捷项收进债务清单",
+              "在支持的代理中注入持续规则与技能"
+            ],
+            "core_title": "用 YAGNI 阶梯约束代理",
+            "core_summary": "ponytail 让代理先判断是否需要新增代码，再依次尝试复用现有实现、标准库、原生能力和已安装依赖，最后才写最小可行方案。",
+            "prerequisites": "Claude Code 和 Codex 插件的生命周期 Hooks 需要 Node.js 在 PATH 中；没有 Node.js 时，技能仍可使用。",
+            "limitations": "命令需要支持技能的宿主；Cursor、Copilot 等指令适配器只加载规则，不提供命令切换或 Hooks。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "1f05a43af5737eb41ffb8bef921304c8b431f2d2",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+              ],
+              "highlights": [
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ],
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ],
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ]
+              ],
+              "audience": [
+                "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ],
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ],
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ],
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ],
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ]
+              ],
+              "core_title": [
+                "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+              ],
+              "core_summary": [
+                "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+              ],
+              "prerequisites": [
+                "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+              ],
+              "limitations": [
+                "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-06/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+          "publication_evidence": {
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "1f05a43af5737eb41ffb8bef921304c8b431f2d2",
+              "source_url": "https://api.github.com/repos/DietrichGebert/ponytail/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-06/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+              "sha256": "59f0be72fcc6cbb753c5d95799621ca4bf58ae5c7b82a716e0ed17624dec0412",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-06/2026-09-06.comprehensive.03.dietrichgebert--ponytail.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-06/2026-09-06.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-06/2026-09-06.ai.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-09-06/2026-09-06.ai.02.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-09-06/2026-09-06.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 249847,
+          "forks": 37611,
+          "open_issues": 148,
+          "watchers": 249847,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-05T23:30:12Z",
+          "pushed_at": "2026-09-05T21:47:27Z",
+          "daily_stars": 1325,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 93.9,
+          "star_delta": 1139,
+          "fork_delta": 128,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.3,
+            "relative_growth": 88.89,
+            "fork_growth": 100.0,
+            "total_stars": 96.3,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "给 AI 编程助手装上一套从规划到复盘的工程工作流",
+            "highlights": [
+              "把规划、测试、实现、复核串成闭环",
+              "用记忆和技能保存可复用经验",
+              "用 AgentShield 检查代理配置风险"
+            ],
+            "audience": "希望让 AI 编程助手按流程完成开发、测试和复核的软件团队",
+            "capabilities": [
+              "先写计划，再按测试驱动流程实现",
+              "用独立上下文复核代码并修复构建",
+              "通过钩子执行检查、保存会话并控制上下文",
+              "跨 Claude Code、Codex 等宿主复用技能与规则",
+              "扫描提示注入、密钥和 MCP 配置风险"
+            ],
+            "core_title": "把一次性提示变成工程闭环",
+            "core_summary": "ECC 把计划、测试驱动开发、独立复核、钩子和记忆串在一起，让代理按证据推进开发。",
+            "prerequisites": "通用安装需要 Node.js 18 或更新版本；Claude 插件还需要 Git 和 Claude Code 2.1 或更新版本。",
+            "limitations": "不同宿主的功能并不完全对等；Codex 钩子需要显式信任，GitHub Copilot 不支持钩子和子代理。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "highlights": [
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ]
+              ],
+              "audience": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ]
+              ],
+              "core_title": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "core_summary": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "prerequisites": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "limitations": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-06/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-06/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-06/2026-09-06.ai.01.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 127893,
+          "forks": 6842,
+          "open_issues": 219,
+          "watchers": 317,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-09-05T23:30:50Z",
+          "pushed_at": "2026-09-04T12:35:29Z",
+          "daily_stars": 2813,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.56,
+          "star_delta": 1385,
+          "fork_delta": 65,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 92.59,
+            "total_stars": 33.33,
+            "activity": 51.34,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "让编码代理先复用现有能力，再用最少代码完成必要改动",
+            "highlights": [
+              "按 YAGNI 梯子优先跳过非必要代码",
+              "先读现有代码，再选择原生或已有依赖",
+              "用 review 和 audit 找出过度设计"
+            ],
+            "audience": "想减少 AI 过度实现、又不愿牺牲校验与安全的开发者",
+            "capabilities": [
+              "跳过不需要存在的功能",
+              "复用代码库已有实现",
+              "优先使用标准库和原生能力",
+              "按 lite、full、ultra、off 切换精简强度",
+              "审查 diff 和仓库中的过度设计"
+            ],
+            "core_title": "让代理只写任务需要的代码",
+            "core_summary": "ponytail 先读代码并逐级判断是否需要新增实现，再优先复用现有能力，同时保留校验、安全和无障碍。",
+            "prerequisites": "插件钩子需要 Node.js 在 PATH；也可以只加载规则文件，不使用插件命令。",
+            "limitations": "不同宿主能力不同：规则适配器不提供完整命令或钩子；精简不等于删掉校验、错误处理、安全和无障碍。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "1f05a43af5737eb41ffb8bef921304c8b431f2d2",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+              ],
+              "highlights": [
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ],
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ],
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ]
+              ],
+              "audience": [
+                "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ],
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ],
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ],
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ],
+                [
+                  "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+                ]
+              ],
+              "core_title": [
+                "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+              ],
+              "core_summary": [
+                "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+              ],
+              "prerequisites": [
+                "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+              ],
+              "limitations": [
+                "github.readme:1f05a43af5737eb41ffb8bef921304c8b431f2d2"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-06/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+          "publication_evidence": {
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "1f05a43af5737eb41ffb8bef921304c8b431f2d2",
+              "source_url": "https://api.github.com/repos/DietrichGebert/ponytail/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-06/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+              "sha256": "59f0be72fcc6cbb753c5d95799621ca4bf58ae5c7b82a716e0ed17624dec0412",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-06/2026-09-06.ai.02.dietrichgebert--ponytail.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 241982,
+          "forks": 49715,
+          "open_issues": 40035,
+          "watchers": 241982,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "nous-research",
+            "openai"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-09-05T23:28:14Z",
+          "pushed_at": "2026-09-05T23:31:18Z",
+          "daily_stars": 573,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 87.9,
+          "star_delta": 373,
+          "fork_delta": 125,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 88.89,
+            "relative_growth": 85.19,
+            "fork_growth": 96.3,
+            "total_stars": 92.59,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "把模型接入能记忆、调用工具并持续执行任务的个人 AI Agent",
+            "highlights": [
+              "从终端或消息平台持续对话",
+              "通过记忆、技能和搜索积累上下文",
+              "用定时任务和子 Agent 执行并行工作"
+            ],
+            "audience": "想把 AI 助手部署到云端，并通过终端或聊天平台持续使用的人",
+            "capabilities": [
+              "切换模型提供方和自定义端点",
+              "在 CLI、Telegram、Discord 等入口对话",
+              "搜索历史会话并保存长期记忆",
+              "按计划执行任务并推送结果",
+              "启动隔离子 Agent 并行处理流程"
+            ],
+            "core_title": "让 Agent 在会话之外继续工作",
+            "core_summary": "Hermes 把终端、消息网关、记忆、技能、定时器和隔离环境接到同一个 Agent 上，适合把对话变成持续任务。",
+            "prerequisites": "安装器会处理 Python 3.11、Node.js、ripgrep 和 ffmpeg；首次使用仍需配置模型提供方。",
+            "limitations": "不同终端后端和消息平台需要分别配置；远程或云端运行仍依赖对应基础设施与模型服务。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "highlights": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "audience": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "core_title": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "core_summary": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "prerequisites": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "limitations": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-06/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-06/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-06/2026-09-06.ai.03.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
