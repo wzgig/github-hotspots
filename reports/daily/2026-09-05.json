@@ -1,0 +1,1321 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-09-05",
+  "window_start": "2026-09-04",
+  "window_end": "2026-09-05",
+  "generated_at": "2026-09-05T13:47:29+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-09-04 至 2026-09-05",
+  "publication": {
+    "issue_number": 56,
+    "issue_code": "D056",
+    "issue_label": "第56期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-09-05",
+    "manifest": "reports/daily/assets/2026-09-05/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.03.dietrichgebert--ponytail.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-05/2026-09-05.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-05/2026-09-05.ai.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-09-05/2026-09-05.ai.02.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-09-05/2026-09-05.ai.03.debpalash--voicestudio.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 56,
+      "issue_code": "D056",
+      "issue_label": "第56期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 250763,
+      "forks": 21190,
+      "open_issues": 466,
+      "watchers": 250763,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-09-05T05:46:08Z",
+      "pushed_at": "2026-09-04T08:45:43Z",
+      "daily_stars": 2758,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 95.66,
+      "star_delta": 2798,
+      "fork_delta": 179,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 95.71,
+        "fork_growth": 97.14,
+        "total_stars": 92.86,
+        "activity": 71.65,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "公开信息不足，暂不能准确说明 skills 的具体用途",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "公开信息不足，暂不能准确说明 skills 的具体用途",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-05/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-09-05/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.01.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 248708,
+      "forks": 37483,
+      "open_issues": 143,
+      "watchers": 248708,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-09-05T05:46:23Z",
+      "pushed_at": "2026-09-04T19:02:58Z",
+      "daily_stars": 1135,
+      "weekly_stars": null,
+      "trending_rank_daily": 4,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 92.79,
+      "star_delta": 1286,
+      "fork_delta": 198,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.71,
+        "relative_growth": 91.43,
+        "fork_growth": 100.0,
+        "total_stars": 90.0,
+        "activity": 100.0,
+        "trending_signal": 43.07
+      },
+      "summary": {
+        "one_line": "想要把重复的开发操作整理成自动化流程，可以用 ECC；它能减少手动执行和重复配置",
+        "highlights": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "audience": "需要减少重复操作并统一研发流程的软件团队",
+        "capabilities": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "core_title": "把重复的开发操作整理成自动化流程",
+        "core_summary": "想要把重复的开发操作整理成自动化流程，可以用 ECC；它能减少手动执行和重复配置",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-05/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-09-05/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "sha256": "b96c9ae9f895df5d8bf215e1783f3cdc401e818b22cb82c16937fefc71d4e2e4",
+          "width": 165,
+          "height": 165
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.02.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1266797999,
+      "full_name": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "html_url": "https://github.com/DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "language": "JavaScript",
+      "stars": 126508,
+      "forks": 6777,
+      "open_issues": 210,
+      "watchers": 126508,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "cursor-rules",
+        "developer-tools",
+        "llm",
+        "prompt-engineering",
+        "yagni"
+      ],
+      "created_at": "2026-06-12T00:52:37Z",
+      "updated_at": "2026-09-05T05:47:17Z",
+      "pushed_at": "2026-09-04T12:35:29Z",
+      "daily_stars": 1679,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 90.03,
+      "star_delta": 2697,
+      "fork_delta": 89,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.57,
+        "relative_growth": 97.14,
+        "fork_growth": 92.86,
+        "total_stars": 34.29,
+        "activity": 71.65,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "主要任务是整理和复用提示词设计方法；ponytail 还能帮助测试不同指令结构和模型表现",
+        "highlights": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+        "capabilities": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "core_title": "整理和复用提示词设计方法",
+        "core_summary": "主要任务是整理和复用提示词设计方法；ponytail 还能帮助测试不同指令结构和模型表现",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-05/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+      "publication_evidence": {
+        "full_name": "DietrichGebert/ponytail",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-09-05/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+          "sha256": "b698bdf19025784b8c4ace212b79c18f01faa9623cfb1e61e75806f570420543",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.03.dietrichgebert--ponytail.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.01.mattpocock--skills.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.03.dietrichgebert--ponytail.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 250763,
+          "forks": 21190,
+          "open_issues": 466,
+          "watchers": 250763,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-09-05T05:46:08Z",
+          "pushed_at": "2026-09-04T08:45:43Z",
+          "daily_stars": 2758,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.66,
+          "star_delta": 2798,
+          "fork_delta": 179,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 95.71,
+            "fork_growth": 97.14,
+            "total_stars": 92.86,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 skills 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 skills 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-05/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-09-05/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.01.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 248708,
+          "forks": 37483,
+          "open_issues": 143,
+          "watchers": 248708,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-05T05:46:23Z",
+          "pushed_at": "2026-09-04T19:02:58Z",
+          "daily_stars": 1135,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 92.79,
+          "star_delta": 1286,
+          "fork_delta": 198,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.71,
+            "relative_growth": 91.43,
+            "fork_growth": 100.0,
+            "total_stars": 90.0,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "想要把重复的开发操作整理成自动化流程，可以用 ECC；它能减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "想要把重复的开发操作整理成自动化流程，可以用 ECC；它能减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-05/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-09-05/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "b96c9ae9f895df5d8bf215e1783f3cdc401e818b22cb82c16937fefc71d4e2e4",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.02.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 126508,
+          "forks": 6777,
+          "open_issues": 210,
+          "watchers": 126508,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-09-05T05:47:17Z",
+          "pushed_at": "2026-09-04T12:35:29Z",
+          "daily_stars": 1679,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 90.03,
+          "star_delta": 2697,
+          "fork_delta": 89,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.57,
+            "relative_growth": 97.14,
+            "fork_growth": 92.86,
+            "total_stars": 34.29,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "主要任务是整理和复用提示词设计方法；ponytail 还能帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "主要任务是整理和复用提示词设计方法；ponytail 还能帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-05/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+          "publication_evidence": {
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-09-05/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+              "sha256": "b698bdf19025784b8c4ace212b79c18f01faa9623cfb1e61e75806f570420543",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.03.dietrichgebert--ponytail.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-05/2026-09-05.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-05/2026-09-05.ai.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-09-05/2026-09-05.ai.02.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-09-05/2026-09-05.ai.03.debpalash--voicestudio.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 248708,
+          "forks": 37483,
+          "open_issues": 143,
+          "watchers": 248708,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-05T05:46:23Z",
+          "pushed_at": "2026-09-04T19:02:58Z",
+          "daily_stars": 1135,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.29,
+          "star_delta": 1286,
+          "fork_delta": 198,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.1,
+            "relative_growth": 89.66,
+            "fork_growth": 100.0,
+            "total_stars": 93.1,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "ECC 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "ECC 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-05/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-09-05/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "b96c9ae9f895df5d8bf215e1783f3cdc401e818b22cb82c16937fefc71d4e2e4",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-05/2026-09-05.ai.01.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 126508,
+          "forks": 6777,
+          "open_issues": 210,
+          "watchers": 126508,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-09-05T05:47:17Z",
+          "pushed_at": "2026-09-04T12:35:29Z",
+          "daily_stars": 1679,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.46,
+          "star_delta": 2697,
+          "fork_delta": 89,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 96.55,
+            "fork_growth": 86.21,
+            "total_stars": 24.14,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "想要整理和复用提示词设计方法，可以用 ponytail；它能帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "想要整理和复用提示词设计方法，可以用 ponytail；它能帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-05/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+          "publication_evidence": {
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-09-05/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+              "sha256": "b698bdf19025784b8c4ace212b79c18f01faa9623cfb1e61e75806f570420543",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-05/2026-09-05.ai.02.dietrichgebert--ponytail.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1206390571,
+          "full_name": "debpalash/VoiceStudio",
+          "owner": "debpalash",
+          "name": "VoiceStudio",
+          "html_url": "https://github.com/debpalash/VoiceStudio",
+          "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+          "language": "Python",
+          "stars": 18246,
+          "forks": 2379,
+          "open_issues": 25,
+          "watchers": 81,
+          "topics": [
+            "ai",
+            "audiobook",
+            "cuda",
+            "dubbing",
+            "elevenlabs-alternative",
+            "huggingface",
+            "local-first",
+            "mlx",
+            "omnivoice-studio",
+            "speech-to-text",
+            "tauri",
+            "text-to-speech",
+            "transcription",
+            "translate",
+            "tts",
+            "voice-ai",
+            "voice-cloning",
+            "voice-generation",
+            "voicestudio",
+            "workflow"
+          ],
+          "created_at": "2026-04-09T21:40:26Z",
+          "updated_at": "2026-09-05T05:47:23Z",
+          "pushed_at": "2026-09-05T05:37:36Z",
+          "daily_stars": 1345,
+          "weekly_stars": null,
+          "trending_rank_daily": 12,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 89.28,
+          "star_delta": 1655,
+          "fork_delta": 152,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.55,
+            "relative_growth": 100.0,
+            "fork_growth": 89.66,
+            "total_stars": 13.79,
+            "activity": 100.0,
+            "trending_signal": 27.02
+          },
+          "summary": {
+            "one_line": "主要任务是把语音内容转换成可编辑文字；VoiceStudio 还能方便检索、整理和继续加工",
+            "highlights": [
+              "将录音或实时语音转换为文字",
+              "生成便于复制和编辑的文本记录",
+              "为摘要、搜索和归档准备文字材料"
+            ],
+            "audience": "需要整理访谈、课程、会议或录音内容的用户",
+            "capabilities": [
+              "将录音或实时语音转换为文字",
+              "生成便于复制和编辑的文本记录",
+              "为摘要、搜索和归档准备文字材料"
+            ],
+            "core_title": "把语音内容转换成可编辑文字",
+            "core_summary": "主要任务是把语音内容转换成可编辑文字；VoiceStudio 还能方便检索、整理和继续加工",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-05/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+          "publication_evidence": {
+            "full_name": "debpalash/VoiceStudio",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-09-05/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+              "sha256": "599775fa700c2816df5de823e30a438cd74ab05af92fc86ced777c69f1841957",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-05/2026-09-05.ai.03.debpalash--voicestudio.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}

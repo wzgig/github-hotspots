@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-09-05",
+  "window": {
+    "start": "2026-09-04",
+    "end": "2026-09-05"
+  },
+  "source_report": "reports/daily/2026-09-05.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-09-05",
+  "manifest": "reports/daily/assets/2026-09-05/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "mattpocock/skills",
+          "path": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.01.mattpocock--skills.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "affaan-m/ECC",
+          "path": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.02.affaan-m--ecc.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "DietrichGebert/ponytail",
+          "path": "reports/daily/assets/2026-09-05/2026-09-05.comprehensive.03.dietrichgebert--ponytail.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-09-05/2026-09-05.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "affaan-m/ECC",
+          "path": "reports/daily/assets/2026-09-05/2026-09-05.ai.01.affaan-m--ecc.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "DietrichGebert/ponytail",
+          "path": "reports/daily/assets/2026-09-05/2026-09-05.ai.02.dietrichgebert--ponytail.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "debpalash/VoiceStudio",
+          "path": "reports/daily/assets/2026-09-05/2026-09-05.ai.03.debpalash--voicestudio.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 56,
+    "issue_code": "D056",
+    "issue_label": "第56期",
+    "status": "official"
+  }
+}
