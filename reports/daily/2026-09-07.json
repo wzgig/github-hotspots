@@ -1,0 +1,1476 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-09-07",
+  "window_start": "2026-09-06",
+  "window_end": "2026-09-07",
+  "generated_at": "2026-09-07T07:31:30+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-09-06 至 2026-09-07",
+  "publication": {
+    "issue_number": 58,
+    "issue_code": "D058",
+    "issue_label": "第58期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-09-07",
+    "manifest": "reports/daily/assets/2026-09-07/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "cathrynlavery/diagram-design",
+            "path": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.02.cathrynlavery--diagram-design.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "blader/humanizer",
+            "path": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.03.blader--humanizer.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-07/2026-09-07.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-07/2026-09-07.ai.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "blader/humanizer",
+            "path": "reports/daily/assets/2026-09-07/2026-09-07.ai.02.blader--humanizer.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-09-07/2026-09-07.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 58,
+      "issue_code": "D058",
+      "issue_label": "第58期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 251258,
+      "forks": 37772,
+      "open_issues": 170,
+      "watchers": 1289,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-09-06T23:30:58Z",
+      "pushed_at": "2026-09-05T21:47:27Z",
+      "daily_stars": 1486,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 93.75,
+      "star_delta": 1022,
+      "fork_delta": 124,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.56,
+        "relative_growth": 90.24,
+        "fork_growth": 100.0,
+        "total_stars": 95.12,
+        "activity": 71.65,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "让 AI 编程代理按计划、测试、评审和记忆协作完成开发任务",
+        "highlights": [
+          "把需求先整理成可确认的实施计划",
+          "用测试驱动开发留下验证证据",
+          "让新上下文复查代码并保存可复用经验"
+        ],
+        "audience": "使用 Claude Code、Codex 等编程代理，希望统一开发流程的软件团队",
+        "capabilities": [
+          "规划功能并生成实施蓝图",
+          "按测试先行流程推进编码",
+          "从新上下文复查代码和安全问题",
+          "跨会话保存摘要、交接和经验",
+          "扫描代理配置、钩子和 MCP 风险"
+        ],
+        "core_title": "把 AI 编程变成工程化工作流",
+        "core_summary": "ECC 把规划、测试、实现、评审、验证和记忆串成一条流程，并用 agents、skills、hooks 与规则分别承载不同任务。",
+        "prerequisites": "通用安装需要 Node.js 18 或更新版本；Claude 插件还需要 Git 和 Claude Code 2.1 或更新版本。",
+        "limitations": "不同宿主的能力并不完全一致；GitHub Copilot 不提供 ECC hooks、运行时 agents、委派或原生 skill 发现。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+          ],
+          "highlights": [
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ],
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ],
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ]
+          ],
+          "audience": [
+            "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+          ],
+          "capabilities": [
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ],
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ],
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ],
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ],
+            [
+              "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+            ]
+          ],
+          "core_title": [
+            "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+          ],
+          "core_summary": [
+            "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+          ],
+          "prerequisites": [
+            "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+          ],
+          "limitations": [
+            "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-07/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+          "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-07/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+          "width": 165,
+          "height": 165
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.01.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1212769188,
+      "full_name": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "html_url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML",
+      "stars": 32311,
+      "forks": 2074,
+      "open_issues": 35,
+      "watchers": 99,
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "data-visualization",
+        "diagrams",
+        "drawio",
+        "mermaid",
+        "svg"
+      ],
+      "created_at": "2026-04-16T18:01:16Z",
+      "updated_at": "2026-09-06T23:24:23Z",
+      "pushed_at": "2026-09-06T21:40:44Z",
+      "daily_stars": 621,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 90.06,
+      "star_delta": 645,
+      "fork_delta": 34,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.12,
+        "relative_growth": 96.34,
+        "fork_growth": 92.07,
+        "total_stars": 30.49,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "把需求变成可直接打开的 HTML/SVG 图表，并按品牌和输出场景重绘",
+        "highlights": [
+          "覆盖架构图、流程图、时间线等 39 种类型",
+          "生成不依赖构建步骤的自包含 HTML 和 SVG",
+          "把 draw.io 或 Mermaid 重绘成适合发布的图表"
+        ],
+        "audience": "需要制作技术文档、演示文稿或品牌化信息图的设计师与工程师",
+        "capabilities": [
+          "按内容选择合适的图表类型",
+          "生成自包含 HTML 和 SVG 文件",
+          "读取网站配色与字体建立品牌样式",
+          "重绘 draw.io 或 Mermaid 图表",
+          "按格式、尺寸和细节导出 PNG 或 SVG"
+        ],
+        "core_title": "先判断语义，再选择图表布局",
+        "core_summary": "它把行为模式和视觉类型分开：先判断是队列、策略链或信任边界，再选择最合适的布局，默认输出静态图。",
+        "prerequisites": "使用 PNG 导出需要安装 Playwright 和 Chromium；其他自包含 HTML 可直接在浏览器打开。",
+        "limitations": "默认输出静态、无脚本 HTML；可选动效受固定控制器、无远程资源和可访问性规则约束。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "4b93b02476a9f5368f4da398e1e45461fb8e13fc",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+          ],
+          "highlights": [
+            [
+              "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+            ],
+            [
+              "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+            ],
+            [
+              "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+            ]
+          ],
+          "audience": [
+            "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+          ],
+          "capabilities": [
+            [
+              "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+            ],
+            [
+              "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+            ],
+            [
+              "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+            ],
+            [
+              "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+            ],
+            [
+              "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+            ]
+          ],
+          "core_title": [
+            "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+          ],
+          "core_summary": [
+            "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+          ],
+          "prerequisites": [
+            "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+          ],
+          "limitations": [
+            "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-07/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+      "publication_evidence": {
+        "full_name": "cathrynlavery/diagram-design",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "4b93b02476a9f5368f4da398e1e45461fb8e13fc",
+          "source_url": "https://api.github.com/repos/cathrynlavery/diagram-design/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-07/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+          "sha256": "953cad69949c87fb0d09dd4df8a331949626db100bf68670291c7bd87e27cc32",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.02.cathrynlavery--diagram-design.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1136666433,
+      "full_name": "blader/humanizer",
+      "owner": "blader",
+      "name": "humanizer",
+      "html_url": "https://github.com/blader/humanizer",
+      "description": "Agent skill that removes signs of AI-generated writing from text",
+      "language": "Python",
+      "stars": 44197,
+      "forks": 3678,
+      "open_issues": 5,
+      "watchers": 232,
+      "topics": [
+        "agent-skills",
+        "ai-writing",
+        "claude-code",
+        "codex",
+        "cursor",
+        "prompt-engineering",
+        "writing-tools"
+      ],
+      "created_at": "2026-01-18T05:30:15Z",
+      "updated_at": "2026-09-06T23:30:10Z",
+      "pushed_at": "2026-09-06T20:26:10Z",
+      "daily_stars": 748,
+      "weekly_stars": null,
+      "trending_rank_daily": 7,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 89.71,
+      "star_delta": 748,
+      "fork_delta": 34,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.34,
+        "relative_growth": 95.12,
+        "fork_growth": 92.07,
+        "total_stars": 32.93,
+        "activity": 100.0,
+        "trending_signal": 33.33
+      },
+      "summary": {
+        "one_line": "把 AI 味较重的文字改写得更像人写，同时保留原意和事实",
+        "highlights": [
+          "标出文本里常见的 AI 写作痕迹",
+          "按原文事实重写并检查遗漏与虚构",
+          "参考你的样文匹配语气、节奏和用词"
+        ],
+        "audience": "需要润色发布稿、文档或产品文案，同时保留作者观点的人",
+        "capabilities": [
+          "识别 25 类常见写作模式",
+          "先生成改写稿再指出残留问题",
+          "根据样文匹配个人写作声音",
+          "改写文件时只处理文字内容",
+          "遇到缺失事实时先询问而不是编造"
+        ],
+        "core_title": "先找写作痕迹，再改写核对",
+        "core_summary": "Humanizer 会先标出 AI 文本的具体模式，再重写并对照原文事实；处理文件时保留代码、数据、frontmatter 和链接目标。",
+        "prerequisites": "通用安装需要 Skills CLI；使用 Claude 插件时需要 Claude Code 2.1.142 或更新版本。",
+        "limitations": "它不会补写缺失事实；文件模式只修改 prose，代码、数据、frontmatter 和 link targets 会保持不变。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "6ffe91a6ddcdaae4667f4a2195ff5f389593e935",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+          ],
+          "highlights": [
+            [
+              "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+            ],
+            [
+              "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+            ],
+            [
+              "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+            ]
+          ],
+          "audience": [
+            "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+          ],
+          "capabilities": [
+            [
+              "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+            ],
+            [
+              "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+            ],
+            [
+              "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+            ],
+            [
+              "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+            ],
+            [
+              "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+            ]
+          ],
+          "core_title": [
+            "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+          ],
+          "core_summary": [
+            "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+          ],
+          "prerequisites": [
+            "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+          ],
+          "limitations": [
+            "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-07/repo-6f6399248ff9bd19a56a833a-8de1c3d199026b534392d241.png",
+      "publication_evidence": {
+        "full_name": "blader/humanizer",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "6ffe91a6ddcdaae4667f4a2195ff5f389593e935",
+          "source_url": "https://api.github.com/repos/blader/humanizer/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-07/repo-6f6399248ff9bd19a56a833a-8de1c3d199026b534392d241.png",
+          "sha256": "cef324165e1269efbc7464d55a4d8a0bbcfab41f9ad11ee02e21152eb56824ee",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.03.blader--humanizer.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "cathrynlavery/diagram-design",
+            "path": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.02.cathrynlavery--diagram-design.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "blader/humanizer",
+            "path": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.03.blader--humanizer.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 251258,
+          "forks": 37772,
+          "open_issues": 170,
+          "watchers": 1289,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-06T23:30:58Z",
+          "pushed_at": "2026-09-05T21:47:27Z",
+          "daily_stars": 1486,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 93.75,
+          "star_delta": 1022,
+          "fork_delta": 124,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.56,
+            "relative_growth": 90.24,
+            "fork_growth": 100.0,
+            "total_stars": 95.12,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "让 AI 编程代理按计划、测试、评审和记忆协作完成开发任务",
+            "highlights": [
+              "把需求先整理成可确认的实施计划",
+              "用测试驱动开发留下验证证据",
+              "让新上下文复查代码并保存可复用经验"
+            ],
+            "audience": "使用 Claude Code、Codex 等编程代理，希望统一开发流程的软件团队",
+            "capabilities": [
+              "规划功能并生成实施蓝图",
+              "按测试先行流程推进编码",
+              "从新上下文复查代码和安全问题",
+              "跨会话保存摘要、交接和经验",
+              "扫描代理配置、钩子和 MCP 风险"
+            ],
+            "core_title": "把 AI 编程变成工程化工作流",
+            "core_summary": "ECC 把规划、测试、实现、评审、验证和记忆串成一条流程，并用 agents、skills、hooks 与规则分别承载不同任务。",
+            "prerequisites": "通用安装需要 Node.js 18 或更新版本；Claude 插件还需要 Git 和 Claude Code 2.1 或更新版本。",
+            "limitations": "不同宿主的能力并不完全一致；GitHub Copilot 不提供 ECC hooks、运行时 agents、委派或原生 skill 发现。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "highlights": [
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ]
+              ],
+              "audience": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ]
+              ],
+              "core_title": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "core_summary": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "prerequisites": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "limitations": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-07/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-07/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.01.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1212769188,
+          "full_name": "cathrynlavery/diagram-design",
+          "owner": "cathrynlavery",
+          "name": "diagram-design",
+          "html_url": "https://github.com/cathrynlavery/diagram-design",
+          "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+          "language": "HTML",
+          "stars": 32311,
+          "forks": 2074,
+          "open_issues": 35,
+          "watchers": 99,
+          "topics": [
+            "agent-skills",
+            "claude-code",
+            "codex",
+            "data-visualization",
+            "diagrams",
+            "drawio",
+            "mermaid",
+            "svg"
+          ],
+          "created_at": "2026-04-16T18:01:16Z",
+          "updated_at": "2026-09-06T23:24:23Z",
+          "pushed_at": "2026-09-06T21:40:44Z",
+          "daily_stars": 621,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 90.06,
+          "star_delta": 645,
+          "fork_delta": 34,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.12,
+            "relative_growth": 96.34,
+            "fork_growth": 92.07,
+            "total_stars": 30.49,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把需求变成可直接打开的 HTML/SVG 图表，并按品牌和输出场景重绘",
+            "highlights": [
+              "覆盖架构图、流程图、时间线等 39 种类型",
+              "生成不依赖构建步骤的自包含 HTML 和 SVG",
+              "把 draw.io 或 Mermaid 重绘成适合发布的图表"
+            ],
+            "audience": "需要制作技术文档、演示文稿或品牌化信息图的设计师与工程师",
+            "capabilities": [
+              "按内容选择合适的图表类型",
+              "生成自包含 HTML 和 SVG 文件",
+              "读取网站配色与字体建立品牌样式",
+              "重绘 draw.io 或 Mermaid 图表",
+              "按格式、尺寸和细节导出 PNG 或 SVG"
+            ],
+            "core_title": "先判断语义，再选择图表布局",
+            "core_summary": "它把行为模式和视觉类型分开：先判断是队列、策略链或信任边界，再选择最合适的布局，默认输出静态图。",
+            "prerequisites": "使用 PNG 导出需要安装 Playwright 和 Chromium；其他自包含 HTML 可直接在浏览器打开。",
+            "limitations": "默认输出静态、无脚本 HTML；可选动效受固定控制器、无远程资源和可访问性规则约束。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "4b93b02476a9f5368f4da398e1e45461fb8e13fc",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+              ],
+              "highlights": [
+                [
+                  "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+                ],
+                [
+                  "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+                ],
+                [
+                  "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+                ]
+              ],
+              "audience": [
+                "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+                ],
+                [
+                  "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+                ],
+                [
+                  "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+                ],
+                [
+                  "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+                ],
+                [
+                  "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+                ]
+              ],
+              "core_title": [
+                "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+              ],
+              "core_summary": [
+                "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+              ],
+              "prerequisites": [
+                "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+              ],
+              "limitations": [
+                "github.readme:4b93b02476a9f5368f4da398e1e45461fb8e13fc"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-07/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+          "publication_evidence": {
+            "full_name": "cathrynlavery/diagram-design",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "4b93b02476a9f5368f4da398e1e45461fb8e13fc",
+              "source_url": "https://api.github.com/repos/cathrynlavery/diagram-design/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-07/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+              "sha256": "953cad69949c87fb0d09dd4df8a331949626db100bf68670291c7bd87e27cc32",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.02.cathrynlavery--diagram-design.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136666433,
+          "full_name": "blader/humanizer",
+          "owner": "blader",
+          "name": "humanizer",
+          "html_url": "https://github.com/blader/humanizer",
+          "description": "Agent skill that removes signs of AI-generated writing from text",
+          "language": "Python",
+          "stars": 44197,
+          "forks": 3678,
+          "open_issues": 5,
+          "watchers": 232,
+          "topics": [
+            "agent-skills",
+            "ai-writing",
+            "claude-code",
+            "codex",
+            "cursor",
+            "prompt-engineering",
+            "writing-tools"
+          ],
+          "created_at": "2026-01-18T05:30:15Z",
+          "updated_at": "2026-09-06T23:30:10Z",
+          "pushed_at": "2026-09-06T20:26:10Z",
+          "daily_stars": 748,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 89.71,
+          "star_delta": 748,
+          "fork_delta": 34,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.34,
+            "relative_growth": 95.12,
+            "fork_growth": 92.07,
+            "total_stars": 32.93,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "把 AI 味较重的文字改写得更像人写，同时保留原意和事实",
+            "highlights": [
+              "标出文本里常见的 AI 写作痕迹",
+              "按原文事实重写并检查遗漏与虚构",
+              "参考你的样文匹配语气、节奏和用词"
+            ],
+            "audience": "需要润色发布稿、文档或产品文案，同时保留作者观点的人",
+            "capabilities": [
+              "识别 25 类常见写作模式",
+              "先生成改写稿再指出残留问题",
+              "根据样文匹配个人写作声音",
+              "改写文件时只处理文字内容",
+              "遇到缺失事实时先询问而不是编造"
+            ],
+            "core_title": "先找写作痕迹，再改写核对",
+            "core_summary": "Humanizer 会先标出 AI 文本的具体模式，再重写并对照原文事实；处理文件时保留代码、数据、frontmatter 和链接目标。",
+            "prerequisites": "通用安装需要 Skills CLI；使用 Claude 插件时需要 Claude Code 2.1.142 或更新版本。",
+            "limitations": "它不会补写缺失事实；文件模式只修改 prose，代码、数据、frontmatter 和 link targets 会保持不变。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "6ffe91a6ddcdaae4667f4a2195ff5f389593e935",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+              ],
+              "highlights": [
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ],
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ],
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ]
+              ],
+              "audience": [
+                "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ],
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ],
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ],
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ],
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ]
+              ],
+              "core_title": [
+                "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+              ],
+              "core_summary": [
+                "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+              ],
+              "prerequisites": [
+                "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+              ],
+              "limitations": [
+                "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-07/repo-6f6399248ff9bd19a56a833a-8de1c3d199026b534392d241.png",
+          "publication_evidence": {
+            "full_name": "blader/humanizer",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "6ffe91a6ddcdaae4667f4a2195ff5f389593e935",
+              "source_url": "https://api.github.com/repos/blader/humanizer/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-07/repo-6f6399248ff9bd19a56a833a-8de1c3d199026b534392d241.png",
+              "sha256": "cef324165e1269efbc7464d55a4d8a0bbcfab41f9ad11ee02e21152eb56824ee",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-07/2026-09-07.comprehensive.03.blader--humanizer.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-07/2026-09-07.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-07/2026-09-07.ai.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "blader/humanizer",
+            "path": "reports/daily/assets/2026-09-07/2026-09-07.ai.02.blader--humanizer.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-09-07/2026-09-07.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 251258,
+          "forks": 37772,
+          "open_issues": 170,
+          "watchers": 1289,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-06T23:30:58Z",
+          "pushed_at": "2026-09-05T21:47:27Z",
+          "daily_stars": 1486,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 93.2,
+          "star_delta": 1022,
+          "fork_delta": 124,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.06,
+            "relative_growth": 88.24,
+            "fork_growth": 100.0,
+            "total_stars": 97.06,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把编码助手接成可复用的工程流程：先规划、测试，再实现、审查和留存经验",
+            "highlights": [
+              "先规划再测试，留下实现前的任务蓝图",
+              "用独立审查和验证环节检查改动",
+              "把会话经验沉淀为记忆、技能和工作流"
+            ],
+            "audience": "想把 Claude Code、Codex 等编码助手接入规范研发流程的团队",
+            "capabilities": [
+              "拆分任务并生成实施计划",
+              "用 TDD 流程先写失败测试",
+              "从新上下文审查代码改动",
+              "扫描 Agent 配置、钩子和 MCP 风险",
+              "跨会话保存并检索项目记忆"
+            ],
+            "core_title": "让编码 Agent 按工程流程工作",
+            "core_summary": "ECC 把规划、TDD、代码审查、验证、记忆和安全扫描组合成可选择的工作流，减少每次靠提示词重复搭建流程。",
+            "prerequisites": "通用安装需要 Node.js 18 或更新版本；Claude 插件还需要 Git 和 Claude Code 2.1 或更新版本。",
+            "limitations": "不同 harness 的能力并不完全一致；Copilot 不支持钩子和子代理，Windows 原生的部分可选功能仍有限。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "highlights": [
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ]
+              ],
+              "audience": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ],
+                [
+                  "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+                ]
+              ],
+              "core_title": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "core_summary": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "prerequisites": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "limitations": [
+                "github.readme:00d3a8ca7e6a9d602085fe9f9eebaa37e23513af"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-07/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "00d3a8ca7e6a9d602085fe9f9eebaa37e23513af",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-07/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-07/2026-09-07.ai.01.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136666433,
+          "full_name": "blader/humanizer",
+          "owner": "blader",
+          "name": "humanizer",
+          "html_url": "https://github.com/blader/humanizer",
+          "description": "Agent skill that removes signs of AI-generated writing from text",
+          "language": "Python",
+          "stars": 44197,
+          "forks": 3678,
+          "open_issues": 5,
+          "watchers": 232,
+          "topics": [
+            "agent-skills",
+            "ai-writing",
+            "claude-code",
+            "codex",
+            "cursor",
+            "prompt-engineering",
+            "writing-tools"
+          ],
+          "created_at": "2026-01-18T05:30:15Z",
+          "updated_at": "2026-09-06T23:30:10Z",
+          "pushed_at": "2026-09-06T20:26:10Z",
+          "daily_stars": 748,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.43,
+          "star_delta": 748,
+          "fork_delta": 34,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.12,
+            "relative_growth": 97.06,
+            "fork_growth": 91.18,
+            "total_stars": 23.53,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "把 AI 文本改得更像作者本人，同时保留原意、事实和写作习惯",
+            "highlights": [
+              "标出文本中像 AI 的表达模式",
+              "先改写，再对照原文检查事实",
+              "按样本文风调整节奏和用词"
+            ],
+            "audience": "需要润色 AI 草稿、保留个人语气的写作者和内容团队",
+            "capabilities": [
+              "标记 25 类常见写作模式",
+              "重写段落并保留原有含义",
+              "核对姓名、数字、日期和引用",
+              "按写作样本匹配语气与节奏",
+              "改写文件正文，保留代码、数据和链接目标"
+            ],
+            "core_title": "把 AI 味改成作者自己的声音",
+            "core_summary": "它先标记写作模式，再起草、批评并复核改写；输入文件时只动正文，不碰代码、数据、frontmatter 和链接目标。",
+            "prerequisites": "支持 Skills 的 Agent；Claude Code 插件安装要求 2.1.142 或更新版本。",
+            "limitations": "缺少事实细节时会追问，不会自行补写；技术和参考文本会保持中性、朴素。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "6ffe91a6ddcdaae4667f4a2195ff5f389593e935",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+              ],
+              "highlights": [
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ],
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ],
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ]
+              ],
+              "audience": [
+                "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ],
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ],
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ],
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ],
+                [
+                  "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+                ]
+              ],
+              "core_title": [
+                "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+              ],
+              "core_summary": [
+                "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+              ],
+              "prerequisites": [
+                "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+              ],
+              "limitations": [
+                "github.readme:6ffe91a6ddcdaae4667f4a2195ff5f389593e935"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-07/repo-6f6399248ff9bd19a56a833a-8de1c3d199026b534392d241.png",
+          "publication_evidence": {
+            "full_name": "blader/humanizer",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "6ffe91a6ddcdaae4667f4a2195ff5f389593e935",
+              "source_url": "https://api.github.com/repos/blader/humanizer/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-07/repo-6f6399248ff9bd19a56a833a-8de1c3d199026b534392d241.png",
+              "sha256": "cef324165e1269efbc7464d55a4d8a0bbcfab41f9ad11ee02e21152eb56824ee",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-07/2026-09-07.ai.02.blader--humanizer.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 242521,
+          "forks": 49875,
+          "open_issues": 40352,
+          "watchers": 242521,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "nous-research",
+            "openai"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-09-06T23:28:10Z",
+          "pushed_at": "2026-09-06T21:20:46Z",
+          "daily_stars": 520,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 87.45,
+          "star_delta": 393,
+          "fork_delta": 116,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 91.18,
+            "relative_growth": 76.47,
+            "fork_growth": 97.06,
+            "total_stars": 94.12,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "把模型接入终端、聊天平台和定时任务，让 Agent 能持续执行并跨会话记住上下文",
+            "highlights": [
+              "在 CLI、Telegram 等入口持续对话",
+              "按计划运行定时任务并投递结果",
+              "让 Agent 从经验生成技能并检索历史会话"
+            ],
+            "audience": "需要搭建可长期运行、能接入多种渠道的个人或团队 Agent",
+            "capabilities": [
+              "切换模型提供商和自定义端点",
+              "通过 Telegram、Discord 等平台收发消息",
+              "安排 cron 任务并推送报告",
+              "派生子 Agent 并行处理工作流",
+              "用终端、Docker、SSH 等后端运行任务"
+            ],
+            "core_title": "会学习、记忆并持续工作的 Agent",
+            "core_summary": "Hermes 用记忆、历史会话搜索、技能自我改进和定时调度组成闭环，还能从 CLI 或多个聊天平台继续同一段工作。",
+            "prerequisites": "运行前需要配置模型提供商；项目支持 Nous Portal、OpenRouter、OpenAI 和自定义端点。",
+            "limitations": "不同终端后端和消息平台需要分别配置；自建模型还要自行准备 API 端点或算力。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "highlights": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "audience": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "core_title": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "core_summary": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "prerequisites": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "limitations": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-07/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-07/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-07/2026-09-07.ai.03.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
