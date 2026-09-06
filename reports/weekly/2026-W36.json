@@ -1,0 +1,2955 @@
+{
+  "schema_version": 3,
+  "period": "weekly",
+  "run_date": "2026-09-06",
+  "window_start": "2026-08-30",
+  "window_end": "2026-09-06",
+  "generated_at": "2026-09-06T15:15:32+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-08-30 至 2026-09-06",
+  "publication": {
+    "issue_number": 9,
+    "issue_code": "W009",
+    "issue_label": "第9期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "AI 专题榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/weekly/assets/2026-W36",
+    "manifest": "reports/weekly/assets/2026-W36/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tt-a1i/archify",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.01.tt-a1i--archify.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "THU-MAIC/OpenMAIC",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.02.thu-maic--openmaic.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.03.mattpocock--skills.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.04.affaan-m--ecc.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.05.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.06.bilawalsidhu--gods-eye-view.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.07.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W36/2026-W36.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.01.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.03.k-dense-ai--scientific-agent-skills.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.04.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.05.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.06.obra--superpowers.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "p-e-w/heretic",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.07.p-e-w--heretic.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 9,
+      "issue_code": "W009",
+      "issue_label": "第9期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1211139949,
+      "full_name": "tt-a1i/archify",
+      "owner": "tt-a1i",
+      "name": "archify",
+      "html_url": "https://github.com/tt-a1i/archify",
+      "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+      "language": "JavaScript",
+      "stars": 49813,
+      "forks": 3231,
+      "open_issues": 119,
+      "watchers": 158,
+      "topics": [
+        "agent-skills",
+        "architecture-as-code",
+        "architecture-diagram",
+        "claude-skill",
+        "code-visualization",
+        "codex",
+        "coding-agents",
+        "data-flow-diagram",
+        "deepseek-harness",
+        "developer-tools",
+        "diagram-as-code",
+        "diagrams",
+        "diagrams-as-code",
+        "dsh-plugin",
+        "mermaid-alternative",
+        "opencode",
+        "sequence-diagram",
+        "software-architecture",
+        "system-design",
+        "text-to-diagram"
+      ],
+      "created_at": "2026-04-15T05:27:37Z",
+      "updated_at": "2026-09-06T07:15:17Z",
+      "pushed_at": "2026-09-06T02:56:29Z",
+      "daily_stars": null,
+      "weekly_stars": 19480,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 1,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 97.39,
+      "star_delta": 17546,
+      "fork_delta": 1211,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 98.2,
+        "total_stars": 51.35,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "archify 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+        "highlights": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "audience": "需要减少重复操作并统一研发流程的软件团队",
+        "capabilities": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "core_title": "把重复的开发操作整理成自动化流程",
+        "core_summary": "archify 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W36/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+      "publication_evidence": {
+        "full_name": "tt-a1i/archify",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W36/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+          "sha256": "7abb24fa59126abc3dda66a4d5fcd9ccc344babc62fc1fc6a5f5d2f8781e3301",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.01.tt-a1i--archify.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1178737655,
+      "full_name": "THU-MAIC/OpenMAIC",
+      "owner": "THU-MAIC",
+      "name": "OpenMAIC",
+      "html_url": "https://github.com/THU-MAIC/OpenMAIC",
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "language": "TypeScript",
+      "stars": 32085,
+      "forks": 5252,
+      "open_issues": 224,
+      "watchers": 154,
+      "topics": [],
+      "created_at": "2026-03-11T10:13:16Z",
+      "updated_at": "2026-09-06T07:15:01Z",
+      "pushed_at": "2026-09-06T07:10:24Z",
+      "daily_stars": null,
+      "weekly_stars": 10109,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 2,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 94.15,
+      "star_delta": 9908,
+      "fork_delta": 951,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.2,
+        "relative_growth": 99.1,
+        "fork_growth": 96.4,
+        "total_stars": 48.65,
+        "activity": 100.0,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "OpenMAIC 的用途证据不足，需要先查看仓库 README",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "OpenMAIC 的用途证据不足，需要先查看仓库 README",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W36/repo-3504f6e79d3f662809911d8c-bdec7fa3b8cfb7f9f6517ef0.png",
+      "publication_evidence": {
+        "full_name": "THU-MAIC/OpenMAIC",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W36/repo-3504f6e79d3f662809911d8c-bdec7fa3b8cfb7f9f6517ef0.png",
+          "sha256": "6c48682c8bfc4c6ecbe7b5ed04cea33e59c94ebad2ce12570372c92d6586d97f",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.02.thu-maic--openmaic.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 253133,
+      "forks": 21360,
+      "open_issues": 466,
+      "watchers": 253133,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-09-06T07:14:43Z",
+      "pushed_at": "2026-09-04T08:45:43Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 90.96,
+      "star_delta": 11859,
+      "fork_delta": 840,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 99.1,
+        "relative_growth": 92.79,
+        "fork_growth": 95.5,
+        "total_stars": 90.99,
+        "activity": 87.52,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "目前无法从公开字段确认 skills 能完成哪些任务",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "目前无法从公开字段确认 skills 能完成哪些任务",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W36/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W36/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.03.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 250236,
+      "forks": 37648,
+      "open_issues": 159,
+      "watchers": 250236,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-09-06T07:14:06Z",
+      "pushed_at": "2026-09-05T21:47:27Z",
+      "daily_stars": null,
+      "weekly_stars": 5445,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 18,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 4,
+      "score": 90.55,
+      "star_delta": 5832,
+      "fork_delta": 698,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.5,
+        "relative_growth": 88.29,
+        "fork_growth": 94.59,
+        "total_stars": 90.09,
+        "activity": 100.0,
+        "trending_signal": 23.54
+      },
+      "summary": {
+        "one_line": "用 ECC 可以把重复的开发操作整理成自动化流程，还会减少手动执行和重复配置",
+        "highlights": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "audience": "需要减少重复操作并统一研发流程的软件团队",
+        "capabilities": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "core_title": "把重复的开发操作整理成自动化流程",
+        "core_summary": "用 ECC 可以把重复的开发操作整理成自动化流程，还会减少手动执行和重复配置",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W36/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W36/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "sha256": "b96c9ae9f895df5d8bf215e1783f3cdc401e818b22cb82c16937fefc71d4e2e4",
+          "width": 165,
+          "height": 165
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.04.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1333065091,
+      "full_name": "deepseek-ai/deepseek-harness",
+      "owner": "deepseek-ai",
+      "name": "deepseek-harness",
+      "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+      "description": "DeepSeek Harness: Everything is a Plugin.",
+      "language": "TypeScript",
+      "stars": 213408,
+      "forks": 25097,
+      "open_issues": 0,
+      "watchers": 213408,
+      "topics": [
+        "ai-agents",
+        "cordis",
+        "dsh",
+        "dsh-plugin"
+      ],
+      "created_at": "2026-08-13T11:56:32Z",
+      "updated_at": "2026-09-06T07:14:49Z",
+      "pushed_at": "2026-09-04T11:34:31Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 5,
+      "score": 89.88,
+      "star_delta": 9510,
+      "fork_delta": 1533,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.3,
+        "relative_growth": 90.99,
+        "fork_growth": 100.0,
+        "total_stars": 85.59,
+        "activity": 87.52,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "这类任务可以交给 deepseek-harness：搭建能够连续执行多步任务的 AI Agent，并把模型能力接入可重复的任务流程",
+        "highlights": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+        "capabilities": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "core_title": "搭建能够连续执行多步任务的 AI Agent",
+        "core_summary": "这类任务可以交给 deepseek-harness：搭建能够连续执行多步任务的 AI Agent，并把模型能力接入可重复的任务流程",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W36/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+      "publication_evidence": {
+        "full_name": "deepseek-ai/deepseek-harness",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W36/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "sha256": "006259ac07d66996f63589d24688c103745bd251193c94395bed2765c68c947c",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.05.deepseek-ai--deepseek-harness.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1277471539,
+      "full_name": "bilawalsidhu/gods-eye-view",
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "html_url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": 18127,
+      "forks": 3664,
+      "open_issues": 127,
+      "watchers": 478,
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "created_at": "2026-06-22T23:37:22Z",
+      "updated_at": "2026-09-06T07:14:17Z",
+      "pushed_at": "2026-09-05T08:30:57Z",
+      "daily_stars": null,
+      "weekly_stars": 5926,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 14,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 6,
+      "score": 89.15,
+      "star_delta": 5540,
+      "fork_delta": 1169,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.59,
+        "relative_growth": 96.4,
+        "fork_growth": 97.3,
+        "total_stars": 44.14,
+        "activity": 93.55,
+        "trending_signal": 25.6
+      },
+      "summary": {
+        "one_line": "这次只能确认 gods-eye-view 的仓库身份，具体功能仍待核对",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "这次只能确认 gods-eye-view 的仓库身份，具体功能仍待核对",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W36/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+      "publication_evidence": {
+        "full_name": "bilawalsidhu/gods-eye-view",
+        "license_spdx_id": "NOASSERTION",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W36/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+          "sha256": "0c22a163657a4fbeb562b6ca9b8178b61fd2a9026b82a2711da9d2f07f88bf2b",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.06.bilawalsidhu--gods-eye-view.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1024554267,
+      "full_name": "NousResearch/hermes-agent",
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "html_url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": 242128,
+      "forks": 49759,
+      "open_issues": 40179,
+      "watchers": 242128,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "codex",
+        "hermes",
+        "hermes-agent",
+        "llm",
+        "nous-research",
+        "openai"
+      ],
+      "created_at": "2025-07-22T22:22:28Z",
+      "updated_at": "2026-09-06T07:15:16Z",
+      "pushed_at": "2026-09-06T00:00:21Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 7,
+      "score": 87.43,
+      "star_delta": 3873,
+      "fork_delta": 1298,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 92.79,
+        "relative_growth": 83.78,
+        "fork_growth": 99.1,
+        "total_stars": 87.39,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "如果工作流里要搭建能够连续执行多步任务的 AI Agent，可以交给 hermes-agent，同时把模型能力接入可重复的任务流程",
+        "highlights": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+        "capabilities": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "core_title": "搭建能够连续执行多步任务的 AI Agent",
+        "core_summary": "如果工作流里要搭建能够连续执行多步任务的 AI Agent，可以交给 hermes-agent，同时把模型能力接入可重复的任务流程",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W36/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+      "publication_evidence": {
+        "full_name": "NousResearch/hermes-agent",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W36/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.07.nousresearch--hermes-agent.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tt-a1i/archify",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.01.tt-a1i--archify.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "THU-MAIC/OpenMAIC",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.02.thu-maic--openmaic.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.03.mattpocock--skills.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.04.affaan-m--ecc.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.05.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.06.bilawalsidhu--gods-eye-view.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.07.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1211139949,
+          "full_name": "tt-a1i/archify",
+          "owner": "tt-a1i",
+          "name": "archify",
+          "html_url": "https://github.com/tt-a1i/archify",
+          "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+          "language": "JavaScript",
+          "stars": 49813,
+          "forks": 3231,
+          "open_issues": 119,
+          "watchers": 158,
+          "topics": [
+            "agent-skills",
+            "architecture-as-code",
+            "architecture-diagram",
+            "claude-skill",
+            "code-visualization",
+            "codex",
+            "coding-agents",
+            "data-flow-diagram",
+            "deepseek-harness",
+            "developer-tools",
+            "diagram-as-code",
+            "diagrams",
+            "diagrams-as-code",
+            "dsh-plugin",
+            "mermaid-alternative",
+            "opencode",
+            "sequence-diagram",
+            "software-architecture",
+            "system-design",
+            "text-to-diagram"
+          ],
+          "created_at": "2026-04-15T05:27:37Z",
+          "updated_at": "2026-09-06T07:15:17Z",
+          "pushed_at": "2026-09-06T02:56:29Z",
+          "daily_stars": null,
+          "weekly_stars": 19480,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 1,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 97.39,
+          "star_delta": 17546,
+          "fork_delta": 1211,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 98.2,
+            "total_stars": 51.35,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "archify 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "archify 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+          "publication_evidence": {
+            "full_name": "tt-a1i/archify",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-c29003d458e05ffd1665cd8c-19dab0bcf93355a03351a403.png",
+              "sha256": "7abb24fa59126abc3dda66a4d5fcd9ccc344babc62fc1fc6a5f5d2f8781e3301",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.01.tt-a1i--archify.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1178737655,
+          "full_name": "THU-MAIC/OpenMAIC",
+          "owner": "THU-MAIC",
+          "name": "OpenMAIC",
+          "html_url": "https://github.com/THU-MAIC/OpenMAIC",
+          "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+          "language": "TypeScript",
+          "stars": 32085,
+          "forks": 5252,
+          "open_issues": 224,
+          "watchers": 154,
+          "topics": [],
+          "created_at": "2026-03-11T10:13:16Z",
+          "updated_at": "2026-09-06T07:15:01Z",
+          "pushed_at": "2026-09-06T07:10:24Z",
+          "daily_stars": null,
+          "weekly_stars": 10109,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 2,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 94.15,
+          "star_delta": 9908,
+          "fork_delta": 951,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.2,
+            "relative_growth": 99.1,
+            "fork_growth": 96.4,
+            "total_stars": 48.65,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "OpenMAIC 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "OpenMAIC 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-3504f6e79d3f662809911d8c-bdec7fa3b8cfb7f9f6517ef0.png",
+          "publication_evidence": {
+            "full_name": "THU-MAIC/OpenMAIC",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-3504f6e79d3f662809911d8c-bdec7fa3b8cfb7f9f6517ef0.png",
+              "sha256": "6c48682c8bfc4c6ecbe7b5ed04cea33e59c94ebad2ce12570372c92d6586d97f",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.02.thu-maic--openmaic.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 253133,
+          "forks": 21360,
+          "open_issues": 466,
+          "watchers": 253133,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-09-06T07:14:43Z",
+          "pushed_at": "2026-09-04T08:45:43Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 90.96,
+          "star_delta": 11859,
+          "fork_delta": 840,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 99.1,
+            "relative_growth": 92.79,
+            "fork_growth": 95.5,
+            "total_stars": 90.99,
+            "activity": 87.52,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 skills 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 skills 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.03.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 250236,
+          "forks": 37648,
+          "open_issues": 159,
+          "watchers": 250236,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-06T07:14:06Z",
+          "pushed_at": "2026-09-05T21:47:27Z",
+          "daily_stars": null,
+          "weekly_stars": 5445,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 18,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 90.55,
+          "star_delta": 5832,
+          "fork_delta": 698,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.5,
+            "relative_growth": 88.29,
+            "fork_growth": 94.59,
+            "total_stars": 90.09,
+            "activity": 100.0,
+            "trending_signal": 23.54
+          },
+          "summary": {
+            "one_line": "用 ECC 可以把重复的开发操作整理成自动化流程，还会减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "用 ECC 可以把重复的开发操作整理成自动化流程，还会减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "b96c9ae9f895df5d8bf215e1783f3cdc401e818b22cb82c16937fefc71d4e2e4",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.04.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1333065091,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "owner": "deepseek-ai",
+          "name": "deepseek-harness",
+          "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+          "description": "DeepSeek Harness: Everything is a Plugin.",
+          "language": "TypeScript",
+          "stars": 213408,
+          "forks": 25097,
+          "open_issues": 0,
+          "watchers": 213408,
+          "topics": [
+            "ai-agents",
+            "cordis",
+            "dsh",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-08-13T11:56:32Z",
+          "updated_at": "2026-09-06T07:14:49Z",
+          "pushed_at": "2026-09-04T11:34:31Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 89.88,
+          "star_delta": 9510,
+          "fork_delta": 1533,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.3,
+            "relative_growth": 90.99,
+            "fork_growth": 100.0,
+            "total_stars": 85.59,
+            "activity": 87.52,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "这类任务可以交给 deepseek-harness：搭建能够连续执行多步任务的 AI Agent，并把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "这类任务可以交给 deepseek-harness：搭建能够连续执行多步任务的 AI Agent，并把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "publication_evidence": {
+            "full_name": "deepseek-ai/deepseek-harness",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+              "sha256": "006259ac07d66996f63589d24688c103745bd251193c94395bed2765c68c947c",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.05.deepseek-ai--deepseek-harness.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1277471539,
+          "full_name": "bilawalsidhu/gods-eye-view",
+          "owner": "bilawalsidhu",
+          "name": "gods-eye-view",
+          "html_url": "https://github.com/bilawalsidhu/gods-eye-view",
+          "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+          "language": "JavaScript",
+          "stars": 18127,
+          "forks": 3664,
+          "open_issues": 127,
+          "watchers": 478,
+          "topics": [
+            "3d-globe",
+            "cesium",
+            "flight-tracking",
+            "geospatial",
+            "geospatial-intelligence",
+            "gis",
+            "osint",
+            "photogrammetry",
+            "satellite-tracking",
+            "spatial-intelligence",
+            "webgl",
+            "worldview"
+          ],
+          "created_at": "2026-06-22T23:37:22Z",
+          "updated_at": "2026-09-06T07:14:17Z",
+          "pushed_at": "2026-09-05T08:30:57Z",
+          "daily_stars": null,
+          "weekly_stars": 5926,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 14,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 89.15,
+          "star_delta": 5540,
+          "fork_delta": 1169,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.59,
+            "relative_growth": 96.4,
+            "fork_growth": 97.3,
+            "total_stars": 44.14,
+            "activity": 93.55,
+            "trending_signal": 25.6
+          },
+          "summary": {
+            "one_line": "这次只能确认 gods-eye-view 的仓库身份，具体功能仍待核对",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "这次只能确认 gods-eye-view 的仓库身份，具体功能仍待核对",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+          "publication_evidence": {
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "license_spdx_id": "NOASSERTION",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+              "sha256": "0c22a163657a4fbeb562b6ca9b8178b61fd2a9026b82a2711da9d2f07f88bf2b",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.06.bilawalsidhu--gods-eye-view.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 242128,
+          "forks": 49759,
+          "open_issues": 40179,
+          "watchers": 242128,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "nous-research",
+            "openai"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-09-06T07:15:16Z",
+          "pushed_at": "2026-09-06T00:00:21Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 87.43,
+          "star_delta": 3873,
+          "fork_delta": 1298,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.79,
+            "relative_growth": 83.78,
+            "fork_growth": 99.1,
+            "total_stars": 87.39,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "如果工作流里要搭建能够连续执行多步任务的 AI Agent，可以交给 hermes-agent，同时把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "如果工作流里要搭建能够连续执行多步任务的 AI Agent，可以交给 hermes-agent，同时把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.comprehensive.07.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W36/2026-W36.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.01.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.03.k-dense-ai--scientific-agent-skills.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.04.nousresearch--hermes-agent.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.05.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.06.obra--superpowers.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "p-e-w/heretic",
+            "path": "reports/weekly/assets/2026-W36/2026-W36.ai.07.p-e-w--heretic.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1333065091,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "owner": "deepseek-ai",
+          "name": "deepseek-harness",
+          "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+          "description": "DeepSeek Harness: Everything is a Plugin.",
+          "language": "TypeScript",
+          "stars": 213408,
+          "forks": 25097,
+          "open_issues": 0,
+          "watchers": 213408,
+          "topics": [
+            "ai-agents",
+            "cordis",
+            "dsh",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-08-13T11:56:32Z",
+          "updated_at": "2026-09-06T07:14:49Z",
+          "pushed_at": "2026-09-04T11:34:31Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.25,
+          "star_delta": 9510,
+          "fork_delta": 1533,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 95.0,
+            "fork_growth": 100.0,
+            "total_stars": 90.0,
+            "activity": 87.52,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "deepseek-harness 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "deepseek-harness 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "publication_evidence": {
+            "full_name": "deepseek-ai/deepseek-harness",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+              "sha256": "006259ac07d66996f63589d24688c103745bd251193c94395bed2765c68c947c",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.ai.01.deepseek-ai--deepseek-harness.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 250236,
+          "forks": 37648,
+          "open_issues": 159,
+          "watchers": 250236,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-06T07:14:06Z",
+          "pushed_at": "2026-09-05T21:47:27Z",
+          "daily_stars": null,
+          "weekly_stars": 5445,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 18,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 90.93,
+          "star_delta": 5832,
+          "fork_delta": 698,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.0,
+            "relative_growth": 90.0,
+            "fork_growth": 95.0,
+            "total_stars": 95.0,
+            "activity": 100.0,
+            "trending_signal": 23.54
+          },
+          "summary": {
+            "one_line": "想要把重复的开发操作整理成自动化流程，可以用 ECC；它能减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "想要把重复的开发操作整理成自动化流程，可以用 ECC；它能减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "b96c9ae9f895df5d8bf215e1783f3cdc401e818b22cb82c16937fefc71d4e2e4",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.ai.02.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1079456184,
+          "full_name": "K-Dense-AI/scientific-agent-skills",
+          "owner": "K-Dense-AI",
+          "name": "scientific-agent-skills",
+          "html_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+          "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+          "language": "Python",
+          "stars": 43052,
+          "forks": 3931,
+          "open_issues": 32,
+          "watchers": 189,
+          "topics": [
+            "agent-skills",
+            "ai-scientist",
+            "bioinformatics",
+            "chemoinformatics",
+            "claude",
+            "claude-skills",
+            "claudecode",
+            "clinical-research",
+            "computational-biology",
+            "data-analysis",
+            "drug-discovery",
+            "genomics",
+            "materials-science",
+            "metabolomics",
+            "proteomics",
+            "scientific-computing",
+            "scientific-visualization"
+          ],
+          "created_at": "2025-10-19T20:54:15Z",
+          "updated_at": "2026-09-06T07:15:24Z",
+          "pushed_at": "2026-09-02T16:25:37Z",
+          "daily_stars": null,
+          "weekly_stars": 5491,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 7,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 86.98,
+          "star_delta": 4841,
+          "fork_delta": 336,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.5,
+            "relative_growth": 97.5,
+            "fork_growth": 92.5,
+            "total_stars": 42.5,
+            "activity": 81.87,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 scientific-agent-skills 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 scientific-agent-skills 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+          "publication_evidence": {
+            "full_name": "K-Dense-AI/scientific-agent-skills",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-fb3d306384482b465f9ea196-4375f243b136d8d1cef50f8f.png",
+              "sha256": "b6d9759f6cdf38537ff3bae4ae21aca860dd12075de4a4197bea3d218a8de55e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.ai.03.k-dense-ai--scientific-agent-skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 242128,
+          "forks": 49759,
+          "open_issues": 40179,
+          "watchers": 242128,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "nous-research",
+            "openai"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-09-06T07:15:16Z",
+          "pushed_at": "2026-09-06T00:00:21Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 85.88,
+          "star_delta": 3873,
+          "fork_delta": 1298,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 90.0,
+            "relative_growth": 82.5,
+            "fork_growth": 97.5,
+            "total_stars": 92.5,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "用 hermes-agent 可以搭建能够连续执行多步任务的 AI Agent，还会把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "用 hermes-agent 可以搭建能够连续执行多步任务的 AI Agent，还会把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "108babf192ab7f725719f941a8fc43ad4fe9a98a5ca1197016d4117c7771f899",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.ai.04.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1206390571,
+          "full_name": "debpalash/VoiceStudio",
+          "owner": "debpalash",
+          "name": "VoiceStudio",
+          "html_url": "https://github.com/debpalash/VoiceStudio",
+          "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+          "language": "Python",
+          "stars": 19175,
+          "forks": 2455,
+          "open_issues": 41,
+          "watchers": 82,
+          "topics": [
+            "ai",
+            "audiobook",
+            "cuda",
+            "dubbing",
+            "elevenlabs-alternative",
+            "huggingface",
+            "local-first",
+            "mlx",
+            "omnivoice-studio",
+            "speech-to-text",
+            "tauri",
+            "text-to-speech",
+            "transcription",
+            "translate",
+            "tts",
+            "voice-ai",
+            "voice-cloning",
+            "voice-generation",
+            "voicestudio",
+            "workflow"
+          ],
+          "created_at": "2026-04-09T21:40:26Z",
+          "updated_at": "2026-09-06T07:15:21Z",
+          "pushed_at": "2026-09-05T17:47:59Z",
+          "daily_stars": null,
+          "weekly_stars": 6761,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 11,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 84.39,
+          "star_delta": 6761,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 97.5,
+            "relative_growth": 100.0,
+            "fork_growth": 25.0,
+            "total_stars": 35.0,
+            "activity": 100.0,
+            "trending_signal": 27.89
+          },
+          "summary": {
+            "one_line": "这类任务可以交给 VoiceStudio：把语音内容转换成可编辑文字，并方便检索、整理和继续加工",
+            "highlights": [
+              "将录音或实时语音转换为文字",
+              "生成便于复制和编辑的文本记录",
+              "为摘要、搜索和归档准备文字材料"
+            ],
+            "audience": "需要整理访谈、课程、会议或录音内容的用户",
+            "capabilities": [
+              "将录音或实时语音转换为文字",
+              "生成便于复制和编辑的文本记录",
+              "为摘要、搜索和归档准备文字材料"
+            ],
+            "core_title": "把语音内容转换成可编辑文字",
+            "core_summary": "这类任务可以交给 VoiceStudio：把语音内容转换成可编辑文字，并方便检索、整理和继续加工",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+          "publication_evidence": {
+            "full_name": "debpalash/VoiceStudio",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+              "sha256": "599775fa700c2816df5de823e30a438cd74ab05af92fc86ced777c69f1841957",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.ai.05.debpalash--voicestudio.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 282170,
+          "forks": 25275,
+          "open_issues": 336,
+          "watchers": 282170,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-09-06T07:12:10Z",
+          "pushed_at": "2026-09-04T23:04:36Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 79.73,
+          "star_delta": 2693,
+          "fork_delta": 246,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 82.5,
+            "relative_growth": 77.5,
+            "fork_growth": 87.5,
+            "total_stars": 97.5,
+            "activity": 93.55,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "当你需要给编程 Agent 提供可复用的软件开发技能，superpowers 可以接手，同时让需求、编码和验证按固定流程推进",
+            "highlights": [
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
+            ],
+            "audience": "希望让编程 Agent 按固定方法完成研发任务的开发者",
+            "capabilities": [
+              "把常用开发方法封装成可复用技能",
+              "按规划、实现和验证步骤组织任务",
+              "在不同项目中复用同一套开发流程"
+            ],
+            "core_title": "给编程 Agent 提供可复用的软件开发技能",
+            "core_summary": "当你需要给编程 Agent 提供可复用的软件开发技能，superpowers 可以接手，同时让需求、编码和验证按固定流程推进",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+              "sha256": "1df5657cda192b0e8d047947d1dcc4170545b1c2852ee58262e69fa7f8f6b5bc",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.ai.06.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1061041576,
+          "full_name": "p-e-w/heretic",
+          "owner": "p-e-w",
+          "name": "heretic",
+          "html_url": "https://github.com/p-e-w/heretic",
+          "description": "Fully automatic censorship removal for language models",
+          "language": "Python",
+          "stars": 30637,
+          "forks": 3387,
+          "open_issues": 81,
+          "watchers": 151,
+          "topics": [
+            "abliteration",
+            "llm",
+            "transformer"
+          ],
+          "created_at": "2025-09-21T05:46:16Z",
+          "updated_at": "2026-09-06T07:13:26Z",
+          "pushed_at": "2026-09-05T16:11:52Z",
+          "daily_stars": null,
+          "weekly_stars": 2010,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 16,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 79.1,
+          "star_delta": 1957,
+          "fork_delta": 227,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 80.0,
+            "relative_growth": 87.5,
+            "fork_growth": 85.0,
+            "total_stars": 37.5,
+            "activity": 100.0,
+            "trending_signal": 24.47
+          },
+          "summary": {
+            "one_line": "要解释 heretic 的用途，还需要补充可核验的 README 信息",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "要解释 heretic 的用途，还需要补充可核验的 README 信息",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W36/repo-8ac607930ab896c1b1be3361-85004e923140e1031cbf5418.png",
+          "publication_evidence": {
+            "full_name": "p-e-w/heretic",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W36/repo-8ac607930ab896c1b1be3361-85004e923140e1031cbf5418.png",
+              "sha256": "b146a3cc5f5f3cc0cf5f253bee3e9ed4c47cfc45ad75ffc5349e44bc736fed52",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W36/2026-W36.ai.07.p-e-w--heretic.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
