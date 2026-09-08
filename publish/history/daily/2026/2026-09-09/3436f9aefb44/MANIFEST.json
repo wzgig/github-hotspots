@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "3436f9aefb44baf85ce354087aa813fb995102a3ddbbd19db32098e899f62849",
+  "checklist_sha256": "81ef3e61ea193c0b20a93bc24a993b67bfc5457a6f28f36bc0ba7dab8bdb734a",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-09-09",
+  "generated_at": "2026-09-09T07:32:32.297195+08:00",
+  "issue": {
+    "number": 60,
+    "code": "D060",
+    "stem": "D060-2026-09-09",
+    "label": "第60期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-09-09.json",
+    "report_sha256": "112e99bd898f4a12ffaa312d727b498732f3029cf58728b822afeda726e3b8ed",
+    "poster_manifest": "reports/daily/assets/2026-09-09/manifest.json",
+    "poster_manifest_sha256": "315874bb928e2ee6ce8f71ff8eb2df7b9ae9fe9d0930622fa663f85097572aa4",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D060-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "ca246f2482b12e15de95427109625c051861959f2f9ec43520b32b949a7fd86e",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 385,
+      "caption_sha256": "85f724425bb82cdee0a4015ac5fa974ebfbf7249cf396911bf972061b85b7713",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "3bbf1dc2e2111bd1e6a76999015dd30021129fc7190a5e1214282de42f1186f2",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-09-09/2026-09-09.comprehensive.cover.png",
+          "sha256": "2291e5e14d6525f53ddc492e1fa848c29f67eaab9ab9899a080d1921e2b45a11",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-09/2026-09-09.comprehensive.01.affaan-m--ecc.png",
+          "sha256": "c7a3ba7d0ffcb43e21ec8d24ce71d4d392a1b77ba6cec6159d4ce0768bceeb51",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "affaan-m/ECC",
+          "publication_path": "images/02-rank-01-affaan-m-ecc.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-09/2026-09-09.comprehensive.02.heygen-com--hyperframes.png",
+          "sha256": "0982fa1db75d024c1f3f841def644e1965e8ce2a609490acf211ca7798705424",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "heygen-com/hyperframes",
+          "publication_path": "images/03-rank-02-heygen-com-hyperframes.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-09/2026-09-09.comprehensive.03.deepseek-ai--deepseek-harness.png",
+          "sha256": "da07f64b93a676a8ed38a9bd23a27055c2e8548c796b10a767a2e50cf1dbb310",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "publication_path": "images/04-rank-03-deepseek-ai-deepseek-harness.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D060-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "02ce808fb1d0d5d7f22bf736c2234f909279adfe66127003a95c4357846650e4",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 378,
+      "caption_sha256": "fccb10097b15ba16129694177733be3c58e33cd82efaa481c9e776906557164f",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "af0e13e75cc5a45bf1bb7be836c3684261a4784375df9e913c41cab4c0479c90",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-09-09/2026-09-09.ai.cover.png",
+          "sha256": "02590c6f3658aeb9280c864c0a753b8b7b8f413ec507e0a58a8944fc97c06710",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-09/2026-09-09.ai.01.heygen-com--hyperframes.png",
+          "sha256": "075bb7542191cf0cddb70e8499667bdc30f64c3dfba7e0873ef9c047a0faab50",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "heygen-com/hyperframes",
+          "publication_path": "images/02-rank-01-heygen-com-hyperframes.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-09/2026-09-09.ai.02.affaan-m--ecc.png",
+          "sha256": "f633e8ed46bd0c2ef45d5e1410246c8b168b58a51774c743abac5e4c8b720fc9",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "affaan-m/ECC",
+          "publication_path": "images/03-rank-02-affaan-m-ecc.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-09/2026-09-09.ai.03.deepseek-ai--deepseek-harness.png",
+          "sha256": "849bcabc009811941855eea18a39ddd4a5e9a4b07317a71a43e37b51da3815d2",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "publication_path": "images/04-rank-03-deepseek-ai-deepseek-harness.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-09-09",
+    "revision": "3436f9aefb44",
+    "image_policy": "repository-source-reference"
+  }
+}
