@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-09-11",
+  "window": {
+    "start": "2026-09-10",
+    "end": "2026-09-11"
+  },
+  "source_report": "reports/daily/2026-09-11.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-09-11",
+  "manifest": "reports/daily/assets/2026-09-11/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-09-11/2026-09-11.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "ayghri/i-have-adhd",
+          "path": "reports/daily/assets/2026-09-11/2026-09-11.comprehensive.01.ayghri--i-have-adhd.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "path": "reports/daily/assets/2026-09-11/2026-09-11.comprehensive.02.deepseek-ai--deepseek-harness.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "cathrynlavery/diagram-design",
+          "path": "reports/daily/assets/2026-09-11/2026-09-11.comprehensive.03.cathrynlavery--diagram-design.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-09-11/2026-09-11.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "path": "reports/daily/assets/2026-09-11/2026-09-11.ai.01.deepseek-ai--deepseek-harness.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "affaan-m/ECC",
+          "path": "reports/daily/assets/2026-09-11/2026-09-11.ai.02.affaan-m--ecc.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "obra/superpowers",
+          "path": "reports/daily/assets/2026-09-11/2026-09-11.ai.03.obra--superpowers.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 62,
+    "issue_code": "D062",
+    "issue_label": "第62期",
+    "status": "official"
+  }
+}
