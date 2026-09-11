@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-09-12",
+  "window": {
+    "start": "2026-09-11",
+    "end": "2026-09-12"
+  },
+  "source_report": "reports/daily/2026-09-12.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-09-12",
+  "manifest": "reports/daily/assets/2026-09-12/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-09-12/2026-09-12.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "bilawalsidhu/gods-eye-view",
+          "path": "reports/daily/assets/2026-09-12/2026-09-12.comprehensive.01.bilawalsidhu--gods-eye-view.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "ayghri/i-have-adhd",
+          "path": "reports/daily/assets/2026-09-12/2026-09-12.comprehensive.02.ayghri--i-have-adhd.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "obra/superpowers",
+          "path": "reports/daily/assets/2026-09-12/2026-09-12.comprehensive.03.obra--superpowers.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-09-12/2026-09-12.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "path": "reports/daily/assets/2026-09-12/2026-09-12.ai.01.deepseek-ai--deepseek-harness.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "github/spec-kit",
+          "path": "reports/daily/assets/2026-09-12/2026-09-12.ai.02.github--spec-kit.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "obra/superpowers",
+          "path": "reports/daily/assets/2026-09-12/2026-09-12.ai.03.obra--superpowers.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 63,
+    "issue_code": "D063",
+    "issue_label": "第63期",
+    "status": "official"
+  }
+}
