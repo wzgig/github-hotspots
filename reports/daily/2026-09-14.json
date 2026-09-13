@@ -1,0 +1,1407 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-09-14",
+  "window_start": "2026-09-13",
+  "window_end": "2026-09-14",
+  "generated_at": "2026-09-14T07:31:19+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-09-13 至 2026-09-14",
+  "publication": {
+    "issue_number": 65,
+    "issue_code": "D065",
+    "issue_label": "第65期",
+    "status": "official"
+  },
+  "data_quality": "中高：快照与 Trending 混合",
+  "warnings": [
+    "综合主榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号",
+    "5 个上榜项目未获取到 Owner 头像，海报已使用身份占位图",
+    "5 个上榜项目未获取到 README，相关文案将使用受控回退"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-09-14",
+    "manifest": "reports/daily/assets/2026-09-14/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "path": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.01.bilawalsidhu--gods-eye-view.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "JustVugg/colibri",
+            "path": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.02.justvugg--colibri.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "asgeirtj/system_prompts_leaks",
+            "path": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.03.asgeirtj--system-prompts-leaks.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-14/2026-09-14.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "asgeirtj/system_prompts_leaks",
+            "path": "reports/daily/assets/2026-09-14/2026-09-14.ai.01.asgeirtj--system-prompts-leaks.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "tensorflow/tensorflow",
+            "path": "reports/daily/assets/2026-09-14/2026-09-14.ai.02.tensorflow--tensorflow.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "multimodal-art-projection/YuE",
+            "path": "reports/daily/assets/2026-09-14/2026-09-14.ai.03.multimodal-art-projection--yue.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 65,
+      "issue_code": "D065",
+      "issue_label": "第65期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1277471539,
+      "full_name": "bilawalsidhu/gods-eye-view",
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "html_url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": 31812,
+      "forks": 6387,
+      "open_issues": 204,
+      "watchers": 619,
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "created_at": "2026-06-22T23:37:22Z",
+      "updated_at": "2026-09-13T23:29:27Z",
+      "pushed_at": "2026-09-13T23:28:39Z",
+      "daily_stars": 2898,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 92.57,
+      "star_delta": 1247,
+      "fork_delta": 247,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.61,
+        "relative_growth": 97.22,
+        "fork_growth": 100.0,
+        "total_stars": 26.39,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "公开信息不足，暂不能准确说明 gods-eye-view 的具体用途",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "公开信息不足，暂不能准确说明 gods-eye-view 的具体用途",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "candidate:positioning"
+          ],
+          "highlights": [
+            [
+              "candidate:positioning"
+            ],
+            [
+              "candidate:positioning"
+            ],
+            [
+              "candidate:positioning"
+            ]
+          ],
+          "audience": [
+            "candidate:positioning"
+          ],
+          "capabilities": [
+            [
+              "candidate:positioning"
+            ],
+            [
+              "candidate:positioning"
+            ],
+            [
+              "candidate:positioning"
+            ]
+          ],
+          "core_title": [
+            "candidate:positioning"
+          ],
+          "core_summary": [
+            "candidate:positioning"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "bilawalsidhu/gods-eye-view",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.01.bilawalsidhu--gods-eye-view.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1286080397,
+      "full_name": "JustVugg/colibri",
+      "owner": "JustVugg",
+      "name": "colibri",
+      "html_url": "https://github.com/JustVugg/colibri",
+      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+      "language": "C",
+      "stars": 29738,
+      "forks": 3241,
+      "open_issues": 121,
+      "watchers": 260,
+      "topics": [],
+      "created_at": "2026-07-01T12:27:49Z",
+      "updated_at": "2026-09-13T23:30:29Z",
+      "pushed_at": "2026-09-13T20:43:54Z",
+      "daily_stars": 960,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 85.62,
+      "star_delta": 960,
+      "fork_delta": 0,
+      "delta_source": "trending",
+      "component_percentiles": {
+        "star_growth": 97.22,
+        "relative_growth": 93.06,
+        "fork_growth": 21.53,
+        "total_stars": 25.0,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "colibri 的用途证据不足，需要先查看仓库 README",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "colibri 的用途证据不足，需要先查看仓库 README",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "candidate:growth_signal"
+          ],
+          "highlights": [
+            [
+              "candidate:growth_signal"
+            ],
+            [
+              "candidate:growth_signal"
+            ],
+            [
+              "candidate:growth_signal"
+            ]
+          ],
+          "audience": [
+            "candidate:growth_signal"
+          ],
+          "capabilities": [
+            [
+              "candidate:growth_signal"
+            ],
+            [
+              "candidate:growth_signal"
+            ],
+            [
+              "candidate:growth_signal"
+            ]
+          ],
+          "core_title": [
+            "candidate:growth_signal"
+          ],
+          "core_summary": [
+            "candidate:growth_signal"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "JustVugg/colibri",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.02.justvugg--colibri.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 976921297,
+      "full_name": "asgeirtj/system_prompts_leaks",
+      "owner": "asgeirtj",
+      "name": "system_prompts_leaks",
+      "html_url": "https://github.com/asgeirtj/system_prompts_leaks",
+      "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
+      "language": "JavaScript",
+      "stars": 65999,
+      "forks": 10797,
+      "open_issues": 56,
+      "watchers": 749,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-prompts",
+        "anthropic",
+        "chatbot",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "codex",
+        "cursor",
+        "gemini",
+        "generative-ai",
+        "google",
+        "grok",
+        "llm",
+        "openai",
+        "prompt",
+        "prompt-engineering",
+        "system-prompt",
+        "system-prompts"
+      ],
+      "created_at": "2025-05-03T02:43:56Z",
+      "updated_at": "2026-09-13T23:30:37Z",
+      "pushed_at": "2026-09-13T19:18:51Z",
+      "daily_stars": 727,
+      "weekly_stars": null,
+      "trending_rank_daily": 7,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 85.0,
+      "star_delta": 435,
+      "fork_delta": 39,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 91.67,
+        "relative_growth": 81.94,
+        "fork_growth": 95.83,
+        "total_stars": 30.56,
+        "activity": 100.0,
+        "trending_signal": 33.33
+      },
+      "summary": {
+        "one_line": "主要任务是集中检索和对照不同 AI 产品的系统提示词；system_prompts_leaks 还能帮助研究模型指令和产品交互设计",
+        "highlights": [
+          "按模型和工具整理系统提示词样本",
+          "对照不同产品的指令结构与约束",
+          "持续汇总可用于研究的提示词资料"
+        ],
+        "audience": "研究模型行为、提示词设计或 AI 产品交互的读者",
+        "capabilities": [
+          "按模型和工具整理系统提示词样本",
+          "对照不同产品的指令结构与约束",
+          "持续汇总可用于研究的提示词资料"
+        ],
+        "core_title": "集中检索和对照不同 AI 产品的系统提示词",
+        "core_summary": "主要任务是集中检索和对照不同 AI 产品的系统提示词；system_prompts_leaks 还能帮助研究模型指令和产品交互设计",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "candidate:tech_stack"
+          ],
+          "highlights": [
+            [
+              "candidate:tech_stack"
+            ],
+            [
+              "candidate:tech_stack"
+            ],
+            [
+              "candidate:tech_stack"
+            ]
+          ],
+          "audience": [
+            "candidate:tech_stack"
+          ],
+          "capabilities": [
+            [
+              "candidate:tech_stack"
+            ],
+            [
+              "candidate:tech_stack"
+            ],
+            [
+              "candidate:tech_stack"
+            ]
+          ],
+          "core_title": [
+            "candidate:tech_stack"
+          ],
+          "core_summary": [
+            "candidate:tech_stack"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "asgeirtj/system_prompts_leaks",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.03.asgeirtj--system-prompts-leaks.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "path": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.01.bilawalsidhu--gods-eye-view.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "JustVugg/colibri",
+            "path": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.02.justvugg--colibri.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "asgeirtj/system_prompts_leaks",
+            "path": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.03.asgeirtj--system-prompts-leaks.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1277471539,
+          "full_name": "bilawalsidhu/gods-eye-view",
+          "owner": "bilawalsidhu",
+          "name": "gods-eye-view",
+          "html_url": "https://github.com/bilawalsidhu/gods-eye-view",
+          "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+          "language": "JavaScript",
+          "stars": 31812,
+          "forks": 6387,
+          "open_issues": 204,
+          "watchers": 619,
+          "topics": [
+            "3d-globe",
+            "cesium",
+            "flight-tracking",
+            "geospatial",
+            "geospatial-intelligence",
+            "gis",
+            "osint",
+            "photogrammetry",
+            "satellite-tracking",
+            "spatial-intelligence",
+            "webgl",
+            "worldview"
+          ],
+          "created_at": "2026-06-22T23:37:22Z",
+          "updated_at": "2026-09-13T23:29:27Z",
+          "pushed_at": "2026-09-13T23:28:39Z",
+          "daily_stars": 2898,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.57,
+          "star_delta": 1247,
+          "fork_delta": 247,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.61,
+            "relative_growth": 97.22,
+            "fork_growth": 100.0,
+            "total_stars": 26.39,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 gods-eye-view 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 gods-eye-view 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:positioning"
+              ],
+              "highlights": [
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ]
+              ],
+              "audience": [
+                "candidate:positioning"
+              ],
+              "capabilities": [
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ]
+              ],
+              "core_title": [
+                "candidate:positioning"
+              ],
+              "core_summary": [
+                "candidate:positioning"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.01.bilawalsidhu--gods-eye-view.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1286080397,
+          "full_name": "JustVugg/colibri",
+          "owner": "JustVugg",
+          "name": "colibri",
+          "html_url": "https://github.com/JustVugg/colibri",
+          "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+          "language": "C",
+          "stars": 29738,
+          "forks": 3241,
+          "open_issues": 121,
+          "watchers": 260,
+          "topics": [],
+          "created_at": "2026-07-01T12:27:49Z",
+          "updated_at": "2026-09-13T23:30:29Z",
+          "pushed_at": "2026-09-13T20:43:54Z",
+          "daily_stars": 960,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 85.62,
+          "star_delta": 960,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 97.22,
+            "relative_growth": 93.06,
+            "fork_growth": 21.53,
+            "total_stars": 25.0,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "colibri 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "colibri 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:growth_signal"
+              ],
+              "highlights": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "audience": [
+                "candidate:growth_signal"
+              ],
+              "capabilities": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "core_title": [
+                "candidate:growth_signal"
+              ],
+              "core_summary": [
+                "candidate:growth_signal"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "JustVugg/colibri",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.02.justvugg--colibri.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 976921297,
+          "full_name": "asgeirtj/system_prompts_leaks",
+          "owner": "asgeirtj",
+          "name": "system_prompts_leaks",
+          "html_url": "https://github.com/asgeirtj/system_prompts_leaks",
+          "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
+          "language": "JavaScript",
+          "stars": 65999,
+          "forks": 10797,
+          "open_issues": 56,
+          "watchers": 749,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "ai-prompts",
+            "anthropic",
+            "chatbot",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "cursor",
+            "gemini",
+            "generative-ai",
+            "google",
+            "grok",
+            "llm",
+            "openai",
+            "prompt",
+            "prompt-engineering",
+            "system-prompt",
+            "system-prompts"
+          ],
+          "created_at": "2025-05-03T02:43:56Z",
+          "updated_at": "2026-09-13T23:30:37Z",
+          "pushed_at": "2026-09-13T19:18:51Z",
+          "daily_stars": 727,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 85.0,
+          "star_delta": 435,
+          "fork_delta": 39,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 91.67,
+            "relative_growth": 81.94,
+            "fork_growth": 95.83,
+            "total_stars": 30.56,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "主要任务是集中检索和对照不同 AI 产品的系统提示词；system_prompts_leaks 还能帮助研究模型指令和产品交互设计",
+            "highlights": [
+              "按模型和工具整理系统提示词样本",
+              "对照不同产品的指令结构与约束",
+              "持续汇总可用于研究的提示词资料"
+            ],
+            "audience": "研究模型行为、提示词设计或 AI 产品交互的读者",
+            "capabilities": [
+              "按模型和工具整理系统提示词样本",
+              "对照不同产品的指令结构与约束",
+              "持续汇总可用于研究的提示词资料"
+            ],
+            "core_title": "集中检索和对照不同 AI 产品的系统提示词",
+            "core_summary": "主要任务是集中检索和对照不同 AI 产品的系统提示词；system_prompts_leaks 还能帮助研究模型指令和产品交互设计",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:tech_stack"
+              ],
+              "highlights": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "audience": [
+                "candidate:tech_stack"
+              ],
+              "capabilities": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "core_title": [
+                "candidate:tech_stack"
+              ],
+              "core_summary": [
+                "candidate:tech_stack"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "asgeirtj/system_prompts_leaks",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-14/2026-09-14.comprehensive.03.asgeirtj--system-prompts-leaks.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-14/2026-09-14.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "asgeirtj/system_prompts_leaks",
+            "path": "reports/daily/assets/2026-09-14/2026-09-14.ai.01.asgeirtj--system-prompts-leaks.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "tensorflow/tensorflow",
+            "path": "reports/daily/assets/2026-09-14/2026-09-14.ai.02.tensorflow--tensorflow.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "multimodal-art-projection/YuE",
+            "path": "reports/daily/assets/2026-09-14/2026-09-14.ai.03.multimodal-art-projection--yue.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 976921297,
+          "full_name": "asgeirtj/system_prompts_leaks",
+          "owner": "asgeirtj",
+          "name": "system_prompts_leaks",
+          "html_url": "https://github.com/asgeirtj/system_prompts_leaks",
+          "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
+          "language": "JavaScript",
+          "stars": 65999,
+          "forks": 10797,
+          "open_issues": 56,
+          "watchers": 749,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "ai-prompts",
+            "anthropic",
+            "chatbot",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "cursor",
+            "gemini",
+            "generative-ai",
+            "google",
+            "grok",
+            "llm",
+            "openai",
+            "prompt",
+            "prompt-engineering",
+            "system-prompt",
+            "system-prompts"
+          ],
+          "created_at": "2025-05-03T02:43:56Z",
+          "updated_at": "2026-09-13T23:30:37Z",
+          "pushed_at": "2026-09-13T19:18:51Z",
+          "daily_stars": 727,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 86.27,
+          "star_delta": 435,
+          "fork_delta": 39,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.0,
+            "relative_growth": 80.0,
+            "fork_growth": 92.0,
+            "total_stars": 28.0,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "system_prompts_leaks 可以集中检索和对照不同 AI 产品的系统提示词，同时帮助研究模型指令和产品交互设计",
+            "highlights": [
+              "按模型和工具整理系统提示词样本",
+              "对照不同产品的指令结构与约束",
+              "持续汇总可用于研究的提示词资料"
+            ],
+            "audience": "研究模型行为、提示词设计或 AI 产品交互的读者",
+            "capabilities": [
+              "按模型和工具整理系统提示词样本",
+              "对照不同产品的指令结构与约束",
+              "持续汇总可用于研究的提示词资料"
+            ],
+            "core_title": "集中检索和对照不同 AI 产品的系统提示词",
+            "core_summary": "system_prompts_leaks 可以集中检索和对照不同 AI 产品的系统提示词，同时帮助研究模型指令和产品交互设计",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:positioning"
+              ],
+              "highlights": [
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ]
+              ],
+              "audience": [
+                "candidate:positioning"
+              ],
+              "capabilities": [
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ]
+              ],
+              "core_title": [
+                "candidate:positioning"
+              ],
+              "core_summary": [
+                "candidate:positioning"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "asgeirtj/system_prompts_leaks",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-14/2026-09-14.ai.01.asgeirtj--system-prompts-leaks.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 45717250,
+          "full_name": "tensorflow/tensorflow",
+          "owner": "tensorflow",
+          "name": "tensorflow",
+          "html_url": "https://github.com/tensorflow/tensorflow",
+          "description": "An Open Source Machine Learning Framework for Everyone",
+          "language": "C++",
+          "stars": 200064,
+          "forks": 76326,
+          "open_issues": 3111,
+          "watchers": 200064,
+          "topics": [
+            "deep-learning",
+            "deep-neural-networks",
+            "distributed",
+            "machine-learning",
+            "ml",
+            "neural-network",
+            "python",
+            "tensorflow"
+          ],
+          "created_at": "2015-11-07T01:19:20Z",
+          "updated_at": "2026-09-13T23:10:57Z",
+          "pushed_at": "2026-09-13T20:56:07Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 76.0,
+          "star_delta": 323,
+          "fork_delta": 12,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 84.0,
+            "relative_growth": 68.0,
+            "fork_growth": 60.0,
+            "total_stars": 88.0,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "tensorflow 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "tensorflow 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:growth_signal"
+              ],
+              "highlights": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "audience": [
+                "candidate:growth_signal"
+              ],
+              "capabilities": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "core_title": [
+                "candidate:growth_signal"
+              ],
+              "core_summary": [
+                "candidate:growth_signal"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "tensorflow/tensorflow",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-14/2026-09-14.ai.02.tensorflow--tensorflow.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 920995232,
+          "full_name": "multimodal-art-projection/YuE",
+          "owner": "multimodal-art-projection",
+          "name": "YuE",
+          "html_url": "https://github.com/multimodal-art-projection/YuE",
+          "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+          "language": "Python",
+          "stars": 7719,
+          "forks": 863,
+          "open_issues": 13,
+          "watchers": 83,
+          "topics": [
+            "ai",
+            "audio-generation",
+            "deep-learning",
+            "foundation-models",
+            "gpt",
+            "huggingface",
+            "llama",
+            "llms",
+            "music-generation",
+            "style-transfers",
+            "voice-cloning"
+          ],
+          "created_at": "2025-01-23T06:21:58Z",
+          "updated_at": "2026-09-13T23:29:45Z",
+          "pushed_at": "2026-09-11T17:37:59Z",
+          "daily_stars": 500,
+          "weekly_stars": null,
+          "trending_rank_daily": 9,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 75.24,
+          "star_delta": 322,
+          "fork_delta": 30,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 80.0,
+            "relative_growth": 96.0,
+            "fork_growth": 88.0,
+            "total_stars": 12.0,
+            "activity": 51.34,
+            "trending_signal": 30.1
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 YuE 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 YuE 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:tech_stack"
+              ],
+              "highlights": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "audience": [
+                "candidate:tech_stack"
+              ],
+              "capabilities": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "core_title": [
+                "candidate:tech_stack"
+              ],
+              "core_summary": [
+                "candidate:tech_stack"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "multimodal-art-projection/YuE",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-14/2026-09-14.ai.03.multimodal-art-projection--yue.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
