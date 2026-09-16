@@ -1,0 +1,1337 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-09-17",
+  "window_start": "2026-09-16",
+  "window_end": "2026-09-17",
+  "generated_at": "2026-09-17T07:31:23+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-09-16 至 2026-09-17",
+  "publication": {
+    "issue_number": 68,
+    "issue_code": "D068",
+    "issue_label": "第68期",
+    "status": "official"
+  },
+  "data_quality": "中高：快照与 Trending 混合",
+  "warnings": [
+    "综合主榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号",
+    "5 个上榜项目未获取到 Owner 头像，海报已使用身份占位图",
+    "5 个上榜项目未获取到 README，相关文案将使用受控回退"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-09-17",
+    "manifest": "reports/daily/assets/2026-09-17/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.01.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "JustVugg/colibri",
+            "path": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.02.justvugg--colibri.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "abue-ammar/tinycast",
+            "path": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.03.abue-ammar--tinycast.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-17/2026-09-17.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/daily/assets/2026-09-17/2026-09-17.ai.01.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "addyosmani/agent-skills",
+            "path": "reports/daily/assets/2026-09-17/2026-09-17.ai.02.addyosmani--agent-skills.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/daily/assets/2026-09-17/2026-09-17.ai.03.firecrawl--firecrawl.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 68,
+      "issue_code": "D068",
+      "issue_label": "第68期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1241960226,
+      "full_name": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "html_url": "https://github.com/alibaba/open-code-review",
+      "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": 31717,
+      "forks": 2252,
+      "open_issues": 184,
+      "watchers": 97,
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "created_at": "2026-05-18T02:16:36Z",
+      "updated_at": "2026-09-16T23:30:25Z",
+      "pushed_at": "2026-09-16T14:52:32Z",
+      "daily_stars": 3215,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 92.58,
+      "star_delta": 2428,
+      "fork_delta": 172,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 97.22,
+        "fork_growth": 100.0,
+        "total_stars": 19.44,
+        "activity": 71.65,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "open-code-review 可以检查代码变更并整理审查意见，同时帮助团队发现问题和统一修改建议",
+        "highlights": [
+          "逐项检查提交中的代码变更",
+          "标出潜在缺陷和需要确认的实现",
+          "把审查意见整理成可跟进的建议"
+        ],
+        "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+        "capabilities": [
+          "逐项检查提交中的代码变更",
+          "标出潜在缺陷和需要确认的实现",
+          "把审查意见整理成可跟进的建议"
+        ],
+        "core_title": "检查代码变更并整理审查意见",
+        "core_summary": "open-code-review 可以检查代码变更并整理审查意见，同时帮助团队发现问题和统一修改建议",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "alibaba/open-code-review",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.01.alibaba--open-code-review.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1286080397,
+      "full_name": "JustVugg/colibri",
+      "owner": "JustVugg",
+      "name": "colibri",
+      "html_url": "https://github.com/JustVugg/colibri",
+      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+      "language": "C",
+      "stars": 35004,
+      "forks": 3672,
+      "open_issues": 138,
+      "watchers": 278,
+      "topics": [],
+      "created_at": "2026-07-01T12:27:49Z",
+      "updated_at": "2026-09-16T23:29:53Z",
+      "pushed_at": "2026-09-15T21:33:15Z",
+      "daily_stars": 1532,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 84.59,
+      "star_delta": 855,
+      "fork_delta": 98,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.44,
+        "relative_growth": 90.28,
+        "fork_growth": 86.11,
+        "total_stars": 20.83,
+        "activity": 71.65,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "colibri 的用途证据不足，需要先查看仓库 README",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "colibri 的用途证据不足，需要先查看仓库 README",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "JustVugg/colibri",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.02.justvugg--colibri.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1284153858,
+      "full_name": "abue-ammar/tinycast",
+      "owner": "abue-ammar",
+      "name": "tinycast",
+      "html_url": "https://github.com/abue-ammar/tinycast",
+      "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
+      "language": "Swift",
+      "stars": 5562,
+      "forks": 265,
+      "open_issues": 42,
+      "watchers": 10,
+      "topics": [],
+      "created_at": "2026-06-29T15:18:26Z",
+      "updated_at": "2026-09-16T23:28:38Z",
+      "pushed_at": "2026-09-16T22:08:06Z",
+      "daily_stars": 1136,
+      "weekly_stars": null,
+      "trending_rank_daily": 4,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 82.36,
+      "star_delta": 1136,
+      "fork_delta": 0,
+      "delta_source": "trending",
+      "component_percentiles": {
+        "star_growth": 95.83,
+        "relative_growth": 100.0,
+        "fork_growth": 18.75,
+        "total_stars": 8.33,
+        "activity": 100.0,
+        "trending_signal": 43.07
+      },
+      "summary": {
+        "one_line": "目前无法从公开字段确认 tinycast 能完成哪些任务",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "目前无法从公开字段确认 tinycast 能完成哪些任务",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "abue-ammar/tinycast",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.03.abue-ammar--tinycast.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.01.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "JustVugg/colibri",
+            "path": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.02.justvugg--colibri.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "abue-ammar/tinycast",
+            "path": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.03.abue-ammar--tinycast.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1241960226,
+          "full_name": "alibaba/open-code-review",
+          "owner": "alibaba",
+          "name": "open-code-review",
+          "html_url": "https://github.com/alibaba/open-code-review",
+          "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "language": "Go",
+          "stars": 31717,
+          "forks": 2252,
+          "open_issues": 184,
+          "watchers": 97,
+          "topics": [
+            "agent",
+            "agent-skills",
+            "code-review",
+            "code-review-assistant",
+            "harness",
+            "repository-level-context"
+          ],
+          "created_at": "2026-05-18T02:16:36Z",
+          "updated_at": "2026-09-16T23:30:25Z",
+          "pushed_at": "2026-09-16T14:52:32Z",
+          "daily_stars": 3215,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.58,
+          "star_delta": 2428,
+          "fork_delta": 172,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 97.22,
+            "fork_growth": 100.0,
+            "total_stars": 19.44,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "open-code-review 可以检查代码变更并整理审查意见，同时帮助团队发现问题和统一修改建议",
+            "highlights": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+            "capabilities": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "core_title": "检查代码变更并整理审查意见",
+            "core_summary": "open-code-review 可以检查代码变更并整理审查意见，同时帮助团队发现问题和统一修改建议",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "alibaba/open-code-review",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.01.alibaba--open-code-review.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1286080397,
+          "full_name": "JustVugg/colibri",
+          "owner": "JustVugg",
+          "name": "colibri",
+          "html_url": "https://github.com/JustVugg/colibri",
+          "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+          "language": "C",
+          "stars": 35004,
+          "forks": 3672,
+          "open_issues": 138,
+          "watchers": 278,
+          "topics": [],
+          "created_at": "2026-07-01T12:27:49Z",
+          "updated_at": "2026-09-16T23:29:53Z",
+          "pushed_at": "2026-09-15T21:33:15Z",
+          "daily_stars": 1532,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 84.59,
+          "star_delta": 855,
+          "fork_delta": 98,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.44,
+            "relative_growth": 90.28,
+            "fork_growth": 86.11,
+            "total_stars": 20.83,
+            "activity": 71.65,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "colibri 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "colibri 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "JustVugg/colibri",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.02.justvugg--colibri.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1284153858,
+          "full_name": "abue-ammar/tinycast",
+          "owner": "abue-ammar",
+          "name": "tinycast",
+          "html_url": "https://github.com/abue-ammar/tinycast",
+          "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
+          "language": "Swift",
+          "stars": 5562,
+          "forks": 265,
+          "open_issues": 42,
+          "watchers": 10,
+          "topics": [],
+          "created_at": "2026-06-29T15:18:26Z",
+          "updated_at": "2026-09-16T23:28:38Z",
+          "pushed_at": "2026-09-16T22:08:06Z",
+          "daily_stars": 1136,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 82.36,
+          "star_delta": 1136,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 95.83,
+            "relative_growth": 100.0,
+            "fork_growth": 18.75,
+            "total_stars": 8.33,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 tinycast 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 tinycast 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "abue-ammar/tinycast",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-17/2026-09-17.comprehensive.03.abue-ammar--tinycast.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-17/2026-09-17.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/daily/assets/2026-09-17/2026-09-17.ai.01.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "addyosmani/agent-skills",
+            "path": "reports/daily/assets/2026-09-17/2026-09-17.ai.02.addyosmani--agent-skills.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/daily/assets/2026-09-17/2026-09-17.ai.03.firecrawl--firecrawl.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1241960226,
+          "full_name": "alibaba/open-code-review",
+          "owner": "alibaba",
+          "name": "open-code-review",
+          "html_url": "https://github.com/alibaba/open-code-review",
+          "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "language": "Go",
+          "stars": 31717,
+          "forks": 2252,
+          "open_issues": 184,
+          "watchers": 97,
+          "topics": [
+            "agent",
+            "agent-skills",
+            "code-review",
+            "code-review-assistant",
+            "harness",
+            "repository-level-context"
+          ],
+          "created_at": "2026-05-18T02:16:36Z",
+          "updated_at": "2026-09-16T23:30:25Z",
+          "pushed_at": "2026-09-16T14:52:32Z",
+          "daily_stars": 3215,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.74,
+          "star_delta": 2428,
+          "fork_delta": 172,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 11.54,
+            "activity": 71.65,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "open-code-review 可以检查代码变更并整理审查意见，同时帮助团队发现问题和统一修改建议",
+            "highlights": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+            "capabilities": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "core_title": "检查代码变更并整理审查意见",
+            "core_summary": "open-code-review 可以检查代码变更并整理审查意见，同时帮助团队发现问题和统一修改建议",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "alibaba/open-code-review",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-17/2026-09-17.ai.01.alibaba--open-code-review.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": null,
+          "full_name": "addyosmani/agent-skills",
+          "owner": "addyosmani",
+          "name": "agent-skills",
+          "html_url": "https://github.com/addyosmani/agent-skills",
+          "description": "Production-grade engineering skills for AI coding agents.",
+          "language": "JavaScript",
+          "stars": 95418,
+          "forks": 10109,
+          "open_issues": 0,
+          "watchers": 0,
+          "topics": [],
+          "created_at": null,
+          "updated_at": null,
+          "pushed_at": null,
+          "daily_stars": 656,
+          "weekly_stars": null,
+          "trending_rank_daily": 19,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily"
+          ],
+          "rank": 2,
+          "score": 75.0,
+          "star_delta": 461,
+          "fork_delta": 38,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.31,
+            "relative_growth": 88.46,
+            "fork_growth": 88.46,
+            "total_stars": 23.08,
+            "activity": 0.0,
+            "trending_signal": 23.14
+          },
+          "summary": {
+            "one_line": "agent-skills 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "agent-skills 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "addyosmani/agent-skills",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-17/2026-09-17.ai.02.addyosmani--agent-skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 787076358,
+          "full_name": "firecrawl/firecrawl",
+          "owner": "firecrawl",
+          "name": "firecrawl",
+          "html_url": "https://github.com/firecrawl/firecrawl",
+          "description": "The web data API to search, scrape, and interact at scale. 🔥",
+          "language": "TypeScript",
+          "stars": 181293,
+          "forks": 9823,
+          "open_issues": 633,
+          "watchers": 181293,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "ai-crawler",
+            "ai-scraping",
+            "ai-search",
+            "crawler",
+            "data-extraction",
+            "html-to-markdown",
+            "llm",
+            "markdown",
+            "scraper",
+            "scraping",
+            "web-crawler",
+            "web-data",
+            "web-data-extraction",
+            "web-scraper",
+            "web-scraping",
+            "web-search",
+            "webscraping"
+          ],
+          "created_at": "2024-04-15T21:02:29Z",
+          "updated_at": "2026-09-16T23:30:44Z",
+          "pushed_at": "2026-09-16T21:30:07Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 73.46,
+          "star_delta": 304,
+          "fork_delta": 8,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 80.77,
+            "relative_growth": 76.92,
+            "fork_growth": 38.46,
+            "total_stars": 76.92,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "主要任务是搜索、抓取并整理网页内容；firecrawl 还能把网页数据交给程序或 AI 工作流继续处理",
+            "highlights": [
+              "通过接口搜索并抓取公开网页",
+              "从页面中提取正文和结构化内容",
+              "把网页整理成更易处理的文本数据"
+            ],
+            "audience": "需要为 AI 应用、搜索或数据流程接入网页内容的开发者",
+            "capabilities": [
+              "通过接口搜索并抓取公开网页",
+              "从页面中提取正文和结构化内容",
+              "把网页整理成更易处理的文本数据"
+            ],
+            "core_title": "搜索、抓取并整理网页内容",
+            "core_summary": "主要任务是搜索、抓取并整理网页内容；firecrawl 还能把网页数据交给程序或 AI 工作流继续处理",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "firecrawl/firecrawl",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-17/2026-09-17.ai.03.firecrawl--firecrawl.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
