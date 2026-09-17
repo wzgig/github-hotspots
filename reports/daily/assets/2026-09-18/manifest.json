@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-09-18",
+  "window": {
+    "start": "2026-09-17",
+    "end": "2026-09-18"
+  },
+  "source_report": "reports/daily/2026-09-18.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-09-18",
+  "manifest": "reports/daily/assets/2026-09-18/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-09-18/2026-09-18.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "alibaba/open-code-review",
+          "path": "reports/daily/assets/2026-09-18/2026-09-18.comprehensive.01.alibaba--open-code-review.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "affaan-m/ECC",
+          "path": "reports/daily/assets/2026-09-18/2026-09-18.comprehensive.02.affaan-m--ecc.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "cloudflare/security-audit-skill",
+          "path": "reports/daily/assets/2026-09-18/2026-09-18.comprehensive.03.cloudflare--security-audit-skill.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-09-18/2026-09-18.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "alibaba/open-code-review",
+          "path": "reports/daily/assets/2026-09-18/2026-09-18.ai.01.alibaba--open-code-review.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "affaan-m/ECC",
+          "path": "reports/daily/assets/2026-09-18/2026-09-18.ai.02.affaan-m--ecc.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "Tencent/WeKnora",
+          "path": "reports/daily/assets/2026-09-18/2026-09-18.ai.03.tencent--weknora.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 69,
+    "issue_code": "D069",
+    "issue_label": "第69期",
+    "status": "official"
+  }
+}
