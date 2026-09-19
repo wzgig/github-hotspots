@@ -1,0 +1,1348 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-09-20",
+  "window_start": "2026-09-19",
+  "window_end": "2026-09-20",
+  "generated_at": "2026-09-20T07:31:24+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-09-19 至 2026-09-20",
+  "publication": {
+    "issue_number": 71,
+    "issue_code": "D071",
+    "issue_label": "第71期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "AI 专题榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号",
+    "5 个上榜项目未获取到 Owner 头像，海报已使用身份占位图",
+    "5 个上榜项目未获取到 README，相关文案将使用受控回退"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-09-20",
+    "manifest": "reports/daily/assets/2026-09-20/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "cloudflare/security-audit-skill",
+            "path": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.02.cloudflare--security-audit-skill.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "anthropics/claude-code",
+            "path": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.03.anthropics--claude-code.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-20/2026-09-20.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-20/2026-09-20.ai.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "trycua/cua",
+            "path": "reports/daily/assets/2026-09-20/2026-09-20.ai.02.trycua--cua.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "addyosmani/agent-skills",
+            "path": "reports/daily/assets/2026-09-20/2026-09-20.ai.03.addyosmani--agent-skills.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 71,
+      "issue_code": "D071",
+      "issue_label": "第71期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 262938,
+      "forks": 39337,
+      "open_issues": 199,
+      "watchers": 262938,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-09-19T23:31:09Z",
+      "pushed_at": "2026-09-19T21:09:21Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 91.03,
+      "star_delta": 711,
+      "fork_delta": 106,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.26,
+        "relative_growth": 89.04,
+        "fork_growth": 98.63,
+        "total_stars": 94.52,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "ECC 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+        "highlights": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "audience": "需要减少重复操作并统一研发流程的软件团队",
+        "capabilities": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "core_title": "把重复的开发操作整理成自动化流程",
+        "core_summary": "ECC 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "candidate:positioning"
+          ],
+          "highlights": [
+            [
+              "candidate:positioning"
+            ],
+            [
+              "candidate:positioning"
+            ],
+            [
+              "candidate:positioning"
+            ]
+          ],
+          "audience": [
+            "candidate:positioning"
+          ],
+          "capabilities": [
+            [
+              "candidate:positioning"
+            ],
+            [
+              "candidate:positioning"
+            ],
+            [
+              "candidate:positioning"
+            ]
+          ],
+          "core_title": [
+            "candidate:positioning"
+          ],
+          "core_summary": [
+            "candidate:positioning"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.01.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1273427276,
+      "full_name": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "html_url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": 16256,
+      "forks": 888,
+      "open_issues": 38,
+      "watchers": 57,
+      "topics": [],
+      "created_at": "2026-06-18T14:08:44Z",
+      "updated_at": "2026-09-19T23:30:42Z",
+      "pushed_at": "2026-09-14T19:29:02Z",
+      "daily_stars": 3162,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 88.05,
+      "star_delta": 2050,
+      "fork_delta": 120,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 100.0,
+        "total_stars": 23.29,
+        "activity": 18.89,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "security-audit-skill 的用途证据不足，需要先查看仓库 README",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "security-audit-skill 的用途证据不足，需要先查看仓库 README",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "candidate:growth_signal"
+          ],
+          "highlights": [
+            [
+              "candidate:growth_signal"
+            ],
+            [
+              "candidate:growth_signal"
+            ],
+            [
+              "candidate:growth_signal"
+            ]
+          ],
+          "audience": [
+            "candidate:growth_signal"
+          ],
+          "capabilities": [
+            [
+              "candidate:growth_signal"
+            ],
+            [
+              "candidate:growth_signal"
+            ],
+            [
+              "candidate:growth_signal"
+            ]
+          ],
+          "core_title": [
+            "candidate:growth_signal"
+          ],
+          "core_summary": [
+            "candidate:growth_signal"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "cloudflare/security-audit-skill",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.02.cloudflare--security-audit-skill.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 937253475,
+      "full_name": "anthropics/claude-code",
+      "owner": "anthropics",
+      "name": "claude-code",
+      "html_url": "https://github.com/anthropics/claude-code",
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "language": "TypeScript",
+      "stars": 146689,
+      "forks": 23919,
+      "open_issues": 12302,
+      "watchers": 146689,
+      "topics": [],
+      "created_at": "2025-02-22T17:41:21Z",
+      "updated_at": "2026-09-19T23:07:33Z",
+      "pushed_at": "2026-09-19T19:16:54Z",
+      "daily_stars": 482,
+      "weekly_stars": null,
+      "trending_rank_daily": 5,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 87.55,
+      "star_delta": 292,
+      "fork_delta": 100,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 91.78,
+        "relative_growth": 83.56,
+        "fork_growth": 95.89,
+        "total_stars": 68.49,
+        "activity": 100.0,
+        "trending_signal": 38.69
+      },
+      "summary": {
+        "one_line": "目前无法从公开字段确认 claude-code 能完成哪些任务",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "目前无法从公开字段确认 claude-code 能完成哪些任务",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "candidate:tech_stack"
+          ],
+          "highlights": [
+            [
+              "candidate:tech_stack"
+            ],
+            [
+              "candidate:tech_stack"
+            ],
+            [
+              "candidate:tech_stack"
+            ]
+          ],
+          "audience": [
+            "candidate:tech_stack"
+          ],
+          "capabilities": [
+            [
+              "candidate:tech_stack"
+            ],
+            [
+              "candidate:tech_stack"
+            ],
+            [
+              "candidate:tech_stack"
+            ]
+          ],
+          "core_title": [
+            "candidate:tech_stack"
+          ],
+          "core_summary": [
+            "candidate:tech_stack"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "anthropics/claude-code",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.03.anthropics--claude-code.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "cloudflare/security-audit-skill",
+            "path": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.02.cloudflare--security-audit-skill.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "anthropics/claude-code",
+            "path": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.03.anthropics--claude-code.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 262938,
+          "forks": 39337,
+          "open_issues": 199,
+          "watchers": 262938,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-19T23:31:09Z",
+          "pushed_at": "2026-09-19T21:09:21Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.03,
+          "star_delta": 711,
+          "fork_delta": 106,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.26,
+            "relative_growth": 89.04,
+            "fork_growth": 98.63,
+            "total_stars": 94.52,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "ECC 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "ECC 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:positioning"
+              ],
+              "highlights": [
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ]
+              ],
+              "audience": [
+                "candidate:positioning"
+              ],
+              "capabilities": [
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ]
+              ],
+              "core_title": [
+                "candidate:positioning"
+              ],
+              "core_summary": [
+                "candidate:positioning"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.01.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1273427276,
+          "full_name": "cloudflare/security-audit-skill",
+          "owner": "cloudflare",
+          "name": "security-audit-skill",
+          "html_url": "https://github.com/cloudflare/security-audit-skill",
+          "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+          "language": "JavaScript",
+          "stars": 16256,
+          "forks": 888,
+          "open_issues": 38,
+          "watchers": 57,
+          "topics": [],
+          "created_at": "2026-06-18T14:08:44Z",
+          "updated_at": "2026-09-19T23:30:42Z",
+          "pushed_at": "2026-09-14T19:29:02Z",
+          "daily_stars": 3162,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.05,
+          "star_delta": 2050,
+          "fork_delta": 120,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 23.29,
+            "activity": 18.89,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "security-audit-skill 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "security-audit-skill 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:growth_signal"
+              ],
+              "highlights": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "audience": [
+                "candidate:growth_signal"
+              ],
+              "capabilities": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "core_title": [
+                "candidate:growth_signal"
+              ],
+              "core_summary": [
+                "candidate:growth_signal"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "cloudflare/security-audit-skill",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.02.cloudflare--security-audit-skill.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 937253475,
+          "full_name": "anthropics/claude-code",
+          "owner": "anthropics",
+          "name": "claude-code",
+          "html_url": "https://github.com/anthropics/claude-code",
+          "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+          "language": "TypeScript",
+          "stars": 146689,
+          "forks": 23919,
+          "open_issues": 12302,
+          "watchers": 146689,
+          "topics": [],
+          "created_at": "2025-02-22T17:41:21Z",
+          "updated_at": "2026-09-19T23:07:33Z",
+          "pushed_at": "2026-09-19T19:16:54Z",
+          "daily_stars": 482,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 87.55,
+          "star_delta": 292,
+          "fork_delta": 100,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 91.78,
+            "relative_growth": 83.56,
+            "fork_growth": 95.89,
+            "total_stars": 68.49,
+            "activity": 100.0,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 claude-code 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 claude-code 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:tech_stack"
+              ],
+              "highlights": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "audience": [
+                "candidate:tech_stack"
+              ],
+              "capabilities": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "core_title": [
+                "candidate:tech_stack"
+              ],
+              "core_summary": [
+                "candidate:tech_stack"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "anthropics/claude-code",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-20/2026-09-20.comprehensive.03.anthropics--claude-code.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-20/2026-09-20.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-20/2026-09-20.ai.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "trycua/cua",
+            "path": "reports/daily/assets/2026-09-20/2026-09-20.ai.02.trycua--cua.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "addyosmani/agent-skills",
+            "path": "reports/daily/assets/2026-09-20/2026-09-20.ai.03.addyosmani--agent-skills.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 262938,
+          "forks": 39337,
+          "open_issues": 199,
+          "watchers": 262938,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-19T23:31:09Z",
+          "pushed_at": "2026-09-19T21:09:21Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 90.86,
+          "star_delta": 711,
+          "fork_delta": 106,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.55,
+            "relative_growth": 89.66,
+            "fork_growth": 100.0,
+            "total_stars": 93.1,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "ECC 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "ECC 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-20/2026-09-20.ai.01.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 925270205,
+          "full_name": "trycua/cua",
+          "owner": "trycua",
+          "name": "cua",
+          "html_url": "https://github.com/trycua/cua",
+          "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+          "language": "HTML",
+          "stars": 24373,
+          "forks": 1677,
+          "open_issues": 1030,
+          "watchers": 85,
+          "topics": [
+            "agent",
+            "ai-agent",
+            "apple",
+            "computer-use",
+            "computer-use-agent",
+            "containerization",
+            "cua",
+            "desktop-automation",
+            "hacktoberfest",
+            "lume",
+            "macos",
+            "manus",
+            "operator",
+            "swift",
+            "virtualization",
+            "virtualization-framework",
+            "windows",
+            "windows-sandbox"
+          ],
+          "created_at": "2025-01-31T15:02:49Z",
+          "updated_at": "2026-09-19T23:30:17Z",
+          "pushed_at": "2026-09-19T22:36:18Z",
+          "daily_stars": 1124,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 85.57,
+          "star_delta": 1124,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 17.24,
+            "total_stars": 13.79,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 cua；它能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 cua；它能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "trycua/cua",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-20/2026-09-20.ai.02.trycua--cua.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1158722119,
+          "full_name": "addyosmani/agent-skills",
+          "owner": "addyosmani",
+          "name": "agent-skills",
+          "html_url": "https://github.com/addyosmani/agent-skills",
+          "description": "Production-grade engineering skills for AI coding agents.",
+          "language": "JavaScript",
+          "stars": 96999,
+          "forks": 10237,
+          "open_issues": 111,
+          "watchers": 515,
+          "topics": [
+            "agent-skills",
+            "antigravity",
+            "claude-code",
+            "codex",
+            "cursor",
+            "skills"
+          ],
+          "created_at": "2026-02-15T20:20:26Z",
+          "updated_at": "2026-09-19T23:28:34Z",
+          "pushed_at": "2026-09-18T03:32:22Z",
+          "daily_stars": 547,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 82.11,
+          "star_delta": 485,
+          "fork_delta": 36,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.1,
+            "relative_growth": 93.1,
+            "fork_growth": 82.76,
+            "total_stars": 20.69,
+            "activity": 51.34,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 agent-skills 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 agent-skills 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "addyosmani/agent-skills",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-20/2026-09-20.ai.03.addyosmani--agent-skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
