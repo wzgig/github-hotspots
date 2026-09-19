@@ -1,0 +1,1292 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-09-19",
+  "window_start": "2026-09-18",
+  "window_end": "2026-09-19",
+  "generated_at": "2026-09-19T13:56:13+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-09-18 至 2026-09-19",
+  "publication": {
+    "issue_number": 70,
+    "issue_code": "D070",
+    "issue_label": "第70期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-09-19",
+    "manifest": "reports/daily/assets/2026-09-19/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.01.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "cloudflare/security-audit-skill",
+            "path": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.03.cloudflare--security-audit-skill.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-19/2026-09-19.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/daily/assets/2026-09-19/2026-09-19.ai.01.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-19/2026-09-19.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "Tencent/BrowserSkill",
+            "path": "reports/daily/assets/2026-09-19/2026-09-19.ai.03.tencent--browserskill.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 70,
+      "issue_code": "D070",
+      "issue_label": "第70期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1241960226,
+      "full_name": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "html_url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": 36885,
+      "forks": 2629,
+      "open_issues": 220,
+      "watchers": 117,
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "created_at": "2026-05-18T02:16:36Z",
+      "updated_at": "2026-09-19T05:55:30Z",
+      "pushed_at": "2026-09-19T03:55:51Z",
+      "daily_stars": 2704,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 92.2,
+      "star_delta": 2237,
+      "fork_delta": 166,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.81,
+        "relative_growth": 96.43,
+        "fork_growth": 91.67,
+        "total_stars": 36.9,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "open-code-review 可以检查代码变更并整理审查意见，同时帮助团队发现问题和统一修改建议",
+        "highlights": [
+          "逐项检查提交中的代码变更",
+          "标出潜在缺陷和需要确认的实现",
+          "把审查意见整理成可跟进的建议"
+        ],
+        "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+        "capabilities": [
+          "逐项检查提交中的代码变更",
+          "标出潜在缺陷和需要确认的实现",
+          "把审查意见整理成可跟进的建议"
+        ],
+        "core_title": "检查代码变更并整理审查意见",
+        "core_summary": "open-code-review 可以检查代码变更并整理审查意见，同时帮助团队发现问题和统一修改建议",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-19/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+      "publication_evidence": {
+        "full_name": "alibaba/open-code-review",
+        "license_spdx_id": "Apache-2.0",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-09-19/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+          "sha256": "a2c85e1294f54a6273fe91abf294668d66bc22e30ee7bd41f13a0cf64039b5b2",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.01.alibaba--open-code-review.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 262227,
+      "forks": 39231,
+      "open_issues": 211,
+      "watchers": 262227,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-09-19T05:55:44Z",
+      "pushed_at": "2026-09-19T05:35:34Z",
+      "daily_stars": 958,
+      "weekly_stars": null,
+      "trending_rank_daily": 4,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 91.44,
+      "star_delta": 1090,
+      "fork_delta": 142,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.43,
+        "relative_growth": 90.48,
+        "fork_growth": 84.52,
+        "total_stars": 90.48,
+        "activity": 100.0,
+        "trending_signal": 43.07
+      },
+      "summary": {
+        "one_line": "想要把重复的开发操作整理成自动化流程，可以用 ECC；它能减少手动执行和重复配置",
+        "highlights": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "audience": "需要减少重复操作并统一研发流程的软件团队",
+        "capabilities": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "core_title": "把重复的开发操作整理成自动化流程",
+        "core_summary": "想要把重复的开发操作整理成自动化流程，可以用 ECC；它能减少手动执行和重复配置",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-19/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-09-19/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "sha256": "b96c9ae9f895df5d8bf215e1783f3cdc401e818b22cb82c16937fefc71d4e2e4",
+          "width": 165,
+          "height": 165
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.02.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1273427276,
+      "full_name": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "html_url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": 14206,
+      "forks": 768,
+      "open_issues": 36,
+      "watchers": 48,
+      "topics": [],
+      "created_at": "2026-06-18T14:08:44Z",
+      "updated_at": "2026-09-19T05:55:29Z",
+      "pushed_at": "2026-09-14T19:29:02Z",
+      "daily_stars": 3006,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 89.06,
+      "star_delta": 3681,
+      "fork_delta": 207,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 100.0,
+        "total_stars": 28.57,
+        "activity": 26.36,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "目前无法从公开字段确认 security-audit-skill 能完成哪些任务",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "目前无法从公开字段确认 security-audit-skill 能完成哪些任务",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-19/repo-adc2afef89175c610b2beb3f-7760dbac799c3e1293b6531f.png",
+      "publication_evidence": {
+        "full_name": "cloudflare/security-audit-skill",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-09-19/repo-adc2afef89175c610b2beb3f-7760dbac799c3e1293b6531f.png",
+          "sha256": "50edfb72c13152664c0fd79b2ac9f5edd8166bfd2e4756bd3cfa5900f3408b42",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.03.cloudflare--security-audit-skill.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.01.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "cloudflare/security-audit-skill",
+            "path": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.03.cloudflare--security-audit-skill.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1241960226,
+          "full_name": "alibaba/open-code-review",
+          "owner": "alibaba",
+          "name": "open-code-review",
+          "html_url": "https://github.com/alibaba/open-code-review",
+          "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "language": "Go",
+          "stars": 36885,
+          "forks": 2629,
+          "open_issues": 220,
+          "watchers": 117,
+          "topics": [
+            "agent",
+            "agent-skills",
+            "code-review",
+            "code-review-assistant",
+            "harness",
+            "repository-level-context"
+          ],
+          "created_at": "2026-05-18T02:16:36Z",
+          "updated_at": "2026-09-19T05:55:30Z",
+          "pushed_at": "2026-09-19T03:55:51Z",
+          "daily_stars": 2704,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.2,
+          "star_delta": 2237,
+          "fork_delta": 166,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.81,
+            "relative_growth": 96.43,
+            "fork_growth": 91.67,
+            "total_stars": 36.9,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "open-code-review 可以检查代码变更并整理审查意见，同时帮助团队发现问题和统一修改建议",
+            "highlights": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+            "capabilities": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "core_title": "检查代码变更并整理审查意见",
+            "core_summary": "open-code-review 可以检查代码变更并整理审查意见，同时帮助团队发现问题和统一修改建议",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-19/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+          "publication_evidence": {
+            "full_name": "alibaba/open-code-review",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-09-19/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+              "sha256": "a2c85e1294f54a6273fe91abf294668d66bc22e30ee7bd41f13a0cf64039b5b2",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.01.alibaba--open-code-review.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 262227,
+          "forks": 39231,
+          "open_issues": 211,
+          "watchers": 262227,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-19T05:55:44Z",
+          "pushed_at": "2026-09-19T05:35:34Z",
+          "daily_stars": 958,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 91.44,
+          "star_delta": 1090,
+          "fork_delta": 142,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.43,
+            "relative_growth": 90.48,
+            "fork_growth": 84.52,
+            "total_stars": 90.48,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "想要把重复的开发操作整理成自动化流程，可以用 ECC；它能减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "想要把重复的开发操作整理成自动化流程，可以用 ECC；它能减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-19/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-09-19/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "b96c9ae9f895df5d8bf215e1783f3cdc401e818b22cb82c16937fefc71d4e2e4",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.02.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1273427276,
+          "full_name": "cloudflare/security-audit-skill",
+          "owner": "cloudflare",
+          "name": "security-audit-skill",
+          "html_url": "https://github.com/cloudflare/security-audit-skill",
+          "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+          "language": "JavaScript",
+          "stars": 14206,
+          "forks": 768,
+          "open_issues": 36,
+          "watchers": 48,
+          "topics": [],
+          "created_at": "2026-06-18T14:08:44Z",
+          "updated_at": "2026-09-19T05:55:29Z",
+          "pushed_at": "2026-09-14T19:29:02Z",
+          "daily_stars": 3006,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 89.06,
+          "star_delta": 3681,
+          "fork_delta": 207,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 28.57,
+            "activity": 26.36,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 security-audit-skill 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 security-audit-skill 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-19/repo-adc2afef89175c610b2beb3f-7760dbac799c3e1293b6531f.png",
+          "publication_evidence": {
+            "full_name": "cloudflare/security-audit-skill",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-09-19/repo-adc2afef89175c610b2beb3f-7760dbac799c3e1293b6531f.png",
+              "sha256": "50edfb72c13152664c0fd79b2ac9f5edd8166bfd2e4756bd3cfa5900f3408b42",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-19/2026-09-19.comprehensive.03.cloudflare--security-audit-skill.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-19/2026-09-19.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/daily/assets/2026-09-19/2026-09-19.ai.01.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-19/2026-09-19.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "Tencent/BrowserSkill",
+            "path": "reports/daily/assets/2026-09-19/2026-09-19.ai.03.tencent--browserskill.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1241960226,
+          "full_name": "alibaba/open-code-review",
+          "owner": "alibaba",
+          "name": "open-code-review",
+          "html_url": "https://github.com/alibaba/open-code-review",
+          "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "language": "Go",
+          "stars": 36885,
+          "forks": 2629,
+          "open_issues": 220,
+          "watchers": 117,
+          "topics": [
+            "agent",
+            "agent-skills",
+            "code-review",
+            "code-review-assistant",
+            "harness",
+            "repository-level-context"
+          ],
+          "created_at": "2026-05-18T02:16:36Z",
+          "updated_at": "2026-09-19T05:55:30Z",
+          "pushed_at": "2026-09-19T03:55:51Z",
+          "daily_stars": 2704,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 93.11,
+          "star_delta": 2237,
+          "fork_delta": 166,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 96.97,
+            "fork_growth": 96.97,
+            "total_stars": 30.3,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "open-code-review 可以检查代码变更并整理审查意见，同时帮助团队发现问题和统一修改建议",
+            "highlights": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "audience": "需要审查合并请求或统一代码质量标准的研发团队",
+            "capabilities": [
+              "逐项检查提交中的代码变更",
+              "标出潜在缺陷和需要确认的实现",
+              "把审查意见整理成可跟进的建议"
+            ],
+            "core_title": "检查代码变更并整理审查意见",
+            "core_summary": "open-code-review 可以检查代码变更并整理审查意见，同时帮助团队发现问题和统一修改建议",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-19/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+          "publication_evidence": {
+            "full_name": "alibaba/open-code-review",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-09-19/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+              "sha256": "a2c85e1294f54a6273fe91abf294668d66bc22e30ee7bd41f13a0cf64039b5b2",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-19/2026-09-19.ai.01.alibaba--open-code-review.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 262227,
+          "forks": 39231,
+          "open_issues": 211,
+          "watchers": 262227,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-19T05:55:44Z",
+          "pushed_at": "2026-09-19T05:35:34Z",
+          "daily_stars": 958,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 90.49,
+          "star_delta": 1090,
+          "fork_delta": 142,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.94,
+            "relative_growth": 87.88,
+            "fork_growth": 90.91,
+            "total_stars": 93.94,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "想要把重复的开发操作整理成自动化流程，可以用 ECC；它能减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "想要把重复的开发操作整理成自动化流程，可以用 ECC；它能减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-19/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-09-19/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "b96c9ae9f895df5d8bf215e1783f3cdc401e818b22cb82c16937fefc71d4e2e4",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-19/2026-09-19.ai.02.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1276665883,
+          "full_name": "Tencent/BrowserSkill",
+          "owner": "Tencent",
+          "name": "BrowserSkill",
+          "html_url": "https://github.com/Tencent/BrowserSkill",
+          "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+          "language": "TypeScript",
+          "stars": 5443,
+          "forks": 377,
+          "open_issues": 54,
+          "watchers": 13,
+          "topics": [
+            "agent",
+            "browser-use",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-06-22T07:24:40Z",
+          "updated_at": "2026-09-19T05:55:38Z",
+          "pushed_at": "2026-09-18T15:01:25Z",
+          "daily_stars": 1306,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 87.13,
+          "star_delta": 1360,
+          "fork_delta": 89,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.97,
+            "relative_growth": 100.0,
+            "fork_growth": 87.88,
+            "total_stars": 15.15,
+            "activity": 71.65,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；BrowserSkill 还能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；BrowserSkill 还能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-19/repo-372cfb796b64c1ec11fb13e4-3858ae4c896dcb4262912b30.png",
+          "publication_evidence": {
+            "full_name": "Tencent/BrowserSkill",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-09-19/repo-372cfb796b64c1ec11fb13e4-3858ae4c896dcb4262912b30.png",
+              "sha256": "92cb2aa7eaa045068c0ee8d419506a1847545ffd0416b694b3b4067a51023985",
+              "width": 200,
+              "height": 200
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-19/2026-09-19.ai.03.tencent--browserskill.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
