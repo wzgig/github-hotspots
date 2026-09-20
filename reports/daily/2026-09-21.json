@@ -1,0 +1,1476 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-09-21",
+  "window_start": "2026-09-20",
+  "window_end": "2026-09-21",
+  "generated_at": "2026-09-21T07:31:26+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-09-20 至 2026-09-21",
+  "publication": {
+    "issue_number": 72,
+    "issue_code": "D072",
+    "issue_label": "第72期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-09-21",
+    "manifest": "reports/daily/assets/2026-09-21/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "trycua/cua",
+            "path": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.02.trycua--cua.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "anthropics/claude-code",
+            "path": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.03.anthropics--claude-code.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-21/2026-09-21.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-21/2026-09-21.ai.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "trycua/cua",
+            "path": "reports/daily/assets/2026-09-21/2026-09-21.ai.02.trycua--cua.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "addyosmani/agent-skills",
+            "path": "reports/daily/assets/2026-09-21/2026-09-21.ai.03.addyosmani--agent-skills.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 72,
+      "issue_code": "D072",
+      "issue_label": "第72期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 263702,
+      "forks": 39453,
+      "open_issues": 208,
+      "watchers": 263702,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-09-20T23:31:14Z",
+      "pushed_at": "2026-09-20T19:37:57Z",
+      "daily_stars": 837,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 95.32,
+      "star_delta": 747,
+      "fork_delta": 109,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.1,
+        "relative_growth": 89.61,
+        "fork_growth": 96.75,
+        "total_stars": 93.51,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "ECC 给 AI 编程助手补上计划、测试、审查和记忆流程，让团队不必每次重新交代开发步骤。",
+        "highlights": [
+          "把先写测试、再实现、再审查变成可复用流程",
+          "用本地 Markdown 记忆在不同编程助手间交接",
+          "通过工具事件触发脚本检查，减少反复提醒"
+        ],
+        "audience": "使用 AI 编程助手开发功能、修复缺陷，希望把测试、审查和跨会话交接纳入固定流程的软件团队。",
+        "capabilities": [
+          "把功能需求整理成可确认的实施计划",
+          "先用失败测试复现缺陷再推进修复",
+          "用独立上下文审查代码改动",
+          "将会话经验提炼成可复用技能",
+          "扫描编程助手配置中的权限与注入风险"
+        ],
+        "core_title": "让 AI 编程留下验证依据",
+        "core_summary": "ECC 将计划、测试、实现、独立审查和验证串成流程，再把会话经验保存为记忆与技能。交付的不只是代码，还有失败测试、通过测试和审查记录，便于追溯改动依据。",
+        "prerequisites": "通用安装包需 Node.js 18 或更新版本；Claude 插件安装还需 Git 和 Claude Code 2.1 或更新版本。",
+        "limitations": "各编程助手功能不对等；自动执行脚本须明确授权，记忆内容仍需核验。同一助手勿叠加安装方式。私有仓库托管分析属于付费 Pro；原生 Windows 记忆写入存在已知缺陷。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+          ],
+          "highlights": [
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ],
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ],
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ]
+          ],
+          "audience": [
+            "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+          ],
+          "capabilities": [
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ],
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ],
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ],
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ],
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ]
+          ],
+          "core_title": [
+            "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+          ],
+          "core_summary": [
+            "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+          ],
+          "prerequisites": [
+            "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+          ],
+          "limitations": [
+            "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-21/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8",
+          "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-21/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+          "width": 165,
+          "height": 165
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.01.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 925270205,
+      "full_name": "trycua/cua",
+      "owner": "trycua",
+      "name": "cua",
+      "html_url": "https://github.com/trycua/cua",
+      "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+      "language": "HTML",
+      "stars": 25122,
+      "forks": 1727,
+      "open_issues": 1027,
+      "watchers": 88,
+      "topics": [
+        "agent",
+        "ai-agent",
+        "apple",
+        "computer-use",
+        "computer-use-agent",
+        "containerization",
+        "cua",
+        "desktop-automation",
+        "hacktoberfest",
+        "lume",
+        "macos",
+        "manus",
+        "operator",
+        "swift",
+        "virtualization",
+        "virtualization-framework",
+        "windows",
+        "windows-sandbox"
+      ],
+      "created_at": "2025-01-31T15:02:49Z",
+      "updated_at": "2026-09-20T23:30:01Z",
+      "pushed_at": "2026-09-20T23:31:19Z",
+      "daily_stars": 1012,
+      "weekly_stars": null,
+      "trending_rank_daily": 4,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 89.62,
+      "star_delta": 749,
+      "fork_delta": 50,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.4,
+        "relative_growth": 96.1,
+        "fork_growth": 79.22,
+        "total_stars": 32.47,
+        "activity": 100.0,
+        "trending_signal": 43.07
+      },
+      "summary": {
+        "one_line": "把桌面交给 AI 操作：cua 提供应用控制、隔离电脑环境和评估工具，供开发者搭建电脑操作智能体。",
+        "highlights": [
+          "通过命令行或开发接口连接智能体与桌面应用",
+          "用共享开发接口操作本地沙箱或云桌面",
+          "从无需虚拟机的模拟任务开始验证评估流程"
+        ],
+        "audience": "需要让 AI 操作桌面软件的自动化开发者，以及构建电脑操作任务、评估智能体并收集训练轨迹的研究人员。",
+        "capabilities": [
+          "操控桌面应用和浏览器中的界面元素",
+          "从云端桌面池领取隔离的运行环境",
+          "在 Apple Silicon 上创建本地虚拟机",
+          "评估智能体完成电脑操作任务的表现",
+          "导出电脑操作轨迹用于训练"
+        ],
+        "core_title": "从桌面操作到任务评估",
+        "core_summary": "Driver 负责操作应用，Fleets 提供隔离云桌面，Lume 管理本地虚拟机，Bench 构建任务并评估结果。你自带智能体和模型，用这些组件连接操作环境与训练评估流程。",
+        "prerequisites": "需自备智能体和模型；Lume 需 Apple Silicon；Bench 入门需 Python 3.12 或 3.13 及 uv。",
+        "limitations": "后台操作不抢焦点取决于应用和平台支持；云桌面领取结束后，池中付费容量可能仍保留，需清理。专用决策模型不替代通用规划，模型与数据许可须另查。",
+        "license_label": "MIT",
+        "license_restrictions": "Optional `cua-agent[omni]` includes ultralytics (AGPL-3.0)",
+        "readme_sha": "10a6dea81e3a2673014b952116b878726d226425",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+          ],
+          "highlights": [
+            [
+              "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+            ],
+            [
+              "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+            ],
+            [
+              "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+            ]
+          ],
+          "audience": [
+            "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+          ],
+          "capabilities": [
+            [
+              "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+            ],
+            [
+              "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+            ],
+            [
+              "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+            ],
+            [
+              "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+            ],
+            [
+              "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+            ]
+          ],
+          "core_title": [
+            "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+          ],
+          "core_summary": [
+            "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+          ],
+          "prerequisites": [
+            "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+          ],
+          "limitations": [
+            "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-09-21/repo-0bb4cf3bf006d5061e75ad65-37e0822e6c334a608d47e64e.png",
+      "publication_evidence": {
+        "full_name": "trycua/cua",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "10a6dea81e3a2673014b952116b878726d226425",
+          "source_url": "https://api.github.com/repos/trycua/cua/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-21/repo-0bb4cf3bf006d5061e75ad65-37e0822e6c334a608d47e64e.png",
+          "sha256": "7ab472034b6263560c15531dc72310967011ad301016323e69a314cccfafe23f",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.02.trycua--cua.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 937253475,
+      "full_name": "anthropics/claude-code",
+      "owner": "anthropics",
+      "name": "claude-code",
+      "html_url": "https://github.com/anthropics/claude-code",
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "language": "TypeScript",
+      "stars": 147099,
+      "forks": 24049,
+      "open_issues": 12201,
+      "watchers": 147099,
+      "topics": [],
+      "created_at": "2025-02-22T17:41:21Z",
+      "updated_at": "2026-09-20T23:30:54Z",
+      "pushed_at": "2026-09-20T20:41:16Z",
+      "daily_stars": 415,
+      "weekly_stars": null,
+      "trending_rank_daily": 7,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 87.31,
+      "star_delta": 394,
+      "fork_delta": 121,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 89.61,
+        "relative_growth": 87.01,
+        "fork_growth": 100.0,
+        "total_stars": 68.83,
+        "activity": 100.0,
+        "trending_signal": 33.33
+      },
+      "summary": {
+        "one_line": "在终端描述开发需求，claude-code 结合代码库执行日常任务、解释复杂代码并处理 Git 流程。",
+        "highlights": [
+          "结合代码库解释复杂代码和执行开发任务",
+          "用自然语言处理 Git 工作流",
+          "可在终端、编辑器或 GitHub 中发起协作"
+        ],
+        "audience": "希望在终端或编辑器里用自然语言理解现有代码、执行日常开发任务和处理 Git 流程的程序员。",
+        "capabilities": [
+          "解释代码库中的复杂代码",
+          "按自然语言指令执行日常开发任务",
+          "处理项目中的 Git 工作流",
+          "通过插件扩展自定义命令与智能体"
+        ],
+        "core_title": "在项目里用自然语言推进开发",
+        "core_summary": "在项目中启动 Claude Code 后，可用自然语言提出开发任务，由它结合代码库执行操作、解释代码或处理 Git 流程。仓库还提供插件，用自定义命令和智能体扩展功能。",
+        "prerequisites": "先安装 Claude Code，再进入项目目录运行 claude；README 提供 macOS、Linux 和 Windows 安装方式。",
+        "limitations": "npm 安装方式已弃用。使用时会收集代码采纳或拒绝等使用数据、相关对话及问题反馈；具体数据处理规则需查阅其政策。",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": "80aa75edf74a5f9e1269811b4e8b5852be91e66e",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+          ],
+          "highlights": [
+            [
+              "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+            ],
+            [
+              "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+            ],
+            [
+              "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+            ]
+          ],
+          "audience": [
+            "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+          ],
+          "capabilities": [
+            [
+              "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+            ],
+            [
+              "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+            ],
+            [
+              "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+            ],
+            [
+              "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+            ]
+          ],
+          "core_title": [
+            "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+          ],
+          "core_summary": [
+            "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+          ],
+          "prerequisites": [
+            "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+          ],
+          "limitations": [
+            "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+          ],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-21/repo-48179362e46afbbceb1709af-fd6d516908b28fcbe487880e.png",
+      "publication_evidence": {
+        "full_name": "anthropics/claude-code",
+        "license_spdx_id": null,
+        "readme": {
+          "sha": "80aa75edf74a5f9e1269811b4e8b5852be91e66e",
+          "source_url": "https://api.github.com/repos/anthropics/claude-code/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-21/repo-48179362e46afbbceb1709af-fd6d516908b28fcbe487880e.png",
+          "sha256": "e86a43c19d2ad17a51936d1e15779616797eb299b62405b8357da09dcf61f644",
+          "width": 388,
+          "height": 388
+        },
+        "warnings": []
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.03.anthropics--claude-code.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "trycua/cua",
+            "path": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.02.trycua--cua.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "anthropics/claude-code",
+            "path": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.03.anthropics--claude-code.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 263702,
+          "forks": 39453,
+          "open_issues": 208,
+          "watchers": 263702,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-20T23:31:14Z",
+          "pushed_at": "2026-09-20T19:37:57Z",
+          "daily_stars": 837,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.32,
+          "star_delta": 747,
+          "fork_delta": 109,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.1,
+            "relative_growth": 89.61,
+            "fork_growth": 96.75,
+            "total_stars": 93.51,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "ECC 给 AI 编程助手补上计划、测试、审查和记忆流程，让团队不必每次重新交代开发步骤。",
+            "highlights": [
+              "把先写测试、再实现、再审查变成可复用流程",
+              "用本地 Markdown 记忆在不同编程助手间交接",
+              "通过工具事件触发脚本检查，减少反复提醒"
+            ],
+            "audience": "使用 AI 编程助手开发功能、修复缺陷，希望把测试、审查和跨会话交接纳入固定流程的软件团队。",
+            "capabilities": [
+              "把功能需求整理成可确认的实施计划",
+              "先用失败测试复现缺陷再推进修复",
+              "用独立上下文审查代码改动",
+              "将会话经验提炼成可复用技能",
+              "扫描编程助手配置中的权限与注入风险"
+            ],
+            "core_title": "让 AI 编程留下验证依据",
+            "core_summary": "ECC 将计划、测试、实现、独立审查和验证串成流程，再把会话经验保存为记忆与技能。交付的不只是代码，还有失败测试、通过测试和审查记录，便于追溯改动依据。",
+            "prerequisites": "通用安装包需 Node.js 18 或更新版本；Claude 插件安装还需 Git 和 Claude Code 2.1 或更新版本。",
+            "limitations": "各编程助手功能不对等；自动执行脚本须明确授权，记忆内容仍需核验。同一助手勿叠加安装方式。私有仓库托管分析属于付费 Pro；原生 Windows 记忆写入存在已知缺陷。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "highlights": [
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ]
+              ],
+              "audience": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ]
+              ],
+              "core_title": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "core_summary": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "prerequisites": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "limitations": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-21/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-21/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.01.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 925270205,
+          "full_name": "trycua/cua",
+          "owner": "trycua",
+          "name": "cua",
+          "html_url": "https://github.com/trycua/cua",
+          "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+          "language": "HTML",
+          "stars": 25122,
+          "forks": 1727,
+          "open_issues": 1027,
+          "watchers": 88,
+          "topics": [
+            "agent",
+            "ai-agent",
+            "apple",
+            "computer-use",
+            "computer-use-agent",
+            "containerization",
+            "cua",
+            "desktop-automation",
+            "hacktoberfest",
+            "lume",
+            "macos",
+            "manus",
+            "operator",
+            "swift",
+            "virtualization",
+            "virtualization-framework",
+            "windows",
+            "windows-sandbox"
+          ],
+          "created_at": "2025-01-31T15:02:49Z",
+          "updated_at": "2026-09-20T23:30:01Z",
+          "pushed_at": "2026-09-20T23:31:19Z",
+          "daily_stars": 1012,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.62,
+          "star_delta": 749,
+          "fork_delta": 50,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.4,
+            "relative_growth": 96.1,
+            "fork_growth": 79.22,
+            "total_stars": 32.47,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "把桌面交给 AI 操作：cua 提供应用控制、隔离电脑环境和评估工具，供开发者搭建电脑操作智能体。",
+            "highlights": [
+              "通过命令行或开发接口连接智能体与桌面应用",
+              "用共享开发接口操作本地沙箱或云桌面",
+              "从无需虚拟机的模拟任务开始验证评估流程"
+            ],
+            "audience": "需要让 AI 操作桌面软件的自动化开发者，以及构建电脑操作任务、评估智能体并收集训练轨迹的研究人员。",
+            "capabilities": [
+              "操控桌面应用和浏览器中的界面元素",
+              "从云端桌面池领取隔离的运行环境",
+              "在 Apple Silicon 上创建本地虚拟机",
+              "评估智能体完成电脑操作任务的表现",
+              "导出电脑操作轨迹用于训练"
+            ],
+            "core_title": "从桌面操作到任务评估",
+            "core_summary": "Driver 负责操作应用，Fleets 提供隔离云桌面，Lume 管理本地虚拟机，Bench 构建任务并评估结果。你自带智能体和模型，用这些组件连接操作环境与训练评估流程。",
+            "prerequisites": "需自备智能体和模型；Lume 需 Apple Silicon；Bench 入门需 Python 3.12 或 3.13 及 uv。",
+            "limitations": "后台操作不抢焦点取决于应用和平台支持；云桌面领取结束后，池中付费容量可能仍保留，需清理。专用决策模型不替代通用规划，模型与数据许可须另查。",
+            "license_label": "MIT",
+            "license_restrictions": "Optional `cua-agent[omni]` includes ultralytics (AGPL-3.0)",
+            "readme_sha": "10a6dea81e3a2673014b952116b878726d226425",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ],
+              "highlights": [
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ],
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ],
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ]
+              ],
+              "audience": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ],
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ],
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ],
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ],
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ]
+              ],
+              "core_title": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ],
+              "core_summary": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ],
+              "prerequisites": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ],
+              "limitations": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-09-21/repo-0bb4cf3bf006d5061e75ad65-37e0822e6c334a608d47e64e.png",
+          "publication_evidence": {
+            "full_name": "trycua/cua",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "10a6dea81e3a2673014b952116b878726d226425",
+              "source_url": "https://api.github.com/repos/trycua/cua/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-21/repo-0bb4cf3bf006d5061e75ad65-37e0822e6c334a608d47e64e.png",
+              "sha256": "7ab472034b6263560c15531dc72310967011ad301016323e69a314cccfafe23f",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.02.trycua--cua.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 937253475,
+          "full_name": "anthropics/claude-code",
+          "owner": "anthropics",
+          "name": "claude-code",
+          "html_url": "https://github.com/anthropics/claude-code",
+          "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+          "language": "TypeScript",
+          "stars": 147099,
+          "forks": 24049,
+          "open_issues": 12201,
+          "watchers": 147099,
+          "topics": [],
+          "created_at": "2025-02-22T17:41:21Z",
+          "updated_at": "2026-09-20T23:30:54Z",
+          "pushed_at": "2026-09-20T20:41:16Z",
+          "daily_stars": 415,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 87.31,
+          "star_delta": 394,
+          "fork_delta": 121,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 89.61,
+            "relative_growth": 87.01,
+            "fork_growth": 100.0,
+            "total_stars": 68.83,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "在终端描述开发需求，claude-code 结合代码库执行日常任务、解释复杂代码并处理 Git 流程。",
+            "highlights": [
+              "结合代码库解释复杂代码和执行开发任务",
+              "用自然语言处理 Git 工作流",
+              "可在终端、编辑器或 GitHub 中发起协作"
+            ],
+            "audience": "希望在终端或编辑器里用自然语言理解现有代码、执行日常开发任务和处理 Git 流程的程序员。",
+            "capabilities": [
+              "解释代码库中的复杂代码",
+              "按自然语言指令执行日常开发任务",
+              "处理项目中的 Git 工作流",
+              "通过插件扩展自定义命令与智能体"
+            ],
+            "core_title": "在项目里用自然语言推进开发",
+            "core_summary": "在项目中启动 Claude Code 后，可用自然语言提出开发任务，由它结合代码库执行操作、解释代码或处理 Git 流程。仓库还提供插件，用自定义命令和智能体扩展功能。",
+            "prerequisites": "先安装 Claude Code，再进入项目目录运行 claude；README 提供 macOS、Linux 和 Windows 安装方式。",
+            "limitations": "npm 安装方式已弃用。使用时会收集代码采纳或拒绝等使用数据、相关对话及问题反馈；具体数据处理规则需查阅其政策。",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": "80aa75edf74a5f9e1269811b4e8b5852be91e66e",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+              ],
+              "highlights": [
+                [
+                  "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+                ],
+                [
+                  "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+                ],
+                [
+                  "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+                ]
+              ],
+              "audience": [
+                "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+                ],
+                [
+                  "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+                ],
+                [
+                  "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+                ],
+                [
+                  "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+                ]
+              ],
+              "core_title": [
+                "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+              ],
+              "core_summary": [
+                "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+              ],
+              "prerequisites": [
+                "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+              ],
+              "limitations": [
+                "github.readme:80aa75edf74a5f9e1269811b4e8b5852be91e66e"
+              ],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-21/repo-48179362e46afbbceb1709af-fd6d516908b28fcbe487880e.png",
+          "publication_evidence": {
+            "full_name": "anthropics/claude-code",
+            "license_spdx_id": null,
+            "readme": {
+              "sha": "80aa75edf74a5f9e1269811b4e8b5852be91e66e",
+              "source_url": "https://api.github.com/repos/anthropics/claude-code/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-21/repo-48179362e46afbbceb1709af-fd6d516908b28fcbe487880e.png",
+              "sha256": "e86a43c19d2ad17a51936d1e15779616797eb299b62405b8357da09dcf61f644",
+              "width": 388,
+              "height": 388
+            },
+            "warnings": []
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-21/2026-09-21.comprehensive.03.anthropics--claude-code.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-21/2026-09-21.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-21/2026-09-21.ai.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "trycua/cua",
+            "path": "reports/daily/assets/2026-09-21/2026-09-21.ai.02.trycua--cua.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "addyosmani/agent-skills",
+            "path": "reports/daily/assets/2026-09-21/2026-09-21.ai.03.addyosmani--agent-skills.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 263702,
+          "forks": 39453,
+          "open_issues": 208,
+          "watchers": 263702,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-20T23:31:14Z",
+          "pushed_at": "2026-09-20T19:37:57Z",
+          "daily_stars": 837,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.0,
+          "star_delta": 747,
+          "fork_delta": 109,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.15,
+            "relative_growth": 88.46,
+            "fork_growth": 96.15,
+            "total_stars": 92.31,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "ECC 为 AI 编程助手补上计划、测试、审查和记忆流程，让开发任务不止停在生成代码。",
+            "highlights": [
+              "从计划到验证保留测试与审查证据",
+              "用本地 Markdown 记忆交接不同编程工具",
+              "按需加载技能，不把完整目录塞入每次会话"
+            ],
+            "audience": "使用 AI 编程工具开发功能、修复缺陷，希望把计划、测试、审查和跨会话交接纳入固定流程的软件团队。",
+            "capabilities": [
+              "把功能需求整理成可编辑的实施计划",
+              "用失败测试复现缺陷并验证修复",
+              "在独立上下文中审查代码改动",
+              "将会话经验提炼为可复用技能",
+              "扫描智能体配置中的权限与注入风险"
+            ],
+            "core_title": "让编程助手按工程流程交付",
+            "core_summary": "把规划、测试、实现、审查和记忆串成流程：技能按任务加载，审查使用独立上下文，事件触发脚本执行检查，会话经验再沉淀为后续可复用的技能。",
+            "prerequisites": "通用安装包需 Node.js 18 或更新版本；Claude 插件安装另需 Git 和 Claude Code 2.1 或更新版本。",
+            "limitations": "各工具能力不齐；启用执行脚本需明确确认，记忆内容须核验；同一工具勿叠加安装；Windows 原生记忆写入有已知缺陷；私有仓库托管分析属于付费 Pro。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "highlights": [
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ]
+              ],
+              "audience": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ]
+              ],
+              "core_title": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "core_summary": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "prerequisites": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "limitations": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-21/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-21/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-21/2026-09-21.ai.01.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 925270205,
+          "full_name": "trycua/cua",
+          "owner": "trycua",
+          "name": "cua",
+          "html_url": "https://github.com/trycua/cua",
+          "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+          "language": "HTML",
+          "stars": 25122,
+          "forks": 1727,
+          "open_issues": 1027,
+          "watchers": 88,
+          "topics": [
+            "agent",
+            "ai-agent",
+            "apple",
+            "computer-use",
+            "computer-use-agent",
+            "containerization",
+            "cua",
+            "desktop-automation",
+            "hacktoberfest",
+            "lume",
+            "macos",
+            "manus",
+            "operator",
+            "swift",
+            "virtualization",
+            "virtualization-framework",
+            "windows",
+            "windows-sandbox"
+          ],
+          "created_at": "2025-01-31T15:02:49Z",
+          "updated_at": "2026-09-20T23:30:01Z",
+          "pushed_at": "2026-09-20T23:31:19Z",
+          "daily_stars": 1012,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 90.61,
+          "star_delta": 749,
+          "fork_delta": 50,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 96.15,
+            "fork_growth": 84.62,
+            "total_stars": 15.38,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "把桌面交给 AI 操作：cua 提供应用控制、隔离运行环境和任务评测工具，供开发者搭建电脑操作智能体。",
+            "highlights": [
+              "在应用与平台支持时后台操作，不抢鼠标焦点",
+              "本地沙箱与云桌面共用一套开发接口",
+              "从无需虚拟机的模拟任务开始评测"
+            ],
+            "audience": "需要让智能体操作桌面应用的开发者，以及构建电脑操作任务、评估模型表现和收集训练轨迹的研究人员。",
+            "capabilities": [
+              "操控桌面应用和浏览器中的界面元素",
+              "从云端桌面池领取隔离的运行环境",
+              "在 Apple Silicon 上创建本地虚拟机",
+              "构建电脑操作任务以评估智能体",
+              "导出任务执行轨迹作为训练材料"
+            ],
+            "core_title": "给智能体电脑，也给它考题",
+            "core_summary": "Driver 负责检查和操作应用界面，Fleets 提供隔离云桌面，Lume 管理本地虚拟机，Bench 构建任务并评估执行结果，让电脑操作实验有环境也有评测工具。",
+            "prerequisites": "Lume 需 Apple Silicon；Bench 示例需 Python 3.12 或 3.13 及 uv；Driver 需配置平台权限并连接智能体。",
+            "limitations": "后台操作取决于应用和平台支持；云桌面领取结束后，池内容量仍可能计费，需清理；本地与云端运行要求不同；专用模型不能替代通用智能体的规划推理。",
+            "license_label": "MIT",
+            "license_restrictions": "Optional `cua-agent[omni]` includes ultralytics (AGPL-3.0)",
+            "readme_sha": "10a6dea81e3a2673014b952116b878726d226425",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ],
+              "highlights": [
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ],
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ],
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ]
+              ],
+              "audience": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ],
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ],
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ],
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ],
+                [
+                  "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+                ]
+              ],
+              "core_title": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ],
+              "core_summary": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ],
+              "prerequisites": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ],
+              "limitations": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:10a6dea81e3a2673014b952116b878726d226425"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-09-21/repo-0bb4cf3bf006d5061e75ad65-37e0822e6c334a608d47e64e.png",
+          "publication_evidence": {
+            "full_name": "trycua/cua",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "10a6dea81e3a2673014b952116b878726d226425",
+              "source_url": "https://api.github.com/repos/trycua/cua/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-21/repo-0bb4cf3bf006d5061e75ad65-37e0822e6c334a608d47e64e.png",
+              "sha256": "7ab472034b6263560c15531dc72310967011ad301016323e69a314cccfafe23f",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-21/2026-09-21.ai.02.trycua--cua.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1158722119,
+          "full_name": "addyosmani/agent-skills",
+          "owner": "addyosmani",
+          "name": "agent-skills",
+          "html_url": "https://github.com/addyosmani/agent-skills",
+          "description": "Production-grade engineering skills for AI coding agents.",
+          "language": "JavaScript",
+          "stars": 97655,
+          "forks": 10293,
+          "open_issues": 110,
+          "watchers": 512,
+          "topics": [
+            "agent-skills",
+            "antigravity",
+            "claude-code",
+            "codex",
+            "cursor",
+            "skills"
+          ],
+          "created_at": "2026-02-15T20:20:26Z",
+          "updated_at": "2026-09-20T23:30:43Z",
+          "pushed_at": "2026-09-20T19:31:54Z",
+          "daily_stars": 729,
+          "weekly_stars": null,
+          "trending_rank_daily": 13,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 85.93,
+          "star_delta": 626,
+          "fork_delta": 54,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.31,
+            "relative_growth": 92.31,
+            "fork_growth": 88.46,
+            "total_stars": 23.08,
+            "activity": 100.0,
+            "trending_signal": 26.26
+          },
+          "summary": {
+            "one_line": "开发流程里怕 AI 跳过规格和测试？agent-skills 把需求澄清到发布检查写成可遵循、可验证的技能。",
+            "highlights": [
+              "按开发阶段自动选择对应工作流程",
+              "每项技能以测试或运行数据作为完成证据",
+              "批准计划后连续构建，仍保留逐任务验证"
+            ],
+            "audience": "用 AI 编程助手推进新项目或维护既有代码库，需要明确需求、执行测试并在合并前检查质量的软件团队。",
+            "capabilities": [
+              "通过逐个提问澄清模糊需求",
+              "将规格拆成带验收条件的小任务",
+              "按先写测试的流程逐步实现功能",
+              "为项目编写可执行的质量约束",
+              "依据浏览器运行数据审计网页性能"
+            ],
+            "core_title": "把完成标准写进每项开发任务",
+            "core_summary": "每项技能都写明步骤、检查点和完成证据，并列出跳过测试等常见借口的反驳。自动构建模式在计划获批后逐项实现，仍逐项测试和提交，遇到失败或风险会暂停。",
+            "prerequisites": "需搭配能接收系统提示或指令文件的智能体；自动构建模式在规格已存在后使用。",
+            "limitations": "自动构建需先批准计划，遇失败或风险步骤会暂停；单独安装技能不会携带仓库共享检查清单；部分 Antigravity 版本需直接调用技能而非命令。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "6361def414ade46622e6cd527d1faeea2b234224",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+              ],
+              "highlights": [
+                [
+                  "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+                ],
+                [
+                  "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+                ],
+                [
+                  "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+                ]
+              ],
+              "audience": [
+                "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+                ],
+                [
+                  "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+                ],
+                [
+                  "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+                ],
+                [
+                  "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+                ],
+                [
+                  "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+                ]
+              ],
+              "core_title": [
+                "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+              ],
+              "core_summary": [
+                "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+              ],
+              "prerequisites": [
+                "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+              ],
+              "limitations": [
+                "github.readme:6361def414ade46622e6cd527d1faeea2b234224"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-21/repo-1b1a194f4fbb088b43db624e-a8bed04804623d1f7e146b2e.png",
+          "publication_evidence": {
+            "full_name": "addyosmani/agent-skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "6361def414ade46622e6cd527d1faeea2b234224",
+              "source_url": "https://api.github.com/repos/addyosmani/agent-skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-21/repo-1b1a194f4fbb088b43db624e-a8bed04804623d1f7e146b2e.png",
+              "sha256": "630947c196a4a30a1b1f319de9e471da9f6ca5966c2faaa55c6e8585233603ae",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-21/2026-09-21.ai.03.addyosmani--agent-skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
