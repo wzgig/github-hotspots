@@ -1,0 +1,3304 @@
+{
+  "schema_version": 3,
+  "period": "weekly",
+  "run_date": "2026-09-20",
+  "window_start": "2026-09-13",
+  "window_end": "2026-09-20",
+  "generated_at": "2026-09-20T08:46:08+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-09-13 至 2026-09-20",
+  "publication": {
+    "issue_number": 11,
+    "issue_code": "W011",
+    "issue_label": "第11期",
+    "status": "official"
+  },
+  "data_quality": "中高：快照与 Trending 混合",
+  "warnings": [
+    "综合主榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号",
+    "AI 专题榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/weekly/assets/2026-W38",
+    "manifest": "reports/weekly/assets/2026-W38/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.02.bilawalsidhu--gods-eye-view.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.03.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.04.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "Tencent/WeKnora",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.05.tencent--weknora.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "ayghri/i-have-adhd",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.06.ayghri--i-have-adhd.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.07.mattpocock--skills.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W38/2026-W38.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.01.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.03.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "Tencent/WeKnora",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.04.tencent--weknora.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.05.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.06.stablyai--orca.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.07.obra--superpowers.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 11,
+      "issue_code": "W011",
+      "issue_label": "第11期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 262955,
+      "forks": 39344,
+      "open_issues": 199,
+      "watchers": 262955,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-09-20T00:44:44Z",
+      "pushed_at": "2026-09-20T00:01:14Z",
+      "daily_stars": null,
+      "weekly_stars": 6265,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 3,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 92.87,
+      "star_delta": 5676,
+      "fork_delta": 847,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.33,
+        "relative_growth": 89.91,
+        "fork_growth": 97.25,
+        "total_stars": 89.91,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "给 AI 编程助手配上规划、测试、审查和记忆流程，不必每次从提示词重新搭建。",
+        "highlights": [
+          "规划、测试、审查与验证形成连续流程",
+          "用本地 Markdown 记忆交接跨工具任务",
+          "按需组合技能、规则和事件触发脚本"
+        ],
+        "audience": "用 AI 编程助手开发功能、修复缺陷，希望把测试、审查和会话交接纳入固定流程的研发人员。",
+        "capabilities": [
+          "把功能需求整理为可确认的实施计划",
+          "用先写失败测试的流程推进代码修改",
+          "在独立上下文中复查代码变更",
+          "将会话经验提炼为可复用技能",
+          "扫描智能体配置中的权限与注入风险"
+        ],
+        "core_title": "让编程助手按工程流程交付",
+        "core_summary": "把规划、先写测试、实现、独立审查和最终验证串成流程，再将会话经验存为记忆与技能。规则持续生效，技能按需加载，事件触发脚本负责流程检查。",
+        "prerequisites": "通用安装包需 Node.js 18 或更新版本；Claude 插件安装还需 Git 和 Claude Code 2.1 或更新版本。",
+        "limitations": "各编程助手的功能不完全一致；同一助手勿叠加安装。启用脚本需明确授权，记忆内容仍须核验；私有仓库托管分析属于付费 Pro。Windows 原生记忆写入存在已知缺陷。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+          ],
+          "highlights": [
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ],
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ],
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ]
+          ],
+          "audience": [
+            "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+          ],
+          "capabilities": [
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ],
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ],
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ],
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ],
+            [
+              "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+            ]
+          ],
+          "core_title": [
+            "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+          ],
+          "core_summary": [
+            "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+          ],
+          "prerequisites": [
+            "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+          ],
+          "limitations": [
+            "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W38/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8",
+          "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W38/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+          "width": 165,
+          "height": 165
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.01.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1277471539,
+      "full_name": "bilawalsidhu/gods-eye-view",
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "html_url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": 38625,
+      "forks": 7797,
+      "open_issues": 219,
+      "watchers": 752,
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "created_at": "2026-06-22T23:37:22Z",
+      "updated_at": "2026-09-20T00:44:32Z",
+      "pushed_at": "2026-09-17T00:37:30Z",
+      "daily_stars": null,
+      "weekly_stars": 10207,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 5,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 91.32,
+      "star_delta": 8060,
+      "fork_delta": 1657,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.17,
+        "relative_growth": 99.08,
+        "fork_growth": 100.0,
+        "total_stars": 45.87,
+        "activity": 81.87,
+        "trending_signal": 38.69
+      },
+      "summary": {
+        "one_line": "把公开航班、卫星和摄像头放进浏览器地球，让你从全球概览一路查看到单个目标。",
+        "highlights": [
+          "把多种公开数据叠加到可探索的地球",
+          "跟随真实航班数据切换驾驶舱视角",
+          "用语音查询场景、控制镜头与标注"
+        ],
+        "audience": "想在地图中探索公开航班、卫星与城市数据，或制作地理可视化演示、扩展数据图层的人。",
+        "capabilities": [
+          "追踪航班并切换随行驾驶舱视角",
+          "查看卫星位置与轨道环",
+          "把公共摄像头画面投射进三维场景",
+          "用语音绘制区域边界和地图标注",
+          "沿选定的道路路线生成镜头飞行"
+        ],
+        "core_title": "在同一地球视图切换公开信号",
+        "core_summary": "将航班、船舶、卫星和公共摄像头等来源放进同一地球视图。点选目标可跟踪轨迹、查看数据，再切换随行镜头或附近摄像头，从全球概览深入局部。",
+        "prerequisites": "可用 Pinokio 8.2 或更新版本启动，无需密钥；写实三维需地图服务凭据，语音需 OpenAI 密钥。",
+        "limitations": "数据可能延迟或错误，车辆位置为模拟、摄像头姿态为估计；不可用于导航或应急决策。语音按量付费，地图受配额约束；共享服务会让可访问者调用所配接口。不提供个人追踪。",
+        "license_label": "MIT License",
+        "license_restrictions": "Bundled and live datasets carry their own terms",
+        "readme_sha": "4224bacc054ee886a5eca4ee1b3087eb32b4a9af",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+          ],
+          "highlights": [
+            [
+              "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+            ],
+            [
+              "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+            ],
+            [
+              "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+            ]
+          ],
+          "audience": [
+            "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+          ],
+          "capabilities": [
+            [
+              "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+            ],
+            [
+              "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+            ],
+            [
+              "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+            ],
+            [
+              "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+            ],
+            [
+              "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+            ]
+          ],
+          "core_title": [
+            "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+          ],
+          "core_summary": [
+            "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+          ],
+          "prerequisites": [
+            "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+          ],
+          "limitations": [
+            "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+          ],
+          "license_label": [
+            "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+          ],
+          "license_restrictions": [
+            "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-W38/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+      "publication_evidence": {
+        "full_name": "bilawalsidhu/gods-eye-view",
+        "license_spdx_id": "NOASSERTION",
+        "readme": {
+          "sha": "4224bacc054ee886a5eca4ee1b3087eb32b4a9af",
+          "source_url": "https://api.github.com/repos/bilawalsidhu/gods-eye-view/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W38/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+          "sha256": "d0bad70376c9fb4449c9142b6bcee3b81bbe920f1d42c8890f6481212352bc74",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT License",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.02.bilawalsidhu--gods-eye-view.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1333065091,
+      "full_name": "deepseek-ai/deepseek-harness",
+      "owner": "deepseek-ai",
+      "name": "deepseek-harness",
+      "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+      "description": "DeepSeek Harness: Everything is a Plugin.",
+      "language": "TypeScript",
+      "stars": 230029,
+      "forks": 27542,
+      "open_issues": 0,
+      "watchers": 230029,
+      "topics": [
+        "ai-agents",
+        "cordis",
+        "dsh",
+        "dsh-plugin"
+      ],
+      "created_at": "2026-08-13T11:56:32Z",
+      "updated_at": "2026-09-20T00:44:59Z",
+      "pushed_at": "2026-09-17T13:30:15Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 91.03,
+      "star_delta": 8130,
+      "fork_delta": 1220,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 99.08,
+        "relative_growth": 95.41,
+        "fork_growth": 99.08,
+        "total_stars": 86.24,
+        "activity": 81.87,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "为开发者提供以插件组织能力的智能体运行框架，并通过网页界面启动使用。",
+        "highlights": [
+          "以插件架构组织智能体运行框架",
+          "提供本地启动的网页操作界面",
+          "区分本地与 SSH 启动时的浏览器行为"
+        ],
+        "audience": "希望试用插件化智能体运行框架、开发配套插件，并能接受兼容性变更的开发者。",
+        "capabilities": [
+          "通过 npm 启动智能体网页界面",
+          "从源码构建并运行网页服务",
+          "关闭启动时自动打开浏览器的行为"
+        ],
+        "core_title": "以插件组织智能体运行框架",
+        "core_summary": "以 Cordis 为基础，将插件作为智能体运行框架的组织方式。可通过 npm 启动网页界面，也可构建源码后运行；README 尚未展开具体任务工具清单。",
+        "prerequisites": "需安装 Node.js；从源码运行还需用 pnpm 安装依赖并先完成构建。",
+        "limitations": "目前处于开发者预览阶段，会发生破坏兼容性的变更；运行前需阅读安全说明。源码启动使用已构建产物，不会自动重新构建。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "36adfe913902e75ce0673adc2cb5cb692151a291",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+          ],
+          "highlights": [
+            [
+              "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+            ],
+            [
+              "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+            ],
+            [
+              "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+            ]
+          ],
+          "audience": [
+            "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+          ],
+          "capabilities": [
+            [
+              "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+            ],
+            [
+              "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+            ],
+            [
+              "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+            ]
+          ],
+          "core_title": [
+            "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+          ],
+          "core_summary": [
+            "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+          ],
+          "prerequisites": [
+            "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+          ],
+          "limitations": [
+            "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W38/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+      "publication_evidence": {
+        "full_name": "deepseek-ai/deepseek-harness",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "36adfe913902e75ce0673adc2cb5cb692151a291",
+          "source_url": "https://api.github.com/repos/deepseek-ai/deepseek-harness/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W38/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "sha256": "933db40c3044f42cdce67ec0e1e70741b746419ba10b684683db1a956274e817",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.03.deepseek-ai--deepseek-harness.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1241960226,
+      "full_name": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "html_url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": 37551,
+      "forks": 2684,
+      "open_issues": 233,
+      "watchers": 118,
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "created_at": "2026-05-18T02:16:36Z",
+      "updated_at": "2026-09-20T00:39:08Z",
+      "pushed_at": "2026-09-19T12:30:32Z",
+      "daily_stars": null,
+      "weekly_stars": 15028,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 1,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 4,
+      "score": 89.22,
+      "star_delta": 15028,
+      "fork_delta": 0,
+      "delta_source": "trending",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 26.15,
+        "total_stars": 44.95,
+        "activity": 93.55,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "在提交或合并前，把代码差异交给审查工具，返回具体到代码行的结构化意见。",
+        "highlights": [
+          "结合文件分组、规则匹配与模型审查",
+          "检索代码库上下文，而非只看差异片段",
+          "可委托现有编程助手执行模型审查"
+        ],
+        "audience": "需要在提交、分支合并或接手陌生代码库时，获得具体到代码行的审查意见的研发团队。",
+        "capabilities": [
+          "审查暂存、未暂存和未跟踪的代码变更",
+          "检查指定提交或分支区间的修改",
+          "扫描没有有效差异的完整文件",
+          "恢复中断的提交审查或全文件扫描",
+          "导出结构化 JSON 审查结果"
+        ],
+        "core_title": "程序管流程，模型查上下文",
+        "core_summary": "程序先筛选文件、组合相关变更并匹配规则，再让模型读取上下文、搜索代码。独立模块负责评论定位与复查，把审查发现整理成具体到代码行的意见。",
+        "prerequisites": "需 Git >= 2.41；审查前需配置模型服务与模型，委托现有编程助手审查的模式除外。",
+        "limitations": "README 报告的基准测试中，召回率低于通用智能体，取舍偏向减少误报而非找全缺陷；默认模式会将变更文件发送给所配置的模型。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "a8d2c1d908d266f189ae288171fe6982b9bba3af",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+          ],
+          "highlights": [
+            [
+              "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+            ],
+            [
+              "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+            ],
+            [
+              "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+            ]
+          ],
+          "audience": [
+            "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+          ],
+          "capabilities": [
+            [
+              "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+            ],
+            [
+              "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+            ],
+            [
+              "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+            ],
+            [
+              "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+            ],
+            [
+              "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+            ]
+          ],
+          "core_title": [
+            "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+          ],
+          "core_summary": [
+            "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+          ],
+          "prerequisites": [
+            "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+          ],
+          "limitations": [
+            "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W38/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+      "publication_evidence": {
+        "full_name": "alibaba/open-code-review",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "a8d2c1d908d266f189ae288171fe6982b9bba3af",
+          "source_url": "https://api.github.com/repos/alibaba/open-code-review/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W38/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+          "sha256": "a9c8b0eb596ec9f1f4939eb19f3aeb2e3e78cdd8c5e35edf3eead39dba501dbd",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.04.alibaba--open-code-review.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1024118326,
+      "full_name": "Tencent/WeKnora",
+      "owner": "Tencent",
+      "name": "WeKnora",
+      "html_url": "https://github.com/Tencent/WeKnora",
+      "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+      "language": "Go",
+      "stars": 27426,
+      "forks": 3693,
+      "open_issues": 677,
+      "watchers": 126,
+      "topics": [
+        "agent",
+        "agentic",
+        "ai",
+        "chatbot",
+        "dsh-plugin",
+        "embeddings",
+        "evaluation",
+        "generative-ai",
+        "golang",
+        "knowledge-base",
+        "llm",
+        "multi-tenant",
+        "ollama",
+        "openai",
+        "question-answering",
+        "rag",
+        "reranking",
+        "semantic-search",
+        "vector-search",
+        "wiki"
+      ],
+      "created_at": "2025-07-22T08:01:23Z",
+      "updated_at": "2026-09-20T00:35:01Z",
+      "pushed_at": "2026-09-19T16:17:11Z",
+      "daily_stars": null,
+      "weekly_stars": 4867,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 4,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 5,
+      "score": 89.13,
+      "star_delta": 4699,
+      "fork_delta": 436,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 92.66,
+        "relative_growth": 98.17,
+        "fork_growth": 88.07,
+        "total_stars": 44.04,
+        "activity": 100.0,
+        "trending_signal": 43.07
+      },
+      "summary": {
+        "one_line": "把团队散落的文档变成带引用的问答知识库，再自动整理为可维护的 Wiki。",
+        "highlights": [
+          "从多种文档来源同步知识并提供问答",
+          "自动生成可编辑、可回滚的关联 Wiki",
+          "调度检索、外部工具和沙箱完成多步任务"
+        ],
+        "audience": "需要把团队文档集中检索、维护内部知识库，并在企业聊天渠道提供资料问答的知识管理与研发团队。",
+        "capabilities": [
+          "同步飞书、GitLab、Notion 等来源文档",
+          "检索知识库并生成带引用的回答",
+          "将原始文档整理成互相链接的 Wiki",
+          "编辑检索片段并回滚历史版本",
+          "把知识问答接入企业微信或飞书"
+        ],
+        "core_title": "文档既能问答，也能整理成 Wiki",
+        "core_summary": "文档导入后既能先检索资料再生成回答，也能由智能体整理成互相链接的 Markdown 页面与知识图谱。页面和检索片段均可人工修改、比较版本并回滚。",
+        "prerequisites": "部署需 Docker、Docker Compose 和 Git；使用本地 Ollama 模型前需先启动其服务。",
+        "limitations": "自动提取的长期记忆需用户确认；Docker 技能沙箱需主动启用。README 建议部署在内网或私有网络，避免直接暴露公网，并配置访问控制。",
+        "license_label": "MIT License",
+        "license_restrictions": "You are free to use, modify, and distribute the code with proper attribution.",
+        "readme_sha": "7ffb788a430e7a657cddbaa15350e66f0b0dbb68",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+          ],
+          "highlights": [
+            [
+              "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+            ],
+            [
+              "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+            ],
+            [
+              "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+            ]
+          ],
+          "audience": [
+            "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+          ],
+          "capabilities": [
+            [
+              "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+            ],
+            [
+              "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+            ],
+            [
+              "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+            ],
+            [
+              "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+            ],
+            [
+              "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+            ]
+          ],
+          "core_title": [
+            "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+          ],
+          "core_summary": [
+            "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+          ],
+          "prerequisites": [
+            "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+          ],
+          "limitations": [
+            "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+          ],
+          "license_label": [
+            "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+          ],
+          "license_restrictions": [
+            "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-W38/repo-91654067ed52171ae2de53af-3858ae4c896dcb4262912b30.png",
+      "publication_evidence": {
+        "full_name": "Tencent/WeKnora",
+        "license_spdx_id": "NOASSERTION",
+        "readme": {
+          "sha": "7ffb788a430e7a657cddbaa15350e66f0b0dbb68",
+          "source_url": "https://api.github.com/repos/Tencent/WeKnora/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W38/repo-91654067ed52171ae2de53af-3858ae4c896dcb4262912b30.png",
+          "sha256": "cfae623087616598b411f31b411a547b8e6803c4a4b84efa29c7b80b1e112d74",
+          "width": 200,
+          "height": 200
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT License",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.05.tencent--weknora.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1238120057,
+      "full_name": "ayghri/i-have-adhd",
+      "owner": "ayghri",
+      "name": "i-have-adhd",
+      "html_url": "https://github.com/ayghri/i-have-adhd",
+      "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+      "language": "Python",
+      "stars": 48689,
+      "forks": 2831,
+      "open_issues": 68,
+      "watchers": 154,
+      "topics": [
+        "adhd",
+        "claude-",
+        "claude-code-plugin",
+        "claude-skills",
+        "developer-tools",
+        "productivity"
+      ],
+      "created_at": "2026-05-13T20:42:06Z",
+      "updated_at": "2026-09-20T00:45:20Z",
+      "pushed_at": "2026-09-19T16:44:46Z",
+      "daily_stars": null,
+      "weekly_stars": 5589,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 8,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 6,
+      "score": 88.73,
+      "star_delta": 5034,
+      "fork_delta": 338,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 93.58,
+        "relative_growth": 97.25,
+        "fork_growth": 85.32,
+        "total_stars": 47.71,
+        "activity": 100.0,
+        "trending_signal": 31.55
+      },
+      "summary": {
+        "one_line": "嫌编程助手铺垫太长？这个技能让它先给操作，再按编号讲步骤，不把答案埋在长文里。",
+        "highlights": [
+          "行动先于解释，减少翻找答案",
+          "用编号步骤和状态重述帮助跟进任务",
+          "可修改技能规则，调整助手表达习惯"
+        ],
+        "audience": "读编程助手长回复时容易漏掉重点，希望先看到操作、再按步骤执行的人，无需 ADHD 诊断。",
+        "capabilities": [
+          "把下一步操作放在回答开头",
+          "为多步骤任务添加编号",
+          "在每轮回复中重述当前状态",
+          "压缩跑题内容和客套话",
+          "用一个具体下一步结束回答"
+        ],
+        "core_title": "把下一步操作放在回答最前面",
+        "core_summary": "通过一组回复规则改变编程助手的表达顺序：先给行动，再编号拆解步骤，交代当前状态，最后只留一个下一步。重点是让答案容易找到，而非替用户安排日程。",
+        "prerequisites": "需将技能或插件安装到编程助手中使用。",
+        "limitations": "规则针对模型如何回复，不是指导人如何安排一天；替换成自定义副本前需移除原插件，随后重启助手并重新调用。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "6acecf9600640c93503df0ed178a220d476e1197",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+          ],
+          "highlights": [
+            [
+              "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+            ],
+            [
+              "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+            ],
+            [
+              "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+            ]
+          ],
+          "audience": [
+            "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+          ],
+          "capabilities": [
+            [
+              "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+            ],
+            [
+              "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+            ],
+            [
+              "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+            ],
+            [
+              "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+            ],
+            [
+              "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+            ]
+          ],
+          "core_title": [
+            "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+          ],
+          "core_summary": [
+            "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+          ],
+          "prerequisites": [
+            "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+          ],
+          "limitations": [
+            "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W38/repo-32d4385133b004ff67b76591-b1305a6802c37dd64103952c.png",
+      "publication_evidence": {
+        "full_name": "ayghri/i-have-adhd",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "6acecf9600640c93503df0ed178a220d476e1197",
+          "source_url": "https://api.github.com/repos/ayghri/i-have-adhd/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W38/repo-32d4385133b004ff67b76591-b1305a6802c37dd64103952c.png",
+          "sha256": "c280689774a4b6abb104245827197b254640bdc27c13bc263a8ea7ea0989b7b7",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.06.ayghri--i-have-adhd.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 265823,
+      "forks": 22423,
+      "open_issues": 504,
+      "watchers": 265823,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-09-20T00:44:47Z",
+      "pushed_at": "2026-09-18T10:12:48Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 7,
+      "score": 86.87,
+      "star_delta": 5123,
+      "fork_delta": 434,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.5,
+        "relative_growth": 88.07,
+        "fork_growth": 87.16,
+        "total_stars": 90.83,
+        "activity": 87.52,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "让编程助手先问清需求，再拆任务、写测试和审查；你可以按需组合技能，而非交出整个流程。",
+        "highlights": [
+          "提问时同步积累项目术语和设计决策",
+          "贯通需求规格、任务拆分与测试开发",
+          "用并行审查分别检查规范和需求符合度"
+        ],
+        "audience": "希望保留开发流程控制权，用编程助手澄清需求、拆任务、写测试和审查实现的软件工程师。",
+        "capabilities": [
+          "通过连续提问澄清需求与设计分歧",
+          "将讨论整理为可发布的需求规格",
+          "把计划拆成标有阻塞关系的任务单",
+          "按先失败后通过的测试循环实现功能",
+          "分别核对代码规范与需求实现情况"
+        ],
+        "core_title": "把工程习惯拆成可组合技能",
+        "core_summary": "用小型、可组合的技能替代包办流程：先通过提问对齐需求，把项目术语和决策写进文档，再拆任务、写测试与审查。可选择托管插件，或保留可编辑的技能副本。",
+        "prerequisites": "每个仓库使用工程技能前需运行初始化技能，选择任务追踪方式、分诊标签及文档保存位置。",
+        "limitations": "插件是自动更新的只读包，文件副本可编辑但需自行更新；两种方式勿同时安装。架构技能提供改进候选，不会自动理顺老代码库。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "highlights": [
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ]
+          ],
+          "audience": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "capabilities": [
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ],
+            [
+              "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+            ]
+          ],
+          "core_title": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "core_summary": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "prerequisites": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "limitations": [
+            "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W38/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-W38/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.07.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.02.bilawalsidhu--gods-eye-view.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.03.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.04.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "Tencent/WeKnora",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.05.tencent--weknora.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "ayghri/i-have-adhd",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.06.ayghri--i-have-adhd.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.07.mattpocock--skills.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 262955,
+          "forks": 39344,
+          "open_issues": 199,
+          "watchers": 262955,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-20T00:44:44Z",
+          "pushed_at": "2026-09-20T00:01:14Z",
+          "daily_stars": null,
+          "weekly_stars": 6265,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 3,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.87,
+          "star_delta": 5676,
+          "fork_delta": 847,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.33,
+            "relative_growth": 89.91,
+            "fork_growth": 97.25,
+            "total_stars": 89.91,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "给 AI 编程助手配上规划、测试、审查和记忆流程，不必每次从提示词重新搭建。",
+            "highlights": [
+              "规划、测试、审查与验证形成连续流程",
+              "用本地 Markdown 记忆交接跨工具任务",
+              "按需组合技能、规则和事件触发脚本"
+            ],
+            "audience": "用 AI 编程助手开发功能、修复缺陷，希望把测试、审查和会话交接纳入固定流程的研发人员。",
+            "capabilities": [
+              "把功能需求整理为可确认的实施计划",
+              "用先写失败测试的流程推进代码修改",
+              "在独立上下文中复查代码变更",
+              "将会话经验提炼为可复用技能",
+              "扫描智能体配置中的权限与注入风险"
+            ],
+            "core_title": "让编程助手按工程流程交付",
+            "core_summary": "把规划、先写测试、实现、独立审查和最终验证串成流程，再将会话经验存为记忆与技能。规则持续生效，技能按需加载，事件触发脚本负责流程检查。",
+            "prerequisites": "通用安装包需 Node.js 18 或更新版本；Claude 插件安装还需 Git 和 Claude Code 2.1 或更新版本。",
+            "limitations": "各编程助手的功能不完全一致；同一助手勿叠加安装。启用脚本需明确授权，记忆内容仍须核验；私有仓库托管分析属于付费 Pro。Windows 原生记忆写入存在已知缺陷。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "highlights": [
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ]
+              ],
+              "audience": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ]
+              ],
+              "core_title": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "core_summary": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "prerequisites": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "limitations": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.01.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1277471539,
+          "full_name": "bilawalsidhu/gods-eye-view",
+          "owner": "bilawalsidhu",
+          "name": "gods-eye-view",
+          "html_url": "https://github.com/bilawalsidhu/gods-eye-view",
+          "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+          "language": "JavaScript",
+          "stars": 38625,
+          "forks": 7797,
+          "open_issues": 219,
+          "watchers": 752,
+          "topics": [
+            "3d-globe",
+            "cesium",
+            "flight-tracking",
+            "geospatial",
+            "geospatial-intelligence",
+            "gis",
+            "osint",
+            "photogrammetry",
+            "satellite-tracking",
+            "spatial-intelligence",
+            "webgl",
+            "worldview"
+          ],
+          "created_at": "2026-06-22T23:37:22Z",
+          "updated_at": "2026-09-20T00:44:32Z",
+          "pushed_at": "2026-09-17T00:37:30Z",
+          "daily_stars": null,
+          "weekly_stars": 10207,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 5,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 91.32,
+          "star_delta": 8060,
+          "fork_delta": 1657,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.17,
+            "relative_growth": 99.08,
+            "fork_growth": 100.0,
+            "total_stars": 45.87,
+            "activity": 81.87,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "把公开航班、卫星和摄像头放进浏览器地球，让你从全球概览一路查看到单个目标。",
+            "highlights": [
+              "把多种公开数据叠加到可探索的地球",
+              "跟随真实航班数据切换驾驶舱视角",
+              "用语音查询场景、控制镜头与标注"
+            ],
+            "audience": "想在地图中探索公开航班、卫星与城市数据，或制作地理可视化演示、扩展数据图层的人。",
+            "capabilities": [
+              "追踪航班并切换随行驾驶舱视角",
+              "查看卫星位置与轨道环",
+              "把公共摄像头画面投射进三维场景",
+              "用语音绘制区域边界和地图标注",
+              "沿选定的道路路线生成镜头飞行"
+            ],
+            "core_title": "在同一地球视图切换公开信号",
+            "core_summary": "将航班、船舶、卫星和公共摄像头等来源放进同一地球视图。点选目标可跟踪轨迹、查看数据，再切换随行镜头或附近摄像头，从全球概览深入局部。",
+            "prerequisites": "可用 Pinokio 8.2 或更新版本启动，无需密钥；写实三维需地图服务凭据，语音需 OpenAI 密钥。",
+            "limitations": "数据可能延迟或错误，车辆位置为模拟、摄像头姿态为估计；不可用于导航或应急决策。语音按量付费，地图受配额约束；共享服务会让可访问者调用所配接口。不提供个人追踪。",
+            "license_label": "MIT License",
+            "license_restrictions": "Bundled and live datasets carry their own terms",
+            "readme_sha": "4224bacc054ee886a5eca4ee1b3087eb32b4a9af",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+              ],
+              "highlights": [
+                [
+                  "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+                ],
+                [
+                  "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+                ],
+                [
+                  "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+                ]
+              ],
+              "audience": [
+                "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+                ],
+                [
+                  "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+                ],
+                [
+                  "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+                ],
+                [
+                  "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+                ],
+                [
+                  "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+                ]
+              ],
+              "core_title": [
+                "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+              ],
+              "core_summary": [
+                "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+              ],
+              "prerequisites": [
+                "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+              ],
+              "limitations": [
+                "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+              ],
+              "license_label": [
+                "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+              ],
+              "license_restrictions": [
+                "github.readme:4224bacc054ee886a5eca4ee1b3087eb32b4a9af"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+          "publication_evidence": {
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "4224bacc054ee886a5eca4ee1b3087eb32b4a9af",
+              "source_url": "https://api.github.com/repos/bilawalsidhu/gods-eye-view/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+              "sha256": "d0bad70376c9fb4449c9142b6bcee3b81bbe920f1d42c8890f6481212352bc74",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT License",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.02.bilawalsidhu--gods-eye-view.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1333065091,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "owner": "deepseek-ai",
+          "name": "deepseek-harness",
+          "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+          "description": "DeepSeek Harness: Everything is a Plugin.",
+          "language": "TypeScript",
+          "stars": 230029,
+          "forks": 27542,
+          "open_issues": 0,
+          "watchers": 230029,
+          "topics": [
+            "ai-agents",
+            "cordis",
+            "dsh",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-08-13T11:56:32Z",
+          "updated_at": "2026-09-20T00:44:59Z",
+          "pushed_at": "2026-09-17T13:30:15Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 91.03,
+          "star_delta": 8130,
+          "fork_delta": 1220,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 99.08,
+            "relative_growth": 95.41,
+            "fork_growth": 99.08,
+            "total_stars": 86.24,
+            "activity": 81.87,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "为开发者提供以插件组织能力的智能体运行框架，并通过网页界面启动使用。",
+            "highlights": [
+              "以插件架构组织智能体运行框架",
+              "提供本地启动的网页操作界面",
+              "区分本地与 SSH 启动时的浏览器行为"
+            ],
+            "audience": "希望试用插件化智能体运行框架、开发配套插件，并能接受兼容性变更的开发者。",
+            "capabilities": [
+              "通过 npm 启动智能体网页界面",
+              "从源码构建并运行网页服务",
+              "关闭启动时自动打开浏览器的行为"
+            ],
+            "core_title": "以插件组织智能体运行框架",
+            "core_summary": "以 Cordis 为基础，将插件作为智能体运行框架的组织方式。可通过 npm 启动网页界面，也可构建源码后运行；README 尚未展开具体任务工具清单。",
+            "prerequisites": "需安装 Node.js；从源码运行还需用 pnpm 安装依赖并先完成构建。",
+            "limitations": "目前处于开发者预览阶段，会发生破坏兼容性的变更；运行前需阅读安全说明。源码启动使用已构建产物，不会自动重新构建。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "36adfe913902e75ce0673adc2cb5cb692151a291",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+              ],
+              "highlights": [
+                [
+                  "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+                ],
+                [
+                  "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+                ],
+                [
+                  "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+                ]
+              ],
+              "audience": [
+                "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+                ],
+                [
+                  "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+                ],
+                [
+                  "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+                ]
+              ],
+              "core_title": [
+                "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+              ],
+              "core_summary": [
+                "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+              ],
+              "prerequisites": [
+                "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+              ],
+              "limitations": [
+                "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "publication_evidence": {
+            "full_name": "deepseek-ai/deepseek-harness",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "36adfe913902e75ce0673adc2cb5cb692151a291",
+              "source_url": "https://api.github.com/repos/deepseek-ai/deepseek-harness/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+              "sha256": "933db40c3044f42cdce67ec0e1e70741b746419ba10b684683db1a956274e817",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.03.deepseek-ai--deepseek-harness.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1241960226,
+          "full_name": "alibaba/open-code-review",
+          "owner": "alibaba",
+          "name": "open-code-review",
+          "html_url": "https://github.com/alibaba/open-code-review",
+          "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "language": "Go",
+          "stars": 37551,
+          "forks": 2684,
+          "open_issues": 233,
+          "watchers": 118,
+          "topics": [
+            "agent",
+            "agent-skills",
+            "code-review",
+            "code-review-assistant",
+            "harness",
+            "repository-level-context"
+          ],
+          "created_at": "2026-05-18T02:16:36Z",
+          "updated_at": "2026-09-20T00:39:08Z",
+          "pushed_at": "2026-09-19T12:30:32Z",
+          "daily_stars": null,
+          "weekly_stars": 15028,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 1,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 89.22,
+          "star_delta": 15028,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 26.15,
+            "total_stars": 44.95,
+            "activity": 93.55,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "在提交或合并前，把代码差异交给审查工具，返回具体到代码行的结构化意见。",
+            "highlights": [
+              "结合文件分组、规则匹配与模型审查",
+              "检索代码库上下文，而非只看差异片段",
+              "可委托现有编程助手执行模型审查"
+            ],
+            "audience": "需要在提交、分支合并或接手陌生代码库时，获得具体到代码行的审查意见的研发团队。",
+            "capabilities": [
+              "审查暂存、未暂存和未跟踪的代码变更",
+              "检查指定提交或分支区间的修改",
+              "扫描没有有效差异的完整文件",
+              "恢复中断的提交审查或全文件扫描",
+              "导出结构化 JSON 审查结果"
+            ],
+            "core_title": "程序管流程，模型查上下文",
+            "core_summary": "程序先筛选文件、组合相关变更并匹配规则，再让模型读取上下文、搜索代码。独立模块负责评论定位与复查，把审查发现整理成具体到代码行的意见。",
+            "prerequisites": "需 Git >= 2.41；审查前需配置模型服务与模型，委托现有编程助手审查的模式除外。",
+            "limitations": "README 报告的基准测试中，召回率低于通用智能体，取舍偏向减少误报而非找全缺陷；默认模式会将变更文件发送给所配置的模型。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "a8d2c1d908d266f189ae288171fe6982b9bba3af",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+              ],
+              "highlights": [
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ],
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ],
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ]
+              ],
+              "audience": [
+                "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ],
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ],
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ],
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ],
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ]
+              ],
+              "core_title": [
+                "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+              ],
+              "core_summary": [
+                "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+              ],
+              "prerequisites": [
+                "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+              ],
+              "limitations": [
+                "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+          "publication_evidence": {
+            "full_name": "alibaba/open-code-review",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "a8d2c1d908d266f189ae288171fe6982b9bba3af",
+              "source_url": "https://api.github.com/repos/alibaba/open-code-review/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+              "sha256": "a9c8b0eb596ec9f1f4939eb19f3aeb2e3e78cdd8c5e35edf3eead39dba501dbd",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.04.alibaba--open-code-review.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024118326,
+          "full_name": "Tencent/WeKnora",
+          "owner": "Tencent",
+          "name": "WeKnora",
+          "html_url": "https://github.com/Tencent/WeKnora",
+          "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+          "language": "Go",
+          "stars": 27426,
+          "forks": 3693,
+          "open_issues": 677,
+          "watchers": 126,
+          "topics": [
+            "agent",
+            "agentic",
+            "ai",
+            "chatbot",
+            "dsh-plugin",
+            "embeddings",
+            "evaluation",
+            "generative-ai",
+            "golang",
+            "knowledge-base",
+            "llm",
+            "multi-tenant",
+            "ollama",
+            "openai",
+            "question-answering",
+            "rag",
+            "reranking",
+            "semantic-search",
+            "vector-search",
+            "wiki"
+          ],
+          "created_at": "2025-07-22T08:01:23Z",
+          "updated_at": "2026-09-20T00:35:01Z",
+          "pushed_at": "2026-09-19T16:17:11Z",
+          "daily_stars": null,
+          "weekly_stars": 4867,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 4,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 89.13,
+          "star_delta": 4699,
+          "fork_delta": 436,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.66,
+            "relative_growth": 98.17,
+            "fork_growth": 88.07,
+            "total_stars": 44.04,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "把团队散落的文档变成带引用的问答知识库，再自动整理为可维护的 Wiki。",
+            "highlights": [
+              "从多种文档来源同步知识并提供问答",
+              "自动生成可编辑、可回滚的关联 Wiki",
+              "调度检索、外部工具和沙箱完成多步任务"
+            ],
+            "audience": "需要把团队文档集中检索、维护内部知识库，并在企业聊天渠道提供资料问答的知识管理与研发团队。",
+            "capabilities": [
+              "同步飞书、GitLab、Notion 等来源文档",
+              "检索知识库并生成带引用的回答",
+              "将原始文档整理成互相链接的 Wiki",
+              "编辑检索片段并回滚历史版本",
+              "把知识问答接入企业微信或飞书"
+            ],
+            "core_title": "文档既能问答，也能整理成 Wiki",
+            "core_summary": "文档导入后既能先检索资料再生成回答，也能由智能体整理成互相链接的 Markdown 页面与知识图谱。页面和检索片段均可人工修改、比较版本并回滚。",
+            "prerequisites": "部署需 Docker、Docker Compose 和 Git；使用本地 Ollama 模型前需先启动其服务。",
+            "limitations": "自动提取的长期记忆需用户确认；Docker 技能沙箱需主动启用。README 建议部署在内网或私有网络，避免直接暴露公网，并配置访问控制。",
+            "license_label": "MIT License",
+            "license_restrictions": "You are free to use, modify, and distribute the code with proper attribution.",
+            "readme_sha": "7ffb788a430e7a657cddbaa15350e66f0b0dbb68",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "highlights": [
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ],
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ],
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ]
+              ],
+              "audience": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ],
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ],
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ],
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ],
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ]
+              ],
+              "core_title": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "core_summary": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "prerequisites": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "limitations": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "license_label": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "license_restrictions": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-91654067ed52171ae2de53af-3858ae4c896dcb4262912b30.png",
+          "publication_evidence": {
+            "full_name": "Tencent/WeKnora",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "7ffb788a430e7a657cddbaa15350e66f0b0dbb68",
+              "source_url": "https://api.github.com/repos/Tencent/WeKnora/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-91654067ed52171ae2de53af-3858ae4c896dcb4262912b30.png",
+              "sha256": "cfae623087616598b411f31b411a547b8e6803c4a4b84efa29c7b80b1e112d74",
+              "width": 200,
+              "height": 200
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT License",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.05.tencent--weknora.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1238120057,
+          "full_name": "ayghri/i-have-adhd",
+          "owner": "ayghri",
+          "name": "i-have-adhd",
+          "html_url": "https://github.com/ayghri/i-have-adhd",
+          "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+          "language": "Python",
+          "stars": 48689,
+          "forks": 2831,
+          "open_issues": 68,
+          "watchers": 154,
+          "topics": [
+            "adhd",
+            "claude-",
+            "claude-code-plugin",
+            "claude-skills",
+            "developer-tools",
+            "productivity"
+          ],
+          "created_at": "2026-05-13T20:42:06Z",
+          "updated_at": "2026-09-20T00:45:20Z",
+          "pushed_at": "2026-09-19T16:44:46Z",
+          "daily_stars": null,
+          "weekly_stars": 5589,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 8,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 88.73,
+          "star_delta": 5034,
+          "fork_delta": 338,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.58,
+            "relative_growth": 97.25,
+            "fork_growth": 85.32,
+            "total_stars": 47.71,
+            "activity": 100.0,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "嫌编程助手铺垫太长？这个技能让它先给操作，再按编号讲步骤，不把答案埋在长文里。",
+            "highlights": [
+              "行动先于解释，减少翻找答案",
+              "用编号步骤和状态重述帮助跟进任务",
+              "可修改技能规则，调整助手表达习惯"
+            ],
+            "audience": "读编程助手长回复时容易漏掉重点，希望先看到操作、再按步骤执行的人，无需 ADHD 诊断。",
+            "capabilities": [
+              "把下一步操作放在回答开头",
+              "为多步骤任务添加编号",
+              "在每轮回复中重述当前状态",
+              "压缩跑题内容和客套话",
+              "用一个具体下一步结束回答"
+            ],
+            "core_title": "把下一步操作放在回答最前面",
+            "core_summary": "通过一组回复规则改变编程助手的表达顺序：先给行动，再编号拆解步骤，交代当前状态，最后只留一个下一步。重点是让答案容易找到，而非替用户安排日程。",
+            "prerequisites": "需将技能或插件安装到编程助手中使用。",
+            "limitations": "规则针对模型如何回复，不是指导人如何安排一天；替换成自定义副本前需移除原插件，随后重启助手并重新调用。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "6acecf9600640c93503df0ed178a220d476e1197",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+              ],
+              "highlights": [
+                [
+                  "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+                ],
+                [
+                  "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+                ],
+                [
+                  "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+                ]
+              ],
+              "audience": [
+                "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+                ],
+                [
+                  "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+                ],
+                [
+                  "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+                ],
+                [
+                  "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+                ],
+                [
+                  "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+                ]
+              ],
+              "core_title": [
+                "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+              ],
+              "core_summary": [
+                "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+              ],
+              "prerequisites": [
+                "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+              ],
+              "limitations": [
+                "github.readme:6acecf9600640c93503df0ed178a220d476e1197"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-32d4385133b004ff67b76591-b1305a6802c37dd64103952c.png",
+          "publication_evidence": {
+            "full_name": "ayghri/i-have-adhd",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "6acecf9600640c93503df0ed178a220d476e1197",
+              "source_url": "https://api.github.com/repos/ayghri/i-have-adhd/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-32d4385133b004ff67b76591-b1305a6802c37dd64103952c.png",
+              "sha256": "c280689774a4b6abb104245827197b254640bdc27c13bc263a8ea7ea0989b7b7",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.06.ayghri--i-have-adhd.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 265823,
+          "forks": 22423,
+          "open_issues": 504,
+          "watchers": 265823,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-09-20T00:44:47Z",
+          "pushed_at": "2026-09-18T10:12:48Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 86.87,
+          "star_delta": 5123,
+          "fork_delta": 434,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.5,
+            "relative_growth": 88.07,
+            "fork_growth": 87.16,
+            "total_stars": 90.83,
+            "activity": 87.52,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "让编程助手先问清需求，再拆任务、写测试和审查；你可以按需组合技能，而非交出整个流程。",
+            "highlights": [
+              "提问时同步积累项目术语和设计决策",
+              "贯通需求规格、任务拆分与测试开发",
+              "用并行审查分别检查规范和需求符合度"
+            ],
+            "audience": "希望保留开发流程控制权，用编程助手澄清需求、拆任务、写测试和审查实现的软件工程师。",
+            "capabilities": [
+              "通过连续提问澄清需求与设计分歧",
+              "将讨论整理为可发布的需求规格",
+              "把计划拆成标有阻塞关系的任务单",
+              "按先失败后通过的测试循环实现功能",
+              "分别核对代码规范与需求实现情况"
+            ],
+            "core_title": "把工程习惯拆成可组合技能",
+            "core_summary": "用小型、可组合的技能替代包办流程：先通过提问对齐需求，把项目术语和决策写进文档，再拆任务、写测试与审查。可选择托管插件，或保留可编辑的技能副本。",
+            "prerequisites": "每个仓库使用工程技能前需运行初始化技能，选择任务追踪方式、分诊标签及文档保存位置。",
+            "limitations": "插件是自动更新的只读包，文件副本可编辑但需自行更新；两种方式勿同时安装。架构技能提供改进候选，不会自动理顺老代码库。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ]
+              ],
+              "audience": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ],
+                [
+                  "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "core_summary": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "prerequisites": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "limitations": [
+                "github.readme:ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.comprehensive.07.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W38/2026-W38.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.01.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "alibaba/open-code-review",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.03.alibaba--open-code-review.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "Tencent/WeKnora",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.04.tencent--weknora.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.05.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "stablyai/orca",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.06.stablyai--orca.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "obra/superpowers",
+            "path": "reports/weekly/assets/2026-W38/2026-W38.ai.07.obra--superpowers.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1333065091,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "owner": "deepseek-ai",
+          "name": "deepseek-harness",
+          "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+          "description": "DeepSeek Harness: Everything is a Plugin.",
+          "language": "TypeScript",
+          "stars": 230029,
+          "forks": 27542,
+          "open_issues": 0,
+          "watchers": 230029,
+          "topics": [
+            "ai-agents",
+            "cordis",
+            "dsh",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-08-13T11:56:32Z",
+          "updated_at": "2026-09-20T00:44:59Z",
+          "pushed_at": "2026-09-17T13:30:15Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 90.3,
+          "star_delta": 8130,
+          "fork_delta": 1220,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.78,
+            "relative_growth": 93.33,
+            "fork_growth": 100.0,
+            "total_stars": 91.11,
+            "activity": 81.87,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "为开发者提供以插件扩展的智能体运行框架，并配有可在本机启动的网页界面。",
+            "highlights": [
+              "以插件作为框架的基本组成方式",
+              "提供可在本机启动的网页界面",
+              "支持从 npm 或构建后的源码运行"
+            ],
+            "audience": "需要试用插件式智能体运行框架、开发扩展并通过网页界面启动项目的开发者。",
+            "capabilities": [
+              "通过插件扩展智能体运行框架",
+              "在本机启动浏览器操作界面",
+              "以不打开浏览器的方式启动服务"
+            ],
+            "core_title": "用插件组织智能体框架",
+            "core_summary": "以 Cordis 为基础，把框架能力组织成插件。开发者可从 npm 启动网页界面，也可构建源码后运行，适合探索插件式智能体框架。",
+            "prerequisites": "从 npm 运行需先安装 Node.js；源码运行需使用 pnpm 安装依赖并完成构建。",
+            "limitations": "目前处于开发者预览阶段，README 明确预告会有破坏兼容性的变更；运行前需阅读安全说明。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "36adfe913902e75ce0673adc2cb5cb692151a291",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+              ],
+              "highlights": [
+                [
+                  "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+                ],
+                [
+                  "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+                ],
+                [
+                  "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+                ]
+              ],
+              "audience": [
+                "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+                ],
+                [
+                  "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+                ],
+                [
+                  "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+                ]
+              ],
+              "core_title": [
+                "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+              ],
+              "core_summary": [
+                "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+              ],
+              "prerequisites": [
+                "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+              ],
+              "limitations": [
+                "github.readme:36adfe913902e75ce0673adc2cb5cb692151a291"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "publication_evidence": {
+            "full_name": "deepseek-ai/deepseek-harness",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "36adfe913902e75ce0673adc2cb5cb692151a291",
+              "source_url": "https://api.github.com/repos/deepseek-ai/deepseek-harness/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+              "sha256": "933db40c3044f42cdce67ec0e1e70741b746419ba10b684683db1a956274e817",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.ai.01.deepseek-ai--deepseek-harness.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 262955,
+          "forks": 39344,
+          "open_issues": 199,
+          "watchers": 262955,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-20T00:44:44Z",
+          "pushed_at": "2026-09-20T00:01:14Z",
+          "daily_stars": null,
+          "weekly_stars": 6265,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 3,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.94,
+          "star_delta": 5676,
+          "fork_delta": 847,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.33,
+            "relative_growth": 82.22,
+            "fork_growth": 95.56,
+            "total_stars": 95.56,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把反复提醒 AI 的计划、测试、审查和记忆步骤，变成可安装的研发工作流。",
+            "highlights": [
+              "把研发步骤做成按需加载的技能",
+              "将会话经验整理成记忆和复用流程",
+              "用 AgentShield 检查智能体自身配置"
+            ],
+            "audience": "使用编程智能体开发功能、审查代码，并希望在长会话或不同工具间保留项目上下文的研发人员。",
+            "capabilities": [
+              "把功能需求整理成实施计划",
+              "按先写失败测试的流程实现功能",
+              "用独立上下文审查代码变更",
+              "保存可跨编程工具检索的会话记忆",
+              "扫描智能体配置中的权限与注入风险"
+            ],
+            "core_title": "给编程智能体补齐工程流程",
+            "core_summary": "将计划、测试、实现、审查和记忆串成可复用流程。技能按任务加载，事件触发脚本在模型之外执行检查，会话经验则整理为后续可调用的技能。",
+            "prerequisites": "通用包需 Node.js 18 或更新版；Claude 插件还需 Git 和 Claude Code 2.1 或更新版。扫描器须另行安装并审查。",
+            "limitations": "各工具能力不齐；钩子执行须确认，记忆不应当作指令；同一工具勿叠加安装。Windows 原生记忆写入有已知缺陷；私库托管分析属于付费 Pro。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "highlights": [
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ]
+              ],
+              "audience": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ],
+                [
+                  "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+                ]
+              ],
+              "core_title": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "core_summary": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "prerequisites": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "limitations": [
+                "github.readme:f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "f9d202b28f3f5ae7e5f28bd7d3443f27fc804ad8",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.ai.02.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1241960226,
+          "full_name": "alibaba/open-code-review",
+          "owner": "alibaba",
+          "name": "open-code-review",
+          "html_url": "https://github.com/alibaba/open-code-review",
+          "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "language": "Go",
+          "stars": 37551,
+          "forks": 2684,
+          "open_issues": 233,
+          "watchers": 118,
+          "topics": [
+            "agent",
+            "agent-skills",
+            "code-review",
+            "code-review-assistant",
+            "harness",
+            "repository-level-context"
+          ],
+          "created_at": "2026-05-18T02:16:36Z",
+          "updated_at": "2026-09-20T00:39:08Z",
+          "pushed_at": "2026-09-19T12:30:32Z",
+          "daily_stars": null,
+          "weekly_stars": 15028,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 1,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.24,
+          "star_delta": 15028,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 21.11,
+            "total_stars": 35.56,
+            "activity": 93.55,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "在代码合并前读取变更和相关文件，为团队生成定位到代码行的审查意见。",
+            "highlights": [
+              "结合固定审查流程与模型动态检索",
+              "既能检查变更，也能扫描完整文件",
+              "可把审查交给现有编程智能体执行"
+            ],
+            "audience": "需要审查提交或分支变更、接手陌生代码库，并把问题定位到具体代码行的研发团队。",
+            "capabilities": [
+              "审查工作区、分支或单次提交的变更",
+              "扫描没有有效差异记录的完整文件",
+              "检索代码库以补充审查上下文",
+              "导出带代码行位置的结构化意见",
+              "恢复被中断的审查或全文件扫描"
+            ],
+            "core_title": "程序定范围，模型查上下文",
+            "core_summary": "先由程序筛选文件、组合相关变更并匹配规则，再让模型读取文件和检索代码库。独立模块负责评论定位与复核，把上下文分析转成逐行审查意见。",
+            "prerequisites": "需 Git >= 2.41；通常须配置大模型服务和模型，委托现有编程智能体审查时可免去该配置。",
+            "limitations": "README 的基准说明：为减少误报，项目选择了较低的缺陷召回率；相较通用智能体，可能漏掉更多真实问题。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "a8d2c1d908d266f189ae288171fe6982b9bba3af",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+              ],
+              "highlights": [
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ],
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ],
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ]
+              ],
+              "audience": [
+                "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ],
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ],
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ],
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ],
+                [
+                  "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+                ]
+              ],
+              "core_title": [
+                "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+              ],
+              "core_summary": [
+                "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+              ],
+              "prerequisites": [
+                "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+              ],
+              "limitations": [
+                "github.readme:a8d2c1d908d266f189ae288171fe6982b9bba3af"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+          "publication_evidence": {
+            "full_name": "alibaba/open-code-review",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "a8d2c1d908d266f189ae288171fe6982b9bba3af",
+              "source_url": "https://api.github.com/repos/alibaba/open-code-review/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-c8f5678810f1cfbe27a32e3f-1c3b1be1856b0ffb7e789291.png",
+              "sha256": "a9c8b0eb596ec9f1f4939eb19f3aeb2e3e78cdd8c5e35edf3eead39dba501dbd",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.ai.03.alibaba--open-code-review.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024118326,
+          "full_name": "Tencent/WeKnora",
+          "owner": "Tencent",
+          "name": "WeKnora",
+          "html_url": "https://github.com/Tencent/WeKnora",
+          "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+          "language": "Go",
+          "stars": 27426,
+          "forks": 3693,
+          "open_issues": 677,
+          "watchers": 126,
+          "topics": [
+            "agent",
+            "agentic",
+            "ai",
+            "chatbot",
+            "dsh-plugin",
+            "embeddings",
+            "evaluation",
+            "generative-ai",
+            "golang",
+            "knowledge-base",
+            "llm",
+            "multi-tenant",
+            "ollama",
+            "openai",
+            "question-answering",
+            "rag",
+            "reranking",
+            "semantic-search",
+            "vector-search",
+            "wiki"
+          ],
+          "created_at": "2025-07-22T08:01:23Z",
+          "updated_at": "2026-09-20T00:35:01Z",
+          "pushed_at": "2026-09-19T16:17:11Z",
+          "daily_stars": null,
+          "weekly_stars": 4867,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 4,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 86.93,
+          "star_delta": 4699,
+          "fork_delta": 436,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 88.89,
+            "relative_growth": 97.78,
+            "fork_growth": 91.11,
+            "total_stars": 33.33,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "把散落的文档变成团队可提问、可追溯来源，也能持续编辑的知识库和 Wiki。",
+            "highlights": [
+              "把多来源文档接入带引用的知识问答",
+              "自动生成可人工维护的互链 Wiki",
+              "按工作区角色和资源归属管理访问"
+            ],
+            "audience": "需要把团队文档整理成可检索知识库、维护内部 Wiki，或向员工提供资料问答的知识管理与研发人员。",
+            "capabilities": [
+              "同步飞书、Notion 等来源的文档",
+              "从知识库检索资料并生成带引用的回答",
+              "把原始文档整理成互相链接的 Wiki",
+              "编辑检索片段并回退历史版本",
+              "调度检索、外部工具和沙箱处理多步任务"
+            ],
+            "core_title": "文档既能问答，也能长成 Wiki",
+            "core_summary": "同一批资料既能用于检索后回答问题，也能由智能体整理成互相链接的 Wiki。页面和检索片段都支持人工编辑、版本对比与回退，让知识整理不止于上传。",
+            "prerequisites": "快速部署需 Docker、Docker Compose 和 Git；使用本地 Ollama 模型前需先启动其服务。",
+            "limitations": "自动提取的长期记忆需用户确认，工具调用设有人工审批；Docker 沙箱需主动启用。README 建议部署在内网，避免直接暴露公网。",
+            "license_label": "MIT License",
+            "license_restrictions": "You are free to use, modify, and distribute the code with proper attribution.",
+            "readme_sha": "7ffb788a430e7a657cddbaa15350e66f0b0dbb68",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "highlights": [
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ],
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ],
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ]
+              ],
+              "audience": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ],
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ],
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ],
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ],
+                [
+                  "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+                ]
+              ],
+              "core_title": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "core_summary": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "prerequisites": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "limitations": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "license_label": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ],
+              "license_restrictions": [
+                "github.readme:7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-91654067ed52171ae2de53af-3858ae4c896dcb4262912b30.png",
+          "publication_evidence": {
+            "full_name": "Tencent/WeKnora",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "7ffb788a430e7a657cddbaa15350e66f0b0dbb68",
+              "source_url": "https://api.github.com/repos/Tencent/WeKnora/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-91654067ed52171ae2de53af-3858ae4c896dcb4262912b30.png",
+              "sha256": "cfae623087616598b411f31b411a547b8e6803c4a4b84efa29c7b80b1e112d74",
+              "width": 200,
+              "height": 200
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT License",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.ai.04.tencent--weknora.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 142524,
+          "forks": 7648,
+          "open_issues": 283,
+          "watchers": 142524,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-09-20T00:37:10Z",
+          "pushed_at": "2026-09-14T14:34:56Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 84.7,
+          "star_delta": 5699,
+          "fork_delta": 304,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.56,
+            "relative_growth": 91.11,
+            "fork_growth": 88.89,
+            "total_stars": 62.22,
+            "activity": 67.03,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "给编程 AI 加一套“先复用、再新增”的规则，帮开发者少写不必要的代码。",
+            "highlights": [
+              "写新代码前先检查复用和原生替代方案",
+              "从变更或全仓库中寻找多余实现",
+              "把延期简化的工作保留为可跟进台账"
+            ],
+            "audience": "经常让 AI 添加功能或重构代码，希望减少重复实现、不必要依赖和过度设计的开发者。",
+            "capabilities": [
+              "引导智能体优先复用已有代码与原生能力",
+              "检查当前变更并列出可删除的冗余实现",
+              "审计整个仓库中的过度设计",
+              "把暂缓处理的简化项汇总成台账",
+              "切换规则强度或关闭规则"
+            ],
+            "core_title": "先找不用新增代码的办法",
+            "core_summary": "先读懂相关代码，再依次判断是否有必要新增、能否复用、能否用标准库或平台原生能力。只有这些途径都不适用，才编写所需的最小实现。",
+            "prerequisites": "自动激活钩子需非交互式终端能找到 Node.js；技能命令需兼容宿主，Codex 钩子需用户审查并信任。",
+            "limitations": "简化不能删减校验、错误处理、安全或无障碍措施；成本不保证下降。纯规则适配不含命令；Cursor 钩子不能向子智能体注入规则。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "6b25e496dbb467bd4d8ed065ce10e13992790591",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+              ],
+              "highlights": [
+                [
+                  "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+                ],
+                [
+                  "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+                ],
+                [
+                  "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+                ]
+              ],
+              "audience": [
+                "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+                ],
+                [
+                  "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+                ],
+                [
+                  "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+                ],
+                [
+                  "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+                ],
+                [
+                  "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+                ]
+              ],
+              "core_title": [
+                "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+              ],
+              "core_summary": [
+                "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+              ],
+              "prerequisites": [
+                "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+              ],
+              "limitations": [
+                "github.readme:6b25e496dbb467bd4d8ed065ce10e13992790591"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+          "publication_evidence": {
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "6b25e496dbb467bd4d8ed065ce10e13992790591",
+              "source_url": "https://api.github.com/repos/DietrichGebert/ponytail/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+              "sha256": "59f0be72fcc6cbb753c5d95799621ca4bf58ae5c7b82a716e0ed17624dec0412",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.ai.05.dietrichgebert--ponytail.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1183888342,
+          "full_name": "stablyai/orca",
+          "owner": "stablyai",
+          "name": "orca",
+          "html_url": "https://github.com/stablyai/orca",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+          "language": "TypeScript",
+          "stars": 72617,
+          "forks": 4752,
+          "open_issues": 6283,
+          "watchers": 128,
+          "topics": [
+            "ade",
+            "agent-ide",
+            "ai-agents",
+            "claude-code",
+            "cli",
+            "codex",
+            "cursor-agent",
+            "devtools",
+            "ghostty",
+            "ide",
+            "mobile-app",
+            "opencode",
+            "orchestration",
+            "parallel-agents",
+            "pi",
+            "terminal",
+            "worktrees",
+            "yc-backed"
+          ],
+          "created_at": "2026-03-17T03:28:57Z",
+          "updated_at": "2026-09-20T00:43:36Z",
+          "pushed_at": "2026-09-20T00:38:32Z",
+          "daily_stars": null,
+          "weekly_stars": 5404,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 17,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 80.2,
+          "star_delta": 5404,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 91.11,
+            "relative_growth": 95.56,
+            "fork_growth": 21.11,
+            "total_stars": 44.44,
+            "activity": 100.0,
+            "trending_signal": 23.98
+          },
+          "summary": {
+            "one_line": "让多个编程 AI 在各自工作目录里并行做题，开发者集中比较结果、批注改动并选择合并。",
+            "highlights": [
+              "用独立工作目录隔开并行实现",
+              "把真实页面元素直接变成修改上下文",
+              "在同一界面审查差异并反馈给智能体"
+            ],
+            "audience": "同时运行多个编程智能体，需要比较实现方案、审查改动，并从手机跟进远程任务的开发者。",
+            "capabilities": [
+              "把同一提示分发给独立工作区中的智能体",
+              "将界面元素的代码与截图送入提示",
+              "给差异行添加反馈并发回智能体",
+              "通过 SSH 在远程机器运行编程任务",
+              "在手机接收完成通知并追加指令"
+            ],
+            "core_title": "并行出方案，集中比较与合并",
+            "core_summary": "让多个编程智能体各自在 Git worktree 中工作，也就是同一仓库的独立工作目录。你可以分发同一任务、比较实现，再选择要合并的结果。",
+            "prerequisites": "桌面版支持 macOS、Windows 和 Linux；接入的智能体需能在终端运行，手机端需与桌面应用配对。",
+            "limitations": "手机端是配套客户端，需与桌面应用配对；README 提到会收集匿名使用数据，并提供退出方式的说明。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "04f5e309da38036eb91172c2e59ffb20bc7ec3be",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+              ],
+              "highlights": [
+                [
+                  "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+                ],
+                [
+                  "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+                ],
+                [
+                  "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+                ]
+              ],
+              "audience": [
+                "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+                ],
+                [
+                  "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+                ],
+                [
+                  "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+                ],
+                [
+                  "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+                ],
+                [
+                  "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+                ]
+              ],
+              "core_title": [
+                "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+              ],
+              "core_summary": [
+                "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+              ],
+              "prerequisites": [
+                "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+              ],
+              "limitations": [
+                "github.readme:04f5e309da38036eb91172c2e59ffb20bc7ec3be"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+          "publication_evidence": {
+            "full_name": "stablyai/orca",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "04f5e309da38036eb91172c2e59ffb20bc7ec3be",
+              "source_url": "https://api.github.com/repos/stablyai/orca/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-89dc44e4b1b40faca7a71c21-ba816bb9068afffb213e5fb9.png",
+              "sha256": "74c9f9ca37e1d708720845638e4947b594c011bd6eb473475d8b04512c5f221e",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.ai.06.stablyai--orca.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1073224795,
+          "full_name": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "html_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 288832,
+          "forks": 25838,
+          "open_issues": 369,
+          "watchers": 288832,
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "created_at": "2025-10-09T19:45:18Z",
+          "updated_at": "2026-09-20T00:44:59Z",
+          "pushed_at": "2026-09-19T00:32:57Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 77.36,
+          "star_delta": 2931,
+          "fork_delta": 258,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 82.22,
+            "relative_growth": 66.67,
+            "fork_growth": 86.67,
+            "total_stars": 97.78,
+            "activity": 93.55,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "从一句开发想法开始，带着编程 AI 走完需求确认、计划、测试、实现与审查，而不是直接堆代码。",
+            "highlights": [
+              "把设计确认放在编写代码之前",
+              "将测试、任务执行和审查串成阶段流程",
+              "通过会话记录诊断技能误触发或计划偏离"
+            ],
+            "audience": "希望 AI 先澄清需求、按批准的设计开发，并留下测试和审查依据的软件开发者。",
+            "capabilities": [
+              "通过提问把模糊想法整理成设计文档",
+              "将批准的设计拆成含验证步骤的小任务",
+              "创建隔离分支工作区并检查测试基线",
+              "按失败测试到通过测试的顺序实现功能",
+              "派发子任务并审查需求符合度与代码质量"
+            ],
+            "core_title": "先确认设计，再让智能体动手",
+            "core_summary": "技能随开发阶段触发：先提问并展示设计，获准后拆任务，再按先测试后实现的方式推进。执行可选逐任务子智能体审查，或当前会话实现后统一审查。",
+            "prerequisites": "需在所用编程智能体中安装对应插件或扩展；使用多个宿主时须分别安装。",
+            "limitations": "设计和开工需用户确认，严重审查问题会阻止推进；Hermes 长会话压缩后可能丢失引导。可选可视化组件默认联网加载含版本信息的标志，可关闭。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "cf80400690849b37861f39d396d231ea89ac693b",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+              ],
+              "highlights": [
+                [
+                  "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+                ],
+                [
+                  "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+                ],
+                [
+                  "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+                ]
+              ],
+              "audience": [
+                "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+                ],
+                [
+                  "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+                ],
+                [
+                  "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+                ],
+                [
+                  "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+                ],
+                [
+                  "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+                ]
+              ],
+              "core_title": [
+                "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+              ],
+              "core_summary": [
+                "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+              ],
+              "prerequisites": [
+                "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+              ],
+              "limitations": [
+                "github.readme:cf80400690849b37861f39d396d231ea89ac693b"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W38/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+          "publication_evidence": {
+            "full_name": "obra/superpowers",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "cf80400690849b37861f39d396d231ea89ac693b",
+              "source_url": "https://api.github.com/repos/obra/superpowers/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-W38/repo-4251a228ae407247ee1d7d95-8529489867fc9d1aa9046ccd.png",
+              "sha256": "d38b9c9b368fcb5bf36b16f443d783cc9588fa66f5b399ed5e966b50ab857937",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W38/2026-W38.ai.07.obra--superpowers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
