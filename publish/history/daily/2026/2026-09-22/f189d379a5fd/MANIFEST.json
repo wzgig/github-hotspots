@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "f189d379a5fd5858f701c0b449e6e757a19eb9a9b27e3d6247645d1c93e0c167",
+  "checklist_sha256": "c08d678b8ec045cb9a5b4c9da27399a7264a49356a32ca0e81d9cc5ef8114852",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-09-22",
+  "generated_at": "2026-09-22T14:18:02.150901+08:00",
+  "issue": {
+    "number": 73,
+    "code": "D073",
+    "stem": "D073-2026-09-22",
+    "label": "第73期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-09-22.json",
+    "report_sha256": "7f2a26e5b4efd91d39c3d9ce6fdf5d8f14617452c5a194bf2fdf5ff0129ef21e",
+    "poster_manifest": "reports/daily/assets/2026-09-22/manifest.json",
+    "poster_manifest_sha256": "c3a7439cb9a97a99486377237080cef60dd4439211b17502e8e2142450d30225",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D073-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "8dda0545c195037fa28a4a0faa577273916461bc83796ec5c75927388ab34a29",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 333,
+      "caption_sha256": "3e8b732f80e2505b2dd85abcf17ebcee65f717c52384b10291988477dddba5cd",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "42ecde2b4da1bdb153e3c9d8f94855774401d6485be1a76ba952917a61623951",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-09-22/2026-09-22.comprehensive.cover.png",
+          "sha256": "db2f72ced3754834471a1ab291236ec19aa6bb4d4eeb8f8dfa6aa90be119d39c",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-22/2026-09-22.comprehensive.01.builderio--agent-native.png",
+          "sha256": "8ee4e16a9958d4c34ba70fbf3271ac16a9033d21e4aeec7afe02754bb318fa8a",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "BuilderIO/agent-native",
+          "publication_path": "images/02-rank-01-builderio-agent-native.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-22/2026-09-22.comprehensive.02.open-dev-society--openstock.png",
+          "sha256": "094ece053016ecc69b20f1cc4d3779507f55476487e16dd665c756af7e9bd123",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "Open-Dev-Society/OpenStock",
+          "publication_path": "images/03-rank-02-open-dev-society-openstock.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-22/2026-09-22.comprehensive.03.affaan-m--ecc.png",
+          "sha256": "992fb052be716995bb777627e9b5d593e8e6455ab55d24ea3d4da60883b0a362",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "affaan-m/ECC",
+          "publication_path": "images/04-rank-03-affaan-m-ecc.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D073-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "fadb1a7cb2596fb6af495d951b079c4f1e88e7056d3b8eb04894d6c9b3270f01",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 328,
+      "caption_sha256": "67b654b74c37eef7c579c2bbeccd5f47d73f4a84d9d0d72eaef300b1c15e1ae3",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "0b296b1c7301c746c459e44c53c4c78da8a7ddc0b70f4383e00d71c03d6b978e",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-09-22/2026-09-22.ai.cover.png",
+          "sha256": "a706ab47205c2c27c6997d75ddf979cc1ed6b1036f237e581ed05fd2acbda078",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-22/2026-09-22.ai.01.builderio--agent-native.png",
+          "sha256": "2901db795a960ffa514deedb71c6397fd21765ea1c51ed7a873019c1ba56beb8",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "BuilderIO/agent-native",
+          "publication_path": "images/02-rank-01-builderio-agent-native.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-22/2026-09-22.ai.02.affaan-m--ecc.png",
+          "sha256": "b34cab8ce797dd5e3f9d992a352efe23b703cabc16f32bb4d2a289b7817fc8f3",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "affaan-m/ECC",
+          "publication_path": "images/03-rank-02-affaan-m-ecc.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-22/2026-09-22.ai.03.trycua--cua.png",
+          "sha256": "50ed407d17f7bf7d19c8c22bfe957fc6b0a77772651c78b90763b4585ffb8aaa",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "trycua/cua",
+          "publication_path": "images/04-rank-03-trycua-cua.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-09-22",
+    "revision": "f189d379a5fd",
+    "image_policy": "repository-source-reference"
+  }
+}
