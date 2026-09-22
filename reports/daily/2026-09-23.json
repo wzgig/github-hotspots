@@ -1,0 +1,1438 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-09-23",
+  "window_start": "2026-09-22",
+  "window_end": "2026-09-23",
+  "generated_at": "2026-09-23T07:31:28+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-09-22 至 2026-09-23",
+  "publication": {
+    "issue_number": 74,
+    "issue_code": "D074",
+    "issue_label": "第74期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-09-23",
+    "manifest": "reports/daily/assets/2026-09-23/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "mvt-project/mvt",
+            "path": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.02.mvt-project--mvt.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.03.deepseek-ai--deepseek-harness.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-23/2026-09-23.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/daily/assets/2026-09-23/2026-09-23.ai.01.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-23/2026-09-23.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-09-23/2026-09-23.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 74,
+      "issue_code": "D074",
+      "issue_label": "第74期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 265417,
+      "forks": 39653,
+      "open_issues": 213,
+      "watchers": 265417,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-09-22T23:30:09Z",
+      "pushed_at": "2026-09-22T23:09:59Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 92.27,
+      "star_delta": 544,
+      "fork_delta": 74,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.98,
+        "relative_growth": 93.94,
+        "fork_growth": 97.98,
+        "total_stars": 93.94,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "把 AI 写代码变成有计划、测试和复核的开发流程，并留下可供下次接手的经验。",
+        "highlights": [
+          "保留从失败测试到最终验证的过程证据",
+          "用本地 Markdown 记忆衔接不同编程助手",
+          "按任务加载技能，按项目选择常驻规则"
+        ],
+        "audience": "使用 AI 编程助手开发功能、修复缺陷，需要把计划、测试、代码审查和会话交接串起来的软件团队。",
+        "capabilities": [
+          "生成可供确认和修改的功能实施计划",
+          "用失败测试复现缺陷，再验证修复结果",
+          "在独立上下文中审查代码改动",
+          "把会话经验提炼为可复用技能",
+          "扫描智能体配置中的权限与注入风险"
+        ],
+        "core_title": "让编程助手按工程流程交付",
+        "core_summary": "ECC 用分工明确的智能体和可复用技能串起计划、测试、实现与审查，再由事件触发脚本执行检查、记忆模块保存经验，让开发流程不必每次靠提示词重建。",
+        "prerequisites": "通用安装包需 Node.js 18 或更新版本；Claude 插件另需 Git 和 Claude Code 2.1 或更新版本。",
+        "limitations": "各平台能力不齐；启用执行脚本需明确确认，记忆内容须核验；Windows 原生记忆写入有已知缺陷；私有仓库托管分析属于付费 Pro。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "9156c729a2fd2eac97ca33e297ff0deee63e600c",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+          ],
+          "highlights": [
+            [
+              "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+            ],
+            [
+              "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+            ],
+            [
+              "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+            ]
+          ],
+          "audience": [
+            "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+          ],
+          "capabilities": [
+            [
+              "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+            ],
+            [
+              "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+            ],
+            [
+              "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+            ],
+            [
+              "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+            ],
+            [
+              "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+            ]
+          ],
+          "core_title": [
+            "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+          ],
+          "core_summary": [
+            "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+          ],
+          "prerequisites": [
+            "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+          ],
+          "limitations": [
+            "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-23/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "9156c729a2fd2eac97ca33e297ff0deee63e600c",
+          "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-23/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+          "width": 165,
+          "height": 165
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.01.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 386524895,
+      "full_name": "mvt-project/mvt",
+      "owner": "mvt-project",
+      "name": "mvt",
+      "html_url": "https://github.com/mvt-project/mvt",
+      "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+      "language": "Python",
+      "stars": 14075,
+      "forks": 1356,
+      "open_issues": 58,
+      "watchers": 288,
+      "topics": [
+        "android",
+        "forensics",
+        "forensics-tools",
+        "ios",
+        "mobile",
+        "security"
+      ],
+      "created_at": "2021-07-16T05:50:44Z",
+      "updated_at": "2026-09-22T23:28:02Z",
+      "pushed_at": "2026-09-22T18:17:06Z",
+      "daily_stars": 441,
+      "weekly_stars": null,
+      "trending_rank_daily": 6,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 91.48,
+      "star_delta": 379,
+      "fork_delta": 24,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.97,
+        "relative_growth": 96.97,
+        "fork_growth": 94.95,
+        "total_stars": 46.46,
+        "activity": 100.0,
+        "trending_signal": 35.62
+      },
+      "summary": {
+        "one_line": "帮取证调查员分析手机采集数据，寻找 Android 和 iOS 设备可能遭间谍软件攻击的痕迹。",
+        "highlights": [
+          "自动化收集有助于识别手机入侵的取证痕迹",
+          "利用研究团队公开的攻击指标辅助排查",
+          "以插件扩展取证模块和命令入口"
+        ],
+        "audience": "具备数字取证知识的技术人员和调查员，在设备持有人同意的前提下调查疑似手机间谍软件攻击。",
+        "capabilities": [
+          "分析 iOS 设备采集的取证数据",
+          "分析 Android 设备采集的取证数据",
+          "下载用于比对的已知入侵线索",
+          "比对公开线索，查找已知间谍软件痕迹",
+          "通过插件加入额外取证模块"
+        ],
+        "core_title": "用已知攻击线索辅助手机取证",
+        "core_summary": "MVT 分别分析 Android 和 iOS 设备采集数据，并用入侵指标——已知攻击留下的线索——寻找疑似间谍软件痕迹。它辅助调查，不把未命中线索等同于设备没有问题。",
+        "prerequisites": "需要理解数字取证并会使用命令行；安装还需按文档准备依赖。",
+        "limitations": "不适合普通用户自查；公开指标不足以证明设备未受攻击，全面调查还需非公开线索与威胁情报；v3 引入不兼容变化，依赖旧输出的脚本可能失效。",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": "98e90e35bec0804102fefdffcb2714df2c7c6d63",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+          ],
+          "highlights": [
+            [
+              "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+            ],
+            [
+              "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+            ],
+            [
+              "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+            ]
+          ],
+          "audience": [
+            "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+          ],
+          "capabilities": [
+            [
+              "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+            ],
+            [
+              "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+            ],
+            [
+              "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+            ],
+            [
+              "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+            ],
+            [
+              "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+            ]
+          ],
+          "core_title": [
+            "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+          ],
+          "core_summary": [
+            "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+          ],
+          "prerequisites": [
+            "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+          ],
+          "limitations": [
+            "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+          ],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-23/repo-9581560c8fcedaf6e07121af-537fa14aa62bae9417d98321.png",
+      "publication_evidence": {
+        "full_name": "mvt-project/mvt",
+        "license_spdx_id": "NOASSERTION",
+        "readme": {
+          "sha": "98e90e35bec0804102fefdffcb2714df2c7c6d63",
+          "source_url": "https://api.github.com/repos/mvt-project/mvt/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-23/repo-9581560c8fcedaf6e07121af-537fa14aa62bae9417d98321.png",
+          "sha256": "a9e0ee9207f9aaa8bdb41e900ce73e55d6c2d1b74d60716817112cc2daa59a9f",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.02.mvt-project--mvt.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1333065091,
+      "full_name": "deepseek-ai/deepseek-harness",
+      "owner": "deepseek-ai",
+      "name": "deepseek-harness",
+      "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+      "description": "DeepSeek Harness: Everything is a Plugin.",
+      "language": "TypeScript",
+      "stars": 233390,
+      "forks": 28030,
+      "open_issues": 0,
+      "watchers": 233390,
+      "topics": [
+        "ai-agents",
+        "cordis",
+        "dsh",
+        "dsh-plugin"
+      ],
+      "created_at": "2026-08-13T11:56:32Z",
+      "updated_at": "2026-09-22T23:29:51Z",
+      "pushed_at": "2026-09-22T15:50:34Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 90.04,
+      "star_delta": 759,
+      "fork_delta": 101,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.99,
+        "relative_growth": 94.95,
+        "fork_growth": 98.99,
+        "total_stars": 89.9,
+        "activity": 71.65,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "为想扩展智能体运行方式的开发者提供插件化框架，并带有可本地启动的网页界面。",
+        "highlights": [
+          "基于 Cordis，采用一切皆插件的架构",
+          "通过 npm 启动本地网页入口",
+          "提供源码编辑后自动重建的开发流程"
+        ],
+        "audience": "想研究插件化智能体运行框架、开发相关插件，或从源码调试网页界面的开发者。",
+        "capabilities": [
+          "启动可在浏览器访问的本地网页界面",
+          "选择仅启动服务而不自动打开浏览器",
+          "从源码构建并运行项目",
+          "在修改源码时自动重建网页客户端"
+        ],
+        "core_title": "以插件组织智能体运行框架",
+        "core_summary": "DeepSeek Harness 基于 Cordis，把智能体运行框架组织成插件架构。项目提供本地网页入口，也提供源码构建和修改后自动重建客户端的开发流程，方便研究和扩展。",
+        "prerequisites": "通过 npm 运行前需安装 Node.js；从源码运行需用 pnpm 安装依赖并完成构建。",
+        "limitations": "仍处于开发者预览阶段，会出现不兼容变更；运行前需阅读安全说明；从源码启动时使用已构建产物，不会自动重新构建。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "423bccd7d9352dbc48f1705f37d35642e74f5b41",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+          ],
+          "highlights": [
+            [
+              "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+            ],
+            [
+              "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+            ],
+            [
+              "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+            ]
+          ],
+          "audience": [
+            "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+          ],
+          "capabilities": [
+            [
+              "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+            ],
+            [
+              "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+            ],
+            [
+              "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+            ],
+            [
+              "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+            ]
+          ],
+          "core_title": [
+            "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+          ],
+          "core_summary": [
+            "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+          ],
+          "prerequisites": [
+            "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+          ],
+          "limitations": [
+            "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-09-23/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+      "publication_evidence": {
+        "full_name": "deepseek-ai/deepseek-harness",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "423bccd7d9352dbc48f1705f37d35642e74f5b41",
+          "source_url": "https://api.github.com/repos/deepseek-ai/deepseek-harness/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-09-23/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "sha256": "933db40c3044f42cdce67ec0e1e70741b746419ba10b684683db1a956274e817",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.03.deepseek-ai--deepseek-harness.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "mvt-project/mvt",
+            "path": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.02.mvt-project--mvt.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.03.deepseek-ai--deepseek-harness.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 265417,
+          "forks": 39653,
+          "open_issues": 213,
+          "watchers": 265417,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-22T23:30:09Z",
+          "pushed_at": "2026-09-22T23:09:59Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.27,
+          "star_delta": 544,
+          "fork_delta": 74,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.98,
+            "relative_growth": 93.94,
+            "fork_growth": 97.98,
+            "total_stars": 93.94,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "把 AI 写代码变成有计划、测试和复核的开发流程，并留下可供下次接手的经验。",
+            "highlights": [
+              "保留从失败测试到最终验证的过程证据",
+              "用本地 Markdown 记忆衔接不同编程助手",
+              "按任务加载技能，按项目选择常驻规则"
+            ],
+            "audience": "使用 AI 编程助手开发功能、修复缺陷，需要把计划、测试、代码审查和会话交接串起来的软件团队。",
+            "capabilities": [
+              "生成可供确认和修改的功能实施计划",
+              "用失败测试复现缺陷，再验证修复结果",
+              "在独立上下文中审查代码改动",
+              "把会话经验提炼为可复用技能",
+              "扫描智能体配置中的权限与注入风险"
+            ],
+            "core_title": "让编程助手按工程流程交付",
+            "core_summary": "ECC 用分工明确的智能体和可复用技能串起计划、测试、实现与审查，再由事件触发脚本执行检查、记忆模块保存经验，让开发流程不必每次靠提示词重建。",
+            "prerequisites": "通用安装包需 Node.js 18 或更新版本；Claude 插件另需 Git 和 Claude Code 2.1 或更新版本。",
+            "limitations": "各平台能力不齐；启用执行脚本需明确确认，记忆内容须核验；Windows 原生记忆写入有已知缺陷；私有仓库托管分析属于付费 Pro。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "9156c729a2fd2eac97ca33e297ff0deee63e600c",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+              ],
+              "highlights": [
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ],
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ],
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ]
+              ],
+              "audience": [
+                "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ],
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ],
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ],
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ],
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ]
+              ],
+              "core_title": [
+                "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+              ],
+              "core_summary": [
+                "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+              ],
+              "prerequisites": [
+                "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+              ],
+              "limitations": [
+                "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-23/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "9156c729a2fd2eac97ca33e297ff0deee63e600c",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-23/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.01.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 386524895,
+          "full_name": "mvt-project/mvt",
+          "owner": "mvt-project",
+          "name": "mvt",
+          "html_url": "https://github.com/mvt-project/mvt",
+          "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+          "language": "Python",
+          "stars": 14075,
+          "forks": 1356,
+          "open_issues": 58,
+          "watchers": 288,
+          "topics": [
+            "android",
+            "forensics",
+            "forensics-tools",
+            "ios",
+            "mobile",
+            "security"
+          ],
+          "created_at": "2021-07-16T05:50:44Z",
+          "updated_at": "2026-09-22T23:28:02Z",
+          "pushed_at": "2026-09-22T18:17:06Z",
+          "daily_stars": 441,
+          "weekly_stars": null,
+          "trending_rank_daily": 6,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 91.48,
+          "star_delta": 379,
+          "fork_delta": 24,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.97,
+            "relative_growth": 96.97,
+            "fork_growth": 94.95,
+            "total_stars": 46.46,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "帮取证调查员分析手机采集数据，寻找 Android 和 iOS 设备可能遭间谍软件攻击的痕迹。",
+            "highlights": [
+              "自动化收集有助于识别手机入侵的取证痕迹",
+              "利用研究团队公开的攻击指标辅助排查",
+              "以插件扩展取证模块和命令入口"
+            ],
+            "audience": "具备数字取证知识的技术人员和调查员，在设备持有人同意的前提下调查疑似手机间谍软件攻击。",
+            "capabilities": [
+              "分析 iOS 设备采集的取证数据",
+              "分析 Android 设备采集的取证数据",
+              "下载用于比对的已知入侵线索",
+              "比对公开线索，查找已知间谍软件痕迹",
+              "通过插件加入额外取证模块"
+            ],
+            "core_title": "用已知攻击线索辅助手机取证",
+            "core_summary": "MVT 分别分析 Android 和 iOS 设备采集数据，并用入侵指标——已知攻击留下的线索——寻找疑似间谍软件痕迹。它辅助调查，不把未命中线索等同于设备没有问题。",
+            "prerequisites": "需要理解数字取证并会使用命令行；安装还需按文档准备依赖。",
+            "limitations": "不适合普通用户自查；公开指标不足以证明设备未受攻击，全面调查还需非公开线索与威胁情报；v3 引入不兼容变化，依赖旧输出的脚本可能失效。",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": "98e90e35bec0804102fefdffcb2714df2c7c6d63",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+              ],
+              "highlights": [
+                [
+                  "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+                ],
+                [
+                  "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+                ],
+                [
+                  "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+                ]
+              ],
+              "audience": [
+                "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+                ],
+                [
+                  "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+                ],
+                [
+                  "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+                ],
+                [
+                  "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+                ],
+                [
+                  "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+                ]
+              ],
+              "core_title": [
+                "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+              ],
+              "core_summary": [
+                "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+              ],
+              "prerequisites": [
+                "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+              ],
+              "limitations": [
+                "github.readme:98e90e35bec0804102fefdffcb2714df2c7c6d63"
+              ],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-23/repo-9581560c8fcedaf6e07121af-537fa14aa62bae9417d98321.png",
+          "publication_evidence": {
+            "full_name": "mvt-project/mvt",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "98e90e35bec0804102fefdffcb2714df2c7c6d63",
+              "source_url": "https://api.github.com/repos/mvt-project/mvt/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-23/repo-9581560c8fcedaf6e07121af-537fa14aa62bae9417d98321.png",
+              "sha256": "a9e0ee9207f9aaa8bdb41e900ce73e55d6c2d1b74d60716817112cc2daa59a9f",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.02.mvt-project--mvt.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1333065091,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "owner": "deepseek-ai",
+          "name": "deepseek-harness",
+          "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+          "description": "DeepSeek Harness: Everything is a Plugin.",
+          "language": "TypeScript",
+          "stars": 233390,
+          "forks": 28030,
+          "open_issues": 0,
+          "watchers": 233390,
+          "topics": [
+            "ai-agents",
+            "cordis",
+            "dsh",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-08-13T11:56:32Z",
+          "updated_at": "2026-09-22T23:29:51Z",
+          "pushed_at": "2026-09-22T15:50:34Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 90.04,
+          "star_delta": 759,
+          "fork_delta": 101,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.99,
+            "relative_growth": 94.95,
+            "fork_growth": 98.99,
+            "total_stars": 89.9,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "为想扩展智能体运行方式的开发者提供插件化框架，并带有可本地启动的网页界面。",
+            "highlights": [
+              "基于 Cordis，采用一切皆插件的架构",
+              "通过 npm 启动本地网页入口",
+              "提供源码编辑后自动重建的开发流程"
+            ],
+            "audience": "想研究插件化智能体运行框架、开发相关插件，或从源码调试网页界面的开发者。",
+            "capabilities": [
+              "启动可在浏览器访问的本地网页界面",
+              "选择仅启动服务而不自动打开浏览器",
+              "从源码构建并运行项目",
+              "在修改源码时自动重建网页客户端"
+            ],
+            "core_title": "以插件组织智能体运行框架",
+            "core_summary": "DeepSeek Harness 基于 Cordis，把智能体运行框架组织成插件架构。项目提供本地网页入口，也提供源码构建和修改后自动重建客户端的开发流程，方便研究和扩展。",
+            "prerequisites": "通过 npm 运行前需安装 Node.js；从源码运行需用 pnpm 安装依赖并完成构建。",
+            "limitations": "仍处于开发者预览阶段，会出现不兼容变更；运行前需阅读安全说明；从源码启动时使用已构建产物，不会自动重新构建。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "423bccd7d9352dbc48f1705f37d35642e74f5b41",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+              ],
+              "highlights": [
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ],
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ],
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ]
+              ],
+              "audience": [
+                "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ],
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ],
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ],
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ]
+              ],
+              "core_title": [
+                "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+              ],
+              "core_summary": [
+                "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+              ],
+              "prerequisites": [
+                "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+              ],
+              "limitations": [
+                "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-23/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "publication_evidence": {
+            "full_name": "deepseek-ai/deepseek-harness",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "423bccd7d9352dbc48f1705f37d35642e74f5b41",
+              "source_url": "https://api.github.com/repos/deepseek-ai/deepseek-harness/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-23/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+              "sha256": "933db40c3044f42cdce67ec0e1e70741b746419ba10b684683db1a956274e817",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-23/2026-09-23.comprehensive.03.deepseek-ai--deepseek-harness.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-09-23/2026-09-23.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/daily/assets/2026-09-23/2026-09-23.ai.01.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-09-23/2026-09-23.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "NousResearch/hermes-agent",
+            "path": "reports/daily/assets/2026-09-23/2026-09-23.ai.03.nousresearch--hermes-agent.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1333065091,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "owner": "deepseek-ai",
+          "name": "deepseek-harness",
+          "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+          "description": "DeepSeek Harness: Everything is a Plugin.",
+          "language": "TypeScript",
+          "stars": 233390,
+          "forks": 28030,
+          "open_issues": 0,
+          "watchers": 233390,
+          "topics": [
+            "ai-agents",
+            "cordis",
+            "dsh",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-08-13T11:56:32Z",
+          "updated_at": "2026-09-22T23:29:51Z",
+          "pushed_at": "2026-09-22T15:50:34Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 90.08,
+          "star_delta": 759,
+          "fork_delta": 101,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 95.83,
+            "fork_growth": 95.83,
+            "total_stars": 83.33,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "为开发者提供插件式智能体运行框架，并带有可本地启动的网页界面。",
+            "highlights": [
+              "用 Cordis 支撑一切皆插件的架构",
+              "提供可在本地启动的网页界面",
+              "源码开发支持客户端自动重建"
+            ],
+            "audience": "适合想研究插件式智能体架构，或从源码开发网页界面的开发者。",
+            "capabilities": [
+              "通过 npm 命令启动本地网页界面",
+              "关闭启动时自动打开浏览器的行为",
+              "从源码构建后运行项目",
+              "在修改源码时自动重建网页客户端"
+            ],
+            "core_title": "以插件组织智能体运行框架",
+            "core_summary": "项目用 Cordis 支撑“一切皆插件”的架构，为智能体提供运行框架；既能通过 npm 启动网页界面，也提供源码构建和开发时自动重建客户端的流程。",
+            "prerequisites": "通过 npm 运行前需安装 Node.js；从源码运行需先用 pnpm 安装依赖并完成构建。",
+            "limitations": "目前处于开发者预览阶段，会出现破坏兼容性的变更；运行前需阅读 SAFETY.md。源码启动使用已有构建产物，不会自动重新构建。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "423bccd7d9352dbc48f1705f37d35642e74f5b41",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+              ],
+              "highlights": [
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ],
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ],
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ]
+              ],
+              "audience": [
+                "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ],
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ],
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ],
+                [
+                  "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+                ]
+              ],
+              "core_title": [
+                "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+              ],
+              "core_summary": [
+                "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+              ],
+              "prerequisites": [
+                "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+              ],
+              "limitations": [
+                "github.readme:423bccd7d9352dbc48f1705f37d35642e74f5b41"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-23/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "publication_evidence": {
+            "full_name": "deepseek-ai/deepseek-harness",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "423bccd7d9352dbc48f1705f37d35642e74f5b41",
+              "source_url": "https://api.github.com/repos/deepseek-ai/deepseek-harness/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-23/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+              "sha256": "933db40c3044f42cdce67ec0e1e70741b746419ba10b684683db1a956274e817",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-23/2026-09-23.ai.01.deepseek-ai--deepseek-harness.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 265417,
+          "forks": 39653,
+          "open_issues": 213,
+          "watchers": 265417,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-09-22T23:30:09Z",
+          "pushed_at": "2026-09-22T23:09:59Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 90.0,
+          "star_delta": 544,
+          "fork_delta": 74,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.83,
+            "relative_growth": 91.67,
+            "fork_growth": 91.67,
+            "total_stars": 91.67,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "把 AI 写代码变成有计划、测试和审查记录的开发流程，不必每次从提示词重新搭建。",
+            "highlights": [
+              "将测试与审查嵌入功能开发流程",
+              "用可携带的本地记忆衔接不同编程助手",
+              "用 AgentShield 检查智能体自身配置"
+            ],
+            "audience": "适合用 AI 编程助手开发功能、修复缺陷，希望把计划、测试、独立审查和会话记忆纳入固定流程的软件团队。",
+            "capabilities": [
+              "把功能需求整理成可确认的实施计划",
+              "用先写失败测试的流程推进代码实现",
+              "在独立上下文中审查代码改动",
+              "将会话经验提炼为可复用技能",
+              "扫描智能体配置中的权限与注入风险"
+            ],
+            "core_title": "让编程助手按工程流程交付",
+            "core_summary": "ECC 把计划、测试、实现、审查和验证串成可复用流程：技能按需加载，专门的智能体分担任务，事件触发脚本执行检查，再把会话经验沉淀为记忆与技能。",
+            "prerequisites": "通用包需 Node.js 18 或更新版；Claude 插件另需 Git 和 Claude Code 2.1 或更新版。扫描需已安装并审查的 Agent 与配置",
+            "limitations": "各平台能力不齐；同一助手勿叠加安装。启用钩子需明确确认，记忆不能视为指令；Windows 原生记忆写入有已知缺陷。私有仓库托管分析属于付费 Pro。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "9156c729a2fd2eac97ca33e297ff0deee63e600c",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+              ],
+              "highlights": [
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ],
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ],
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ]
+              ],
+              "audience": [
+                "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ],
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ],
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ],
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ],
+                [
+                  "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+                ]
+              ],
+              "core_title": [
+                "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+              ],
+              "core_summary": [
+                "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+              ],
+              "prerequisites": [
+                "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+              ],
+              "limitations": [
+                "github.readme:9156c729a2fd2eac97ca33e297ff0deee63e600c"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-23/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "9156c729a2fd2eac97ca33e297ff0deee63e600c",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-23/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-23/2026-09-23.ai.02.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1024554267,
+          "full_name": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "html_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 248101,
+          "forks": 52341,
+          "open_issues": 44000,
+          "watchers": 248101,
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "nous-research",
+            "openai"
+          ],
+          "created_at": "2025-07-22T22:22:28Z",
+          "updated_at": "2026-09-22T23:22:23Z",
+          "pushed_at": "2026-09-22T23:29:11Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 83.96,
+          "star_delta": 253,
+          "fork_delta": 120,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 87.5,
+            "relative_growth": 79.17,
+            "fork_growth": 100.0,
+            "total_stars": 87.5,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "在聊天中安排定时任务，让助手把完成任务的经验存成技能，供后续会话继续使用。",
+            "highlights": [
+              "把复杂任务的经验沉淀为技能",
+              "从聊天平台连接在云端工作的助手",
+              "定时执行任务并向指定平台投递结果"
+            ],
+            "audience": "适合希望通过聊天安排日报、备份或审计，并让助手跨会话记住任务经验的个人与自动化工作流开发者。",
+            "capabilities": [
+              "从复杂任务经验中创建可复用技能",
+              "检索历史对话以找回跨会话信息",
+              "按自然语言安排定时任务和结果投递",
+              "通过聊天平台继续与远程助手协作",
+              "派出相互隔离的子智能体并行处理任务"
+            ],
+            "core_title": "把任务经验带到下一次会话",
+            "core_summary": "Hermes 在复杂任务后创建技能，并在后续使用中改进；配合持久记忆、历史对话检索和摘要，让后续会话能找回已有经验，而不只依赖当前聊天内容。",
+            "prerequisites": "安装后需选择模型提供方与模型、配置启用的工具；通过聊天平台使用时，还需设置并启动消息网关。",
+            "limitations": "Nous Portal 的模型与工具整合需订阅；Termux 完整依赖含不兼容的语音组件。手动开发时虚拟环境应放在源码目录外，避免被助手操作误删。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "highlights": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "audience": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ],
+                [
+                  "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+                ]
+              ],
+              "core_title": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "core_summary": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "prerequisites": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "limitations": [
+                "github.readme:c05112266746ff99a3326a62c38c33fbc08ecd23"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-09-23/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+          "publication_evidence": {
+            "full_name": "NousResearch/hermes-agent",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "c05112266746ff99a3326a62c38c33fbc08ecd23",
+              "source_url": "https://api.github.com/repos/NousResearch/hermes-agent/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-09-23/repo-bfef0c14f46af5da34f699a4-f3b99e4f8599e3a489271796.png",
+              "sha256": "c7685dab85e265471e49bc8ddd225ef8184d899f041c350dc13f2166b4230311",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-09-23/2026-09-23.ai.03.nousresearch--hermes-agent.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
