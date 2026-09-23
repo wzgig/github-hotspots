@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-09-24",
+  "window": {
+    "start": "2026-09-23",
+    "end": "2026-09-24"
+  },
+  "source_report": "reports/daily/2026-09-24.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-09-24",
+  "manifest": "reports/daily/assets/2026-09-24/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-09-24/2026-09-24.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "path": "reports/daily/assets/2026-09-24/2026-09-24.comprehensive.01.deepseek-ai--deepseek-harness.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "farion1231/cc-switch",
+          "path": "reports/daily/assets/2026-09-24/2026-09-24.comprehensive.02.farion1231--cc-switch.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "google/ax",
+          "path": "reports/daily/assets/2026-09-24/2026-09-24.comprehensive.03.google--ax.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-09-24/2026-09-24.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "path": "reports/daily/assets/2026-09-24/2026-09-24.ai.01.deepseek-ai--deepseek-harness.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "farion1231/cc-switch",
+          "path": "reports/daily/assets/2026-09-24/2026-09-24.ai.02.farion1231--cc-switch.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/daily/assets/2026-09-24/2026-09-24.ai.03.nousresearch--hermes-agent.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 75,
+    "issue_code": "D075",
+    "issue_label": "第75期",
+    "status": "official"
+  }
+}
