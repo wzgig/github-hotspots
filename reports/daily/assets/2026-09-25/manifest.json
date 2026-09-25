@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-09-25",
+  "window": {
+    "start": "2026-09-24",
+    "end": "2026-09-25"
+  },
+  "source_report": "reports/daily/2026-09-25.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-09-25",
+  "manifest": "reports/daily/assets/2026-09-25/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-09-25/2026-09-25.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "google/ax",
+          "path": "reports/daily/assets/2026-09-25/2026-09-25.comprehensive.01.google--ax.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "dream-num/univer",
+          "path": "reports/daily/assets/2026-09-25/2026-09-25.comprehensive.02.dream-num--univer.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "vectorize-io/hindsight",
+          "path": "reports/daily/assets/2026-09-25/2026-09-25.comprehensive.03.vectorize-io--hindsight.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-09-25/2026-09-25.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "dream-num/univer",
+          "path": "reports/daily/assets/2026-09-25/2026-09-25.ai.01.dream-num--univer.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "vectorize-io/hindsight",
+          "path": "reports/daily/assets/2026-09-25/2026-09-25.ai.02.vectorize-io--hindsight.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "farion1231/cc-switch",
+          "path": "reports/daily/assets/2026-09-25/2026-09-25.ai.03.farion1231--cc-switch.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 76,
+    "issue_code": "D076",
+    "issue_label": "第76期",
+    "status": "official"
+  }
+}
