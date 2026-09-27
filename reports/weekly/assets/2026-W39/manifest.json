@@ -1,0 +1,113 @@
+{
+  "schema_version": 2,
+  "period": "weekly",
+  "run_date": "2026-09-27",
+  "window": {
+    "start": "2026-09-20",
+    "end": "2026-09-27"
+  },
+  "source_report": "reports/weekly/2026-W39.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/weekly/assets/2026-W39",
+  "manifest": "reports/weekly/assets/2026-W39/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 7,
+      "cover": "reports/weekly/assets/2026-W39/2026-W39.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.comprehensive.01.deepseek-ai--deepseek-harness.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "affaan-m/ECC",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.comprehensive.02.affaan-m--ecc.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "mattpocock/skills",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.comprehensive.03.mattpocock--skills.png"
+        },
+        {
+          "rank": 4,
+          "full_name": "obra/superpowers",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.comprehensive.04.obra--superpowers.png"
+        },
+        {
+          "rank": 5,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.comprehensive.05.nousresearch--hermes-agent.png"
+        },
+        {
+          "rank": 6,
+          "full_name": "farion1231/cc-switch",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.comprehensive.06.farion1231--cc-switch.png"
+        },
+        {
+          "rank": 7,
+          "full_name": "cloudflare/security-audit-skill",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.comprehensive.07.cloudflare--security-audit-skill.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 7,
+      "cover": "reports/weekly/assets/2026-W39/2026-W39.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "affaan-m/ECC",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.ai.01.affaan-m--ecc.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.ai.02.deepseek-ai--deepseek-harness.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "obra/superpowers",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.ai.03.obra--superpowers.png"
+        },
+        {
+          "rank": 4,
+          "full_name": "farion1231/cc-switch",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.ai.04.farion1231--cc-switch.png"
+        },
+        {
+          "rank": 5,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.ai.05.nousresearch--hermes-agent.png"
+        },
+        {
+          "rank": 6,
+          "full_name": "alibaba/open-code-review",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.ai.06.alibaba--open-code-review.png"
+        },
+        {
+          "rank": 7,
+          "full_name": "firecrawl/firecrawl",
+          "path": "reports/weekly/assets/2026-W39/2026-W39.ai.07.firecrawl--firecrawl.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 12,
+    "issue_code": "W012",
+    "issue_label": "第12期",
+    "status": "official"
+  }
+}
