@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "017d742731ab58cbdfb7b2ebb9d9a261f8612c60ecebd9c4b5cae62d0480e4d0",
+  "checklist_sha256": "ada7dd1c375526bf7cdeb04f54ceb0124ff5a08125c5463cede3a26f93bf832a",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-09-29",
+  "generated_at": "2026-09-29T07:33:48.595769+08:00",
+  "issue": {
+    "number": 80,
+    "code": "D080",
+    "stem": "D080-2026-09-29",
+    "label": "第80期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-09-29.json",
+    "report_sha256": "bbae00f8562b4615e21b3e7ffaf8ba432dc2eabfd539e6b9efc50c569af70bca",
+    "poster_manifest": "reports/daily/assets/2026-09-29/manifest.json",
+    "poster_manifest_sha256": "9dab0c3c6bacf0c8cb77549240ca70b1d9dc6fb0e760f78587461e766e6ea3ae",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D080-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "749f3439a3ec075696bbc3d2ef3fc80b23b38b7c09a445443bcc69f06ff15a6d",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 360,
+      "caption_sha256": "3ba16a82874c7f1ccdb56b99b14d6e9d68026298010d412523cb65b583a04621",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "8f28ab2b90317a873f136ff3d60dc008b524c82f42ba9f83a7c43d6a34168c92",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-09-29/2026-09-29.comprehensive.cover.png",
+          "sha256": "003d58bf9375437900e85b8e1a43971d4dc7896b3663dcf4cb71a81bc641ae59",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-29/2026-09-29.comprehensive.01.debpalash--voicestudio.png",
+          "sha256": "f09cfe66a7a2dedf6815262756a06995b558ff3ebda16b50fed6c8809f8bc1f9",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "debpalash/VoiceStudio",
+          "publication_path": "images/02-rank-01-debpalash-voicestudio.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-29/2026-09-29.comprehensive.02.vectorize-io--hindsight.png",
+          "sha256": "97223be1f898fff1242fde18428327d3dcd027a8cd9947edfd1b1d16f7fd87bd",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "vectorize-io/hindsight",
+          "publication_path": "images/03-rank-02-vectorize-io-hindsight.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-29/2026-09-29.comprehensive.03.paperclipai--paperclip.png",
+          "sha256": "1a107cec8f7c37751f869349093dc18d82e0f176ee476c23ad4bd5681101b5ea",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "paperclipai/paperclip",
+          "publication_path": "images/04-rank-03-paperclipai-paperclip.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D080-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "d9d8dbedd3b4b10a240b8330210ec54274e4fc3e1d2063d8652d0ad03182ae32",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 393,
+      "caption_sha256": "d44884382509019488ccf9b87d6de0299fd2246f95b063f18f8e2e4bfe969f72",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "0c6c19cdc0c93c458ab2ae00a6271a260f940f28121a9182edce27d520b4f00e",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-09-29/2026-09-29.ai.cover.png",
+          "sha256": "1981167f1ffa6301906fd6c16b3e82f0ea81d7867d79519ea159245d45fc700a",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-29/2026-09-29.ai.01.debpalash--voicestudio.png",
+          "sha256": "fcbe543714a92fd8bfcc01df447240125713c312f9e56d4cf4caac1ea29a378c",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "debpalash/VoiceStudio",
+          "publication_path": "images/02-rank-01-debpalash-voicestudio.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-29/2026-09-29.ai.02.vectorize-io--hindsight.png",
+          "sha256": "a68fee8d57e08e6069a5b4dc2187d58e63fbd7d5c21f6818438224b05001af32",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "vectorize-io/hindsight",
+          "publication_path": "images/03-rank-02-vectorize-io-hindsight.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-09-29/2026-09-29.ai.03.deepseek-ai--deepseek-harness.png",
+          "sha256": "de39104d4d4a2433782a7025579ade9a730f6ab3d1de56ad3d8dcae390db9d4e",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "publication_path": "images/04-rank-03-deepseek-ai-deepseek-harness.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-09-29",
+    "revision": "017d742731ab",
+    "image_policy": "repository-source-reference"
+  }
+}
