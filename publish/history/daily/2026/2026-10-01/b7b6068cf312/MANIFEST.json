@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "b7b6068cf3126a966e8ce7bd9f3b7d7d79bd14b30209bbfd268fce1ba4561202",
+  "checklist_sha256": "92f882476ff3fa90b120180b48bfe72eb45f41c6465a565c2ebfeadd49ebb9d0",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-10-01",
+  "generated_at": "2026-10-01T07:35:33.684147+08:00",
+  "issue": {
+    "number": 82,
+    "code": "D082",
+    "stem": "D082-2026-10-01",
+    "label": "第82期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-10-01.json",
+    "report_sha256": "ff05126d1ffed2f18b0061643c14e915d80b6aee61716ae56a0ab5aacab63a79",
+    "poster_manifest": "reports/daily/assets/2026-10-01/manifest.json",
+    "poster_manifest_sha256": "a99133a19388aa3f5473076c3e65f7281ffb622eb209fab585e21830a784b1ed",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D082-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "ac31a86bf940db4814178ed2f00db3de243ca86980924195749dffc7f9db309c",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 327,
+      "caption_sha256": "b72ed590c15b43b0c21130fdb1ceda7ecbb07a3ccc42f5e9c8ba46a10cccc243",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "65c65adf155495c9a66e3d9de11945c388019dab508dbed7698784436c47d8ec",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.cover.png",
+          "sha256": "91ec9526d038d65caed97f94121c1e7694c581ca219ae78abe3d6aa0f9b0f869",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.01.nvidia--openshell.png",
+          "sha256": "7bfc595f8b69c03479d3dbfce3e4823cab91b9a2a31f29f736bc891ec990f6b7",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "NVIDIA/OpenShell",
+          "publication_path": "images/02-rank-01-nvidia-openshell.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.02.debpalash--voicestudio.png",
+          "sha256": "5cfb65ea14fca34ca4318eaf71f57ee02210ba90b2b20e100076a5a6c055fb5d",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "debpalash/VoiceStudio",
+          "publication_path": "images/03-rank-02-debpalash-voicestudio.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.03.t8y2--dbx.png",
+          "sha256": "b121d764768a11db1fbee47d6db5a800055f351b79c7faed72ccd5d1fa079f56",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "t8y2/dbx",
+          "publication_path": "images/04-rank-03-t8y2-dbx.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D082-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "09397f29bbafcec2ab121d7819399ebef8206ab14b4c248ef7e3ec0e6f7a8d7a",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 355,
+      "caption_sha256": "b37adb925090f6c18a3711e3475bc26756b6ba419c7b6155874efdaf3765a39c",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "945b10002ebdf8bdd72c33986d08abe13ba5f7240b7f6bb2087e9b2652c66259",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-10-01/2026-10-01.ai.cover.png",
+          "sha256": "579d5494106377242d16255c815e05a5d37d4b1aa676e843b3e96d3b0c8aba26",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-01/2026-10-01.ai.01.nvidia--openshell.png",
+          "sha256": "870dc6b48f3bcfe7644df90748ca65c0373e08f063929d99f51cf691ef07eafc",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "NVIDIA/OpenShell",
+          "publication_path": "images/02-rank-01-nvidia-openshell.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-01/2026-10-01.ai.02.debpalash--voicestudio.png",
+          "sha256": "74e811ba2f94e97829e3345c5eef40b577a932c915175703ca1601869aafbc78",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "debpalash/VoiceStudio",
+          "publication_path": "images/03-rank-02-debpalash-voicestudio.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-01/2026-10-01.ai.03.t8y2--dbx.png",
+          "sha256": "20efa931c3301906a633b8c3a90cda7d79f6f645ff502ef88512d3f475bee874",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "t8y2/dbx",
+          "publication_path": "images/04-rank-03-t8y2-dbx.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-10-01",
+    "revision": "b7b6068cf312",
+    "image_policy": "repository-source-reference"
+  }
+}

@@ -1,0 +1,1519 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-10-01",
+  "window_start": "2026-09-30",
+  "window_end": "2026-10-01",
+  "generated_at": "2026-10-01T07:31:42+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-09-30 至 2026-10-01",
+  "publication": {
+    "issue_number": 82,
+    "issue_code": "D082",
+    "issue_label": "第82期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-10-01",
+    "manifest": "reports/daily/assets/2026-10-01/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NVIDIA/OpenShell",
+            "path": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.01.nvidia--openshell.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.02.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "t8y2/dbx",
+            "path": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.03.t8y2--dbx.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-01/2026-10-01.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NVIDIA/OpenShell",
+            "path": "reports/daily/assets/2026-10-01/2026-10-01.ai.01.nvidia--openshell.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-10-01/2026-10-01.ai.02.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "t8y2/dbx",
+            "path": "reports/daily/assets/2026-10-01/2026-10-01.ai.03.t8y2--dbx.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 82,
+      "issue_code": "D082",
+      "issue_label": "第82期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1166129534,
+      "full_name": "NVIDIA/OpenShell",
+      "owner": "NVIDIA",
+      "name": "OpenShell",
+      "html_url": "https://github.com/NVIDIA/OpenShell",
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "language": "Rust",
+      "stars": 12571,
+      "forks": 1541,
+      "open_issues": 511,
+      "watchers": 68,
+      "topics": [],
+      "created_at": "2026-02-24T22:52:22Z",
+      "updated_at": "2026-09-30T23:29:54Z",
+      "pushed_at": "2026-09-30T23:22:05Z",
+      "daily_stars": 1280,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 95.79,
+      "star_delta": 1668,
+      "fork_delta": 101,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 98.68,
+        "total_stars": 18.42,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "为自主 AI Agent 提供受策略约束的沙箱运行环境，控制文件、系统调用和网络访问",
+        "highlights": [
+          "按策略限制 Agent 可访问的文件与网络",
+          "在沙箱中运行 Agent 并隔离系统调用",
+          "变更权限前检查风险并交给人工审核"
+        ],
+        "audience": "需要让 AI Agent 访问文件、API 或凭据，同时控制权限边界的团队",
+        "capabilities": [
+          "隔离运行自主 AI Agent",
+          "限制文件、系统调用和网络连接",
+          "仅向获批端点注入真实凭据",
+          "验证策略变更可能新增的访问权限",
+          "通过网关统一管理沙箱与访问策略"
+        ],
+        "core_title": "把 Agent 的权限变成可审核策略",
+        "core_summary": "Agent 在隔离沙箱中运行，内核持续检查文件、系统调用和网络请求；策略变更先经形式化验证，再决定是否人工批准。",
+        "prerequisites": "需要 Linux、Apple Silicon 上的 macOS，或实验性的 Windows WSL 2，并配合 Docker、Podman 或主机虚拟化。",
+        "limitations": "策略变更可能需要人工审核；软件访问的外部材料受其各自条款和许可证约束，需自行核查。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+          ],
+          "highlights": [
+            [
+              "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+            ],
+            [
+              "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+            ],
+            [
+              "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+            ]
+          ],
+          "audience": [
+            "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+          ],
+          "capabilities": [
+            [
+              "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+            ],
+            [
+              "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+            ],
+            [
+              "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+            ],
+            [
+              "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+            ],
+            [
+              "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+            ]
+          ],
+          "core_title": [
+            "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+          ],
+          "core_summary": [
+            "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+          ],
+          "prerequisites": [
+            "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+          ],
+          "limitations": [
+            "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-01/repo-4a822c098ee8277f6133a84b-5e9a05ac7b44d0f1987cf070.png",
+      "publication_evidence": {
+        "full_name": "NVIDIA/OpenShell",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7",
+          "source_url": "https://api.github.com/repos/NVIDIA/OpenShell/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-01/repo-4a822c098ee8277f6133a84b-5e9a05ac7b44d0f1987cf070.png",
+          "sha256": "292a208e632ad887b5507f1b45171709a3910d0fe916042951b688f6303b7b18",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.01.nvidia--openshell.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1206390571,
+      "full_name": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "html_url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": 50374,
+      "forks": 5592,
+      "open_issues": 77,
+      "watchers": 207,
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx",
+        "omnivoice-studio",
+        "speech-to-text",
+        "tauri",
+        "text-to-speech",
+        "transcription",
+        "translate",
+        "tts",
+        "voice-ai",
+        "voice-cloning",
+        "voice-generation",
+        "voicestudio",
+        "workflow"
+      ],
+      "created_at": "2026-04-09T21:40:26Z",
+      "updated_at": "2026-09-30T23:31:27Z",
+      "pushed_at": "2026-09-29T15:45:28Z",
+      "daily_stars": 3481,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 88.09,
+      "star_delta": 1465,
+      "fork_delta": 122,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.68,
+        "relative_growth": 96.05,
+        "fork_growth": 100.0,
+        "total_stars": 25.0,
+        "activity": 51.34,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "在本地完成声音克隆、语音设计、视频配音、听写和有声书制作",
+        "highlights": [
+          "克隆现有声音或设计新声音",
+          "按时间轴为视频生成配音",
+          "用本地流程完成听写与转录"
+        ],
+        "audience": "需要制作配音、有声书、听写稿或批量音频内容的创作者与团队",
+        "capabilities": [
+          "克隆参考声音并生成文本语音",
+          "设计新的声音风格",
+          "为视频生成带时间对齐的配音",
+          "通过浮动组件进行听写",
+          "批量制作故事和有声书"
+        ],
+        "core_title": "把语音创作流程放到本地",
+        "core_summary": "VoiceStudio 将声音克隆、声音设计、配音、听写和模型管理放进同一桌面工作区，默认使用本地引擎，也可通过 API 或 MCP 接入代理。",
+        "prerequisites": "从源码运行需 Git、Node.js 22+、Bun、Rust/Cargo 和平台构建工具；模型需按所选引擎安装。",
+        "limitations": "远程服务是可选项；使用分析需获得同意。模型有各自许可证，克隆声音需取得许可。",
+        "license_label": "AGPL-3.0",
+        "license_restrictions": "Models have their own licenses; review them before commercial use.",
+        "readme_sha": "01b36d48a7e11675f82c2dcff53aa5774bfc050f",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+          ],
+          "highlights": [
+            [
+              "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+            ],
+            [
+              "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+            ],
+            [
+              "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+            ]
+          ],
+          "audience": [
+            "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+          ],
+          "capabilities": [
+            [
+              "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+            ],
+            [
+              "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+            ],
+            [
+              "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+            ],
+            [
+              "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+            ],
+            [
+              "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+            ]
+          ],
+          "core_title": [
+            "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+          ],
+          "core_summary": [
+            "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+          ],
+          "prerequisites": [
+            "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+          ],
+          "limitations": [
+            "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-10-01/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+      "publication_evidence": {
+        "full_name": "debpalash/VoiceStudio",
+        "license_spdx_id": "AGPL-3.0",
+        "readme": {
+          "sha": "01b36d48a7e11675f82c2dcff53aa5774bfc050f",
+          "source_url": "https://api.github.com/repos/debpalash/VoiceStudio/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-01/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+          "sha256": "c87aa15e86829a315c76cfd8cdcfd1cacb2ee2762b83814d273ea99ee44e2feb",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "AGPL-3.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.02.debpalash--voicestudio.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1224172037,
+      "full_name": "t8y2/dbx",
+      "owner": "t8y2",
+      "name": "dbx",
+      "html_url": "https://github.com/t8y2/dbx",
+      "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
+      "language": "Rust",
+      "stars": 23153,
+      "forks": 2148,
+      "open_issues": 1286,
+      "watchers": 100,
+      "topics": [
+        "ai",
+        "cli",
+        "clickhouse",
+        "database",
+        "database-client",
+        "database-management",
+        "docker",
+        "gui",
+        "mcp",
+        "mongodb",
+        "mysql",
+        "postgresql",
+        "redis",
+        "rust",
+        "sql-server",
+        "sqlite",
+        "tauri",
+        "vue"
+      ],
+      "created_at": "2026-04-29T03:00:36Z",
+      "updated_at": "2026-09-30T23:23:16Z",
+      "pushed_at": "2026-09-30T20:07:15Z",
+      "daily_stars": 1133,
+      "weekly_stars": null,
+      "trending_rank_daily": 15,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 87.63,
+      "star_delta": 700,
+      "fork_delta": 43,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.74,
+        "relative_growth": 93.42,
+        "fork_growth": 93.42,
+        "total_stars": 19.74,
+        "activity": 100.0,
+        "trending_signal": 25.0
+      },
+      "summary": {
+        "one_line": "用一个跨平台客户端连接 100+ 数据库，完成查询、数据管理和 AI Agent 接入",
+        "highlights": [
+          "用一个客户端连接 100+ 数据库",
+          "让 AI 助手查询已配置的数据库",
+          "在桌面、Docker 和 Web 间复用连接"
+        ],
+        "audience": "需要同时管理多种数据库，并希望接入 AI 助手或 MCP 的开发者与运维人员",
+        "capabilities": [
+          "连接并浏览 100+ 数据库",
+          "编辑、执行和保存 SQL 查询",
+          "用自然语言生成、解释和优化 SQL",
+          "导入导出数据并迁移数据库",
+          "通过 MCP 让 AI Agent 查询数据库"
+        ],
+        "core_title": "数据库管理与 AI 接入合在一处",
+        "core_summary": "dbx 用一个客户端覆盖数据库连接、SQL 编辑器、数据操作和结构分析，并通过独立 MCP Server 把已配置连接提供给 AI Agent。",
+        "prerequisites": "从源码开发需 Node.js >= 18、pnpm 和 Rust >= 1.88；Linux 还需安装 README 列出的系统依赖。",
+        "limitations": "MCP Server 独立分发，安装 DBX 不会自动安装；MCP 的写入权限需在设置中管理，Windows 便携版还需配置 DBX_DATA_DIR。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+          ],
+          "highlights": [
+            [
+              "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+            ],
+            [
+              "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+            ],
+            [
+              "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+            ]
+          ],
+          "audience": [
+            "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+          ],
+          "capabilities": [
+            [
+              "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+            ],
+            [
+              "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+            ],
+            [
+              "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+            ],
+            [
+              "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+            ],
+            [
+              "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+            ]
+          ],
+          "core_title": [
+            "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+          ],
+          "core_summary": [
+            "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+          ],
+          "prerequisites": [
+            "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+          ],
+          "limitations": [
+            "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-01/repo-47a1da9fa52e0c8183572f84-9f625b442bd1d874d4984587.png",
+      "publication_evidence": {
+        "full_name": "t8y2/dbx",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a",
+          "source_url": "https://api.github.com/repos/t8y2/dbx/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-01/repo-47a1da9fa52e0c8183572f84-9f625b442bd1d874d4984587.png",
+          "sha256": "19b3de1352b7c9afb4121dc13411a546f4f44fc9d0faaac40e0cf7b49326dd21",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.03.t8y2--dbx.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NVIDIA/OpenShell",
+            "path": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.01.nvidia--openshell.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.02.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "t8y2/dbx",
+            "path": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.03.t8y2--dbx.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1166129534,
+          "full_name": "NVIDIA/OpenShell",
+          "owner": "NVIDIA",
+          "name": "OpenShell",
+          "html_url": "https://github.com/NVIDIA/OpenShell",
+          "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+          "language": "Rust",
+          "stars": 12571,
+          "forks": 1541,
+          "open_issues": 511,
+          "watchers": 68,
+          "topics": [],
+          "created_at": "2026-02-24T22:52:22Z",
+          "updated_at": "2026-09-30T23:29:54Z",
+          "pushed_at": "2026-09-30T23:22:05Z",
+          "daily_stars": 1280,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.79,
+          "star_delta": 1668,
+          "fork_delta": 101,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 98.68,
+            "total_stars": 18.42,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "为自主 AI Agent 提供受策略约束的沙箱运行环境，控制文件、系统调用和网络访问",
+            "highlights": [
+              "按策略限制 Agent 可访问的文件与网络",
+              "在沙箱中运行 Agent 并隔离系统调用",
+              "变更权限前检查风险并交给人工审核"
+            ],
+            "audience": "需要让 AI Agent 访问文件、API 或凭据，同时控制权限边界的团队",
+            "capabilities": [
+              "隔离运行自主 AI Agent",
+              "限制文件、系统调用和网络连接",
+              "仅向获批端点注入真实凭据",
+              "验证策略变更可能新增的访问权限",
+              "通过网关统一管理沙箱与访问策略"
+            ],
+            "core_title": "把 Agent 的权限变成可审核策略",
+            "core_summary": "Agent 在隔离沙箱中运行，内核持续检查文件、系统调用和网络请求；策略变更先经形式化验证，再决定是否人工批准。",
+            "prerequisites": "需要 Linux、Apple Silicon 上的 macOS，或实验性的 Windows WSL 2，并配合 Docker、Podman 或主机虚拟化。",
+            "limitations": "策略变更可能需要人工审核；软件访问的外部材料受其各自条款和许可证约束，需自行核查。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ],
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ],
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ]
+              ],
+              "audience": [
+                "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ],
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ],
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ],
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ],
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+              ],
+              "core_summary": [
+                "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+              ],
+              "prerequisites": [
+                "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+              ],
+              "limitations": [
+                "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-01/repo-4a822c098ee8277f6133a84b-5e9a05ac7b44d0f1987cf070.png",
+          "publication_evidence": {
+            "full_name": "NVIDIA/OpenShell",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7",
+              "source_url": "https://api.github.com/repos/NVIDIA/OpenShell/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-01/repo-4a822c098ee8277f6133a84b-5e9a05ac7b44d0f1987cf070.png",
+              "sha256": "292a208e632ad887b5507f1b45171709a3910d0fe916042951b688f6303b7b18",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.01.nvidia--openshell.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1206390571,
+          "full_name": "debpalash/VoiceStudio",
+          "owner": "debpalash",
+          "name": "VoiceStudio",
+          "html_url": "https://github.com/debpalash/VoiceStudio",
+          "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+          "language": "Python",
+          "stars": 50374,
+          "forks": 5592,
+          "open_issues": 77,
+          "watchers": 207,
+          "topics": [
+            "ai",
+            "audiobook",
+            "cuda",
+            "dubbing",
+            "elevenlabs-alternative",
+            "huggingface",
+            "local-first",
+            "mlx",
+            "omnivoice-studio",
+            "speech-to-text",
+            "tauri",
+            "text-to-speech",
+            "transcription",
+            "translate",
+            "tts",
+            "voice-ai",
+            "voice-cloning",
+            "voice-generation",
+            "voicestudio",
+            "workflow"
+          ],
+          "created_at": "2026-04-09T21:40:26Z",
+          "updated_at": "2026-09-30T23:31:27Z",
+          "pushed_at": "2026-09-29T15:45:28Z",
+          "daily_stars": 3481,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.09,
+          "star_delta": 1465,
+          "fork_delta": 122,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.68,
+            "relative_growth": 96.05,
+            "fork_growth": 100.0,
+            "total_stars": 25.0,
+            "activity": 51.34,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "在本地完成声音克隆、语音设计、视频配音、听写和有声书制作",
+            "highlights": [
+              "克隆现有声音或设计新声音",
+              "按时间轴为视频生成配音",
+              "用本地流程完成听写与转录"
+            ],
+            "audience": "需要制作配音、有声书、听写稿或批量音频内容的创作者与团队",
+            "capabilities": [
+              "克隆参考声音并生成文本语音",
+              "设计新的声音风格",
+              "为视频生成带时间对齐的配音",
+              "通过浮动组件进行听写",
+              "批量制作故事和有声书"
+            ],
+            "core_title": "把语音创作流程放到本地",
+            "core_summary": "VoiceStudio 将声音克隆、声音设计、配音、听写和模型管理放进同一桌面工作区，默认使用本地引擎，也可通过 API 或 MCP 接入代理。",
+            "prerequisites": "从源码运行需 Git、Node.js 22+、Bun、Rust/Cargo 和平台构建工具；模型需按所选引擎安装。",
+            "limitations": "远程服务是可选项；使用分析需获得同意。模型有各自许可证，克隆声音需取得许可。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "Models have their own licenses; review them before commercial use.",
+            "readme_sha": "01b36d48a7e11675f82c2dcff53aa5774bfc050f",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ],
+              "highlights": [
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ],
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ],
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ]
+              ],
+              "audience": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ],
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ],
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ],
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ],
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ]
+              ],
+              "core_title": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ],
+              "core_summary": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ],
+              "prerequisites": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ],
+              "limitations": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-01/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+          "publication_evidence": {
+            "full_name": "debpalash/VoiceStudio",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "01b36d48a7e11675f82c2dcff53aa5774bfc050f",
+              "source_url": "https://api.github.com/repos/debpalash/VoiceStudio/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-01/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+              "sha256": "c87aa15e86829a315c76cfd8cdcfd1cacb2ee2762b83814d273ea99ee44e2feb",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.02.debpalash--voicestudio.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1224172037,
+          "full_name": "t8y2/dbx",
+          "owner": "t8y2",
+          "name": "dbx",
+          "html_url": "https://github.com/t8y2/dbx",
+          "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
+          "language": "Rust",
+          "stars": 23153,
+          "forks": 2148,
+          "open_issues": 1286,
+          "watchers": 100,
+          "topics": [
+            "ai",
+            "cli",
+            "clickhouse",
+            "database",
+            "database-client",
+            "database-management",
+            "docker",
+            "gui",
+            "mcp",
+            "mongodb",
+            "mysql",
+            "postgresql",
+            "redis",
+            "rust",
+            "sql-server",
+            "sqlite",
+            "tauri",
+            "vue"
+          ],
+          "created_at": "2026-04-29T03:00:36Z",
+          "updated_at": "2026-09-30T23:23:16Z",
+          "pushed_at": "2026-09-30T20:07:15Z",
+          "daily_stars": 1133,
+          "weekly_stars": null,
+          "trending_rank_daily": 15,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 87.63,
+          "star_delta": 700,
+          "fork_delta": 43,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.74,
+            "relative_growth": 93.42,
+            "fork_growth": 93.42,
+            "total_stars": 19.74,
+            "activity": 100.0,
+            "trending_signal": 25.0
+          },
+          "summary": {
+            "one_line": "用一个跨平台客户端连接 100+ 数据库，完成查询、数据管理和 AI Agent 接入",
+            "highlights": [
+              "用一个客户端连接 100+ 数据库",
+              "让 AI 助手查询已配置的数据库",
+              "在桌面、Docker 和 Web 间复用连接"
+            ],
+            "audience": "需要同时管理多种数据库，并希望接入 AI 助手或 MCP 的开发者与运维人员",
+            "capabilities": [
+              "连接并浏览 100+ 数据库",
+              "编辑、执行和保存 SQL 查询",
+              "用自然语言生成、解释和优化 SQL",
+              "导入导出数据并迁移数据库",
+              "通过 MCP 让 AI Agent 查询数据库"
+            ],
+            "core_title": "数据库管理与 AI 接入合在一处",
+            "core_summary": "dbx 用一个客户端覆盖数据库连接、SQL 编辑器、数据操作和结构分析，并通过独立 MCP Server 把已配置连接提供给 AI Agent。",
+            "prerequisites": "从源码开发需 Node.js >= 18、pnpm 和 Rust >= 1.88；Linux 还需安装 README 列出的系统依赖。",
+            "limitations": "MCP Server 独立分发，安装 DBX 不会自动安装；MCP 的写入权限需在设置中管理，Windows 便携版还需配置 DBX_DATA_DIR。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+              ],
+              "highlights": [
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ],
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ],
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ]
+              ],
+              "audience": [
+                "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ],
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ],
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ],
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ],
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ]
+              ],
+              "core_title": [
+                "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+              ],
+              "core_summary": [
+                "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+              ],
+              "prerequisites": [
+                "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+              ],
+              "limitations": [
+                "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-01/repo-47a1da9fa52e0c8183572f84-9f625b442bd1d874d4984587.png",
+          "publication_evidence": {
+            "full_name": "t8y2/dbx",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a",
+              "source_url": "https://api.github.com/repos/t8y2/dbx/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-01/repo-47a1da9fa52e0c8183572f84-9f625b442bd1d874d4984587.png",
+              "sha256": "19b3de1352b7c9afb4121dc13411a546f4f44fc9d0faaac40e0cf7b49326dd21",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.03.t8y2--dbx.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-01/2026-10-01.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NVIDIA/OpenShell",
+            "path": "reports/daily/assets/2026-10-01/2026-10-01.ai.01.nvidia--openshell.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-10-01/2026-10-01.ai.02.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "t8y2/dbx",
+            "path": "reports/daily/assets/2026-10-01/2026-10-01.ai.03.t8y2--dbx.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1166129534,
+          "full_name": "NVIDIA/OpenShell",
+          "owner": "NVIDIA",
+          "name": "OpenShell",
+          "html_url": "https://github.com/NVIDIA/OpenShell",
+          "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+          "language": "Rust",
+          "stars": 12571,
+          "forks": 1541,
+          "open_issues": 511,
+          "watchers": 68,
+          "topics": [],
+          "created_at": "2026-02-24T22:52:22Z",
+          "updated_at": "2026-09-30T23:29:54Z",
+          "pushed_at": "2026-09-30T23:22:05Z",
+          "daily_stars": 1280,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.69,
+          "star_delta": 1668,
+          "fork_delta": 101,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 97.22,
+            "total_stars": 19.44,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "OpenShell 为自主 AI Agent 提供受策略约束的隔离运行环境，控制文件、系统调用和网络访问",
+            "highlights": [
+              "按策略限制 Agent 能访问的文件、系统调用和网络",
+              "在沙箱中运行 Agent，并仅向获准端点提供凭据",
+              "变更策略前检查新增访问权限，交由人工确认"
+            ],
+            "audience": "需要让 AI Agent 读文件、装包、调用 API，又要控制数据和凭据访问的团队",
+            "capabilities": [
+              "隔离运行 AI Agent",
+              "限制文件与系统调用",
+              "检查网络连接策略",
+              "按获准端点注入凭据",
+              "审核策略变更风险"
+            ],
+            "core_title": "让 Agent 在边界内执行任务",
+            "core_summary": "OpenShell 用内核级沙箱执行访问控制，再用形式化验证检查策略变更，降低 Agent 获得过宽权限的风险。",
+            "prerequisites": "需要 Linux、Apple Silicon macOS，或实验性的 Windows WSL 2，并准备 Docker、Podman 或主机虚拟化。",
+            "limitations": "策略新增访问权限会等待人工审核；外部材料的安全性、完整性和适用性仍需使用者自行确认。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ],
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ],
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ]
+              ],
+              "audience": [
+                "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ],
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ],
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ],
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ],
+                [
+                  "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+              ],
+              "core_summary": [
+                "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+              ],
+              "prerequisites": [
+                "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+              ],
+              "limitations": [
+                "github.readme:ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-01/repo-4a822c098ee8277f6133a84b-5e9a05ac7b44d0f1987cf070.png",
+          "publication_evidence": {
+            "full_name": "NVIDIA/OpenShell",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "ed5cc57ecc2a8050dfd6bae70b7e03c32bf9b1c7",
+              "source_url": "https://api.github.com/repos/NVIDIA/OpenShell/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-01/repo-4a822c098ee8277f6133a84b-5e9a05ac7b44d0f1987cf070.png",
+              "sha256": "292a208e632ad887b5507f1b45171709a3910d0fe916042951b688f6303b7b18",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-01/2026-10-01.ai.01.nvidia--openshell.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1206390571,
+          "full_name": "debpalash/VoiceStudio",
+          "owner": "debpalash",
+          "name": "VoiceStudio",
+          "html_url": "https://github.com/debpalash/VoiceStudio",
+          "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+          "language": "Python",
+          "stars": 50374,
+          "forks": 5592,
+          "open_issues": 77,
+          "watchers": 207,
+          "topics": [
+            "ai",
+            "audiobook",
+            "cuda",
+            "dubbing",
+            "elevenlabs-alternative",
+            "huggingface",
+            "local-first",
+            "mlx",
+            "omnivoice-studio",
+            "speech-to-text",
+            "tauri",
+            "text-to-speech",
+            "transcription",
+            "translate",
+            "tts",
+            "voice-ai",
+            "voice-cloning",
+            "voice-generation",
+            "voicestudio",
+            "workflow"
+          ],
+          "created_at": "2026-04-09T21:40:26Z",
+          "updated_at": "2026-09-30T23:31:27Z",
+          "pushed_at": "2026-09-29T15:45:28Z",
+          "daily_stars": 3481,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 86.76,
+          "star_delta": 1465,
+          "fork_delta": 122,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.22,
+            "relative_growth": 91.67,
+            "fork_growth": 100.0,
+            "total_stars": 30.56,
+            "activity": 51.34,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "VoiceStudio 把声音创作、克隆、配音和转写放到本地工作流中，输出语音、字幕或有声内容",
+            "highlights": [
+              "克隆现有声音或设计新声音",
+              "为视频生成带时间对齐的配音",
+              "用本地模型完成听写和语音转写"
+            ],
+            "audience": "需要制作配音、有声书、批量音频或整理语音内容的创作者与团队",
+            "capabilities": [
+              "克隆参考声音",
+              "设计合成声音",
+              "为视频制作配音",
+              "将语音转成文字",
+              "批量生成有声内容"
+            ],
+            "core_title": "把声音制作串成本地工作流",
+            "core_summary": "VoiceStudio 以桌面应用连接声音克隆、声音设计、视频配音、听写和模型管理，远程服务只作为可选项。",
+            "prerequisites": "macOS 或 Linux 可一键安装；从源码构建当前主分支需 Git、Node.js 22+、Bun、Rust/Cargo 和平台构建工具。",
+            "limitations": "不同引擎的硬件需求不同；远程服务是可选项，模型有各自许可证，克隆声音需取得许可。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "Models have their own licenses; review them before commercial use.",
+            "readme_sha": "01b36d48a7e11675f82c2dcff53aa5774bfc050f",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ],
+              "highlights": [
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ],
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ],
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ]
+              ],
+              "audience": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ],
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ],
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ],
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ],
+                [
+                  "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+                ]
+              ],
+              "core_title": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ],
+              "core_summary": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ],
+              "prerequisites": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ],
+              "limitations": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:01b36d48a7e11675f82c2dcff53aa5774bfc050f"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-01/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+          "publication_evidence": {
+            "full_name": "debpalash/VoiceStudio",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "01b36d48a7e11675f82c2dcff53aa5774bfc050f",
+              "source_url": "https://api.github.com/repos/debpalash/VoiceStudio/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-01/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+              "sha256": "c87aa15e86829a315c76cfd8cdcfd1cacb2ee2762b83814d273ea99ee44e2feb",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-01/2026-10-01.ai.02.debpalash--voicestudio.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1224172037,
+          "full_name": "t8y2/dbx",
+          "owner": "t8y2",
+          "name": "dbx",
+          "html_url": "https://github.com/t8y2/dbx",
+          "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
+          "language": "Rust",
+          "stars": 23153,
+          "forks": 2148,
+          "open_issues": 1286,
+          "watchers": 100,
+          "topics": [
+            "ai",
+            "cli",
+            "clickhouse",
+            "database",
+            "database-client",
+            "database-management",
+            "docker",
+            "gui",
+            "mcp",
+            "mongodb",
+            "mysql",
+            "postgresql",
+            "redis",
+            "rust",
+            "sql-server",
+            "sqlite",
+            "tauri",
+            "vue"
+          ],
+          "created_at": "2026-04-29T03:00:36Z",
+          "updated_at": "2026-09-30T23:23:16Z",
+          "pushed_at": "2026-09-30T20:07:15Z",
+          "daily_stars": 1133,
+          "weekly_stars": null,
+          "trending_rank_daily": 15,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 82.64,
+          "star_delta": 700,
+          "fork_delta": 43,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 88.89,
+            "relative_growth": 86.11,
+            "fork_growth": 86.11,
+            "total_stars": 22.22,
+            "activity": 100.0,
+            "trending_signal": 25.0
+          },
+          "summary": {
+            "one_line": "dbx 把多种数据库、消息中间件和 AI 查询能力集中到一个桌面、Docker 与 CLI 工具中",
+            "highlights": [
+              "连接并管理 100+ 数据库与多种中间件",
+              "用自然语言生成、解释和检查 SQL",
+              "通过 MCP 让 AI Agent 查询已配置的数据库"
+            ],
+            "audience": "需要跨数据库查询、数据迁移、消息排查或 AI 辅助运维的开发者与数据团队",
+            "capabilities": [
+              "连接多种数据库",
+              "编辑并执行 SQL",
+              "生成和检查 SQL",
+              "迁移与导出数据",
+              "通过 MCP 查询数据库"
+            ],
+            "core_title": "把数据库操作接到 AI 工作流",
+            "core_summary": "dbx 提供桌面端、Web、Docker 和 CLI，并通过独立 MCP Server 让兼容的 AI Agent 使用已配置连接执行数据库操作。",
+            "prerequisites": "开发或本地构建需 Node.js >= 18、pnpm 和 Rust >= 1.88；MCP Server 需要单独安装。",
+            "limitations": "MCP Server 不会随桌面端自动安装；执行写入操作需在 DBX 设置中配置允许范围和访问模式。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+              ],
+              "highlights": [
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ],
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ],
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ]
+              ],
+              "audience": [
+                "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ],
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ],
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ],
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ],
+                [
+                  "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+                ]
+              ],
+              "core_title": [
+                "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+              ],
+              "core_summary": [
+                "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+              ],
+              "prerequisites": [
+                "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+              ],
+              "limitations": [
+                "github.readme:a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-01/repo-47a1da9fa52e0c8183572f84-9f625b442bd1d874d4984587.png",
+          "publication_evidence": {
+            "full_name": "t8y2/dbx",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "a31b05f76b4043f3067a1f6d1a5349fa1dd3af3a",
+              "source_url": "https://api.github.com/repos/t8y2/dbx/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-01/repo-47a1da9fa52e0c8183572f84-9f625b442bd1d874d4984587.png",
+              "sha256": "19b3de1352b7c9afb4121dc13411a546f4f44fc9d0faaac40e0cf7b49326dd21",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-01/2026-10-01.ai.03.t8y2--dbx.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}

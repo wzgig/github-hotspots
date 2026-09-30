@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-10-01",
+  "window": {
+    "start": "2026-09-30",
+    "end": "2026-10-01"
+  },
+  "source_report": "reports/daily/2026-10-01.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-10-01",
+  "manifest": "reports/daily/assets/2026-10-01/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "NVIDIA/OpenShell",
+          "path": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.01.nvidia--openshell.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "debpalash/VoiceStudio",
+          "path": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.02.debpalash--voicestudio.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "t8y2/dbx",
+          "path": "reports/daily/assets/2026-10-01/2026-10-01.comprehensive.03.t8y2--dbx.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-01/2026-10-01.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "NVIDIA/OpenShell",
+          "path": "reports/daily/assets/2026-10-01/2026-10-01.ai.01.nvidia--openshell.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "debpalash/VoiceStudio",
+          "path": "reports/daily/assets/2026-10-01/2026-10-01.ai.02.debpalash--voicestudio.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "t8y2/dbx",
+          "path": "reports/daily/assets/2026-10-01/2026-10-01.ai.03.t8y2--dbx.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 82,
+    "issue_code": "D082",
+    "issue_label": "第82期",
+    "status": "official"
+  }
+}
