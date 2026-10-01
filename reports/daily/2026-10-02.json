@@ -1,0 +1,1465 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-10-02",
+  "window_start": "2026-10-01",
+  "window_end": "2026-10-02",
+  "generated_at": "2026-10-02T07:31:37+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-10-01 至 2026-10-02",
+  "publication": {
+    "issue_number": 83,
+    "issue_code": "D083",
+    "issue_label": "第83期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-10-02",
+    "manifest": "reports/daily/assets/2026-10-02/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NVIDIA/OpenShell",
+            "path": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.01.nvidia--openshell.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "mvschwarz/openrig",
+            "path": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.02.mvschwarz--openrig.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "heygen-com/hyperframes",
+            "path": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.03.heygen-com--hyperframes.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-02/2026-10-02.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NVIDIA/OpenShell",
+            "path": "reports/daily/assets/2026-10-02/2026-10-02.ai.01.nvidia--openshell.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "mvschwarz/openrig",
+            "path": "reports/daily/assets/2026-10-02/2026-10-02.ai.02.mvschwarz--openrig.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "heygen-com/hyperframes",
+            "path": "reports/daily/assets/2026-10-02/2026-10-02.ai.03.heygen-com--hyperframes.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 83,
+      "issue_code": "D083",
+      "issue_label": "第83期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1166129534,
+      "full_name": "NVIDIA/OpenShell",
+      "owner": "NVIDIA",
+      "name": "OpenShell",
+      "html_url": "https://github.com/NVIDIA/OpenShell",
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "language": "Rust",
+      "stars": 13991,
+      "forks": 1622,
+      "open_issues": 514,
+      "watchers": 70,
+      "topics": [],
+      "created_at": "2026-02-24T22:52:22Z",
+      "updated_at": "2026-10-01T23:30:51Z",
+      "pushed_at": "2026-10-01T23:25:51Z",
+      "daily_stars": 2503,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 92.65,
+      "star_delta": 1420,
+      "fork_delta": 81,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 98.53,
+        "fork_growth": 97.06,
+        "total_stars": 14.71,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "为自主 Agent 提供受策略控制的私有运行环境",
+        "highlights": [
+          "按策略隔离每个 Agent 的文件、进程和网络",
+          "在策略生效前检查新增访问风险",
+          "让凭据只用于获批的 API 端点"
+        ],
+        "audience": "需要让自主 Agent 访问文件、安装包和调用 API，同时控制数据、网络与凭据范围的团队",
+        "capabilities": [
+          "隔离每个 Agent 的文件、进程和网络访问",
+          "检查每次网络连接是否符合策略",
+          "把凭据限制在获批的 API 端点",
+          "在策略变更前标记新增访问风险",
+          "通过网关管理沙箱、策略和访问"
+        ],
+        "core_title": "给自主 Agent 加上可审查的权限边界",
+        "core_summary": "每个 Agent 在隔离沙箱中运行，内核拦截文件、系统调用和网络访问；策略变更先经形式化验证，再交给人工审核。",
+        "prerequisites": "需要 Linux、Apple Silicon 的 macOS，或实验性的 Windows WSL 2，并准备 Docker、Podman 或主机虚拟化。",
+        "limitations": "策略变更中的高风险新增访问会等待人工审核；Windows WSL 2 仍属实验支持。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+          ],
+          "highlights": [
+            [
+              "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+            ],
+            [
+              "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+            ],
+            [
+              "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+            ]
+          ],
+          "audience": [
+            "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+          ],
+          "capabilities": [
+            [
+              "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+            ],
+            [
+              "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+            ],
+            [
+              "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+            ],
+            [
+              "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+            ],
+            [
+              "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+            ]
+          ],
+          "core_title": [
+            "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+          ],
+          "core_summary": [
+            "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+          ],
+          "prerequisites": [
+            "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+          ],
+          "limitations": [
+            "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-02/repo-4a822c098ee8277f6133a84b-5e9a05ac7b44d0f1987cf070.png",
+      "publication_evidence": {
+        "full_name": "NVIDIA/OpenShell",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b",
+          "source_url": "https://api.github.com/repos/NVIDIA/OpenShell/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-02/repo-4a822c098ee8277f6133a84b-5e9a05ac7b44d0f1987cf070.png",
+          "sha256": "292a208e632ad887b5507f1b45171709a3910d0fe916042951b688f6303b7b18",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.01.nvidia--openshell.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1198124295,
+      "full_name": "mvschwarz/openrig",
+      "owner": "mvschwarz",
+      "name": "openrig",
+      "html_url": "https://github.com/mvschwarz/openrig",
+      "description": "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
+      "language": "TypeScript",
+      "stars": 3694,
+      "forks": 245,
+      "open_issues": 91,
+      "watchers": 14,
+      "topics": [
+        "agent-harness",
+        "agent-orchestration",
+        "agent-skills",
+        "ai-coding",
+        "claude-code",
+        "cli",
+        "codex-cli",
+        "multi-agent",
+        "multi-agent-systems",
+        "tmux",
+        "typescript"
+      ],
+      "created_at": "2026-04-01T06:22:40Z",
+      "updated_at": "2026-10-01T23:30:47Z",
+      "pushed_at": "2026-10-01T23:19:59Z",
+      "daily_stars": 640,
+      "weekly_stars": null,
+      "trending_rank_daily": 5,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 89.07,
+      "star_delta": 701,
+      "fork_delta": 35,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.59,
+        "relative_growth": 100.0,
+        "fork_growth": 88.97,
+        "total_stars": 8.82,
+        "activity": 100.0,
+        "trending_signal": 38.69
+      },
+      "summary": {
+        "one_line": "把多个编程 Agent 组织成可持续协作的团队",
+        "highlights": [
+          "把 Claude Code 和 Codex 放进同一团队",
+          "让 Agent 之间传递任务、消息和审查结果",
+          "重启后继续使用原有团队与上下文"
+        ],
+        "audience": "需要让 Claude Code、Codex 等编程 Agent 持续分工、沟通并复用上下文的开发者与技术负责人",
+        "capabilities": [
+          "用 YAML 定义 Agent 团队拓扑和角色关系",
+          "一条命令启动 tmux 会话与 Agent 团队",
+          "用终端界面查看座席、项目和运行状态",
+          "发现并接管已有的 Agent 会话",
+          "保存团队拓扑并在之后恢复"
+        ],
+        "core_title": "把终端会话组织成可恢复的 Agent 团队",
+        "core_summary": "OpenRig 由 CLI、终端界面、MCP 服务和本地守护进程组成，底层用 tmux 管理会话，让角色、上下文和团队状态保持在固定位置。",
+        "prerequisites": "需要 Node.js 22 或 24、tmux，以及 macOS 或 Linux；原生 Windows 尚不支持，WSL2 未经过测试。",
+        "limitations": "安装和启动会写入信任设置、可执行钩子及工作区文件；README 建议首次使用前备份相关文件。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "39599929ce797c977fdcebab9086c1a602a5cfd3",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+          ],
+          "highlights": [
+            [
+              "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+            ],
+            [
+              "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+            ],
+            [
+              "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+            ]
+          ],
+          "audience": [
+            "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+          ],
+          "capabilities": [
+            [
+              "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+            ],
+            [
+              "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+            ],
+            [
+              "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+            ],
+            [
+              "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+            ],
+            [
+              "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+            ]
+          ],
+          "core_title": [
+            "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+          ],
+          "core_summary": [
+            "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+          ],
+          "prerequisites": [
+            "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+          ],
+          "limitations": [
+            "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-02/repo-89d643cfdc6600412c415df4-4e2c6e613265a4a15facc870.png",
+      "publication_evidence": {
+        "full_name": "mvschwarz/openrig",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "39599929ce797c977fdcebab9086c1a602a5cfd3",
+          "source_url": "https://api.github.com/repos/mvschwarz/openrig/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-02/repo-89d643cfdc6600412c415df4-4e2c6e613265a4a15facc870.png",
+          "sha256": "0bbdb94e54fe16bcfa7a4c5ae82a4ddf217d78265d79641154ff1e496709bbbf",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.02.mvschwarz--openrig.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1177402105,
+      "full_name": "heygen-com/hyperframes",
+      "owner": "heygen-com",
+      "name": "hyperframes",
+      "html_url": "https://github.com/heygen-com/hyperframes",
+      "description": "Write HTML. Render video. Built for agents.",
+      "language": "TypeScript",
+      "stars": 55320,
+      "forks": 5017,
+      "open_issues": 219,
+      "watchers": 147,
+      "topics": [
+        "ai",
+        "animation",
+        "ffmpeg",
+        "framework",
+        "gsap",
+        "html",
+        "mcp",
+        "puppeteer",
+        "rendering",
+        "typescript",
+        "video"
+      ],
+      "created_at": "2026-03-10T01:51:06Z",
+      "updated_at": "2026-10-01T23:31:17Z",
+      "pushed_at": "2026-10-01T23:22:45Z",
+      "daily_stars": 624,
+      "weekly_stars": null,
+      "trending_rank_daily": 9,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 86.88,
+      "star_delta": 614,
+      "fork_delta": 44,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.12,
+        "relative_growth": 91.18,
+        "fork_growth": 91.18,
+        "total_stars": 19.12,
+        "activity": 100.0,
+        "trending_signal": 30.1
+      },
+      "summary": {
+        "one_line": "把 HTML、CSS 和媒体组合成可预览的 MP4 视频",
+        "highlights": [
+          "用 HTML 和 CSS 编排视频画面",
+          "实时预览并导出确定性的 MP4",
+          "让 AI Agent 按工作流生成视频"
+        ],
+        "audience": "需要用 HTML 制作产品宣传、PR 讲解、数据动画或社交视频的开发者与内容团队",
+        "capabilities": [
+          "初始化 HTML 视频项目",
+          "用时间属性编排画面和媒体轨道",
+          "在浏览器中实时预览 composition",
+          "检查项目并诊断关键帧动画",
+          "在本地、Docker 或 AWS Lambda 中渲染视频"
+        ],
+        "core_title": "用网页技术完成可重复的视频渲染",
+        "core_summary": "以 HTML 定义画面，用 data 属性标记时间和轨道；浏览器逐帧采集后交给 FFmpeg 编码，因此同一输入可得到相同视频。",
+        "prerequisites": "需要 Node.js 22+ 和 FFmpeg。",
+        "limitations": "本地渲染依赖无头 Chrome 与 FFmpeg；完整仓库开发还需要 Git LFS。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "973727c5af7ea2c8163a95a463f8627c3f8d8495",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+          ],
+          "highlights": [
+            [
+              "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+            ],
+            [
+              "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+            ],
+            [
+              "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+            ]
+          ],
+          "audience": [
+            "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+          ],
+          "capabilities": [
+            [
+              "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+            ],
+            [
+              "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+            ],
+            [
+              "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+            ],
+            [
+              "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+            ],
+            [
+              "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+            ]
+          ],
+          "core_title": [
+            "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+          ],
+          "core_summary": [
+            "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+          ],
+          "prerequisites": [
+            "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+          ],
+          "limitations": [
+            "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-02/repo-0495d9fe7b8c8525366761e8-6b4531d16c0755bae11b0b75.png",
+      "publication_evidence": {
+        "full_name": "heygen-com/hyperframes",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "973727c5af7ea2c8163a95a463f8627c3f8d8495",
+          "source_url": "https://api.github.com/repos/heygen-com/hyperframes/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-02/repo-0495d9fe7b8c8525366761e8-6b4531d16c0755bae11b0b75.png",
+          "sha256": "30de4678b45509114ec9f0fb383194fc8c861156e8785704e425bc73c760bcfa",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.03.heygen-com--hyperframes.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NVIDIA/OpenShell",
+            "path": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.01.nvidia--openshell.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "mvschwarz/openrig",
+            "path": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.02.mvschwarz--openrig.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "heygen-com/hyperframes",
+            "path": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.03.heygen-com--hyperframes.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1166129534,
+          "full_name": "NVIDIA/OpenShell",
+          "owner": "NVIDIA",
+          "name": "OpenShell",
+          "html_url": "https://github.com/NVIDIA/OpenShell",
+          "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+          "language": "Rust",
+          "stars": 13991,
+          "forks": 1622,
+          "open_issues": 514,
+          "watchers": 70,
+          "topics": [],
+          "created_at": "2026-02-24T22:52:22Z",
+          "updated_at": "2026-10-01T23:30:51Z",
+          "pushed_at": "2026-10-01T23:25:51Z",
+          "daily_stars": 2503,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.65,
+          "star_delta": 1420,
+          "fork_delta": 81,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 98.53,
+            "fork_growth": 97.06,
+            "total_stars": 14.71,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "为自主 Agent 提供受策略控制的私有运行环境",
+            "highlights": [
+              "按策略隔离每个 Agent 的文件、进程和网络",
+              "在策略生效前检查新增访问风险",
+              "让凭据只用于获批的 API 端点"
+            ],
+            "audience": "需要让自主 Agent 访问文件、安装包和调用 API，同时控制数据、网络与凭据范围的团队",
+            "capabilities": [
+              "隔离每个 Agent 的文件、进程和网络访问",
+              "检查每次网络连接是否符合策略",
+              "把凭据限制在获批的 API 端点",
+              "在策略变更前标记新增访问风险",
+              "通过网关管理沙箱、策略和访问"
+            ],
+            "core_title": "给自主 Agent 加上可审查的权限边界",
+            "core_summary": "每个 Agent 在隔离沙箱中运行，内核拦截文件、系统调用和网络访问；策略变更先经形式化验证，再交给人工审核。",
+            "prerequisites": "需要 Linux、Apple Silicon 的 macOS，或实验性的 Windows WSL 2，并准备 Docker、Podman 或主机虚拟化。",
+            "limitations": "策略变更中的高风险新增访问会等待人工审核；Windows WSL 2 仍属实验支持。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+              ],
+              "highlights": [
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ],
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ],
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ]
+              ],
+              "audience": [
+                "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ],
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ],
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ],
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ],
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ]
+              ],
+              "core_title": [
+                "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+              ],
+              "core_summary": [
+                "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+              ],
+              "prerequisites": [
+                "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+              ],
+              "limitations": [
+                "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-02/repo-4a822c098ee8277f6133a84b-5e9a05ac7b44d0f1987cf070.png",
+          "publication_evidence": {
+            "full_name": "NVIDIA/OpenShell",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b",
+              "source_url": "https://api.github.com/repos/NVIDIA/OpenShell/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-02/repo-4a822c098ee8277f6133a84b-5e9a05ac7b44d0f1987cf070.png",
+              "sha256": "292a208e632ad887b5507f1b45171709a3910d0fe916042951b688f6303b7b18",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.01.nvidia--openshell.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1198124295,
+          "full_name": "mvschwarz/openrig",
+          "owner": "mvschwarz",
+          "name": "openrig",
+          "html_url": "https://github.com/mvschwarz/openrig",
+          "description": "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
+          "language": "TypeScript",
+          "stars": 3694,
+          "forks": 245,
+          "open_issues": 91,
+          "watchers": 14,
+          "topics": [
+            "agent-harness",
+            "agent-orchestration",
+            "agent-skills",
+            "ai-coding",
+            "claude-code",
+            "cli",
+            "codex-cli",
+            "multi-agent",
+            "multi-agent-systems",
+            "tmux",
+            "typescript"
+          ],
+          "created_at": "2026-04-01T06:22:40Z",
+          "updated_at": "2026-10-01T23:30:47Z",
+          "pushed_at": "2026-10-01T23:19:59Z",
+          "daily_stars": 640,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.07,
+          "star_delta": 701,
+          "fork_delta": 35,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.59,
+            "relative_growth": 100.0,
+            "fork_growth": 88.97,
+            "total_stars": 8.82,
+            "activity": 100.0,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "把多个编程 Agent 组织成可持续协作的团队",
+            "highlights": [
+              "把 Claude Code 和 Codex 放进同一团队",
+              "让 Agent 之间传递任务、消息和审查结果",
+              "重启后继续使用原有团队与上下文"
+            ],
+            "audience": "需要让 Claude Code、Codex 等编程 Agent 持续分工、沟通并复用上下文的开发者与技术负责人",
+            "capabilities": [
+              "用 YAML 定义 Agent 团队拓扑和角色关系",
+              "一条命令启动 tmux 会话与 Agent 团队",
+              "用终端界面查看座席、项目和运行状态",
+              "发现并接管已有的 Agent 会话",
+              "保存团队拓扑并在之后恢复"
+            ],
+            "core_title": "把终端会话组织成可恢复的 Agent 团队",
+            "core_summary": "OpenRig 由 CLI、终端界面、MCP 服务和本地守护进程组成，底层用 tmux 管理会话，让角色、上下文和团队状态保持在固定位置。",
+            "prerequisites": "需要 Node.js 22 或 24、tmux，以及 macOS 或 Linux；原生 Windows 尚不支持，WSL2 未经过测试。",
+            "limitations": "安装和启动会写入信任设置、可执行钩子及工作区文件；README 建议首次使用前备份相关文件。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "39599929ce797c977fdcebab9086c1a602a5cfd3",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+              ],
+              "highlights": [
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ],
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ],
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ]
+              ],
+              "audience": [
+                "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ],
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ],
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ],
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ],
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ]
+              ],
+              "core_title": [
+                "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+              ],
+              "core_summary": [
+                "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+              ],
+              "prerequisites": [
+                "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+              ],
+              "limitations": [
+                "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-02/repo-89d643cfdc6600412c415df4-4e2c6e613265a4a15facc870.png",
+          "publication_evidence": {
+            "full_name": "mvschwarz/openrig",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "39599929ce797c977fdcebab9086c1a602a5cfd3",
+              "source_url": "https://api.github.com/repos/mvschwarz/openrig/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-02/repo-89d643cfdc6600412c415df4-4e2c6e613265a4a15facc870.png",
+              "sha256": "0bbdb94e54fe16bcfa7a4c5ae82a4ddf217d78265d79641154ff1e496709bbbf",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.02.mvschwarz--openrig.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1177402105,
+          "full_name": "heygen-com/hyperframes",
+          "owner": "heygen-com",
+          "name": "hyperframes",
+          "html_url": "https://github.com/heygen-com/hyperframes",
+          "description": "Write HTML. Render video. Built for agents.",
+          "language": "TypeScript",
+          "stars": 55320,
+          "forks": 5017,
+          "open_issues": 219,
+          "watchers": 147,
+          "topics": [
+            "ai",
+            "animation",
+            "ffmpeg",
+            "framework",
+            "gsap",
+            "html",
+            "mcp",
+            "puppeteer",
+            "rendering",
+            "typescript",
+            "video"
+          ],
+          "created_at": "2026-03-10T01:51:06Z",
+          "updated_at": "2026-10-01T23:31:17Z",
+          "pushed_at": "2026-10-01T23:22:45Z",
+          "daily_stars": 624,
+          "weekly_stars": null,
+          "trending_rank_daily": 9,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 86.88,
+          "star_delta": 614,
+          "fork_delta": 44,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.12,
+            "relative_growth": 91.18,
+            "fork_growth": 91.18,
+            "total_stars": 19.12,
+            "activity": 100.0,
+            "trending_signal": 30.1
+          },
+          "summary": {
+            "one_line": "把 HTML、CSS 和媒体组合成可预览的 MP4 视频",
+            "highlights": [
+              "用 HTML 和 CSS 编排视频画面",
+              "实时预览并导出确定性的 MP4",
+              "让 AI Agent 按工作流生成视频"
+            ],
+            "audience": "需要用 HTML 制作产品宣传、PR 讲解、数据动画或社交视频的开发者与内容团队",
+            "capabilities": [
+              "初始化 HTML 视频项目",
+              "用时间属性编排画面和媒体轨道",
+              "在浏览器中实时预览 composition",
+              "检查项目并诊断关键帧动画",
+              "在本地、Docker 或 AWS Lambda 中渲染视频"
+            ],
+            "core_title": "用网页技术完成可重复的视频渲染",
+            "core_summary": "以 HTML 定义画面，用 data 属性标记时间和轨道；浏览器逐帧采集后交给 FFmpeg 编码，因此同一输入可得到相同视频。",
+            "prerequisites": "需要 Node.js 22+ 和 FFmpeg。",
+            "limitations": "本地渲染依赖无头 Chrome 与 FFmpeg；完整仓库开发还需要 Git LFS。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "973727c5af7ea2c8163a95a463f8627c3f8d8495",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+              ],
+              "highlights": [
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ],
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ],
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ]
+              ],
+              "audience": [
+                "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ],
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ],
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ],
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ],
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ]
+              ],
+              "core_title": [
+                "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+              ],
+              "core_summary": [
+                "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+              ],
+              "prerequisites": [
+                "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+              ],
+              "limitations": [
+                "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-02/repo-0495d9fe7b8c8525366761e8-6b4531d16c0755bae11b0b75.png",
+          "publication_evidence": {
+            "full_name": "heygen-com/hyperframes",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "973727c5af7ea2c8163a95a463f8627c3f8d8495",
+              "source_url": "https://api.github.com/repos/heygen-com/hyperframes/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-02/repo-0495d9fe7b8c8525366761e8-6b4531d16c0755bae11b0b75.png",
+              "sha256": "30de4678b45509114ec9f0fb383194fc8c861156e8785704e425bc73c760bcfa",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.03.heygen-com--hyperframes.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-02/2026-10-02.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "NVIDIA/OpenShell",
+            "path": "reports/daily/assets/2026-10-02/2026-10-02.ai.01.nvidia--openshell.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "mvschwarz/openrig",
+            "path": "reports/daily/assets/2026-10-02/2026-10-02.ai.02.mvschwarz--openrig.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "heygen-com/hyperframes",
+            "path": "reports/daily/assets/2026-10-02/2026-10-02.ai.03.heygen-com--hyperframes.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1166129534,
+          "full_name": "NVIDIA/OpenShell",
+          "owner": "NVIDIA",
+          "name": "OpenShell",
+          "html_url": "https://github.com/NVIDIA/OpenShell",
+          "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+          "language": "Rust",
+          "stars": 13991,
+          "forks": 1622,
+          "open_issues": 514,
+          "watchers": 70,
+          "topics": [],
+          "created_at": "2026-02-24T22:52:22Z",
+          "updated_at": "2026-10-01T23:30:51Z",
+          "pushed_at": "2026-10-01T23:25:51Z",
+          "daily_stars": 2503,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.5,
+          "star_delta": 1420,
+          "fork_delta": 81,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 96.67,
+            "fork_growth": 93.33,
+            "total_stars": 6.67,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "为自主 AI Agent 提供受策略约束的隔离运行环境，限制它能访问的文件、网络和凭据",
+            "highlights": [
+              "隔离 Agent，限制文件、系统调用和网络访问",
+              "策略变更先验证，再交给人确认",
+              "通过网关、CLI 和 SDK 管理沙箱"
+            ],
+            "audience": "需要为自主 AI Agent 设定文件、网络和凭据边界的开发者与平台团队",
+            "capabilities": [
+              "按策略限制 Agent 的文件访问范围",
+              "隔离运行 Agent 并限制系统调用",
+              "拦截并审核 Agent 的网络连接",
+              "在策略变更前检查新增访问权限",
+              "通过网关和 SDK 接入沙箱能力"
+            ],
+            "core_title": "给自主 Agent 划定可验证的活动边界",
+            "core_summary": "它把 Agent 放进隔离沙箱，由内核级控制检查文件、系统调用和网络请求；策略变更还要经过形式化验证并等待人工确认。",
+            "prerequisites": "需要 Linux、Apple Silicon Mac，或实验性的 Windows WSL 2，并准备 Docker、Podman 或主机虚拟化。",
+            "limitations": "策略放行新增主机、凭据或 API 权限前会等待人工确认；软件还会收集可关闭的匿名运行遥测。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+              ],
+              "highlights": [
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ],
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ],
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ]
+              ],
+              "audience": [
+                "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ],
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ],
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ],
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ],
+                [
+                  "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+                ]
+              ],
+              "core_title": [
+                "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+              ],
+              "core_summary": [
+                "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+              ],
+              "prerequisites": [
+                "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+              ],
+              "limitations": [
+                "github.readme:e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-02/repo-4a822c098ee8277f6133a84b-5e9a05ac7b44d0f1987cf070.png",
+          "publication_evidence": {
+            "full_name": "NVIDIA/OpenShell",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "e0aaa43641b41a8e7cd4a2f8ffcb345a356e754b",
+              "source_url": "https://api.github.com/repos/NVIDIA/OpenShell/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-02/repo-4a822c098ee8277f6133a84b-5e9a05ac7b44d0f1987cf070.png",
+              "sha256": "292a208e632ad887b5507f1b45171709a3910d0fe916042951b688f6303b7b18",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-02/2026-10-02.ai.01.nvidia--openshell.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1198124295,
+          "full_name": "mvschwarz/openrig",
+          "owner": "mvschwarz",
+          "name": "openrig",
+          "html_url": "https://github.com/mvschwarz/openrig",
+          "description": "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
+          "language": "TypeScript",
+          "stars": 3694,
+          "forks": 245,
+          "open_issues": 91,
+          "watchers": 14,
+          "topics": [
+            "agent-harness",
+            "agent-orchestration",
+            "agent-skills",
+            "ai-coding",
+            "claude-code",
+            "cli",
+            "codex-cli",
+            "multi-agent",
+            "multi-agent-systems",
+            "tmux",
+            "typescript"
+          ],
+          "created_at": "2026-04-01T06:22:40Z",
+          "updated_at": "2026-10-01T23:30:47Z",
+          "pushed_at": "2026-10-01T23:19:59Z",
+          "daily_stars": 640,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 86.6,
+          "star_delta": 701,
+          "fork_delta": 35,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.33,
+            "relative_growth": 100.0,
+            "fork_growth": 80.0,
+            "total_stars": 0.0,
+            "activity": 100.0,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "把 Claude Code、Codex 等编程 Agent 组织成可持续运行、分工协作的本地团队",
+            "highlights": [
+              "用 YAML 编排 Agent 的角色、关系和上下文",
+              "在终端界面查看团队拓扑、状态与工作流",
+              "保存、恢复并管理长期运行的 Agent 团队"
+            ],
+            "audience": "需要让 Claude Code、Codex 等编程 Agent 组成长期协作团队的开发者和技术负责人",
+            "capabilities": [
+              "用 YAML 定义 Agent 团队拓扑",
+              "启动并查看多个 Agent 会话",
+              "让 Agent 通过消息和队列协作",
+              "发现并接管已有 tmux 会话",
+              "保存团队状态并在重启后恢复"
+            ],
+            "core_title": "把终端里的 Agent 变成持久团队",
+            "core_summary": "OpenRig 由本地守护进程、CLI、终端界面和 MCP 服务组成，以 tmux 管理各个 Agent 座位；团队拓扑、角色和上下文可以持续保存与恢复。",
+            "prerequisites": "需要 Node.js 22 或 24、tmux，以及 macOS 或 Linux；还要准备并登录所选的 Claude Code 或 Codex。",
+            "limitations": "会写入 tmux、Provider 信任设置、Hook 和工作区文件；原生 Windows 尚不支持，WSL2 也未测试。使用前需备份相关文件。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "39599929ce797c977fdcebab9086c1a602a5cfd3",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+              ],
+              "highlights": [
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ],
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ],
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ]
+              ],
+              "audience": [
+                "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ],
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ],
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ],
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ],
+                [
+                  "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+                ]
+              ],
+              "core_title": [
+                "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+              ],
+              "core_summary": [
+                "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+              ],
+              "prerequisites": [
+                "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+              ],
+              "limitations": [
+                "github.readme:39599929ce797c977fdcebab9086c1a602a5cfd3"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-02/repo-89d643cfdc6600412c415df4-4e2c6e613265a4a15facc870.png",
+          "publication_evidence": {
+            "full_name": "mvschwarz/openrig",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "39599929ce797c977fdcebab9086c1a602a5cfd3",
+              "source_url": "https://api.github.com/repos/mvschwarz/openrig/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-02/repo-89d643cfdc6600412c415df4-4e2c6e613265a4a15facc870.png",
+              "sha256": "0bbdb94e54fe16bcfa7a4c5ae82a4ddf217d78265d79641154ff1e496709bbbf",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-02/2026-10-02.ai.02.mvschwarz--openrig.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1177402105,
+          "full_name": "heygen-com/hyperframes",
+          "owner": "heygen-com",
+          "name": "hyperframes",
+          "html_url": "https://github.com/heygen-com/hyperframes",
+          "description": "Write HTML. Render video. Built for agents.",
+          "language": "TypeScript",
+          "stars": 55320,
+          "forks": 5017,
+          "open_issues": 219,
+          "watchers": 147,
+          "topics": [
+            "ai",
+            "animation",
+            "ffmpeg",
+            "framework",
+            "gsap",
+            "html",
+            "mcp",
+            "puppeteer",
+            "rendering",
+            "typescript",
+            "video"
+          ],
+          "created_at": "2026-03-10T01:51:06Z",
+          "updated_at": "2026-10-01T23:31:17Z",
+          "pushed_at": "2026-10-01T23:22:45Z",
+          "daily_stars": 624,
+          "weekly_stars": null,
+          "trending_rank_daily": 9,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 83.5,
+          "star_delta": 614,
+          "fork_delta": 44,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 90.0,
+            "relative_growth": 90.0,
+            "fork_growth": 83.33,
+            "total_stars": 13.33,
+            "activity": 100.0,
+            "trending_signal": 30.1
+          },
+          "summary": {
+            "one_line": "把 HTML、CSS、媒体和动画组合成可重复渲染的 MP4 视频，适合人工或 Agent 编排",
+            "highlights": [
+              "用 HTML、CSS 和媒体文件搭建视频画面",
+              "接入可跳转的动画、字幕、图表和转场",
+              "在本地或云端批量渲染 MP4"
+            ],
+            "audience": "需要把网页、数据、动画和媒体素材编排成可重复渲染视频的前端开发者与内容团队",
+            "capabilities": [
+              "用 HTML 和 CSS 编排视频画面",
+              "为元素设置时间轴和动画轨道",
+              "预览并检查视频组合内容",
+              "将组合渲染为 MP4 视频",
+              "接入媒体、字幕、图表和转场组件"
+            ],
+            "core_title": "用 HTML 写视频，再逐帧渲染成 MP4",
+            "core_summary": "HyperFrames 把 HTML 组合交给无头 Chrome逐帧定位，再用 FFmpeg 编码和混音；同一份输入可在本地、Docker 或 AWS Lambda 中重复渲染。",
+            "prerequisites": "需要 Node.js 22+ 和 FFmpeg；可通过 CLI 本地预览、检查并渲染视频。",
+            "limitations": "需要 Node.js 22+ 和 FFmpeg；完整仓库开发还需要 Git LFS。不同动画运行时需遵守可定位到具体帧的编排方式。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "973727c5af7ea2c8163a95a463f8627c3f8d8495",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+              ],
+              "highlights": [
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ],
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ],
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ]
+              ],
+              "audience": [
+                "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ],
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ],
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ],
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ],
+                [
+                  "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+                ]
+              ],
+              "core_title": [
+                "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+              ],
+              "core_summary": [
+                "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+              ],
+              "prerequisites": [
+                "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+              ],
+              "limitations": [
+                "github.readme:973727c5af7ea2c8163a95a463f8627c3f8d8495"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-02/repo-0495d9fe7b8c8525366761e8-6b4531d16c0755bae11b0b75.png",
+          "publication_evidence": {
+            "full_name": "heygen-com/hyperframes",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "973727c5af7ea2c8163a95a463f8627c3f8d8495",
+              "source_url": "https://api.github.com/repos/heygen-com/hyperframes/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-02/repo-0495d9fe7b8c8525366761e8-6b4531d16c0755bae11b0b75.png",
+              "sha256": "30de4678b45509114ec9f0fb383194fc8c861156e8785704e425bc73c760bcfa",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-02/2026-10-02.ai.03.heygen-com--hyperframes.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}

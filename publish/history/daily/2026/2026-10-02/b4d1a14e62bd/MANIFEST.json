@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "b4d1a14e62bd8c0c691431b9b4015f3a7ce16e7e69b329660dc4dc4d67578ea8",
+  "checklist_sha256": "41a7f8aee1345488999fda7bc4395efb36d11ece6cf501e16329b4df9e8a9aaf",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-10-02",
+  "generated_at": "2026-10-02T07:34:13.453974+08:00",
+  "issue": {
+    "number": 83,
+    "code": "D083",
+    "stem": "D083-2026-10-02",
+    "label": "第83期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-10-02.json",
+    "report_sha256": "a8102f0eb0c7485d7d262a730b311397b7b7eecbea3ea2c1b9570c09ed1dee6f",
+    "poster_manifest": "reports/daily/assets/2026-10-02/manifest.json",
+    "poster_manifest_sha256": "690d449e92039796381b5f7cf5ec323411934b7b89ce7ca53a7e15220515b0c0",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D083-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 22,
+      "title_sha256": "65e4adf4cd457c84dd93f3a90e6a8ef09d29c96c673d17ea79fcbce33384096b",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 299,
+      "caption_sha256": "934547f6d3b8a67b1d1d4079e16177f554d0eacabbf81b4c68c1acded99a034b",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "575d02454113bdf2d79a3c0b0044c4399916b1fc149ed8a97b2c976c6fd6888f",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.cover.png",
+          "sha256": "2a3166b1080db422c3a351f66dd09bb4ea9e4fa8812869a3f5cd8949e6b15555",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.01.nvidia--openshell.png",
+          "sha256": "3ea98f3e5af1aa889e5be388ed9fe58364259dc0a009b0e029ca1998b88d3bc8",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "NVIDIA/OpenShell",
+          "publication_path": "images/02-rank-01-nvidia-openshell.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.02.mvschwarz--openrig.png",
+          "sha256": "269a38c875498f780d4ff58dfb326727f4d15d49125dc489730b801f89a4a255",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "mvschwarz/openrig",
+          "publication_path": "images/03-rank-02-mvschwarz-openrig.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-02/2026-10-02.comprehensive.03.heygen-com--hyperframes.png",
+          "sha256": "3c9ef246b8427b88a78a966abdce22d9f7f84d5b38c62df3dc45e2803d3b6dc4",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "heygen-com/hyperframes",
+          "publication_path": "images/04-rank-03-heygen-com-hyperframes.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D083-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 25,
+      "title_sha256": "de552e3de3e4b03f13bf9793798afbd2997c9ccad71c3e6dbd35fcd256150e36",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 355,
+      "caption_sha256": "a1566455da8a26dfe7f320461af7e67f458f81ea332f412687cb51d5784e29ce",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "d7f77f0908fc4fa0a38321be057273471ed88fedee0c43e362515e975b0e002b",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-10-02/2026-10-02.ai.cover.png",
+          "sha256": "74de62c5cde4a6a462f0c4da9213b31a58d292bb3abeec368e338890402d6bae",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-02/2026-10-02.ai.01.nvidia--openshell.png",
+          "sha256": "d1277ea8941aade21fdd3d0c918747ce8417d34f7e8cfbdd4cdfe98766e2ee9d",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "NVIDIA/OpenShell",
+          "publication_path": "images/02-rank-01-nvidia-openshell.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-02/2026-10-02.ai.02.mvschwarz--openrig.png",
+          "sha256": "db487580643a3e1742b27973f5af8a92de2c606a9f98f59639065cec06631e77",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "mvschwarz/openrig",
+          "publication_path": "images/03-rank-02-mvschwarz-openrig.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-02/2026-10-02.ai.03.heygen-com--hyperframes.png",
+          "sha256": "4604136f35aaf9434078ec79ce573ce9b1b010d6491951e622f758d166ff6594",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "heygen-com/hyperframes",
+          "publication_path": "images/04-rank-03-heygen-com-hyperframes.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-10-02",
+    "revision": "b4d1a14e62bd",
+    "image_policy": "repository-source-reference"
+  }
+}
