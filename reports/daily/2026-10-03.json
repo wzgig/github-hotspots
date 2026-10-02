@@ -1,0 +1,1354 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-10-03",
+  "window_start": "2026-10-02",
+  "window_end": "2026-10-03",
+  "generated_at": "2026-10-03T07:31:29+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-10-02 至 2026-10-03",
+  "publication": {
+    "issue_number": 84,
+    "issue_code": "D084",
+    "issue_label": "第84期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "3 个上榜项目未获取到 Owner 头像，海报已使用身份占位图",
+    "3 个上榜项目未获取到 README，相关文案将使用受控回退"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-10-03",
+    "manifest": "reports/daily/assets/2026-10-03/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.01.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "pbakaus/impeccable",
+            "path": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.02.pbakaus--impeccable.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.03.affaan-m--ecc.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-03/2026-10-03.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-03/2026-10-03.ai.01.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "pbakaus/impeccable",
+            "path": "reports/daily/assets/2026-10-03/2026-10-03.ai.02.pbakaus--impeccable.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-03/2026-10-03.ai.03.affaan-m--ecc.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 84,
+      "issue_code": "D084",
+      "issue_label": "第84期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1266797999,
+      "full_name": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "html_url": "https://github.com/DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "language": "JavaScript",
+      "stars": 151759,
+      "forks": 8140,
+      "open_issues": 304,
+      "watchers": 151759,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "cursor-rules",
+        "developer-tools",
+        "llm",
+        "prompt-engineering",
+        "yagni"
+      ],
+      "created_at": "2026-06-12T00:52:37Z",
+      "updated_at": "2026-10-02T23:29:30Z",
+      "pushed_at": "2026-10-02T23:24:09Z",
+      "daily_stars": 1429,
+      "weekly_stars": null,
+      "trending_rank_daily": 4,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 92.82,
+      "star_delta": 1305,
+      "fork_delta": 63,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 96.0,
+        "fork_growth": 84.0,
+        "total_stars": 61.33,
+        "activity": 100.0,
+        "trending_signal": 43.07
+      },
+      "summary": {
+        "one_line": "ponytail 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+        "highlights": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+        "capabilities": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "core_title": "整理和复用提示词设计方法",
+        "core_summary": "ponytail 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "DietrichGebert/ponytail",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.01.dietrichgebert--ponytail.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1097346685,
+      "full_name": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "html_url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "JavaScript",
+      "stars": 74297,
+      "forks": 4478,
+      "open_issues": 58,
+      "watchers": 202,
+      "topics": [],
+      "created_at": "2025-11-16T01:52:04Z",
+      "updated_at": "2026-10-02T23:30:18Z",
+      "pushed_at": "2026-10-02T22:44:52Z",
+      "daily_stars": 717,
+      "weekly_stars": null,
+      "trending_rank_daily": 5,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 88.14,
+      "star_delta": 654,
+      "fork_delta": 41,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.0,
+        "relative_growth": 94.67,
+        "fork_growth": 78.67,
+        "total_stars": 28.0,
+        "activity": 100.0,
+        "trending_signal": 38.69
+      },
+      "summary": {
+        "one_line": "impeccable 的用途证据不足，需要先查看仓库 README",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "impeccable 的用途证据不足，需要先查看仓库 README",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "pbakaus/impeccable",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.02.pbakaus--impeccable.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 271289,
+      "forks": 40526,
+      "open_issues": 339,
+      "watchers": 271289,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-10-02T23:19:13Z",
+      "pushed_at": "2026-10-02T02:01:14Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 84.5,
+      "star_delta": 598,
+      "fork_delta": 60,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.67,
+        "relative_growth": 86.67,
+        "fork_growth": 82.67,
+        "total_stars": 88.0,
+        "activity": 71.65,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "主要任务是把重复的开发操作整理成自动化流程；ECC 还能减少手动执行和重复配置",
+        "highlights": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "audience": "需要减少重复操作并统一研发流程的软件团队",
+        "capabilities": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "core_title": "把重复的开发操作整理成自动化流程",
+        "core_summary": "主要任务是把重复的开发操作整理成自动化流程；ECC 还能减少手动执行和重复配置",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.03.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.01.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "pbakaus/impeccable",
+            "path": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.02.pbakaus--impeccable.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.03.affaan-m--ecc.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 151759,
+          "forks": 8140,
+          "open_issues": 304,
+          "watchers": 151759,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-10-02T23:29:30Z",
+          "pushed_at": "2026-10-02T23:24:09Z",
+          "daily_stars": 1429,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 92.82,
+          "star_delta": 1305,
+          "fork_delta": 63,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 96.0,
+            "fork_growth": 84.0,
+            "total_stars": 61.33,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "ponytail 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "ponytail 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.01.dietrichgebert--ponytail.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1097346685,
+          "full_name": "pbakaus/impeccable",
+          "owner": "pbakaus",
+          "name": "impeccable",
+          "html_url": "https://github.com/pbakaus/impeccable",
+          "description": "The design language that makes your AI harness better at design.",
+          "language": "JavaScript",
+          "stars": 74297,
+          "forks": 4478,
+          "open_issues": 58,
+          "watchers": 202,
+          "topics": [],
+          "created_at": "2025-11-16T01:52:04Z",
+          "updated_at": "2026-10-02T23:30:18Z",
+          "pushed_at": "2026-10-02T22:44:52Z",
+          "daily_stars": 717,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.14,
+          "star_delta": 654,
+          "fork_delta": 41,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.0,
+            "relative_growth": 94.67,
+            "fork_growth": 78.67,
+            "total_stars": 28.0,
+            "activity": 100.0,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "impeccable 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "impeccable 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "pbakaus/impeccable",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.02.pbakaus--impeccable.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 271289,
+          "forks": 40526,
+          "open_issues": 339,
+          "watchers": 271289,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-10-02T23:19:13Z",
+          "pushed_at": "2026-10-02T02:01:14Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 84.5,
+          "star_delta": 598,
+          "fork_delta": 60,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.67,
+            "relative_growth": 86.67,
+            "fork_growth": 82.67,
+            "total_stars": 88.0,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "主要任务是把重复的开发操作整理成自动化流程；ECC 还能减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "主要任务是把重复的开发操作整理成自动化流程；ECC 还能减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.03.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-03/2026-10-03.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-03/2026-10-03.ai.01.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "pbakaus/impeccable",
+            "path": "reports/daily/assets/2026-10-03/2026-10-03.ai.02.pbakaus--impeccable.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-03/2026-10-03.ai.03.affaan-m--ecc.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 151759,
+          "forks": 8140,
+          "open_issues": 304,
+          "watchers": 151759,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-10-02T23:29:30Z",
+          "pushed_at": "2026-10-02T23:24:09Z",
+          "daily_stars": 1429,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 93.19,
+          "star_delta": 1305,
+          "fork_delta": 63,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 96.55,
+            "fork_growth": 93.1,
+            "total_stars": 48.28,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "ponytail 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "ponytail 可以整理和复用提示词设计方法，同时帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:positioning"
+              ],
+              "highlights": [
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ]
+              ],
+              "audience": [
+                "candidate:positioning"
+              ],
+              "capabilities": [
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ]
+              ],
+              "core_title": [
+                "candidate:positioning"
+              ],
+              "core_summary": [
+                "candidate:positioning"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-03/2026-10-03.ai.01.dietrichgebert--ponytail.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1097346685,
+          "full_name": "pbakaus/impeccable",
+          "owner": "pbakaus",
+          "name": "impeccable",
+          "html_url": "https://github.com/pbakaus/impeccable",
+          "description": "The design language that makes your AI harness better at design.",
+          "language": "JavaScript",
+          "stars": 74297,
+          "forks": 4478,
+          "open_issues": 58,
+          "watchers": 202,
+          "topics": [],
+          "created_at": "2025-11-16T01:52:04Z",
+          "updated_at": "2026-10-02T23:30:18Z",
+          "pushed_at": "2026-10-02T22:44:52Z",
+          "daily_stars": 717,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 86.59,
+          "star_delta": 654,
+          "fork_delta": 41,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.1,
+            "relative_growth": 93.1,
+            "fork_growth": 86.21,
+            "total_stars": 17.24,
+            "activity": 100.0,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "impeccable 的用途证据不足，需要先查看仓库 README",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "impeccable 的用途证据不足，需要先查看仓库 README",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:growth_signal"
+              ],
+              "highlights": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "audience": [
+                "candidate:growth_signal"
+              ],
+              "capabilities": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "core_title": [
+                "candidate:growth_signal"
+              ],
+              "core_summary": [
+                "candidate:growth_signal"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "pbakaus/impeccable",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-03/2026-10-03.ai.02.pbakaus--impeccable.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 271289,
+          "forks": 40526,
+          "open_issues": 339,
+          "watchers": 271289,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-10-02T23:19:13Z",
+          "pushed_at": "2026-10-02T02:01:14Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 82.17,
+          "star_delta": 598,
+          "fork_delta": 60,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 89.66,
+            "relative_growth": 82.76,
+            "fork_growth": 89.66,
+            "total_stars": 93.1,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "主要任务是把重复的开发操作整理成自动化流程；ECC 还能减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "主要任务是把重复的开发操作整理成自动化流程；ECC 还能减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:tech_stack"
+              ],
+              "highlights": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "audience": [
+                "candidate:tech_stack"
+              ],
+              "capabilities": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "core_title": [
+                "candidate:tech_stack"
+              ],
+              "core_summary": [
+                "candidate:tech_stack"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-03/2026-10-03.ai.03.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}

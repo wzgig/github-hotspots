@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-10-03",
+  "window": {
+    "start": "2026-10-02",
+    "end": "2026-10-03"
+  },
+  "source_report": "reports/daily/2026-10-03.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-10-03",
+  "manifest": "reports/daily/assets/2026-10-03/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "DietrichGebert/ponytail",
+          "path": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.01.dietrichgebert--ponytail.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "pbakaus/impeccable",
+          "path": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.02.pbakaus--impeccable.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "affaan-m/ECC",
+          "path": "reports/daily/assets/2026-10-03/2026-10-03.comprehensive.03.affaan-m--ecc.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-03/2026-10-03.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "DietrichGebert/ponytail",
+          "path": "reports/daily/assets/2026-10-03/2026-10-03.ai.01.dietrichgebert--ponytail.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "pbakaus/impeccable",
+          "path": "reports/daily/assets/2026-10-03/2026-10-03.ai.02.pbakaus--impeccable.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "affaan-m/ECC",
+          "path": "reports/daily/assets/2026-10-03/2026-10-03.ai.03.affaan-m--ecc.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 84,
+    "issue_code": "D084",
+    "issue_label": "第84期",
+    "status": "official"
+  }
+}
