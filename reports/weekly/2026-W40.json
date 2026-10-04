@@ -1,0 +1,2957 @@
+{
+  "schema_version": 3,
+  "period": "weekly",
+  "run_date": "2026-10-04",
+  "window_start": "2026-09-27",
+  "window_end": "2026-10-04",
+  "generated_at": "2026-10-04T16:40:05+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-09-27 至 2026-10-04",
+  "publication": {
+    "issue_number": 13,
+    "issue_code": "W013",
+    "issue_label": "第13期",
+    "status": "official"
+  },
+  "data_quality": "中高：快照与 Trending 混合",
+  "warnings": [
+    "综合主榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号",
+    "AI 专题榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/weekly/assets/2026-W40",
+    "manifest": "reports/weekly/assets/2026-W40/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "paperclipai/paperclip",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.01.paperclipai--paperclip.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "vectorize-io/hindsight",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.02.vectorize-io--hindsight.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.03.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "rohitg00/ai-engineering-from-scratch",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.04.rohitg00--ai-engineering-from-scratch.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.05.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.06.affaan-m--ecc.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.07.mattpocock--skills.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W40/2026-W40.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "vectorize-io/hindsight",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.01.vectorize-io--hindsight.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.02.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "rohitg00/ai-engineering-from-scratch",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.03.rohitg00--ai-engineering-from-scratch.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.04.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.05.affaan-m--ecc.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.06.firecrawl--firecrawl.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "pbakaus/impeccable",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.07.pbakaus--impeccable.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 13,
+      "issue_code": "W013",
+      "issue_label": "第13期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1170821064,
+      "full_name": "paperclipai/paperclip",
+      "owner": "paperclipai",
+      "name": "paperclip",
+      "html_url": "https://github.com/paperclipai/paperclip",
+      "description": "The open-source app everyone uses to manage agents at work",
+      "language": "TypeScript",
+      "stars": 96868,
+      "forks": 16400,
+      "open_issues": 6344,
+      "watchers": 459,
+      "topics": [],
+      "created_at": "2026-03-02T15:01:51Z",
+      "updated_at": "2026-10-04T08:38:50Z",
+      "pushed_at": "2026-10-04T08:38:16Z",
+      "daily_stars": null,
+      "weekly_stars": 10722,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 1,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 95.95,
+      "star_delta": 9558,
+      "fork_delta": 970,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.2,
+        "relative_growth": 96.4,
+        "fork_growth": 99.1,
+        "total_stars": 53.15,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "公开信息不足，暂不能准确说明 paperclip 的具体用途",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "公开信息不足，暂不能准确说明 paperclip 的具体用途",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W40/repo-2d4d3afa6fb542f6e11751f7-83308370ad3992acccf8b2bc.png",
+      "publication_evidence": {
+        "full_name": "paperclipai/paperclip",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W40/repo-2d4d3afa6fb542f6e11751f7-83308370ad3992acccf8b2bc.png",
+          "sha256": "0f61fc3bef525ee229bdc5091f048b98f3d9d9cae49e97da257915f28dde319a",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.01.paperclipai--paperclip.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1086419061,
+      "full_name": "vectorize-io/hindsight",
+      "owner": "vectorize-io",
+      "name": "hindsight",
+      "html_url": "https://github.com/vectorize-io/hindsight",
+      "description": "Hindsight: Agent Memory That Learns",
+      "language": "Python",
+      "stars": 45231,
+      "forks": 5901,
+      "open_issues": 313,
+      "watchers": 92,
+      "topics": [
+        "agentic-ai",
+        "agents",
+        "ai-memory",
+        "memory"
+      ],
+      "created_at": "2025-10-30T11:49:48Z",
+      "updated_at": "2026-10-04T08:39:41Z",
+      "pushed_at": "2026-10-02T17:43:57Z",
+      "daily_stars": null,
+      "weekly_stars": 14507,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 2,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 94.27,
+      "star_delta": 13045,
+      "fork_delta": 2329,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 99.1,
+        "relative_growth": 99.1,
+        "fork_growth": 100.0,
+        "total_stars": 47.75,
+        "activity": 93.55,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 hindsight；它能把模型能力接入可重复的任务流程",
+        "highlights": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+        "capabilities": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "core_title": "搭建能够连续执行多步任务的 AI Agent",
+        "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 hindsight；它能把模型能力接入可重复的任务流程",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W40/repo-57687486696d14936ebf048b-fb689548e67aaaab9b947386.png",
+      "publication_evidence": {
+        "full_name": "vectorize-io/hindsight",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W40/repo-57687486696d14936ebf048b-fb689548e67aaaab9b947386.png",
+          "sha256": "a3e3b313d5d57ae75e233d27c63c54a0e0d844a1fbd6dd2d02a35360786f56f9",
+          "width": 100,
+          "height": 100
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.02.vectorize-io--hindsight.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1333065091,
+      "full_name": "deepseek-ai/deepseek-harness",
+      "owner": "deepseek-ai",
+      "name": "deepseek-harness",
+      "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+      "description": "DeepSeek Harness: Everything is a Plugin.",
+      "language": "TypeScript",
+      "stars": 243093,
+      "forks": 29143,
+      "open_issues": 0,
+      "watchers": 243093,
+      "topics": [
+        "ai-agents",
+        "cordis",
+        "dsh",
+        "dsh-plugin"
+      ],
+      "created_at": "2026-08-13T11:56:32Z",
+      "updated_at": "2026-10-04T08:35:49Z",
+      "pushed_at": "2026-10-03T06:02:48Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 89.67,
+      "star_delta": 6242,
+      "fork_delta": 669,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.3,
+        "relative_growth": 90.99,
+        "fork_growth": 90.99,
+        "total_stars": 87.39,
+        "activity": 93.55,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；deepseek-harness 还能把模型能力接入可重复的任务流程",
+        "highlights": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+        "capabilities": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "core_title": "搭建能够连续执行多步任务的 AI Agent",
+        "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；deepseek-harness 还能把模型能力接入可重复的任务流程",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W40/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+      "publication_evidence": {
+        "full_name": "deepseek-ai/deepseek-harness",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W40/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "sha256": "006259ac07d66996f63589d24688c103745bd251193c94395bed2765c68c947c",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.03.deepseek-ai--deepseek-harness.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1185590488,
+      "full_name": "rohitg00/ai-engineering-from-scratch",
+      "owner": "rohitg00",
+      "name": "ai-engineering-from-scratch",
+      "html_url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "description": "Learn it. Build it. Ship it for others.",
+      "language": "Python",
+      "stars": 63373,
+      "forks": 10839,
+      "open_issues": 68,
+      "watchers": 399,
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "ai-engineering",
+        "computer-vision",
+        "course",
+        "deep-learning",
+        "from-scratch",
+        "generative-ai",
+        "llm",
+        "machine-learning",
+        "mcp",
+        "nlp",
+        "python",
+        "reinforcement-learning",
+        "rust",
+        "swarm-intelligence",
+        "transformers",
+        "tutorial",
+        "typescript"
+      ],
+      "created_at": "2026-03-18T18:38:02Z",
+      "updated_at": "2026-10-04T08:39:53Z",
+      "pushed_at": "2026-10-02T05:37:24Z",
+      "daily_stars": null,
+      "weekly_stars": 5059,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 5,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 4,
+      "score": 89.47,
+      "star_delta": 5031,
+      "fork_delta": 721,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.5,
+        "relative_growth": 94.59,
+        "fork_growth": 95.95,
+        "total_stars": 50.45,
+        "activity": 87.52,
+        "trending_signal": 38.69
+      },
+      "summary": {
+        "one_line": "用 ai-engineering-from-scratch 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+        "highlights": [
+          "为模型应用提供标准化工具接口",
+          "连接外部数据源和可调用工具",
+          "把工具能力暴露给兼容 MCP 的客户端"
+        ],
+        "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+        "capabilities": [
+          "为模型应用提供标准化工具接口",
+          "连接外部数据源和可调用工具",
+          "把工具能力暴露给兼容 MCP 的客户端"
+        ],
+        "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+        "core_summary": "用 ai-engineering-from-scratch 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W40/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
+      "publication_evidence": {
+        "full_name": "rohitg00/ai-engineering-from-scratch",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W40/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
+          "sha256": "73f4e8bb355fcd0e60768eae44f1daf6ba46a60f27e0522fc5f824eae6d671b2",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.04.rohitg00--ai-engineering-from-scratch.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1206390571,
+      "full_name": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "html_url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": 52787,
+      "forks": 5880,
+      "open_issues": 89,
+      "watchers": 208,
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx",
+        "omnivoice-studio",
+        "speech-to-text",
+        "tauri",
+        "text-to-speech",
+        "transcription",
+        "translate",
+        "tts",
+        "voice-ai",
+        "voice-cloning",
+        "voice-generation",
+        "voicestudio",
+        "workflow"
+      ],
+      "created_at": "2026-04-09T21:40:26Z",
+      "updated_at": "2026-10-04T08:39:32Z",
+      "pushed_at": "2026-10-04T08:12:06Z",
+      "daily_stars": null,
+      "weekly_stars": 16775,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 3,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 5,
+      "score": 87.77,
+      "star_delta": 16775,
+      "fork_delta": 0,
+      "delta_source": "trending",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 28.38,
+        "total_stars": 48.65,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "这类任务可以交给 VoiceStudio：把语音内容转换成可编辑文字，并方便检索、整理和继续加工",
+        "highlights": [
+          "将录音或实时语音转换为文字",
+          "生成便于复制和编辑的文本记录",
+          "为摘要、搜索和归档准备文字材料"
+        ],
+        "audience": "需要整理访谈、课程、会议或录音内容的用户",
+        "capabilities": [
+          "将录音或实时语音转换为文字",
+          "生成便于复制和编辑的文本记录",
+          "为摘要、搜索和归档准备文字材料"
+        ],
+        "core_title": "把语音内容转换成可编辑文字",
+        "core_summary": "这类任务可以交给 VoiceStudio：把语音内容转换成可编辑文字，并方便检索、整理和继续加工",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W40/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+      "publication_evidence": {
+        "full_name": "debpalash/VoiceStudio",
+        "license_spdx_id": "AGPL-3.0",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W40/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+          "sha256": "599775fa700c2816df5de823e30a438cd74ab05af92fc86ced777c69f1841957",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "AGPL-3.0",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.05.debpalash--voicestudio.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 272482,
+      "forks": 40684,
+      "open_issues": 340,
+      "watchers": 272482,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-10-04T08:39:09Z",
+      "pushed_at": "2026-10-02T02:01:14Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 6,
+      "score": 87.08,
+      "star_delta": 4517,
+      "fork_delta": 658,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 94.59,
+        "relative_growth": 87.39,
+        "fork_growth": 90.09,
+        "total_stars": 90.99,
+        "activity": 87.52,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "当你需要把重复的开发操作整理成自动化流程，ECC 可以接手，同时减少手动执行和重复配置",
+        "highlights": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "audience": "需要减少重复操作并统一研发流程的软件团队",
+        "capabilities": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "core_title": "把重复的开发操作整理成自动化流程",
+        "core_summary": "当你需要把重复的开发操作整理成自动化流程，ECC 可以接手，同时减少手动执行和重复配置",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W40/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W40/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "sha256": "b96c9ae9f895df5d8bf215e1783f3cdc401e818b22cb82c16937fefc71d4e2e4",
+          "width": 165,
+          "height": 165
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.06.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 275591,
+      "forks": 23116,
+      "open_issues": 549,
+      "watchers": 275591,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-10-04T08:37:59Z",
+      "pushed_at": "2026-09-29T12:38:37Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 7,
+      "score": 86.45,
+      "star_delta": 5317,
+      "fork_delta": 354,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.4,
+        "relative_growth": 89.19,
+        "fork_growth": 86.49,
+        "total_stars": 91.89,
+        "activity": 71.65,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "要解释 skills 的用途，还需要补充可核验的 README 信息",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "要解释 skills 的用途，还需要补充可核验的 README 信息",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-W40/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-W40/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.07.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "paperclipai/paperclip",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.01.paperclipai--paperclip.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "vectorize-io/hindsight",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.02.vectorize-io--hindsight.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.03.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "rohitg00/ai-engineering-from-scratch",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.04.rohitg00--ai-engineering-from-scratch.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.05.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.06.affaan-m--ecc.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.07.mattpocock--skills.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1170821064,
+          "full_name": "paperclipai/paperclip",
+          "owner": "paperclipai",
+          "name": "paperclip",
+          "html_url": "https://github.com/paperclipai/paperclip",
+          "description": "The open-source app everyone uses to manage agents at work",
+          "language": "TypeScript",
+          "stars": 96868,
+          "forks": 16400,
+          "open_issues": 6344,
+          "watchers": 459,
+          "topics": [],
+          "created_at": "2026-03-02T15:01:51Z",
+          "updated_at": "2026-10-04T08:38:50Z",
+          "pushed_at": "2026-10-04T08:38:16Z",
+          "daily_stars": null,
+          "weekly_stars": 10722,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 1,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.95,
+          "star_delta": 9558,
+          "fork_delta": 970,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.2,
+            "relative_growth": 96.4,
+            "fork_growth": 99.1,
+            "total_stars": 53.15,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "公开信息不足，暂不能准确说明 paperclip 的具体用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "公开信息不足，暂不能准确说明 paperclip 的具体用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-2d4d3afa6fb542f6e11751f7-83308370ad3992acccf8b2bc.png",
+          "publication_evidence": {
+            "full_name": "paperclipai/paperclip",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-2d4d3afa6fb542f6e11751f7-83308370ad3992acccf8b2bc.png",
+              "sha256": "0f61fc3bef525ee229bdc5091f048b98f3d9d9cae49e97da257915f28dde319a",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.01.paperclipai--paperclip.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1086419061,
+          "full_name": "vectorize-io/hindsight",
+          "owner": "vectorize-io",
+          "name": "hindsight",
+          "html_url": "https://github.com/vectorize-io/hindsight",
+          "description": "Hindsight: Agent Memory That Learns",
+          "language": "Python",
+          "stars": 45231,
+          "forks": 5901,
+          "open_issues": 313,
+          "watchers": 92,
+          "topics": [
+            "agentic-ai",
+            "agents",
+            "ai-memory",
+            "memory"
+          ],
+          "created_at": "2025-10-30T11:49:48Z",
+          "updated_at": "2026-10-04T08:39:41Z",
+          "pushed_at": "2026-10-02T17:43:57Z",
+          "daily_stars": null,
+          "weekly_stars": 14507,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 2,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 94.27,
+          "star_delta": 13045,
+          "fork_delta": 2329,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 99.1,
+            "relative_growth": 99.1,
+            "fork_growth": 100.0,
+            "total_stars": 47.75,
+            "activity": 93.55,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 hindsight；它能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 hindsight；它能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-57687486696d14936ebf048b-fb689548e67aaaab9b947386.png",
+          "publication_evidence": {
+            "full_name": "vectorize-io/hindsight",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-57687486696d14936ebf048b-fb689548e67aaaab9b947386.png",
+              "sha256": "a3e3b313d5d57ae75e233d27c63c54a0e0d844a1fbd6dd2d02a35360786f56f9",
+              "width": 100,
+              "height": 100
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.02.vectorize-io--hindsight.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1333065091,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "owner": "deepseek-ai",
+          "name": "deepseek-harness",
+          "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+          "description": "DeepSeek Harness: Everything is a Plugin.",
+          "language": "TypeScript",
+          "stars": 243093,
+          "forks": 29143,
+          "open_issues": 0,
+          "watchers": 243093,
+          "topics": [
+            "ai-agents",
+            "cordis",
+            "dsh",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-08-13T11:56:32Z",
+          "updated_at": "2026-10-04T08:35:49Z",
+          "pushed_at": "2026-10-03T06:02:48Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 89.67,
+          "star_delta": 6242,
+          "fork_delta": 669,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.3,
+            "relative_growth": 90.99,
+            "fork_growth": 90.99,
+            "total_stars": 87.39,
+            "activity": 93.55,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "主要任务是搭建能够连续执行多步任务的 AI Agent；deepseek-harness 还能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "主要任务是搭建能够连续执行多步任务的 AI Agent；deepseek-harness 还能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "publication_evidence": {
+            "full_name": "deepseek-ai/deepseek-harness",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+              "sha256": "006259ac07d66996f63589d24688c103745bd251193c94395bed2765c68c947c",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.03.deepseek-ai--deepseek-harness.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1185590488,
+          "full_name": "rohitg00/ai-engineering-from-scratch",
+          "owner": "rohitg00",
+          "name": "ai-engineering-from-scratch",
+          "html_url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+          "description": "Learn it. Build it. Ship it for others.",
+          "language": "Python",
+          "stars": 63373,
+          "forks": 10839,
+          "open_issues": 68,
+          "watchers": 399,
+          "topics": [
+            "agents",
+            "ai",
+            "ai-agents",
+            "ai-engineering",
+            "computer-vision",
+            "course",
+            "deep-learning",
+            "from-scratch",
+            "generative-ai",
+            "llm",
+            "machine-learning",
+            "mcp",
+            "nlp",
+            "python",
+            "reinforcement-learning",
+            "rust",
+            "swarm-intelligence",
+            "transformers",
+            "tutorial",
+            "typescript"
+          ],
+          "created_at": "2026-03-18T18:38:02Z",
+          "updated_at": "2026-10-04T08:39:53Z",
+          "pushed_at": "2026-10-02T05:37:24Z",
+          "daily_stars": null,
+          "weekly_stars": 5059,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 5,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 89.47,
+          "star_delta": 5031,
+          "fork_delta": 721,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.5,
+            "relative_growth": 94.59,
+            "fork_growth": 95.95,
+            "total_stars": 50.45,
+            "activity": 87.52,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "用 ai-engineering-from-scratch 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+            "highlights": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "capabilities": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+            "core_summary": "用 ai-engineering-from-scratch 可以把外部工具和数据接入支持 MCP 的模型应用，还会用统一协议建立工具调用连接",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
+          "publication_evidence": {
+            "full_name": "rohitg00/ai-engineering-from-scratch",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
+              "sha256": "73f4e8bb355fcd0e60768eae44f1daf6ba46a60f27e0522fc5f824eae6d671b2",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.04.rohitg00--ai-engineering-from-scratch.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1206390571,
+          "full_name": "debpalash/VoiceStudio",
+          "owner": "debpalash",
+          "name": "VoiceStudio",
+          "html_url": "https://github.com/debpalash/VoiceStudio",
+          "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+          "language": "Python",
+          "stars": 52787,
+          "forks": 5880,
+          "open_issues": 89,
+          "watchers": 208,
+          "topics": [
+            "ai",
+            "audiobook",
+            "cuda",
+            "dubbing",
+            "elevenlabs-alternative",
+            "huggingface",
+            "local-first",
+            "mlx",
+            "omnivoice-studio",
+            "speech-to-text",
+            "tauri",
+            "text-to-speech",
+            "transcription",
+            "translate",
+            "tts",
+            "voice-ai",
+            "voice-cloning",
+            "voice-generation",
+            "voicestudio",
+            "workflow"
+          ],
+          "created_at": "2026-04-09T21:40:26Z",
+          "updated_at": "2026-10-04T08:39:32Z",
+          "pushed_at": "2026-10-04T08:12:06Z",
+          "daily_stars": null,
+          "weekly_stars": 16775,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 3,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 87.77,
+          "star_delta": 16775,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 28.38,
+            "total_stars": 48.65,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "这类任务可以交给 VoiceStudio：把语音内容转换成可编辑文字，并方便检索、整理和继续加工",
+            "highlights": [
+              "将录音或实时语音转换为文字",
+              "生成便于复制和编辑的文本记录",
+              "为摘要、搜索和归档准备文字材料"
+            ],
+            "audience": "需要整理访谈、课程、会议或录音内容的用户",
+            "capabilities": [
+              "将录音或实时语音转换为文字",
+              "生成便于复制和编辑的文本记录",
+              "为摘要、搜索和归档准备文字材料"
+            ],
+            "core_title": "把语音内容转换成可编辑文字",
+            "core_summary": "这类任务可以交给 VoiceStudio：把语音内容转换成可编辑文字，并方便检索、整理和继续加工",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+          "publication_evidence": {
+            "full_name": "debpalash/VoiceStudio",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+              "sha256": "599775fa700c2816df5de823e30a438cd74ab05af92fc86ced777c69f1841957",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.05.debpalash--voicestudio.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 272482,
+          "forks": 40684,
+          "open_issues": 340,
+          "watchers": 272482,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-10-04T08:39:09Z",
+          "pushed_at": "2026-10-02T02:01:14Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 87.08,
+          "star_delta": 4517,
+          "fork_delta": 658,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.59,
+            "relative_growth": 87.39,
+            "fork_growth": 90.09,
+            "total_stars": 90.99,
+            "activity": 87.52,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "当你需要把重复的开发操作整理成自动化流程，ECC 可以接手，同时减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "当你需要把重复的开发操作整理成自动化流程，ECC 可以接手，同时减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "b96c9ae9f895df5d8bf215e1783f3cdc401e818b22cb82c16937fefc71d4e2e4",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.06.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 275591,
+          "forks": 23116,
+          "open_issues": 549,
+          "watchers": 275591,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-10-04T08:37:59Z",
+          "pushed_at": "2026-09-29T12:38:37Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 86.45,
+          "star_delta": 5317,
+          "fork_delta": 354,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.4,
+            "relative_growth": 89.19,
+            "fork_growth": 86.49,
+            "total_stars": 91.89,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "要解释 skills 的用途，还需要补充可核验的 README 信息",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "要解释 skills 的用途，还需要补充可核验的 README 信息",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "39dc191571d58d82154daa8a184d0da192addce636bc0af2cfb8f6bc9a624126",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.comprehensive.07.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W40/2026-W40.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "vectorize-io/hindsight",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.01.vectorize-io--hindsight.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.02.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "rohitg00/ai-engineering-from-scratch",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.03.rohitg00--ai-engineering-from-scratch.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.04.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.05.affaan-m--ecc.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "firecrawl/firecrawl",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.06.firecrawl--firecrawl.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "pbakaus/impeccable",
+            "path": "reports/weekly/assets/2026-W40/2026-W40.ai.07.pbakaus--impeccable.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1086419061,
+          "full_name": "vectorize-io/hindsight",
+          "owner": "vectorize-io",
+          "name": "hindsight",
+          "html_url": "https://github.com/vectorize-io/hindsight",
+          "description": "Hindsight: Agent Memory That Learns",
+          "language": "Python",
+          "stars": 45231,
+          "forks": 5901,
+          "open_issues": 313,
+          "watchers": 92,
+          "topics": [
+            "agentic-ai",
+            "agents",
+            "ai-memory",
+            "memory"
+          ],
+          "created_at": "2025-10-30T11:49:48Z",
+          "updated_at": "2026-10-04T08:39:41Z",
+          "pushed_at": "2026-10-02T17:43:57Z",
+          "daily_stars": null,
+          "weekly_stars": 14507,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 2,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 93.28,
+          "star_delta": 13045,
+          "fork_delta": 2329,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.08,
+            "relative_growth": 98.08,
+            "fork_growth": 100.0,
+            "total_stars": 42.31,
+            "activity": 93.55,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "hindsight 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "hindsight 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-57687486696d14936ebf048b-fb689548e67aaaab9b947386.png",
+          "publication_evidence": {
+            "full_name": "vectorize-io/hindsight",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-57687486696d14936ebf048b-fb689548e67aaaab9b947386.png",
+              "sha256": "a3e3b313d5d57ae75e233d27c63c54a0e0d844a1fbd6dd2d02a35360786f56f9",
+              "width": 100,
+              "height": 100
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.ai.01.vectorize-io--hindsight.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1333065091,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "owner": "deepseek-ai",
+          "name": "deepseek-harness",
+          "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+          "description": "DeepSeek Harness: Everything is a Plugin.",
+          "language": "TypeScript",
+          "stars": 243093,
+          "forks": 29143,
+          "open_issues": 0,
+          "watchers": 243093,
+          "topics": [
+            "ai-agents",
+            "cordis",
+            "dsh",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-08-13T11:56:32Z",
+          "updated_at": "2026-10-04T08:35:49Z",
+          "pushed_at": "2026-10-03T06:02:48Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.97,
+          "star_delta": 6242,
+          "fork_delta": 669,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.15,
+            "relative_growth": 88.46,
+            "fork_growth": 92.31,
+            "total_stars": 92.31,
+            "activity": 93.55,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 deepseek-harness；它能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 deepseek-harness；它能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+          "publication_evidence": {
+            "full_name": "deepseek-ai/deepseek-harness",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-026ca8e8b41be0709af8958d-fdf6f2c873b84aef80b1839b.png",
+              "sha256": "006259ac07d66996f63589d24688c103745bd251193c94395bed2765c68c947c",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.ai.02.deepseek-ai--deepseek-harness.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1185590488,
+          "full_name": "rohitg00/ai-engineering-from-scratch",
+          "owner": "rohitg00",
+          "name": "ai-engineering-from-scratch",
+          "html_url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+          "description": "Learn it. Build it. Ship it for others.",
+          "language": "Python",
+          "stars": 63373,
+          "forks": 10839,
+          "open_issues": 68,
+          "watchers": 399,
+          "topics": [
+            "agents",
+            "ai",
+            "ai-agents",
+            "ai-engineering",
+            "computer-vision",
+            "course",
+            "deep-learning",
+            "from-scratch",
+            "generative-ai",
+            "llm",
+            "machine-learning",
+            "mcp",
+            "nlp",
+            "python",
+            "reinforcement-learning",
+            "rust",
+            "swarm-intelligence",
+            "transformers",
+            "tutorial",
+            "typescript"
+          ],
+          "created_at": "2026-03-18T18:38:02Z",
+          "updated_at": "2026-10-04T08:39:53Z",
+          "pushed_at": "2026-10-02T05:37:24Z",
+          "daily_stars": null,
+          "weekly_stars": 5059,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 5,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.67,
+          "star_delta": 5031,
+          "fork_delta": 721,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 94.23,
+            "relative_growth": 94.23,
+            "fork_growth": 96.15,
+            "total_stars": 48.08,
+            "activity": 87.52,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "主要任务是把外部工具和数据接入支持 MCP 的模型应用；ai-engineering-from-scratch 还能用统一协议建立工具调用连接",
+            "highlights": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "capabilities": [
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
+            ],
+            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+            "core_summary": "主要任务是把外部工具和数据接入支持 MCP 的模型应用；ai-engineering-from-scratch 还能用统一协议建立工具调用连接",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
+          "publication_evidence": {
+            "full_name": "rohitg00/ai-engineering-from-scratch",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-2fe557721be7835e6470d618-cace3ca51b66954529621dd6.png",
+              "sha256": "73f4e8bb355fcd0e60768eae44f1daf6ba46a60f27e0522fc5f824eae6d671b2",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.ai.03.rohitg00--ai-engineering-from-scratch.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1206390571,
+          "full_name": "debpalash/VoiceStudio",
+          "owner": "debpalash",
+          "name": "VoiceStudio",
+          "html_url": "https://github.com/debpalash/VoiceStudio",
+          "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+          "language": "Python",
+          "stars": 52787,
+          "forks": 5880,
+          "open_issues": 89,
+          "watchers": 208,
+          "topics": [
+            "ai",
+            "audiobook",
+            "cuda",
+            "dubbing",
+            "elevenlabs-alternative",
+            "huggingface",
+            "local-first",
+            "mlx",
+            "omnivoice-studio",
+            "speech-to-text",
+            "tauri",
+            "text-to-speech",
+            "transcription",
+            "translate",
+            "tts",
+            "voice-ai",
+            "voice-cloning",
+            "voice-generation",
+            "voicestudio",
+            "workflow"
+          ],
+          "created_at": "2026-04-09T21:40:26Z",
+          "updated_at": "2026-10-04T08:39:32Z",
+          "pushed_at": "2026-10-04T08:12:06Z",
+          "daily_stars": null,
+          "weekly_stars": 16775,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 3,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 87.5,
+          "star_delta": 16775,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 27.88,
+            "total_stars": 44.23,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "用 VoiceStudio 可以把语音内容转换成可编辑文字，还会方便检索、整理和继续加工",
+            "highlights": [
+              "将录音或实时语音转换为文字",
+              "生成便于复制和编辑的文本记录",
+              "为摘要、搜索和归档准备文字材料"
+            ],
+            "audience": "需要整理访谈、课程、会议或录音内容的用户",
+            "capabilities": [
+              "将录音或实时语音转换为文字",
+              "生成便于复制和编辑的文本记录",
+              "为摘要、搜索和归档准备文字材料"
+            ],
+            "core_title": "把语音内容转换成可编辑文字",
+            "core_summary": "用 VoiceStudio 可以把语音内容转换成可编辑文字，还会方便检索、整理和继续加工",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+          "publication_evidence": {
+            "full_name": "debpalash/VoiceStudio",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+              "sha256": "599775fa700c2816df5de823e30a438cd74ab05af92fc86ced777c69f1841957",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.ai.04.debpalash--voicestudio.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 272482,
+          "forks": 40684,
+          "open_issues": 340,
+          "watchers": 272482,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-10-04T08:39:09Z",
+          "pushed_at": "2026-10-02T02:01:14Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 85.68,
+          "star_delta": 4517,
+          "fork_delta": 658,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.31,
+            "relative_growth": 84.62,
+            "fork_growth": 90.38,
+            "total_stars": 96.15,
+            "activity": 87.52,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "这类任务可以交给 ECC：把重复的开发操作整理成自动化流程，并减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "这类任务可以交给 ECC：把重复的开发操作整理成自动化流程，并减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "b96c9ae9f895df5d8bf215e1783f3cdc401e818b22cb82c16937fefc71d4e2e4",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.ai.05.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 787076358,
+          "full_name": "firecrawl/firecrawl",
+          "owner": "firecrawl",
+          "name": "firecrawl",
+          "html_url": "https://github.com/firecrawl/firecrawl",
+          "description": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
+          "language": "TypeScript",
+          "stars": 188373,
+          "forks": 10022,
+          "open_issues": 518,
+          "watchers": 188373,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "ai-crawler",
+            "ai-scraping",
+            "ai-search",
+            "crawler",
+            "data-extraction",
+            "html-to-markdown",
+            "llm",
+            "markdown",
+            "scraper",
+            "scraping",
+            "web-crawler",
+            "web-data",
+            "web-data-extraction",
+            "web-scraper",
+            "web-scraping",
+            "web-search",
+            "webscraping"
+          ],
+          "created_at": "2024-04-15T21:02:29Z",
+          "updated_at": "2026-10-04T08:36:54Z",
+          "pushed_at": "2026-10-03T18:46:17Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 81.25,
+          "star_delta": 3232,
+          "fork_delta": 88,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 86.54,
+            "relative_growth": 82.69,
+            "fork_growth": 71.15,
+            "total_stars": 86.54,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "当你需要搜索、抓取并整理网页内容，firecrawl 可以接手，同时把网页数据交给程序或 AI 工作流继续处理",
+            "highlights": [
+              "通过接口搜索并抓取公开网页",
+              "从页面中提取正文和结构化内容",
+              "把网页整理成更易处理的文本数据"
+            ],
+            "audience": "需要为 AI 应用、搜索或数据流程接入网页内容的开发者",
+            "capabilities": [
+              "通过接口搜索并抓取公开网页",
+              "从页面中提取正文和结构化内容",
+              "把网页整理成更易处理的文本数据"
+            ],
+            "core_title": "搜索、抓取并整理网页内容",
+            "core_summary": "当你需要搜索、抓取并整理网页内容，firecrawl 可以接手，同时把网页数据交给程序或 AI 工作流继续处理",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+          "publication_evidence": {
+            "full_name": "firecrawl/firecrawl",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-7491830dc8888f7fb314f803-fdf2800b65e3922669c3a0d8.png",
+              "sha256": "5ef56f2686cd2671d1dcba064798210c41508392c22add330c0614d6532e172c",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.ai.06.firecrawl--firecrawl.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1097346685,
+          "full_name": "pbakaus/impeccable",
+          "owner": "pbakaus",
+          "name": "impeccable",
+          "html_url": "https://github.com/pbakaus/impeccable",
+          "description": "The design language that makes your AI harness better at design.",
+          "language": "JavaScript",
+          "stars": 75642,
+          "forks": 4529,
+          "open_issues": 62,
+          "watchers": 207,
+          "topics": [],
+          "created_at": "2025-11-16T01:52:04Z",
+          "updated_at": "2026-10-04T08:37:55Z",
+          "pushed_at": "2026-10-03T07:35:50Z",
+          "daily_stars": null,
+          "weekly_stars": 3311,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 4,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 78.33,
+          "star_delta": 3311,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 88.46,
+            "relative_growth": 86.54,
+            "fork_growth": 27.88,
+            "total_stars": 50.0,
+            "activity": 93.55,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "要解释 impeccable 的用途，还需要补充可核验的 README 信息",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "要解释 impeccable 的用途，还需要补充可核验的 README 信息",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-W40/repo-21fcbee2e5fa5e511d32f30c-f9a2b235e427fa64b4a09804.png",
+          "publication_evidence": {
+            "full_name": "pbakaus/impeccable",
+            "license_spdx_id": "Apache-2.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-W40/repo-21fcbee2e5fa5e511d32f30c-f9a2b235e427fa64b4a09804.png",
+              "sha256": "9f188788d27383eb65d40f65820648a55f927e1637f6a3bb6aff9d9f77f3e2f0",
+              "width": 200,
+              "height": 200
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W40/2026-W40.ai.07.pbakaus--impeccable.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
