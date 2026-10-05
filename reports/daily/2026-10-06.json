@@ -1,0 +1,1487 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-10-06",
+  "window_start": "2026-10-05",
+  "window_end": "2026-10-06",
+  "generated_at": "2026-10-06T07:31:51+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-10-05 至 2026-10-06",
+  "publication": {
+    "issue_number": 87,
+    "issue_code": "D087",
+    "issue_label": "第87期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-10-06",
+    "manifest": "reports/daily/assets/2026-10-06/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tester-army/e2e",
+            "path": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.01.tester-army--e2e.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.02.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "earthtojake/text-to-cad",
+            "path": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.03.earthtojake--text-to-cad.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-06/2026-10-06.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-06/2026-10-06.ai.01.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-06/2026-10-06.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "calesthio/OpenMontage",
+            "path": "reports/daily/assets/2026-10-06/2026-10-06.ai.03.calesthio--openmontage.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 87,
+      "issue_code": "D087",
+      "issue_label": "第87期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1308631234,
+      "full_name": "tester-army/e2e",
+      "owner": "tester-army",
+      "name": "e2e",
+      "html_url": "https://github.com/tester-army/e2e",
+      "description": "Next generation e2e testing framework for web and mobile apps.",
+      "language": "TypeScript",
+      "stars": 4723,
+      "forks": 196,
+      "open_issues": 48,
+      "watchers": 15,
+      "topics": [
+        "e2e",
+        "e2e-testing",
+        "end-to-end-testing",
+        "mobile",
+        "mobile-testing",
+        "playwright",
+        "web"
+      ],
+      "created_at": "2026-07-22T09:29:04Z",
+      "updated_at": "2026-10-05T23:28:56Z",
+      "pushed_at": "2026-10-05T21:55:17Z",
+      "daily_stars": 1430,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 95.78,
+      "star_delta": 1223,
+      "fork_delta": 62,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 99.08,
+        "relative_growth": 99.08,
+        "fork_growth": 91.28,
+        "total_stars": 45.87,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "替测试人员把自然语言目标变成网页和手机应用的操作测试，并核对结果。",
+        "highlights": [
+          "把自然语言操作与结果断言放进同一个测试",
+          "已验证动作可重放，应用未变时不调用模型",
+          "覆盖网页浏览器与手机模拟器测试"
+        ],
+        "audience": "需要为网页或手机应用编写端到端测试、验证完整用户操作流程的测试与开发人员。",
+        "capabilities": [
+          "用自然语言描述目标，让智能体操作应用",
+          "用元素定位和断言核对操作结果",
+          "重放已被后续断言验证的智能体动作",
+          "运行浏览器及手机模拟器中的测试",
+          "将测试结果发布为拉取请求评论"
+        ],
+        "core_title": "验证过的动作，下次直接重放",
+        "core_summary": "智能体先按自然语言目标操作应用，再由断言核对结果。通过后续断言验证的步骤会记录动作，下次运行直接重放，在应用发生变化前无需调用模型。",
+        "prerequisites": "初始化时选择网页或手机引擎及模型提供方；智能体步骤需自备订阅、API 密钥或本地模型，无智能体步骤的测试无需模型。",
+        "limitations": "项目仍在开发中，小版本间也可能改变接口和配置。命令行默认发送匿名使用数据，可关闭；不含测试内容、应用内容或凭据。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "2a1a902d74ac928fc077a82136c4f60c0c71231f",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+          ],
+          "highlights": [
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ],
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ],
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ]
+          ],
+          "audience": [
+            "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+          ],
+          "capabilities": [
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ],
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ],
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ],
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ],
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ]
+          ],
+          "core_title": [
+            "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+          ],
+          "core_summary": [
+            "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+          ],
+          "prerequisites": [
+            "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+          ],
+          "limitations": [
+            "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-06/repo-cc4c678ba99719c89fee33d9-8d40b8fb7413721c5dcc67fc.png",
+      "publication_evidence": {
+        "full_name": "tester-army/e2e",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "2a1a902d74ac928fc077a82136c4f60c0c71231f",
+          "source_url": "https://api.github.com/repos/tester-army/e2e/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-06/repo-cc4c678ba99719c89fee33d9-8d40b8fb7413721c5dcc67fc.png",
+          "sha256": "09804dac38a217dd3ed0982b65a07fb972437a03c71c64d34a05de6825e98774",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.01.tester-army--e2e.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1266797999,
+      "full_name": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "html_url": "https://github.com/DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "language": "JavaScript",
+      "stars": 155965,
+      "forks": 8376,
+      "open_issues": 3,
+      "watchers": 155965,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "cursor-rules",
+        "developer-tools",
+        "llm",
+        "prompt-engineering",
+        "yagni"
+      ],
+      "created_at": "2026-06-12T00:52:37Z",
+      "updated_at": "2026-10-05T23:28:19Z",
+      "pushed_at": "2026-10-05T20:46:39Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 89.36,
+      "star_delta": 740,
+      "fork_delta": 35,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.25,
+        "relative_growth": 93.58,
+        "fork_growth": 82.57,
+        "total_stars": 75.23,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "在 AI 写代码前加一道检查：能复用就不重写，只实现任务真正需要的部分。",
+        "highlights": [
+          "先理解代码流程，再选择更少的实现",
+          "既能审查当前改动，也能检查整个仓库",
+          "把暂缓处理的简化事项收进待办账本"
+        ],
+        "audience": "用 AI 智能体修改代码，希望减少重复实现、检查过度设计并追踪延期简化事项的开发人员。",
+        "capabilities": [
+          "引导智能体在写代码前优先复用现有实现",
+          "检查当前改动中的过度设计并列出删除建议",
+          "审查整个仓库中的过度设计",
+          "汇总带指定标记的延期简化事项",
+          "切换规则强度或关闭规则"
+        ],
+        "core_title": "写代码前，先找不用写的办法",
+        "core_summary": "它把一套精简实现的提示词装进编程智能体：先读相关代码、理清流程，再依次检查现有实现、标准库、平台能力和已装依赖，最后才补写必要代码。",
+        "prerequisites": "需在编程智能体中加载插件、技能或规则文件；使用审查等命令需要支持技能的宿主，不强制要求配置文件。",
+        "limitations": "仅加载规则文件的适配方式不带命令。精简不能删去校验、错误处理、安全与无障碍措施；部分推理模型的成本和耗时可能反而增加。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "b451b0d0e5bde893731071f31e096277416f7cd2",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+          ],
+          "highlights": [
+            [
+              "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+            ],
+            [
+              "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+            ],
+            [
+              "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+            ]
+          ],
+          "audience": [
+            "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+          ],
+          "capabilities": [
+            [
+              "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+            ],
+            [
+              "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+            ],
+            [
+              "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+            ],
+            [
+              "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+            ],
+            [
+              "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+            ]
+          ],
+          "core_title": [
+            "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+          ],
+          "core_summary": [
+            "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+          ],
+          "prerequisites": [
+            "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+          ],
+          "limitations": [
+            "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-06/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+      "publication_evidence": {
+        "full_name": "DietrichGebert/ponytail",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "b451b0d0e5bde893731071f31e096277416f7cd2",
+          "source_url": "https://api.github.com/repos/DietrichGebert/ponytail/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-06/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+          "sha256": "59f0be72fcc6cbb753c5d95799621ca4bf58ae5c7b82a716e0ed17624dec0412",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.02.dietrichgebert--ponytail.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1217522067,
+      "full_name": "earthtojake/text-to-cad",
+      "owner": "earthtojake",
+      "name": "text-to-cad",
+      "html_url": "https://github.com/earthtojake/text-to-cad",
+      "description": "Give your agent CAD superpowers.",
+      "language": "Python",
+      "stars": 17384,
+      "forks": 1769,
+      "open_issues": 34,
+      "watchers": 92,
+      "topics": [
+        "agents",
+        "ai-agents",
+        "cad",
+        "mechanical-engineering",
+        "robotics",
+        "step",
+        "stl",
+        "stp",
+        "text-to-cad"
+      ],
+      "created_at": "2026-04-22T01:09:45Z",
+      "updated_at": "2026-10-05T23:28:35Z",
+      "pushed_at": "2026-10-05T21:22:33Z",
+      "daily_stars": 456,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 87.27,
+      "star_delta": 386,
+      "fork_delta": 19,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 90.83,
+        "relative_growth": 96.33,
+        "fork_growth": 76.15,
+        "total_stars": 49.54,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "把文字或图片里的零件需求变成 CAD 模型，还能接着出工程图、做制造前检查。",
+        "highlights": [
+          "把文字或图片要求变成可导出的零件模型",
+          "制造检查给出测量证据和对应规则",
+          "在对话或浏览器中查看本地模型"
+        ],
+        "audience": "需要从文字或图片制作零件模型、输出工程图，并在打印或加工前检查可制造性的设计与工程人员。",
+        "capabilities": [
+          "按文字或图片要求创建和修改零件模型",
+          "查找螺丝、轴承等现成 STEP 零件",
+          "从零件生成带尺寸标注的 PDF 工程图",
+          "检查零件是否适合打印或指定加工工艺",
+          "用自备打印机预设将模型切片为 G-code"
+        ],
+        "core_title": "从零件建模接到制造前检查",
+        "core_summary": "插件将建模技能与本地查看器接入智能体，以 STEP 为主要模型输出；配套技能可生成工程图、测量制造问题，并用打印机预设切片，让模型继续进入制作流程。",
+        "prerequisites": "需要支持插件或技能的智能体及 uv；安装后重启应用，首次启动需联网下载 CAD 运行环境。",
+        "limitations": "同一应用内插件与独立技能只能二选一，避免重复。Windows 11 的智能应用控制可能拦截未签名的 CAD 内核；README 提供 WSL 作为替代运行方式。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+          ],
+          "highlights": [
+            [
+              "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+            ],
+            [
+              "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+            ],
+            [
+              "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+            ]
+          ],
+          "audience": [
+            "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+          ],
+          "capabilities": [
+            [
+              "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+            ],
+            [
+              "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+            ],
+            [
+              "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+            ],
+            [
+              "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+            ],
+            [
+              "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+            ]
+          ],
+          "core_title": [
+            "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+          ],
+          "core_summary": [
+            "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+          ],
+          "prerequisites": [
+            "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+          ],
+          "limitations": [
+            "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-06/repo-97fd47923097e03ffadf8da5-5af7f8fce26ef06f27f7d97d.png",
+      "publication_evidence": {
+        "full_name": "earthtojake/text-to-cad",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c",
+          "source_url": "https://api.github.com/repos/earthtojake/text-to-cad/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-06/repo-97fd47923097e03ffadf8da5-5af7f8fce26ef06f27f7d97d.png",
+          "sha256": "08ef2693675a1c280ce2e52009af9c624b702c2c1e9f7cb7b514d4dd349f1f88",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.03.earthtojake--text-to-cad.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tester-army/e2e",
+            "path": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.01.tester-army--e2e.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.02.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "earthtojake/text-to-cad",
+            "path": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.03.earthtojake--text-to-cad.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1308631234,
+          "full_name": "tester-army/e2e",
+          "owner": "tester-army",
+          "name": "e2e",
+          "html_url": "https://github.com/tester-army/e2e",
+          "description": "Next generation e2e testing framework for web and mobile apps.",
+          "language": "TypeScript",
+          "stars": 4723,
+          "forks": 196,
+          "open_issues": 48,
+          "watchers": 15,
+          "topics": [
+            "e2e",
+            "e2e-testing",
+            "end-to-end-testing",
+            "mobile",
+            "mobile-testing",
+            "playwright",
+            "web"
+          ],
+          "created_at": "2026-07-22T09:29:04Z",
+          "updated_at": "2026-10-05T23:28:56Z",
+          "pushed_at": "2026-10-05T21:55:17Z",
+          "daily_stars": 1430,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.78,
+          "star_delta": 1223,
+          "fork_delta": 62,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 99.08,
+            "relative_growth": 99.08,
+            "fork_growth": 91.28,
+            "total_stars": 45.87,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "替测试人员把自然语言目标变成网页和手机应用的操作测试，并核对结果。",
+            "highlights": [
+              "把自然语言操作与结果断言放进同一个测试",
+              "已验证动作可重放，应用未变时不调用模型",
+              "覆盖网页浏览器与手机模拟器测试"
+            ],
+            "audience": "需要为网页或手机应用编写端到端测试、验证完整用户操作流程的测试与开发人员。",
+            "capabilities": [
+              "用自然语言描述目标，让智能体操作应用",
+              "用元素定位和断言核对操作结果",
+              "重放已被后续断言验证的智能体动作",
+              "运行浏览器及手机模拟器中的测试",
+              "将测试结果发布为拉取请求评论"
+            ],
+            "core_title": "验证过的动作，下次直接重放",
+            "core_summary": "智能体先按自然语言目标操作应用，再由断言核对结果。通过后续断言验证的步骤会记录动作，下次运行直接重放，在应用发生变化前无需调用模型。",
+            "prerequisites": "初始化时选择网页或手机引擎及模型提供方；智能体步骤需自备订阅、API 密钥或本地模型，无智能体步骤的测试无需模型。",
+            "limitations": "项目仍在开发中，小版本间也可能改变接口和配置。命令行默认发送匿名使用数据，可关闭；不含测试内容、应用内容或凭据。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "2a1a902d74ac928fc077a82136c4f60c0c71231f",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ],
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ],
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ]
+              ],
+              "audience": [
+                "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ],
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ],
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ],
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ],
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+              ],
+              "core_summary": [
+                "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+              ],
+              "prerequisites": [
+                "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+              ],
+              "limitations": [
+                "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-06/repo-cc4c678ba99719c89fee33d9-8d40b8fb7413721c5dcc67fc.png",
+          "publication_evidence": {
+            "full_name": "tester-army/e2e",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "2a1a902d74ac928fc077a82136c4f60c0c71231f",
+              "source_url": "https://api.github.com/repos/tester-army/e2e/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-06/repo-cc4c678ba99719c89fee33d9-8d40b8fb7413721c5dcc67fc.png",
+              "sha256": "09804dac38a217dd3ed0982b65a07fb972437a03c71c64d34a05de6825e98774",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.01.tester-army--e2e.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 155965,
+          "forks": 8376,
+          "open_issues": 3,
+          "watchers": 155965,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-10-05T23:28:19Z",
+          "pushed_at": "2026-10-05T20:46:39Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.36,
+          "star_delta": 740,
+          "fork_delta": 35,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.25,
+            "relative_growth": 93.58,
+            "fork_growth": 82.57,
+            "total_stars": 75.23,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "在 AI 写代码前加一道检查：能复用就不重写，只实现任务真正需要的部分。",
+            "highlights": [
+              "先理解代码流程，再选择更少的实现",
+              "既能审查当前改动，也能检查整个仓库",
+              "把暂缓处理的简化事项收进待办账本"
+            ],
+            "audience": "用 AI 智能体修改代码，希望减少重复实现、检查过度设计并追踪延期简化事项的开发人员。",
+            "capabilities": [
+              "引导智能体在写代码前优先复用现有实现",
+              "检查当前改动中的过度设计并列出删除建议",
+              "审查整个仓库中的过度设计",
+              "汇总带指定标记的延期简化事项",
+              "切换规则强度或关闭规则"
+            ],
+            "core_title": "写代码前，先找不用写的办法",
+            "core_summary": "它把一套精简实现的提示词装进编程智能体：先读相关代码、理清流程，再依次检查现有实现、标准库、平台能力和已装依赖，最后才补写必要代码。",
+            "prerequisites": "需在编程智能体中加载插件、技能或规则文件；使用审查等命令需要支持技能的宿主，不强制要求配置文件。",
+            "limitations": "仅加载规则文件的适配方式不带命令。精简不能删去校验、错误处理、安全与无障碍措施；部分推理模型的成本和耗时可能反而增加。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "b451b0d0e5bde893731071f31e096277416f7cd2",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+              ],
+              "highlights": [
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ],
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ],
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ]
+              ],
+              "audience": [
+                "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ],
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ],
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ],
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ],
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ]
+              ],
+              "core_title": [
+                "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+              ],
+              "core_summary": [
+                "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+              ],
+              "prerequisites": [
+                "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+              ],
+              "limitations": [
+                "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-06/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+          "publication_evidence": {
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "b451b0d0e5bde893731071f31e096277416f7cd2",
+              "source_url": "https://api.github.com/repos/DietrichGebert/ponytail/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-06/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+              "sha256": "59f0be72fcc6cbb753c5d95799621ca4bf58ae5c7b82a716e0ed17624dec0412",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.02.dietrichgebert--ponytail.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1217522067,
+          "full_name": "earthtojake/text-to-cad",
+          "owner": "earthtojake",
+          "name": "text-to-cad",
+          "html_url": "https://github.com/earthtojake/text-to-cad",
+          "description": "Give your agent CAD superpowers.",
+          "language": "Python",
+          "stars": 17384,
+          "forks": 1769,
+          "open_issues": 34,
+          "watchers": 92,
+          "topics": [
+            "agents",
+            "ai-agents",
+            "cad",
+            "mechanical-engineering",
+            "robotics",
+            "step",
+            "stl",
+            "stp",
+            "text-to-cad"
+          ],
+          "created_at": "2026-04-22T01:09:45Z",
+          "updated_at": "2026-10-05T23:28:35Z",
+          "pushed_at": "2026-10-05T21:22:33Z",
+          "daily_stars": 456,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 87.27,
+          "star_delta": 386,
+          "fork_delta": 19,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 90.83,
+            "relative_growth": 96.33,
+            "fork_growth": 76.15,
+            "total_stars": 49.54,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "把文字或图片里的零件需求变成 CAD 模型，还能接着出工程图、做制造前检查。",
+            "highlights": [
+              "把文字或图片要求变成可导出的零件模型",
+              "制造检查给出测量证据和对应规则",
+              "在对话或浏览器中查看本地模型"
+            ],
+            "audience": "需要从文字或图片制作零件模型、输出工程图，并在打印或加工前检查可制造性的设计与工程人员。",
+            "capabilities": [
+              "按文字或图片要求创建和修改零件模型",
+              "查找螺丝、轴承等现成 STEP 零件",
+              "从零件生成带尺寸标注的 PDF 工程图",
+              "检查零件是否适合打印或指定加工工艺",
+              "用自备打印机预设将模型切片为 G-code"
+            ],
+            "core_title": "从零件建模接到制造前检查",
+            "core_summary": "插件将建模技能与本地查看器接入智能体，以 STEP 为主要模型输出；配套技能可生成工程图、测量制造问题，并用打印机预设切片，让模型继续进入制作流程。",
+            "prerequisites": "需要支持插件或技能的智能体及 uv；安装后重启应用，首次启动需联网下载 CAD 运行环境。",
+            "limitations": "同一应用内插件与独立技能只能二选一，避免重复。Windows 11 的智能应用控制可能拦截未签名的 CAD 内核；README 提供 WSL 作为替代运行方式。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+              ],
+              "highlights": [
+                [
+                  "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+                ],
+                [
+                  "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+                ],
+                [
+                  "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+                ]
+              ],
+              "audience": [
+                "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+                ],
+                [
+                  "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+                ],
+                [
+                  "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+                ],
+                [
+                  "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+                ],
+                [
+                  "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+                ]
+              ],
+              "core_title": [
+                "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+              ],
+              "core_summary": [
+                "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+              ],
+              "prerequisites": [
+                "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+              ],
+              "limitations": [
+                "github.readme:8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-06/repo-97fd47923097e03ffadf8da5-5af7f8fce26ef06f27f7d97d.png",
+          "publication_evidence": {
+            "full_name": "earthtojake/text-to-cad",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "8c79c06bbb4e1029bcb8af87219f4cfbb11b6e2c",
+              "source_url": "https://api.github.com/repos/earthtojake/text-to-cad/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-06/repo-97fd47923097e03ffadf8da5-5af7f8fce26ef06f27f7d97d.png",
+              "sha256": "08ef2693675a1c280ce2e52009af9c624b702c2c1e9f7cb7b514d4dd349f1f88",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-06/2026-10-06.comprehensive.03.earthtojake--text-to-cad.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-06/2026-10-06.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-06/2026-10-06.ai.01.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-06/2026-10-06.ai.02.affaan-m--ecc.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "calesthio/OpenMontage",
+            "path": "reports/daily/assets/2026-10-06/2026-10-06.ai.03.calesthio--openmontage.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 155965,
+          "forks": 8376,
+          "open_issues": 3,
+          "watchers": 155965,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-10-05T23:28:19Z",
+          "pushed_at": "2026-10-05T20:46:39Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 88.62,
+          "star_delta": 740,
+          "fork_delta": 35,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 89.66,
+            "fork_growth": 75.86,
+            "total_stars": 62.07,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "ponytail 给 AI 编程助手加上精简规则，让它先找现成方案，再写必要的代码。",
+            "highlights": [
+              "把优先复用、避免多写的判断写进助手规则",
+              "从单次改动到全仓库检查过度设计",
+              "把延后处理的简化事项整理成台账"
+            ],
+            "audience": "用 AI 编程助手开发功能、审查改动，希望减少重复实现和过度设计的程序员。",
+            "capabilities": [
+              "引导助手优先复用已有代码和原生功能",
+              "审查当前改动并列出可删减项",
+              "检查整个仓库中的过度设计",
+              "汇总标记为延后处理的简化事项",
+              "切换精简强度或关闭规则"
+            ],
+            "core_title": "写代码前，先判断能否不写",
+            "core_summary": "先读相关代码、追踪实际流程，再依次判断是否必要、能否复用、能否用标准库或原生功能；找到够用的方案就停止加码，而不是一味压缩代码行数。",
+            "prerequisites": "需要能读取规则或加载技能的编程助手；命令依赖技能支持。Codex 安装后需信任生命周期钩子并新建会话。",
+            "limitations": "仅加载规则的适配方式不提供命令；精简不能删掉校验、错误处理、安全或无障碍支持，费用与耗时也不保证下降。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "b451b0d0e5bde893731071f31e096277416f7cd2",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+              ],
+              "highlights": [
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ],
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ],
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ]
+              ],
+              "audience": [
+                "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ],
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ],
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ],
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ],
+                [
+                  "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+                ]
+              ],
+              "core_title": [
+                "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+              ],
+              "core_summary": [
+                "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+              ],
+              "prerequisites": [
+                "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+              ],
+              "limitations": [
+                "github.readme:b451b0d0e5bde893731071f31e096277416f7cd2"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-06/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+          "publication_evidence": {
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "b451b0d0e5bde893731071f31e096277416f7cd2",
+              "source_url": "https://api.github.com/repos/DietrichGebert/ponytail/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-06/repo-61b98383e7d935899f8d4a90-054953640d6113610fc32ce8.png",
+              "sha256": "59f0be72fcc6cbb753c5d95799621ca4bf58ae5c7b82a716e0ed17624dec0412",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-06/2026-10-06.ai.01.dietrichgebert--ponytail.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 273628,
+          "forks": 40826,
+          "open_issues": 350,
+          "watchers": 273628,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-10-05T23:25:28Z",
+          "pushed_at": "2026-10-05T04:55:16Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 82.34,
+          "star_delta": 500,
+          "fork_delta": 61,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 89.66,
+            "relative_growth": 79.31,
+            "fork_growth": 96.55,
+            "total_stars": 96.55,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "把每次重复交代的规划、测试、审查和交接步骤，变成 AI 编程助手可复用的工程流程。",
+            "highlights": [
+              "串起规划、测试、实现、审查与验证",
+              "用本地 Markdown 记忆支持跨助手交接",
+              "按任务加载技能，按项目选择常驻规则"
+            ],
+            "audience": "用编程助手开发功能、修复缺陷，需要保留测试证据、独立审查和跨会话交接的软件团队。",
+            "capabilities": [
+              "把功能需求整理成可编辑的实施计划",
+              "用先失败后通过的测试推进功能实现",
+              "在独立上下文中审查代码改动",
+              "保存可供不同编程助手读取的任务记忆",
+              "扫描智能体配置中的权限与注入风险"
+            ],
+            "core_title": "把编程过程变成可复核流程",
+            "core_summary": "技能提供可复用步骤，子智能体分别承担规划与审查，钩子在工具事件发生时执行检查，记忆保存交接信息，让计划、测试和复核不必每次靠提示词重建。",
+            "prerequisites": "通用包需 Node.js 18 或更新版；Claude 插件另需 Git 与 Claude Code 2.1.0+。扫描需预装经审查的扫描器。",
+            "limitations": "各助手能力不齐；钩子需明确授权，记忆须核验。Windows 原生记忆写入有已知缺陷；同一助手勿叠加安装。私库托管分析属付费 Pro。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "95673de4bb5a8471507fc2c396243cd20395ee58",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+              ],
+              "highlights": [
+                [
+                  "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+                ],
+                [
+                  "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+                ],
+                [
+                  "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+                ]
+              ],
+              "audience": [
+                "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+                ],
+                [
+                  "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+                ],
+                [
+                  "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+                ],
+                [
+                  "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+                ],
+                [
+                  "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+                ]
+              ],
+              "core_title": [
+                "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+              ],
+              "core_summary": [
+                "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+              ],
+              "prerequisites": [
+                "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+              ],
+              "limitations": [
+                "github.readme:95673de4bb5a8471507fc2c396243cd20395ee58"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-06/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "95673de4bb5a8471507fc2c396243cd20395ee58",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-06/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-06/2026-10-06.ai.02.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1195360525,
+          "full_name": "calesthio/OpenMontage",
+          "owner": "calesthio",
+          "name": "OpenMontage",
+          "html_url": "https://github.com/calesthio/OpenMontage",
+          "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+          "language": "Python",
+          "stars": 63998,
+          "forks": 8124,
+          "open_issues": 355,
+          "watchers": 348,
+          "topics": [
+            "agent",
+            "agentic-ai",
+            "ai",
+            "claude",
+            "copilot",
+            "cursor",
+            "elevenlabs",
+            "ffmpeg",
+            "flux",
+            "image-generation",
+            "open-source",
+            "openai",
+            "python",
+            "remotion",
+            "stable-diffusion",
+            "text-to-speech",
+            "text-to-video",
+            "video-generation",
+            "video-production"
+          ],
+          "created_at": "2026-03-29T15:23:22Z",
+          "updated_at": "2026-10-05T23:27:33Z",
+          "pushed_at": "2026-10-03T16:28:55Z",
+          "daily_stars": 758,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 81.63,
+          "star_delta": 610,
+          "fork_delta": 50,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.1,
+            "relative_growth": 96.55,
+            "fork_growth": 79.31,
+            "total_stars": 20.69,
+            "activity": 51.34,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "给出主题或参考视频，让 AI 编程助手沿着研究、脚本、素材和剪辑流程制作成片。",
+            "highlights": [
+              "从参考视频提炼节奏、结构和制作预算",
+              "用真实动态素材剪片，不限于让静态图动起来",
+              "渲染前后检查画面、声音与字幕"
+            ],
+            "audience": "想借助 AI 编程助手制作科普短片、产品演示，或将长视频改编成短内容的视频创作者。",
+            "capabilities": [
+              "分析参考视频并提出差异化制作方案",
+              "检索开放影像素材并剪成纪录蒙太奇",
+              "把长视频拆成排序后的短片",
+              "为已有视频制作翻译配音与字幕",
+              "在本地分镜板查看素材、成本和审批状态"
+            ],
+            "core_title": "边制作，边看分镜并确认",
+            "core_summary": "编程助手读取流程清单与阶段说明，调用工具完成研究、脚本、素材和合成。Backlot 分镜板从项目文件显示进度与成本，素材须经你确认后再进入渲染。",
+            "prerequisites": "需 Python 3.10+、FFmpeg、Node.js 18+，以及能读文件并执行 Python 的编程助手；HyperFrames 需 Node.js ≥",
+            "limitations": "方案、脚本、分镜、素材与发布均需人工确认；付费云端生成与免费素材路线不同，本地视频生成需 GPU。全流程本地语言模型支持仍在计划中。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "",
+            "readme_sha": "b4612e95d34f3820253c96e48582a9c3a8113815",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+              ],
+              "highlights": [
+                [
+                  "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+                ],
+                [
+                  "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+                ],
+                [
+                  "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+                ]
+              ],
+              "audience": [
+                "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+                ],
+                [
+                  "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+                ],
+                [
+                  "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+                ],
+                [
+                  "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+                ],
+                [
+                  "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+                ]
+              ],
+              "core_title": [
+                "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+              ],
+              "core_summary": [
+                "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+              ],
+              "prerequisites": [
+                "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+              ],
+              "limitations": [
+                "github.readme:b4612e95d34f3820253c96e48582a9c3a8113815"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-06/repo-31424b832fa82c27abe981dc-d4e14efffe732a4d1aaaf308.png",
+          "publication_evidence": {
+            "full_name": "calesthio/OpenMontage",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "b4612e95d34f3820253c96e48582a9c3a8113815",
+              "source_url": "https://api.github.com/repos/calesthio/OpenMontage/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-06/repo-31424b832fa82c27abe981dc-d4e14efffe732a4d1aaaf308.png",
+              "sha256": "2a54cbcc00fb1dfab00e2d364d3174ea7ba267a00fce0653508b285ae49397de",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-06/2026-10-06.ai.03.calesthio--openmontage.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
