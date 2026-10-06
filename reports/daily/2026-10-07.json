@@ -1,0 +1,1456 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-10-07",
+  "window_start": "2026-10-06",
+  "window_end": "2026-10-07",
+  "generated_at": "2026-10-07T07:31:45+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-10-06 至 2026-10-07",
+  "publication": {
+    "issue_number": 88,
+    "issue_code": "D088",
+    "issue_label": "第88期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "AI 专题榜：部分项目使用历史快照，部分使用 GitHub Trending 周期信号"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-10-07",
+    "manifest": "reports/daily/assets/2026-10-07/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tester-army/e2e",
+            "path": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.01.tester-army--e2e.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.02.mattpocock--skills.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "boykopovar/AnyPS5",
+            "path": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.03.boykopovar--anyps5.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-07/2026-10-07.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "earthtojake/text-to-cad",
+            "path": "reports/daily/assets/2026-10-07/2026-10-07.ai.01.earthtojake--text-to-cad.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "msitarzewski/agency-agents",
+            "path": "reports/daily/assets/2026-10-07/2026-10-07.ai.02.msitarzewski--agency-agents.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-07/2026-10-07.ai.03.morluto--rea.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 88,
+      "issue_code": "D088",
+      "issue_label": "第88期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1308631234,
+      "full_name": "tester-army/e2e",
+      "owner": "tester-army",
+      "name": "e2e",
+      "html_url": "https://github.com/tester-army/e2e",
+      "description": "Next generation e2e testing framework for web and mobile apps.",
+      "language": "TypeScript",
+      "stars": 6255,
+      "forks": 278,
+      "open_issues": 72,
+      "watchers": 17,
+      "topics": [
+        "e2e",
+        "e2e-testing",
+        "end-to-end-testing",
+        "mobile",
+        "mobile-testing",
+        "playwright",
+        "web"
+      ],
+      "created_at": "2026-07-22T09:29:04Z",
+      "updated_at": "2026-10-06T23:29:45Z",
+      "pushed_at": "2026-10-06T22:19:36Z",
+      "daily_stars": 1720,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 93.28,
+      "star_delta": 1532,
+      "fork_delta": 82,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.44,
+        "relative_growth": 96.88,
+        "fork_growth": 92.19,
+        "total_stars": 9.38,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "让测试人员用自然语言驱动网页和移动应用，再用断言检查流程是否完成。",
+        "highlights": [
+          "把自然语言操作和代码断言写进同一测试",
+          "已验证步骤可重放，应用未变时不调用模型",
+          "网页与移动端分别提供可选测试引擎"
+        ],
+        "audience": "需要为网页或移动应用编写用户流程测试，并在重复运行时复用已验证操作的开发与测试人员。",
+        "capabilities": [
+          "用自然语言指挥智能体操作应用",
+          "用定位器和断言检查操作结果",
+          "重放已通过后续断言验证的操作",
+          "在浏览器或移动端模拟器中运行测试",
+          "将测试结果发布为拉取请求评论"
+        ],
+        "core_title": "验证过的智能体操作，下次直接重放",
+        "core_summary": "智能体按自然语言目标操作应用，后续断言负责检查结果。通过验证的步骤会记录操作，下次运行直接重放；应用发生变化前，重放无需调用模型。",
+        "prerequisites": "初始化时选择网页或移动端引擎及模型提供方；模型可用自备订阅、密钥或本地模型，无智能体步骤的测试不需要模型。",
+        "limitations": "项目仍在开发中，次要版本间的接口和配置可能变化；命令行默认发送匿名使用数据，可关闭，不含测试内容、应用内容或凭据。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "2a1a902d74ac928fc077a82136c4f60c0c71231f",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+          ],
+          "highlights": [
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ],
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ],
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ]
+          ],
+          "audience": [
+            "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+          ],
+          "capabilities": [
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ],
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ],
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ],
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ],
+            [
+              "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+            ]
+          ],
+          "core_title": [
+            "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+          ],
+          "core_summary": [
+            "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+          ],
+          "prerequisites": [
+            "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+          ],
+          "limitations": [
+            "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-07/repo-cc4c678ba99719c89fee33d9-8d40b8fb7413721c5dcc67fc.png",
+      "publication_evidence": {
+        "full_name": "tester-army/e2e",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "2a1a902d74ac928fc077a82136c4f60c0c71231f",
+          "source_url": "https://api.github.com/repos/tester-army/e2e/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-07/repo-cc4c678ba99719c89fee33d9-8d40b8fb7413721c5dcc67fc.png",
+          "sha256": "09804dac38a217dd3ed0982b65a07fb972437a03c71c64d34a05de6825e98774",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.01.tester-army--e2e.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 278085,
+      "forks": 23288,
+      "open_issues": 321,
+      "watchers": 278085,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-10-06T23:28:37Z",
+      "pushed_at": "2026-10-06T19:04:26Z",
+      "daily_stars": 972,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 91.28,
+      "star_delta": 1012,
+      "fork_delta": 80,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 93.75,
+        "relative_growth": 89.06,
+        "fork_growth": 88.28,
+        "total_stars": 92.19,
+        "activity": 100.0,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "把与编码智能体的讨论变成规格、任务单和测试流程，开发者可按需组合这些技能。",
+        "highlights": [
+          "需求访谈同步沉淀术语表与设计决策",
+          "任务单标明依赖，供后续实现流程使用",
+          "架构扫描生成可视化报告，供用户挑选改进项"
+        ],
+        "audience": "与编码智能体协作开发应用，需要先澄清需求、拆分任务，再通过测试和审查推进实现的工程人员。",
+        "capabilities": [
+          "通过追问澄清需求并整理项目术语",
+          "把已讨论的需求整理成规格文档",
+          "将计划拆成带依赖关系的任务单",
+          "按先写失败测试再修复的循环开发",
+          "从代码规范和需求符合度审查改动"
+        ],
+        "core_title": "按任务组合，而非接管整个开发流程",
+        "core_summary": "这些技能是可单独选用、修改和组合的智能体工作流程。需求访谈会同步维护术语表与决策记录，后续可接规格整理、任务拆分、测试驱动实现和代码审查。",
+        "prerequisites": "安装时保留 setup-matt-pocock-skills；使用工程技能前，每个仓库运行一次配置，指定任务跟踪器、分类标签和文档位置。",
+        "limitations": "插件包只读，市场更新可能滞后；文件安装版需自行更新，两种方式同时安装会重复。架构扫描只提供候选，不会自动理顺旧代码。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "1c5b413748f590299e5f6b95726722391b7ba660",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+          ],
+          "highlights": [
+            [
+              "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+            ],
+            [
+              "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+            ],
+            [
+              "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+            ]
+          ],
+          "audience": [
+            "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+          ],
+          "capabilities": [
+            [
+              "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+            ],
+            [
+              "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+            ],
+            [
+              "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+            ],
+            [
+              "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+            ],
+            [
+              "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+            ]
+          ],
+          "core_title": [
+            "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+          ],
+          "core_summary": [
+            "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+          ],
+          "prerequisites": [
+            "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+          ],
+          "limitations": [
+            "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-07/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "1c5b413748f590299e5f6b95726722391b7ba660",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-07/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.02.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1322250666,
+      "full_name": "boykopovar/AnyPS5",
+      "owner": "boykopovar",
+      "name": "AnyPS5",
+      "html_url": "https://github.com/boykopovar/AnyPS5",
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "language": "C++",
+      "stars": 6434,
+      "forks": 467,
+      "open_issues": 210,
+      "watchers": 95,
+      "topics": [
+        "anyps5",
+        "dynamic-library",
+        "game-porting",
+        "ps5",
+        "ps5-tools",
+        "spir-v",
+        "vulkan"
+      ],
+      "created_at": "2026-08-03T21:30:25Z",
+      "updated_at": "2026-10-06T23:31:22Z",
+      "pushed_at": "2026-10-06T22:43:32Z",
+      "daily_stars": 943,
+      "weekly_stars": null,
+      "trending_rank_daily": 4,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 89.73,
+      "star_delta": 1506,
+      "fork_delta": 99,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.88,
+        "relative_growth": 95.31,
+        "fork_growth": 95.31,
+        "total_stars": 10.94,
+        "activity": 100.0,
+        "trending_signal": 43.07
+      },
+      "summary": {
+        "one_line": "将 PS5 可执行文件移植到 Linux 和 Windows，采用原生格式转换而非模拟运行。",
+        "highlights": [
+          "以原生格式转换和系统库实现完成移植",
+          "着色器可重编译，并可选用工具验证输出",
+          "既支持映射手柄，也可配置键鼠操作"
+        ],
+        "audience": "研究游戏互操作、保存与兼容性的人员，以及需要尝试将可执行文件移植到 Linux 或 Windows 的开发者。",
+        "capabilities": [
+          "转换可执行文件为目标系统的原生格式",
+          "提供可动态链接的系统库实现",
+          "将着色器重新编译为 SPIR-V",
+          "接入带摇杆和扳机的 SDL 映射手柄",
+          "通过配置文件设置键盘与鼠标控制"
+        ],
+        "core_title": "转换原生格式，而不是模拟运行",
+        "core_summary": "重新链接器把可执行文件转为目标系统原生格式，配套系统库提供动态链接所需实现。这条移植路径不采用模拟，也不启动独立运行时进程。",
+        "prerequisites": "",
+        "limitations": "遇到不支持或异常状态会报错并终止；系统库进度只统计已知函数，不代表完整覆盖。用户须确认二进制文件的获取和使用符合适用法律及许可。",
+        "license_label": "GPL-2.0",
+        "license_restrictions": "",
+        "readme_sha": "a06939e2b1e26abf1df8f6f5357cdafbd60e4555",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "repository.description",
+            "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+          ],
+          "highlights": [
+            [
+              "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+            ],
+            [
+              "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+            ],
+            [
+              "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+            ]
+          ],
+          "audience": [
+            "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+          ],
+          "capabilities": [
+            [
+              "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+            ],
+            [
+              "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+            ],
+            [
+              "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+            ],
+            [
+              "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+            ],
+            [
+              "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+            ]
+          ],
+          "core_title": [
+            "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+          ],
+          "core_summary": [
+            "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+          ],
+          "prerequisites": [],
+          "limitations": [
+            "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-07/repo-2987e657c453bf435012243a-0d093d98a25b229160362c49.png",
+      "publication_evidence": {
+        "full_name": "boykopovar/AnyPS5",
+        "license_spdx_id": "GPL-2.0",
+        "readme": {
+          "sha": "a06939e2b1e26abf1df8f6f5357cdafbd60e4555",
+          "source_url": "https://api.github.com/repos/boykopovar/AnyPS5/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-07/repo-2987e657c453bf435012243a-0d093d98a25b229160362c49.png",
+          "sha256": "09af11a8419ac63dd7c483ab03fa5e1d600fa65895c355f9953a828e454ccc6f",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "GPL-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.03.boykopovar--anyps5.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "tester-army/e2e",
+            "path": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.01.tester-army--e2e.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.02.mattpocock--skills.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "boykopovar/AnyPS5",
+            "path": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.03.boykopovar--anyps5.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1308631234,
+          "full_name": "tester-army/e2e",
+          "owner": "tester-army",
+          "name": "e2e",
+          "html_url": "https://github.com/tester-army/e2e",
+          "description": "Next generation e2e testing framework for web and mobile apps.",
+          "language": "TypeScript",
+          "stars": 6255,
+          "forks": 278,
+          "open_issues": 72,
+          "watchers": 17,
+          "topics": [
+            "e2e",
+            "e2e-testing",
+            "end-to-end-testing",
+            "mobile",
+            "mobile-testing",
+            "playwright",
+            "web"
+          ],
+          "created_at": "2026-07-22T09:29:04Z",
+          "updated_at": "2026-10-06T23:29:45Z",
+          "pushed_at": "2026-10-06T22:19:36Z",
+          "daily_stars": 1720,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 93.28,
+          "star_delta": 1532,
+          "fork_delta": 82,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.44,
+            "relative_growth": 96.88,
+            "fork_growth": 92.19,
+            "total_stars": 9.38,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "让测试人员用自然语言驱动网页和移动应用，再用断言检查流程是否完成。",
+            "highlights": [
+              "把自然语言操作和代码断言写进同一测试",
+              "已验证步骤可重放，应用未变时不调用模型",
+              "网页与移动端分别提供可选测试引擎"
+            ],
+            "audience": "需要为网页或移动应用编写用户流程测试，并在重复运行时复用已验证操作的开发与测试人员。",
+            "capabilities": [
+              "用自然语言指挥智能体操作应用",
+              "用定位器和断言检查操作结果",
+              "重放已通过后续断言验证的操作",
+              "在浏览器或移动端模拟器中运行测试",
+              "将测试结果发布为拉取请求评论"
+            ],
+            "core_title": "验证过的智能体操作，下次直接重放",
+            "core_summary": "智能体按自然语言目标操作应用，后续断言负责检查结果。通过验证的步骤会记录操作，下次运行直接重放；应用发生变化前，重放无需调用模型。",
+            "prerequisites": "初始化时选择网页或移动端引擎及模型提供方；模型可用自备订阅、密钥或本地模型，无智能体步骤的测试不需要模型。",
+            "limitations": "项目仍在开发中，次要版本间的接口和配置可能变化；命令行默认发送匿名使用数据，可关闭，不含测试内容、应用内容或凭据。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "2a1a902d74ac928fc077a82136c4f60c0c71231f",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ],
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ],
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ]
+              ],
+              "audience": [
+                "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ],
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ],
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ],
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ],
+                [
+                  "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+              ],
+              "core_summary": [
+                "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+              ],
+              "prerequisites": [
+                "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+              ],
+              "limitations": [
+                "github.readme:2a1a902d74ac928fc077a82136c4f60c0c71231f"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-07/repo-cc4c678ba99719c89fee33d9-8d40b8fb7413721c5dcc67fc.png",
+          "publication_evidence": {
+            "full_name": "tester-army/e2e",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "2a1a902d74ac928fc077a82136c4f60c0c71231f",
+              "source_url": "https://api.github.com/repos/tester-army/e2e/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-07/repo-cc4c678ba99719c89fee33d9-8d40b8fb7413721c5dcc67fc.png",
+              "sha256": "09804dac38a217dd3ed0982b65a07fb972437a03c71c64d34a05de6825e98774",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.01.tester-army--e2e.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 278085,
+          "forks": 23288,
+          "open_issues": 321,
+          "watchers": 278085,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-10-06T23:28:37Z",
+          "pushed_at": "2026-10-06T19:04:26Z",
+          "daily_stars": 972,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 91.28,
+          "star_delta": 1012,
+          "fork_delta": 80,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.75,
+            "relative_growth": 89.06,
+            "fork_growth": 88.28,
+            "total_stars": 92.19,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把与编码智能体的讨论变成规格、任务单和测试流程，开发者可按需组合这些技能。",
+            "highlights": [
+              "需求访谈同步沉淀术语表与设计决策",
+              "任务单标明依赖，供后续实现流程使用",
+              "架构扫描生成可视化报告，供用户挑选改进项"
+            ],
+            "audience": "与编码智能体协作开发应用，需要先澄清需求、拆分任务，再通过测试和审查推进实现的工程人员。",
+            "capabilities": [
+              "通过追问澄清需求并整理项目术语",
+              "把已讨论的需求整理成规格文档",
+              "将计划拆成带依赖关系的任务单",
+              "按先写失败测试再修复的循环开发",
+              "从代码规范和需求符合度审查改动"
+            ],
+            "core_title": "按任务组合，而非接管整个开发流程",
+            "core_summary": "这些技能是可单独选用、修改和组合的智能体工作流程。需求访谈会同步维护术语表与决策记录，后续可接规格整理、任务拆分、测试驱动实现和代码审查。",
+            "prerequisites": "安装时保留 setup-matt-pocock-skills；使用工程技能前，每个仓库运行一次配置，指定任务跟踪器、分类标签和文档位置。",
+            "limitations": "插件包只读，市场更新可能滞后；文件安装版需自行更新，两种方式同时安装会重复。架构扫描只提供候选，不会自动理顺旧代码。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "1c5b413748f590299e5f6b95726722391b7ba660",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+              ],
+              "highlights": [
+                [
+                  "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+                ],
+                [
+                  "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+                ],
+                [
+                  "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+                ]
+              ],
+              "audience": [
+                "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+                ],
+                [
+                  "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+                ],
+                [
+                  "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+                ],
+                [
+                  "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+                ],
+                [
+                  "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+                ]
+              ],
+              "core_title": [
+                "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+              ],
+              "core_summary": [
+                "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+              ],
+              "prerequisites": [
+                "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+              ],
+              "limitations": [
+                "github.readme:1c5b413748f590299e5f6b95726722391b7ba660"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-07/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "1c5b413748f590299e5f6b95726722391b7ba660",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-07/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.02.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1322250666,
+          "full_name": "boykopovar/AnyPS5",
+          "owner": "boykopovar",
+          "name": "AnyPS5",
+          "html_url": "https://github.com/boykopovar/AnyPS5",
+          "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+          "language": "C++",
+          "stars": 6434,
+          "forks": 467,
+          "open_issues": 210,
+          "watchers": 95,
+          "topics": [
+            "anyps5",
+            "dynamic-library",
+            "game-porting",
+            "ps5",
+            "ps5-tools",
+            "spir-v",
+            "vulkan"
+          ],
+          "created_at": "2026-08-03T21:30:25Z",
+          "updated_at": "2026-10-06T23:31:22Z",
+          "pushed_at": "2026-10-06T22:43:32Z",
+          "daily_stars": 943,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 89.73,
+          "star_delta": 1506,
+          "fork_delta": 99,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.88,
+            "relative_growth": 95.31,
+            "fork_growth": 95.31,
+            "total_stars": 10.94,
+            "activity": 100.0,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "将 PS5 可执行文件移植到 Linux 和 Windows，采用原生格式转换而非模拟运行。",
+            "highlights": [
+              "以原生格式转换和系统库实现完成移植",
+              "着色器可重编译，并可选用工具验证输出",
+              "既支持映射手柄，也可配置键鼠操作"
+            ],
+            "audience": "研究游戏互操作、保存与兼容性的人员，以及需要尝试将可执行文件移植到 Linux 或 Windows 的开发者。",
+            "capabilities": [
+              "转换可执行文件为目标系统的原生格式",
+              "提供可动态链接的系统库实现",
+              "将着色器重新编译为 SPIR-V",
+              "接入带摇杆和扳机的 SDL 映射手柄",
+              "通过配置文件设置键盘与鼠标控制"
+            ],
+            "core_title": "转换原生格式，而不是模拟运行",
+            "core_summary": "重新链接器把可执行文件转为目标系统原生格式，配套系统库提供动态链接所需实现。这条移植路径不采用模拟，也不启动独立运行时进程。",
+            "prerequisites": "",
+            "limitations": "遇到不支持或异常状态会报错并终止；系统库进度只统计已知函数，不代表完整覆盖。用户须确认二进制文件的获取和使用符合适用法律及许可。",
+            "license_label": "GPL-2.0",
+            "license_restrictions": "",
+            "readme_sha": "a06939e2b1e26abf1df8f6f5357cdafbd60e4555",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "repository.description",
+                "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+              ],
+              "highlights": [
+                [
+                  "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+                ],
+                [
+                  "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+                ],
+                [
+                  "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+                ]
+              ],
+              "audience": [
+                "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+                ],
+                [
+                  "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+                ],
+                [
+                  "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+                ],
+                [
+                  "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+                ],
+                [
+                  "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+                ]
+              ],
+              "core_title": [
+                "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+              ],
+              "core_summary": [
+                "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+              ],
+              "prerequisites": [],
+              "limitations": [
+                "github.readme:a06939e2b1e26abf1df8f6f5357cdafbd60e4555"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-07/repo-2987e657c453bf435012243a-0d093d98a25b229160362c49.png",
+          "publication_evidence": {
+            "full_name": "boykopovar/AnyPS5",
+            "license_spdx_id": "GPL-2.0",
+            "readme": {
+              "sha": "a06939e2b1e26abf1df8f6f5357cdafbd60e4555",
+              "source_url": "https://api.github.com/repos/boykopovar/AnyPS5/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-07/repo-2987e657c453bf435012243a-0d093d98a25b229160362c49.png",
+              "sha256": "09af11a8419ac63dd7c483ab03fa5e1d600fa65895c355f9953a828e454ccc6f",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "GPL-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-07/2026-10-07.comprehensive.03.boykopovar--anyps5.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-07/2026-10-07.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "earthtojake/text-to-cad",
+            "path": "reports/daily/assets/2026-10-07/2026-10-07.ai.01.earthtojake--text-to-cad.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "msitarzewski/agency-agents",
+            "path": "reports/daily/assets/2026-10-07/2026-10-07.ai.02.msitarzewski--agency-agents.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-07/2026-10-07.ai.03.morluto--rea.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1217522067,
+          "full_name": "earthtojake/text-to-cad",
+          "owner": "earthtojake",
+          "name": "text-to-cad",
+          "html_url": "https://github.com/earthtojake/text-to-cad",
+          "description": "Give your agent CAD superpowers.",
+          "language": "Python",
+          "stars": 17955,
+          "forks": 1799,
+          "open_issues": 36,
+          "watchers": 93,
+          "topics": [
+            "agents",
+            "ai-agents",
+            "cad",
+            "mechanical-engineering",
+            "robotics",
+            "step",
+            "stl",
+            "stp",
+            "text-to-cad"
+          ],
+          "created_at": "2026-04-22T01:09:45Z",
+          "updated_at": "2026-10-06T23:30:52Z",
+          "pushed_at": "2026-10-06T22:52:03Z",
+          "daily_stars": 620,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 85.83,
+          "star_delta": 571,
+          "fork_delta": 30,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 91.67,
+            "relative_growth": 95.83,
+            "fork_growth": 79.17,
+            "total_stars": 8.33,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "让 AI 智能体把文字或图片需求变成零件模型，并接着完成工程图和加工前检查。",
+            "highlights": [
+              "以 STEP 为主要模型输出，兼顾打印与展示格式",
+              "加工检查为每项发现附上测量结果与规则依据",
+              "在对话或本地浏览器中查看模型"
+            ],
+            "audience": "需要用文字或图片设计零件、制作工程图，并在打印或加工前检查模型的机械设计与机器人开发人员。",
+            "capabilities": [
+              "把文字或图片需求生成三维 CAD 模型",
+              "将零件生成带尺寸标注的 PDF 工程图",
+              "检查零件加工问题并列出测量依据",
+              "测量打印模型的壁厚、悬垂和支撑体积",
+              "按自有打印机预设切片生成 G-code"
+            ],
+            "core_title": "把零件设计接到制造准备",
+            "core_summary": "从文字或图片生成零件模型后，可继续出工程图、检查加工与打印条件，再按打印机预设切片。建模、检查和制造准备都能由智能体调用本地工作流完成。",
+            "prerequisites": "需安装 uv，并使用支持插件或技能框架的智能体；首次启动需联网下载运行环境，安装后需重启应用。",
+            "limitations": "Windows 11 的智能应用控制会拦截未签名 CAD 内核，README 提供 WSL 路径；同一应用不要同时安装插件和独立技能。匿名统计须经同意才开启。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+              ],
+              "highlights": [
+                [
+                  "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+                ],
+                [
+                  "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+                ],
+                [
+                  "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+                ]
+              ],
+              "audience": [
+                "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+                ],
+                [
+                  "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+                ],
+                [
+                  "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+                ],
+                [
+                  "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+                ],
+                [
+                  "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+                ]
+              ],
+              "core_title": [
+                "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+              ],
+              "core_summary": [
+                "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+              ],
+              "prerequisites": [
+                "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+              ],
+              "limitations": [
+                "github.readme:c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-07/repo-97fd47923097e03ffadf8da5-5af7f8fce26ef06f27f7d97d.png",
+          "publication_evidence": {
+            "full_name": "earthtojake/text-to-cad",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "c7b345b8ecebeee0ed8816cd1ec95c07ad76ec5e",
+              "source_url": "https://api.github.com/repos/earthtojake/text-to-cad/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-07/repo-97fd47923097e03ffadf8da5-5af7f8fce26ef06f27f7d97d.png",
+              "sha256": "08ef2693675a1c280ce2e52009af9c624b702c2c1e9f7cb7b514d4dd349f1f88",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-07/2026-10-07.ai.01.earthtojake--text-to-cad.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1075372545,
+          "full_name": "msitarzewski/agency-agents",
+          "owner": "msitarzewski",
+          "name": "agency-agents",
+          "html_url": "https://github.com/msitarzewski/agency-agents",
+          "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+          "language": "Shell",
+          "stars": 157801,
+          "forks": 25441,
+          "open_issues": 165,
+          "watchers": 157800,
+          "topics": [],
+          "created_at": "2025-10-13T12:12:29Z",
+          "updated_at": "2026-10-06T23:31:30Z",
+          "pushed_at": "2026-10-06T17:53:59Z",
+          "daily_stars": 621,
+          "weekly_stars": null,
+          "trending_rank_daily": 10,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 83.94,
+          "star_delta": 568,
+          "fork_delta": 76,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 87.5,
+            "relative_growth": 83.33,
+            "fork_growth": 91.67,
+            "total_stars": 58.33,
+            "activity": 100.0,
+            "trending_signal": 28.91
+          },
+          "summary": {
+            "one_line": "为开发、设计和运营任务挑选 AI 角色，把各自的工作流程与交付要求装进已有工具。",
+            "highlights": [
+              "角色文件同时包含职责、流程、交付示例与成功指标",
+              "用项目示例展示开发、设计和测试角色如何分工",
+              "配套桌面应用可浏览角色、安装并保持更新"
+            ],
+            "audience": "希望在产品原型、代码审查或内容策划中，按任务给 AI 配置不同职责与交付要求的开发者和运营人员。",
+            "capabilities": [
+              "按团队或单个角色选择要安装的智能体",
+              "转换角色文件以适配不同 AI 编程工具",
+              "调用前端角色协助构建页面组件",
+              "调用内容角色制定多平台内容计划",
+              "修改角色的工作流程和交付要求"
+            ],
+            "core_title": "给 AI 角色配好流程和交付标准",
+            "core_summary": "每个角色文件不只指定身份，还写入任务流程、交付示例、沟通方式和成功指标。可按项目挑选角色，再通过安装与转换脚本接入已有 AI 工具。",
+            "prerequisites": "集成使用需有受支持的 AI 工具；部分工具需先生成转换文件。也可直接复制、改写角色文件作为参考。",
+            "limitations": "README 提醒 OpenCode 运行时约只注册 119 个角色，其余会被静默丢弃，宜按团队安装子集；Aider 默认载入角色索引，完整指令需另行读取。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "89f77d994487257faa0f6066ee68af2d4a596fe6",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+              ],
+              "highlights": [
+                [
+                  "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+                ],
+                [
+                  "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+                ],
+                [
+                  "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+                ]
+              ],
+              "audience": [
+                "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+                ],
+                [
+                  "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+                ],
+                [
+                  "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+                ],
+                [
+                  "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+                ],
+                [
+                  "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+                ]
+              ],
+              "core_title": [
+                "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+              ],
+              "core_summary": [
+                "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+              ],
+              "prerequisites": [
+                "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+              ],
+              "limitations": [
+                "github.readme:89f77d994487257faa0f6066ee68af2d4a596fe6"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-07/repo-65e281143ae0892ee8e3d795-c89b340a275b724d2d94dddd.png",
+          "publication_evidence": {
+            "full_name": "msitarzewski/agency-agents",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "89f77d994487257faa0f6066ee68af2d4a596fe6",
+              "source_url": "https://api.github.com/repos/msitarzewski/agency-agents/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-07/repo-65e281143ae0892ee8e3d795-c89b340a275b724d2d94dddd.png",
+              "sha256": "f0ccc065f51d325ab9e26aac4dd8b2cc1c66b5d7e029c3ae2d50011eea018261",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-07/2026-10-07.ai.02.msitarzewski--agency-agents.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1209966933,
+          "full_name": "morluto/rea",
+          "owner": "morluto",
+          "name": "rea",
+          "html_url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "language": "TypeScript",
+          "stars": 9218,
+          "forks": 1014,
+          "open_issues": 102,
+          "watchers": 28,
+          "topics": [
+            "agent-skills",
+            "ai-agent-tools",
+            "ai-agents",
+            "binary-analysis",
+            "cli",
+            "coding-agents",
+            "cordis",
+            "ctf",
+            "decompiler",
+            "disassembler",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "mcp",
+            "mcp-server",
+            "model-context-protocol",
+            "reverse-engineering",
+            "reverse-engineering-tools",
+            "static-analysis"
+          ],
+          "created_at": "2026-04-14T00:51:32Z",
+          "updated_at": "2026-10-06T23:31:17Z",
+          "pushed_at": "2026-10-06T21:25:19Z",
+          "daily_stars": 2963,
+          "weekly_stars": null,
+          "trending_rank_daily": 8,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 82.83,
+          "star_delta": 2963,
+          "fork_delta": 0,
+          "delta_source": "trending",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 10.42,
+            "total_stars": 4.17,
+            "activity": 100.0,
+            "trending_signal": 31.55
+          },
+          "summary": {
+            "one_line": "没有源码也能调查应用功能：让智能体在本地追踪代码与运行行为，给出附证据的解释。",
+            "highlights": [
+              "终端与智能体共用分析工作流和证据格式",
+              "无需运行应用即可梳理 JavaScript 与 Electron 结构",
+              "保存带目标身份、置信度和限制说明的分析证据"
+            ],
+            "audience": "需要理解无源码应用的功能实现、梳理未文档化接口，或比较不同版本行为的开发者与逆向分析人员。",
+            "capabilities": [
+              "追踪字符串与符号对应的函数调用路径",
+              "反编译原生函数以查看伪代码",
+              "静态梳理 JavaScript 应用的模块关系",
+              "按指定场景采集浏览器交互证据",
+              "比较不同构建或进程采集结果的差异"
+            ],
+            "core_title": "从应用线索追到带证据的解释",
+            "core_summary": "通过 MCP，也就是让智能体调用外部工具的接口，连接本地分析引擎与观察工具。结论附带证据、位置和未解问题；后续功能实现由智能体自己的编辑与测试工具完成。",
+            "prerequisites": "静态 JavaScript 分析需 Node.js 与 npm；深度原生分析另需 Hopper、Ghidra 或 IDA Pro，平台要求随工作流而异。",
+            "limitations": "不会保证还原原始源码或自动克隆应用；进程采集以用户权限运行，不是安全沙箱。安装配置变更需确认；模型服务的数据政策需另查。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "2a375d7e78cc0cb0204c7d911939064b4032e346",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+                ],
+                [
+                  "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+                ],
+                [
+                  "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+                ]
+              ],
+              "audience": [
+                "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+                ],
+                [
+                  "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+                ],
+                [
+                  "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+                ],
+                [
+                  "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+                ],
+                [
+                  "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+              ],
+              "core_summary": [
+                "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+              ],
+              "prerequisites": [
+                "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+              ],
+              "limitations": [
+                "github.readme:2a375d7e78cc0cb0204c7d911939064b4032e346"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-07/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "publication_evidence": {
+            "full_name": "morluto/rea",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "2a375d7e78cc0cb0204c7d911939064b4032e346",
+              "source_url": "https://api.github.com/repos/morluto/rea/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-07/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+              "sha256": "fbabed3f57bb75cefe5fbd655e97b8f6879778754883e22fc39f62c3a19fbedd",
+              "width": 432,
+              "height": 432
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-07/2026-10-07.ai.03.morluto--rea.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
