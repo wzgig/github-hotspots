@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-10-08",
+  "window": {
+    "start": "2026-10-07",
+    "end": "2026-10-08"
+  },
+  "source_report": "reports/daily/2026-10-08.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-10-08",
+  "manifest": "reports/daily/assets/2026-10-08/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-08/2026-10-08.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-08/2026-10-08.comprehensive.01.morluto--rea.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "mattpocock/skills",
+          "path": "reports/daily/assets/2026-10-08/2026-10-08.comprehensive.02.mattpocock--skills.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "boykopovar/AnyPS5",
+          "path": "reports/daily/assets/2026-10-08/2026-10-08.comprehensive.03.boykopovar--anyps5.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-08/2026-10-08.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-08/2026-10-08.ai.01.morluto--rea.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "msitarzewski/agency-agents",
+          "path": "reports/daily/assets/2026-10-08/2026-10-08.ai.02.msitarzewski--agency-agents.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "thedotmack/claude-mem",
+          "path": "reports/daily/assets/2026-10-08/2026-10-08.ai.03.thedotmack--claude-mem.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 89,
+    "issue_code": "D089",
+    "issue_label": "第89期",
+    "status": "official"
+  }
+}
