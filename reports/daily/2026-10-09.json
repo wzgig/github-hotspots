@@ -1,0 +1,1509 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-10-09",
+  "window_start": "2026-10-08",
+  "window_end": "2026-10-09",
+  "generated_at": "2026-10-09T07:31:33+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-10-08 至 2026-10-09",
+  "publication": {
+    "issue_number": 90,
+    "issue_code": "D090",
+    "issue_label": "第90期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-10-09",
+    "manifest": "reports/daily/assets/2026-10-09/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "boykopovar/AnyPS5",
+            "path": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.01.boykopovar--anyps5.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.02.morluto--rea.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.03.mattpocock--skills.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-09/2026-10-09.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-09/2026-10-09.ai.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "thedotmack/claude-mem",
+            "path": "reports/daily/assets/2026-10-09/2026-10-09.ai.02.thedotmack--claude-mem.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "farion1231/cc-switch",
+            "path": "reports/daily/assets/2026-10-09/2026-10-09.ai.03.farion1231--cc-switch.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 90,
+      "issue_code": "D090",
+      "issue_label": "第90期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1322250666,
+      "full_name": "boykopovar/AnyPS5",
+      "owner": "boykopovar",
+      "name": "AnyPS5",
+      "html_url": "https://github.com/boykopovar/AnyPS5",
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "language": "C++",
+      "stars": 15496,
+      "forks": 1221,
+      "open_issues": 525,
+      "watchers": 200,
+      "topics": [
+        "anyps5",
+        "dynamic-library",
+        "game-porting",
+        "ps5",
+        "ps5-tools",
+        "spir-v",
+        "vulkan"
+      ],
+      "created_at": "2026-08-03T21:30:25Z",
+      "updated_at": "2026-10-08T23:30:51Z",
+      "pushed_at": "2026-10-08T22:46:53Z",
+      "daily_stars": 4640,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 95.2,
+      "star_delta": 5067,
+      "fork_delta": 433,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.65,
+        "relative_growth": 98.65,
+        "fork_growth": 98.65,
+        "total_stars": 25.68,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "把可执行文件移植到 Linux 和 Windows，让兼容性研究不必走模拟器路线。",
+        "highlights": [
+          "把可执行文件移植为 Linux 或 Windows 原生格式",
+          "重编译着色器，并可在构建时启用 SPIR-V 验证",
+          "支持手柄输入，也能自定义键鼠控制"
+        ],
+        "audience": "研究主机程序互操作、软件保存和兼容性的开发者，用于探索可执行文件跨系统移植。",
+        "capabilities": [
+          "转换可执行文件为目标系统的原生格式",
+          "提供可动态链接的系统 PRX 库实现",
+          "将着色器重编译为 SPIR-V",
+          "接入 SDL 映射的手柄摇杆与扳机",
+          "通过配置文件自定义键盘和鼠标控制"
+        ],
+        "core_title": "转换原生格式，而非模拟运行",
+        "core_summary": "重链接器把可执行文件转换为目标系统的原生格式，再配合可动态链接的系统 PRX 库实现。它走的是程序移植路线，不使用模拟器，也不依赖独立运行时进程。",
+        "prerequisites": "",
+        "limitations": "遇到不支持或异常状态会报错并终止进程；库完成比例只覆盖项目已知函数，不代表全部系统函数；用户须确保所用二进制文件的获取和使用合规。",
+        "license_label": "GPL-2.0",
+        "license_restrictions": "",
+        "readme_sha": "5e57cb94ff24c133317861bad76ac6b8dd83a55b",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+          ],
+          "highlights": [
+            [
+              "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+            ],
+            [
+              "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+            ],
+            [
+              "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+            ]
+          ],
+          "audience": [
+            "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+          ],
+          "capabilities": [
+            [
+              "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+            ],
+            [
+              "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+            ],
+            [
+              "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+            ],
+            [
+              "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+            ],
+            [
+              "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+            ]
+          ],
+          "core_title": [
+            "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+          ],
+          "core_summary": [
+            "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+          ],
+          "prerequisites": [],
+          "limitations": [
+            "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-09/repo-2987e657c453bf435012243a-0d093d98a25b229160362c49.png",
+      "publication_evidence": {
+        "full_name": "boykopovar/AnyPS5",
+        "license_spdx_id": "GPL-2.0",
+        "readme": {
+          "sha": "5e57cb94ff24c133317861bad76ac6b8dd83a55b",
+          "source_url": "https://api.github.com/repos/boykopovar/AnyPS5/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-09/repo-2987e657c453bf435012243a-0d093d98a25b229160362c49.png",
+          "sha256": "09af11a8419ac63dd7c483ab03fa5e1d600fa65895c355f9953a828e454ccc6f",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "GPL-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.01.boykopovar--anyps5.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1209966933,
+      "full_name": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "html_url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": 25586,
+      "forks": 2867,
+      "open_issues": 82,
+      "watchers": 80,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "ctf",
+        "decompiler",
+        "developer-tools",
+        "disassembler",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "reverse-engineering",
+        "static-analysis"
+      ],
+      "created_at": "2026-04-14T00:51:32Z",
+      "updated_at": "2026-10-08T23:31:14Z",
+      "pushed_at": "2026-10-08T23:30:07Z",
+      "daily_stars": 7744,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 93.92,
+      "star_delta": 10763,
+      "fork_delta": 1318,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 100.0,
+        "total_stars": 28.38,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "想弄清应用某个功能如何实现，REA 可让智能体在没有源码时追踪代码，并返回证据。",
+        "highlights": [
+          "没有源码也能调查应用功能，并附上结论依据",
+          "静态检查 JavaScript 和 .NET 时不运行应用",
+          "智能体与终端可使用同一套分析工作流"
+        ],
+        "audience": "需要在没有源码时研究应用功能、追踪代码行为，并据此重建实现的开发者与逆向研究者。",
+        "capabilities": [
+          "提取原生二进制的伪代码与调用引用",
+          "梳理 Electron 应用的模块和进程通信",
+          "检查网站页面结构与网络活动",
+          "读取 .NET 程序集的元数据与指令",
+          "记录目标进程的交互和文件系统变化"
+        ],
+        "core_title": "让智能体沿证据追踪应用行为",
+        "core_summary": "MCP 在这里是智能体调用分析工具的接口。REA 在本地检查目标，返回代码线索、证据和未知项；智能体据此继续追问、解释行为，或编写并测试自己的实现。",
+        "prerequisites": "需符合版本要求的 Node.js 和 npm；深度原生分析另需 Hopper、Ghidra 或 IDA，其他目标按类型准备工具。",
+        "limitations": "安装变更需审核批准；运行时捕获会以用户权限运行或操作目标。分析虽在本地进行，结果仍交给智能体，受模型提供方的数据政策约束；研究须取得必要授权。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "8a38c7cfbfb26c415a186b730dbd072dac156665",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+          ],
+          "highlights": [
+            [
+              "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+            ],
+            [
+              "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+            ],
+            [
+              "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+            ]
+          ],
+          "audience": [
+            "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+          ],
+          "capabilities": [
+            [
+              "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+            ],
+            [
+              "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+            ],
+            [
+              "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+            ],
+            [
+              "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+            ],
+            [
+              "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+            ]
+          ],
+          "core_title": [
+            "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+          ],
+          "core_summary": [
+            "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+          ],
+          "prerequisites": [
+            "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+          ],
+          "limitations": [
+            "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-09/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+      "publication_evidence": {
+        "full_name": "morluto/rea",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "8a38c7cfbfb26c415a186b730dbd072dac156665",
+          "source_url": "https://api.github.com/repos/morluto/rea/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-09/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "sha256": "fbabed3f57bb75cefe5fbd655e97b8f6879778754883e22fc39f62c3a19fbedd",
+          "width": 432,
+          "height": 432
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.02.morluto--rea.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 281021,
+      "forks": 23555,
+      "open_issues": 164,
+      "watchers": 281021,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-10-08T23:31:17Z",
+      "pushed_at": "2026-10-08T08:49:07Z",
+      "daily_stars": 1770,
+      "weekly_stars": null,
+      "trending_rank_daily": 4,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 90.67,
+      "star_delta": 1478,
+      "fork_delta": 135,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.95,
+        "relative_growth": 94.59,
+        "fork_growth": 97.3,
+        "total_stars": 94.59,
+        "activity": 71.65,
+        "trending_signal": 43.07
+      },
+      "summary": {
+        "one_line": "给编码智能体补上需求追问、任务拆分和测试审查，让工程师按需组合自己的开发流程。",
+        "highlights": [
+          "用追问和共享术语减少人与智能体的理解偏差",
+          "把讨论、规格和带依赖的任务单衔接起来",
+          "扫描架构改进机会，以可视化报告供人选择"
+        ],
+        "audience": "用编码智能体开发应用，希望在动手前对齐需求、拆分任务，并用测试和审查约束实现的软件工程师。",
+        "capabilities": [
+          "追问需求并维护项目术语表与决策记录",
+          "把已有讨论整理成需求规格",
+          "将计划拆为带依赖关系的任务单",
+          "按先失败再通过的测试循环推进实现",
+          "从编码规范和需求符合度审查改动"
+        ],
+        "core_title": "把工程纪律拆成可组合的技能",
+        "core_summary": "这些技能是可编辑、可组合的智能体工作指引：先通过追问明确需求，再把讨论转成规格和任务，实施时接入测试与代码审查。可按项目需要选用，而不是由整套流程接管开发。",
+        "prerequisites": "使用工程技能前，每个仓库需运行一次 setup-matt-pocock-skills，确认任务跟踪工具、分拣标签和文档保存位置。",
+        "limitations": "同一智能体应在插件与文件安装中二选一，避免技能重复；用户调用型技能需手动触发；架构扫描只提出候选，不会替你理清老旧代码。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "f7038f139299985eea6c3e18398dbafb379a0010",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+          ],
+          "highlights": [
+            [
+              "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+            ],
+            [
+              "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+            ],
+            [
+              "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+            ]
+          ],
+          "audience": [
+            "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+          ],
+          "capabilities": [
+            [
+              "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+            ],
+            [
+              "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+            ],
+            [
+              "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+            ],
+            [
+              "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+            ],
+            [
+              "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+            ]
+          ],
+          "core_title": [
+            "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+          ],
+          "core_summary": [
+            "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+          ],
+          "prerequisites": [
+            "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+          ],
+          "limitations": [
+            "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-09/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "f7038f139299985eea6c3e18398dbafb379a0010",
+          "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-09/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+          "width": 373,
+          "height": 373
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.03.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "boykopovar/AnyPS5",
+            "path": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.01.boykopovar--anyps5.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.02.morluto--rea.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.03.mattpocock--skills.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1322250666,
+          "full_name": "boykopovar/AnyPS5",
+          "owner": "boykopovar",
+          "name": "AnyPS5",
+          "html_url": "https://github.com/boykopovar/AnyPS5",
+          "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+          "language": "C++",
+          "stars": 15496,
+          "forks": 1221,
+          "open_issues": 525,
+          "watchers": 200,
+          "topics": [
+            "anyps5",
+            "dynamic-library",
+            "game-porting",
+            "ps5",
+            "ps5-tools",
+            "spir-v",
+            "vulkan"
+          ],
+          "created_at": "2026-08-03T21:30:25Z",
+          "updated_at": "2026-10-08T23:30:51Z",
+          "pushed_at": "2026-10-08T22:46:53Z",
+          "daily_stars": 4640,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 95.2,
+          "star_delta": 5067,
+          "fork_delta": 433,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.65,
+            "relative_growth": 98.65,
+            "fork_growth": 98.65,
+            "total_stars": 25.68,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把可执行文件移植到 Linux 和 Windows，让兼容性研究不必走模拟器路线。",
+            "highlights": [
+              "把可执行文件移植为 Linux 或 Windows 原生格式",
+              "重编译着色器，并可在构建时启用 SPIR-V 验证",
+              "支持手柄输入，也能自定义键鼠控制"
+            ],
+            "audience": "研究主机程序互操作、软件保存和兼容性的开发者，用于探索可执行文件跨系统移植。",
+            "capabilities": [
+              "转换可执行文件为目标系统的原生格式",
+              "提供可动态链接的系统 PRX 库实现",
+              "将着色器重编译为 SPIR-V",
+              "接入 SDL 映射的手柄摇杆与扳机",
+              "通过配置文件自定义键盘和鼠标控制"
+            ],
+            "core_title": "转换原生格式，而非模拟运行",
+            "core_summary": "重链接器把可执行文件转换为目标系统的原生格式，再配合可动态链接的系统 PRX 库实现。它走的是程序移植路线，不使用模拟器，也不依赖独立运行时进程。",
+            "prerequisites": "",
+            "limitations": "遇到不支持或异常状态会报错并终止进程；库完成比例只覆盖项目已知函数，不代表全部系统函数；用户须确保所用二进制文件的获取和使用合规。",
+            "license_label": "GPL-2.0",
+            "license_restrictions": "",
+            "readme_sha": "5e57cb94ff24c133317861bad76ac6b8dd83a55b",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+              ],
+              "highlights": [
+                [
+                  "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+                ],
+                [
+                  "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+                ],
+                [
+                  "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+                ]
+              ],
+              "audience": [
+                "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+                ],
+                [
+                  "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+                ],
+                [
+                  "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+                ],
+                [
+                  "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+                ],
+                [
+                  "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+                ]
+              ],
+              "core_title": [
+                "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+              ],
+              "core_summary": [
+                "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+              ],
+              "prerequisites": [],
+              "limitations": [
+                "github.readme:5e57cb94ff24c133317861bad76ac6b8dd83a55b"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-09/repo-2987e657c453bf435012243a-0d093d98a25b229160362c49.png",
+          "publication_evidence": {
+            "full_name": "boykopovar/AnyPS5",
+            "license_spdx_id": "GPL-2.0",
+            "readme": {
+              "sha": "5e57cb94ff24c133317861bad76ac6b8dd83a55b",
+              "source_url": "https://api.github.com/repos/boykopovar/AnyPS5/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-09/repo-2987e657c453bf435012243a-0d093d98a25b229160362c49.png",
+              "sha256": "09af11a8419ac63dd7c483ab03fa5e1d600fa65895c355f9953a828e454ccc6f",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "GPL-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.01.boykopovar--anyps5.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1209966933,
+          "full_name": "morluto/rea",
+          "owner": "morluto",
+          "name": "rea",
+          "html_url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "language": "TypeScript",
+          "stars": 25586,
+          "forks": 2867,
+          "open_issues": 82,
+          "watchers": 80,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "ctf",
+            "decompiler",
+            "developer-tools",
+            "disassembler",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "reverse-engineering",
+            "static-analysis"
+          ],
+          "created_at": "2026-04-14T00:51:32Z",
+          "updated_at": "2026-10-08T23:31:14Z",
+          "pushed_at": "2026-10-08T23:30:07Z",
+          "daily_stars": 7744,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 93.92,
+          "star_delta": 10763,
+          "fork_delta": 1318,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 28.38,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "想弄清应用某个功能如何实现，REA 可让智能体在没有源码时追踪代码，并返回证据。",
+            "highlights": [
+              "没有源码也能调查应用功能，并附上结论依据",
+              "静态检查 JavaScript 和 .NET 时不运行应用",
+              "智能体与终端可使用同一套分析工作流"
+            ],
+            "audience": "需要在没有源码时研究应用功能、追踪代码行为，并据此重建实现的开发者与逆向研究者。",
+            "capabilities": [
+              "提取原生二进制的伪代码与调用引用",
+              "梳理 Electron 应用的模块和进程通信",
+              "检查网站页面结构与网络活动",
+              "读取 .NET 程序集的元数据与指令",
+              "记录目标进程的交互和文件系统变化"
+            ],
+            "core_title": "让智能体沿证据追踪应用行为",
+            "core_summary": "MCP 在这里是智能体调用分析工具的接口。REA 在本地检查目标，返回代码线索、证据和未知项；智能体据此继续追问、解释行为，或编写并测试自己的实现。",
+            "prerequisites": "需符合版本要求的 Node.js 和 npm；深度原生分析另需 Hopper、Ghidra 或 IDA，其他目标按类型准备工具。",
+            "limitations": "安装变更需审核批准；运行时捕获会以用户权限运行或操作目标。分析虽在本地进行，结果仍交给智能体，受模型提供方的数据政策约束；研究须取得必要授权。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "8a38c7cfbfb26c415a186b730dbd072dac156665",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+              ],
+              "highlights": [
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ],
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ],
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ]
+              ],
+              "audience": [
+                "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ],
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ],
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ],
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ],
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ]
+              ],
+              "core_title": [
+                "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+              ],
+              "core_summary": [
+                "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+              ],
+              "prerequisites": [
+                "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+              ],
+              "limitations": [
+                "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-09/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "publication_evidence": {
+            "full_name": "morluto/rea",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "8a38c7cfbfb26c415a186b730dbd072dac156665",
+              "source_url": "https://api.github.com/repos/morluto/rea/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-09/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+              "sha256": "fbabed3f57bb75cefe5fbd655e97b8f6879778754883e22fc39f62c3a19fbedd",
+              "width": 432,
+              "height": 432
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.02.morluto--rea.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 281021,
+          "forks": 23555,
+          "open_issues": 164,
+          "watchers": 281021,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-10-08T23:31:17Z",
+          "pushed_at": "2026-10-08T08:49:07Z",
+          "daily_stars": 1770,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 90.67,
+          "star_delta": 1478,
+          "fork_delta": 135,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.95,
+            "relative_growth": 94.59,
+            "fork_growth": 97.3,
+            "total_stars": 94.59,
+            "activity": 71.65,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "给编码智能体补上需求追问、任务拆分和测试审查，让工程师按需组合自己的开发流程。",
+            "highlights": [
+              "用追问和共享术语减少人与智能体的理解偏差",
+              "把讨论、规格和带依赖的任务单衔接起来",
+              "扫描架构改进机会，以可视化报告供人选择"
+            ],
+            "audience": "用编码智能体开发应用，希望在动手前对齐需求、拆分任务，并用测试和审查约束实现的软件工程师。",
+            "capabilities": [
+              "追问需求并维护项目术语表与决策记录",
+              "把已有讨论整理成需求规格",
+              "将计划拆为带依赖关系的任务单",
+              "按先失败再通过的测试循环推进实现",
+              "从编码规范和需求符合度审查改动"
+            ],
+            "core_title": "把工程纪律拆成可组合的技能",
+            "core_summary": "这些技能是可编辑、可组合的智能体工作指引：先通过追问明确需求，再把讨论转成规格和任务，实施时接入测试与代码审查。可按项目需要选用，而不是由整套流程接管开发。",
+            "prerequisites": "使用工程技能前，每个仓库需运行一次 setup-matt-pocock-skills，确认任务跟踪工具、分拣标签和文档保存位置。",
+            "limitations": "同一智能体应在插件与文件安装中二选一，避免技能重复；用户调用型技能需手动触发；架构扫描只提出候选，不会替你理清老旧代码。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "f7038f139299985eea6c3e18398dbafb379a0010",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+              ],
+              "highlights": [
+                [
+                  "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+                ],
+                [
+                  "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+                ],
+                [
+                  "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+                ]
+              ],
+              "audience": [
+                "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+                ],
+                [
+                  "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+                ],
+                [
+                  "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+                ],
+                [
+                  "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+                ],
+                [
+                  "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+                ]
+              ],
+              "core_title": [
+                "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+              ],
+              "core_summary": [
+                "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+              ],
+              "prerequisites": [
+                "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+              ],
+              "limitations": [
+                "github.readme:f7038f139299985eea6c3e18398dbafb379a0010"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-09/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "f7038f139299985eea6c3e18398dbafb379a0010",
+              "source_url": "https://api.github.com/repos/mattpocock/skills/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-09/repo-89e612f6ea9737127b9b3294-276364f3fb04299104c9653a.png",
+              "sha256": "2d30db97371cfb3142e805eabe50b5488a94df918c0c3c5ee638b89098ec521f",
+              "width": 373,
+              "height": 373
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-09/2026-10-09.comprehensive.03.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-09/2026-10-09.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-09/2026-10-09.ai.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "thedotmack/claude-mem",
+            "path": "reports/daily/assets/2026-10-09/2026-10-09.ai.02.thedotmack--claude-mem.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "farion1231/cc-switch",
+            "path": "reports/daily/assets/2026-10-09/2026-10-09.ai.03.farion1231--cc-switch.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1209966933,
+          "full_name": "morluto/rea",
+          "owner": "morluto",
+          "name": "rea",
+          "html_url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "language": "TypeScript",
+          "stars": 25586,
+          "forks": 2867,
+          "open_issues": 82,
+          "watchers": 80,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "ctf",
+            "decompiler",
+            "developer-tools",
+            "disassembler",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "reverse-engineering",
+            "static-analysis"
+          ],
+          "created_at": "2026-04-14T00:51:32Z",
+          "updated_at": "2026-10-08T23:31:14Z",
+          "pushed_at": "2026-10-08T23:30:07Z",
+          "daily_stars": 7744,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 93.36,
+          "star_delta": 10763,
+          "fork_delta": 1318,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 17.24,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "没有源码也想弄懂应用功能？rea 让智能体检查程序，带着证据解释实现方式。",
+            "highlights": [
+              "无需源码也能调查应用功能如何实现",
+              "分析结论附带证据和能力边界",
+              "智能体与终端可调用同一套分析流程"
+            ],
+            "audience": "需要在没有源码时追查应用功能、分析程序行为，并为自己的项目重建类似功能的开发者。",
+            "capabilities": [
+              "提取原生程序的伪代码与调用关系",
+              "梳理 Electron 模块与进程间通信",
+              "查看网页结构、脚本和网络活动",
+              "检查 Android 安装包中的类与方法",
+              "对比进程运行时的输出与文件变化"
+            ],
+            "core_title": "沿着证据追查应用功能",
+            "core_summary": "MCP 是智能体调用分析工具的接口。REA 在本地检查目标，返回代码、引用和未知项；智能体据此继续追查、解释行为，再编写和测试类似实现。",
+            "prerequisites": "需 Node.js 22.x（>=22.19）、24.x（>=24.11）或26+及 npm；深度原生分析另需 Hopper、Ghidra 或 IDA。",
+            "limitations": "安装配置变更需确认；运行时采集会以用户权限执行或操作目标。工具结果交给智能体后受模型方数据政策约束；使用者需自行取得必要授权。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "8a38c7cfbfb26c415a186b730dbd072dac156665",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+              ],
+              "highlights": [
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ],
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ],
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ]
+              ],
+              "audience": [
+                "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ],
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ],
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ],
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ],
+                [
+                  "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+                ]
+              ],
+              "core_title": [
+                "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+              ],
+              "core_summary": [
+                "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+              ],
+              "prerequisites": [
+                "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+              ],
+              "limitations": [
+                "github.readme:8a38c7cfbfb26c415a186b730dbd072dac156665"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-09/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "publication_evidence": {
+            "full_name": "morluto/rea",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "8a38c7cfbfb26c415a186b730dbd072dac156665",
+              "source_url": "https://api.github.com/repos/morluto/rea/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-09/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+              "sha256": "fbabed3f57bb75cefe5fbd655e97b8f6879778754883e22fc39f62c3a19fbedd",
+              "width": 432,
+              "height": 432
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-09/2026-10-09.ai.01.morluto--rea.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1048065319,
+          "full_name": "thedotmack/claude-mem",
+          "owner": "thedotmack",
+          "name": "claude-mem",
+          "html_url": "https://github.com/thedotmack/claude-mem",
+          "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+          "language": "TypeScript",
+          "stars": 98432,
+          "forks": 8633,
+          "open_issues": 108,
+          "watchers": 313,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "ai-memory",
+            "anthropic",
+            "artificial-intelligence",
+            "chromadb",
+            "claude",
+            "claude-agent-sdk",
+            "claude-agents",
+            "claude-code",
+            "claude-code-plugin",
+            "claude-skills",
+            "embeddings",
+            "long-term-memory",
+            "mem0",
+            "memory-engine",
+            "openmemory",
+            "rag",
+            "sqlite",
+            "supermemory"
+          ],
+          "created_at": "2025-08-31T20:50:03Z",
+          "updated_at": "2026-10-08T23:26:53Z",
+          "pushed_at": "2026-10-08T18:58:36Z",
+          "daily_stars": 662,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 86.07,
+          "star_delta": 741,
+          "fork_delta": 32,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.1,
+            "relative_growth": 93.1,
+            "fork_growth": 79.31,
+            "total_stars": 20.69,
+            "activity": 100.0,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "claude-mem 把编程会话中的操作变成长期记忆，让 Claude Code 下次接着项目背景工作。",
+            "highlights": [
+              "把工具操作压缩成可跨会话保留的记忆",
+              "结合语义与关键词查找项目历史",
+              "可配置新会话注入哪些背景信息"
+            ],
+            "audience": "使用 Claude Code 持续开发同一项目，需要跨会话保留工作背景、回查历史决策与修复记录的人。",
+            "capabilities": [
+              "记录会话中的工具使用情况",
+              "生成供后续会话使用的语义摘要",
+              "按项目、日期或类型检索历史记录",
+              "展开某条记录前后的时间线",
+              "在网页查看实时记忆流"
+            ],
+            "core_title": "先找线索，再取记忆详情",
+            "core_summary": "先搜索精简索引，再沿时间线查看背景，最后只取相关记录的详情。配合自动记录与摘要，新会话能找回项目背景，不必一次塞入全部历史。",
+            "prerequisites": "需 Node.js 20.0.0 或更高版本，以及支持插件的新版 Claude Code；缺少 Bun、uv 时会自动安装，安装后需重启。",
+            "limitations": "托管记忆试用结束后，未订阅会回退到 Anthropic 套餐；全局 npm 安装仅提供开发库，不会注册插件或配置后台服务。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "ab80dea28a465b023d54b777bfa0d75c9ba7aaf7",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+                ],
+                [
+                  "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+                ],
+                [
+                  "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+                ]
+              ],
+              "audience": [
+                "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+                ],
+                [
+                  "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+                ],
+                [
+                  "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+                ],
+                [
+                  "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+                ],
+                [
+                  "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+              ],
+              "core_summary": [
+                "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+              ],
+              "prerequisites": [
+                "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+              ],
+              "limitations": [
+                "github.readme:ab80dea28a465b023d54b777bfa0d75c9ba7aaf7"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-09/repo-1ba5bb3a805d2f64e66f9ed0-d371990103b8c2e9d74188a1.png",
+          "publication_evidence": {
+            "full_name": "thedotmack/claude-mem",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "ab80dea28a465b023d54b777bfa0d75c9ba7aaf7",
+              "source_url": "https://api.github.com/repos/thedotmack/claude-mem/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-09/repo-1ba5bb3a805d2f64e66f9ed0-d371990103b8c2e9d74188a1.png",
+              "sha256": "7d905c065764f0c52f9927bdbbdb5724b14ffb0e64336d9f4fcb9bf09151d342",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-09/2026-10-09.ai.02.thedotmack--claude-mem.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1031912724,
+          "full_name": "farion1231/cc-switch",
+          "owner": "farion1231",
+          "name": "cc-switch",
+          "html_url": "https://github.com/farion1231/cc-switch",
+          "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Grok Build & Hermes Agent. Only official website: ccswitch.io",
+          "language": "Rust",
+          "stars": 141343,
+          "forks": 9466,
+          "open_issues": 2952,
+          "watchers": 141343,
+          "topics": [
+            "ai-tools",
+            "claude-code",
+            "codex",
+            "desktop-app",
+            "grok",
+            "grokbuild",
+            "hermes",
+            "hermes-agent",
+            "mcp",
+            "open-source",
+            "openclaw",
+            "openclaw-ui",
+            "opencode",
+            "pi",
+            "provider-management",
+            "rust",
+            "skills",
+            "skills-management",
+            "tauri",
+            "wsl-support"
+          ],
+          "created_at": "2025-08-04T14:16:16Z",
+          "updated_at": "2026-10-08T23:27:39Z",
+          "pushed_at": "2026-10-08T18:38:02Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 81.9,
+          "star_delta": 572,
+          "fork_delta": 22,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 89.66,
+            "relative_growth": 89.66,
+            "fork_growth": 65.52,
+            "total_stars": 51.72,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "频繁换模型服务时，用 cc-switch 在桌面统一管理编程工具配置，不必逐个手改配置文件。",
+            "highlights": [
+              "在桌面界面管理多款编程工具的配置",
+              "通过本机转发转换不同模型接口格式",
+              "把会话日志整理成可阅读的操作记录"
+            ],
+            "audience": "同时使用多款 AI 编程工具，经常切换模型服务、维护工具配置，并需要核对用量与会话记录的开发者。",
+            "capabilities": [
+              "切换编程工具使用的模型服务商",
+              "同步 MCP 外部工具连接配置",
+              "聚合多家服务商的模型到同一列表",
+              "在路由请求失败时切换备用服务商",
+              "按服务商和模型查看用量与支出"
+            ],
+            "core_title": "换模型连接，保留原有配置",
+            "core_summary": "选好服务商后，应用只替换地址、密钥和模型等连接字段，保留已有插件与其他共享设置；也可按项目保存整套配置，换项目时一起切换。",
+            "prerequisites": "需图形桌面：Windows 10+、macOS 12+；Linux 需 glibc 2.35+ 与 WebKitGTK 4.1。",
+            "limitations": "聚合模式不提供故障切换，Codex 模型列表变化需完整重启；连通性检查不验证密钥和模型。跨客户端使用订阅可能违反服务商条款，需自行评估。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "8fd1683e4b921c370872be5c0e5c7f26c6ec5839",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+              ],
+              "highlights": [
+                [
+                  "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+                ],
+                [
+                  "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+                ],
+                [
+                  "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+                ]
+              ],
+              "audience": [
+                "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+                ],
+                [
+                  "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+                ],
+                [
+                  "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+                ],
+                [
+                  "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+                ],
+                [
+                  "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+                ]
+              ],
+              "core_title": [
+                "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+              ],
+              "core_summary": [
+                "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+              ],
+              "prerequisites": [
+                "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+              ],
+              "limitations": [
+                "github.readme:8fd1683e4b921c370872be5c0e5c7f26c6ec5839"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-09/repo-7b4c4cdfec837e96d4799898-475fe2b28160ec68feae81dc.png",
+          "publication_evidence": {
+            "full_name": "farion1231/cc-switch",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "8fd1683e4b921c370872be5c0e5c7f26c6ec5839",
+              "source_url": "https://api.github.com/repos/farion1231/cc-switch/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-09/repo-7b4c4cdfec837e96d4799898-475fe2b28160ec68feae81dc.png",
+              "sha256": "b4071bf85b0174f0d42c3ebfd214c6d9836a1e4c71d5e6cc667f585742914de3",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-09/2026-10-09.ai.03.farion1231--cc-switch.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
