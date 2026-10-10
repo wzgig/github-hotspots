@@ -1,0 +1,1442 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-10-11",
+  "window_start": "2026-10-10",
+  "window_end": "2026-10-11",
+  "generated_at": "2026-10-11T07:31:28+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-10-10 至 2026-10-11",
+  "publication": {
+    "issue_number": 92,
+    "issue_code": "D092",
+    "issue_label": "第92期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "GitHub Trending 未返回候选，已降级使用 REST Search",
+    "2 个上榜项目未获取到 Owner 头像，海报已使用身份占位图",
+    "2 个上榜项目未获取到 README，相关文案将使用受控回退"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-10-11",
+    "manifest": "reports/daily/assets/2026-10-11/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.02.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "huggingface/transformers",
+            "path": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.03.huggingface--transformers.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-11/2026-10-11.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-11/2026-10-11.ai.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-11/2026-10-11.ai.02.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "huggingface/transformers",
+            "path": "reports/daily/assets/2026-10-11/2026-10-11.ai.03.huggingface--transformers.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 92,
+      "issue_code": "D092",
+      "issue_label": "第92期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 276499,
+      "forks": 41239,
+      "open_issues": 231,
+      "watchers": 276499,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-10-10T23:30:31Z",
+      "pushed_at": "2026-10-10T23:21:43Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 91.75,
+      "star_delta": 388,
+      "fork_delta": 44,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.41,
+        "relative_growth": 96.83,
+        "fork_growth": 85.71,
+        "total_stars": 92.06,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "ECC 为 AI 编程代理补上计划、测试、审查和记忆流程，让开发团队不必每次重写工作要求。",
+        "highlights": [
+          "把计划、测试、实现与审查串成开发流程",
+          "用本地 Markdown 记忆在不同代理间交接",
+          "通过工具事件触发脚本，执行确定性检查"
+        ],
+        "audience": "用 AI 编程代理开发功能、修复缺陷，希望把计划、测试、审查和跨会话交接串起来的软件团队",
+        "capabilities": [
+          "把功能需求整理成可编辑的实施计划",
+          "用先失败后通过的测试验证代码修改",
+          "安排独立上下文的代理审查新代码",
+          "把会话经验提炼成可复用技能",
+          "扫描代理配置中的权限与注入风险"
+        ],
+        "core_title": "让 AI 编程留下验证记录",
+        "core_summary": "先确认计划，再写失败测试、实现功能，由独立上下文的代理审查，最后验证构建和测试。计划、测试结果与审查发现一起保留，让代码改动有据可查。",
+        "prerequisites": "通用安装包需 Node.js 18 以上；Claude 插件另需 Git 和 Claude Code 2.1 以上。扫描需已安装并审查的 AgentShield",
+        "limitations": "各平台功能不等同；启用自动脚本须明确确认，记忆内容须核验。Windows 原生记忆写入有已知缺陷；私有仓库云端分析属付费 Pro，同一代理勿叠加安装方式。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+          ],
+          "highlights": [
+            [
+              "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+            ],
+            [
+              "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+            ],
+            [
+              "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+            ]
+          ],
+          "audience": [
+            "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+          ],
+          "capabilities": [
+            [
+              "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+            ],
+            [
+              "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+            ],
+            [
+              "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+            ],
+            [
+              "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+            ],
+            [
+              "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+            ]
+          ],
+          "core_title": [
+            "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+          ],
+          "core_summary": [
+            "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+          ],
+          "prerequisites": [
+            "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+          ],
+          "limitations": [
+            "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-11/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569",
+          "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-11/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+          "width": 165,
+          "height": 165
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.01.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1266797999,
+      "full_name": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "html_url": "https://github.com/DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "language": "JavaScript",
+      "stars": 160434,
+      "forks": 8626,
+      "open_issues": 48,
+      "watchers": 160434,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "cursor-rules",
+        "developer-tools",
+        "llm",
+        "prompt-engineering",
+        "yagni"
+      ],
+      "created_at": "2026-06-12T00:52:37Z",
+      "updated_at": "2026-10-10T23:31:21Z",
+      "pushed_at": "2026-10-10T04:19:53Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 88.28,
+      "star_delta": 571,
+      "fork_delta": 24,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 76.98,
+        "total_stars": 68.25,
+        "activity": 71.65,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "想要整理和复用提示词设计方法，可以用 ponytail；它能帮助测试不同指令结构和模型表现",
+        "highlights": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+        "capabilities": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "core_title": "整理和复用提示词设计方法",
+        "core_summary": "想要整理和复用提示词设计方法，可以用 ponytail；它能帮助测试不同指令结构和模型表现",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "candidate:growth_signal"
+          ],
+          "highlights": [
+            [
+              "candidate:growth_signal"
+            ],
+            [
+              "candidate:growth_signal"
+            ],
+            [
+              "candidate:growth_signal"
+            ]
+          ],
+          "audience": [
+            "candidate:growth_signal"
+          ],
+          "capabilities": [
+            [
+              "candidate:growth_signal"
+            ],
+            [
+              "candidate:growth_signal"
+            ],
+            [
+              "candidate:growth_signal"
+            ]
+          ],
+          "core_title": [
+            "candidate:growth_signal"
+          ],
+          "core_summary": [
+            "candidate:growth_signal"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "DietrichGebert/ponytail",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.02.dietrichgebert--ponytail.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 155220641,
+      "full_name": "huggingface/transformers",
+      "owner": "huggingface",
+      "name": "transformers",
+      "html_url": "https://github.com/huggingface/transformers",
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+      "language": "Python",
+      "stars": 167235,
+      "forks": 34796,
+      "open_issues": 2346,
+      "watchers": 167235,
+      "topics": [
+        "audio",
+        "deep-learning",
+        "deepseek",
+        "gemma",
+        "glm",
+        "hacktoberfest",
+        "llm",
+        "machine-learning",
+        "model-hub",
+        "natural-language-processing",
+        "nlp",
+        "pretrained-models",
+        "python",
+        "pytorch",
+        "pytorch-transformers",
+        "qwen",
+        "speech-recognition",
+        "transformer",
+        "vlm"
+      ],
+      "created_at": "2018-10-29T13:56:00Z",
+      "updated_at": "2026-10-10T23:25:10Z",
+      "pushed_at": "2026-10-10T17:50:34Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 86.91,
+      "star_delta": 273,
+      "fork_delta": 14,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.24,
+        "relative_growth": 95.24,
+        "fork_growth": 67.46,
+        "total_stars": 69.84,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "目前无法从公开字段确认 transformers 能完成哪些任务",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "目前无法从公开字段确认 transformers 能完成哪些任务",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "candidate:tech_stack"
+          ],
+          "highlights": [
+            [
+              "candidate:tech_stack"
+            ],
+            [
+              "candidate:tech_stack"
+            ],
+            [
+              "candidate:tech_stack"
+            ]
+          ],
+          "audience": [
+            "candidate:tech_stack"
+          ],
+          "capabilities": [
+            [
+              "candidate:tech_stack"
+            ],
+            [
+              "candidate:tech_stack"
+            ],
+            [
+              "candidate:tech_stack"
+            ]
+          ],
+          "core_title": [
+            "candidate:tech_stack"
+          ],
+          "core_summary": [
+            "candidate:tech_stack"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "huggingface/transformers",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.03.huggingface--transformers.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.02.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "huggingface/transformers",
+            "path": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.03.huggingface--transformers.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 276499,
+          "forks": 41239,
+          "open_issues": 231,
+          "watchers": 276499,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-10-10T23:30:31Z",
+          "pushed_at": "2026-10-10T23:21:43Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 91.75,
+          "star_delta": 388,
+          "fork_delta": 44,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.41,
+            "relative_growth": 96.83,
+            "fork_growth": 85.71,
+            "total_stars": 92.06,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "ECC 为 AI 编程代理补上计划、测试、审查和记忆流程，让开发团队不必每次重写工作要求。",
+            "highlights": [
+              "把计划、测试、实现与审查串成开发流程",
+              "用本地 Markdown 记忆在不同代理间交接",
+              "通过工具事件触发脚本，执行确定性检查"
+            ],
+            "audience": "用 AI 编程代理开发功能、修复缺陷，希望把计划、测试、审查和跨会话交接串起来的软件团队",
+            "capabilities": [
+              "把功能需求整理成可编辑的实施计划",
+              "用先失败后通过的测试验证代码修改",
+              "安排独立上下文的代理审查新代码",
+              "把会话经验提炼成可复用技能",
+              "扫描代理配置中的权限与注入风险"
+            ],
+            "core_title": "让 AI 编程留下验证记录",
+            "core_summary": "先确认计划，再写失败测试、实现功能，由独立上下文的代理审查，最后验证构建和测试。计划、测试结果与审查发现一起保留，让代码改动有据可查。",
+            "prerequisites": "通用安装包需 Node.js 18 以上；Claude 插件另需 Git 和 Claude Code 2.1 以上。扫描需已安装并审查的 AgentShield",
+            "limitations": "各平台功能不等同；启用自动脚本须明确确认，记忆内容须核验。Windows 原生记忆写入有已知缺陷；私有仓库云端分析属付费 Pro，同一代理勿叠加安装方式。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+              ],
+              "highlights": [
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ],
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ],
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ]
+              ],
+              "audience": [
+                "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ],
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ],
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ],
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ],
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ]
+              ],
+              "core_title": [
+                "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+              ],
+              "core_summary": [
+                "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+              ],
+              "prerequisites": [
+                "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+              ],
+              "limitations": [
+                "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-11/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-11/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.01.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 160434,
+          "forks": 8626,
+          "open_issues": 48,
+          "watchers": 160434,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-10-10T23:31:21Z",
+          "pushed_at": "2026-10-10T04:19:53Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 88.28,
+          "star_delta": 571,
+          "fork_delta": 24,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 76.98,
+            "total_stars": 68.25,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "想要整理和复用提示词设计方法，可以用 ponytail；它能帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "想要整理和复用提示词设计方法，可以用 ponytail；它能帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:growth_signal"
+              ],
+              "highlights": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "audience": [
+                "candidate:growth_signal"
+              ],
+              "capabilities": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "core_title": [
+                "candidate:growth_signal"
+              ],
+              "core_summary": [
+                "candidate:growth_signal"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.02.dietrichgebert--ponytail.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 155220641,
+          "full_name": "huggingface/transformers",
+          "owner": "huggingface",
+          "name": "transformers",
+          "html_url": "https://github.com/huggingface/transformers",
+          "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+          "language": "Python",
+          "stars": 167235,
+          "forks": 34796,
+          "open_issues": 2346,
+          "watchers": 167235,
+          "topics": [
+            "audio",
+            "deep-learning",
+            "deepseek",
+            "gemma",
+            "glm",
+            "hacktoberfest",
+            "llm",
+            "machine-learning",
+            "model-hub",
+            "natural-language-processing",
+            "nlp",
+            "pretrained-models",
+            "python",
+            "pytorch",
+            "pytorch-transformers",
+            "qwen",
+            "speech-recognition",
+            "transformer",
+            "vlm"
+          ],
+          "created_at": "2018-10-29T13:56:00Z",
+          "updated_at": "2026-10-10T23:25:10Z",
+          "pushed_at": "2026-10-10T17:50:34Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 86.91,
+          "star_delta": 273,
+          "fork_delta": 14,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.24,
+            "relative_growth": 95.24,
+            "fork_growth": 67.46,
+            "total_stars": 69.84,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 transformers 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 transformers 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:tech_stack"
+              ],
+              "highlights": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "audience": [
+                "candidate:tech_stack"
+              ],
+              "capabilities": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "core_title": [
+                "candidate:tech_stack"
+              ],
+              "core_summary": [
+                "candidate:tech_stack"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "huggingface/transformers",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-11/2026-10-11.comprehensive.03.huggingface--transformers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-11/2026-10-11.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-11/2026-10-11.ai.01.affaan-m--ecc.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-11/2026-10-11.ai.02.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "huggingface/transformers",
+            "path": "reports/daily/assets/2026-10-11/2026-10-11.ai.03.huggingface--transformers.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 276499,
+          "forks": 41239,
+          "open_issues": 231,
+          "watchers": 276499,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-10-10T23:30:31Z",
+          "pushed_at": "2026-10-10T23:21:43Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 90.36,
+          "star_delta": 388,
+          "fork_delta": 44,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.43,
+            "relative_growth": 92.86,
+            "fork_growth": 89.29,
+            "total_stars": 92.86,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "ECC 给 AI 编程助手补上计划、测试、审查与记忆流程，减少每次从提示词重建开发步骤。",
+            "highlights": [
+              "串联计划、测试、实现、审查与验证",
+              "用本地 Markdown 记忆在不同助手间交接任务",
+              "借助 AgentShield 检查助手配置风险"
+            ],
+            "audience": "使用 AI 编程助手开发功能、修复缺陷，希望把计划、测试、审查和会话交接串起来的软件团队。",
+            "capabilities": [
+              "把功能需求整理成可编辑的实施计划",
+              "先写失败测试，再按测试结果实现代码",
+              "用独立上下文审查代码变更",
+              "将会话经验提炼成可复用技能",
+              "扫描编程助手配置中的权限与注入风险"
+            ],
+            "core_title": "把写代码变成有检查记录的流程",
+            "core_summary": "ECC 用专职代理分担规划与审查，用技能组织先测试后实现的步骤，再用事件触发脚本执行检查、保存会话经验，让开发过程留下计划、测试和审查记录。",
+            "prerequisites": "通用安装包需 Node.js 18 或更新版；Claude 插件还需 Git 与 Claude Code 2.1 或更新版。扫描需预先安装并审查扫描器。",
+            "limitations": "各助手功能不齐；启用自动脚本需明确确认，记忆内容仍需核验。Windows 原生记忆写入有已知缺陷。私有仓库托管分析属于付费 Pro，同一助手勿叠加安装方式。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+              ],
+              "highlights": [
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ],
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ],
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ]
+              ],
+              "audience": [
+                "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ],
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ],
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ],
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ],
+                [
+                  "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+                ]
+              ],
+              "core_title": [
+                "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+              ],
+              "core_summary": [
+                "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+              ],
+              "prerequisites": [
+                "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+              ],
+              "limitations": [
+                "github.readme:67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-11/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "67f4bf63b52d33bb1d9ea6489a9d492fb2c4b569",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-11/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-11/2026-10-11.ai.01.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 160434,
+          "forks": 8626,
+          "open_issues": 48,
+          "watchers": 160434,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-10-10T23:31:21Z",
+          "pushed_at": "2026-10-10T04:19:53Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 87.7,
+          "star_delta": 571,
+          "fork_delta": 24,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 75.0,
+            "total_stars": 60.71,
+            "activity": 71.65,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "想要整理和复用提示词设计方法，可以用 ponytail；它能帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "想要整理和复用提示词设计方法，可以用 ponytail；它能帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:growth_signal"
+              ],
+              "highlights": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "audience": [
+                "candidate:growth_signal"
+              ],
+              "capabilities": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "core_title": [
+                "candidate:growth_signal"
+              ],
+              "core_summary": [
+                "candidate:growth_signal"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-11/2026-10-11.ai.02.dietrichgebert--ponytail.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 155220641,
+          "full_name": "huggingface/transformers",
+          "owner": "huggingface",
+          "name": "transformers",
+          "html_url": "https://github.com/huggingface/transformers",
+          "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+          "language": "Python",
+          "stars": 167235,
+          "forks": 34796,
+          "open_issues": 2346,
+          "watchers": 167235,
+          "topics": [
+            "audio",
+            "deep-learning",
+            "deepseek",
+            "gemma",
+            "glm",
+            "hacktoberfest",
+            "llm",
+            "machine-learning",
+            "model-hub",
+            "natural-language-processing",
+            "nlp",
+            "pretrained-models",
+            "python",
+            "pytorch",
+            "pytorch-transformers",
+            "qwen",
+            "speech-recognition",
+            "transformer",
+            "vlm"
+          ],
+          "created_at": "2018-10-29T13:56:00Z",
+          "updated_at": "2026-10-10T23:25:10Z",
+          "pushed_at": "2026-10-10T17:50:34Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 81.61,
+          "star_delta": 273,
+          "fork_delta": 14,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 89.29,
+            "relative_growth": 89.29,
+            "fork_growth": 58.93,
+            "total_stars": 64.29,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 transformers 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 transformers 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:tech_stack"
+              ],
+              "highlights": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "audience": [
+                "candidate:tech_stack"
+              ],
+              "capabilities": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "core_title": [
+                "candidate:tech_stack"
+              ],
+              "core_summary": [
+                "candidate:tech_stack"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "huggingface/transformers",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-11/2026-10-11.ai.03.huggingface--transformers.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
