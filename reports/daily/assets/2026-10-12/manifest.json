@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-10-12",
+  "window": {
+    "start": "2026-10-11",
+    "end": "2026-10-12"
+  },
+  "source_report": "reports/daily/2026-10-12.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-10-12",
+  "manifest": "reports/daily/assets/2026-10-12/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-12/2026-10-12.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "boykopovar/AnyPS5",
+          "path": "reports/daily/assets/2026-10-12/2026-10-12.comprehensive.01.boykopovar--anyps5.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-12/2026-10-12.comprehensive.02.morluto--rea.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "affaan-m/ECC",
+          "path": "reports/daily/assets/2026-10-12/2026-10-12.comprehensive.03.affaan-m--ecc.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-12/2026-10-12.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "affaan-m/ECC",
+          "path": "reports/daily/assets/2026-10-12/2026-10-12.ai.01.affaan-m--ecc.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-12/2026-10-12.ai.02.morluto--rea.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "storytold/artcraft",
+          "path": "reports/daily/assets/2026-10-12/2026-10-12.ai.03.storytold--artcraft.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 93,
+    "issue_code": "D093",
+    "issue_label": "第93期",
+    "status": "official"
+  }
+}
