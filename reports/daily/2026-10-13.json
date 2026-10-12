@@ -1,0 +1,1534 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-10-13",
+  "window_start": "2026-10-12",
+  "window_end": "2026-10-13",
+  "generated_at": "2026-10-13T07:31:30+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-10-12 至 2026-10-13",
+  "publication": {
+    "issue_number": 94,
+    "issue_code": "D094",
+    "issue_label": "第94期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-10-13",
+    "manifest": "reports/daily/assets/2026-10-13/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "cathrynlavery/diagram-design",
+            "path": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.02.cathrynlavery--diagram-design.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "path": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.03.bilawalsidhu--gods-eye-view.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-13/2026-10-13.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-13/2026-10-13.ai.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "storytold/artcraft",
+            "path": "reports/daily/assets/2026-10-13/2026-10-13.ai.02.storytold--artcraft.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "open-webui/open-webui",
+            "path": "reports/daily/assets/2026-10-13/2026-10-13.ai.03.open-webui--open-webui.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 94,
+      "issue_code": "D094",
+      "issue_label": "第94期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1209966933,
+      "full_name": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "html_url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": 154937,
+      "forks": 35669,
+      "open_issues": 367,
+      "watchers": 154937,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "ctf",
+        "decompiler",
+        "developer-tools",
+        "disassembler",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "reverse-engineering",
+        "static-analysis"
+      ],
+      "created_at": "2026-04-14T00:51:32Z",
+      "updated_at": "2026-10-12T23:31:24Z",
+      "pushed_at": "2026-10-12T22:57:06Z",
+      "daily_stars": 45495,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 98.54,
+      "star_delta": 52197,
+      "fork_delta": 13138,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 100.0,
+        "total_stars": 70.75,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "没有源码也想弄懂应用功能？REA 帮开发者追踪实现，并把证据交给智能体解释。",
+        "highlights": [
+          "没有源码也能调查应用功能的实现",
+          "分析结论附带证据与已知限制",
+          "智能体与终端共用同一套分析流程"
+        ],
+        "audience": "需要分析自有或获授权软件、追踪功能实现，或研究软件互操作与保存的开发者。",
+        "capabilities": [
+          "提取原生二进制的伪代码与调用关系",
+          "梳理 Electron 应用的模块与进程通信",
+          "检查网站页面结构与网络请求",
+          "读取 Android APK 的声明与反编译方法",
+          "记录进程运行时的终端与文件系统变化"
+        ],
+        "core_title": "让功能解释带上代码证据",
+        "core_summary": "通过 MCP 这一智能体调用工具的接口，REA 在本地检查目标，返回代码、引用关系和未知项。智能体再据此追问、解释行为，或编写并测试相似实现。",
+        "prerequisites": "可用 Node.js 24.x（>=24.11）与 npm；深度原生分析另需 Hopper、Ghidra 或 IDA。",
+        "limitations": "安装变更需审核批准；运行时采集会以用户权限运行或操作目标。分析虽在本地，结果仍会交给智能体，其模型服务商有独立数据政策。",
+        "license_label": "MIT",
+        "license_restrictions": "REA grants no tool license, key, or activation entitlement.",
+        "readme_sha": "1e14f3a2d63278870863f026adcd749235daa1fa",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+          ],
+          "highlights": [
+            [
+              "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+            ],
+            [
+              "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+            ],
+            [
+              "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+            ]
+          ],
+          "audience": [
+            "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+          ],
+          "capabilities": [
+            [
+              "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+            ],
+            [
+              "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+            ],
+            [
+              "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+            ],
+            [
+              "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+            ],
+            [
+              "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+            ]
+          ],
+          "core_title": [
+            "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+          ],
+          "core_summary": [
+            "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+          ],
+          "prerequisites": [
+            "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+          ],
+          "limitations": [
+            "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-10-13/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+      "publication_evidence": {
+        "full_name": "morluto/rea",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "1e14f3a2d63278870863f026adcd749235daa1fa",
+          "source_url": "https://api.github.com/repos/morluto/rea/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-13/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "sha256": "fbabed3f57bb75cefe5fbd655e97b8f6879778754883e22fc39f62c3a19fbedd",
+          "width": 432,
+          "height": 432
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.01.morluto--rea.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1212769188,
+      "full_name": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "html_url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML",
+      "stars": 52533,
+      "forks": 3319,
+      "open_issues": 45,
+      "watchers": 143,
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "data-visualization",
+        "diagrams",
+        "drawio",
+        "mermaid",
+        "svg"
+      ],
+      "created_at": "2026-04-16T18:01:16Z",
+      "updated_at": "2026-10-12T23:30:46Z",
+      "pushed_at": "2026-10-12T23:28:49Z",
+      "daily_stars": 2100,
+      "weekly_stars": null,
+      "trending_rank_daily": 6,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 92.72,
+      "star_delta": 2257,
+      "fork_delta": 124,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.11,
+        "relative_growth": 98.11,
+        "fork_growth": 97.17,
+        "total_stars": 50.94,
+        "activity": 100.0,
+        "trending_signal": 35.62
+      },
+      "summary": {
+        "one_line": "把文字描述或已有图表变成贴合品牌风格的 HTML 图稿，供博客和演示文稿使用。",
+        "highlights": [
+          "用自然语言描述，交付可直接打开的图表",
+          "保存多套品牌配置供不同客户项目使用",
+          "导入重绘后列出内容取舍，便于核对"
+        ],
+        "audience": "为博客、演示文稿或客户项目制作架构图、流程图，希望图表沿用品牌配色与字体的作者和设计者。",
+        "capabilities": [
+          "根据文字描述绘制架构图与流程图",
+          "提取网站配色和字体用于图表",
+          "重绘 Mermaid、draw.io 与 Excalidraw 图",
+          "按展示场景调整图表尺寸与细节",
+          "导出用于幻灯片的 PNG 或 SVG"
+        ],
+        "core_title": "把图表做成品牌风格的单文件",
+        "core_summary": "智能体先选图型并说明布局计划，再生成内嵌 SVG 的单个 HTML 文件。配色与字体可从网站提取；重绘旧图时会列出合并、折叠和删去的内容，方便核对。",
+        "prerequisites": "需使用支持 Agent Skills 的智能体宿主；导出 PNG 另需安装 Playwright 与 Chromium。",
+        "limitations": "首次使用需确认品牌风格；效果依赖模型，同一提示可能生成不同布局。结果没有可拖拽画布，不适合频繁版本对比；默认字体需联网，可改系统字体。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "e155f71b5bb188b1c5251755c481714bd4a64dca",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+          ],
+          "highlights": [
+            [
+              "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+            ],
+            [
+              "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+            ],
+            [
+              "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+            ]
+          ],
+          "audience": [
+            "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+          ],
+          "capabilities": [
+            [
+              "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+            ],
+            [
+              "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+            ],
+            [
+              "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+            ],
+            [
+              "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+            ],
+            [
+              "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+            ]
+          ],
+          "core_title": [
+            "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+          ],
+          "core_summary": [
+            "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+          ],
+          "prerequisites": [
+            "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+          ],
+          "limitations": [
+            "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-13/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+      "publication_evidence": {
+        "full_name": "cathrynlavery/diagram-design",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "e155f71b5bb188b1c5251755c481714bd4a64dca",
+          "source_url": "https://api.github.com/repos/cathrynlavery/diagram-design/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-13/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+          "sha256": "953cad69949c87fb0d09dd4df8a331949626db100bf68670291c7bd87e27cc32",
+          "width": 400,
+          "height": 400
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.02.cathrynlavery--diagram-design.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1277471539,
+      "full_name": "bilawalsidhu/gods-eye-view",
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "html_url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": 53592,
+      "forks": 10598,
+      "open_issues": 381,
+      "watchers": 1027,
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "created_at": "2026-06-22T23:37:22Z",
+      "updated_at": "2026-10-12T23:30:42Z",
+      "pushed_at": "2026-10-12T14:15:33Z",
+      "daily_stars": 1903,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 90.74,
+      "star_delta": 1985,
+      "fork_delta": 232,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.17,
+        "relative_growth": 97.17,
+        "fork_growth": 98.11,
+        "total_stars": 51.89,
+        "activity": 71.65,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "想在地图上探索航班、卫星和天气？这个浏览器地球把公开数据叠在一起，还能用语音查询。",
+        "highlights": [
+          "从全球图景缩放到单个航班或街道",
+          "随被追踪飞机切换到驾驶舱视角",
+          "把镜头、图层和目标打包成可分享场景"
+        ],
+        "audience": "想探索公开航班、卫星与天气数据的学习者，以及需要制作地理场景演示、扩展数据图层的开发者。",
+        "capabilities": [
+          "追踪飞机、船舶与卫星的位置和轨迹",
+          "投影公共摄像头画面到地理场景",
+          "回放雷达、云图与闪电观测",
+          "用语音查询当前图层中的目标",
+          "绘制沿真实道路延伸的出行路线"
+        ],
+        "core_title": "在同一地球上串联公开信号",
+        "core_summary": "把航班、船舶、卫星、地震和公共摄像头放进同一个可探索地球。点击目标即可查看轨迹与资料，语音查询会读取当前场景；每个图层独立，便于接入自己的数据。",
+        "prerequisites": "可用 Pinokio 8.2 或更高版本安装；终端方式需 Node.js 24.x（24.14.0 起）或 26.x；基础启动无需密钥。",
+        "limitations": "数据可能延迟或有误，车流位置是模拟，勿用于导航或应急决策。写实地图与语音受服务条款、配额及计费约束；共享服务会让可访问者使用已配置的接口额度，不支持个人追踪。",
+        "license_label": "MIT License",
+        "license_restrictions": "Bundled and live datasets carry their own terms",
+        "readme_sha": "5d97dfb2f7a326d2e5c78bb848cd879265644c6d",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+          ],
+          "highlights": [
+            [
+              "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+            ],
+            [
+              "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+            ],
+            [
+              "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+            ]
+          ],
+          "audience": [
+            "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+          ],
+          "capabilities": [
+            [
+              "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+            ],
+            [
+              "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+            ],
+            [
+              "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+            ],
+            [
+              "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+            ],
+            [
+              "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+            ]
+          ],
+          "core_title": [
+            "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+          ],
+          "core_summary": [
+            "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+          ],
+          "prerequisites": [
+            "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+          ],
+          "limitations": [
+            "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+          ],
+          "license_label": [
+            "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+          ],
+          "license_restrictions": [
+            "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-10-13/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+      "publication_evidence": {
+        "full_name": "bilawalsidhu/gods-eye-view",
+        "license_spdx_id": "NOASSERTION",
+        "readme": {
+          "sha": "5d97dfb2f7a326d2e5c78bb848cd879265644c6d",
+          "source_url": "https://api.github.com/repos/bilawalsidhu/gods-eye-view/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-13/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+          "sha256": "d0bad70376c9fb4449c9142b6bcee3b81bbe920f1d42c8890f6481212352bc74",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT License",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.03.bilawalsidhu--gods-eye-view.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "cathrynlavery/diagram-design",
+            "path": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.02.cathrynlavery--diagram-design.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "path": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.03.bilawalsidhu--gods-eye-view.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1209966933,
+          "full_name": "morluto/rea",
+          "owner": "morluto",
+          "name": "rea",
+          "html_url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "language": "TypeScript",
+          "stars": 154937,
+          "forks": 35669,
+          "open_issues": 367,
+          "watchers": 154937,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "ctf",
+            "decompiler",
+            "developer-tools",
+            "disassembler",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "reverse-engineering",
+            "static-analysis"
+          ],
+          "created_at": "2026-04-14T00:51:32Z",
+          "updated_at": "2026-10-12T23:31:24Z",
+          "pushed_at": "2026-10-12T22:57:06Z",
+          "daily_stars": 45495,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 98.54,
+          "star_delta": 52197,
+          "fork_delta": 13138,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 70.75,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "没有源码也想弄懂应用功能？REA 帮开发者追踪实现，并把证据交给智能体解释。",
+            "highlights": [
+              "没有源码也能调查应用功能的实现",
+              "分析结论附带证据与已知限制",
+              "智能体与终端共用同一套分析流程"
+            ],
+            "audience": "需要分析自有或获授权软件、追踪功能实现，或研究软件互操作与保存的开发者。",
+            "capabilities": [
+              "提取原生二进制的伪代码与调用关系",
+              "梳理 Electron 应用的模块与进程通信",
+              "检查网站页面结构与网络请求",
+              "读取 Android APK 的声明与反编译方法",
+              "记录进程运行时的终端与文件系统变化"
+            ],
+            "core_title": "让功能解释带上代码证据",
+            "core_summary": "通过 MCP 这一智能体调用工具的接口，REA 在本地检查目标，返回代码、引用关系和未知项。智能体再据此追问、解释行为，或编写并测试相似实现。",
+            "prerequisites": "可用 Node.js 24.x（>=24.11）与 npm；深度原生分析另需 Hopper、Ghidra 或 IDA。",
+            "limitations": "安装变更需审核批准；运行时采集会以用户权限运行或操作目标。分析虽在本地，结果仍会交给智能体，其模型服务商有独立数据政策。",
+            "license_label": "MIT",
+            "license_restrictions": "REA grants no tool license, key, or activation entitlement.",
+            "readme_sha": "1e14f3a2d63278870863f026adcd749235daa1fa",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ],
+              "highlights": [
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ],
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ],
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ]
+              ],
+              "audience": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ],
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ],
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ],
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ],
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ]
+              ],
+              "core_title": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ],
+              "core_summary": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ],
+              "prerequisites": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ],
+              "limitations": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-13/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "publication_evidence": {
+            "full_name": "morluto/rea",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "1e14f3a2d63278870863f026adcd749235daa1fa",
+              "source_url": "https://api.github.com/repos/morluto/rea/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-13/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+              "sha256": "fbabed3f57bb75cefe5fbd655e97b8f6879778754883e22fc39f62c3a19fbedd",
+              "width": 432,
+              "height": 432
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.01.morluto--rea.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1212769188,
+          "full_name": "cathrynlavery/diagram-design",
+          "owner": "cathrynlavery",
+          "name": "diagram-design",
+          "html_url": "https://github.com/cathrynlavery/diagram-design",
+          "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+          "language": "HTML",
+          "stars": 52533,
+          "forks": 3319,
+          "open_issues": 45,
+          "watchers": 143,
+          "topics": [
+            "agent-skills",
+            "claude-code",
+            "codex",
+            "data-visualization",
+            "diagrams",
+            "drawio",
+            "mermaid",
+            "svg"
+          ],
+          "created_at": "2026-04-16T18:01:16Z",
+          "updated_at": "2026-10-12T23:30:46Z",
+          "pushed_at": "2026-10-12T23:28:49Z",
+          "daily_stars": 2100,
+          "weekly_stars": null,
+          "trending_rank_daily": 6,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 92.72,
+          "star_delta": 2257,
+          "fork_delta": 124,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.11,
+            "relative_growth": 98.11,
+            "fork_growth": 97.17,
+            "total_stars": 50.94,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "把文字描述或已有图表变成贴合品牌风格的 HTML 图稿，供博客和演示文稿使用。",
+            "highlights": [
+              "用自然语言描述，交付可直接打开的图表",
+              "保存多套品牌配置供不同客户项目使用",
+              "导入重绘后列出内容取舍，便于核对"
+            ],
+            "audience": "为博客、演示文稿或客户项目制作架构图、流程图，希望图表沿用品牌配色与字体的作者和设计者。",
+            "capabilities": [
+              "根据文字描述绘制架构图与流程图",
+              "提取网站配色和字体用于图表",
+              "重绘 Mermaid、draw.io 与 Excalidraw 图",
+              "按展示场景调整图表尺寸与细节",
+              "导出用于幻灯片的 PNG 或 SVG"
+            ],
+            "core_title": "把图表做成品牌风格的单文件",
+            "core_summary": "智能体先选图型并说明布局计划，再生成内嵌 SVG 的单个 HTML 文件。配色与字体可从网站提取；重绘旧图时会列出合并、折叠和删去的内容，方便核对。",
+            "prerequisites": "需使用支持 Agent Skills 的智能体宿主；导出 PNG 另需安装 Playwright 与 Chromium。",
+            "limitations": "首次使用需确认品牌风格；效果依赖模型，同一提示可能生成不同布局。结果没有可拖拽画布，不适合频繁版本对比；默认字体需联网，可改系统字体。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "e155f71b5bb188b1c5251755c481714bd4a64dca",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+              ],
+              "highlights": [
+                [
+                  "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+                ],
+                [
+                  "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+                ],
+                [
+                  "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+                ]
+              ],
+              "audience": [
+                "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+                ],
+                [
+                  "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+                ],
+                [
+                  "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+                ],
+                [
+                  "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+                ],
+                [
+                  "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+                ]
+              ],
+              "core_title": [
+                "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+              ],
+              "core_summary": [
+                "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+              ],
+              "prerequisites": [
+                "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+              ],
+              "limitations": [
+                "github.readme:e155f71b5bb188b1c5251755c481714bd4a64dca"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-13/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+          "publication_evidence": {
+            "full_name": "cathrynlavery/diagram-design",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "e155f71b5bb188b1c5251755c481714bd4a64dca",
+              "source_url": "https://api.github.com/repos/cathrynlavery/diagram-design/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-13/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
+              "sha256": "953cad69949c87fb0d09dd4df8a331949626db100bf68670291c7bd87e27cc32",
+              "width": 400,
+              "height": 400
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.02.cathrynlavery--diagram-design.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1277471539,
+          "full_name": "bilawalsidhu/gods-eye-view",
+          "owner": "bilawalsidhu",
+          "name": "gods-eye-view",
+          "html_url": "https://github.com/bilawalsidhu/gods-eye-view",
+          "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+          "language": "JavaScript",
+          "stars": 53592,
+          "forks": 10598,
+          "open_issues": 381,
+          "watchers": 1027,
+          "topics": [
+            "3d-globe",
+            "cesium",
+            "flight-tracking",
+            "geospatial",
+            "geospatial-intelligence",
+            "gis",
+            "osint",
+            "photogrammetry",
+            "satellite-tracking",
+            "spatial-intelligence",
+            "webgl",
+            "worldview"
+          ],
+          "created_at": "2026-06-22T23:37:22Z",
+          "updated_at": "2026-10-12T23:30:42Z",
+          "pushed_at": "2026-10-12T14:15:33Z",
+          "daily_stars": 1903,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 90.74,
+          "star_delta": 1985,
+          "fork_delta": 232,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.17,
+            "relative_growth": 97.17,
+            "fork_growth": 98.11,
+            "total_stars": 51.89,
+            "activity": 71.65,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "想在地图上探索航班、卫星和天气？这个浏览器地球把公开数据叠在一起，还能用语音查询。",
+            "highlights": [
+              "从全球图景缩放到单个航班或街道",
+              "随被追踪飞机切换到驾驶舱视角",
+              "把镜头、图层和目标打包成可分享场景"
+            ],
+            "audience": "想探索公开航班、卫星与天气数据的学习者，以及需要制作地理场景演示、扩展数据图层的开发者。",
+            "capabilities": [
+              "追踪飞机、船舶与卫星的位置和轨迹",
+              "投影公共摄像头画面到地理场景",
+              "回放雷达、云图与闪电观测",
+              "用语音查询当前图层中的目标",
+              "绘制沿真实道路延伸的出行路线"
+            ],
+            "core_title": "在同一地球上串联公开信号",
+            "core_summary": "把航班、船舶、卫星、地震和公共摄像头放进同一个可探索地球。点击目标即可查看轨迹与资料，语音查询会读取当前场景；每个图层独立，便于接入自己的数据。",
+            "prerequisites": "可用 Pinokio 8.2 或更高版本安装；终端方式需 Node.js 24.x（24.14.0 起）或 26.x；基础启动无需密钥。",
+            "limitations": "数据可能延迟或有误，车流位置是模拟，勿用于导航或应急决策。写实地图与语音受服务条款、配额及计费约束；共享服务会让可访问者使用已配置的接口额度，不支持个人追踪。",
+            "license_label": "MIT License",
+            "license_restrictions": "Bundled and live datasets carry their own terms",
+            "readme_sha": "5d97dfb2f7a326d2e5c78bb848cd879265644c6d",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+              ],
+              "highlights": [
+                [
+                  "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+                ],
+                [
+                  "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+                ],
+                [
+                  "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+                ]
+              ],
+              "audience": [
+                "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+                ],
+                [
+                  "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+                ],
+                [
+                  "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+                ],
+                [
+                  "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+                ],
+                [
+                  "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+                ]
+              ],
+              "core_title": [
+                "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+              ],
+              "core_summary": [
+                "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+              ],
+              "prerequisites": [
+                "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+              ],
+              "limitations": [
+                "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+              ],
+              "license_label": [
+                "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+              ],
+              "license_restrictions": [
+                "github.readme:5d97dfb2f7a326d2e5c78bb848cd879265644c6d"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-13/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+          "publication_evidence": {
+            "full_name": "bilawalsidhu/gods-eye-view",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "5d97dfb2f7a326d2e5c78bb848cd879265644c6d",
+              "source_url": "https://api.github.com/repos/bilawalsidhu/gods-eye-view/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-13/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
+              "sha256": "d0bad70376c9fb4449c9142b6bcee3b81bbe920f1d42c8890f6481212352bc74",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT License",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-13/2026-10-13.comprehensive.03.bilawalsidhu--gods-eye-view.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-13/2026-10-13.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-13/2026-10-13.ai.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "storytold/artcraft",
+            "path": "reports/daily/assets/2026-10-13/2026-10-13.ai.02.storytold--artcraft.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "open-webui/open-webui",
+            "path": "reports/daily/assets/2026-10-13/2026-10-13.ai.03.open-webui--open-webui.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1209966933,
+          "full_name": "morluto/rea",
+          "owner": "morluto",
+          "name": "rea",
+          "html_url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "language": "TypeScript",
+          "stars": 154937,
+          "forks": 35669,
+          "open_issues": 367,
+          "watchers": 154937,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "ctf",
+            "decompiler",
+            "developer-tools",
+            "disassembler",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "reverse-engineering",
+            "static-analysis"
+          ],
+          "created_at": "2026-04-14T00:51:32Z",
+          "updated_at": "2026-10-12T23:31:24Z",
+          "pushed_at": "2026-10-12T22:57:06Z",
+          "daily_stars": 45495,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 97.66,
+          "star_delta": 52197,
+          "fork_delta": 13138,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 53.12,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "让智能体替开发者检查没有源码的应用，沿代码和运行证据解释功能如何实现。",
+            "highlights": [
+              "无需源码也能调查应用功能如何实现",
+              "分析结果附带证据和结论边界",
+              "智能体与终端共用分析工作流"
+            ],
+            "audience": "需要研究自有或获授权软件的开发者，用于追踪功能实现、理解程序行为或重建类似功能。",
+            "capabilities": [
+              "提取原生二进制的伪代码与调用关系",
+              "梳理 Electron 应用的模块与进程通信",
+              "检查网站结构、脚本与网络活动",
+              "读取 Android APK 的类与反编译方法",
+              "记录进程运行的输出与文件系统变化"
+            ],
+            "core_title": "沿着证据追到功能实现",
+            "core_summary": "智能体通过 MCP 这个工具连接接口调用本地分析工具，获得代码、引用关系和未知点，再据此追问、解释功能或编写并测试实现，而不是只给出无依据的结论。",
+            "prerequisites": "需受支持版本的 Node.js 和 npm；深度原生分析另需 Hopper、Ghidra 或 IDA，静态 JavaScript 分析无需这些引擎。",
+            "limitations": "安装变更需审核批准；运行时采集会以用户权限执行或操作目标。分析在本地完成，但工具结果会交给智能体，其模型提供方有独立数据政策。",
+            "license_label": "MIT",
+            "license_restrictions": "REA grants no tool license, key, or activation entitlement.",
+            "readme_sha": "1e14f3a2d63278870863f026adcd749235daa1fa",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ],
+              "highlights": [
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ],
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ],
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ]
+              ],
+              "audience": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ],
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ],
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ],
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ],
+                [
+                  "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+                ]
+              ],
+              "core_title": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ],
+              "core_summary": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ],
+              "prerequisites": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ],
+              "limitations": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:1e14f3a2d63278870863f026adcd749235daa1fa"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-13/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "publication_evidence": {
+            "full_name": "morluto/rea",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "1e14f3a2d63278870863f026adcd749235daa1fa",
+              "source_url": "https://api.github.com/repos/morluto/rea/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-13/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+              "sha256": "fbabed3f57bb75cefe5fbd655e97b8f6879778754883e22fc39f62c3a19fbedd",
+              "width": 432,
+              "height": 432
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-13/2026-10-13.ai.01.morluto--rea.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 476507964,
+          "full_name": "storytold/artcraft",
+          "owner": "storytold",
+          "name": "artcraft",
+          "html_url": "https://github.com/storytold/artcraft",
+          "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+          "language": "Rust",
+          "stars": 21850,
+          "forks": 3537,
+          "open_issues": 266,
+          "watchers": 115,
+          "topics": [
+            "3d-graphics",
+            "ai",
+            "aivideo",
+            "filmmaking",
+            "imagegeneration"
+          ],
+          "created_at": "2022-03-31T23:19:12Z",
+          "updated_at": "2026-10-12T23:29:54Z",
+          "pushed_at": "2026-10-11T13:47:59Z",
+          "daily_stars": 4106,
+          "weekly_stars": null,
+          "trending_rank_daily": 4,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 85.57,
+          "star_delta": 4089,
+          "fork_delta": 628,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.88,
+            "relative_growth": 96.88,
+            "fork_growth": 96.88,
+            "total_stars": 15.62,
+            "activity": 51.34,
+            "trending_signal": 43.07
+          },
+          "summary": {
+            "one_line": "把提示词创作变成可摆角色、调镜头的画布流程，帮助视觉创作者制作 AI 图像和视频。",
+            "highlights": [
+              "在同一场景混合图片剪影、世界与三维模型",
+              "在一致环境里安排角色和多个镜头",
+              "按创作任务选择图像或视频模型"
+            ],
+            "audience": "需要控制构图、角色姿态和镜头位置的艺术家、设计师与影视创作者，用于制作 AI 图像和视频。",
+            "capabilities": [
+              "组合图层、抠图与绘画来搭建画面",
+              "把图片转成可摆放和旋转的三维物体",
+              "摆好角色姿态与相机再生成镜头",
+              "用蒙版指定图像局部重绘的位置",
+              "将静态图片生成视频"
+            ],
+            "core_title": "先搭场景，再让模型生成",
+            "core_summary": "先用图层、三维物体和角色模型搭好场景，确定姿态与相机位置，再选择生成模型出图；还可用画布和局部重绘细化结果，把构图控制从提示词转到可视化操作。",
+            "prerequisites": "",
+            "limitations": "模型目录中部分模型已停用，部分受限模型暂不在桌面应用开放；新增服务商集成仍有规划项，不能视为现有能力。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "third-party material not covered by this license",
+            "readme_sha": "26fe9590761d4bf763efd25b9daf3918c8dd12dc",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+              ],
+              "highlights": [
+                [
+                  "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+                ],
+                [
+                  "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+                ],
+                [
+                  "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+                ]
+              ],
+              "audience": [
+                "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+                ],
+                [
+                  "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+                ],
+                [
+                  "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+                ],
+                [
+                  "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+                ],
+                [
+                  "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+                ]
+              ],
+              "core_title": [
+                "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+              ],
+              "core_summary": [
+                "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+              ],
+              "prerequisites": [],
+              "limitations": [
+                "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:26fe9590761d4bf763efd25b9daf3918c8dd12dc"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-13/repo-0d97dfe3fc868c345c34286b-fd75d047029095c551aeb5c0.png",
+          "publication_evidence": {
+            "full_name": "storytold/artcraft",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "26fe9590761d4bf763efd25b9daf3918c8dd12dc",
+              "source_url": "https://api.github.com/repos/storytold/artcraft/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-13/repo-0d97dfe3fc868c345c34286b-fd75d047029095c551aeb5c0.png",
+              "sha256": "5018d30aca280e6d5c191b01185d168e374a235fad190d6d06d9374f5781cd77",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-13/2026-10-13.ai.02.storytold--artcraft.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 701547123,
+          "full_name": "open-webui/open-webui",
+          "owner": "open-webui",
+          "name": "open-webui",
+          "html_url": "https://github.com/open-webui/open-webui",
+          "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+          "language": "Python",
+          "stars": 154945,
+          "forks": 22637,
+          "open_issues": 173,
+          "watchers": 154945,
+          "topics": [
+            "ai",
+            "llm",
+            "llm-ui",
+            "llm-webui",
+            "llms",
+            "mcp",
+            "ollama",
+            "ollama-webui",
+            "open-webui",
+            "openai",
+            "openapi",
+            "rag",
+            "self-hosted",
+            "ui",
+            "webui"
+          ],
+          "created_at": "2023-10-06T22:08:27Z",
+          "updated_at": "2026-10-12T23:30:30Z",
+          "pushed_at": "2026-10-12T22:13:08Z",
+          "daily_stars": 142,
+          "weekly_stars": null,
+          "trending_rank_daily": 5,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 84.12,
+          "star_delta": 623,
+          "fork_delta": 36,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 87.5,
+            "relative_growth": 87.5,
+            "fork_growth": 81.25,
+            "total_stars": 56.25,
+            "activity": 100.0,
+            "trending_signal": 38.69
+          },
+          "summary": {
+            "one_line": "为个人和团队搭建自己的 AI 聊天工作区，把本地或云端模型、文档和工具放进同一界面。",
+            "highlights": [
+              "在同一对话里并行使用多个模型",
+              "通过插件扩展工具、数据连接和审批流程",
+              "接入 Open Terminal 后可在聊天中运行脚本"
+            ],
+            "audience": "想自行部署 AI 工作区的个人与团队，用于文档问答、多模型协作，以及按成员角色管理工具和知识访问。",
+            "capabilities": [
+              "接入本地 Ollama 与兼容接口的云端模型",
+              "检索文档库内容并加入对话",
+              "组合指令、工具和知识建立专用智能体",
+              "安排提示词按周期自动执行",
+              "按用户角色和分组配置访问权限"
+            ],
+            "core_title": "让模型带着你的资料回答",
+            "core_summary": "把文档放入聊天或从知识库选取后，系统先检索相关内容，再交给模型回答，这就是检索增强生成。还可将知识、工具和自定义指令组合成专用智能体。",
+            "prerequisites": "通过 pip 安装前需使用 Python 3.11；容器启用 CUDA 时，Linux 或 WSL 需安装 Nvidia CUDA 容器工具包。",
+            "limitations": "Docker 部署须挂载数据卷以防数据丢失；开发分支可能有缺陷或未完成功能；按用户隔离的终端环境由企业版配套组件提供。",
+            "license_label": "Open WebUI License",
+            "license_restrictions": "an additional requirement to preserve the \"Open WebUI\" branding",
+            "readme_sha": "ab0fdd1345cc7b25f4146db15ac8b8047c625f58",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+              ],
+              "highlights": [
+                [
+                  "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+                ],
+                [
+                  "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+                ],
+                [
+                  "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+                ]
+              ],
+              "audience": [
+                "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+                ],
+                [
+                  "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+                ],
+                [
+                  "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+                ],
+                [
+                  "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+                ],
+                [
+                  "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+                ]
+              ],
+              "core_title": [
+                "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+              ],
+              "core_summary": [
+                "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+              ],
+              "prerequisites": [
+                "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+              ],
+              "limitations": [
+                "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+              ],
+              "license_label": [
+                "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+              ],
+              "license_restrictions": [
+                "github.readme:ab0fdd1345cc7b25f4146db15ac8b8047c625f58"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-13/repo-aa408c0f83f345a858beafa7-69ab2db374c4cefda84cf6c4.png",
+          "publication_evidence": {
+            "full_name": "open-webui/open-webui",
+            "license_spdx_id": "NOASSERTION",
+            "readme": {
+              "sha": "ab0fdd1345cc7b25f4146db15ac8b8047c625f58",
+              "source_url": "https://api.github.com/repos/open-webui/open-webui/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-13/repo-aa408c0f83f345a858beafa7-69ab2db374c4cefda84cf6c4.png",
+              "sha256": "932c688dfc1044403b510973081a804fde1e76b7a6de6cb79227d9230698fe90",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Open WebUI License",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-13/2026-10-13.ai.03.open-webui--open-webui.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
