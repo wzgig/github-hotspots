@@ -1,0 +1,1591 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-10-15",
+  "window_start": "2026-10-14",
+  "window_end": "2026-10-15",
+  "generated_at": "2026-10-15T07:31:27+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-10-14 至 2026-10-15",
+  "publication": {
+    "issue_number": 96,
+    "issue_code": "D096",
+    "issue_label": "第96期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-10-15",
+    "manifest": "reports/daily/assets/2026-10-15/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.02.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "ifixai-ai/iFixAi",
+            "path": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.03.ifixai-ai--ifixai.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-15/2026-10-15.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-15/2026-10-15.ai.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-10-15/2026-10-15.ai.02.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "ifixai-ai/iFixAi",
+            "path": "reports/daily/assets/2026-10-15/2026-10-15.ai.03.ifixai-ai--ifixai.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 96,
+      "issue_code": "D096",
+      "issue_label": "第96期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1209966933,
+      "full_name": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "html_url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": 240681,
+      "forks": 59848,
+      "open_issues": 803,
+      "watchers": 240681,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "decompiler",
+        "developer-tools",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "rea",
+        "reverse-engineering",
+        "static-analysis",
+        "touhou"
+      ],
+      "created_at": "2026-04-14T00:51:32Z",
+      "updated_at": "2026-10-14T23:31:21Z",
+      "pushed_at": "2026-10-14T23:29:57Z",
+      "daily_stars": 41187,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 99.26,
+      "star_delta": 10351,
+      "fork_delta": 2491,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 100.0,
+        "total_stars": 85.14,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "让 AI 追踪应用、网页和二进制的工作原理，并给出证据与实现线索",
+        "highlights": [
+          "跨二进制、应用与运行时行为追踪线索",
+          "分析结果带有证据和能力边界",
+          "同一套工作流可通过 MCP 或终端使用"
+        ],
+        "audience": "需要分析应用行为、还原二进制逻辑或让 AI 辅助逆向研究的人",
+        "capabilities": [
+          "分析原生二进制并返回伪代码、汇编和调用关系",
+          "拆解 JavaScript/Electron 的模块、路由与 IPC",
+          "观察网页结构、脚本、网络请求并截图",
+          "读取 .NET 程序集的元数据与 CIL 指令",
+          "让 AI 根据证据解释行为并编写实现"
+        ],
+        "core_title": "让 AI 沿着证据完成逆向分析",
+        "core_summary": "REA 通过 MCP 把多类分析工具接给 AI，返回代码引用、证据和未知项，方便继续追问、解释和实现。",
+        "prerequisites": "需要 Node.js 22.x、24.x 或 26+；原生分析还要 Hopper、Ghidra 或 IDA。",
+        "limitations": "静态分析不会运行应用；运行时采集会以当前用户权限与目标交互。",
+        "license_label": "MIT",
+        "license_restrictions": "You must legally obtain and be authorized to use commercial tools",
+        "readme_sha": "2be1774fc0e7229028fcaa99d367cb3e26633e6f",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+          ],
+          "highlights": [
+            [
+              "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+            ],
+            [
+              "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+            ],
+            [
+              "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+            ]
+          ],
+          "audience": [
+            "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+          ],
+          "capabilities": [
+            [
+              "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+            ],
+            [
+              "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+            ],
+            [
+              "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+            ],
+            [
+              "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+            ],
+            [
+              "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+            ]
+          ],
+          "core_title": [
+            "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+          ],
+          "core_summary": [
+            "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+          ],
+          "prerequisites": [
+            "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+          ],
+          "limitations": [
+            "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-10-15/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+      "publication_evidence": {
+        "full_name": "morluto/rea",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "2be1774fc0e7229028fcaa99d367cb3e26633e6f",
+          "source_url": "https://api.github.com/repos/morluto/rea/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-15/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "sha256": "fbabed3f57bb75cefe5fbd655e97b8f6879778754883e22fc39f62c3a19fbedd",
+          "width": 432,
+          "height": 432
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.01.morluto--rea.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1206390571,
+      "full_name": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "html_url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": 66223,
+      "forks": 7307,
+      "open_issues": 178,
+      "watchers": 257,
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx",
+        "omnivoice-studio",
+        "speech-to-text",
+        "text-to-speech",
+        "transcription",
+        "translate",
+        "tts",
+        "voice-ai",
+        "voice-cloning",
+        "voice-generation",
+        "voicestudio",
+        "workflow"
+      ],
+      "created_at": "2026-04-09T21:40:26Z",
+      "updated_at": "2026-10-14T23:31:03Z",
+      "pushed_at": "2026-10-14T22:26:47Z",
+      "daily_stars": 3547,
+      "weekly_stars": null,
+      "trending_rank_daily": 2,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 93.22,
+      "star_delta": 1060,
+      "fork_delta": 91,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.65,
+        "relative_growth": 97.3,
+        "fork_growth": 98.65,
+        "total_stars": 28.38,
+        "activity": 100.0,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "把声音生成、克隆、配音和转写放进本地工作流",
+        "highlights": [
+          "本地完成声音克隆与语音生成",
+          "同一桌面应用覆盖配音和听写",
+          "支持可复用配方与监视文件夹"
+        ],
+        "audience": "需要本地制作配音、克隆声音、视频字幕或有声内容的创作者和团队",
+        "capabilities": [
+          "克隆声音或设计新的声音风格",
+          "为视频生成带时间信息的配音",
+          "用悬浮组件进行语音听写",
+          "批量制作故事和有声书内容",
+          "通过本地 API 或 MCP 接入工作流"
+        ],
+        "core_title": "把声音制作整合进本地工作流",
+        "core_summary": "VoiceStudio 把声音克隆、设计、配音、听写和批处理放进桌面工作区，模型在本机运行，也能通过 API 或 MCP 接入其他工具。",
+        "prerequisites": "支持 macOS、Linux 和 Windows；需按所选引擎安装模型，硬件会影响支持与速度。",
+        "limitations": "远程服务可选；模型权重、声音和生成内容另有条件，克隆声音需获得许可。",
+        "license_label": "AGPL-3.0",
+        "license_restrictions": "Clone voices only with permission.",
+        "readme_sha": "6e281d91e881b6b07d60b57d7fb5f51b0076e8e1",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+          ],
+          "highlights": [
+            [
+              "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+            ],
+            [
+              "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+            ],
+            [
+              "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+            ]
+          ],
+          "audience": [
+            "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+          ],
+          "capabilities": [
+            [
+              "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+            ],
+            [
+              "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+            ],
+            [
+              "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+            ],
+            [
+              "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+            ],
+            [
+              "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+            ]
+          ],
+          "core_title": [
+            "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+          ],
+          "core_summary": [
+            "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+          ],
+          "prerequisites": [
+            "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+          ],
+          "limitations": [
+            "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-10-15/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+      "publication_evidence": {
+        "full_name": "debpalash/VoiceStudio",
+        "license_spdx_id": "AGPL-3.0",
+        "readme": {
+          "sha": "6e281d91e881b6b07d60b57d7fb5f51b0076e8e1",
+          "source_url": "https://api.github.com/repos/debpalash/VoiceStudio/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-15/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+          "sha256": "c87aa15e86829a315c76cfd8cdcfd1cacb2ee2762b83814d273ea99ee44e2feb",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "AGPL-3.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.02.debpalash--voicestudio.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1222527844,
+      "full_name": "ifixai-ai/iFixAi",
+      "owner": "ifixai-ai",
+      "name": "iFixAi",
+      "html_url": "https://github.com/ifixai-ai/iFixAi",
+      "description": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
+      "language": "Python",
+      "stars": 27334,
+      "forks": 1501,
+      "open_issues": 5,
+      "watchers": 409,
+      "topics": [
+        "agent-evaluation",
+        "ai",
+        "ai-alignment",
+        "ai-evaluation",
+        "ai-governance",
+        "ai-safety",
+        "cli",
+        "diagnostic-tool",
+        "eu-ai-act",
+        "hallucination-detection",
+        "iso-42001",
+        "llm-evaluation",
+        "llm-security",
+        "nist-ai-rmf",
+        "owasp-llm",
+        "prompt-injection",
+        "python",
+        "responsible-ai",
+        "risk-assessment",
+        "risk-management"
+      ],
+      "created_at": "2026-04-27T13:02:34Z",
+      "updated_at": "2026-10-14T23:31:03Z",
+      "pushed_at": "2026-10-14T23:04:34Z",
+      "daily_stars": 2143,
+      "weekly_stars": null,
+      "trending_rank_daily": 7,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 88.9,
+      "star_delta": 585,
+      "fork_delta": 24,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.3,
+        "relative_growth": 95.95,
+        "fork_growth": 83.11,
+        "total_stars": 21.62,
+        "activity": 100.0,
+        "trending_signal": 33.33
+      },
+      "summary": {
+        "one_line": "用可复现的检查和评分，审计 AI Agent 是否按业务规则完成任务",
+        "highlights": [
+          "同一诊断引擎支持 CLI、插件和 Skill",
+          "默认检查覆盖权限、注入和业务偏离",
+          "评分结果同时保留报告与证据链"
+        ],
+        "audience": "需要审计 AI Agent 权限、可靠性和业务规则执行情况的研发、风控与治理团队",
+        "capabilities": [
+          "运行 10 项默认检查或全部 60 项检查",
+          "通过 HTTP 接口测试真实部署的 Agent",
+          "检查权限、提示注入、隐私和失败处理",
+          "用独立模型裁判生成可引用评分",
+          "输出 A–F 评分、JSON 与 Markdown 报告"
+        ],
+        "core_title": "把 Agent 风险变成可核对评分",
+        "core_summary": "iFixAi 把 Agent 当作黑盒，通过检查权限、操作、提示注入和业务规则执行情况生成分项分数与总评。",
+        "prerequisites": "需要 Python 3.10+；按被测模型和裁判配置 API 密钥，也可先用内置 mock 测试。",
+        "limitations": "自评结果会标记为不可引用；接口暴露不足时可能记为 insufficient_evidence；Pro 是另行提供的服务。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "702e34aa5be1ab7862ea05743dbfdda49e212c78",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+          ],
+          "highlights": [
+            [
+              "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+            ],
+            [
+              "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+            ],
+            [
+              "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+            ]
+          ],
+          "audience": [
+            "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+          ],
+          "capabilities": [
+            [
+              "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+            ],
+            [
+              "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+            ],
+            [
+              "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+            ],
+            [
+              "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+            ],
+            [
+              "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+            ]
+          ],
+          "core_title": [
+            "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+          ],
+          "core_summary": [
+            "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+          ],
+          "prerequisites": [
+            "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+          ],
+          "limitations": [
+            "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-15/repo-e2a82db15be8639415897faf-2efa9673e19ad92caf44077a.png",
+      "publication_evidence": {
+        "full_name": "ifixai-ai/iFixAi",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "702e34aa5be1ab7862ea05743dbfdda49e212c78",
+          "source_url": "https://api.github.com/repos/ifixai-ai/iFixAi/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-15/repo-e2a82db15be8639415897faf-2efa9673e19ad92caf44077a.png",
+          "sha256": "0377a4be4c35ca86b114fb0ce75591636e7631ec8f1d14a63bbdc3e73bf08de3",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.03.ifixai-ai--ifixai.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.02.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "ifixai-ai/iFixAi",
+            "path": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.03.ifixai-ai--ifixai.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1209966933,
+          "full_name": "morluto/rea",
+          "owner": "morluto",
+          "name": "rea",
+          "html_url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "language": "TypeScript",
+          "stars": 240681,
+          "forks": 59848,
+          "open_issues": 803,
+          "watchers": 240681,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "decompiler",
+            "developer-tools",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "rea",
+            "reverse-engineering",
+            "static-analysis",
+            "touhou"
+          ],
+          "created_at": "2026-04-14T00:51:32Z",
+          "updated_at": "2026-10-14T23:31:21Z",
+          "pushed_at": "2026-10-14T23:29:57Z",
+          "daily_stars": 41187,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 99.26,
+          "star_delta": 10351,
+          "fork_delta": 2491,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 85.14,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "让 AI 追踪应用、网页和二进制的工作原理，并给出证据与实现线索",
+            "highlights": [
+              "跨二进制、应用与运行时行为追踪线索",
+              "分析结果带有证据和能力边界",
+              "同一套工作流可通过 MCP 或终端使用"
+            ],
+            "audience": "需要分析应用行为、还原二进制逻辑或让 AI 辅助逆向研究的人",
+            "capabilities": [
+              "分析原生二进制并返回伪代码、汇编和调用关系",
+              "拆解 JavaScript/Electron 的模块、路由与 IPC",
+              "观察网页结构、脚本、网络请求并截图",
+              "读取 .NET 程序集的元数据与 CIL 指令",
+              "让 AI 根据证据解释行为并编写实现"
+            ],
+            "core_title": "让 AI 沿着证据完成逆向分析",
+            "core_summary": "REA 通过 MCP 把多类分析工具接给 AI，返回代码引用、证据和未知项，方便继续追问、解释和实现。",
+            "prerequisites": "需要 Node.js 22.x、24.x 或 26+；原生分析还要 Hopper、Ghidra 或 IDA。",
+            "limitations": "静态分析不会运行应用；运行时采集会以当前用户权限与目标交互。",
+            "license_label": "MIT",
+            "license_restrictions": "You must legally obtain and be authorized to use commercial tools",
+            "readme_sha": "2be1774fc0e7229028fcaa99d367cb3e26633e6f",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ],
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ],
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ]
+              ],
+              "audience": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ],
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ],
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ],
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ],
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ],
+              "core_summary": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ],
+              "prerequisites": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ],
+              "limitations": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-15/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "publication_evidence": {
+            "full_name": "morluto/rea",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "2be1774fc0e7229028fcaa99d367cb3e26633e6f",
+              "source_url": "https://api.github.com/repos/morluto/rea/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-15/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+              "sha256": "fbabed3f57bb75cefe5fbd655e97b8f6879778754883e22fc39f62c3a19fbedd",
+              "width": 432,
+              "height": 432
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.01.morluto--rea.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1206390571,
+          "full_name": "debpalash/VoiceStudio",
+          "owner": "debpalash",
+          "name": "VoiceStudio",
+          "html_url": "https://github.com/debpalash/VoiceStudio",
+          "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+          "language": "Python",
+          "stars": 66223,
+          "forks": 7307,
+          "open_issues": 178,
+          "watchers": 257,
+          "topics": [
+            "ai",
+            "audiobook",
+            "cuda",
+            "dubbing",
+            "elevenlabs-alternative",
+            "huggingface",
+            "local-first",
+            "mlx",
+            "omnivoice-studio",
+            "speech-to-text",
+            "text-to-speech",
+            "transcription",
+            "translate",
+            "tts",
+            "voice-ai",
+            "voice-cloning",
+            "voice-generation",
+            "voicestudio",
+            "workflow"
+          ],
+          "created_at": "2026-04-09T21:40:26Z",
+          "updated_at": "2026-10-14T23:31:03Z",
+          "pushed_at": "2026-10-14T22:26:47Z",
+          "daily_stars": 3547,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 93.22,
+          "star_delta": 1060,
+          "fork_delta": 91,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.65,
+            "relative_growth": 97.3,
+            "fork_growth": 98.65,
+            "total_stars": 28.38,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "把声音生成、克隆、配音和转写放进本地工作流",
+            "highlights": [
+              "本地完成声音克隆与语音生成",
+              "同一桌面应用覆盖配音和听写",
+              "支持可复用配方与监视文件夹"
+            ],
+            "audience": "需要本地制作配音、克隆声音、视频字幕或有声内容的创作者和团队",
+            "capabilities": [
+              "克隆声音或设计新的声音风格",
+              "为视频生成带时间信息的配音",
+              "用悬浮组件进行语音听写",
+              "批量制作故事和有声书内容",
+              "通过本地 API 或 MCP 接入工作流"
+            ],
+            "core_title": "把声音制作整合进本地工作流",
+            "core_summary": "VoiceStudio 把声音克隆、设计、配音、听写和批处理放进桌面工作区，模型在本机运行，也能通过 API 或 MCP 接入其他工具。",
+            "prerequisites": "支持 macOS、Linux 和 Windows；需按所选引擎安装模型，硬件会影响支持与速度。",
+            "limitations": "远程服务可选；模型权重、声音和生成内容另有条件，克隆声音需获得许可。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "Clone voices only with permission.",
+            "readme_sha": "6e281d91e881b6b07d60b57d7fb5f51b0076e8e1",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ],
+              "highlights": [
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ],
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ],
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ]
+              ],
+              "audience": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ],
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ],
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ],
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ],
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ]
+              ],
+              "core_title": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ],
+              "core_summary": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ],
+              "prerequisites": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ],
+              "limitations": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-15/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+          "publication_evidence": {
+            "full_name": "debpalash/VoiceStudio",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "6e281d91e881b6b07d60b57d7fb5f51b0076e8e1",
+              "source_url": "https://api.github.com/repos/debpalash/VoiceStudio/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-15/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+              "sha256": "c87aa15e86829a315c76cfd8cdcfd1cacb2ee2762b83814d273ea99ee44e2feb",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.02.debpalash--voicestudio.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1222527844,
+          "full_name": "ifixai-ai/iFixAi",
+          "owner": "ifixai-ai",
+          "name": "iFixAi",
+          "html_url": "https://github.com/ifixai-ai/iFixAi",
+          "description": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
+          "language": "Python",
+          "stars": 27334,
+          "forks": 1501,
+          "open_issues": 5,
+          "watchers": 409,
+          "topics": [
+            "agent-evaluation",
+            "ai",
+            "ai-alignment",
+            "ai-evaluation",
+            "ai-governance",
+            "ai-safety",
+            "cli",
+            "diagnostic-tool",
+            "eu-ai-act",
+            "hallucination-detection",
+            "iso-42001",
+            "llm-evaluation",
+            "llm-security",
+            "nist-ai-rmf",
+            "owasp-llm",
+            "prompt-injection",
+            "python",
+            "responsible-ai",
+            "risk-assessment",
+            "risk-management"
+          ],
+          "created_at": "2026-04-27T13:02:34Z",
+          "updated_at": "2026-10-14T23:31:03Z",
+          "pushed_at": "2026-10-14T23:04:34Z",
+          "daily_stars": 2143,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 88.9,
+          "star_delta": 585,
+          "fork_delta": 24,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.3,
+            "relative_growth": 95.95,
+            "fork_growth": 83.11,
+            "total_stars": 21.62,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "用可复现的检查和评分，审计 AI Agent 是否按业务规则完成任务",
+            "highlights": [
+              "同一诊断引擎支持 CLI、插件和 Skill",
+              "默认检查覆盖权限、注入和业务偏离",
+              "评分结果同时保留报告与证据链"
+            ],
+            "audience": "需要审计 AI Agent 权限、可靠性和业务规则执行情况的研发、风控与治理团队",
+            "capabilities": [
+              "运行 10 项默认检查或全部 60 项检查",
+              "通过 HTTP 接口测试真实部署的 Agent",
+              "检查权限、提示注入、隐私和失败处理",
+              "用独立模型裁判生成可引用评分",
+              "输出 A–F 评分、JSON 与 Markdown 报告"
+            ],
+            "core_title": "把 Agent 风险变成可核对评分",
+            "core_summary": "iFixAi 把 Agent 当作黑盒，通过检查权限、操作、提示注入和业务规则执行情况生成分项分数与总评。",
+            "prerequisites": "需要 Python 3.10+；按被测模型和裁判配置 API 密钥，也可先用内置 mock 测试。",
+            "limitations": "自评结果会标记为不可引用；接口暴露不足时可能记为 insufficient_evidence；Pro 是另行提供的服务。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "702e34aa5be1ab7862ea05743dbfdda49e212c78",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+              ],
+              "highlights": [
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ],
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ],
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ]
+              ],
+              "audience": [
+                "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ],
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ],
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ],
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ],
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ]
+              ],
+              "core_title": [
+                "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+              ],
+              "core_summary": [
+                "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+              ],
+              "prerequisites": [
+                "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+              ],
+              "limitations": [
+                "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-15/repo-e2a82db15be8639415897faf-2efa9673e19ad92caf44077a.png",
+          "publication_evidence": {
+            "full_name": "ifixai-ai/iFixAi",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "702e34aa5be1ab7862ea05743dbfdda49e212c78",
+              "source_url": "https://api.github.com/repos/ifixai-ai/iFixAi/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-15/repo-e2a82db15be8639415897faf-2efa9673e19ad92caf44077a.png",
+              "sha256": "0377a4be4c35ca86b114fb0ce75591636e7631ec8f1d14a63bbdc3e73bf08de3",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-15/2026-10-15.comprehensive.03.ifixai-ai--ifixai.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-15/2026-10-15.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-15/2026-10-15.ai.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-10-15/2026-10-15.ai.02.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "ifixai-ai/iFixAi",
+            "path": "reports/daily/assets/2026-10-15/2026-10-15.ai.03.ifixai-ai--ifixai.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1209966933,
+          "full_name": "morluto/rea",
+          "owner": "morluto",
+          "name": "rea",
+          "html_url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "language": "TypeScript",
+          "stars": 240681,
+          "forks": 59848,
+          "open_issues": 803,
+          "watchers": 240681,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "decompiler",
+            "developer-tools",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "rea",
+            "reverse-engineering",
+            "static-analysis",
+            "touhou"
+          ],
+          "created_at": "2026-04-14T00:51:32Z",
+          "updated_at": "2026-10-14T23:31:21Z",
+          "pushed_at": "2026-10-14T23:29:57Z",
+          "daily_stars": 41187,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 99.48,
+          "star_delta": 10351,
+          "fork_delta": 2491,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 89.66,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "把应用功能从表面追到代码、二进制和运行行为",
+            "highlights": [
+              "跨二进制、应用与运行行为追查功能",
+              "用证据和限制说明支撑分析结论",
+              "通过 MCP 或终端复用同一套调查流程"
+            ],
+            "audience": "需要分析应用、二进制或运行行为，并把结论用于复现功能的开发者",
+            "capabilities": [
+              "检查原生二进制并返回伪代码、汇编与调用关系",
+              "分析 JavaScript 或 Electron 应用的模块与 IPC",
+              "观察网站结构、脚本、网络请求和页面截图",
+              "读取 .NET、Android APK、Flutter 应用等静态信息",
+              "让代理依据证据解释行为并编写测试实现"
+            ],
+            "core_title": "让代理沿着证据追查软件行为",
+            "core_summary": "REA 通过 MCP 把代理连接到多类分析工具，返回代码引用、证据和未知点；代理再据此追问、解释、实现和测试。",
+            "prerequisites": "需要 Node.js 22.x（>=22.19）、24.x（>=24.11）或 26+，以及 npm；不同目标还需对应工具。",
+            "limitations": "静态分析读取文件但不运行应用；运行时捕获会以当前用户权限运行或交互目标。",
+            "license_label": "MIT",
+            "license_restrictions": "You must legally obtain and be authorized to use commercial tools",
+            "readme_sha": "2be1774fc0e7229028fcaa99d367cb3e26633e6f",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ],
+              "highlights": [
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ],
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ],
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ]
+              ],
+              "audience": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ],
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ],
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ],
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ],
+                [
+                  "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+                ]
+              ],
+              "core_title": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ],
+              "core_summary": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ],
+              "prerequisites": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ],
+              "limitations": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:2be1774fc0e7229028fcaa99d367cb3e26633e6f"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-15/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "publication_evidence": {
+            "full_name": "morluto/rea",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "2be1774fc0e7229028fcaa99d367cb3e26633e6f",
+              "source_url": "https://api.github.com/repos/morluto/rea/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-15/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+              "sha256": "fbabed3f57bb75cefe5fbd655e97b8f6879778754883e22fc39f62c3a19fbedd",
+              "width": 432,
+              "height": 432
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-15/2026-10-15.ai.01.morluto--rea.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1206390571,
+          "full_name": "debpalash/VoiceStudio",
+          "owner": "debpalash",
+          "name": "VoiceStudio",
+          "html_url": "https://github.com/debpalash/VoiceStudio",
+          "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+          "language": "Python",
+          "stars": 66223,
+          "forks": 7307,
+          "open_issues": 178,
+          "watchers": 257,
+          "topics": [
+            "ai",
+            "audiobook",
+            "cuda",
+            "dubbing",
+            "elevenlabs-alternative",
+            "huggingface",
+            "local-first",
+            "mlx",
+            "omnivoice-studio",
+            "speech-to-text",
+            "text-to-speech",
+            "transcription",
+            "translate",
+            "tts",
+            "voice-ai",
+            "voice-cloning",
+            "voice-generation",
+            "voicestudio",
+            "workflow"
+          ],
+          "created_at": "2026-04-09T21:40:26Z",
+          "updated_at": "2026-10-14T23:31:03Z",
+          "pushed_at": "2026-10-14T22:26:47Z",
+          "daily_stars": 3547,
+          "weekly_stars": null,
+          "trending_rank_daily": 2,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 91.6,
+          "star_delta": 1060,
+          "fork_delta": 91,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.55,
+            "relative_growth": 96.55,
+            "fork_growth": 96.55,
+            "total_stars": 24.14,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "在本地完成克隆音色、视频配音和有声内容制作",
+            "highlights": [
+              "本地完成克隆、设计和配音",
+              "支持听写、有声书与批量任务",
+              "用 API、MCP 和监视文件夹接入流程"
+            ],
+            "audience": "需要本地完成配音、克隆音色、语音输入或有声内容制作的创作者与开发者",
+            "capabilities": [
+              "克隆已有声音或设计新的声音",
+              "按时间轴为视频生成配音",
+              "把语音实时听写成文字",
+              "制作故事、有声书和批量音频任务",
+              "通过本地 API、MCP、配方和监视文件夹接入工作流"
+            ],
+            "core_title": "把声音制作串进本地工作流",
+            "core_summary": "VoiceStudio 把声音克隆、语音设计、视频配音和模型管理放进桌面工作区，并提供本地 API 与 MCP，方便接入代理和重复任务。",
+            "prerequisites": "需要 Node.js 22+、Bun、Rust/Cargo 和平台构建工具来从源码构建；模型与硬件要求因引擎而异。",
+            "limitations": "模型权重、分词器、声音和生成结果的使用条件另行规定；Windows ARM 支持为实验性，部分硬件需远程后端。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "Clone voices only with permission.",
+            "readme_sha": "6e281d91e881b6b07d60b57d7fb5f51b0076e8e1",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ],
+              "highlights": [
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ],
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ],
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ]
+              ],
+              "audience": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ],
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ],
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ],
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ],
+                [
+                  "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+                ]
+              ],
+              "core_title": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ],
+              "core_summary": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ],
+              "prerequisites": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ],
+              "limitations": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:6e281d91e881b6b07d60b57d7fb5f51b0076e8e1"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-15/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+          "publication_evidence": {
+            "full_name": "debpalash/VoiceStudio",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "6e281d91e881b6b07d60b57d7fb5f51b0076e8e1",
+              "source_url": "https://api.github.com/repos/debpalash/VoiceStudio/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-15/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+              "sha256": "c87aa15e86829a315c76cfd8cdcfd1cacb2ee2762b83814d273ea99ee44e2feb",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-15/2026-10-15.ai.02.debpalash--voicestudio.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1222527844,
+          "full_name": "ifixai-ai/iFixAi",
+          "owner": "ifixai-ai",
+          "name": "iFixAi",
+          "html_url": "https://github.com/ifixai-ai/iFixAi",
+          "description": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
+          "language": "Python",
+          "stars": 27334,
+          "forks": 1501,
+          "open_issues": 5,
+          "watchers": 409,
+          "topics": [
+            "agent-evaluation",
+            "ai",
+            "ai-alignment",
+            "ai-evaluation",
+            "ai-governance",
+            "ai-safety",
+            "cli",
+            "diagnostic-tool",
+            "eu-ai-act",
+            "hallucination-detection",
+            "iso-42001",
+            "llm-evaluation",
+            "llm-security",
+            "nist-ai-rmf",
+            "owasp-llm",
+            "prompt-injection",
+            "python",
+            "responsible-ai",
+            "risk-assessment",
+            "risk-management"
+          ],
+          "created_at": "2026-04-27T13:02:34Z",
+          "updated_at": "2026-10-14T23:31:03Z",
+          "pushed_at": "2026-10-14T23:04:34Z",
+          "daily_stars": 2143,
+          "weekly_stars": null,
+          "trending_rank_daily": 7,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 85.63,
+          "star_delta": 585,
+          "fork_delta": 24,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.1,
+            "relative_growth": 93.1,
+            "fork_growth": 82.76,
+            "total_stars": 10.34,
+            "activity": 100.0,
+            "trending_signal": 33.33
+          },
+          "summary": {
+            "one_line": "把 AI 代理当黑盒审计，检查它是否按业务规则完成任务",
+            "highlights": [
+              "从权限、操控和可靠性检查代理",
+              "把一次运行整理成可引用评分卡",
+              "支持 CLI、插件、Skill 与 HTTP 端点"
+            ],
+            "audience": "需要检查 AI 代理是否遵守权限、业务规则和任务目标的团队与评估人员",
+            "capabilities": [
+              "用十项或六十项检查评估代理行为",
+              "测试权限边界、提示注入和破坏性操作",
+              "检查代理是否编造、偏题、隐瞒失败或过度自信",
+              "通过 HTTP 端点测试真实部署的代理",
+              "输出 JSON、Markdown 报告和分项评分卡"
+            ],
+            "core_title": "用可追溯评分检查代理是否按规矩办事",
+            "core_summary": "iFixAi 把被测代理作为黑盒，通过检查权限、可靠性、操控风险和透明度等维度评分；独立评审模型可生成更适合引用的结果。",
+            "prerequisites": "安装 Skill 只需 uv 和 Python 3.10+；运行测试还需模型提供商密钥或被测代理端点。",
+            "limitations": "自评结果会标记为 self-judged，不能作为可引用结果；适配器未暴露足够能力时会标为 insufficient_evidence。",
+            "license_label": "Apache 2.0",
+            "license_restrictions": "",
+            "readme_sha": "702e34aa5be1ab7862ea05743dbfdda49e212c78",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+              ],
+              "highlights": [
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ],
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ],
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ]
+              ],
+              "audience": [
+                "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ],
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ],
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ],
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ],
+                [
+                  "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+                ]
+              ],
+              "core_title": [
+                "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+              ],
+              "core_summary": [
+                "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+              ],
+              "prerequisites": [
+                "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+              ],
+              "limitations": [
+                "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+              ],
+              "license_label": [
+                "github.readme:702e34aa5be1ab7862ea05743dbfdda49e212c78"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-15/repo-e2a82db15be8639415897faf-2efa9673e19ad92caf44077a.png",
+          "publication_evidence": {
+            "full_name": "ifixai-ai/iFixAi",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "702e34aa5be1ab7862ea05743dbfdda49e212c78",
+              "source_url": "https://api.github.com/repos/ifixai-ai/iFixAi/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-15/repo-e2a82db15be8639415897faf-2efa9673e19ad92caf44077a.png",
+              "sha256": "0377a4be4c35ca86b114fb0ce75591636e7631ec8f1d14a63bbdc3e73bf08de3",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache 2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-15/2026-10-15.ai.03.ifixai-ai--ifixai.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
