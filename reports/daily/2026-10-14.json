@@ -4,7 +4,7 @@
   "run_date": "2026-10-14",
   "window_start": "2026-10-13",
   "window_end": "2026-10-14",
-  "generated_at": "2026-10-14T14:11:27+08:00",
+  "generated_at": "2026-10-14T22:26:00+08:00",
   "timezone": "Asia/Shanghai",
   "window_label": "2026-10-13 至 2026-10-14",
   "publication": {
@@ -14,7 +14,10 @@
     "status": "official"
   },
   "data_quality": "高：历史快照增量",
-  "warnings": [],
+  "warnings": [
+    "5 个上榜项目未获取到 Owner 头像，海报已使用身份占位图",
+    "5 个上榜项目未获取到 README，相关文案将使用受控回退"
+  ],
   "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
   "editorial": {
     "policy": "facts-locked-batch-editing",
@@ -22,16 +25,16 @@
       "comprehensive": {
         "prompt_version": "4.1",
         "schema_version": "4.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       },
       "ai": {
         "prompt_version": "4.1",
         "schema_version": "4.0",
-        "requested_backend": "deterministic",
-        "used_backend": "deterministic",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
         "fallback_used": false,
         "error_category": null
       }
@@ -57,13 +60,13 @@
           },
           {
             "rank": 2,
-            "full_name": "bilawalsidhu/gods-eye-view",
-            "path": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.02.bilawalsidhu--gods-eye-view.png"
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.02.mattpocock--skills.png"
           },
           {
             "rank": 3,
-            "full_name": "cathrynlavery/diagram-design",
-            "path": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.03.cathrynlavery--diagram-design.png"
+            "full_name": "open-webui/open-webui",
+            "path": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.03.open-webui--open-webui.png"
           }
         ]
       },
@@ -79,13 +82,13 @@
           },
           {
             "rank": 2,
-            "full_name": "mksglu/context-mode",
-            "path": "reports/daily/assets/2026-10-14/2026-10-14.ai.02.mksglu--context-mode.png"
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-14/2026-10-14.ai.02.dietrichgebert--ponytail.png"
           },
           {
             "rank": 3,
-            "full_name": "storytold/artcraft",
-            "path": "reports/daily/assets/2026-10-14/2026-10-14.ai.03.storytold--artcraft.png"
+            "full_name": "farion1231/cc-switch",
+            "path": "reports/daily/assets/2026-10-14/2026-10-14.ai.03.farion1231--cc-switch.png"
           }
         ]
       }
@@ -106,10 +109,10 @@
       "html_url": "https://github.com/morluto/rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "language": "TypeScript",
-      "stars": 217069,
-      "forks": 53614,
-      "open_issues": 577,
-      "watchers": 217069,
+      "stars": 230330,
+      "forks": 57357,
+      "open_issues": 687,
+      "watchers": 230330,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -118,7 +121,6 @@
         "cli",
         "codex",
         "cordis",
-        "ctf",
         "decompiler",
         "developer-tools",
         "dsh",
@@ -130,12 +132,13 @@
         "model-context-protocol",
         "rea",
         "reverse-engineering",
-        "static-analysis"
+        "static-analysis",
+        "touhou"
       ],
       "created_at": "2026-04-14T00:51:32Z",
-      "updated_at": "2026-10-14T06:11:18Z",
-      "pushed_at": "2026-10-14T05:58:55Z",
-      "daily_stars": 54679,
+      "updated_at": "2026-10-14T14:25:55Z",
+      "pushed_at": "2026-10-14T14:25:08Z",
+      "daily_stars": 41187,
       "weekly_stars": null,
       "trending_rank_daily": 1,
       "trending_rank_weekly": null,
@@ -144,15 +147,15 @@
         "github_api"
       ],
       "rank": 1,
-      "score": 99.48,
-      "star_delta": 62132,
-      "fork_delta": 17945,
+      "score": 99.5,
+      "star_delta": 75393,
+      "fork_delta": 21688,
       "delta_source": "snapshot",
       "component_percentiles": {
         "star_growth": 100.0,
         "relative_growth": 100.0,
         "fork_growth": 100.0,
-        "total_stars": 89.66,
+        "total_stars": 90.1,
         "activity": 100.0,
         "trending_signal": 100.0
       },
@@ -218,20 +221,26 @@
           "license_restrictions": []
         }
       },
-      "avatar_path": "avatars/2026-10-14/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
       "publication_evidence": {
         "full_name": "morluto/rea",
-        "license_spdx_id": "MIT",
+        "license_spdx_id": null,
         "readme": null,
-        "avatar": {
-          "path": "avatars/2026-10-14/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
-          "sha256": "526b550985df1cd70896eb2cb18f756e775095d1bf4424c7b806d59a2ed5f907",
-          "width": 432,
-          "height": 432
-        },
-        "warnings": []
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
       },
-      "license_spdx": "MIT",
       "assets": {
         "poster": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.01.morluto--rea.png",
         "format": "png",
@@ -240,57 +249,43 @@
       }
     },
     {
-      "repository_id": 1277471539,
-      "full_name": "bilawalsidhu/gods-eye-view",
-      "owner": "bilawalsidhu",
-      "name": "gods-eye-view",
-      "html_url": "https://github.com/bilawalsidhu/gods-eye-view",
-      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
-      "language": "JavaScript",
-      "stars": 55792,
-      "forks": 10885,
-      "open_issues": 413,
-      "watchers": 1043,
-      "topics": [
-        "3d-globe",
-        "cesium",
-        "flight-tracking",
-        "geospatial",
-        "geospatial-intelligence",
-        "gis",
-        "osint",
-        "photogrammetry",
-        "satellite-tracking",
-        "spatial-intelligence",
-        "webgl",
-        "worldview"
-      ],
-      "created_at": "2026-06-22T23:37:22Z",
-      "updated_at": "2026-10-14T06:11:16Z",
-      "pushed_at": "2026-10-14T02:06:22Z",
-      "daily_stars": 1961,
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 290687,
+      "forks": 24406,
+      "open_issues": 174,
+      "watchers": 290687,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-10-14T14:24:12Z",
+      "pushed_at": "2026-10-13T08:46:40Z",
+      "daily_stars": null,
       "weekly_stars": null,
-      "trending_rank_daily": 2,
+      "trending_rank_daily": null,
       "trending_rank_weekly": null,
       "sources": [
-        "trending_daily",
         "github_api"
       ],
       "rank": 2,
-      "score": 93.15,
-      "star_delta": 2200,
-      "fork_delta": 287,
+      "score": 89.05,
+      "star_delta": 2786,
+      "fork_delta": 241,
       "delta_source": "snapshot",
       "component_percentiles": {
-        "star_growth": 97.7,
-        "relative_growth": 96.55,
-        "fork_growth": 97.7,
-        "total_stars": 41.38,
-        "activity": 100.0,
-        "trending_signal": 63.09
+        "star_growth": 98.02,
+        "relative_growth": 94.06,
+        "fork_growth": 93.07,
+        "total_stars": 95.05,
+        "activity": 71.65,
+        "trending_signal": 0.0
       },
       "summary": {
-        "one_line": "gods-eye-view 的用途证据不足，需要先查看仓库 README",
+        "one_line": "skills 的用途证据不足，需要先查看仓库 README",
         "highlights": [
           "需要查看仓库 README 确认主要任务",
           "需要核对实际输入、输出和使用方式",
@@ -303,7 +298,7 @@
           "需要人工确认适用场景后再发布"
         ],
         "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "gods-eye-view 的用途证据不足，需要先查看仓库 README",
+        "core_summary": "skills 的用途证据不足，需要先查看仓库 README",
         "prerequisites": "",
         "limitations": "",
         "license_label": "",
@@ -351,93 +346,106 @@
           "license_restrictions": []
         }
       },
-      "avatar_path": "avatars/2026-10-14/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
       "publication_evidence": {
-        "full_name": "bilawalsidhu/gods-eye-view",
-        "license_spdx_id": "NOASSERTION",
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": null,
         "readme": null,
-        "avatar": {
-          "path": "avatars/2026-10-14/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
-          "sha256": "0c22a163657a4fbeb562b6ca9b8178b61fd2a9026b82a2711da9d2f07f88bf2b",
-          "width": 460,
-          "height": 460
-        },
-        "warnings": []
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
       },
       "assets": {
-        "poster": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.02.bilawalsidhu--gods-eye-view.png",
+        "poster": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.02.mattpocock--skills.png",
         "format": "png",
         "width": 1200,
         "height": 1600
       }
     },
     {
-      "repository_id": 1212769188,
-      "full_name": "cathrynlavery/diagram-design",
-      "owner": "cathrynlavery",
-      "name": "diagram-design",
-      "html_url": "https://github.com/cathrynlavery/diagram-design",
-      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-      "language": "HTML",
-      "stars": 54564,
-      "forks": 3452,
-      "open_issues": 46,
-      "watchers": 144,
+      "repository_id": 701547123,
+      "full_name": "open-webui/open-webui",
+      "owner": "open-webui",
+      "name": "open-webui",
+      "html_url": "https://github.com/open-webui/open-webui",
+      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "language": "Python",
+      "stars": 155641,
+      "forks": 22688,
+      "open_issues": 176,
+      "watchers": 155641,
       "topics": [
-        "agent-skills",
-        "claude-code",
-        "codex",
-        "data-visualization",
-        "diagrams",
-        "drawio",
-        "mermaid",
-        "svg"
+        "ai",
+        "llm",
+        "llm-ui",
+        "llm-webui",
+        "llms",
+        "mcp",
+        "ollama",
+        "ollama-webui",
+        "open-webui",
+        "openai",
+        "openapi",
+        "rag",
+        "self-hosted",
+        "ui",
+        "webui"
       ],
-      "created_at": "2026-04-16T18:01:16Z",
-      "updated_at": "2026-10-14T06:11:16Z",
-      "pushed_at": "2026-10-13T21:48:36Z",
-      "daily_stars": 1815,
+      "created_at": "2023-10-06T22:08:27Z",
+      "updated_at": "2026-10-14T14:23:34Z",
+      "pushed_at": "2026-10-14T14:22:35Z",
+      "daily_stars": null,
       "weekly_stars": null,
-      "trending_rank_daily": 5,
+      "trending_rank_daily": null,
       "trending_rank_weekly": null,
       "sources": [
-        "trending_daily",
         "github_api"
       ],
       "rank": 3,
-      "score": 89.12,
-      "star_delta": 2031,
-      "fork_delta": 133,
+      "score": 84.8,
+      "star_delta": 696,
+      "fork_delta": 51,
       "delta_source": "snapshot",
       "component_percentiles": {
-        "star_growth": 95.4,
-        "relative_growth": 95.4,
-        "fork_growth": 83.91,
-        "total_stars": 40.23,
+        "star_growth": 90.1,
+        "relative_growth": 90.1,
+        "fork_growth": 82.18,
+        "total_stars": 70.3,
         "activity": 100.0,
-        "trending_signal": 38.69
+        "trending_signal": 0.0
       },
       "summary": {
-        "one_line": "目前无法从公开字段确认 diagram-design 能完成哪些任务",
+        "one_line": "主要任务是把外部工具和数据接入支持 MCP 的模型应用；open-webui 还能用统一协议建立工具调用连接",
         "highlights": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "为模型应用提供标准化工具接口",
+          "连接外部数据源和可调用工具",
+          "把工具能力暴露给兼容 MCP 的客户端"
         ],
-        "audience": "公开信息不足，需人工确认后再发布",
+        "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
         "capabilities": [
-          "需要查看仓库 README 确认主要任务",
-          "需要核对实际输入、输出和使用方式",
-          "需要人工确认适用场景后再发布"
+          "为模型应用提供标准化工具接口",
+          "连接外部数据源和可调用工具",
+          "把工具能力暴露给兼容 MCP 的客户端"
         ],
-        "core_title": "核对这个仓库的具体用途和使用方式",
-        "core_summary": "目前无法从公开字段确认 diagram-design 能完成哪些任务",
+        "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+        "core_summary": "主要任务是把外部工具和数据接入支持 MCP 的模型应用；open-webui 还能用统一协议建立工具调用连接",
         "prerequisites": "",
         "limitations": "",
         "license_label": "",
         "license_restrictions": "",
         "readme_sha": null,
-        "content_status": "needs_review",
+        "content_status": "metadata_only",
         "evidence_ids": {
           "one_line": [
             "deterministic_draft"
@@ -479,22 +487,28 @@
           "license_restrictions": []
         }
       },
-      "avatar_path": "avatars/2026-10-14/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
       "publication_evidence": {
-        "full_name": "cathrynlavery/diagram-design",
-        "license_spdx_id": "MIT",
+        "full_name": "open-webui/open-webui",
+        "license_spdx_id": null,
         "readme": null,
-        "avatar": {
-          "path": "avatars/2026-10-14/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
-          "sha256": "460c05712969f4b04c9ab54baa4155011c11f41a28435afae6a6708bc97f6251",
-          "width": 400,
-          "height": 400
-        },
-        "warnings": []
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
       },
-      "license_spdx": "MIT",
       "assets": {
-        "poster": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.03.cathrynlavery--diagram-design.png",
+        "poster": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.03.open-webui--open-webui.png",
         "format": "png",
         "width": 1200,
         "height": 1600
@@ -517,13 +531,13 @@
           },
           {
             "rank": 2,
-            "full_name": "bilawalsidhu/gods-eye-view",
-            "path": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.02.bilawalsidhu--gods-eye-view.png"
+            "full_name": "mattpocock/skills",
+            "path": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.02.mattpocock--skills.png"
           },
           {
             "rank": 3,
-            "full_name": "cathrynlavery/diagram-design",
-            "path": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.03.cathrynlavery--diagram-design.png"
+            "full_name": "open-webui/open-webui",
+            "path": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.03.open-webui--open-webui.png"
           }
         ]
       },
@@ -536,10 +550,10 @@
           "html_url": "https://github.com/morluto/rea",
           "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
           "language": "TypeScript",
-          "stars": 217069,
-          "forks": 53614,
-          "open_issues": 577,
-          "watchers": 217069,
+          "stars": 230330,
+          "forks": 57357,
+          "open_issues": 687,
+          "watchers": 230330,
           "topics": [
             "agent-skills",
             "ai-agents",
@@ -548,7 +562,6 @@
             "cli",
             "codex",
             "cordis",
-            "ctf",
             "decompiler",
             "developer-tools",
             "dsh",
@@ -560,12 +573,13 @@
             "model-context-protocol",
             "rea",
             "reverse-engineering",
-            "static-analysis"
+            "static-analysis",
+            "touhou"
           ],
           "created_at": "2026-04-14T00:51:32Z",
-          "updated_at": "2026-10-14T06:11:18Z",
-          "pushed_at": "2026-10-14T05:58:55Z",
-          "daily_stars": 54679,
+          "updated_at": "2026-10-14T14:25:55Z",
+          "pushed_at": "2026-10-14T14:25:08Z",
+          "daily_stars": 41187,
           "weekly_stars": null,
           "trending_rank_daily": 1,
           "trending_rank_weekly": null,
@@ -574,15 +588,15 @@
             "github_api"
           ],
           "rank": 1,
-          "score": 99.48,
-          "star_delta": 62132,
-          "fork_delta": 17945,
+          "score": 99.5,
+          "star_delta": 75393,
+          "fork_delta": 21688,
           "delta_source": "snapshot",
           "component_percentiles": {
             "star_growth": 100.0,
             "relative_growth": 100.0,
             "fork_growth": 100.0,
-            "total_stars": 89.66,
+            "total_stars": 90.1,
             "activity": 100.0,
             "trending_signal": 100.0
           },
@@ -648,20 +662,26 @@
               "license_restrictions": []
             }
           },
-          "avatar_path": "avatars/2026-10-14/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
           "publication_evidence": {
             "full_name": "morluto/rea",
-            "license_spdx_id": "MIT",
+            "license_spdx_id": null,
             "readme": null,
-            "avatar": {
-              "path": "avatars/2026-10-14/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
-              "sha256": "526b550985df1cd70896eb2cb18f756e775095d1bf4424c7b806d59a2ed5f907",
-              "width": 432,
-              "height": 432
-            },
-            "warnings": []
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
           },
-          "license_spdx": "MIT",
           "assets": {
             "poster": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.01.morluto--rea.png",
             "format": "png",
@@ -670,57 +690,43 @@
           }
         },
         {
-          "repository_id": 1277471539,
-          "full_name": "bilawalsidhu/gods-eye-view",
-          "owner": "bilawalsidhu",
-          "name": "gods-eye-view",
-          "html_url": "https://github.com/bilawalsidhu/gods-eye-view",
-          "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
-          "language": "JavaScript",
-          "stars": 55792,
-          "forks": 10885,
-          "open_issues": 413,
-          "watchers": 1043,
-          "topics": [
-            "3d-globe",
-            "cesium",
-            "flight-tracking",
-            "geospatial",
-            "geospatial-intelligence",
-            "gis",
-            "osint",
-            "photogrammetry",
-            "satellite-tracking",
-            "spatial-intelligence",
-            "webgl",
-            "worldview"
-          ],
-          "created_at": "2026-06-22T23:37:22Z",
-          "updated_at": "2026-10-14T06:11:16Z",
-          "pushed_at": "2026-10-14T02:06:22Z",
-          "daily_stars": 1961,
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 290687,
+          "forks": 24406,
+          "open_issues": 174,
+          "watchers": 290687,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-10-14T14:24:12Z",
+          "pushed_at": "2026-10-13T08:46:40Z",
+          "daily_stars": null,
           "weekly_stars": null,
-          "trending_rank_daily": 2,
+          "trending_rank_daily": null,
           "trending_rank_weekly": null,
           "sources": [
-            "trending_daily",
             "github_api"
           ],
           "rank": 2,
-          "score": 93.15,
-          "star_delta": 2200,
-          "fork_delta": 287,
+          "score": 89.05,
+          "star_delta": 2786,
+          "fork_delta": 241,
           "delta_source": "snapshot",
           "component_percentiles": {
-            "star_growth": 97.7,
-            "relative_growth": 96.55,
-            "fork_growth": 97.7,
-            "total_stars": 41.38,
-            "activity": 100.0,
-            "trending_signal": 63.09
+            "star_growth": 98.02,
+            "relative_growth": 94.06,
+            "fork_growth": 93.07,
+            "total_stars": 95.05,
+            "activity": 71.65,
+            "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "gods-eye-view 的用途证据不足，需要先查看仓库 README",
+            "one_line": "skills 的用途证据不足，需要先查看仓库 README",
             "highlights": [
               "需要查看仓库 README 确认主要任务",
               "需要核对实际输入、输出和使用方式",
@@ -733,7 +739,7 @@
               "需要人工确认适用场景后再发布"
             ],
             "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "gods-eye-view 的用途证据不足，需要先查看仓库 README",
+            "core_summary": "skills 的用途证据不足，需要先查看仓库 README",
             "prerequisites": "",
             "limitations": "",
             "license_label": "",
@@ -781,93 +787,106 @@
               "license_restrictions": []
             }
           },
-          "avatar_path": "avatars/2026-10-14/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
           "publication_evidence": {
-            "full_name": "bilawalsidhu/gods-eye-view",
-            "license_spdx_id": "NOASSERTION",
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": null,
             "readme": null,
-            "avatar": {
-              "path": "avatars/2026-10-14/repo-27ca93a049d8d8263df67c3d-18485e7699ede983173d97f1.png",
-              "sha256": "0c22a163657a4fbeb562b6ca9b8178b61fd2a9026b82a2711da9d2f07f88bf2b",
-              "width": 460,
-              "height": 460
-            },
-            "warnings": []
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
           },
           "assets": {
-            "poster": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.02.bilawalsidhu--gods-eye-view.png",
+            "poster": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.02.mattpocock--skills.png",
             "format": "png",
             "width": 1200,
             "height": 1600
           }
         },
         {
-          "repository_id": 1212769188,
-          "full_name": "cathrynlavery/diagram-design",
-          "owner": "cathrynlavery",
-          "name": "diagram-design",
-          "html_url": "https://github.com/cathrynlavery/diagram-design",
-          "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-          "language": "HTML",
-          "stars": 54564,
-          "forks": 3452,
-          "open_issues": 46,
-          "watchers": 144,
+          "repository_id": 701547123,
+          "full_name": "open-webui/open-webui",
+          "owner": "open-webui",
+          "name": "open-webui",
+          "html_url": "https://github.com/open-webui/open-webui",
+          "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+          "language": "Python",
+          "stars": 155641,
+          "forks": 22688,
+          "open_issues": 176,
+          "watchers": 155641,
           "topics": [
-            "agent-skills",
-            "claude-code",
-            "codex",
-            "data-visualization",
-            "diagrams",
-            "drawio",
-            "mermaid",
-            "svg"
+            "ai",
+            "llm",
+            "llm-ui",
+            "llm-webui",
+            "llms",
+            "mcp",
+            "ollama",
+            "ollama-webui",
+            "open-webui",
+            "openai",
+            "openapi",
+            "rag",
+            "self-hosted",
+            "ui",
+            "webui"
           ],
-          "created_at": "2026-04-16T18:01:16Z",
-          "updated_at": "2026-10-14T06:11:16Z",
-          "pushed_at": "2026-10-13T21:48:36Z",
-          "daily_stars": 1815,
+          "created_at": "2023-10-06T22:08:27Z",
+          "updated_at": "2026-10-14T14:23:34Z",
+          "pushed_at": "2026-10-14T14:22:35Z",
+          "daily_stars": null,
           "weekly_stars": null,
-          "trending_rank_daily": 5,
+          "trending_rank_daily": null,
           "trending_rank_weekly": null,
           "sources": [
-            "trending_daily",
             "github_api"
           ],
           "rank": 3,
-          "score": 89.12,
-          "star_delta": 2031,
-          "fork_delta": 133,
+          "score": 84.8,
+          "star_delta": 696,
+          "fork_delta": 51,
           "delta_source": "snapshot",
           "component_percentiles": {
-            "star_growth": 95.4,
-            "relative_growth": 95.4,
-            "fork_growth": 83.91,
-            "total_stars": 40.23,
+            "star_growth": 90.1,
+            "relative_growth": 90.1,
+            "fork_growth": 82.18,
+            "total_stars": 70.3,
             "activity": 100.0,
-            "trending_signal": 38.69
+            "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "目前无法从公开字段确认 diagram-design 能完成哪些任务",
+            "one_line": "主要任务是把外部工具和数据接入支持 MCP 的模型应用；open-webui 还能用统一协议建立工具调用连接",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "目前无法从公开字段确认 diagram-design 能完成哪些任务",
+            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+            "core_summary": "主要任务是把外部工具和数据接入支持 MCP 的模型应用；open-webui 还能用统一协议建立工具调用连接",
             "prerequisites": "",
             "limitations": "",
             "license_label": "",
             "license_restrictions": "",
             "readme_sha": null,
-            "content_status": "needs_review",
+            "content_status": "metadata_only",
             "evidence_ids": {
               "one_line": [
                 "deterministic_draft"
@@ -909,22 +928,28 @@
               "license_restrictions": []
             }
           },
-          "avatar_path": "avatars/2026-10-14/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
           "publication_evidence": {
-            "full_name": "cathrynlavery/diagram-design",
-            "license_spdx_id": "MIT",
+            "full_name": "open-webui/open-webui",
+            "license_spdx_id": null,
             "readme": null,
-            "avatar": {
-              "path": "avatars/2026-10-14/repo-231c4b191ae0f4ae64fd7de2-f0510c1a9ab7f6e004050542.png",
-              "sha256": "460c05712969f4b04c9ab54baa4155011c11f41a28435afae6a6708bc97f6251",
-              "width": 400,
-              "height": 400
-            },
-            "warnings": []
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
           },
-          "license_spdx": "MIT",
           "assets": {
-            "poster": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.03.cathrynlavery--diagram-design.png",
+            "poster": "reports/daily/assets/2026-10-14/2026-10-14.comprehensive.03.open-webui--open-webui.png",
             "format": "png",
             "width": 1200,
             "height": 1600
@@ -947,13 +972,13 @@
           },
           {
             "rank": 2,
-            "full_name": "mksglu/context-mode",
-            "path": "reports/daily/assets/2026-10-14/2026-10-14.ai.02.mksglu--context-mode.png"
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/daily/assets/2026-10-14/2026-10-14.ai.02.dietrichgebert--ponytail.png"
           },
           {
             "rank": 3,
-            "full_name": "storytold/artcraft",
-            "path": "reports/daily/assets/2026-10-14/2026-10-14.ai.03.storytold--artcraft.png"
+            "full_name": "farion1231/cc-switch",
+            "path": "reports/daily/assets/2026-10-14/2026-10-14.ai.03.farion1231--cc-switch.png"
           }
         ]
       },
@@ -966,10 +991,10 @@
           "html_url": "https://github.com/morluto/rea",
           "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
           "language": "TypeScript",
-          "stars": 217069,
-          "forks": 53614,
-          "open_issues": 577,
-          "watchers": 217069,
+          "stars": 230330,
+          "forks": 57357,
+          "open_issues": 687,
+          "watchers": 230330,
           "topics": [
             "agent-skills",
             "ai-agents",
@@ -978,7 +1003,6 @@
             "cli",
             "codex",
             "cordis",
-            "ctf",
             "decompiler",
             "developer-tools",
             "dsh",
@@ -990,12 +1014,13 @@
             "model-context-protocol",
             "rea",
             "reverse-engineering",
-            "static-analysis"
+            "static-analysis",
+            "touhou"
           ],
           "created_at": "2026-04-14T00:51:32Z",
-          "updated_at": "2026-10-14T06:11:18Z",
-          "pushed_at": "2026-10-14T05:58:55Z",
-          "daily_stars": 54679,
+          "updated_at": "2026-10-14T14:25:55Z",
+          "pushed_at": "2026-10-14T14:25:08Z",
+          "daily_stars": 41187,
           "weekly_stars": null,
           "trending_rank_daily": 1,
           "trending_rank_weekly": null,
@@ -1004,15 +1029,15 @@
             "github_api"
           ],
           "rank": 1,
-          "score": 99.68,
-          "star_delta": 62132,
-          "fork_delta": 17945,
+          "score": 99.58,
+          "star_delta": 75393,
+          "fork_delta": 21688,
           "delta_source": "snapshot",
           "component_percentiles": {
             "star_growth": 100.0,
             "relative_growth": 100.0,
             "fork_growth": 100.0,
-            "total_stars": 93.55,
+            "total_stars": 91.67,
             "activity": 100.0,
             "trending_signal": 100.0
           },
@@ -1078,20 +1103,26 @@
               "license_restrictions": []
             }
           },
-          "avatar_path": "avatars/2026-10-14/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
           "publication_evidence": {
             "full_name": "morluto/rea",
-            "license_spdx_id": "MIT",
+            "license_spdx_id": null,
             "readme": null,
-            "avatar": {
-              "path": "avatars/2026-10-14/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
-              "sha256": "526b550985df1cd70896eb2cb18f756e775095d1bf4424c7b806d59a2ed5f907",
-              "width": 432,
-              "height": 432
-            },
-            "warnings": []
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
           },
-          "license_spdx": "MIT",
           "assets": {
             "poster": "reports/daily/assets/2026-10-14/2026-10-14.ai.01.morluto--rea.png",
             "format": "png",
@@ -1100,78 +1131,67 @@
           }
         },
         {
-          "repository_id": 1164477708,
-          "full_name": "mksglu/context-mode",
-          "owner": "mksglu",
-          "name": "context-mode",
-          "html_url": "https://github.com/mksglu/context-mode",
-          "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
-          "language": "TypeScript",
-          "stars": 28454,
-          "forks": 2006,
-          "open_issues": 357,
-          "watchers": 106,
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 163281,
+          "forks": 8823,
+          "open_issues": 15,
+          "watchers": 163281,
           "topics": [
-            "antigravity",
+            "agent-skills",
+            "ai-agents",
             "claude",
             "claude-code",
-            "claude-code-hooks",
-            "claude-code-plugins",
-            "claude-code-skill",
-            "codex",
-            "codex-cli",
-            "context-mode",
-            "copilot",
-            "cursor-plugin",
-            "kiro",
-            "mcp",
-            "mcp-server",
-            "mcp-tools",
-            "openclaw",
-            "opencode",
-            "pi-agent",
-            "skills",
-            "zed-extension"
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
           ],
-          "created_at": "2026-02-23T05:56:28Z",
-          "updated_at": "2026-10-14T06:10:30Z",
-          "pushed_at": "2026-10-14T01:57:23Z",
-          "daily_stars": 969,
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-10-14T14:24:58Z",
+          "pushed_at": "2026-10-13T01:46:28Z",
+          "daily_stars": null,
           "weekly_stars": null,
-          "trending_rank_daily": 4,
+          "trending_rank_daily": null,
           "trending_rank_weekly": null,
           "sources": [
-            "trending_daily",
             "github_api"
           ],
           "rank": 2,
-          "score": 85.06,
-          "star_delta": 1202,
-          "fork_delta": 65,
+          "score": 81.75,
+          "star_delta": 1421,
+          "fork_delta": 89,
           "delta_source": "snapshot",
           "component_percentiles": {
-            "star_growth": 90.32,
-            "relative_growth": 93.55,
-            "fork_growth": 80.65,
-            "total_stars": 19.35,
-            "activity": 100.0,
-            "trending_signal": 43.07
+            "star_growth": 88.89,
+            "relative_growth": 88.89,
+            "fork_growth": 88.89,
+            "total_stars": 69.44,
+            "activity": 71.65,
+            "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "想要把外部工具和数据接入支持 MCP 的模型应用，可以用 context-mode；它能用统一协议建立工具调用连接",
+            "one_line": "想要整理和复用提示词设计方法，可以用 ponytail；它能帮助测试不同指令结构和模型表现",
             "highlights": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
             ],
-            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
             "capabilities": [
-              "为模型应用提供标准化工具接口",
-              "连接外部数据源和可调用工具",
-              "把工具能力暴露给兼容 MCP 的客户端"
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
             ],
-            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
-            "core_summary": "想要把外部工具和数据接入支持 MCP 的模型应用，可以用 context-mode；它能用统一协议建立工具调用连接",
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "想要整理和复用提示词设计方法，可以用 ponytail；它能帮助测试不同指令结构和模型表现",
             "prerequisites": "",
             "limitations": "",
             "license_label": "",
@@ -1219,90 +1239,111 @@
               "license_restrictions": []
             }
           },
-          "avatar_path": "avatars/2026-10-14/repo-c0524b8a4609ea7c7dfd3c39-fc9a708cfa892d55a73ee9a2.png",
           "publication_evidence": {
-            "full_name": "mksglu/context-mode",
-            "license_spdx_id": "NOASSERTION",
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": null,
             "readme": null,
-            "avatar": {
-              "path": "avatars/2026-10-14/repo-c0524b8a4609ea7c7dfd3c39-fc9a708cfa892d55a73ee9a2.png",
-              "sha256": "133d88bddf295ad2d1ec02a52d30275cce57a21482ea71d8bc4aa23136276429",
-              "width": 400,
-              "height": 400
-            },
-            "warnings": []
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
           },
           "assets": {
-            "poster": "reports/daily/assets/2026-10-14/2026-10-14.ai.02.mksglu--context-mode.png",
+            "poster": "reports/daily/assets/2026-10-14/2026-10-14.ai.02.dietrichgebert--ponytail.png",
             "format": "png",
             "width": 1200,
             "height": 1600
           }
         },
         {
-          "repository_id": 476507964,
-          "full_name": "storytold/artcraft",
-          "owner": "storytold",
-          "name": "artcraft",
-          "html_url": "https://github.com/storytold/artcraft",
-          "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+          "repository_id": 1031912724,
+          "full_name": "farion1231/cc-switch",
+          "owner": "farion1231",
+          "name": "cc-switch",
+          "html_url": "https://github.com/farion1231/cc-switch",
+          "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Grok Build & Hermes Agent. Only official website: ccswitch.io",
           "language": "Rust",
-          "stars": 26339,
-          "forks": 4120,
-          "open_issues": 329,
-          "watchers": 146,
+          "stars": 144196,
+          "forks": 9569,
+          "open_issues": 1919,
+          "watchers": 144196,
           "topics": [
-            "3d-graphics",
-            "ai",
-            "aivideo",
-            "filmmaking",
-            "imagegeneration"
+            "ai-tools",
+            "claude-code",
+            "codex",
+            "desktop-app",
+            "grok",
+            "grokbuild",
+            "hermes",
+            "hermes-agent",
+            "mcp",
+            "open-source",
+            "openclaw",
+            "openclaw-ui",
+            "opencode",
+            "pi",
+            "provider-management",
+            "rust",
+            "skills",
+            "skills-management",
+            "tauri",
+            "wsl-support"
           ],
-          "created_at": "2022-03-31T23:19:12Z",
-          "updated_at": "2026-10-14T06:11:15Z",
-          "pushed_at": "2026-10-11T13:47:59Z",
-          "daily_stars": 4081,
+          "created_at": "2025-08-04T14:16:16Z",
+          "updated_at": "2026-10-14T14:23:46Z",
+          "pushed_at": "2026-10-14T10:37:07Z",
+          "daily_stars": null,
           "weekly_stars": null,
-          "trending_rank_daily": 8,
+          "trending_rank_daily": null,
           "trending_rank_weekly": null,
           "sources": [
-            "trending_daily",
             "github_api"
           ],
           "rank": 3,
-          "score": 83.48,
-          "star_delta": 4489,
-          "fork_delta": 583,
+          "score": 79.31,
+          "star_delta": 920,
+          "fork_delta": 34,
           "delta_source": "snapshot",
           "component_percentiles": {
-            "star_growth": 96.77,
-            "relative_growth": 96.77,
-            "fork_growth": 96.77,
-            "total_stars": 16.13,
-            "activity": 36.79,
-            "trending_signal": 31.55
+            "star_growth": 86.11,
+            "relative_growth": 86.11,
+            "fork_growth": 63.89,
+            "total_stars": 52.78,
+            "activity": 100.0,
+            "trending_signal": 0.0
           },
           "summary": {
-            "one_line": "目前无法从公开字段确认 artcraft 能完成哪些任务",
+            "one_line": "主要任务是把外部工具和数据接入支持 MCP 的模型应用；cc-switch 还能用统一协议建立工具调用连接",
             "highlights": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
             ],
-            "audience": "公开信息不足，需人工确认后再发布",
+            "audience": "需要开发 MCP 服务或集成外部工具的应用开发者",
             "capabilities": [
-              "需要查看仓库 README 确认主要任务",
-              "需要核对实际输入、输出和使用方式",
-              "需要人工确认适用场景后再发布"
+              "为模型应用提供标准化工具接口",
+              "连接外部数据源和可调用工具",
+              "把工具能力暴露给兼容 MCP 的客户端"
             ],
-            "core_title": "核对这个仓库的具体用途和使用方式",
-            "core_summary": "目前无法从公开字段确认 artcraft 能完成哪些任务",
+            "core_title": "把外部工具和数据接入支持 MCP 的模型应用",
+            "core_summary": "主要任务是把外部工具和数据接入支持 MCP 的模型应用；cc-switch 还能用统一协议建立工具调用连接",
             "prerequisites": "",
             "limitations": "",
             "license_label": "",
             "license_restrictions": "",
             "readme_sha": null,
-            "content_status": "needs_review",
+            "content_status": "metadata_only",
             "evidence_ids": {
               "one_line": [
                 "deterministic_draft"
@@ -1344,22 +1385,28 @@
               "license_restrictions": []
             }
           },
-          "avatar_path": "avatars/2026-10-14/repo-0d97dfe3fc868c345c34286b-fd75d047029095c551aeb5c0.png",
           "publication_evidence": {
-            "full_name": "storytold/artcraft",
-            "license_spdx_id": "Apache-2.0",
+            "full_name": "farion1231/cc-switch",
+            "license_spdx_id": null,
             "readme": null,
-            "avatar": {
-              "path": "avatars/2026-10-14/repo-0d97dfe3fc868c345c34286b-fd75d047029095c551aeb5c0.png",
-              "sha256": "121034b3cd11b93cf411c5efaed58be2abeda24f9705a18362994167c651334b",
-              "width": 460,
-              "height": 460
-            },
-            "warnings": []
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
           },
-          "license_spdx": "Apache-2.0",
           "assets": {
-            "poster": "reports/daily/assets/2026-10-14/2026-10-14.ai.03.storytold--artcraft.png",
+            "poster": "reports/daily/assets/2026-10-14/2026-10-14.ai.03.farion1231--cc-switch.png",
             "format": "png",
             "width": 1200,
             "height": 1600
