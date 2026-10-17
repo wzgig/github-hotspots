@@ -1,0 +1,1516 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-10-17",
+  "window_start": "2026-10-16",
+  "window_end": "2026-10-17",
+  "generated_at": "2026-10-17T10:39:24+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-10-16 至 2026-10-17",
+  "publication": {
+    "issue_number": 98,
+    "issue_code": "D098",
+    "issue_label": "第98期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-10-17",
+    "manifest": "reports/daily/assets/2026-10-17/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "anthropics/claude-plugins-official",
+            "path": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.02.anthropics--claude-plugins-official.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.03.affaan-m--ecc.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-17/2026-10-17.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-17/2026-10-17.ai.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-10-17/2026-10-17.ai.02.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-17/2026-10-17.ai.03.affaan-m--ecc.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 98,
+      "issue_code": "D098",
+      "issue_label": "第98期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1209966933,
+      "full_name": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "html_url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": 292177,
+      "forks": 73620,
+      "open_issues": 1159,
+      "watchers": 292177,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "decompiler",
+        "developer-tools",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "rea",
+        "reverse-engineering",
+        "static-analysis",
+        "touhou"
+      ],
+      "created_at": "2026-04-14T00:51:32Z",
+      "updated_at": "2026-10-17T02:39:11Z",
+      "pushed_at": "2026-10-17T02:31:31Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 94.66,
+      "star_delta": 23049,
+      "fork_delta": 6149,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 100.0,
+        "total_stars": 93.14,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "REA 让代理带着证据拆解应用、二进制与运行时行为，再复现目标功能",
+        "highlights": [
+          "跨二进制、应用和运行时追踪功能",
+          "返回代码、引用与未知项等证据",
+          "支持代理追问、解释、实现和测试"
+        ],
+        "audience": "需要分析应用、二进制或运行时行为，并据此复现功能的软件开发者与研究者",
+        "capabilities": [
+          "分析原生二进制并返回伪代码与调用关系",
+          "拆解 JavaScript、Electron 应用的模块与 IPC",
+          "观察网站结构、脚本和网络行为",
+          "读取 APK、.NET 程序集与固件等工件",
+          "让代理根据证据解释行为并编写复现代码"
+        ],
+        "core_title": "让代理带证据拆解软件行为",
+        "core_summary": "REA 通过 MCP 把代理连接到多类分析工具，返回带证据和限制说明的结果，再用于追问、解释、实现和测试。",
+        "prerequisites": "需要 Node.js 22.x、24.x 或 26+ 及 npm；部分分析还需对应工具。",
+        "limitations": "静态 JavaScript 与 .NET 分析不运行应用；运行时捕获会按用户权限交互，商业工具需另行授权。",
+        "license_label": "MIT",
+        "license_restrictions": "You must legally obtain and be authorized to use commercial tools",
+        "readme_sha": "89a53ff75546ede74869ea85faee0b769cb48ea2",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+          ],
+          "highlights": [
+            [
+              "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+            ],
+            [
+              "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+            ],
+            [
+              "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+            ]
+          ],
+          "audience": [
+            "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+          ],
+          "capabilities": [
+            [
+              "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+            ],
+            [
+              "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+            ],
+            [
+              "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+            ],
+            [
+              "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+            ],
+            [
+              "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+            ]
+          ],
+          "core_title": [
+            "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+          ],
+          "core_summary": [
+            "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+          ],
+          "prerequisites": [
+            "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+          ],
+          "limitations": [
+            "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": [
+            "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+          ]
+        }
+      },
+      "avatar_path": "avatars/2026-10-17/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+      "publication_evidence": {
+        "full_name": "morluto/rea",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "89a53ff75546ede74869ea85faee0b769cb48ea2",
+          "source_url": "https://api.github.com/repos/morluto/rea/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-17/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "sha256": "fbabed3f57bb75cefe5fbd655e97b8f6879778754883e22fc39f62c3a19fbedd",
+          "width": 432,
+          "height": 432
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.01.morluto--rea.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1100776768,
+      "full_name": "anthropics/claude-plugins-official",
+      "owner": "anthropics",
+      "name": "claude-plugins-official",
+      "html_url": "https://github.com/anthropics/claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "language": "Python",
+      "stars": 40659,
+      "forks": 4405,
+      "open_issues": 1141,
+      "watchers": 248,
+      "topics": [
+        "claude-code",
+        "mcp",
+        "skills"
+      ],
+      "created_at": "2025-11-20T18:36:20Z",
+      "updated_at": "2026-10-17T02:38:52Z",
+      "pushed_at": "2026-10-16T16:36:46Z",
+      "daily_stars": 1552,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 94.17,
+      "star_delta": 1627,
+      "fork_delta": 83,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 98.04,
+        "relative_growth": 97.06,
+        "fork_growth": 85.29,
+        "total_stars": 44.12,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "为 Claude Code 集中浏览、安装和维护内部及第三方插件",
+        "highlights": [
+          "集中浏览 Claude Code 可用插件",
+          "区分 Anthropic 内部与社区插件",
+          "用统一结构描述插件组成"
+        ],
+        "audience": "需要为 Claude Code 挑选、安装和维护插件的开发者与团队",
+        "capabilities": [
+          "浏览内部与第三方插件目录",
+          "通过插件系统直接安装插件",
+          "按标准结构组织命令、代理和技能",
+          "让第三方插件提交到市场审核",
+          "用不可变名称维护已发布插件"
+        ],
+        "core_title": "把 Claude Code 插件放进可管理目录",
+        "core_summary": "目录把 Anthropic 内部插件与社区第三方插件分开管理，并统一提供插件元数据、MCP 配置、命令、代理、技能和文档入口。",
+        "prerequisites": "需要使用 Claude Code 的插件系统；安装可通过插件命令或 Discover 界面完成。",
+        "limitations": "安装、更新或使用前要信任插件；Anthropic 不控制其中的 MCP 服务器、文件或其他软件，也无法验证其行为。",
+        "license_label": "Apache-2.0",
+        "license_restrictions": "",
+        "readme_sha": "43104e240ff500c762adebb0c31dc4b7ff7b50dd",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+          ],
+          "highlights": [
+            [
+              "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+            ],
+            [
+              "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+            ],
+            [
+              "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+            ]
+          ],
+          "audience": [
+            "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+          ],
+          "capabilities": [
+            [
+              "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+            ],
+            [
+              "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+            ],
+            [
+              "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+            ],
+            [
+              "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+            ],
+            [
+              "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+            ]
+          ],
+          "core_title": [
+            "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+          ],
+          "core_summary": [
+            "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+          ],
+          "prerequisites": [
+            "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+          ],
+          "limitations": [
+            "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-17/repo-3e90fac1501aeb3d08080b2e-fd6d516908b28fcbe487880e.png",
+      "publication_evidence": {
+        "full_name": "anthropics/claude-plugins-official",
+        "license_spdx_id": "Apache-2.0",
+        "readme": {
+          "sha": "43104e240ff500c762adebb0c31dc4b7ff7b50dd",
+          "source_url": "https://api.github.com/repos/anthropics/claude-plugins-official/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-17/repo-3e90fac1501aeb3d08080b2e-fd6d516908b28fcbe487880e.png",
+          "sha256": "e86a43c19d2ad17a51936d1e15779616797eb299b62405b8357da09dcf61f644",
+          "width": 388,
+          "height": 388
+        },
+        "warnings": []
+      },
+      "license_spdx": "Apache-2.0",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.02.anthropics--claude-plugins-official.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 281578,
+      "forks": 41868,
+      "open_issues": 230,
+      "watchers": 1403,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-10-17T02:38:50Z",
+      "pushed_at": "2026-10-15T19:17:01Z",
+      "daily_stars": 1057,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 90.25,
+      "star_delta": 1243,
+      "fork_delta": 170,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.08,
+        "relative_growth": 91.18,
+        "fork_growth": 97.06,
+        "total_stars": 92.16,
+        "activity": 71.65,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "ECC 把编码代理的计划、测试、审查、记忆和安全检查串成一套工作流",
+        "highlights": [
+          "把计划、测试和审查串成闭环",
+          "用记忆与技能复用有效做法",
+          "用 AgentShield 扫描代理配置风险"
+        ],
+        "audience": "使用 Claude Code、Codex 等编码代理，希望固定研发流程的个人开发者和团队",
+        "capabilities": [
+          "先生成计划再进入实现",
+          "用测试驱动开发验证改动",
+          "从新上下文复查代码",
+          "保存会话记忆并跨工具交接",
+          "扫描代理配置中的安全风险"
+        ],
+        "core_title": "给编码代理加上完整研发流程",
+        "core_summary": "ECC 把代理工作拆成计划、测试、实现、审查、验证、记忆和改进，并用 agents、skills、hooks、rules 组合成可复用流程。",
+        "prerequisites": "通用安装需要 Node.js 18 或更新版本；Claude 插件还需要 Git 和 Claude Code 2.1 或更新版本。",
+        "limitations": "不同代理的功能并不完全对齐；部分可选能力依赖 Bash、Python 或特定工具。",
+        "license_label": "MIT",
+        "license_restrictions": "",
+        "readme_sha": "6583ca8c1320e559aa5b2f86250f2f09c1d577e9",
+        "content_status": "readme_enriched",
+        "evidence_ids": {
+          "one_line": [
+            "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+          ],
+          "highlights": [
+            [
+              "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+            ],
+            [
+              "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+            ],
+            [
+              "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+            ]
+          ],
+          "audience": [
+            "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+          ],
+          "capabilities": [
+            [
+              "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+            ],
+            [
+              "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+            ],
+            [
+              "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+            ],
+            [
+              "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+            ],
+            [
+              "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+            ]
+          ],
+          "core_title": [
+            "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+          ],
+          "core_summary": [
+            "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+          ],
+          "prerequisites": [
+            "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+          ],
+          "limitations": [
+            "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+          ],
+          "license_label": [
+            "github.metadata.license_spdx_id"
+          ],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-17/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": "MIT",
+        "readme": {
+          "sha": "6583ca8c1320e559aa5b2f86250f2f09c1d577e9",
+          "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+        },
+        "avatar": {
+          "path": "avatars/2026-10-17/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+          "width": 165,
+          "height": 165
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.03.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "anthropics/claude-plugins-official",
+            "path": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.02.anthropics--claude-plugins-official.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.03.affaan-m--ecc.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1209966933,
+          "full_name": "morluto/rea",
+          "owner": "morluto",
+          "name": "rea",
+          "html_url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "language": "TypeScript",
+          "stars": 292177,
+          "forks": 73620,
+          "open_issues": 1159,
+          "watchers": 292177,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "decompiler",
+            "developer-tools",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "rea",
+            "reverse-engineering",
+            "static-analysis",
+            "touhou"
+          ],
+          "created_at": "2026-04-14T00:51:32Z",
+          "updated_at": "2026-10-17T02:39:11Z",
+          "pushed_at": "2026-10-17T02:31:31Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 94.66,
+          "star_delta": 23049,
+          "fork_delta": 6149,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 93.14,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "REA 让代理带着证据拆解应用、二进制与运行时行为，再复现目标功能",
+            "highlights": [
+              "跨二进制、应用和运行时追踪功能",
+              "返回代码、引用与未知项等证据",
+              "支持代理追问、解释、实现和测试"
+            ],
+            "audience": "需要分析应用、二进制或运行时行为，并据此复现功能的软件开发者与研究者",
+            "capabilities": [
+              "分析原生二进制并返回伪代码与调用关系",
+              "拆解 JavaScript、Electron 应用的模块与 IPC",
+              "观察网站结构、脚本和网络行为",
+              "读取 APK、.NET 程序集与固件等工件",
+              "让代理根据证据解释行为并编写复现代码"
+            ],
+            "core_title": "让代理带证据拆解软件行为",
+            "core_summary": "REA 通过 MCP 把代理连接到多类分析工具，返回带证据和限制说明的结果，再用于追问、解释、实现和测试。",
+            "prerequisites": "需要 Node.js 22.x、24.x 或 26+ 及 npm；部分分析还需对应工具。",
+            "limitations": "静态 JavaScript 与 .NET 分析不运行应用；运行时捕获会按用户权限交互，商业工具需另行授权。",
+            "license_label": "MIT",
+            "license_restrictions": "You must legally obtain and be authorized to use commercial tools",
+            "readme_sha": "89a53ff75546ede74869ea85faee0b769cb48ea2",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ],
+              "highlights": [
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ],
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ],
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ]
+              ],
+              "audience": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ],
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ],
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ],
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ],
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ]
+              ],
+              "core_title": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ],
+              "core_summary": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ],
+              "prerequisites": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ],
+              "limitations": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-17/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "publication_evidence": {
+            "full_name": "morluto/rea",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "89a53ff75546ede74869ea85faee0b769cb48ea2",
+              "source_url": "https://api.github.com/repos/morluto/rea/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-17/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+              "sha256": "fbabed3f57bb75cefe5fbd655e97b8f6879778754883e22fc39f62c3a19fbedd",
+              "width": 432,
+              "height": 432
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.01.morluto--rea.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1100776768,
+          "full_name": "anthropics/claude-plugins-official",
+          "owner": "anthropics",
+          "name": "claude-plugins-official",
+          "html_url": "https://github.com/anthropics/claude-plugins-official",
+          "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+          "language": "Python",
+          "stars": 40659,
+          "forks": 4405,
+          "open_issues": 1141,
+          "watchers": 248,
+          "topics": [
+            "claude-code",
+            "mcp",
+            "skills"
+          ],
+          "created_at": "2025-11-20T18:36:20Z",
+          "updated_at": "2026-10-17T02:38:52Z",
+          "pushed_at": "2026-10-16T16:36:46Z",
+          "daily_stars": 1552,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 94.17,
+          "star_delta": 1627,
+          "fork_delta": 83,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 98.04,
+            "relative_growth": 97.06,
+            "fork_growth": 85.29,
+            "total_stars": 44.12,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "为 Claude Code 集中浏览、安装和维护内部及第三方插件",
+            "highlights": [
+              "集中浏览 Claude Code 可用插件",
+              "区分 Anthropic 内部与社区插件",
+              "用统一结构描述插件组成"
+            ],
+            "audience": "需要为 Claude Code 挑选、安装和维护插件的开发者与团队",
+            "capabilities": [
+              "浏览内部与第三方插件目录",
+              "通过插件系统直接安装插件",
+              "按标准结构组织命令、代理和技能",
+              "让第三方插件提交到市场审核",
+              "用不可变名称维护已发布插件"
+            ],
+            "core_title": "把 Claude Code 插件放进可管理目录",
+            "core_summary": "目录把 Anthropic 内部插件与社区第三方插件分开管理，并统一提供插件元数据、MCP 配置、命令、代理、技能和文档入口。",
+            "prerequisites": "需要使用 Claude Code 的插件系统；安装可通过插件命令或 Discover 界面完成。",
+            "limitations": "安装、更新或使用前要信任插件；Anthropic 不控制其中的 MCP 服务器、文件或其他软件，也无法验证其行为。",
+            "license_label": "Apache-2.0",
+            "license_restrictions": "",
+            "readme_sha": "43104e240ff500c762adebb0c31dc4b7ff7b50dd",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+              ],
+              "highlights": [
+                [
+                  "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+                ],
+                [
+                  "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+                ],
+                [
+                  "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+                ]
+              ],
+              "audience": [
+                "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+                ],
+                [
+                  "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+                ],
+                [
+                  "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+                ],
+                [
+                  "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+                ],
+                [
+                  "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+                ]
+              ],
+              "core_title": [
+                "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+              ],
+              "core_summary": [
+                "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+              ],
+              "prerequisites": [
+                "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+              ],
+              "limitations": [
+                "github.readme:43104e240ff500c762adebb0c31dc4b7ff7b50dd"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-17/repo-3e90fac1501aeb3d08080b2e-fd6d516908b28fcbe487880e.png",
+          "publication_evidence": {
+            "full_name": "anthropics/claude-plugins-official",
+            "license_spdx_id": "Apache-2.0",
+            "readme": {
+              "sha": "43104e240ff500c762adebb0c31dc4b7ff7b50dd",
+              "source_url": "https://api.github.com/repos/anthropics/claude-plugins-official/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-17/repo-3e90fac1501aeb3d08080b2e-fd6d516908b28fcbe487880e.png",
+              "sha256": "e86a43c19d2ad17a51936d1e15779616797eb299b62405b8357da09dcf61f644",
+              "width": 388,
+              "height": 388
+            },
+            "warnings": []
+          },
+          "license_spdx": "Apache-2.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.02.anthropics--claude-plugins-official.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 281578,
+          "forks": 41868,
+          "open_issues": 230,
+          "watchers": 1403,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-10-17T02:38:50Z",
+          "pushed_at": "2026-10-15T19:17:01Z",
+          "daily_stars": 1057,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 90.25,
+          "star_delta": 1243,
+          "fork_delta": 170,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.08,
+            "relative_growth": 91.18,
+            "fork_growth": 97.06,
+            "total_stars": 92.16,
+            "activity": 71.65,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "ECC 把编码代理的计划、测试、审查、记忆和安全检查串成一套工作流",
+            "highlights": [
+              "把计划、测试和审查串成闭环",
+              "用记忆与技能复用有效做法",
+              "用 AgentShield 扫描代理配置风险"
+            ],
+            "audience": "使用 Claude Code、Codex 等编码代理，希望固定研发流程的个人开发者和团队",
+            "capabilities": [
+              "先生成计划再进入实现",
+              "用测试驱动开发验证改动",
+              "从新上下文复查代码",
+              "保存会话记忆并跨工具交接",
+              "扫描代理配置中的安全风险"
+            ],
+            "core_title": "给编码代理加上完整研发流程",
+            "core_summary": "ECC 把代理工作拆成计划、测试、实现、审查、验证、记忆和改进，并用 agents、skills、hooks、rules 组合成可复用流程。",
+            "prerequisites": "通用安装需要 Node.js 18 或更新版本；Claude 插件还需要 Git 和 Claude Code 2.1 或更新版本。",
+            "limitations": "不同代理的功能并不完全对齐；部分可选能力依赖 Bash、Python 或特定工具。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "6583ca8c1320e559aa5b2f86250f2f09c1d577e9",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+              ],
+              "highlights": [
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ],
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ],
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ]
+              ],
+              "audience": [
+                "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ],
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ],
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ],
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ],
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ]
+              ],
+              "core_title": [
+                "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+              ],
+              "core_summary": [
+                "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+              ],
+              "prerequisites": [
+                "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+              ],
+              "limitations": [
+                "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-17/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "6583ca8c1320e559aa5b2f86250f2f09c1d577e9",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-17/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-17/2026-10-17.comprehensive.03.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-17/2026-10-17.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-17/2026-10-17.ai.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-10-17/2026-10-17.ai.02.debpalash--voicestudio.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/daily/assets/2026-10-17/2026-10-17.ai.03.affaan-m--ecc.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1209966933,
+          "full_name": "morluto/rea",
+          "owner": "morluto",
+          "name": "rea",
+          "html_url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "language": "TypeScript",
+          "stars": 292177,
+          "forks": 73620,
+          "open_issues": 1159,
+          "watchers": 292177,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "decompiler",
+            "developer-tools",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "rea",
+            "reverse-engineering",
+            "static-analysis",
+            "touhou"
+          ],
+          "created_at": "2026-04-14T00:51:32Z",
+          "updated_at": "2026-10-17T02:39:11Z",
+          "pushed_at": "2026-10-17T02:31:31Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 94.7,
+          "star_delta": 23049,
+          "fork_delta": 6149,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 93.94,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "让 AI 连接逆向分析工具，拆解应用、二进制和运行时行为，并给出证据",
+            "highlights": [
+              "连接代理与逆向分析工具",
+              "为结论保留代码和运行证据",
+              "覆盖二进制、应用与运行时行为"
+            ],
+            "audience": "需要研究自有软件、兼容性或功能实现的逆向分析者",
+            "capabilities": [
+              "分析原生二进制，返回伪代码和汇编",
+              "拆解 JavaScript/Electron 模块与 IPC",
+              "观察网站结构、脚本和网络行为",
+              "读取 .NET、Android APK 与 SQLite",
+              "让代理基于证据解释并重建功能"
+            ],
+            "core_title": "让 AI 带着证据拆解软件",
+            "core_summary": "REA 用 MCP 连接分析工具，让代理追踪目标代码并返回证据，再据此解释行为、实现功能和验证结果。",
+            "prerequisites": "需要 Node.js 和 npm；原生分析还要配置 Hopper、Ghidra 或 IDA。",
+            "limitations": "运行时捕获会按当前用户权限运行或交互目标；原生格式和主机支持取决于分析提供方。",
+            "license_label": "MIT",
+            "license_restrictions": "You must legally obtain and be authorized to use commercial tools",
+            "readme_sha": "89a53ff75546ede74869ea85faee0b769cb48ea2",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ],
+              "highlights": [
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ],
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ],
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ]
+              ],
+              "audience": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ],
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ],
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ],
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ],
+                [
+                  "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+                ]
+              ],
+              "core_title": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ],
+              "core_summary": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ],
+              "prerequisites": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ],
+              "limitations": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:89a53ff75546ede74869ea85faee0b769cb48ea2"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-17/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "publication_evidence": {
+            "full_name": "morluto/rea",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "89a53ff75546ede74869ea85faee0b769cb48ea2",
+              "source_url": "https://api.github.com/repos/morluto/rea/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-17/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+              "sha256": "fbabed3f57bb75cefe5fbd655e97b8f6879778754883e22fc39f62c3a19fbedd",
+              "width": 432,
+              "height": 432
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-17/2026-10-17.ai.01.morluto--rea.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1206390571,
+          "full_name": "debpalash/VoiceStudio",
+          "owner": "debpalash",
+          "name": "VoiceStudio",
+          "html_url": "https://github.com/debpalash/VoiceStudio",
+          "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+          "language": "Python",
+          "stars": 71359,
+          "forks": 7806,
+          "open_issues": 203,
+          "watchers": 276,
+          "topics": [
+            "ai",
+            "audiobook",
+            "cuda",
+            "dubbing",
+            "elevenlabs-alternative",
+            "huggingface",
+            "local-first",
+            "mlx",
+            "omnivoice-studio",
+            "speech-to-text",
+            "text-to-speech",
+            "transcription",
+            "translate",
+            "tts",
+            "voice-ai",
+            "voice-cloning",
+            "voice-generation",
+            "voicestudio",
+            "workflow"
+          ],
+          "created_at": "2026-04-09T21:40:26Z",
+          "updated_at": "2026-10-17T02:39:13Z",
+          "pushed_at": "2026-10-16T14:33:40Z",
+          "daily_stars": 2301,
+          "weekly_stars": null,
+          "trending_rank_daily": 10,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 86.34,
+          "star_delta": 2357,
+          "fork_delta": 256,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.97,
+            "relative_growth": 93.94,
+            "fork_growth": 96.97,
+            "total_stars": 15.15,
+            "activity": 71.65,
+            "trending_signal": 28.91
+          },
+          "summary": {
+            "one_line": "在本地完成语音克隆、音色设计、配音、听写和有声书制作",
+            "highlights": [
+              "本地完成声音克隆与音色设计",
+              "按时间轴制作视频配音",
+              "把听写和有声书纳入同一工作流"
+            ],
+            "audience": "需要本地处理配音、听写、转录或有声书的创作者与团队",
+            "capabilities": [
+              "克隆声音或设计新音色",
+              "按时间轴为视频配音",
+              "把语音听写成文字",
+              "制作故事、有声书和批量任务",
+              "通过本地 API 或 MCP 接入代理"
+            ],
+            "core_title": "把声音创作和本地工作流放在一起",
+            "core_summary": "桌面端把克隆、设计、配音、听写与模型管理放进同一套流程；本地运行，远程服务可选。",
+            "prerequisites": "macOS、Linux 或 Windows 可安装；首次生成需准备对应模型，硬件要求随引擎变化。",
+            "limitations": "模型权重、分词器、声音和生成结果的权利另行约束；克隆声音需获得许可。",
+            "license_label": "AGPL-3.0",
+            "license_restrictions": "Clone voices only with permission.",
+            "readme_sha": "c2ddaa1f08b2bea0e2a05655e96c218e91ac7506",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+              ],
+              "highlights": [
+                [
+                  "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+                ],
+                [
+                  "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+                ],
+                [
+                  "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+                ]
+              ],
+              "audience": [
+                "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+                ],
+                [
+                  "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+                ],
+                [
+                  "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+                ],
+                [
+                  "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+                ],
+                [
+                  "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+                ]
+              ],
+              "core_title": [
+                "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+              ],
+              "core_summary": [
+                "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+              ],
+              "prerequisites": [
+                "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+              ],
+              "limitations": [
+                "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": [
+                "github.readme:c2ddaa1f08b2bea0e2a05655e96c218e91ac7506"
+              ]
+            }
+          },
+          "avatar_path": "avatars/2026-10-17/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+          "publication_evidence": {
+            "full_name": "debpalash/VoiceStudio",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": {
+              "sha": "c2ddaa1f08b2bea0e2a05655e96c218e91ac7506",
+              "source_url": "https://api.github.com/repos/debpalash/VoiceStudio/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-17/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+              "sha256": "c87aa15e86829a315c76cfd8cdcfd1cacb2ee2762b83814d273ea99ee44e2feb",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-17/2026-10-17.ai.02.debpalash--voicestudio.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 281578,
+          "forks": 41868,
+          "open_issues": 230,
+          "watchers": 1403,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-10-17T02:38:50Z",
+          "pushed_at": "2026-10-15T19:17:01Z",
+          "daily_stars": 1057,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 85.42,
+          "star_delta": 1243,
+          "fork_delta": 170,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 90.91,
+            "relative_growth": 81.82,
+            "fork_growth": 93.94,
+            "total_stars": 90.91,
+            "activity": 71.65,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "给编码代理装上一套可复用的计划、测试、审查、记忆和安全工作流",
+            "highlights": [
+              "把计划、测试、实现、审查串成流程",
+              "用 skills、agents、hooks 和 rules 分工",
+              "把会话经验沉淀为可复用记忆"
+            ],
+            "audience": "使用 Claude Code、Codex 等代理进行持续开发的个人与团队",
+            "capabilities": [
+              "先生成计划，再进入实现流程",
+              "用 TDD 工作流先写失败测试",
+              "从新上下文审查代码和回归风险",
+              "用 hooks 执行检查并管理会话",
+              "扫描代理配置、MCP 和密钥风险"
+            ],
+            "core_title": "把编码代理变成可复用工作流",
+            "core_summary": "ECC 用 skills、agents、hooks、rules 和记忆模块，把计划、实现、验证、复盘串成可重复的代理流程。",
+            "prerequisites": "通用安装需要 Node.js 18+；Claude Code 路径还需要 Git 和 Claude Code 2.1+。",
+            "limitations": "不同代理能力不完全对齐；Codex 不提供 Claude 风格的 hooks 执行，Windows 原生可选能力仍有限。",
+            "license_label": "MIT",
+            "license_restrictions": "",
+            "readme_sha": "6583ca8c1320e559aa5b2f86250f2f09c1d577e9",
+            "content_status": "readme_enriched",
+            "evidence_ids": {
+              "one_line": [
+                "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+              ],
+              "highlights": [
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ],
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ],
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ]
+              ],
+              "audience": [
+                "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+              ],
+              "capabilities": [
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ],
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ],
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ],
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ],
+                [
+                  "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+                ]
+              ],
+              "core_title": [
+                "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+              ],
+              "core_summary": [
+                "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+              ],
+              "prerequisites": [
+                "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+              ],
+              "limitations": [
+                "github.readme:6583ca8c1320e559aa5b2f86250f2f09c1d577e9"
+              ],
+              "license_label": [
+                "github.metadata.license_spdx_id"
+              ],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-17/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": "MIT",
+            "readme": {
+              "sha": "6583ca8c1320e559aa5b2f86250f2f09c1d577e9",
+              "source_url": "https://api.github.com/repos/affaan-m/ECC/readme"
+            },
+            "avatar": {
+              "path": "avatars/2026-10-17/repo-0658d7fa2f877963fc8bbc16-c61acd79036b72db89831001.png",
+              "sha256": "9314a31c5c86a60d58de9cf4d7caaa8ac7022d328483c7bd1accacd2c4580ffd",
+              "width": 165,
+              "height": 165
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-17/2026-10-17.ai.03.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}

@@ -4,6 +4,7 @@
 
 | 日期 | 周期 | 期号 | 最新修订 | 修订数 | 内容 |
 | --- | --- | --- | --- | ---: | --- |
+| 2026-10-17 | 日报 | D098 | `d2e745aaa5d0` | 1 | [清单](daily/2026/2026-10-17/d2e745aaa5d0/MANIFEST.json) · [综合文案](daily/2026/2026-10-17/d2e745aaa5d0/01-comprehensive/CAPTION.txt) · [AI 文案](daily/2026/2026-10-17/d2e745aaa5d0/02-ai/CAPTION.txt) |
 | 2026-10-16 | 日报 | D097 | `68ff2503ba24` | 1 | [清单](daily/2026/2026-10-16/68ff2503ba24/MANIFEST.json) · [综合文案](daily/2026/2026-10-16/68ff2503ba24/01-comprehensive/CAPTION.txt) · [AI 文案](daily/2026/2026-10-16/68ff2503ba24/02-ai/CAPTION.txt) |
 | 2026-10-15 | 日报 | D096 | `c7dc87035ede` | 1 | [清单](daily/2026/2026-10-15/c7dc87035ede/MANIFEST.json) · [综合文案](daily/2026/2026-10-15/c7dc87035ede/01-comprehensive/CAPTION.txt) · [AI 文案](daily/2026/2026-10-15/c7dc87035ede/02-ai/CAPTION.txt) |
 | 2026-10-14 | 日报 | D095 | `d5e693838182` | 2 | [清单](daily/2026/2026-10-14/d5e693838182/MANIFEST.json) · [综合文案](daily/2026/2026-10-14/d5e693838182/01-comprehensive/CAPTION.txt) · [AI 文案](daily/2026/2026-10-14/d5e693838182/02-ai/CAPTION.txt) |
