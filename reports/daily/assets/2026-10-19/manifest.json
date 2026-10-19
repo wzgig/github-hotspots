@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-10-19",
+  "window": {
+    "start": "2026-10-18",
+    "end": "2026-10-19"
+  },
+  "source_report": "reports/daily/2026-10-19.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-10-19",
+  "manifest": "reports/daily/assets/2026-10-19/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "MadsLorentzen/ai-job-search",
+          "path": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.01.madslorentzen--ai-job-search.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.02.morluto--rea.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "anomalyco/opencode",
+          "path": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.03.anomalyco--opencode.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-19/2026-10-19.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-19/2026-10-19.ai.01.morluto--rea.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "MadsLorentzen/ai-job-search",
+          "path": "reports/daily/assets/2026-10-19/2026-10-19.ai.02.madslorentzen--ai-job-search.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "debpalash/VoiceStudio",
+          "path": "reports/daily/assets/2026-10-19/2026-10-19.ai.03.debpalash--voicestudio.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 100,
+    "issue_code": "D100",
+    "issue_label": "第100期",
+    "status": "official"
+  }
+}

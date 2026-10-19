@@ -1,0 +1,1359 @@
+{
+  "schema_version": 3,
+  "period": "daily",
+  "run_date": "2026-10-19",
+  "window_start": "2026-10-18",
+  "window_end": "2026-10-19",
+  "generated_at": "2026-10-19T14:15:29+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-10-18 至 2026-10-19",
+  "publication": {
+    "issue_number": 100,
+    "issue_code": "D100",
+    "issue_label": "第100期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/daily/assets/2026-10-19",
+    "manifest": "reports/daily/assets/2026-10-19/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "MadsLorentzen/ai-job-search",
+            "path": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.01.madslorentzen--ai-job-search.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.02.morluto--rea.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "anomalyco/opencode",
+            "path": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.03.anomalyco--opencode.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-19/2026-10-19.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-19/2026-10-19.ai.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "MadsLorentzen/ai-job-search",
+            "path": "reports/daily/assets/2026-10-19/2026-10-19.ai.02.madslorentzen--ai-job-search.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-10-19/2026-10-19.ai.03.debpalash--voicestudio.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 100,
+      "issue_code": "D100",
+      "issue_label": "第100期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1185389803,
+      "full_name": "MadsLorentzen/ai-job-search",
+      "owner": "MadsLorentzen",
+      "name": "ai-job-search",
+      "html_url": "https://github.com/MadsLorentzen/ai-job-search",
+      "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+      "language": "Python",
+      "stars": 54156,
+      "forks": 17550,
+      "open_issues": 49,
+      "watchers": 197,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "career",
+        "claude-code",
+        "cover-letter",
+        "cv",
+        "interview-preparation",
+        "job-application",
+        "job-hunting",
+        "job-search",
+        "latex",
+        "resume"
+      ],
+      "created_at": "2026-03-18T14:33:04Z",
+      "updated_at": "2026-10-19T06:15:20Z",
+      "pushed_at": "2026-10-18T19:38:41Z",
+      "daily_stars": 2232,
+      "weekly_stars": null,
+      "trending_rank_daily": 1,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 96.71,
+      "star_delta": 3328,
+      "fork_delta": 571,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 99.07,
+        "relative_growth": 99.07,
+        "fork_growth": 99.07,
+        "total_stars": 49.07,
+        "activity": 100.0,
+        "trending_signal": 100.0
+      },
+      "summary": {
+        "one_line": "ai-job-search 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
+        "highlights": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+        "capabilities": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "core_title": "搭建能够连续执行多步任务的 AI Agent",
+        "core_summary": "ai-job-search 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-19/repo-692c624bcf5d89a26c05cead-5d6d61ade62bb75fe3e1eb30.png",
+      "publication_evidence": {
+        "full_name": "MadsLorentzen/ai-job-search",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-10-19/repo-692c624bcf5d89a26c05cead-5d6d61ade62bb75fe3e1eb30.png",
+          "sha256": "83cc0c37ec1a3c9259d867863b9e2b502ec7e1ac5cb11f3289ad40c69eed13f3",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.01.madslorentzen--ai-job-search.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1209966933,
+      "full_name": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "html_url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": 326158,
+      "forks": 82610,
+      "open_issues": 1218,
+      "watchers": 326158,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "decompiler",
+        "developer-tools",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "rea",
+        "reverse-engineering",
+        "static-analysis",
+        "touhou"
+      ],
+      "created_at": "2026-04-14T00:51:32Z",
+      "updated_at": "2026-10-19T06:15:21Z",
+      "pushed_at": "2026-10-19T06:05:32Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 94.77,
+      "star_delta": 15310,
+      "fork_delta": 3881,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 100.0,
+        "total_stars": 95.37,
+        "activity": 100.0,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "想要把重复的开发操作整理成自动化流程，可以用 rea；它能减少手动执行和重复配置",
+        "highlights": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "audience": "需要减少重复操作并统一研发流程的软件团队",
+        "capabilities": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "core_title": "把重复的开发操作整理成自动化流程",
+        "core_summary": "想要把重复的开发操作整理成自动化流程，可以用 rea；它能减少手动执行和重复配置",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-19/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+      "publication_evidence": {
+        "full_name": "morluto/rea",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-10-19/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "sha256": "526b550985df1cd70896eb2cb18f756e775095d1bf4424c7b806d59a2ed5f907",
+          "width": 432,
+          "height": 432
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.02.morluto--rea.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 975734319,
+      "full_name": "anomalyco/opencode",
+      "owner": "anomalyco",
+      "name": "opencode",
+      "html_url": "https://github.com/anomalyco/opencode",
+      "description": "The open source coding agent.",
+      "language": "TypeScript",
+      "stars": 216871,
+      "forks": 29026,
+      "open_issues": 4657,
+      "watchers": 216871,
+      "topics": [],
+      "created_at": "2025-04-30T20:08:00Z",
+      "updated_at": "2026-10-19T06:15:20Z",
+      "pushed_at": "2026-10-19T06:12:47Z",
+      "daily_stars": 1414,
+      "weekly_stars": null,
+      "trending_rank_daily": 3,
+      "trending_rank_weekly": null,
+      "sources": [
+        "trending_daily",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 93.43,
+      "star_delta": 1241,
+      "fork_delta": 132,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.3,
+        "relative_growth": 93.52,
+        "fork_growth": 95.37,
+        "total_stars": 90.74,
+        "activity": 100.0,
+        "trending_signal": 50.0
+      },
+      "summary": {
+        "one_line": "目前无法从公开字段确认 opencode 能完成哪些任务",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "目前无法从公开字段确认 opencode 能完成哪些任务",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "avatar_path": "avatars/2026-10-19/repo-064fc4e4cb74eb4b552b8ab2-75de5813e47c1b90d4e3209f.png",
+      "publication_evidence": {
+        "full_name": "anomalyco/opencode",
+        "license_spdx_id": "MIT",
+        "readme": null,
+        "avatar": {
+          "path": "avatars/2026-10-19/repo-064fc4e4cb74eb4b552b8ab2-75de5813e47c1b90d4e3209f.png",
+          "sha256": "b04e97e18b28378b93a3cffecf1316558f11480dea6f2f9022c8817da7e70485",
+          "width": 460,
+          "height": 460
+        },
+        "warnings": []
+      },
+      "license_spdx": "MIT",
+      "assets": {
+        "poster": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.03.anomalyco--opencode.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "MadsLorentzen/ai-job-search",
+            "path": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.01.madslorentzen--ai-job-search.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.02.morluto--rea.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "anomalyco/opencode",
+            "path": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.03.anomalyco--opencode.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1185389803,
+          "full_name": "MadsLorentzen/ai-job-search",
+          "owner": "MadsLorentzen",
+          "name": "ai-job-search",
+          "html_url": "https://github.com/MadsLorentzen/ai-job-search",
+          "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+          "language": "Python",
+          "stars": 54156,
+          "forks": 17550,
+          "open_issues": 49,
+          "watchers": 197,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "career",
+            "claude-code",
+            "cover-letter",
+            "cv",
+            "interview-preparation",
+            "job-application",
+            "job-hunting",
+            "job-search",
+            "latex",
+            "resume"
+          ],
+          "created_at": "2026-03-18T14:33:04Z",
+          "updated_at": "2026-10-19T06:15:20Z",
+          "pushed_at": "2026-10-18T19:38:41Z",
+          "daily_stars": 2232,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 96.71,
+          "star_delta": 3328,
+          "fork_delta": 571,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 99.07,
+            "relative_growth": 99.07,
+            "fork_growth": 99.07,
+            "total_stars": 49.07,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "ai-job-search 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "ai-job-search 可以搭建能够连续执行多步任务的 AI Agent，同时把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-19/repo-692c624bcf5d89a26c05cead-5d6d61ade62bb75fe3e1eb30.png",
+          "publication_evidence": {
+            "full_name": "MadsLorentzen/ai-job-search",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-10-19/repo-692c624bcf5d89a26c05cead-5d6d61ade62bb75fe3e1eb30.png",
+              "sha256": "83cc0c37ec1a3c9259d867863b9e2b502ec7e1ac5cb11f3289ad40c69eed13f3",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.01.madslorentzen--ai-job-search.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1209966933,
+          "full_name": "morluto/rea",
+          "owner": "morluto",
+          "name": "rea",
+          "html_url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "language": "TypeScript",
+          "stars": 326158,
+          "forks": 82610,
+          "open_issues": 1218,
+          "watchers": 326158,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "decompiler",
+            "developer-tools",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "rea",
+            "reverse-engineering",
+            "static-analysis",
+            "touhou"
+          ],
+          "created_at": "2026-04-14T00:51:32Z",
+          "updated_at": "2026-10-19T06:15:21Z",
+          "pushed_at": "2026-10-19T06:05:32Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 94.77,
+          "star_delta": 15310,
+          "fork_delta": 3881,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 95.37,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "想要把重复的开发操作整理成自动化流程，可以用 rea；它能减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "想要把重复的开发操作整理成自动化流程，可以用 rea；它能减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-19/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "publication_evidence": {
+            "full_name": "morluto/rea",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-10-19/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+              "sha256": "526b550985df1cd70896eb2cb18f756e775095d1bf4424c7b806d59a2ed5f907",
+              "width": 432,
+              "height": 432
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.02.morluto--rea.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 975734319,
+          "full_name": "anomalyco/opencode",
+          "owner": "anomalyco",
+          "name": "opencode",
+          "html_url": "https://github.com/anomalyco/opencode",
+          "description": "The open source coding agent.",
+          "language": "TypeScript",
+          "stars": 216871,
+          "forks": 29026,
+          "open_issues": 4657,
+          "watchers": 216871,
+          "topics": [],
+          "created_at": "2025-04-30T20:08:00Z",
+          "updated_at": "2026-10-19T06:15:20Z",
+          "pushed_at": "2026-10-19T06:12:47Z",
+          "daily_stars": 1414,
+          "weekly_stars": null,
+          "trending_rank_daily": 3,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 93.43,
+          "star_delta": 1241,
+          "fork_delta": 132,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.3,
+            "relative_growth": 93.52,
+            "fork_growth": 95.37,
+            "total_stars": 90.74,
+            "activity": 100.0,
+            "trending_signal": 50.0
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 opencode 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 opencode 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-19/repo-064fc4e4cb74eb4b552b8ab2-75de5813e47c1b90d4e3209f.png",
+          "publication_evidence": {
+            "full_name": "anomalyco/opencode",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-10-19/repo-064fc4e4cb74eb4b552b8ab2-75de5813e47c1b90d4e3209f.png",
+              "sha256": "b04e97e18b28378b93a3cffecf1316558f11480dea6f2f9022c8817da7e70485",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.03.anomalyco--opencode.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 3,
+      "assets": {
+        "enabled": true,
+        "top_n": 3,
+        "cover": "reports/daily/assets/2026-10-19/2026-10-19.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/daily/assets/2026-10-19/2026-10-19.ai.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "MadsLorentzen/ai-job-search",
+            "path": "reports/daily/assets/2026-10-19/2026-10-19.ai.02.madslorentzen--ai-job-search.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "debpalash/VoiceStudio",
+            "path": "reports/daily/assets/2026-10-19/2026-10-19.ai.03.debpalash--voicestudio.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1209966933,
+          "full_name": "morluto/rea",
+          "owner": "morluto",
+          "name": "rea",
+          "html_url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "language": "TypeScript",
+          "stars": 326158,
+          "forks": 82610,
+          "open_issues": 1218,
+          "watchers": 326158,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "decompiler",
+            "developer-tools",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "rea",
+            "reverse-engineering",
+            "static-analysis",
+            "touhou"
+          ],
+          "created_at": "2026-04-14T00:51:32Z",
+          "updated_at": "2026-10-19T06:15:21Z",
+          "pushed_at": "2026-10-19T06:05:32Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 94.84,
+          "star_delta": 15310,
+          "fork_delta": 3881,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 96.77,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "rea 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "rea 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-19/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+          "publication_evidence": {
+            "full_name": "morluto/rea",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-10-19/repo-a5b6cf30f0c2b39ab866774e-5e78ca12af85596a9fd3b04a.png",
+              "sha256": "526b550985df1cd70896eb2cb18f756e775095d1bf4424c7b806d59a2ed5f907",
+              "width": 432,
+              "height": 432
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-19/2026-10-19.ai.01.morluto--rea.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1185389803,
+          "full_name": "MadsLorentzen/ai-job-search",
+          "owner": "MadsLorentzen",
+          "name": "ai-job-search",
+          "html_url": "https://github.com/MadsLorentzen/ai-job-search",
+          "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+          "language": "Python",
+          "stars": 54156,
+          "forks": 17550,
+          "open_issues": 49,
+          "watchers": 197,
+          "topics": [
+            "ai",
+            "ai-agents",
+            "career",
+            "claude-code",
+            "cover-letter",
+            "cv",
+            "interview-preparation",
+            "job-application",
+            "job-hunting",
+            "job-search",
+            "latex",
+            "resume"
+          ],
+          "created_at": "2026-03-18T14:33:04Z",
+          "updated_at": "2026-10-19T06:15:20Z",
+          "pushed_at": "2026-10-18T19:38:41Z",
+          "daily_stars": 2232,
+          "weekly_stars": null,
+          "trending_rank_daily": 1,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 93.38,
+          "star_delta": 3328,
+          "fork_delta": 571,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.77,
+            "relative_growth": 96.77,
+            "fork_growth": 96.77,
+            "total_stars": 19.35,
+            "activity": 100.0,
+            "trending_signal": 100.0
+          },
+          "summary": {
+            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 ai-job-search；它能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 ai-job-search；它能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-19/repo-692c624bcf5d89a26c05cead-5d6d61ade62bb75fe3e1eb30.png",
+          "publication_evidence": {
+            "full_name": "MadsLorentzen/ai-job-search",
+            "license_spdx_id": "MIT",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-10-19/repo-692c624bcf5d89a26c05cead-5d6d61ade62bb75fe3e1eb30.png",
+              "sha256": "83cc0c37ec1a3c9259d867863b9e2b502ec7e1ac5cb11f3289ad40c69eed13f3",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "MIT",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-19/2026-10-19.ai.02.madslorentzen--ai-job-search.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1206390571,
+          "full_name": "debpalash/VoiceStudio",
+          "owner": "debpalash",
+          "name": "VoiceStudio",
+          "html_url": "https://github.com/debpalash/VoiceStudio",
+          "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+          "language": "Python",
+          "stars": 76046,
+          "forks": 8324,
+          "open_issues": 257,
+          "watchers": 284,
+          "topics": [
+            "ai",
+            "audiobook",
+            "cuda",
+            "dubbing",
+            "elevenlabs-alternative",
+            "huggingface",
+            "local-first",
+            "mlx",
+            "omnivoice-studio",
+            "speech-to-text",
+            "text-to-speech",
+            "transcription",
+            "translate",
+            "tts",
+            "voice-ai",
+            "voice-cloning",
+            "voice-generation",
+            "voicestudio",
+            "workflow"
+          ],
+          "created_at": "2026-04-09T21:40:26Z",
+          "updated_at": "2026-10-19T06:15:21Z",
+          "pushed_at": "2026-10-19T04:33:13Z",
+          "daily_stars": 2082,
+          "weekly_stars": null,
+          "trending_rank_daily": 9,
+          "trending_rank_weekly": null,
+          "sources": [
+            "trending_daily",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 87.47,
+          "star_delta": 2299,
+          "fork_delta": 256,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.55,
+            "relative_growth": 93.55,
+            "fork_growth": 93.55,
+            "total_stars": 22.58,
+            "activity": 100.0,
+            "trending_signal": 30.1
+          },
+          "summary": {
+            "one_line": "主要任务是把语音内容转换成可编辑文字；VoiceStudio 还能方便检索、整理和继续加工",
+            "highlights": [
+              "将录音或实时语音转换为文字",
+              "生成便于复制和编辑的文本记录",
+              "为摘要、搜索和归档准备文字材料"
+            ],
+            "audience": "需要整理访谈、课程、会议或录音内容的用户",
+            "capabilities": [
+              "将录音或实时语音转换为文字",
+              "生成便于复制和编辑的文本记录",
+              "为摘要、搜索和归档准备文字材料"
+            ],
+            "core_title": "把语音内容转换成可编辑文字",
+            "core_summary": "主要任务是把语音内容转换成可编辑文字；VoiceStudio 还能方便检索、整理和继续加工",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "avatar_path": "avatars/2026-10-19/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+          "publication_evidence": {
+            "full_name": "debpalash/VoiceStudio",
+            "license_spdx_id": "AGPL-3.0",
+            "readme": null,
+            "avatar": {
+              "path": "avatars/2026-10-19/repo-90d09492a98e764426e7e960-d4e05f41867fdfac75d78067.png",
+              "sha256": "599775fa700c2816df5de823e30a438cd74ab05af92fc86ced777c69f1841957",
+              "width": 460,
+              "height": 460
+            },
+            "warnings": []
+          },
+          "license_spdx": "AGPL-3.0",
+          "assets": {
+            "poster": "reports/daily/assets/2026-10-19/2026-10-19.ai.03.debpalash--voicestudio.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "172c0029115e24ee8c3123d37a70cb59dec3ad82f38fd76844198f52c10fdae9",
+  "checklist_sha256": "177481b7d604536ba1a78172e01b77a5e5a3079eb7bb686a2cb7a3d6cef94312",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-10-19",
+  "generated_at": "2026-10-19T14:15:32.146436+08:00",
+  "issue": {
+    "number": 100,
+    "code": "D100",
+    "stem": "D100-2026-10-19",
+    "label": "第100期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-10-19.json",
+    "report_sha256": "92bb08285a6f600376aca7cfa0e3399664d34696e99829ed42d8b0dab5d35e55",
+    "poster_manifest": "reports/daily/assets/2026-10-19/manifest.json",
+    "poster_manifest_sha256": "ab99d90ae631fd0d3ae29cc59418eeb6d9333d46cbd69d63b164942c9eeda94a",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D100-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 23,
+      "title_sha256": "553acf13240f89d12249a7d1cf047efeaaaa111eda901fb973275d4a966b3536",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 351,
+      "caption_sha256": "87bca6abcdea5ca9f62778e8966466dc41b2e9a56d7114704fd47cdd909d1d27",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "173285342e194423b99911e4148d585c3186e26be02d10cb6537cd8fdc3e2072",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.cover.png",
+          "sha256": "cd25c6e7ef87c1e92d785b1ec34f477e9a7606aea5f63eb236c30bf8a0fe2d7d",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.01.madslorentzen--ai-job-search.png",
+          "sha256": "b4411069dc86423820dd96d41ce6fa21382a0ea4b01aa41c5934fe800a22332e",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "MadsLorentzen/ai-job-search",
+          "publication_path": "images/02-rank-01-madslorentzen-ai-job-search.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.02.morluto--rea.png",
+          "sha256": "6eb2055e2be65cf5c55192833b4b79b0d69fbcb29dddd5e32bf089035416326f",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "morluto/rea",
+          "publication_path": "images/03-rank-02-morluto-rea.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-19/2026-10-19.comprehensive.03.anomalyco--opencode.png",
+          "sha256": "a956751e3f129842c5d08b38deff46c54d530d982178ea82db4a4ca998024247",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "anomalyco/opencode",
+          "publication_path": "images/04-rank-03-anomalyco-opencode.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D100-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 26,
+      "title_sha256": "18be75b3e9ba9f0ba433582ca517c047ce734c9a383f06000fd6244602f80312",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 364,
+      "caption_sha256": "c05a542e829d7eacb312a73609b2725ba3125577e87b24b88260d9962cf77b65",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "df1ff192f5b8f3cfe888a6a67028049dce75729003919219a8dc42285cdea93c",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "deterministic",
+        "used_backend": "deterministic",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-10-19/2026-10-19.ai.cover.png",
+          "sha256": "6ff69b84cea3d5fb8b206c20d00d9e9b73a46dee7a4f758fcf088dee96ac09ac",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-19/2026-10-19.ai.01.morluto--rea.png",
+          "sha256": "3a212471c149844d55a329c5647e395d7c851924f12e1821712e3e87389c92ea",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "publication_path": "images/02-rank-01-morluto-rea.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-19/2026-10-19.ai.02.madslorentzen--ai-job-search.png",
+          "sha256": "aa17681ade24b9dc523aa2be611a463aa176752e697ce60d25d798e294747123",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "MadsLorentzen/ai-job-search",
+          "publication_path": "images/03-rank-02-madslorentzen-ai-job-search.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-19/2026-10-19.ai.03.debpalash--voicestudio.png",
+          "sha256": "64bfddc40f9fc1ac9113a01cfa87824b6fa7293dd87c98bc1eb201ca134ee7fa",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "debpalash/VoiceStudio",
+          "publication_path": "images/04-rank-03-debpalash-voicestudio.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-10-19",
+    "revision": "172c0029115e",
+    "image_policy": "repository-source-reference"
+  }
+}
