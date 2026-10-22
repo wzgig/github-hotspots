@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-10-22",
+  "window": {
+    "start": "2026-10-21",
+    "end": "2026-10-22"
+  },
+  "source_report": "reports/daily/2026-10-22.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-10-22",
+  "manifest": "reports/daily/assets/2026-10-22/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-22/2026-10-22.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-22/2026-10-22.comprehensive.01.morluto--rea.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "Comfy-Org/ComfyUI",
+          "path": "reports/daily/assets/2026-10-22/2026-10-22.comprehensive.02.comfy-org--comfyui.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "anomalyco/opencode",
+          "path": "reports/daily/assets/2026-10-22/2026-10-22.comprehensive.03.anomalyco--opencode.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-22/2026-10-22.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-22/2026-10-22.ai.01.morluto--rea.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "Graphify-Labs/graphify",
+          "path": "reports/daily/assets/2026-10-22/2026-10-22.ai.02.graphify-labs--graphify.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "Comfy-Org/ComfyUI",
+          "path": "reports/daily/assets/2026-10-22/2026-10-22.ai.03.comfy-org--comfyui.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 103,
+    "issue_code": "D103",
+    "issue_label": "第103期",
+    "status": "official"
+  }
+}

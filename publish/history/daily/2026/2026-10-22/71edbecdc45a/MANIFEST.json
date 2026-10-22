@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "71edbecdc45af64666bcd86fe1f01d4582ebe10d4d539ca50587faed94b773ce",
+  "checklist_sha256": "6d6951a751ec6d2ec345dbb29994d6131242ff1c0a7bd281a4af8ef8ae55aff5",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-10-22",
+  "generated_at": "2026-10-22T08:36:26.165069+08:00",
+  "issue": {
+    "number": 103,
+    "code": "D103",
+    "stem": "D103-2026-10-22",
+    "label": "第103期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-10-22.json",
+    "report_sha256": "dcdd76ae22ba939495fc442a57f7413f3bd57041b4422aaac9dae36d51bb1ddb",
+    "poster_manifest": "reports/daily/assets/2026-10-22/manifest.json",
+    "poster_manifest_sha256": "b2033dc17c811451cb2282207b43172d274320c06c648f91e20afa97e4f9c1e8",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D103-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 23,
+      "title_sha256": "b5578bc9e64f14f0b13eac90c63f384e2abe76bc2f329d195e303019fec99c23",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 311,
+      "caption_sha256": "e8b6bca3186600b020cf0f85ce48c1a0d965f5a69d991eb6329c823763f0787c",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "65576b9cffea78460159a2026e34eb607dc0b71933718df1ae3a4b66ae06f3cf",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-10-22/2026-10-22.comprehensive.cover.png",
+          "sha256": "02ea3a736a92ca2e54949dce600298c20c8e2b347b95f2400f6206877212087d",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-22/2026-10-22.comprehensive.01.morluto--rea.png",
+          "sha256": "da2d118cd5d0e748b1d0783a08d071b5d1d017a26818dd22df85bb26a78b3158",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "publication_path": "images/02-rank-01-morluto-rea.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-22/2026-10-22.comprehensive.02.comfy-org--comfyui.png",
+          "sha256": "80cd71287e1f471c5112fd3155129d5b9153f40a850338a4b7a9d6f0a65fe4e5",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "Comfy-Org/ComfyUI",
+          "publication_path": "images/03-rank-02-comfy-org-comfyui.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-22/2026-10-22.comprehensive.03.anomalyco--opencode.png",
+          "sha256": "79af4f8bd849b7bc375ade27b483c54992fdbbb0c987921ef0b4ecf3dd2f8a98",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "anomalyco/opencode",
+          "publication_path": "images/04-rank-03-anomalyco-opencode.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D103-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 26,
+      "title_sha256": "65f3ece93d8fb047dfe301c4ba744c30b1cb32e1cd332dcc9d72faa2ef246e9e",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 322,
+      "caption_sha256": "84535e852eeffc2e374ca87c0a8c0c7a9c7c357c662c2cf3dfe97b75883ae990",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "ea86d9bebd94041c9ea2935d24811a487edd273a911bc219af77f927978b424c",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-10-22/2026-10-22.ai.cover.png",
+          "sha256": "9f4556aab650d5c8db2200aeb848502cc901491e33eb602ddba683263cede768",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-22/2026-10-22.ai.01.morluto--rea.png",
+          "sha256": "46f11dd523f42b291e8b5edeab9f49634385cc704e3b6d214be0c5f7392936d7",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "publication_path": "images/02-rank-01-morluto-rea.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-22/2026-10-22.ai.02.graphify-labs--graphify.png",
+          "sha256": "ccd75c3010aa364232a8c02588452f9211f211a3781853dba4241877a2703c75",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "Graphify-Labs/graphify",
+          "publication_path": "images/03-rank-02-graphify-labs-graphify.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-22/2026-10-22.ai.03.comfy-org--comfyui.png",
+          "sha256": "b84da72fce12f8737e3369748d566e4d639e4965cc3c60b8f5855d579e350ce1",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "Comfy-Org/ComfyUI",
+          "publication_path": "images/04-rank-03-comfy-org-comfyui.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-10-22",
+    "revision": "71edbecdc45a",
+    "image_policy": "repository-source-reference"
+  }
+}
