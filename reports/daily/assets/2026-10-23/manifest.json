@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-10-23",
+  "window": {
+    "start": "2026-10-22",
+    "end": "2026-10-23"
+  },
+  "source_report": "reports/daily/2026-10-23.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-10-23",
+  "manifest": "reports/daily/assets/2026-10-23/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-23/2026-10-23.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-23/2026-10-23.comprehensive.01.morluto--rea.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "Graphify-Labs/graphify",
+          "path": "reports/daily/assets/2026-10-23/2026-10-23.comprehensive.02.graphify-labs--graphify.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "mattpocock/skills",
+          "path": "reports/daily/assets/2026-10-23/2026-10-23.comprehensive.03.mattpocock--skills.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-23/2026-10-23.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-23/2026-10-23.ai.01.morluto--rea.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "Graphify-Labs/graphify",
+          "path": "reports/daily/assets/2026-10-23/2026-10-23.ai.02.graphify-labs--graphify.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "DietrichGebert/ponytail",
+          "path": "reports/daily/assets/2026-10-23/2026-10-23.ai.03.dietrichgebert--ponytail.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 104,
+    "issue_code": "D104",
+    "issue_label": "第104期",
+    "status": "official"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "github-hotspots-publish-bundle",
+    "version": "1.1"
+  },
+  "content_fingerprint": "9cf42930392eba2bc25bf3c4edff54dd45bdc6f44a6bc70f287ad62b8789fe84",
+  "checklist_sha256": "1cb3ebd4c0e6257987966c4706ae481e226fb33ce275780ff8fd8e2d4fbf2492",
+  "status": "draft",
+  "period": "daily",
+  "run_date": "2026-10-23",
+  "generated_at": "2026-10-23T07:33:55.682455+08:00",
+  "issue": {
+    "number": 104,
+    "code": "D104",
+    "stem": "D104-2026-10-23",
+    "label": "第104期",
+    "status": "official"
+  },
+  "source": {
+    "report": "reports/daily/2026-10-23.json",
+    "report_sha256": "4e1a33d405fe271e98f9e382ae34609e139d02f550f424f643922784a836a953",
+    "poster_manifest": "reports/daily/assets/2026-10-23/manifest.json",
+    "poster_manifest_sha256": "2246b6f7207b83ad7e4b0b09838c3628fe8ae58fc00269b20cbf397073498b68",
+    "poster_style_version": "signal-broadsheet-v1"
+  },
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "boards": [
+    {
+      "key": "comprehensive",
+      "label": "综合主榜",
+      "post_id": "D104-C",
+      "status": "draft",
+      "directory": "01-comprehensive",
+      "title": "01-comprehensive/TITLE.txt",
+      "title_chars": 23,
+      "title_sha256": "062221bfa17228f61ae27fde9b026e47f9444272e936534cbc8ecc9d722b628d",
+      "caption": "01-comprehensive/CAPTION.txt",
+      "caption_chars": 328,
+      "caption_sha256": "9750db1c2742cf54600cd220701710b2e6feee27c8a83f0d7b8403eb19d03817",
+      "review": "01-comprehensive/REVIEW.md",
+      "review_sha256": "f90a484576595dfac909a0d4a141bb4c06dc0a2ed7a7229978282242808abd44",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-10-23/2026-10-23.comprehensive.cover.png",
+          "sha256": "a1af7971af29ff679996d1b995c7ab5ee45775b608651f5534c9927330bf9d04",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-23/2026-10-23.comprehensive.01.morluto--rea.png",
+          "sha256": "b919f554e4bea23d33dbea31ce47c268aaaa08771ea5e6c8ca97a55ac8379956",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "publication_path": "images/02-rank-01-morluto-rea.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-23/2026-10-23.comprehensive.02.graphify-labs--graphify.png",
+          "sha256": "606237b1f65fa40c3fe9dde0c2e930bc92a22d78a1de92ab38d3f2fdcf6a73b6",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "Graphify-Labs/graphify",
+          "publication_path": "images/03-rank-02-graphify-labs-graphify.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-23/2026-10-23.comprehensive.03.mattpocock--skills.png",
+          "sha256": "fbc0480d476bfc7587f8f35619d3fd8f591941a9fd3056e08d7974985cde0ade",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "mattpocock/skills",
+          "publication_path": "images/04-rank-03-mattpocock-skills.png"
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "label": "AI 专题榜",
+      "post_id": "D104-A",
+      "status": "draft",
+      "directory": "02-ai",
+      "title": "02-ai/TITLE.txt",
+      "title_chars": 26,
+      "title_sha256": "74d885f342657ba23620deabf7dbd3297377b1161bf0daeed773586f26d7775c",
+      "caption": "02-ai/CAPTION.txt",
+      "caption_chars": 329,
+      "caption_sha256": "50ed55e733f2e1c457391a2a4c0189854e14fe61229135c9d8fa007b005d5921",
+      "review": "02-ai/REVIEW.md",
+      "review_sha256": "7cee7108a8961d06293195bfd5d53faecde0193bec8b2d08d92c39d2876b2dc6",
+      "editorial": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "images": [
+        {
+          "order": 1,
+          "role": "cover",
+          "source": "reports/daily/assets/2026-10-23/2026-10-23.ai.cover.png",
+          "sha256": "0ebf4bd399c0cc7a164c770614e0173bf6181f6a3e18a12120bdf45fa76080e4",
+          "width": 1200,
+          "height": 1600,
+          "publication_path": "images/01-cover.png"
+        },
+        {
+          "order": 2,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-23/2026-10-23.ai.01.morluto--rea.png",
+          "sha256": "e82d851c099fc33c38bfccb46202c68dc473cf608468930970bcb3661457c7a3",
+          "width": 1200,
+          "height": 1600,
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "publication_path": "images/02-rank-01-morluto-rea.png"
+        },
+        {
+          "order": 3,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-23/2026-10-23.ai.02.graphify-labs--graphify.png",
+          "sha256": "3608c49925422352c1cd871a312619e3757a7b5103ab6dcc54ffc715e51a8197",
+          "width": 1200,
+          "height": 1600,
+          "rank": 2,
+          "full_name": "Graphify-Labs/graphify",
+          "publication_path": "images/03-rank-02-graphify-labs-graphify.png"
+        },
+        {
+          "order": 4,
+          "role": "project",
+          "source": "reports/daily/assets/2026-10-23/2026-10-23.ai.03.dietrichgebert--ponytail.png",
+          "sha256": "e7e9c94e232254192b557f6bd2a8ad78ceb134b374c2de46e6f80a1391f24204",
+          "width": 1200,
+          "height": 1600,
+          "rank": 3,
+          "full_name": "DietrichGebert/ponytail",
+          "publication_path": "images/04-rank-03-dietrichgebert-ponytail.png"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "schema_version": 1,
+    "kind": "thin-publication-history",
+    "report_stem": "2026-10-23",
+    "revision": "9cf42930392e",
+    "image_policy": "repository-source-reference"
+  }
+}
