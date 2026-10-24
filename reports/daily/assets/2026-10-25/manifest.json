@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-10-25",
+  "window": {
+    "start": "2026-10-24",
+    "end": "2026-10-25"
+  },
+  "source_report": "reports/daily/2026-10-25.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-10-25",
+  "manifest": "reports/daily/assets/2026-10-25/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-25/2026-10-25.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-25/2026-10-25.comprehensive.01.morluto--rea.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "anomalyco/opencode",
+          "path": "reports/daily/assets/2026-10-25/2026-10-25.comprehensive.02.anomalyco--opencode.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "cloudflare/security-audit-skill",
+          "path": "reports/daily/assets/2026-10-25/2026-10-25.comprehensive.03.cloudflare--security-audit-skill.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-25/2026-10-25.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-25/2026-10-25.ai.01.morluto--rea.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "firecrawl/firecrawl",
+          "path": "reports/daily/assets/2026-10-25/2026-10-25.ai.02.firecrawl--firecrawl.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "NousResearch/hermes-agent",
+          "path": "reports/daily/assets/2026-10-25/2026-10-25.ai.03.nousresearch--hermes-agent.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 106,
+    "issue_code": "D106",
+    "issue_label": "第106期",
+    "status": "official"
+  }
+}
