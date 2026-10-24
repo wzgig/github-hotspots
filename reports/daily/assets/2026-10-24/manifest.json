@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "period": "daily",
+  "run_date": "2026-10-24",
+  "window": {
+    "start": "2026-10-23",
+    "end": "2026-10-24"
+  },
+  "source_report": "reports/daily/2026-10-24.json",
+  "renderer": {
+    "name": "github-hotspots-pillow",
+    "version": "4.0"
+  },
+  "style_version": "signal-broadsheet-v1",
+  "enabled": true,
+  "format": "png",
+  "width": 1200,
+  "height": 1600,
+  "directory": "reports/daily/assets/2026-10-24",
+  "manifest": "reports/daily/assets/2026-10-24/manifest.json",
+  "boards": {
+    "comprehensive": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-24/2026-10-24.comprehensive.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-24/2026-10-24.comprehensive.01.morluto--rea.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "Graphify-Labs/graphify",
+          "path": "reports/daily/assets/2026-10-24/2026-10-24.comprehensive.02.graphify-labs--graphify.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "php/php-src",
+          "path": "reports/daily/assets/2026-10-24/2026-10-24.comprehensive.03.php--php-src.png"
+        }
+      ]
+    },
+    "ai": {
+      "enabled": true,
+      "top_n": 3,
+      "cover": "reports/daily/assets/2026-10-24/2026-10-24.ai.cover.png",
+      "projects": [
+        {
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "path": "reports/daily/assets/2026-10-24/2026-10-24.ai.01.morluto--rea.png"
+        },
+        {
+          "rank": 2,
+          "full_name": "Graphify-Labs/graphify",
+          "path": "reports/daily/assets/2026-10-24/2026-10-24.ai.02.graphify-labs--graphify.png"
+        },
+        {
+          "rank": 3,
+          "full_name": "NVIDIA/OpenShell",
+          "path": "reports/daily/assets/2026-10-24/2026-10-24.ai.03.nvidia--openshell.png"
+        }
+      ]
+    }
+  },
+  "publication": {
+    "issue_number": 105,
+    "issue_code": "D105",
+    "issue_label": "第105期",
+    "status": "official"
+  }
+}
