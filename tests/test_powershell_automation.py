@@ -82,6 +82,31 @@ def _load_functions(state_root: Path, *, period: str = "daily") -> str:
     )
 
 
+@requires_windows_powershell
+@pytest.mark.parametrize("entrypoint", [RUNNER, MANUAL_RUNNER, REGISTER])
+def test_paused_launchers_exit_before_operational_side_effects(
+    tmp_path: Path, entrypoint: Path
+) -> None:
+    repo = tmp_path / "paused-repo"
+    automation = repo / "scripts" / "automation"
+    automation.mkdir(parents=True)
+    copied = automation / entrypoint.name
+    shutil.copyfile(entrypoint, copied)
+    (repo / "PROJECT_PAUSED").write_text("Paused for a test.\n", encoding="utf-8")
+    state_root = repo / "runtime-state"
+    arguments = ""
+    if entrypoint == RUNNER:
+        arguments = f" -Period daily -StateRoot {_ps_quote(state_root)}"
+
+    # The isolated copy has no Python, git setup, or runner dependencies. It must stop
+    # at the pause guard before touching the scheduler, creating state, or using them.
+    result = _run_powershell(f"& {_ps_quote(copied)}{arguments}; exit $LASTEXITCODE")
+
+    assert result.returncode == 78, result.stderr
+    assert "[PAUSED]" in result.stdout
+    assert not state_root.exists()
+
+
 def _last_json(stdout: str) -> object:
     lines = [line.strip() for line in stdout.splitlines() if line.strip()]
     for line in reversed(lines):
@@ -160,6 +185,11 @@ def test_shared_lock_waits_until_the_owner_finishes(tmp_path: Path) -> None:
 
 @requires_windows_powershell
 def test_shared_lock_timeout_preserves_exit_75_signal(tmp_path: Path) -> None:
+    # This lock test exercises an active runner in an isolated copy, independently
+    # of the real project's tracked pause marker.
+    isolated_runner = tmp_path / "active-repo" / "scripts" / "automation" / RUNNER.name
+    isolated_runner.parent.mkdir(parents=True)
+    shutil.copyfile(RUNNER, isolated_runner)
     state_root = tmp_path / "state"
     holder = _start_lock_holder(state_root / "run.lock", 1600)
     result = subprocess.run(
@@ -169,7 +199,7 @@ def test_shared_lock_timeout_preserves_exit_75_signal(tmp_path: Path) -> None:
             "-NoProfile",
             "-NonInteractive",
             "-File",
-            str(RUNNER),
+            str(isolated_runner),
             "-Period",
             "daily",
             "-StateRoot",

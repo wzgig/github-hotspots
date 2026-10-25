@@ -11,6 +11,10 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
 $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+if (Test-Path -LiteralPath (Join-Path $RepoRoot "PROJECT_PAUSED")) {
+    Write-Host "[PAUSED] GitHub Hotspots task registration is blocked. See docs/AUTOMATION.md."
+    exit 78
+}
 $Runner = Join-Path $PSScriptRoot "run_scheduled.ps1"
 $Python = Join-Path $RepoRoot ".venv\Scripts\python.exe"
 $PowerShell = "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe"

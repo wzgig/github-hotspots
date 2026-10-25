@@ -29,6 +29,10 @@ $ErrorActionPreference = "Stop"
 $ProgressPreference = "SilentlyContinue"
 
 $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+if (-not $LoadFunctionsOnly -and (Test-Path -LiteralPath (Join-Path $RepoRoot "PROJECT_PAUSED"))) {
+    Write-Host "[PAUSED] GitHub Hotspots is paused. See docs/AUTOMATION.md before resuming."
+    exit 78
+}
 $AutomationScript = Join-Path $RepoRoot "src\github_hotspots\automation.py"
 $StateRoot = [System.IO.Path]::GetFullPath($StateRoot)
 $LogRoot = Join-Path $StateRoot "logs"

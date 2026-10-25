@@ -1,5 +1,28 @@
 # Project Log
 
+## 2026-10-25 — 暂停日报、周报与自动部署
+
+### 目的与执行范围
+
+按项目所有者要求暂停运行。先核对本机计划任务、启动入口、活动进程、远程工作流及 Git 状态，再执行可恢复的停用。执行前将本地干净的 `main` 快进至远程 `a33dd32`，保留截至当天的报告和历史产物。
+
+- 已禁用 Windows 任务 `GitHub Hotspots Daily (Local Codex)` 与 `GitHub Hotspots Weekly (Local Codex)`；受任务 ACL 限制，使用管理员操作成功完成，复查均为 `Disabled / Enabled=False`。原任务 XML 和操作结果在本机独立目录备份。
+- 已禁用远程 `daily.yml`、`weekly.yml` 和 `pages.yml`，复查全部为 `disabled_manually`；运行中和排队中的 Actions 均为 0。
+- 新增根文件 `PROJECT_PAUSED`，使定时执行、手动更新和任务注册三个 PowerShell 入口在运营操作前以 78 退出；CMD 显示暂停提示。`-LoadFunctionsOnly` 保留离线测试能力。
+- 更新 README、自动化手册和本日志，说明各层独立恢复步骤。保留源码、数据、历史、凭据与最后一次 Pages 部署。
+
+### 文件与验证
+
+- 入口：`CHECK_AND_UPDATE_REPORTS.cmd`、`scripts/automation/{run_scheduled,run_manual_update,register_tasks}.ps1`。
+- 状态及文档：`PROJECT_PAUSED`、`README.md`、`docs/AUTOMATION.md`、`PROJECT_LOG.md`。
+- 测试：`tests/test_powershell_automation.py`，新增三个隔离入口测试，并将锁超时测试隔离到未暂停的临时副本。
+- 暂停入口及锁超时专项 **4 项通过**；完整 pytest **275 项通过、3 项失败**，覆盖率 81%。这三项发布安装测试在未修改的 `a33dd32` runner 和测试文件中同样复现失败，属于当前环境下的既有基线问题，未在暂停任务中修改发布逻辑。
+- `ruff check .`、`ruff format --check .`、三个 PowerShell 文件语法检查和 `git diff --check` 通过。现场未发现项目运营进程；最后部署的 Pages 返回 HTTP 200。
+
+### 恢复边界与已知限制
+
+只有所有者明确要求恢复后，才重命名暂停标记并逐项启用本机任务和远程工作流。现有 Windows 任务仍是旧定义，恢复时优先启用原任务；重新注册会引入登录补跑与 fallback-upgrade 参数等差异，应另行审阅。Python CLI 作为开发接口保留，直接调用者必须先复核暂停决定。完整恢复前须重新验证上述三项既有发布测试。
+
 ## 2026-08-23 — 修复 Codex MCP 隔离回归并统一日报/周报冻结兜底升级
 
 ### 目的与根因

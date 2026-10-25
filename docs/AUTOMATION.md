@@ -1,5 +1,41 @@
 # Local Codex Primary Automation
 
+## Project pause and resume
+
+The owner paused this project on **2026-10-25**. The Windows daily/weekly tasks and
+GitHub Actions `daily.yml`, `weekly.yml`, and `pages.yml` are disabled. Existing reports,
+snapshots, publication history, credentials, and the last deployed Pages site are retained.
+
+The tracked root file `PROJECT_PAUSED` blocks `run_scheduled.ps1`,
+`run_manual_update.ps1`, and `register_tasks.ps1` with exit code **78**, before collection,
+Codex invocation, Git fetch/push, or task registration. The root CMD launcher displays a
+pause message for that exit code. `-LoadFunctionsOnly` remains available for offline tests.
+This is a guard for operational launchers; a developer invoking the Python CLI directly
+must first explicitly review the pause decision.
+
+To resume only after the owner requests it:
+
+1. In this repository, rename `PROJECT_PAUSED` to `PROJECT_PAUSED.resumed-YYYYMMDD`,
+   update the README status and project log, review the diff, and commit/push that change.
+   Renaming preserves the pause record and removes the operational guard.
+2. In **Windows Task Scheduler**, open **Task Scheduler Library**, select
+   `GitHub Hotspots Daily (Local Codex)` and `GitHub Hotspots Weekly (Local Codex)`,
+   then choose **Enable**. Use an administrator session if Windows reports access denied.
+   Alternatively run `Enable-ScheduledTask -TaskPath '\' -TaskName '<exact task name>'`
+   in administrator PowerShell. Existing XML definitions were backed up locally before pause.
+   Do not blindly re-register tasks: the installed older definitions differ from the current
+   registration script, which adds a daily logon trigger and fallback-upgrade arguments.
+3. Enable each remote workflow with
+   `gh workflow enable <daily.yml|weekly.yml|pages.yml> --repo wzgig/github-hotspots`.
+   These three workflow switches are separate from the local marker and Windows task state.
+4. Confirm both local tasks show `Enabled=True`, all three remote workflows show `active`,
+   then run the intended current-date check deliberately. Missed historical rankings must
+   not be recollected under old dates. A successful current bundle and Pages deployment are
+   the resume success signals.
+
+The last published site remains at <https://wzgig.github.io/github-hotspots/> during pause.
+No repository archive, visibility change, credential removal, or site deletion is required.
+
 This runbook defines the unattended daily and Sunday workflow without copying any local
 Codex credential into the repository, Windows Task Scheduler, GitHub Actions, or logs.
 

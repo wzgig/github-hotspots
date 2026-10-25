@@ -1,5 +1,7 @@
 # GitHub Hotspots
 
+> **项目已于 2026-10-25 暂停。** 日报、周报和 Pages 自动部署均已停用；源码与历史产物保留。根目录 `PROJECT_PAUSED` 会阻止本地定时、手动更新和任务注册入口，退出码为 `78`。恢复前请按 [自动化说明](docs/AUTOMATION.md#project-pause-and-resume) 分别恢复本机任务与 GitHub 工作流。下文描述的是恢复后的功能。
+
 [![Daily Hotspots](https://github.com/wzgig/github-hotspots/actions/workflows/daily.yml/badge.svg)](https://github.com/wzgig/github-hotspots/actions/workflows/daily.yml)
 [![Weekly Hotspots](https://github.com/wzgig/github-hotspots/actions/workflows/weekly.yml/badge.svg)](https://github.com/wzgig/github-hotspots/actions/workflows/weekly.yml)
 [![GitHub Pages](https://github.com/wzgig/github-hotspots/actions/workflows/pages.yml/badge.svg)](https://github.com/wzgig/github-hotspots/actions/workflows/pages.yml)

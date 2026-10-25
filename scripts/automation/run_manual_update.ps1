@@ -10,6 +10,10 @@ $ErrorActionPreference = "Stop"
 $ProgressPreference = "SilentlyContinue"
 
 $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+if (-not $LoadFunctionsOnly -and (Test-Path -LiteralPath (Join-Path $RepoRoot "PROJECT_PAUSED"))) {
+    Write-Host "[PAUSED] GitHub Hotspots is paused. See docs/AUTOMATION.md before resuming."
+    exit 78
+}
 $Runner = Join-Path $PSScriptRoot "run_scheduled.ps1"
 $PowerShell = "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe"
 
