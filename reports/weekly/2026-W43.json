@@ -1,0 +1,3035 @@
+{
+  "schema_version": 3,
+  "period": "weekly",
+  "run_date": "2026-10-25",
+  "window_start": "2026-10-18",
+  "window_end": "2026-10-25",
+  "generated_at": "2026-10-25T08:45:54+08:00",
+  "timezone": "Asia/Shanghai",
+  "window_label": "2026-10-18 至 2026-10-25",
+  "publication": {
+    "issue_number": 16,
+    "issue_code": "W016",
+    "issue_label": "第16期",
+    "status": "official"
+  },
+  "data_quality": "高：历史快照增量",
+  "warnings": [
+    "9 个上榜项目未获取到 Owner 头像，海报已使用身份占位图",
+    "9 个上榜项目未获取到 README，相关文案将使用受控回退"
+  ],
+  "methodology": "候选项目由 GitHub Trending 与 REST Search 共同发现；排名优先使用最接近目标窗口的本地快照计算 Star/Fork 净增量，基线缺失时使用 Trending 页面展示的周期 Star，再结合相对增长、最近推送、累计 Star 与 Trending 名次生成可解释分数。综合主榜对全部合格候选独立排名；AI 专题榜先按精确 Topic 和名称、描述、Topic 中的完整 token/短语筛选，再在 AI 候选池内独立排名。两个榜单允许出现同一仓库。中文文案先由确定性规则生成；仅在本地显式启用时，Codex CLI 才会在事实冻结后读取清洗后的 README 与受控元数据，按字段引用证据生成白话解释，并经过仓库身份、URL、数字、README SHA、许可证、增量口径和禁用套话回查。",
+  "editorial": {
+    "policy": "facts-locked-batch-editing",
+    "boards": {
+      "comprehensive": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      },
+      "ai": {
+        "prompt_version": "4.1",
+        "schema_version": "4.0",
+        "requested_backend": "codex-cli",
+        "used_backend": "codex-cli",
+        "fallback_used": false,
+        "error_category": null
+      }
+    }
+  },
+  "assets": {
+    "enabled": true,
+    "format": "png",
+    "width": 1200,
+    "height": 1600,
+    "directory": "reports/weekly/assets/2026-W43",
+    "manifest": "reports/weekly/assets/2026-W43/manifest.json",
+    "boards": {
+      "comprehensive": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.02.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "anomalyco/opencode",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.03.anomalyco--opencode.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.04.mattpocock--skills.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.05.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "Comfy-Org/ComfyUI",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.06.comfy-org--comfyui.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.07.affaan-m--ecc.png"
+          }
+        ]
+      },
+      "ai": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W43/2026-W43.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.02.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.03.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.04.affaan-m--ecc.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "Comfy-Org/ComfyUI",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.05.comfy-org--comfyui.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "msitarzewski/agency-agents",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.06.msitarzewski--agency-agents.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "akitaonrails/ai-memory",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.07.akitaonrails--ai-memory.png"
+          }
+        ]
+      }
+    },
+    "publication": {
+      "issue_number": 16,
+      "issue_code": "W016",
+      "issue_label": "第16期",
+      "status": "official"
+    }
+  },
+  "repositories": [
+    {
+      "repository_id": 1209966933,
+      "full_name": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "html_url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": 378774,
+      "forks": 94636,
+      "open_issues": 1140,
+      "watchers": 378774,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "decompiler",
+        "developer-tools",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "rea",
+        "reverse-engineering",
+        "static-analysis",
+        "touhou"
+      ],
+      "created_at": "2026-04-14T00:51:32Z",
+      "updated_at": "2026-10-25T00:45:39Z",
+      "pushed_at": "2026-10-25T00:40:02Z",
+      "daily_stars": null,
+      "weekly_stars": 78562,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 2,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 1,
+      "score": 97.97,
+      "star_delta": 67926,
+      "fork_delta": 15907,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 100.0,
+        "relative_growth": 100.0,
+        "fork_growth": 100.0,
+        "total_stars": 96.23,
+        "activity": 100.0,
+        "trending_signal": 63.09
+      },
+      "summary": {
+        "one_line": "rea 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+        "highlights": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "audience": "需要减少重复操作并统一研发流程的软件团队",
+        "capabilities": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "core_title": "把重复的开发操作整理成自动化流程",
+        "core_summary": "rea 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "morluto/rea",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.01.morluto--rea.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1333065091,
+      "full_name": "deepseek-ai/deepseek-harness",
+      "owner": "deepseek-ai",
+      "name": "deepseek-harness",
+      "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+      "description": "DeepSeek Harness: Everything is a Plugin.",
+      "language": "TypeScript",
+      "stars": 260489,
+      "forks": 31464,
+      "open_issues": 0,
+      "watchers": 260489,
+      "topics": [
+        "ai-agents",
+        "cordis",
+        "dsh",
+        "dsh-plugin"
+      ],
+      "created_at": "2026-08-13T11:56:32Z",
+      "updated_at": "2026-10-25T00:45:26Z",
+      "pushed_at": "2026-10-23T15:25:40Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 2,
+      "score": 89.89,
+      "star_delta": 8092,
+      "fork_delta": 1105,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 96.23,
+        "relative_growth": 93.4,
+        "fork_growth": 99.06,
+        "total_stars": 88.68,
+        "activity": 87.52,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 deepseek-harness；它能把模型能力接入可重复的任务流程",
+        "highlights": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+        "capabilities": [
+          "把复杂任务拆成连续的执行步骤",
+          "让 Agent 围绕目标推进任务流程",
+          "为工具调用和工作流扩展提供基础"
+        ],
+        "core_title": "搭建能够连续执行多步任务的 AI Agent",
+        "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 deepseek-harness；它能把模型能力接入可重复的任务流程",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "deepseek-ai/deepseek-harness",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.02.deepseek-ai--deepseek-harness.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 975734319,
+      "full_name": "anomalyco/opencode",
+      "owner": "anomalyco",
+      "name": "opencode",
+      "html_url": "https://github.com/anomalyco/opencode",
+      "description": "The open source coding agent.",
+      "language": "TypeScript",
+      "stars": 221090,
+      "forks": 29565,
+      "open_issues": 3773,
+      "watchers": 221090,
+      "topics": [],
+      "created_at": "2025-04-30T20:08:00Z",
+      "updated_at": "2026-10-25T00:44:24Z",
+      "pushed_at": "2026-10-25T00:45:02Z",
+      "daily_stars": null,
+      "weekly_stars": 6857,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 6,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 3,
+      "score": 89.47,
+      "star_delta": 5460,
+      "fork_delta": 671,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 92.45,
+        "relative_growth": 88.68,
+        "fork_growth": 95.28,
+        "total_stars": 83.96,
+        "activity": 100.0,
+        "trending_signal": 35.62
+      },
+      "summary": {
+        "one_line": "目前无法从公开字段确认 opencode 能完成哪些任务",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "目前无法从公开字段确认 opencode 能完成哪些任务",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "anomalyco/opencode",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.03.anomalyco--opencode.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1148788086,
+      "full_name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 302530,
+      "forks": 25443,
+      "open_issues": 202,
+      "watchers": 302530,
+      "topics": [],
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-10-25T00:44:18Z",
+      "pushed_at": "2026-10-22T09:35:28Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 4,
+      "score": 88.14,
+      "star_delta": 7423,
+      "fork_delta": 689,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 95.28,
+        "relative_growth": 90.57,
+        "fork_growth": 96.23,
+        "total_stars": 91.51,
+        "activity": 81.87,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "在补充 README 证据前，skills 需要人工核对用途",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "在补充 README 证据前，skills 需要人工核对用途",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "mattpocock/skills",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.04.mattpocock--skills.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1266797999,
+      "full_name": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "name": "ponytail",
+      "html_url": "https://github.com/DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "language": "JavaScript",
+      "stars": 175536,
+      "forks": 9570,
+      "open_issues": 129,
+      "watchers": 175536,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "cursor-rules",
+        "developer-tools",
+        "llm",
+        "prompt-engineering",
+        "yagni"
+      ],
+      "created_at": "2026-06-12T00:52:37Z",
+      "updated_at": "2026-10-25T00:42:42Z",
+      "pushed_at": "2026-10-18T01:55:14Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 5,
+      "score": 87.07,
+      "star_delta": 9159,
+      "fork_delta": 572,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 97.17,
+        "relative_growth": 96.23,
+        "fork_growth": 94.34,
+        "total_stars": 70.75,
+        "activity": 62.71,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "这类任务可以交给 ponytail：整理和复用提示词设计方法，并帮助测试不同指令结构和模型表现",
+        "highlights": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+        "capabilities": [
+          "收集可复用的提示词模式和示例",
+          "对照不同指令结构带来的输出差异",
+          "把提示词设计过程整理成可重复方法"
+        ],
+        "core_title": "整理和复用提示词设计方法",
+        "core_summary": "这类任务可以交给 ponytail：整理和复用提示词设计方法，并帮助测试不同指令结构和模型表现",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "DietrichGebert/ponytail",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.05.dietrichgebert--ponytail.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 589831718,
+      "full_name": "Comfy-Org/ComfyUI",
+      "owner": "Comfy-Org",
+      "name": "ComfyUI",
+      "html_url": "https://github.com/Comfy-Org/ComfyUI",
+      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+      "language": "Python",
+      "stars": 142634,
+      "forks": 16819,
+      "open_issues": 5339,
+      "watchers": 142634,
+      "topics": [
+        "ai",
+        "comfy",
+        "comfyui",
+        "python",
+        "pytorch",
+        "stable-diffusion"
+      ],
+      "created_at": "2023-01-17T03:15:56Z",
+      "updated_at": "2026-10-25T00:43:53Z",
+      "pushed_at": "2026-10-25T00:21:55Z",
+      "daily_stars": null,
+      "weekly_stars": 4648,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": 11,
+      "sources": [
+        "trending_weekly",
+        "github_api"
+      ],
+      "rank": 6,
+      "score": 86.35,
+      "star_delta": 4545,
+      "fork_delta": 368,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 90.57,
+        "relative_growth": 89.62,
+        "fork_growth": 89.62,
+        "total_stars": 55.66,
+        "activity": 100.0,
+        "trending_signal": 27.89
+      },
+      "summary": {
+        "one_line": "这次只能确认 ComfyUI 的仓库身份，具体功能仍待核对",
+        "highlights": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "audience": "公开信息不足，需人工确认后再发布",
+        "capabilities": [
+          "需要查看仓库 README 确认主要任务",
+          "需要核对实际输入、输出和使用方式",
+          "需要人工确认适用场景后再发布"
+        ],
+        "core_title": "核对这个仓库的具体用途和使用方式",
+        "core_summary": "这次只能确认 ComfyUI 的仓库身份，具体功能仍待核对",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "needs_review",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "Comfy-Org/ComfyUI",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.06.comfy-org--comfyui.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "repository_id": 1136590548,
+      "full_name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "html_url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 288098,
+      "forks": 42711,
+      "open_issues": 293,
+      "watchers": 288098,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-10-25T00:45:17Z",
+      "pushed_at": "2026-10-20T23:08:28Z",
+      "daily_stars": null,
+      "weekly_stars": null,
+      "trending_rank_daily": null,
+      "trending_rank_weekly": null,
+      "sources": [
+        "github_api"
+      ],
+      "rank": 7,
+      "score": 84.64,
+      "star_delta": 5399,
+      "fork_delta": 710,
+      "delta_source": "snapshot",
+      "component_percentiles": {
+        "star_growth": 91.51,
+        "relative_growth": 84.91,
+        "fork_growth": 97.17,
+        "total_stars": 90.57,
+        "activity": 76.59,
+        "trending_signal": 0.0
+      },
+      "summary": {
+        "one_line": "如果工作流里要把重复的开发操作整理成自动化流程，可以交给 ECC，同时减少手动执行和重复配置",
+        "highlights": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "audience": "需要减少重复操作并统一研发流程的软件团队",
+        "capabilities": [
+          "把常用开发步骤组合成可复用任务",
+          "通过脚本重复执行同一套操作",
+          "让团队共享一致的自动化工作流"
+        ],
+        "core_title": "把重复的开发操作整理成自动化流程",
+        "core_summary": "如果工作流里要把重复的开发操作整理成自动化流程，可以交给 ECC，同时减少手动执行和重复配置",
+        "prerequisites": "",
+        "limitations": "",
+        "license_label": "",
+        "license_restrictions": "",
+        "readme_sha": null,
+        "content_status": "metadata_only",
+        "evidence_ids": {
+          "one_line": [
+            "deterministic_draft"
+          ],
+          "highlights": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "audience": [
+            "deterministic_draft"
+          ],
+          "capabilities": [
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ],
+            [
+              "deterministic_draft"
+            ]
+          ],
+          "core_title": [
+            "deterministic_draft"
+          ],
+          "core_summary": [
+            "deterministic_draft"
+          ],
+          "prerequisites": [],
+          "limitations": [],
+          "license_label": [],
+          "license_restrictions": []
+        }
+      },
+      "publication_evidence": {
+        "full_name": "affaan-m/ECC",
+        "license_spdx_id": null,
+        "readme": null,
+        "avatar": null,
+        "warnings": [
+          {
+            "code": "metadata_unavailable",
+            "message": "Repository metadata could not be collected."
+          },
+          {
+            "code": "readme_unavailable",
+            "message": "README evidence could not be collected."
+          },
+          {
+            "code": "avatar_url_unavailable",
+            "message": "The repository owner avatar URL was unavailable."
+          }
+        ]
+      },
+      "assets": {
+        "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.07.affaan-m--ecc.png",
+        "format": "png",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ],
+  "boards": {
+    "comprehensive": {
+      "label": "综合主榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.02.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "anomalyco/opencode",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.03.anomalyco--opencode.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "mattpocock/skills",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.04.mattpocock--skills.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.05.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "Comfy-Org/ComfyUI",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.06.comfy-org--comfyui.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.07.affaan-m--ecc.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1209966933,
+          "full_name": "morluto/rea",
+          "owner": "morluto",
+          "name": "rea",
+          "html_url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "language": "TypeScript",
+          "stars": 378774,
+          "forks": 94636,
+          "open_issues": 1140,
+          "watchers": 378774,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "decompiler",
+            "developer-tools",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "rea",
+            "reverse-engineering",
+            "static-analysis",
+            "touhou"
+          ],
+          "created_at": "2026-04-14T00:51:32Z",
+          "updated_at": "2026-10-25T00:45:39Z",
+          "pushed_at": "2026-10-25T00:40:02Z",
+          "daily_stars": null,
+          "weekly_stars": 78562,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 2,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 97.97,
+          "star_delta": 67926,
+          "fork_delta": 15907,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 96.23,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "rea 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "rea 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "morluto/rea",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.01.morluto--rea.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1333065091,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "owner": "deepseek-ai",
+          "name": "deepseek-harness",
+          "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+          "description": "DeepSeek Harness: Everything is a Plugin.",
+          "language": "TypeScript",
+          "stars": 260489,
+          "forks": 31464,
+          "open_issues": 0,
+          "watchers": 260489,
+          "topics": [
+            "ai-agents",
+            "cordis",
+            "dsh",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-08-13T11:56:32Z",
+          "updated_at": "2026-10-25T00:45:26Z",
+          "pushed_at": "2026-10-23T15:25:40Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 89.89,
+          "star_delta": 8092,
+          "fork_delta": 1105,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.23,
+            "relative_growth": 93.4,
+            "fork_growth": 99.06,
+            "total_stars": 88.68,
+            "activity": 87.52,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 deepseek-harness；它能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 deepseek-harness；它能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "deepseek-ai/deepseek-harness",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.02.deepseek-ai--deepseek-harness.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 975734319,
+          "full_name": "anomalyco/opencode",
+          "owner": "anomalyco",
+          "name": "opencode",
+          "html_url": "https://github.com/anomalyco/opencode",
+          "description": "The open source coding agent.",
+          "language": "TypeScript",
+          "stars": 221090,
+          "forks": 29565,
+          "open_issues": 3773,
+          "watchers": 221090,
+          "topics": [],
+          "created_at": "2025-04-30T20:08:00Z",
+          "updated_at": "2026-10-25T00:44:24Z",
+          "pushed_at": "2026-10-25T00:45:02Z",
+          "daily_stars": null,
+          "weekly_stars": 6857,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 6,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 89.47,
+          "star_delta": 5460,
+          "fork_delta": 671,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 92.45,
+            "relative_growth": 88.68,
+            "fork_growth": 95.28,
+            "total_stars": 83.96,
+            "activity": 100.0,
+            "trending_signal": 35.62
+          },
+          "summary": {
+            "one_line": "目前无法从公开字段确认 opencode 能完成哪些任务",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "目前无法从公开字段确认 opencode 能完成哪些任务",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "anomalyco/opencode",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.03.anomalyco--opencode.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1148788086,
+          "full_name": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "html_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 302530,
+          "forks": 25443,
+          "open_issues": 202,
+          "watchers": 302530,
+          "topics": [],
+          "created_at": "2026-02-03T11:15:53Z",
+          "updated_at": "2026-10-25T00:44:18Z",
+          "pushed_at": "2026-10-22T09:35:28Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 88.14,
+          "star_delta": 7423,
+          "fork_delta": 689,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 95.28,
+            "relative_growth": 90.57,
+            "fork_growth": 96.23,
+            "total_stars": 91.51,
+            "activity": 81.87,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "在补充 README 证据前，skills 需要人工核对用途",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "在补充 README 证据前，skills 需要人工核对用途",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "mattpocock/skills",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.04.mattpocock--skills.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 175536,
+          "forks": 9570,
+          "open_issues": 129,
+          "watchers": 175536,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-10-25T00:42:42Z",
+          "pushed_at": "2026-10-18T01:55:14Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 87.07,
+          "star_delta": 9159,
+          "fork_delta": 572,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 97.17,
+            "relative_growth": 96.23,
+            "fork_growth": 94.34,
+            "total_stars": 70.75,
+            "activity": 62.71,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "这类任务可以交给 ponytail：整理和复用提示词设计方法，并帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "这类任务可以交给 ponytail：整理和复用提示词设计方法，并帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.05.dietrichgebert--ponytail.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 589831718,
+          "full_name": "Comfy-Org/ComfyUI",
+          "owner": "Comfy-Org",
+          "name": "ComfyUI",
+          "html_url": "https://github.com/Comfy-Org/ComfyUI",
+          "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+          "language": "Python",
+          "stars": 142634,
+          "forks": 16819,
+          "open_issues": 5339,
+          "watchers": 142634,
+          "topics": [
+            "ai",
+            "comfy",
+            "comfyui",
+            "python",
+            "pytorch",
+            "stable-diffusion"
+          ],
+          "created_at": "2023-01-17T03:15:56Z",
+          "updated_at": "2026-10-25T00:43:53Z",
+          "pushed_at": "2026-10-25T00:21:55Z",
+          "daily_stars": null,
+          "weekly_stars": 4648,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 11,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 86.35,
+          "star_delta": 4545,
+          "fork_delta": 368,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 90.57,
+            "relative_growth": 89.62,
+            "fork_growth": 89.62,
+            "total_stars": 55.66,
+            "activity": 100.0,
+            "trending_signal": 27.89
+          },
+          "summary": {
+            "one_line": "这次只能确认 ComfyUI 的仓库身份，具体功能仍待核对",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "这次只能确认 ComfyUI 的仓库身份，具体功能仍待核对",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "Comfy-Org/ComfyUI",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.06.comfy-org--comfyui.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 288098,
+          "forks": 42711,
+          "open_issues": 293,
+          "watchers": 288098,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-10-25T00:45:17Z",
+          "pushed_at": "2026-10-20T23:08:28Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 7,
+          "score": 84.64,
+          "star_delta": 5399,
+          "fork_delta": 710,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 91.51,
+            "relative_growth": 84.91,
+            "fork_growth": 97.17,
+            "total_stars": 90.57,
+            "activity": 76.59,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "如果工作流里要把重复的开发操作整理成自动化流程，可以交给 ECC，同时减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "如果工作流里要把重复的开发操作整理成自动化流程，可以交给 ECC，同时减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "deterministic_draft"
+              ],
+              "highlights": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "audience": [
+                "deterministic_draft"
+              ],
+              "capabilities": [
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ],
+                [
+                  "deterministic_draft"
+                ]
+              ],
+              "core_title": [
+                "deterministic_draft"
+              ],
+              "core_summary": [
+                "deterministic_draft"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.comprehensive.07.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    },
+    "ai": {
+      "label": "AI 专题榜",
+      "top_n": 7,
+      "assets": {
+        "enabled": true,
+        "top_n": 7,
+        "cover": "reports/weekly/assets/2026-W43/2026-W43.ai.cover.png",
+        "projects": [
+          {
+            "rank": 1,
+            "full_name": "morluto/rea",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.01.morluto--rea.png"
+          },
+          {
+            "rank": 2,
+            "full_name": "deepseek-ai/deepseek-harness",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.02.deepseek-ai--deepseek-harness.png"
+          },
+          {
+            "rank": 3,
+            "full_name": "DietrichGebert/ponytail",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.03.dietrichgebert--ponytail.png"
+          },
+          {
+            "rank": 4,
+            "full_name": "affaan-m/ECC",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.04.affaan-m--ecc.png"
+          },
+          {
+            "rank": 5,
+            "full_name": "Comfy-Org/ComfyUI",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.05.comfy-org--comfyui.png"
+          },
+          {
+            "rank": 6,
+            "full_name": "msitarzewski/agency-agents",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.06.msitarzewski--agency-agents.png"
+          },
+          {
+            "rank": 7,
+            "full_name": "akitaonrails/ai-memory",
+            "path": "reports/weekly/assets/2026-W43/2026-W43.ai.07.akitaonrails--ai-memory.png"
+          }
+        ]
+      },
+      "repositories": [
+        {
+          "repository_id": 1209966933,
+          "full_name": "morluto/rea",
+          "owner": "morluto",
+          "name": "rea",
+          "html_url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "language": "TypeScript",
+          "stars": 378774,
+          "forks": 94636,
+          "open_issues": 1140,
+          "watchers": 378774,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "decompiler",
+            "developer-tools",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "rea",
+            "reverse-engineering",
+            "static-analysis",
+            "touhou"
+          ],
+          "created_at": "2026-04-14T00:51:32Z",
+          "updated_at": "2026-10-25T00:45:39Z",
+          "pushed_at": "2026-10-25T00:40:02Z",
+          "daily_stars": null,
+          "weekly_stars": 78562,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 2,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 1,
+          "score": 97.98,
+          "star_delta": 67926,
+          "fork_delta": 15907,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 100.0,
+            "relative_growth": 100.0,
+            "fork_growth": 100.0,
+            "total_stars": 96.55,
+            "activity": 100.0,
+            "trending_signal": 63.09
+          },
+          "summary": {
+            "one_line": "rea 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "rea 可以把重复的开发操作整理成自动化流程，同时减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:positioning"
+              ],
+              "highlights": [
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ]
+              ],
+              "audience": [
+                "candidate:positioning"
+              ],
+              "capabilities": [
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ],
+                [
+                  "candidate:positioning"
+                ]
+              ],
+              "core_title": [
+                "candidate:positioning"
+              ],
+              "core_summary": [
+                "candidate:positioning"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "morluto/rea",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.ai.01.morluto--rea.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1333065091,
+          "full_name": "deepseek-ai/deepseek-harness",
+          "owner": "deepseek-ai",
+          "name": "deepseek-harness",
+          "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+          "description": "DeepSeek Harness: Everything is a Plugin.",
+          "language": "TypeScript",
+          "stars": 260489,
+          "forks": 31464,
+          "open_issues": 0,
+          "watchers": 260489,
+          "topics": [
+            "ai-agents",
+            "cordis",
+            "dsh",
+            "dsh-plugin"
+          ],
+          "created_at": "2026-08-13T11:56:32Z",
+          "updated_at": "2026-10-25T00:45:26Z",
+          "pushed_at": "2026-10-23T15:25:40Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 2,
+          "score": 87.2,
+          "star_delta": 8092,
+          "fork_delta": 1105,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 93.1,
+            "relative_growth": 89.66,
+            "fork_growth": 96.55,
+            "total_stars": 86.21,
+            "activity": 87.52,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "想要搭建能够连续执行多步任务的 AI Agent，可以用 deepseek-harness；它能把模型能力接入可重复的任务流程",
+            "highlights": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "audience": "需要搭建自动化智能体或多步骤 AI 工作流的开发者",
+            "capabilities": [
+              "把复杂任务拆成连续的执行步骤",
+              "让 Agent 围绕目标推进任务流程",
+              "为工具调用和工作流扩展提供基础"
+            ],
+            "core_title": "搭建能够连续执行多步任务的 AI Agent",
+            "core_summary": "想要搭建能够连续执行多步任务的 AI Agent，可以用 deepseek-harness；它能把模型能力接入可重复的任务流程",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:growth_signal"
+              ],
+              "highlights": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "audience": [
+                "candidate:growth_signal"
+              ],
+              "capabilities": [
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ],
+                [
+                  "candidate:growth_signal"
+                ]
+              ],
+              "core_title": [
+                "candidate:growth_signal"
+              ],
+              "core_summary": [
+                "candidate:growth_signal"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "deepseek-ai/deepseek-harness",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.ai.02.deepseek-ai--deepseek-harness.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1266797999,
+          "full_name": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "html_url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "stars": 175536,
+          "forks": 9570,
+          "open_issues": 129,
+          "watchers": 175536,
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "created_at": "2026-06-12T00:52:37Z",
+          "updated_at": "2026-10-25T00:42:42Z",
+          "pushed_at": "2026-10-18T01:55:14Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 3,
+          "score": 84.72,
+          "star_delta": 9159,
+          "fork_delta": 572,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 96.55,
+            "relative_growth": 93.1,
+            "fork_growth": 86.21,
+            "total_stars": 58.62,
+            "activity": 62.71,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "主要任务是整理和复用提示词设计方法；ponytail 还能帮助测试不同指令结构和模型表现",
+            "highlights": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "audience": "需要设计、测试和维护模型提示词的产品与开发人员",
+            "capabilities": [
+              "收集可复用的提示词模式和示例",
+              "对照不同指令结构带来的输出差异",
+              "把提示词设计过程整理成可重复方法"
+            ],
+            "core_title": "整理和复用提示词设计方法",
+            "core_summary": "主要任务是整理和复用提示词设计方法；ponytail 还能帮助测试不同指令结构和模型表现",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:tech_stack"
+              ],
+              "highlights": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "audience": [
+                "candidate:tech_stack"
+              ],
+              "capabilities": [
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ],
+                [
+                  "candidate:tech_stack"
+                ]
+              ],
+              "core_title": [
+                "candidate:tech_stack"
+              ],
+              "core_summary": [
+                "candidate:tech_stack"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "DietrichGebert/ponytail",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.ai.03.dietrichgebert--ponytail.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1136590548,
+          "full_name": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "html_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 288098,
+          "forks": 42711,
+          "open_issues": 293,
+          "watchers": 288098,
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "created_at": "2026-01-18T00:51:51Z",
+          "updated_at": "2026-10-25T00:45:17Z",
+          "pushed_at": "2026-10-20T23:08:28Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 4,
+          "score": 81.8,
+          "star_delta": 5399,
+          "fork_delta": 710,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 89.66,
+            "relative_growth": 79.31,
+            "fork_growth": 89.66,
+            "total_stars": 89.66,
+            "activity": 76.59,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "用 ECC 可以把重复的开发操作整理成自动化流程，还会减少手动执行和重复配置",
+            "highlights": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "audience": "需要减少重复操作并统一研发流程的软件团队",
+            "capabilities": [
+              "把常用开发步骤组合成可复用任务",
+              "通过脚本重复执行同一套操作",
+              "让团队共享一致的自动化工作流"
+            ],
+            "core_title": "把重复的开发操作整理成自动化流程",
+            "core_summary": "用 ECC 可以把重复的开发操作整理成自动化流程，还会减少手动执行和重复配置",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "metadata_only",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:scale"
+              ],
+              "highlights": [
+                [
+                  "candidate:scale"
+                ],
+                [
+                  "candidate:scale"
+                ],
+                [
+                  "candidate:scale"
+                ]
+              ],
+              "audience": [
+                "candidate:scale"
+              ],
+              "capabilities": [
+                [
+                  "candidate:scale"
+                ],
+                [
+                  "candidate:scale"
+                ],
+                [
+                  "candidate:scale"
+                ]
+              ],
+              "core_title": [
+                "candidate:scale"
+              ],
+              "core_summary": [
+                "candidate:scale"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "affaan-m/ECC",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.ai.04.affaan-m--ecc.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 589831718,
+          "full_name": "Comfy-Org/ComfyUI",
+          "owner": "Comfy-Org",
+          "name": "ComfyUI",
+          "html_url": "https://github.com/Comfy-Org/ComfyUI",
+          "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+          "language": "Python",
+          "stars": 142634,
+          "forks": 16819,
+          "open_issues": 5339,
+          "watchers": 142634,
+          "topics": [
+            "ai",
+            "comfy",
+            "comfyui",
+            "python",
+            "pytorch",
+            "stable-diffusion"
+          ],
+          "created_at": "2023-01-17T03:15:56Z",
+          "updated_at": "2026-10-25T00:43:53Z",
+          "pushed_at": "2026-10-25T00:21:55Z",
+          "daily_stars": null,
+          "weekly_stars": 4648,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 11,
+          "sources": [
+            "trending_weekly",
+            "github_api"
+          ],
+          "rank": 5,
+          "score": 80.71,
+          "star_delta": 4545,
+          "fork_delta": 368,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 86.21,
+            "relative_growth": 86.21,
+            "fork_growth": 79.31,
+            "total_stars": 20.69,
+            "activity": 100.0,
+            "trending_signal": 27.89
+          },
+          "summary": {
+            "one_line": "ComfyUI 暂无足够功能证据，不应直接进入发布稿",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "ComfyUI 暂无足够功能证据，不应直接进入发布稿",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:topics"
+              ],
+              "highlights": [
+                [
+                  "candidate:topics"
+                ],
+                [
+                  "candidate:topics"
+                ],
+                [
+                  "candidate:topics"
+                ]
+              ],
+              "audience": [
+                "candidate:topics"
+              ],
+              "capabilities": [
+                [
+                  "candidate:topics"
+                ],
+                [
+                  "candidate:topics"
+                ],
+                [
+                  "candidate:topics"
+                ]
+              ],
+              "core_title": [
+                "candidate:topics"
+              ],
+              "core_summary": [
+                "candidate:topics"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "Comfy-Org/ComfyUI",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.ai.05.comfy-org--comfyui.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": 1075372545,
+          "full_name": "msitarzewski/agency-agents",
+          "owner": "msitarzewski",
+          "name": "agency-agents",
+          "html_url": "https://github.com/msitarzewski/agency-agents",
+          "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+          "language": "Shell",
+          "stars": 163716,
+          "forks": 26428,
+          "open_issues": 181,
+          "watchers": 163716,
+          "topics": [],
+          "created_at": "2025-10-13T12:12:29Z",
+          "updated_at": "2026-10-25T00:38:24Z",
+          "pushed_at": "2026-10-25T00:37:23Z",
+          "daily_stars": null,
+          "weekly_stars": null,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": null,
+          "sources": [
+            "github_api"
+          ],
+          "rank": 6,
+          "score": 73.1,
+          "star_delta": 2810,
+          "fork_delta": 393,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 75.86,
+            "relative_growth": 72.41,
+            "fork_growth": 82.76,
+            "total_stars": 48.28,
+            "activity": 100.0,
+            "trending_signal": 0.0
+          },
+          "summary": {
+            "one_line": "这次只能确认 agency-agents 的仓库身份，具体功能仍待核对",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "这次只能确认 agency-agents 的仓库身份，具体功能仍待核对",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:activity"
+              ],
+              "highlights": [
+                [
+                  "candidate:activity"
+                ],
+                [
+                  "candidate:activity"
+                ],
+                [
+                  "candidate:activity"
+                ]
+              ],
+              "audience": [
+                "candidate:activity"
+              ],
+              "capabilities": [
+                [
+                  "candidate:activity"
+                ],
+                [
+                  "candidate:activity"
+                ],
+                [
+                  "candidate:activity"
+                ]
+              ],
+              "core_title": [
+                "candidate:activity"
+              ],
+              "core_summary": [
+                "candidate:activity"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "msitarzewski/agency-agents",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.ai.06.msitarzewski--agency-agents.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        },
+        {
+          "repository_id": null,
+          "full_name": "akitaonrails/ai-memory",
+          "owner": "akitaonrails",
+          "name": "ai-memory",
+          "html_url": "https://github.com/akitaonrails/ai-memory",
+          "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+          "language": "Rust",
+          "stars": 13278,
+          "forks": 935,
+          "open_issues": 0,
+          "watchers": 0,
+          "topics": [],
+          "created_at": null,
+          "updated_at": null,
+          "pushed_at": null,
+          "daily_stars": null,
+          "weekly_stars": 3541,
+          "trending_rank_daily": null,
+          "trending_rank_weekly": 12,
+          "sources": [
+            "trending_weekly"
+          ],
+          "rank": 7,
+          "score": 69.8,
+          "star_delta": 3224,
+          "fork_delta": 209,
+          "delta_source": "snapshot",
+          "component_percentiles": {
+            "star_growth": 82.76,
+            "relative_growth": 96.55,
+            "fork_growth": 72.41,
+            "total_stars": 10.34,
+            "activity": 0.0,
+            "trending_signal": 27.02
+          },
+          "summary": {
+            "one_line": "要解释 ai-memory 的用途，还需要补充可核验的 README 信息",
+            "highlights": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "audience": "公开信息不足，需人工确认后再发布",
+            "capabilities": [
+              "需要查看仓库 README 确认主要任务",
+              "需要核对实际输入、输出和使用方式",
+              "需要人工确认适用场景后再发布"
+            ],
+            "core_title": "核对这个仓库的具体用途和使用方式",
+            "core_summary": "要解释 ai-memory 的用途，还需要补充可核验的 README 信息",
+            "prerequisites": "",
+            "limitations": "",
+            "license_label": "",
+            "license_restrictions": "",
+            "readme_sha": null,
+            "content_status": "needs_review",
+            "evidence_ids": {
+              "one_line": [
+                "candidate:source"
+              ],
+              "highlights": [
+                [
+                  "candidate:source"
+                ],
+                [
+                  "candidate:source"
+                ],
+                [
+                  "candidate:source"
+                ]
+              ],
+              "audience": [
+                "candidate:source"
+              ],
+              "capabilities": [
+                [
+                  "candidate:source"
+                ],
+                [
+                  "candidate:source"
+                ],
+                [
+                  "candidate:source"
+                ]
+              ],
+              "core_title": [
+                "candidate:source"
+              ],
+              "core_summary": [
+                "candidate:source"
+              ],
+              "prerequisites": [],
+              "limitations": [],
+              "license_label": [],
+              "license_restrictions": []
+            }
+          },
+          "publication_evidence": {
+            "full_name": "akitaonrails/ai-memory",
+            "license_spdx_id": null,
+            "readme": null,
+            "avatar": null,
+            "warnings": [
+              {
+                "code": "metadata_unavailable",
+                "message": "Repository metadata could not be collected."
+              },
+              {
+                "code": "readme_unavailable",
+                "message": "README evidence could not be collected."
+              },
+              {
+                "code": "avatar_url_unavailable",
+                "message": "The repository owner avatar URL was unavailable."
+              }
+            ]
+          },
+          "assets": {
+            "poster": "reports/weekly/assets/2026-W43/2026-W43.ai.07.akitaonrails--ai-memory.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1600
+          }
+        }
+      ]
+    }
+  }
+}
